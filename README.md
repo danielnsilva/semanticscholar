@@ -15,8 +15,8 @@ To access paper data:
 >>> import semanticscholar as sch
 >>> paper = sch.paper('10.1093/mind/LIX.236.433')
 >>> paper.keys()
-dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'doi', 'influentialCitationCount',
-'paperId', 'references', 'title', 'topics', 'url', 'venue', 'year'])
+dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'doi',
+'influentialCitationCount', 'paperId', 'references', 'title', 'topics', 'url', 'venue', 'year'])
 >>> paper['title']
 'Computing Machinery and Intelligence'
 >>> for author in paper['authors']:
