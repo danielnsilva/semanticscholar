@@ -5,8 +5,10 @@ with open("README.md", "r") as fh:
 
 setup(
     name='semanticscholar',
-    version='0.1.1',
+    version='0.1.2',
     description='A python library that aims to retrieve data from Semantic Scholar API',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url='http://danielnsilva.com/semanticscholar',
     author='Daniel Silva',
     author_email='danielnsilva@gmail.com',
