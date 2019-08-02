@@ -1,4 +1,8 @@
 # semanticscholar
+
+[![Latest version](https://img.shields.io/pypi/v/semanticscholar)](https://pypi.org/project/semanticscholar)
+[![GitHub license](https://img.shields.io/github/license/danielnsilva/semanticscholar)](https://github.com/danielnsilva/semanticscholar/blob/master/LICENSE)
+
 A python library that aims to retrieve data from Semantic Scholar API<sup>1</sup>.
 
 # How to install
