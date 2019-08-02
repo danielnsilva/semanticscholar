@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='semanticscholar',
-    version='0.1.0',
+    version='0.1.1',
     description='A python library that aims to retrieve data from Semantic Scholar API',
     url='http://danielnsilva.com/semanticscholar',
     author='Daniel Silva',
