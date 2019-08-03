@@ -2,9 +2,9 @@ import semanticscholar as sch
 from unittest import TestCase
 
 def test_paper():
-    data = sch.paper('10.1038/nrn3241')
-    assert data['title'] == 'The origin of extracellular fields and currents — EEG, ECoG, LFP and spikes'
+    data = sch.paper('10.1093/mind/LIX.236.433')
+    assert data['title'] == 'Computing Machinery and Intelligence'
     
 def test_author():
-    data = sch.author(1741101)
-    assert data['name'] == 'Oren Etzioni'
+    data = sch.author(2262347)
+    assert data['name'] == 'Alan M. Turing'
