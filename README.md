@@ -38,8 +38,8 @@ To access author data:
 >>> author = sch.author(2262347)
 >>> author.keys()
 dict_keys(['aliases', 'authorId', 'citationVelocity', 'influentialCitationCount', 'name', 'papers', 'url'])
->>> print(author['name'])
-Alan M. Turing
+>>> author['name']
+'Alan M. Turing'
 >>> len(author['papers'])
 77
 ```
