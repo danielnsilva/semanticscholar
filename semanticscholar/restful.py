@@ -32,8 +32,9 @@ def author(id) -> dict:
 
 @retry(
     retry_on_exception=lambda x: isinstance(x, ConnectionRefusedError),
-    stop_max_attempt_number=3,
-    wait_fixed=2000
+    stop_max_attempt_number=12,
+    wait_random_min=1000,
+    wait_random_max=5000
     )
 def __get_data(method, id, include_unknown_references=False) -> dict:
 
