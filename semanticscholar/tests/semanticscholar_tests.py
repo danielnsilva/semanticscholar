@@ -8,3 +8,7 @@ def test_paper():
 def test_author():
     data = sch.author(2262347)
     assert data['name'] == 'Alan M. Turing'
+
+def test_not_found():
+    data = sch.paper(0)
+    assert len(data) == 0
