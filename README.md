@@ -17,7 +17,7 @@ Programmatically access paper and author data.
 To access paper data:
 ```python
 >>> import semanticscholar as sch
->>> paper = sch.paper('10.1093/mind/LIX.236.433')
+>>> paper = sch.paper('10.1093/mind/lix.236.433')
 >>> paper.keys()
 dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'doi',
 'influentialCitationCount', 'paperId', 'references', 'title', 'topics', 'url', 'venue', 'year'])
