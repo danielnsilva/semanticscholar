@@ -1,5 +1,5 @@
 import requests
-from retrying import retry
+from tenacity import *
 
 API_URL = 'http://api.semanticscholar.org/v1'
 
@@ -31,10 +31,9 @@ def author(id) -> dict:
     return data
 
 @retry(
-    retry_on_exception=lambda x: isinstance(x, ConnectionRefusedError),
-    stop_max_attempt_number=12,
-    wait_random_min=1000,
-    wait_random_max=5000
+    wait=wait_fixed(30),
+    retry=retry_if_exception_type(ConnectionRefusedError),
+    stop=stop_after_attempt(10)
     )
 def __get_data(method, id, include_unknown_references=False) -> dict:
 
