@@ -2,7 +2,7 @@ import semanticscholar as sch
 from unittest import TestCase
 
 def test_paper():
-    data = sch.paper('10.1093/mind/LIX.236.433')
+    data = sch.paper('10.1093/mind/lix.236.433')
     assert data['title'] == 'Computing Machinery and Intelligence'
     
 def test_author():
