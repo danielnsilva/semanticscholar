@@ -14,7 +14,7 @@ setup(
     author_email='danielnsilva@gmail.com',
     license='MIT',
     packages=['semanticscholar'],
-    install_requires=['requests','retrying'],
+    install_requires=['requests','tenacity'],
     test_suite='nose.collector',
     tests_require=['nose'],
     classifiers=[
