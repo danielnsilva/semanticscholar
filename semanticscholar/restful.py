@@ -1,21 +1,27 @@
 import requests
-from tenacity import *
+from tenacity import (retry,
+                      wait_fixed,
+                      retry_if_exception_type,
+                      stop_after_attempt)
 
-API_URL = 'http://api.semanticscholar.org/v1'
+API_URL = 'https://api.semanticscholar.org/v1'
+
 
 def paper(id, include_unknown_references=False) -> dict:
-    
+
     '''Paper lookup
 
     :param id: S2PaperId, DOI or ArXivId.
-    :param include_unknown_references : bool, (optional) include non referenced paper.
+    :param include_unknown_references : bool,
+        (optional) include non referenced paper.
     :returns: paper data or empty :class:`dict` if not found.
     :rtype: :class:`dict`
     '''
-    
+
     data = __get_data('paper', id, include_unknown_references)
-    
+
     return data
+
 
 def author(id) -> dict:
 
@@ -29,6 +35,7 @@ def author(id) -> dict:
     data = __get_data('author', id)
 
     return data
+
 
 @retry(
     wait=wait_fixed(30),
@@ -46,16 +53,16 @@ def __get_data(method, id, include_unknown_references=False) -> dict:
     '''
 
     data = {}
-
-    method_types = ['paper','author']
+    method_types = ['paper', 'author']
     if method not in method_types:
-        raise ValueError('Invalid method type. Expected one of: {}'.format(method_types))
+        raise ValueError(
+            'Invalid method type. Expected one of: {}'.format(method_types))
 
     url = '{}/{}/{}'.format(API_URL, method, id)
     if include_unknown_references:
         url += '?include_unknown_references=true'
     r = requests.get(url)
-    
+
     if r.status_code == 200:
         data = r.json()
         if len(data) == 1 and 'error' in data:
