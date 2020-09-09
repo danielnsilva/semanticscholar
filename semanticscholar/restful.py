@@ -7,32 +7,40 @@ from tenacity import (retry,
 API_URL = 'https://api.semanticscholar.org/v1'
 
 
-def paper(id, include_unknown_references=False) -> dict:
+class ConnectionRefusedError(Exception):
+    pass
+
+
+def paper(id, timeout=2, include_unknown_references=False) -> dict:
 
     '''Paper lookup
 
-    :param id: S2PaperId, DOI or ArXivId.
-    :param include_unknown_references : bool,
+    :param str id: S2PaperId, DOI or ArXivId.
+    :param float timeout: an exception is raised
+        if the server has not issued a response for timeout seconds
+    :param bool include_unknown_references :
         (optional) include non referenced paper.
     :returns: paper data or empty :class:`dict` if not found.
     :rtype: :class:`dict`
     '''
 
-    data = __get_data('paper', id, include_unknown_references)
+    data = __get_data('paper', id, timeout, include_unknown_references)
 
     return data
 
 
-def author(id) -> dict:
+def author(id, timeout=2) -> dict:
 
     '''Author lookup
 
-    :param id: S2AuthorId.
+    :param str id: S2AuthorId.
+    :param float timeout: an exception is raised
+        if the server has not issued a response for timeout seconds
     :returns: author data or empty :class:`dict` if not found.
     :rtype: :class:`dict`
     '''
 
-    data = __get_data('author', id)
+    data = __get_data('author', id, timeout)
 
     return data
 
@@ -42,12 +50,14 @@ def author(id) -> dict:
     retry=retry_if_exception_type(ConnectionRefusedError),
     stop=stop_after_attempt(10)
     )
-def __get_data(method, id, include_unknown_references=False) -> dict:
+def __get_data(method, id, timeout, include_unknown_references=False) -> dict:
 
     '''Get data from Semantic Scholar API
 
-    :param method: 'paper' or 'author'.
-    :param id: :class:`str`.
+    :param str method: 'paper' or 'author'.
+    :param str id: id of the correponding method
+    :param float timeout: an exception is raised
+        if the server has not issued a response for timeout seconds
     :returns: data or empty :class:`dict` if not found.
     :rtype: :class:`dict`
     '''
@@ -61,7 +71,7 @@ def __get_data(method, id, include_unknown_references=False) -> dict:
     url = '{}/{}/{}'.format(API_URL, method, id)
     if include_unknown_references:
         url += '?include_unknown_references=true'
-    r = requests.get(url)
+    r = requests.get(url, timeout=timeout)
 
     if r.status_code == 200:
         data = r.json()
