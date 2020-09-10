@@ -7,10 +7,6 @@ from tenacity import (retry,
 API_URL = 'https://api.semanticscholar.org/v1'
 
 
-class ConnectionRefusedError(Exception):
-    pass
-
-
 def paper(id, timeout=2, include_unknown_references=False) -> dict:
 
     '''Paper lookup
