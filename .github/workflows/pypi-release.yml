@@ -1,0 +1,44 @@
+on:
+  push:
+    tags:
+      - 'v*'
+
+name: PyPI Release
+
+jobs:
+  build:
+    name: PyPI Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine
+      - name: Build and publish
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        run: |
+          python setup.py sdist bdist_wheel
+          twine upload dist/*        
+      - name: Get version
+        id: version
+        run: echo "::set-output name=version::$(echo '${{ github.ref }}' | sed -r 's/refs\/tags\/v//g')"
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: semanticscholar-${{ steps.version.outputs.version }}
+          body: |
+            Version ${{ steps.version.outputs.version }}
+          draft: false
+          prerelease: false
