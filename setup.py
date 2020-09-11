@@ -4,9 +4,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='semanticscholar',
-    version='0.1.5',
-    description='A python library that aims to retrieve data from Semantic Scholar API',
+    name='pysemanticscholar',
+    version='0.1.6',
+    description='A python library aiming to get data via Semantic Scholar API',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='http://danielnsilva.com/semanticscholar',
@@ -14,9 +14,7 @@ setup(
     author_email='danielnsilva@gmail.com',
     license='MIT',
     packages=['semanticscholar'],
-    install_requires=['requests','tenacity'],
-    test_suite='nose.collector',
-    tests_require=['nose'],
+    install_requires=['requests', 'tenacity'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
