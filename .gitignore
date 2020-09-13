@@ -1,6 +1,6 @@
 venv/
 dist/
 build/
-*.egg-info/
+*.egg*/
 __pycache__/
 .vscode/
