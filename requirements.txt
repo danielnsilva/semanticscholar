@@ -10,7 +10,7 @@ readme-renderer==24.0
 requests==2.22.0
 requests-toolbelt==0.9.1
 six==1.12.0
-tenacity==5.1.5
+tenacity==6.2.0
 tqdm==4.32.2
 twine==3.2.0
 urllib3==1.25.3
