@@ -16,7 +16,8 @@ Programmatically access paper and author data.
 ## Paper Lookup
 To access paper data:
 ```python
->>> import semanticscholar as sch
+>>> from semanticscholar import SemanticScholar
+>>> sch = SemanticScholar()
 >>> paper = sch.paper('10.1093/mind/lix.236.433', timeout=2)
 >>> paper.keys()
 dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'doi',
@@ -34,7 +35,8 @@ Alan M. Turing
 ## Author Lookup
 To access author data:
 ```python
->>> import semanticscholar as sch
+>>> from semanticscholar import SemanticScholar
+>>> sch = SemanticScholar()
 >>> author = sch.author(2262347, timeout=2)
 >>> author.keys()
 dict_keys(['aliases', 'authorId', 'citationVelocity', 'influentialCitationCount', 'name', 'papers', 'url'])

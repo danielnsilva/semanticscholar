@@ -1,1 +1,1 @@
-from .restful import paper, author
+from .restful import SemanticScholar
