@@ -1,3 +1,4 @@
+import re
 import requests
 from tenacity import (retry,
                       wait_fixed,
@@ -63,8 +64,11 @@ def __get_data(method, id, timeout, include_unknown_references=False) -> dict:
     if method not in method_types:
         raise ValueError(
             'Invalid method type. Expected one of: {}'.format(method_types))
-
-    url = '{}/{}/{}'.format(API_URL, method, id)
+    
+    if re.match(r"^\d*.\d*$", id):  # arxiv
+        url = '{}/{}/arXiv:{}'.format(API_URL, method, id)
+    else:  # doi
+        url = '{}/{}/{}'.format(API_URL, method, id)
     if include_unknown_references:
         url += '?include_unknown_references=true'
     r = requests.get(url, timeout=timeout)
