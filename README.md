@@ -18,8 +18,8 @@ Can be used to access both the public API or the S2 Data Partner's API using a p
 To access paper data:
 ```python
 >>> from semanticscholar import SemanticScholar
->>> sch = SemanticScholar()
->>> paper = sch.paper('10.1093/mind/lix.236.433', timeout=2)
+>>> sch = SemanticScholar(timeout=2)
+>>> paper = sch.paper('10.1093/mind/lix.236.433')
 >>> paper.keys()
 dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'doi',
 'influentialCitationCount', 'paperId', 'references', 'title', 'topics', 'url', 'venue', 'year'])
@@ -37,8 +37,8 @@ dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'd
 To access author data:
 ```python
 >>> from semanticscholar import SemanticScholar
->>> sch = SemanticScholar()
->>> author = sch.author(2262347, timeout=2)
+>>> sch = SemanticScholar(timeout=2)
+>>> author = sch.author(2262347)
 >>> author.keys()
 dict_keys(['aliases', 'authorId', 'citationVelocity', 'influentialCitationCount', 'name', 'papers', 'url'])
 >>> author['name']
@@ -47,29 +47,10 @@ dict_keys(['aliases', 'authorId', 'citationVelocity', 'influentialCitationCount'
 77
 ```
 
-## Optional arguments
-For each request, you can specify the timeout length, and whether or not to retrieve references unknown to Semantic Scholar. The default behaviour is `timeout=2` and `include_unknown_references=False`.
-Alternatively, you can change these defaults for requests by providing the additional arguments when instantiating the `SemanticScholar` class:
-```python
->>> from semanticscholar import SemanticScholar
->>> sch = SemanticScholar(timeout=5, include_unknown_references=True)
->>> paper = sch.paper('0796f6cd7f0403a854d67d525e9b32af3b277331')
->>> for ref in paper['references']:
-...     if not ref['paperId']: print(ref['title'])
-...
-'Corpusbased method for automatic identification of support'
-'Automatically constructing extraction patterns from untagged text'
-'Corpusbased method for automatic identification of support verbs for nominalizations'
-'Stretched Verb Constructions in English Routledge Studies in Germanic Linguistics. Routledge (Taylor and Francis)'
-', Aria Haghighi , and Christopher D . Manning . 2008 . A global joint model for semantic role labeling'
-'On-demand information extraction Association for Computational Lin- guistics'
-```
-
 ## Accessing the Data Partner's API
-Lastly, if you are a Semantic Scholar Data Partner, you can provide the URL and private key as optional arguments:
+If you are a Semantic Scholar Data Partner you can provide the private key as an optional argument:
 ```python
 >>> from semanticscholar import SemanticScholar
->>> s2_api_url = 'https://partner.semanticscholar.org/v1'
 >>> s2_api_key = '40-CharacterPrivateKeyProvidedToPartners'
->>> sch = SemanticScholar(api_url=s2_api_url, api_key=s2_api_key)
+>>> sch = SemanticScholar(api_key=s2_api_key)
 ```
