@@ -12,12 +12,14 @@ pip install semanticscholar
 
 # Usage
 Programmatically access paper and author data.
+Can be used to access both the public API or the S2 Data Partner's API using a private key.
 
-## Paper Lookup
+## Paper Lookup (Public API)
 To access paper data:
 ```python
->>> import semanticscholar as sch
->>> paper = sch.paper('10.1093/mind/lix.236.433', timeout=2)
+>>> from semanticscholar import SemanticScholar
+>>> sch = SemanticScholar(timeout=2)
+>>> paper = sch.paper('10.1093/mind/lix.236.433')
 >>> paper.keys()
 dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'doi',
 'influentialCitationCount', 'paperId', 'references', 'title', 'topics', 'url', 'venue', 'year'])
@@ -27,19 +29,28 @@ dict_keys(['abstract', 'arxivId', 'authors', 'citationVelocity', 'citations', 'd
 ...     print(author['name'])
 ...     print(author['authorId'])
 ...
-Alan M. Turing
+'Alan M. Turing'
 2262347
 ```
 
-## Author Lookup
+## Author Lookup (Public API)
 To access author data:
 ```python
->>> import semanticscholar as sch
->>> author = sch.author(2262347, timeout=2)
+>>> from semanticscholar import SemanticScholar
+>>> sch = SemanticScholar(timeout=2)
+>>> author = sch.author(2262347)
 >>> author.keys()
 dict_keys(['aliases', 'authorId', 'citationVelocity', 'influentialCitationCount', 'name', 'papers', 'url'])
 >>> author['name']
 'Alan M. Turing'
 >>> len(author['papers'])
 77
+```
+
+## Accessing the Data Partner's API
+If you are a Semantic Scholar Data Partner you can provide the private key as an optional argument:
+```python
+>>> from semanticscholar import SemanticScholar
+>>> s2_api_key = '40-CharacterPrivateKeyProvidedToPartners'
+>>> sch = SemanticScholar(api_key=s2_api_key)
 ```
