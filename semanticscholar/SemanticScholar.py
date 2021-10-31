@@ -12,7 +12,12 @@ class SemanticScholar:
 
     auth_header = {}
 
-    def __init__(self, timeout=2, api_key=None, api_url=None) -> None:
+    def __init__(
+                self,
+                timeout: int=2,
+                api_key: str=None,
+                api_url: str=None
+            ) -> None:
         '''
         :param float timeout: an exception is raised
             if the server has not issued a response for timeout seconds.
@@ -32,7 +37,7 @@ class SemanticScholar:
 
         self.timeout = timeout
 
-    def paper(self, id, include_unknown_refs=False) -> dict:
+    def paper(self, id: str, include_unknown_refs: bool=False) -> dict:
         '''Paper lookup
 
         :param str id: S2PaperId, DOI or ArXivId.
@@ -48,7 +53,7 @@ class SemanticScholar:
 
         return data
 
-    def author(self, id) -> dict:
+    def author(self, id: str) -> dict:
         '''Author lookup
 
         :param str id: S2AuthorId.
@@ -65,7 +70,12 @@ class SemanticScholar:
         retry=retry_if_exception_type(ConnectionRefusedError),
         stop=stop_after_attempt(10)
     )
-    def __get_data(self, method, id, include_unknown_refs) -> dict:
+    def __get_data(
+                self,
+                method: str,
+                id: str,
+                include_unknown_refs: bool
+            ) -> dict:
         '''Get data from Semantic Scholar API
 
         :param str method: 'paper' or 'author'.

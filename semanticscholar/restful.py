@@ -3,11 +3,11 @@ import warnings
 
 
 def paper(
-            id,
-            timeout=2,
-            include_unknown_references=False,
-            api_key=None,
-            api_url=None
+            id: str,
+            timeout: int=2,
+            include_unknown_references: bool=False,
+            api_key: str=None,
+            api_url: str=None
         ) -> dict:
     '''Paper lookup
 
@@ -32,7 +32,7 @@ def paper(
     return sch.paper(id, include_unknown_references)
 
 
-def author(id, timeout=2, api_key=None, api_url=None) -> dict:
+def author(id, timeout: int=2, api_key: str=None, api_url: str=None) -> dict:
     '''Author lookup
 
     :param str id: S2AuthorId.
@@ -50,5 +50,5 @@ def author(id, timeout=2, api_key=None, api_url=None) -> dict:
         DeprecationWarning)
 
     sch = SemanticScholar(timeout, api_key, api_url)
-        
+
     return sch.author(id)
