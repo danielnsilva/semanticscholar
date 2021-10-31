@@ -4,3 +4,4 @@ build/
 *.egg*/
 __pycache__/
 .vscode/
+MANIFEST.in
