@@ -25,15 +25,15 @@ class SemanticScholar:
         :param str api_url: (optional) custom API url.
         '''
 
-        if api_key:
-            self.auth_header = {'x-api-key': api_key}
-            if not api_url:
-                self.api_url = self.DEFAULT_PARTNER_API_URL
-
         if api_url:
             self.api_url = api_url
         else:
             self.api_url = self.DEFAULT_API_URL
+
+        if api_key:
+            self.auth_header = {'x-api-key': api_key}
+            if not api_url:
+                self.api_url = self.DEFAULT_PARTNER_API_URL
 
         self.timeout = timeout
 
