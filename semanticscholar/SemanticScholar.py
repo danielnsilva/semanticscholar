@@ -1,3 +1,4 @@
+from typing import Literal
 import requests
 from tenacity import (retry,
                       wait_fixed,
@@ -72,7 +73,7 @@ class SemanticScholar:
     )
     def __get_data(
                 self,
-                method: str,
+                method: Literal['paper', 'author'],
                 id: str,
                 include_unknown_refs: bool
             ) -> dict:
