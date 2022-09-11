@@ -1,10 +1,12 @@
 from typing import Literal
-from xmlrpc.client import boolean
 import requests
 from tenacity import (retry,
                       wait_fixed,
                       retry_if_exception_type,
                       stop_after_attempt)
+
+from semanticscholar.Author import Author
+from semanticscholar.Paper import Paper
 
 
 class SemanticScholar:
@@ -43,7 +45,7 @@ class SemanticScholar:
 
         self.timeout = timeout
 
-    def paper(self, id: str, include_unknown_refs: bool=False, raw_data=False) -> dict:
+    def paper(self, id: str, include_unknown_refs: bool=False, raw_data: bool=False) -> dict:
         '''Paper lookup
 
         :param str id: S2PaperId, DOI or ArXivId.
@@ -56,10 +58,11 @@ class SemanticScholar:
         '''
 
         data = self.__get_data('paper', id, include_unknown_refs)
+        paper = Paper(data)
 
-        return data
+        return data if raw_data else paper
 
-    def author(self, id: str) -> dict:
+    def author(self, id: str, raw_data: bool=False) -> dict:
         '''Author lookup
 
         :param str id: S2AuthorId.
@@ -68,8 +71,9 @@ class SemanticScholar:
         '''
 
         data = self.__get_data('author', id, False)
+        author = Author(data)
 
-        return data
+        return data if raw_data else author
 
     @retry(
         wait=wait_fixed(30),
@@ -100,7 +104,6 @@ class SemanticScholar:
         url = '{}/{}/{}'.format(self.api_url, method, id)
         if include_unknown_refs:
             url += '?include_unknown_references=true'
-        print(url)
         r = requests.get(url, timeout=self.timeout, headers=self.auth_header)
 
         if r.status_code == 200:
