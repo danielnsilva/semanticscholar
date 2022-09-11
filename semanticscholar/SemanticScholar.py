@@ -1,4 +1,5 @@
 from typing import Literal
+from xmlrpc.client import boolean
 import requests
 from tenacity import (retry,
                       wait_fixed,
@@ -8,7 +9,7 @@ from tenacity import (retry,
 
 class SemanticScholar:
 
-    DEFAULT_API_URL = 'https://api.semanticscholar.org/v1'
+    DEFAULT_API_URL = 'https://api.semanticscholar.org/graph/v1'
     DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org/v1'
 
     auth_header = {}
@@ -17,19 +18,23 @@ class SemanticScholar:
                 self,
                 timeout: int=2,
                 api_key: str=None,
-                api_url: str=None
+                api_url: str=None,
+                graph_api: bool=True
             ) -> None:
         '''
         :param float timeout: an exception is raised
             if the server has not issued a response for timeout seconds.
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
+        :param bool graph_api: (optional) whether use new Graph API.
         '''
 
         if api_url:
             self.api_url = api_url
         else:
             self.api_url = self.DEFAULT_API_URL
+            if not graph_api:
+                self.api_url = self.api_url.replace('/graph', '')
 
         if api_key:
             self.auth_header = {'x-api-key': api_key}
@@ -38,7 +43,7 @@ class SemanticScholar:
 
         self.timeout = timeout
 
-    def paper(self, id: str, include_unknown_refs: bool=False) -> dict:
+    def paper(self, id: str, include_unknown_refs: bool=False, raw_data=False) -> dict:
         '''Paper lookup
 
         :param str id: S2PaperId, DOI or ArXivId.
@@ -95,6 +100,7 @@ class SemanticScholar:
         url = '{}/{}/{}'.format(self.api_url, method, id)
         if include_unknown_refs:
             url += '?include_unknown_references=true'
+        print(url)
         r = requests.get(url, timeout=self.timeout, headers=self.auth_header)
 
         if r.status_code == 200:

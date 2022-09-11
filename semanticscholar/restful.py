@@ -7,7 +7,8 @@ def paper(
             timeout: int=2,
             include_unknown_references: bool=False,
             api_key: str=None,
-            api_url: str=None
+            api_url: str=None,
+            graph_api: bool=True
         ) -> dict:
     '''Paper lookup
 
@@ -18,6 +19,7 @@ def paper(
         (optional) include non referenced paper.
     :param str api_key: (optional) private API key.
     :param str api_url: (optional) custom API url.
+    :param bool graph_api: (optional) whether use new Graph API.
     :returns: paper data or empty :class:`dict` if not found.
     :rtype: :class:`dict`
     '''
@@ -27,12 +29,18 @@ def paper(
         " Create an instance of SemanticScholar class instead.",
         DeprecationWarning)
 
-    sch = SemanticScholar(timeout, api_key, api_url)
+    sch = SemanticScholar(timeout, api_key, api_url, graph_api)
 
     return sch.paper(id, include_unknown_references)
 
 
-def author(id, timeout: int=2, api_key: str=None, api_url: str=None) -> dict:
+def author(
+            id,
+            timeout: int=2,
+            api_key: str=None,
+            api_url: str=None,
+            graph_api: bool=True
+        ) -> dict:
     '''Author lookup
 
     :param str id: S2AuthorId.
@@ -40,6 +48,7 @@ def author(id, timeout: int=2, api_key: str=None, api_url: str=None) -> dict:
         if the server has not issued a response for timeout seconds.
     :param str api_key: (optional) private API key.
     :param str api_url: (optional) custom API url.
+    :param bool graph_api: (optional) whether use new Graph API.
     :returns: author data or empty :class:`dict` if not found.
     :rtype: :class:`dict`
     '''
@@ -49,6 +58,6 @@ def author(id, timeout: int=2, api_key: str=None, api_url: str=None) -> dict:
         " Create an instance of SemanticScholar class instead.",
         DeprecationWarning)
 
-    sch = SemanticScholar(timeout, api_key, api_url)
+    sch = SemanticScholar(timeout, api_key, api_url, graph_api)
 
     return sch.author(id)
