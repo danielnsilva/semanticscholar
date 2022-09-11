@@ -45,7 +45,7 @@ class SemanticScholar:
 
         self.timeout = timeout
 
-    def paper(self, id: str, include_unknown_refs: bool=False, raw_data: bool=False, fields: list=None) -> dict:
+    def paper(self, id: str, include_unknown_refs: bool=False, fields: list=None) -> dict:
         '''Paper lookup
 
         :param str id: S2PaperId, DOI or ArXivId.
@@ -63,9 +63,9 @@ class SemanticScholar:
         data = self.__get_data('paper', id, include_unknown_refs, fields)
         paper = Paper(data)
 
-        return data if raw_data else paper
+        return paper
 
-    def author(self, id: str, raw_data: bool=False, fields: list=None) -> dict:
+    def author(self, id: str, fields: list=None) -> dict:
         '''Author lookup
 
         :param str id: S2AuthorId.
@@ -79,7 +79,7 @@ class SemanticScholar:
         data = self.__get_data('author', id, False, fields)
         author = Author(data)
 
-        return data if raw_data else author
+        return author
 
     @retry(
         wait=wait_fixed(30),

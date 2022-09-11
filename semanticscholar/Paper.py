@@ -1,3 +1,6 @@
+from semanticscholar.Author import Author
+
+
 class Paper:
 
     FIELDS = [
@@ -91,12 +94,18 @@ class Paper:
     def year(self) -> int:
         return self._year
 
+    def get_raw_data(self) -> dict:
+        return self._data
+
     def _init_attributes(self, data) -> None:
-        self.data = data
+        self._data = data
         if 'abstract' in data:
             self._abstract = data['abstract']
         if 'authors' in data:
-            self._authors = data['authors']
+            items = []
+            for item in data['authors']:
+                items.append(Author(item))
+            self._authors = items
         if 'citationCount' in data:
             self._citationCount = data['citationCount']
         if 'citations' in data:

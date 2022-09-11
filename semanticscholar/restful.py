@@ -8,8 +8,7 @@ def paper(
             include_unknown_references: bool=False,
             api_key: str=None,
             api_url: str=None,
-            graph_api: bool=True,
-            raw_data: bool=False
+            graph_api: bool=True
         ) -> dict:
     '''Paper lookup
 
@@ -32,7 +31,7 @@ def paper(
 
     sch = SemanticScholar(timeout, api_key, api_url, graph_api)
 
-    return sch.paper(id, include_unknown_references, raw_data)
+    return sch.paper(id, include_unknown_references)
 
 
 def author(
@@ -40,8 +39,7 @@ def author(
             timeout: int=2,
             api_key: str=None,
             api_url: str=None,
-            graph_api: bool=True,
-            raw_data: bool=False
+            graph_api: bool=True
         ) -> dict:
     '''Author lookup
 
@@ -62,4 +60,4 @@ def author(
 
     sch = SemanticScholar(timeout, api_key, api_url, graph_api)
 
-    return sch.author(id, raw_data)
+    return sch.author(id)
