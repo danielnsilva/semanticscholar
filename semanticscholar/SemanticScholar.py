@@ -6,6 +6,7 @@ from tenacity import (retry,
                       stop_after_attempt)
 
 from semanticscholar.Author import Author
+from semanticscholar.PaginatedList import PaginatedList
 from semanticscholar.Paper import Paper
 
 
@@ -65,6 +66,9 @@ class SemanticScholar:
 
         return paper
 
+    def search_paper(self) -> PaginatedList:
+        raise NotImplementedError
+
     def get_author(self, id: str, fields: list=None) -> dict:
         '''Author lookup
 
@@ -80,6 +84,9 @@ class SemanticScholar:
         author = Author(data)
 
         return author
+
+    def search_author(self) -> PaginatedList:
+        raise NotImplementedError
 
     @retry(
         wait=wait_fixed(30),
