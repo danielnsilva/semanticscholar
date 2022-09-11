@@ -1,4 +1,4 @@
-from semanticscholar.Author import Author
+from . import Author
 
 
 class Paper:
@@ -24,6 +24,22 @@ class Paper:
     ]
 
     def __init__(self, data) -> None:
+        self._abstract = None
+        self._authors = None
+        self._citationCount = None
+        self._citations = None
+        self._embedding = None
+        self._externalIds = None
+        self._fieldsOfStudy = None
+        self._influentialCitationCount = None
+        self._isOpenAccess = None
+        self._paperId = None
+        self._referenceCount = None
+        self._references = None
+        self._title = None
+        self._tldr = None
+        self._venue = None
+        self._year = None
         self._init_attributes(data)
 
     @property
@@ -104,12 +120,15 @@ class Paper:
         if 'authors' in data:
             items = []
             for item in data['authors']:
-                items.append(Author(item))
+                items.append(Author.Author(item))
             self._authors = items
         if 'citationCount' in data:
             self._citationCount = data['citationCount']
         if 'citations' in data:
-            self._citations = data['citations']
+            items = []
+            for item in data['citations']:
+                items.append(Paper(item))
+            self._citations = items
         if 'embedding' in data:
             self._embedding = data['embedding']
         if 'externalIds' in data:
@@ -125,7 +144,10 @@ class Paper:
         if 'referenceCount' in data:
             self._referenceCount = data['referenceCount']
         if 'references' in data:
-            self._references = data['references']
+            items = []
+            for item in data['citations']:
+                items.append(Paper(item))
+            self._citations = items
         if 'title' in data:
             self._title = data['title']
         if 'tldr' in data:

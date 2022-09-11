@@ -1,3 +1,6 @@
+from . import Paper
+
+
 class Author:
 
     FIELDS = [
@@ -15,6 +18,17 @@ class Author:
     ]
 
     def __init__(self, data) -> None:
+        self._affiliations = None
+        self._aliases = None
+        self._authorId = None
+        self._citationCount = None
+        self._externalIds = None
+        self._hIndex = None
+        self._homepage = None
+        self._name = None
+        self._paperCount = None
+        self._papers = None
+        self._url = None
         self._init_attributes(data)
 
     @property
@@ -85,6 +99,9 @@ class Author:
         if 'paperCount' in data:
             self._paperCount = data['paperCount']
         if 'papers' in data:
-            self._papers = data['papers']
+            items = []
+            for item in data['papers']:
+                items.append(Paper.Paper(item))
+            self._papers = items
         if 'url' in data:
             self._url = data['url']
