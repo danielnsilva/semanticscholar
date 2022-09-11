@@ -31,7 +31,7 @@ def paper(
 
     sch = SemanticScholar(timeout, api_key, api_url, graph_api)
 
-    return sch.paper(id, include_unknown_references)
+    return sch.get_paper(id, include_unknown_references)
 
 
 def author(
@@ -60,4 +60,4 @@ def author(
 
     sch = SemanticScholar(timeout, api_key, api_url, graph_api)
 
-    return sch.author(id)
+    return sch.get_author(id)
