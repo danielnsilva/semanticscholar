@@ -45,7 +45,7 @@ class SemanticScholar:
 
         self.timeout = timeout
 
-    def paper(self, id: str, include_unknown_refs: bool=False, raw_data: bool=False) -> dict:
+    def paper(self, id: str, include_unknown_refs: bool=False, raw_data: bool=False, fields: list=None) -> dict:
         '''Paper lookup
 
         :param str id: S2PaperId, DOI or ArXivId.
@@ -57,12 +57,15 @@ class SemanticScholar:
         :rtype: :class:`dict`
         '''
 
-        data = self.__get_data('paper', id, include_unknown_refs)
+        if not fields:
+            fields = Paper.FIELDS
+
+        data = self.__get_data('paper', id, include_unknown_refs, fields)
         paper = Paper(data)
 
         return data if raw_data else paper
 
-    def author(self, id: str, raw_data: bool=False) -> dict:
+    def author(self, id: str, raw_data: bool=False, fields: list=None) -> dict:
         '''Author lookup
 
         :param str id: S2AuthorId.
@@ -70,7 +73,10 @@ class SemanticScholar:
         :rtype: :class:`dict`
         '''
 
-        data = self.__get_data('author', id, False)
+        if not fields:
+            fields = Author.FIELDS
+
+        data = self.__get_data('author', id, False, fields)
         author = Author(data)
 
         return data if raw_data else author
@@ -84,7 +90,8 @@ class SemanticScholar:
                 self,
                 method: Literal['paper', 'author'],
                 id: str,
-                include_unknown_refs: bool
+                include_unknown_refs: bool,
+                fields: list=None
             ) -> dict:
         '''Get data from Semantic Scholar API
 
@@ -101,9 +108,11 @@ class SemanticScholar:
                 'Invalid method type. Expected one of: {}'.format(method_types)
             )
 
-        url = '{}/{}/{}'.format(self.api_url, method, id)
+        url = '{}/{}/{}?'.format(self.api_url, method, id)
         if include_unknown_refs:
-            url += '?include_unknown_references=true'
+            url += '&include_unknown_references=true'
+        if fields:
+            url += '&fields={}'.format(','.join(fields))
         r = requests.get(url, timeout=self.timeout, headers=self.auth_header)
 
         if r.status_code == 200:

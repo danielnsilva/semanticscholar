@@ -1,5 +1,19 @@
 class Author:
 
+    FIELDS = [
+        'affiliations',
+        'aliases',
+        'authorId',
+        'citationCount',
+        'externalIds',
+        'hIndex',
+        'homepage',
+        'name',
+        'paperCount',
+        'papers',
+        'url'
+    ]
+
     def __init__(self, data) -> None:
         self._init_attributes(data)
 

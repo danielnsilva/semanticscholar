@@ -36,7 +36,7 @@ def paper(
 
 
 def author(
-            id,
+            id: str,
             timeout: int=2,
             api_key: str=None,
             api_url: str=None,

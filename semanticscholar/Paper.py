@@ -1,5 +1,25 @@
 class Paper:
 
+    FIELDS = [
+        'abstract',
+        'authors',
+        'citationCount',
+        'citations',
+        'embedding',
+        'externalIds',
+        'fieldsOfStudy',
+        'influentialCitationCount',
+        'isOpenAccess',
+        'paperId',
+        'referenceCount',
+        'references',
+        'title',
+        'tldr',
+        'url',
+        'venue',
+        'year'
+    ]
+
     def __init__(self, data) -> None:
         self._init_attributes(data)
 
