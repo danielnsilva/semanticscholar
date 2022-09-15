@@ -1,4 +1,5 @@
 from time import time
+import warnings
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
 from semanticscholar.PaginatedResults import PaginatedResults
@@ -68,13 +69,11 @@ class SemanticScholar:
 
         url = '{}/paper/{}'.format(self.api_url, id)
         
-        parameters = ''
-        parameters = '&fields={}'.format(','.join(fields)) if fields else ''
-        parameters = '&include_unknown_references=true' if include_unknown_refs else ''
+        parameters = '&fields={}'.format(','.join(fields))
+        parameters += '&include_unknown_references=true' if include_unknown_refs else ''
 
         data = self._requester.get_data(url, parameters, self.auth_header)
         paper = Paper(data)
-        print(data)
 
         return paper
 
@@ -124,8 +123,7 @@ class SemanticScholar:
 
         url = '{}/author/{}'.format(self.api_url, id)
         
-        parameters = ''
-        parameters = '&fields={}'.format(','.join(fields)) if fields else ''
+        parameters = '&fields={}'.format(','.join(fields))
 
         data = self._requester.get_data(url, parameters, self.auth_header)
         author = Author(data)
@@ -164,3 +162,39 @@ class SemanticScholar:
             )
 
         return results
+
+    def paper(self, id: str, include_unknown_refs: bool=False) -> dict:
+        '''Paper lookup
+        :param str id: S2PaperId, DOI or ArXivId.
+        :param float timeout: an exception is raised
+            if the server has not issued a response for timeout seconds.
+        :param bool include_unknown_refs:
+            (optional) include non referenced paper.
+        :returns: paper data or empty :class:`dict` if not found.
+        :rtype: :class:`dict`
+        '''
+
+        warnings.warn(
+            "paper() is deprecated and will be disabled in the future," +
+            " use get_paper() instead.",
+            DeprecationWarning)
+
+        data = self.get_paper(id, include_unknown_refs)
+
+        return data
+
+    def author(self, id: str) -> dict:
+        '''Author lookup
+        :param str id: S2AuthorId.
+        :returns: author data or empty :class:`dict` if not found.
+        :rtype: :class:`dict`
+        '''
+
+        warnings.warn(
+            "author() is deprecated and will be disabled in the future," +
+            " use get_author() instead.",
+            DeprecationWarning)
+
+        data = self.get_author(id)
+
+        return data
