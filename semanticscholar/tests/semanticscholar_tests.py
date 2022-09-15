@@ -1,25 +1,30 @@
-import semanticscholar as sch
 import unittest
 from requests.exceptions import Timeout
 
+from semanticscholar.SemanticScholar import SemanticScholar
+
 
 class SemanticScholarTest(unittest.TestCase):
+
+    def setUp(self) -> None:
+        self.sch = SemanticScholar(10)
+
     def test_paper(self):
-        data = sch.paper('10.1093/mind/lix.236.433', timeout=5).get_raw_data()
+        data = self.sch.get_paper('10.1093/mind/lix.236.433').get_raw_data()
         self.assertEqual(data['title'],
                          'Computing Machinery and Intelligence')
 
+        self.sch.timeout = 0.01
         self.assertRaises(Timeout,
-                          sch.paper,
-                          '10.1093/mind/lix.236.433',
-                          timeout=0.01)
+                          self.sch.get_paper,
+                          '10.1093/mind/lix.236.433')
 
     def test_author(self):
-        data = sch.author(2262347, timeout=5).get_raw_data()
+        data = self.sch.get_author(2262347).get_raw_data()
         self.assertEqual(data['name'], 'A. Turing')
 
     def test_not_found(self):
-        data = sch.paper(0, timeout=5).get_raw_data()
+        data = self.sch.get_paper(0).get_raw_data()
         self.assertEqual(len(data), 0)
 
 

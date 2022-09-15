@@ -1,3 +1,4 @@
+from time import time
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
 from semanticscholar.PaginatedResults import PaginatedResults
@@ -41,6 +42,15 @@ class SemanticScholar:
         self._timeout = timeout
         self._requester = ApiRequester(self._timeout)
 
+    def get_timeout(self):
+        return self._timeout
+
+    def set_timeout(self, timeout: int):
+        self._timeout = timeout
+        self._requester.timeout = timeout
+
+    timeout = property(get_timeout, set_timeout)
+
     def get_paper(self, id: str, include_unknown_refs: bool=False, fields: list=None) -> dict:
         '''Paper lookup
 
@@ -64,6 +74,7 @@ class SemanticScholar:
 
         data = self._requester.get_data(url, parameters, self.auth_header)
         paper = Paper(data)
+        print(data)
 
         return paper
 
