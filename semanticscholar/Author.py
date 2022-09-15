@@ -77,7 +77,8 @@ class Author:
     def url(self) -> str:
         return self._url
 
-    def get_raw_data(self) -> dict:
+    @property
+    def raw_data(self) -> dict:
         return self._data
 
     def _init_attributes(self, data):

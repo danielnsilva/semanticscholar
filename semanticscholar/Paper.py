@@ -126,7 +126,8 @@ class Paper:
     def year(self) -> int:
         return self._year
 
-    def get_raw_data(self) -> dict:
+    @property
+    def raw_data(self) -> dict:
         return self._data
 
     def _init_attributes(self, data) -> None:
