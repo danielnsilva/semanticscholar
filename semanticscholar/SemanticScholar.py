@@ -77,7 +77,8 @@ class SemanticScholar:
 
         :param str query: plain-text search query string.
         :param list fields: (optional) list of the fields to be returned.
-        :param int limit: (optional) maximum number of results to return.
+        :param int limit: (optional) maximum number of results to return
+            (must be <= 100).
         :returns: query results.
         :rtype: :class:`PaginatedResults`
         '''
@@ -130,7 +131,8 @@ class SemanticScholar:
 
         :param str query: plain-text search query string.
         :param list fields: (optional) list of the fields to be returned.
-        :param int limit: (optional) maximum number of results to return.
+        :param int limit: (optional) maximum number of results to return
+            (must be <= 1000).
         :returns: query results.
         :rtype: :class:`PaginatedResults`
         '''
