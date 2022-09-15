@@ -1,6 +1,6 @@
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
-from semanticscholar.PaginatedList import PaginatedList
+from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
 
 
@@ -67,7 +67,7 @@ class SemanticScholar:
 
         return paper
 
-    def search_paper(self) -> PaginatedList:
+    def search_paper(self) -> PaginatedResults:
         raise NotImplementedError
 
     def get_author(self, id: str, fields: list=None) -> dict:
@@ -91,5 +91,5 @@ class SemanticScholar:
 
         return author
 
-    def search_author(self) -> PaginatedList:
+    def search_author(self) -> PaginatedResults:
         raise NotImplementedError
