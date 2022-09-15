@@ -67,8 +67,37 @@ class SemanticScholar:
 
         return paper
 
-    def search_paper(self) -> PaginatedResults:
-        raise NotImplementedError
+    def search_paper(
+                self,
+                query: str,
+                fields: list=None,
+                limit: int=100
+            ) -> PaginatedResults:
+        '''Search for papers by keyword
+
+        :param str query: plain-text search query string.
+        :param list fields: (optional) list of the fields to be returned.
+        :param int limit: (optional) maximum number of results to return.
+        :returns: query results.
+        :rtype: :class:`PaginatedResults`
+        '''
+
+        if not fields:
+            fields = Paper.SEARCH_FIELDS
+
+        url = '{}/paper/search'.format(self.api_url)
+
+        results = PaginatedResults(
+                self._requester,
+                Paper,
+                url,
+                query,
+                fields,
+                limit,
+                self.auth_header
+            )
+
+        return results
 
     def get_author(self, id: str, fields: list=None) -> dict:
         '''Author lookup
@@ -91,5 +120,34 @@ class SemanticScholar:
 
         return author
 
-    def search_author(self) -> PaginatedResults:
-        raise NotImplementedError
+    def search_author(
+                self,
+                query: str,
+                fields: list=None,
+                limit: int=1000
+            ) -> PaginatedResults:
+        '''Search for authors by name
+
+        :param str query: plain-text search query string.
+        :param list fields: (optional) list of the fields to be returned.
+        :param int limit: (optional) maximum number of results to return.
+        :returns: query results.
+        :rtype: :class:`PaginatedResults`
+        '''
+
+        if not fields:
+            fields = Author.SEARCH_FIELDS
+
+        url = '{}/author/search'.format(self.api_url)
+
+        results = PaginatedResults(
+                self._requester,
+                Author,
+                url,
+                query,
+                fields,
+                limit,
+                self.auth_header
+            )
+
+        return results

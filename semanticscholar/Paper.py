@@ -23,6 +23,22 @@ class Paper:
         'year'
     ]
 
+    SEARCH_FIELDS = [
+        'abstract',
+        'authors',
+        'citationCount',
+        'externalIds',
+        'fieldsOfStudy',
+        'influentialCitationCount',
+        'isOpenAccess',
+        'paperId',
+        'referenceCount',
+        'title',
+        'url',
+        'venue',
+        'year'
+    ]
+
     def __init__(self, data) -> None:
         self._abstract = None
         self._authors = None

@@ -17,6 +17,8 @@ class Author:
         'url'
     ]
 
+    SEARCH_FIELDS = FIELDS
+
     def __init__(self, data) -> None:
         self._affiliations = None
         self._aliases = None
