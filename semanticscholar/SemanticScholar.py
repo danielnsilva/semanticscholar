@@ -52,7 +52,7 @@ class SemanticScholar:
 
     timeout = property(get_timeout, set_timeout)
 
-    def get_paper(self, id: str, include_unknown_refs: bool=False, fields: list=None) -> dict:
+    def get_paper(self, id: str, include_unknown_refs: bool=False, fields: list=None) -> Paper:
         '''Paper lookup
 
         :param str id: S2PaperId, DOI or ArXivId.
@@ -110,7 +110,7 @@ class SemanticScholar:
 
         return results
 
-    def get_author(self, id: str, fields: list=None) -> dict:
+    def get_author(self, id: str, fields: list=None) -> Author:
         '''Author lookup
 
         :param str id: S2AuthorId.
