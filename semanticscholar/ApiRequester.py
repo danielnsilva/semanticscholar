@@ -42,7 +42,7 @@ class ApiRequester:
         url = '{}?{}'.format(url, parameters)
         r = requests.get(url, timeout=self._timeout, headers=headers)
 
-        data = {}        
+        data = {}
         if r.status_code == 200:
             data = r.json()
             if len(data) == 1 and 'error' in data:

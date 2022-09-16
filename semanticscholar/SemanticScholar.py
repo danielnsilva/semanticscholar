@@ -1,5 +1,5 @@
-from time import time
 import warnings
+
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
 from semanticscholar.PaginatedResults import PaginatedResults
@@ -52,10 +52,10 @@ class SemanticScholar:
 
     timeout = property(get_timeout, set_timeout)
 
-    def get_paper(self, id: str, include_unknown_refs: bool=False, fields: list=None) -> Paper:
+    def get_paper(self, paper_id: str, include_unknown_refs: bool=False, fields: list=None) -> Paper:
         '''Paper lookup
 
-        :param str id: S2PaperId, DOI or ArXivId.
+        :param str paper_id: S2PaperId, DOI or ArXivId.
         :param float timeout: an exception is raised
             if the server has not issued a response for timeout seconds.
         :param bool include_unknown_refs:
@@ -67,7 +67,7 @@ class SemanticScholar:
         if not fields:
             fields = Paper.FIELDS
 
-        url = '{}/paper/{}'.format(self.api_url, id)
+        url = '{}/paper/{}'.format(self.api_url, paper_id)
         
         parameters = '&fields={}'.format(','.join(fields))
         parameters += '&include_unknown_references=true' if include_unknown_refs else ''
@@ -110,10 +110,10 @@ class SemanticScholar:
 
         return results
 
-    def get_author(self, id: str, fields: list=None) -> Author:
+    def get_author(self, author_id: str, fields: list=None) -> Author:
         '''Author lookup
 
-        :param str id: S2AuthorId.
+        :param str author_id: S2AuthorId.
         :returns: author data or empty :class:`dict` if not found.
         :rtype: :class:`dict`
         '''
@@ -121,7 +121,7 @@ class SemanticScholar:
         if not fields:
             fields = Author.FIELDS
 
-        url = '{}/author/{}'.format(self.api_url, id)
+        url = '{}/author/{}'.format(self.api_url, author_id)
         
         parameters = '&fields={}'.format(','.join(fields))
 
@@ -163,9 +163,9 @@ class SemanticScholar:
 
         return results
 
-    def paper(self, id: str, include_unknown_refs: bool=False) -> dict:
+    def paper(self, paper_id: str, include_unknown_refs: bool=False) -> dict:
         '''Paper lookup
-        :param str id: S2PaperId, DOI or ArXivId.
+        :param str paper_id: S2PaperId, DOI or ArXivId.
         :param float timeout: an exception is raised
             if the server has not issued a response for timeout seconds.
         :param bool include_unknown_refs:
@@ -179,13 +179,13 @@ class SemanticScholar:
             " use get_paper() instead.",
             DeprecationWarning)
 
-        data = self.get_paper(id, include_unknown_refs)
+        data = self.get_paper(paper_id, include_unknown_refs)
 
         return data
 
-    def author(self, id: str) -> dict:
+    def author(self, paper_id: str) -> dict:
         '''Author lookup
-        :param str id: S2AuthorId.
+        :param str paper_id: S2AuthorId.
         :returns: author data or empty :class:`dict` if not found.
         :rtype: :class:`dict`
         '''
@@ -195,6 +195,6 @@ class SemanticScholar:
             " use get_author() instead.",
             DeprecationWarning)
 
-        data = self.get_author(id)
+        data = self.get_author(paper_id)
 
         return data

@@ -1,5 +1,5 @@
 from typing import Any
-from unittest import result
+
 from semanticscholar.ApiRequester import ApiRequester
 
 
@@ -27,7 +27,7 @@ class PaginatedResults:
         self._data = list()
         self._total = 0
         self._offset = 0 - self._limit
-        self._next = 0      
+        self._next = 0
         self._parameters = ''
         self._items = list()
 
@@ -40,7 +40,7 @@ class PaginatedResults:
     @property
     def offset(self) -> int:
         return self._offset
-    
+
     @property
     def next(self) -> int:
         return self._next

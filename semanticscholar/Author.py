@@ -61,7 +61,7 @@ class Author:
     @property
     def authorId(self) -> str:
         return self._authorId
-    
+
     @property
     def citationCount(self) -> int:
         return self._citationCount
