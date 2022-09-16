@@ -1,4 +1,4 @@
-from . import Paper
+import semanticscholar.Paper
 
 
 class Author:
@@ -14,6 +14,23 @@ class Author:
         'name',
         'paperCount',
         'papers',
+        'papers.abstract',
+        'papers.authors',
+        'papers.citationCount',
+        'papers.externalIds',
+        'papers.fieldsOfStudy',
+        'papers.influentialCitationCount',
+        'papers.isOpenAccess',
+        'papers.journal',
+        'papers.paperId',
+        'papers.publicationDate',
+        'papers.publicationTypes',
+        'papers.referenceCount',
+        'papers.s2FieldsOfStudy',
+        'papers.title',
+        'papers.url',
+        'papers.venue',
+        'papers.year'
         'url'
     ]
 
@@ -104,7 +121,7 @@ class Author:
         if 'papers' in data:
             items = []
             for item in data['papers']:
-                items.append(Paper.Paper(item))
+                items.append(semanticscholar.Paper.Paper(item))
             self._papers = items
         if 'url' in data:
             self._url = data['url']

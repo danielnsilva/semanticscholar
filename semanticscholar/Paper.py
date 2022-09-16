@@ -1,4 +1,5 @@
-from . import Author
+from datetime import datetime
+import semanticscholar.Author
 
 
 class Paper:
@@ -6,16 +7,64 @@ class Paper:
     FIELDS = [
         'abstract',
         'authors',
+        'authors.affiliations',
+        'authors.aliases',
+        'authors.authorId',
+        'authors.citationCount',
+        'authors.externalIds',
+        'authors.hIndex',
+        'authors.homepage',
+        'authors.name',
+        'authors.paperCount',
+        'authors.url',
         'citationCount',
         'citations',
+        'citations.abstract',
+        'citations.authors',
+        'citations.citationCount',
+        'citations.externalIds',
+        'citations.fieldsOfStudy',
+        'citations.influentialCitationCount',
+        'citations.isOpenAccess',
+        'citations.journal',
+        'citations.paperId',
+        'citations.publicationDate',
+        'citations.publicationTypes',
+        'citations.referenceCount',
+        'citations.s2FieldsOfStudy',
+        'citations.title',
+        'citations.url',
+        'citations.venue',
+        'citations.year',
         'embedding',
         'externalIds',
         'fieldsOfStudy',
         'influentialCitationCount',
         'isOpenAccess',
+        'journal',
         'paperId',
+        'publicationDate',
+        'publicationTypes',
         'referenceCount',
         'references',
+        'references.abstract',
+        'references.authors',
+        'references.citationCount',
+        'references.externalIds',
+        'references.fieldsOfStudy',
+        'references.influentialCitationCount',
+        'references.isOpenAccess',
+        'references.journal',
+        'references.paperId',
+        'references.publicationDate',
+        'references.publicationTypes',
+        'references.referenceCount',
+        'references.s2FieldsOfStudy',
+        'references.title',
+        'references.url',
+        'references.venue',
+        'references.year',
+        's2FieldsOfStudy',
         'title',
         'tldr',
         'url',
@@ -31,8 +80,12 @@ class Paper:
         'fieldsOfStudy',
         'influentialCitationCount',
         'isOpenAccess',
+        'journal',
         'paperId',
+        'publicationDate',
+        'publicationTypes',
         'referenceCount',
+        's2FieldsOfStudy',
         'title',
         'url',
         'venue',
@@ -49,9 +102,13 @@ class Paper:
         self._fieldsOfStudy = None
         self._influentialCitationCount = None
         self._isOpenAccess = None
+        self._journal = None
         self._paperId = None
+        self._publicationDate = None
+        self._publicationTypes = None
         self._referenceCount = None
         self._references = None
+        self._s2FieldsOfStudy = None
         self._title = None
         self._tldr = None
         self._venue = None
@@ -95,8 +152,20 @@ class Paper:
         return self._isOpenAccess
 
     @property
+    def journal(self) -> dict:
+        return self._journal
+
+    @property
     def paperId(self) -> str:
         return self._paperId
+
+    @property
+    def publicationDate(self) -> datetime:
+        return self._publicationDate
+
+    @property
+    def publicationTypes(self) -> list:
+        return self._publicationTypes
 
     @property
     def referenceCount(self) -> int:
@@ -105,6 +174,10 @@ class Paper:
     @property
     def references(self) -> list:
         return self._references
+
+    @property
+    def s2FieldsOfStudy(self) -> list:
+        return self._s2FieldsOfStudy
 
     @property
     def title(self) -> str:
@@ -137,7 +210,7 @@ class Paper:
         if 'authors' in data:
             items = []
             for item in data['authors']:
-                items.append(Author.Author(item))
+                items.append(semanticscholar.Author.Author(item))
             self._authors = items
         if 'citationCount' in data:
             self._citationCount = data['citationCount']
@@ -156,15 +229,25 @@ class Paper:
             self._influentialCitationCount = data['influentialCitationCount']
         if 'isOpenAccess' in data:
             self._isOpenAccess = data['isOpenAccess']
+        if 'journal' in data:
+            self._journal = data['journal']
         if 'paperId' in data:
             self._paperId = data['paperId']
+        if 'publicationDate' in data:
+            if data['publicationDate'] is not None:
+                self._publicationDate = datetime.strptime(
+                    data['publicationDate'], '%Y-%m-%d')
+        if 'publicationTypes' in data:
+            self._publicationTypes = data['publicationTypes']
         if 'referenceCount' in data:
             self._referenceCount = data['referenceCount']
         if 'references' in data:
             items = []
-            for item in data['citations']:
+            for item in data['references']:
                 items.append(Paper(item))
-            self._citations = items
+            self._references = items
+        if 's2FieldsOfStudy' in data:
+            self._s2FieldsOfStudy = data['s2FieldsOfStudy']
         if 'title' in data:
             self._title = data['title']
         if 'tldr' in data:
