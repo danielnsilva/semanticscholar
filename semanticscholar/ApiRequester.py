@@ -35,7 +35,6 @@ class ApiRequester:
         '''
 
         url = f'{url}?{parameters}'
-        print(url)
         r = requests.get(url, timeout=self._timeout, headers=headers)
 
         data = {}
