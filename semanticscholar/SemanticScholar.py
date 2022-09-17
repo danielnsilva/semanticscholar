@@ -98,6 +98,8 @@ class SemanticScholar:
     def search_paper(
                 self,
                 query: str,
+                year: str = None,
+                fields_of_study: list = [],
                 fields: list = None,
                 limit: int = 100
             ) -> PaginatedResults:
@@ -115,6 +117,10 @@ class SemanticScholar:
             fields = Paper.SEARCH_FIELDS
 
         url = f'{self.api_url}/paper/search'
+
+        query += f'&year={year}' if year else ''
+        fields_of_study = ','.join(fields_of_study)
+        query += f'&fields_of_study={fields_of_study}' if fields_of_study else ''
 
         results = PaginatedResults(
                 self._requester,
