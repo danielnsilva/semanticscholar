@@ -1,5 +1,7 @@
 from datetime import datetime
 import semanticscholar.Author
+import semanticscholar.Journal
+import semanticscholar.Tldr
 
 
 class Paper:
@@ -152,7 +154,7 @@ class Paper:
         return self._isOpenAccess
 
     @property
-    def journal(self) -> dict:
+    def journal(self) -> semanticscholar.Journal.Journal:
         return self._journal
 
     @property
@@ -184,7 +186,7 @@ class Paper:
         return self._title
 
     @property
-    def tldr(self) -> dict:
+    def tldr(self) -> semanticscholar.Tldr.Tldr:
         return self._tldr
 
     @property
@@ -230,7 +232,8 @@ class Paper:
         if 'isOpenAccess' in data:
             self._isOpenAccess = data['isOpenAccess']
         if 'journal' in data:
-            self._journal = data['journal']
+            if data['journal'] is not None:
+                self._journal = semanticscholar.Journal.Journal(data['journal'])
         if 'paperId' in data:
             self._paperId = data['paperId']
         if 'publicationDate' in data:
@@ -251,7 +254,8 @@ class Paper:
         if 'title' in data:
             self._title = data['title']
         if 'tldr' in data:
-            self._tldr = data['tldr']
+            if data['tldr'] is not None:
+                self._tldr = semanticscholar.Tldr.Tldr(data['tldr'])
         if 'url' in data:
             self._url = data['url']
         if 'venue' in data:
