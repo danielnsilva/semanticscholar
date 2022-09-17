@@ -19,20 +19,6 @@ class ApiRequester:
         '''
         self._timeout = timeout
 
-    def get_timeout(self):
-        '''
-        :rtype: :class:`int`
-        '''
-        return self._timeout
-
-    def set_timeout(self, timeout: int):
-        '''
-        :rtype: :class:`int`
-        '''
-        self._timeout = timeout
-
-    timeout = property(get_timeout, set_timeout)
-
     @retry(
         wait=wait_fixed(30),
         retry=retry_if_exception_type(ConnectionRefusedError),
