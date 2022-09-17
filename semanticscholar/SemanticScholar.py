@@ -67,9 +67,10 @@ class SemanticScholar:
         if not fields:
             fields = Paper.FIELDS
 
-        url = '{}/paper/{}'.format(self.api_url, paper_id)
+        url = f'{self.api_url}/paper/{paper_id}'
         
-        parameters = '&fields={}'.format(','.join(fields))
+        fields = ','.join(fields)
+        parameters = f'&fields={fields}'
         parameters += '&include_unknown_references=true' if include_unknown_refs else ''
 
         data = self._requester.get_data(url, parameters, self.auth_header)
@@ -96,7 +97,7 @@ class SemanticScholar:
         if not fields:
             fields = Paper.SEARCH_FIELDS
 
-        url = '{}/paper/search'.format(self.api_url)
+        url = f'{self.api_url}/paper/search'
 
         results = PaginatedResults(
                 self._requester,
@@ -121,9 +122,10 @@ class SemanticScholar:
         if not fields:
             fields = Author.FIELDS
 
-        url = '{}/author/{}'.format(self.api_url, author_id)
+        url = f'{self.api_url}/author/{author_id}'
         
-        parameters = '&fields={}'.format(','.join(fields))
+        fields = ','.join(fields)
+        parameters = f'&fields={fields}'
 
         data = self._requester.get_data(url, parameters, self.auth_header)
         author = Author(data)
@@ -149,7 +151,7 @@ class SemanticScholar:
         if not fields:
             fields = Author.SEARCH_FIELDS
 
-        url = '{}/author/search'.format(self.api_url)
+        url = f'{self.api_url}/author/search'
 
         results = PaginatedResults(
                 self._requester,

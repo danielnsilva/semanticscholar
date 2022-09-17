@@ -58,11 +58,15 @@ class PaginatedResults:
         while self.__has_next_page():
             self.__get_next_page()
             yield from self._items
+
+    def __len__(self) -> int:
+        return len(self._items)
     
     def __has_next_page(self) -> bool:
         has_any_result = self._total > 0
-        reached_limit = (self._offset + self._limit) == self._next
-        return has_any_result and reached_limit
+        has_more_results = (self._offset + self._limit) == self._next
+        under_limit = (self._offset + self._limit) < 9999
+        return has_any_result and has_more_results and under_limit
 
     def __get_next_page(self) -> None:
 
@@ -83,10 +87,19 @@ class PaginatedResults:
             self._items.append(self._data_type(item))
 
     def __build_params(self) -> None:
-        self._parameters = 'query={}'.format(self._query)
-        self._parameters += '&fields={}'.format(','.join(self._fields))
-        self._parameters += '&limit={}'.format(self._limit)
-        self._parameters += '&offset={}'.format(self._offset + self._limit)
+
+        self._parameters = f'query={self._query}'
+
+        fields = ','.join(self._fields)
+        self._parameters += f'&fields={fields}'
+
+        offset = self._offset + self._limit
+        self._parameters += f'&offset={offset}'
+
+        total = offset + self._limit
+        if total == 10000:
+            self._limit -= 1
+        self._parameters += f'&limit={self._limit}'
 
     def next_page(self) -> None:
         self.__get_next_page()

@@ -4,7 +4,6 @@ class Journal:
     '''
 
     def __init__(self, data) -> None:
-        print(data)
         self._name = None
         self._pages = None
         self._volume = None

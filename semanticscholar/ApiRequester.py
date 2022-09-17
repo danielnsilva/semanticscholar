@@ -39,7 +39,8 @@ class ApiRequester:
         :rtype: :class:`dict`
         '''
 
-        url = '{}?{}'.format(url, parameters)
+        url = f'{url}?{parameters}'
+        print(url)
         r = requests.get(url, timeout=self._timeout, headers=headers)
 
         data = {}
