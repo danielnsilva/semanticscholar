@@ -10,7 +10,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.sch = SemanticScholar(10)
 
     def test_paper(self):
-        data = self.sch.get_paper('10.1093/mind/lix.236.433').get_raw_data()
+        data = self.sch.get_paper('10.1093/mind/lix.236.433').raw_data
         self.assertEqual(data['title'],
                          'Computing Machinery and Intelligence')
 
@@ -20,11 +20,11 @@ class SemanticScholarTest(unittest.TestCase):
                           '10.1093/mind/lix.236.433')
 
     def test_author(self):
-        data = self.sch.get_author(2262347).get_raw_data()
+        data = self.sch.get_author(2262347).raw_data
         self.assertEqual(data['name'], 'A. Turing')
 
     def test_not_found(self):
-        data = self.sch.get_paper(0).get_raw_data()
+        data = self.sch.get_paper(0).raw_data
         self.assertEqual(len(data), 0)
 
 
