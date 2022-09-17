@@ -30,7 +30,7 @@ class Author:
         'papers.title',
         'papers.url',
         'papers.venue',
-        'papers.year'
+        'papers.year',
         'url'
     ]
 
