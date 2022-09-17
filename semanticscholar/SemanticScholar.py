@@ -99,13 +99,17 @@ class SemanticScholar:
                 self,
                 query: str,
                 year: str = None,
-                fields_of_study: list = [],
+                fields_of_study: list = None,
                 fields: list = None,
                 limit: int = 100
             ) -> PaginatedResults:
         '''Search for papers by keyword
 
         :param str query: plain-text search query string.
+        :param str year: restrict results to the given range of
+            publication year.
+        :param str fields_of_study: restrict results to given field-of-study,
+            using the s2FieldsOfStudy paper field.
         :param list fields: (optional) list of the fields to be returned.
         :param int limit: (optional) maximum number of results to return
             (must be <= 100).
@@ -119,8 +123,9 @@ class SemanticScholar:
         url = f'{self.api_url}/paper/search'
 
         query += f'&year={year}' if year else ''
-        fields_of_study = ','.join(fields_of_study)
-        query += f'&fields_of_study={fields_of_study}' if fields_of_study else ''
+        if fields_of_study:
+            fields_of_study = ','.join(fields_of_study)
+            query += f'&fields_of_study={fields_of_study}'
 
         results = PaginatedResults(
                 self._requester,
