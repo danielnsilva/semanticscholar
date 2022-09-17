@@ -206,7 +206,7 @@ class SemanticScholar:
 
         data = self.get_paper(paper_id, include_unknown_refs)
 
-        return data
+        return data.raw_data
 
     def author(self, paper_id: str) -> dict:
         '''Author lookup
@@ -222,4 +222,4 @@ class SemanticScholar:
 
         data = self.get_author(paper_id)
 
-        return data
+        return data.raw_data
