@@ -18,10 +18,10 @@ class SemanticScholar:
 
     def __init__(
                 self,
-                timeout: int=10,
-                api_key: str=None,
-                api_url: str=None,
-                graph_api: bool=True
+                timeout: int = 10,
+                api_key: str = None,
+                api_url: str = None,
+                graph_api: bool = True
             ) -> None:
         '''
         :param float timeout: (optional) an exception is raised
@@ -61,10 +61,17 @@ class SemanticScholar:
 
     timeout = property(get_timeout, set_timeout)
 
-    def get_paper(self, paper_id: str, include_unknown_refs: bool=False, fields: list=None) -> Paper:
+    def get_paper(
+                self,
+                paper_id: str,
+                include_unknown_refs: bool = False,
+                fields: list = None
+            ) -> Paper:
         '''Paper lookup
 
-        :param str paper_id: S2PaperId, DOI or ArXivId.
+        :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL,
+            PMID, PMCID, or URL (from semanticscholar.org, arxiv.org,
+            aclweb.org, acm.org, biorxiv.org).
         :param float timeout: an exception is raised
             if the server has not issued a response for timeout seconds.
         :param bool include_unknown_refs:
@@ -80,7 +87,8 @@ class SemanticScholar:
 
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
-        parameters += '&include_unknown_references=true' if include_unknown_refs else ''
+        if include_unknown_refs:
+            parameters += '&include_unknown_references=true'
 
         data = self._requester.get_data(url, parameters, self.auth_header)
         paper = Paper(data)
@@ -90,8 +98,8 @@ class SemanticScholar:
     def search_paper(
                 self,
                 query: str,
-                fields: list=None,
-                limit: int=100
+                fields: list = None,
+                limit: int = 100
             ) -> PaginatedResults:
         '''Search for papers by keyword
 
@@ -120,7 +128,7 @@ class SemanticScholar:
 
         return results
 
-    def get_author(self, author_id: str, fields: list=None) -> Author:
+    def get_author(self, author_id: str, fields: list = None) -> Author:
         '''Author lookup
 
         :param str author_id: S2AuthorId.
@@ -144,8 +152,8 @@ class SemanticScholar:
     def search_author(
                 self,
                 query: str,
-                fields: list=None,
-                limit: int=1000
+                fields: list = None,
+                limit: int = 1000
             ) -> PaginatedResults:
         '''Search for authors by name
 
@@ -174,7 +182,7 @@ class SemanticScholar:
 
         return results
 
-    def paper(self, paper_id: str, include_unknown_refs: bool=False) -> dict:
+    def paper(self, paper_id: str, include_unknown_refs: bool = False) -> dict:
         '''Paper lookup
         :param str paper_id: S2PaperId, DOI or ArXivId.
         :param float timeout: an exception is raised

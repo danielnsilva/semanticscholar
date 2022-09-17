@@ -17,7 +17,7 @@ class PaginatedResults:
                 query: str,
                 fields: str,
                 limit: int,
-                headers: dict=None
+                headers: dict = None
             ) -> None:
 
         self._requester = requester
