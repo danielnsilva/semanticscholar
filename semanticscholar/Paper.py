@@ -5,6 +5,9 @@ import semanticscholar.Tldr
 
 
 class Paper:
+    '''
+    This class abstracts a paper.
+    '''
 
     FIELDS = [
         'abstract',
@@ -119,90 +122,156 @@ class Paper:
 
     @property
     def abstract(self) -> str:
+        '''
+        :rtype: :class:`str`
+        '''
         return self._abstract
 
     @property
     def authors(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._authors
 
     @property
     def citationCount(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._citationCount
 
     @property
     def citations(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._citations
 
     @property
     def embedding(self) -> dict:
+        '''
+        :rtype: :class:`dict`
+        '''
         return self._embedding
 
     @property
     def externalIds(self) -> dict:
+        '''
+        :rtype: :class:`dict`
+        '''
         return self._externalIds
 
     @property
     def fieldsOfStudy(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._fieldsOfStudy
 
     @property
     def influentialCitationCount(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._influentialCitationCount
 
     @property
     def isOpenAccess(self) -> bool:
+        '''
+        :rtype: :class:`bool`
+        '''
         return self._isOpenAccess
 
     @property
     def journal(self) -> semanticscholar.Journal.Journal:
+        '''
+        :rtype: :class:`Journal`
+        '''
         return self._journal
 
     @property
     def paperId(self) -> str:
+        '''
+        :rtype: :class:`str`
+        '''
         return self._paperId
 
     @property
     def publicationDate(self) -> datetime:
+        '''
+        :rtype: :class:`datetime`
+        '''
         return self._publicationDate
 
     @property
     def publicationTypes(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._publicationTypes
 
     @property
     def referenceCount(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._referenceCount
 
     @property
     def references(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._references
 
     @property
     def s2FieldsOfStudy(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._s2FieldsOfStudy
 
     @property
     def title(self) -> str:
+        '''
+        :rtype: :class:`str`
+        '''
         return self._title
 
     @property
     def tldr(self) -> semanticscholar.Tldr.Tldr:
+        '''
+        :rtype: :class:`Tldr`
+        '''
         return self._tldr
 
     @property
     def url(self) -> str:
+        '''
+        :rtype: :class:`str`
+        '''
         return self._url
 
     @property
     def venue(self) -> str:
+        '''
+        :rtype: :class:`str`
+        '''
         return self._venue
 
     @property
     def year(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._year
 
     @property
     def raw_data(self) -> dict:
+        '''
+        :rtype: :class:`dict`
+        '''
         return self._data
 
     def _init_attributes(self, data) -> None:

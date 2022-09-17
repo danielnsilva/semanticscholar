@@ -8,6 +8,9 @@ from semanticscholar.SemanticScholarException import BadQueryParametersException
 
 
 class ApiRequester:
+    '''
+    This class handles calls to Semantic Scholar API.
+    '''
 
     def __init__(self, timeout) -> None:
         '''
@@ -17,9 +20,15 @@ class ApiRequester:
         self._timeout = timeout
 
     def get_timeout(self):
+        '''
+        :rtype: :class:`int`
+        '''
         return self._timeout
 
     def set_timeout(self, timeout: int):
+        '''
+        :rtype: :class:`int`
+        '''
         self._timeout = timeout
 
     timeout = property(get_timeout, set_timeout)

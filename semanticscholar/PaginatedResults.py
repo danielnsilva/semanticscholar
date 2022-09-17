@@ -4,6 +4,10 @@ from semanticscholar.ApiRequester import ApiRequester
 
 
 class PaginatedResults:
+    '''
+    This class abstracts paginated results from API search.
+    You can just iterate over results regardless of the number of pages.
+    '''
 
     def __init__(
                 self,
@@ -24,33 +28,48 @@ class PaginatedResults:
         self._limit = limit
         self._headers = headers
 
-        self._data = list()
+        self._data = []
         self._total = 0
         self._offset = 0 - self._limit
         self._next = 0
         self._parameters = ''
-        self._items = list()
+        self._items = []
 
         self.__get_next_page()
 
     @property
     def total(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._total
 
     @property
     def offset(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._offset
 
     @property
     def next(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._next
 
     @property
     def items(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._items
 
     @property
     def raw_data(self) -> list:
+        '''
+        :rtype: :class:`list`
+        '''
         return self._data
 
     def __iter__(self) -> Any:
@@ -61,7 +80,7 @@ class PaginatedResults:
 
     def __len__(self) -> int:
         return len(self._items)
-    
+
     def __has_next_page(self) -> bool:
         has_any_result = self._total > 0
         has_more_results = (self._offset + self._limit) == self._next
@@ -102,4 +121,7 @@ class PaginatedResults:
         self._parameters += f'&limit={self._limit}'
 
     def next_page(self) -> None:
+        '''
+        Get next results
+        '''
         self.__get_next_page()

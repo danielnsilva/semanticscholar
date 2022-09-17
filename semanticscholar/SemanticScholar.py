@@ -7,6 +7,9 @@ from semanticscholar.Paper import Paper
 
 
 class SemanticScholar:
+    '''
+    Main class to retrieve data from Semantic Scholar Graph API
+    '''
 
     DEFAULT_API_URL = 'https://api.semanticscholar.org/graph/v1'
     DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org/v1'
@@ -43,10 +46,16 @@ class SemanticScholar:
         self._timeout = timeout
         self._requester = ApiRequester(self._timeout)
 
-    def get_timeout(self):
+    def get_timeout(self) -> int:
+        '''
+        :rtype: :class:`int`
+        '''
         return self._timeout
 
     def set_timeout(self, timeout: int):
+        '''
+        :param int timeout
+        '''
         self._timeout = timeout
         self._requester.timeout = timeout
 
@@ -68,7 +77,7 @@ class SemanticScholar:
             fields = Paper.FIELDS
 
         url = f'{self.api_url}/paper/{paper_id}'
-        
+
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
         parameters += '&include_unknown_references=true' if include_unknown_refs else ''
@@ -123,7 +132,7 @@ class SemanticScholar:
             fields = Author.FIELDS
 
         url = f'{self.api_url}/author/{author_id}'
-        
+
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
 

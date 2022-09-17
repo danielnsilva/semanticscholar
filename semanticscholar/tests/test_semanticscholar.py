@@ -36,5 +36,6 @@ class SemanticScholarTest(unittest.TestCase):
         data.next_page()
         self.assertGreater(len(data), 100)
 
+
 if __name__ == '__main__':
     unittest.main()
