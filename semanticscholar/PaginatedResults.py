@@ -81,6 +81,9 @@ class PaginatedResults:
     def __len__(self) -> int:
         return len(self._items)
 
+    def __getitem__(self, key: int) -> Any:
+        return self._items[key]
+
     def __has_next_page(self) -> bool:
         has_any_result = self._total > 0
         has_more_results = (self._offset + self._limit) == self._next
