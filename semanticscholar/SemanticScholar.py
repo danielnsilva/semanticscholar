@@ -69,6 +69,10 @@ class SemanticScholar:
             ) -> Paper:
         '''Paper lookup
 
+        :calls: `GET https://api.semanticscholar.org/graph/v1/paper/{paper_id} \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/ \
+            operation/get_graph_get_paper>`_
+
         :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL, \
                PMID, PMCID, or URL from:
 
@@ -110,6 +114,10 @@ class SemanticScholar:
             ) -> PaginatedResults:
         '''Search for papers by keyword
 
+        :calls: `GET https://api.semanticscholar.org/graph/v1/paper/search \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/ \
+            operation/get_graph_get_paper_search>`_
+
         :param str query: plain-text search query string.
         :param str year: restrict results to the given range of \
                publication year.
@@ -147,6 +155,10 @@ class SemanticScholar:
     def get_author(self, author_id: str, fields: list = None) -> Author:
         '''Author lookup
 
+        :calls: `GET https://api.semanticscholar.org/graph/v1/author/\
+            {author_id} <https://api.semanticscholar.org/api-docs/\
+            graph#tag/Author-Data/operation/get_graph_get_author>`_
+
         :param str author_id: S2AuthorId.
         :returns: author data or empty :class:`dict` if not found.
         :rtype: :class:`dict`
@@ -172,6 +184,10 @@ class SemanticScholar:
                 limit: int = 1000
             ) -> PaginatedResults:
         '''Search for authors by name
+
+        :calls: `GET https://api.semanticscholar.org/graph/v1/author/search\
+            <https://api.semanticscholar.org/api-docs/graph#tag/Author-Data/\
+            operation/get_graph_get_author_search>`_
 
         :param str query: plain-text search query string.
         :param list fields: (optional) list of the fields to be returned.
@@ -201,6 +217,10 @@ class SemanticScholar:
     def paper(self, paper_id: str, include_unknown_refs: bool = False) -> dict:
         '''Paper lookup
 
+        :calls: `GET https://api.semanticscholar.org/graph/v1/paper/{paper_id} \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/ \
+            operation/get_graph_get_paper>`_
+
         :param str paper_id: S2PaperId, DOI or ArXivId.
         :param float timeout: an exception is raised \
                if the server has not issued a response for timeout seconds.
@@ -224,6 +244,10 @@ class SemanticScholar:
 
     def author(self, paper_id: str) -> dict:
         '''Author lookup
+
+        :calls: `GET https://api.semanticscholar.org/graph/v1/author/\
+            {author_id} <https://api.semanticscholar.org/api-docs/\
+            graph#tag/Author-Data/operation/get_graph_get_author>`_
 
         :param str paper_id: S2AuthorId.
         :returns: author data or empty :class:`dict` if not found.
