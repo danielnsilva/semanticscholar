@@ -53,6 +53,12 @@ class Author:
         self._url = None
         self._init_attributes(data)
 
+    def __str__(self) -> str:
+        return f'{self._authorId} - {self._name}'
+
+    def __repr__(self) -> str:
+        return self.__str__()
+
     @property
     def affiliations(self) -> list:
         '''

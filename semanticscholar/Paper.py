@@ -120,6 +120,12 @@ class Paper:
         self._year = None
         self._init_attributes(data)
 
+    def __str__(self) -> str:
+        return f'{self._paperId} - {self._title}'
+
+    def __repr__(self) -> str:
+        return self.__str__()
+
     @property
     def abstract(self) -> str:
         '''

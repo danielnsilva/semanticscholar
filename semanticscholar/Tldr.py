@@ -9,6 +9,12 @@ class Tldr:
         self._text = None
         self._init_attributes(data)
 
+    def __str__(self) -> str:
+        return self._text
+
+    def __repr__(self) -> str:
+        return self.__str__()
+
     @property
     def model(self) -> str:
         '''
