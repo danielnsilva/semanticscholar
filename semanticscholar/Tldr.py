@@ -12,21 +12,21 @@ class Tldr:
     @property
     def model(self) -> str:
         '''
-        :rtype: :class:`str`
+        :type :class:`str`
         '''
         return self._model
 
     @property
     def text(self) -> str:
         '''
-        :rtype: :class:`str`
+        :type: :class:`str`
         '''
         return self._text
 
     @property
     def raw_data(self) -> dict:
         '''
-        :rtype: :class:`dict`
+        :type: :class:`dict`
         '''
         return self._data
 

@@ -25,7 +25,7 @@ class SemanticScholar:
             ) -> None:
         '''
         :param float timeout: (optional) an exception is raised
-            if the server has not issued a response for timeout seconds.
+        if the server has not issued a response for timeout seconds.
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
         :param bool graph_api: (optional) whether use new Graph API.
@@ -48,13 +48,13 @@ class SemanticScholar:
 
     def get_timeout(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._timeout
 
     def set_timeout(self, timeout: int):
         '''
-        :param int timeout
+        :param int timeout:
         '''
         self._timeout = timeout
         self._requester.timeout = timeout
@@ -69,13 +69,18 @@ class SemanticScholar:
             ) -> Paper:
         '''Paper lookup
 
-        :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL,
-            PMID, PMCID, or URL (from semanticscholar.org, arxiv.org,
-            aclweb.org, acm.org, biorxiv.org).
-        :param float timeout: an exception is raised
-            if the server has not issued a response for timeout seconds.
-        :param bool include_unknown_refs:
-            (optional) include non referenced paper.
+        :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL, \
+               PMID, PMCID, or URL from:
+
+               - semanticscholar.org
+               - arxiv.org
+               - aclweb.org
+               - acm.org
+               - biorxiv.org
+               
+        :param bool include_unknown_refs: (optional) include non referenced \
+               paper.
+        :param list fields: (optional) list of the fields to be returned.
         :returns: paper data or empty :class:`dict` if not found.
         :rtype: :class:`dict`
         '''
@@ -106,13 +111,13 @@ class SemanticScholar:
         '''Search for papers by keyword
 
         :param str query: plain-text search query string.
-        :param str year: restrict results to the given range of
-            publication year.
-        :param str fields_of_study: restrict results to given field-of-study,
-            using the s2FieldsOfStudy paper field.
+        :param str year: restrict results to the given range of \
+               publication year.
+        :param str fields_of_study: restrict results to given field-of-study, \
+               using the s2FieldsOfStudy paper field.
         :param list fields: (optional) list of the fields to be returned.
-        :param int limit: (optional) maximum number of results to return
-            (must be <= 100).
+        :param int limit: (optional) maximum number of results to return \
+               (must be <= 100).
         :returns: query results.
         :rtype: :class:`PaginatedResults`
         '''
@@ -170,8 +175,8 @@ class SemanticScholar:
 
         :param str query: plain-text search query string.
         :param list fields: (optional) list of the fields to be returned.
-        :param int limit: (optional) maximum number of results to return
-            (must be <= 1000).
+        :param int limit: (optional) maximum number of results to return \
+               (must be <= 1000).
         :returns: query results.
         :rtype: :class:`PaginatedResults`
         '''
@@ -195,13 +200,17 @@ class SemanticScholar:
 
     def paper(self, paper_id: str, include_unknown_refs: bool = False) -> dict:
         '''Paper lookup
+
         :param str paper_id: S2PaperId, DOI or ArXivId.
-        :param float timeout: an exception is raised
-            if the server has not issued a response for timeout seconds.
-        :param bool include_unknown_refs:
-            (optional) include non referenced paper.
+        :param float timeout: an exception is raised \
+               if the server has not issued a response for timeout seconds.
+        :param bool include_unknown_refs: (optional) include non \
+               referenced paper.
         :returns: paper data or empty :class:`dict` if not found.
         :rtype: :class:`dict`
+
+        .. deprecated:: 0.3.0
+           Use :func:`get_paper` instead
         '''
 
         warnings.warn(
@@ -215,9 +224,13 @@ class SemanticScholar:
 
     def author(self, paper_id: str) -> dict:
         '''Author lookup
+
         :param str paper_id: S2AuthorId.
         :returns: author data or empty :class:`dict` if not found.
         :rtype: :class:`dict`
+
+        .. deprecated:: 0.3.0
+           Use :func:`get_author` instead
         '''
 
         warnings.warn(

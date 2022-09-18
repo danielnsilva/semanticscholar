@@ -12,28 +12,28 @@ class Journal:
     @property
     def name(self) -> str:
         '''
-        :rtype: :class:`str`
+        :type: :class:`str`
         '''
         return self._name
 
     @property
     def pages(self) -> str:
         '''
-        :rtype: :class:`str`
+        :type: :class:`str`
         '''
         return self._pages
 
     @property
     def volume(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._volume
 
     @property
     def raw_data(self) -> dict:
         '''
-        :rtype: :class:`dict`
+        :type: :class:`dict`
         '''
         return self._data
 

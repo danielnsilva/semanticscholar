@@ -56,84 +56,84 @@ class Author:
     @property
     def affiliations(self) -> list:
         '''
-        :rtype: :class:`list`
+        :type: :class:`list`
         '''
         return self._affiliations
 
     @property
     def aliases(self) -> list:
         '''
-        :rtype: :class:`list`
+        :type: :class:`list`
         '''
         return self._aliases
 
     @property
     def authorId(self) -> str:
         '''
-        :rtype: :class:`str`
+        :type: :class:`str`
         '''
         return self._authorId
 
     @property
     def citationCount(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._citationCount
 
     @property
     def externalIds(self) -> dict:
         '''
-        :rtype: :class:`dict`
+        :type: :class:`dict`
         '''
         return self._externalIds
 
     @property
     def hIndex(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._hIndex
 
     @property
     def homepage(self) -> str:
         '''
-        :rtype: :class:`str`
+        :type: :class:`str`
         '''
         return self._homepage
 
     @property
     def name(self) -> str:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._name
 
     @property
     def paperCount(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._paperCount
 
     @property
     def papers(self) -> list:
         '''
-        :rtype: :class:`list`
+        :type: :class:`list`
         '''
         return self._papers
 
     @property
     def url(self) -> str:
         '''
-        :rtype: :class:`str`
+        :type: :class:`str`
         '''
         return self._url
 
     @property
     def raw_data(self) -> dict:
         '''
-        :rtype: :class:`dict`
+        :type: :class:`dict`
         '''
         return self._data
 

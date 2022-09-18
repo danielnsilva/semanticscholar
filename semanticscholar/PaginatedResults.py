@@ -40,35 +40,35 @@ class PaginatedResults:
     @property
     def total(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._total
 
     @property
     def offset(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._offset
 
     @property
     def next(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._next
 
     @property
     def items(self) -> list:
         '''
-        :rtype: :class:`list`
+        :type: :class:`list`
         '''
         return self._items
 
     @property
     def raw_data(self) -> list:
         '''
-        :rtype: :class:`list`
+        :type: :class:`list`
         '''
         return self._data
 
