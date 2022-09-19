@@ -120,7 +120,25 @@ Building Thinking Machines by Solving Animal Cognition Tasks
 
 #### ```fields: list```
 
-The list of the fields to be returned. By default, the response includes all fields. As explained in [official documentation](https://api.semanticscholar.org/api-docs/graph) , fields like papers (author lookup and search) may result responses bigger than the usual size and affect performance. Consider reducing the list. Check [official documentation](https://api.semanticscholar.org/api-docs/graph) for a list of available fields.
+The list of the fields to be returned. By default, the response includes all fields. As explained in [official documentation](https://api.semanticscholar.org/api-docs/graph), fields like papers (author lookup and search) may result responses bigger than the usual size and affect performance. Consider reducing the list. Check [official documentation](https://api.semanticscholar.org/api-docs/graph) for a list of available fields.
+
+```python
+from semanticscholar import SemanticScholar
+sch = SemanticScholar()
+results = sch.search_paper('software engineering', fields=['title','year'])
+for item in results:
+     print(item)
+```
+
+Output:
+```console
+{'paperId': 'd0bc1501ae6f54dd16534e651d90d2aeeeb1cfc1', 'title': 'Software engineering: What is it?', 'year': 2018}
+{'paperId': 'f70b2f20be241f445a61f33c4b8e76e554760340', 'title': 'Software Engineering for Machine Learning: A Case Study', 'year': 2019}
+{'paperId': '55bdaa9d27ed595e2ccf34b3a7847020cc9c946c', 'title': 'Performing systematic literature reviews in software engineering', 'year': 2006}
+{'paperId': '27e57cc2f22c1921d2a1c3954d5062e3fe391553', 'title': 'Guidelines for conducting and reporting case study research in software engineering', 'year': 2009}    
+{'paperId': '81dbfc1bc890368979399874e47e0529ddceaece', 'title': "Software Engineering: A Practitioner's Approach", 'year': 1982}
+...
+```
 
 ### Query parameters for all search methods
 
