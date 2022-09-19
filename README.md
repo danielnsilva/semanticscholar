@@ -4,6 +4,7 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/semanticscholar?style=for-the-badge)
 [![GitHub license](https://img.shields.io/github/license/danielnsilva/semanticscholar?style=for-the-badge)](https://github.com/danielnsilva/semanticscholar/blob/master/LICENSE)
 [![Codacy grade](https://img.shields.io/codacy/grade/1456603c25764b14b441ed509e938154?style=for-the-badge)](https://www.codacy.com/gh/danielnsilva/semanticscholar/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=danielnsilva/semanticscholar&amp;utm_campaign=Badge_Grade)
+[![Codacy coverage](https://img.shields.io/codacy/coverage/1456603c25764b14b441ed509e938154?style=for-the-badge)](https://www.codacy.com/gh/danielnsilva/semanticscholar/dashboard?utm_source=github.com&utm_medium=referral&utm_content=danielnsilva/semanticscholar&utm_campaign=Badge_Coverage)
 
 Unofficial [Semantic Scholar Academic Graph API](https://api.semanticscholar.org/) client library for Python.
 
