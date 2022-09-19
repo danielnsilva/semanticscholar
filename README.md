@@ -120,7 +120,7 @@ Building Thinking Machines by Solving Animal Cognition Tasks
 
 #### ```fields: list```
 
-The list of the fields to be returned. By default, the response includes all fields. As explained in [official documentation](https://api.semanticscholar.org/api-docs/graph), fields like papers (author lookup and search) may result responses bigger than the usual size and affect performance. Consider reducing the list. Check [official documentation](https://api.semanticscholar.org/api-docs/graph) for a list of available fields.
+The list of the fields to be returned. By default, the response includes all fields. As explained in [official documentation](https://api.semanticscholar.org/api-docs/graph), fields like papers (author lookup and search) may result in responses bigger than the usual size and affect performance. Consider reducing the list. Check [official documentation](https://api.semanticscholar.org/api-docs/graph) for a list of available fields.
 
 ```python
 from semanticscholar import SemanticScholar
