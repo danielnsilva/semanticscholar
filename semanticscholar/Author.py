@@ -63,6 +63,9 @@ class Author:
     def __getitem__(self, key) -> Any:
         return self._data.__getitem__(key)
 
+    def keys(self):
+        return self._data.keys()
+
     @property
     def affiliations(self) -> list:
         '''
