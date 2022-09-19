@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Any
 import semanticscholar.Author
 import semanticscholar.Journal
 import semanticscholar.Tldr
@@ -121,10 +122,13 @@ class Paper:
         self._init_attributes(data)
 
     def __str__(self) -> str:
-        return f'{self._paperId} - {self._title}'
+        return self._data.__str__()
 
-    def __repr__(self) -> str:
-        return self.__str__()
+    def __repr__(self) -> Any:
+        return self._data.__repr__()
+
+    def __getitem__(self, key) -> Any:
+        return self._data.__getitem__(key)
 
     @property
     def abstract(self) -> str:
