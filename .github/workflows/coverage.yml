@@ -24,7 +24,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Gather coverage data
         run: |
-          python -m coverage run -m unittest discover
+          python -m coverage run --source=semanticscholar/ -m unittest discover
       - name: XML reporting
         run: |
           python -m coverage xml
