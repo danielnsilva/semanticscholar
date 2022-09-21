@@ -222,4 +222,4 @@ sch = SemanticScholar(api_key=s2_api_key)
 
 ## Semantic Scholar Academic Graph API docs
 
-To get more detailed information about Semantic Scholar Academic Graph API functionalities and limitations, [go to the official documentation](https://api.semanticscholar.org/api-docs/graph).
+To get more detailed information about Semantic Scholar Academic Graph API functionalities and limitations, [go to the official documentation](https://api.semanticscholar.org/api-docs/graph). The [Frequently Asked Questions](https://www.semanticscholar.org/faq) page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
