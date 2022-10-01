@@ -1,2 +1,2 @@
 requests==2.28.1
-tenacity==8.0.1
+tenacity==8.1.0
