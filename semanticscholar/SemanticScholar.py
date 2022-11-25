@@ -12,7 +12,7 @@ class SemanticScholar:
     '''
 
     DEFAULT_API_URL = 'https://api.semanticscholar.org/graph/v1'
-    DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org/v1'
+    DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org/graph/v1'
 
     auth_header = {}
 
@@ -35,13 +35,14 @@ class SemanticScholar:
             self.api_url = api_url
         else:
             self.api_url = self.DEFAULT_API_URL
-            if not graph_api:
-                self.api_url = self.api_url.replace('/graph', '')
 
         if api_key:
             self.auth_header = {'x-api-key': api_key}
             if not api_url:
                 self.api_url = self.DEFAULT_PARTNER_API_URL
+        
+        if not graph_api:
+            self.api_url = self.api_url.replace('/graph', '')
 
         self._timeout = timeout
         self._requester = ApiRequester(self._timeout)
