@@ -1,9 +1,6 @@
 name: Coverage
 
-on:
-  push:
-    branches: [ "master" ]
-  workflow_dispatch:
+on: [ workflow_call, workflow_dispatch ]
 
 jobs:
   coverage:
