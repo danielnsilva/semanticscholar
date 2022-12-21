@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding='utf8') as fh:
     long_description = fh.read()
 
 setup(
@@ -15,8 +15,8 @@ setup(
     license='MIT',
     packages=['semanticscholar'],
     install_requires=['requests', 'tenacity'],
-    test_suite='nose.collector',
-    tests_require=['nose'],
+    test_suite='tests',
+    tests_require=['vcrpy'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

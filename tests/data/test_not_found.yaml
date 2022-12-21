@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/paper/0?&fields=abstract,authors,authors.affiliations,authors.aliases,authors.authorId,authors.citationCount,authors.externalIds,authors.hIndex,authors.homepage,authors.name,authors.paperCount,authors.url,citationCount,citations,citations.abstract,citations.authors,citations.citationCount,citations.externalIds,citations.fieldsOfStudy,citations.influentialCitationCount,citations.isOpenAccess,citations.journal,citations.paperId,citations.publicationDate,citations.publicationTypes,citations.referenceCount,citations.s2FieldsOfStudy,citations.title,citations.url,citations.venue,citations.year,embedding,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,paperId,publicationDate,publicationTypes,referenceCount,references,references.abstract,references.authors,references.citationCount,references.externalIds,references.fieldsOfStudy,references.influentialCitationCount,references.isOpenAccess,references.journal,references.paperId,references.publicationDate,references.publicationTypes,references.referenceCount,references.s2FieldsOfStudy,references.title,references.url,references.venue,references.year,s2FieldsOfStudy,title,tldr,url,venue,year
+  response:
+    body:
+      string: '{"error":"Paper with id 0 not found"}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '38'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Dec 2022 03:23:31 GMT
+      Via:
+      - 1.1 b119d190fd68a1b5c82101503504cff2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - kSAigyJt4Ak0wWxJa3hPZDEU6oyyiSrFuyYFxIj8nhHeqhumllzvpQ==
+      X-Amz-Cf-Pop:
+      - GRU3-P1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - dehYAHw2vHcFchQ=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '38'
+      x-amzn-Remapped-Date:
+      - Wed, 21 Dec 2022 03:23:31 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - aa41f970-44a0-4ca0-a988-08f26634e797
+    status:
+      code: 404
+      message: Not Found
+version: 1
