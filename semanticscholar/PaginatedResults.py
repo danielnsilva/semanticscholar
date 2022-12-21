@@ -75,8 +75,7 @@ class PaginatedResults:
     def __iter__(self) -> Any:
         yield from self._items
         while self.__has_next_page():
-            self.__get_next_page()
-            yield from self._items
+            yield from self.__get_next_page()
 
     def __len__(self) -> int:
         return len(self._items)
@@ -90,7 +89,7 @@ class PaginatedResults:
         under_limit = (self._offset + self._limit) < 9999
         return has_any_result and has_more_results and under_limit
 
-    def __get_next_page(self) -> None:
+    def __get_next_page(self) -> list:
 
         self.__build_params()
 
@@ -105,8 +104,13 @@ class PaginatedResults:
         self._offset = results['offset']
         self._next = results['next'] if 'next' in results else 0
 
+        result_items = []
         for item in results['data']:
-            self._items.append(self._data_type(item))
+            result_items.append(self._data_type(item))
+
+        self._items += result_items
+
+        return result_items
 
     def __build_params(self) -> None:
 
