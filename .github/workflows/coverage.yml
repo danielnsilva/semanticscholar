@@ -17,8 +17,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install --upgrade coverage
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r requirements.txt
+          pip install -r test-requirements.txt
       - name: Gather coverage data
         run: |
           python -m coverage run --source=semanticscholar/ -m unittest discover
