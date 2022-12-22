@@ -1,4 +1,5 @@
 import warnings
+from typing import List, Union
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
@@ -64,10 +65,10 @@ class SemanticScholar:
 
     def get_paper(
                 self,
-                paper_id: str,
+                paper_id: Union[str, List[str]],
                 include_unknown_refs: bool = False,
                 fields: list = None
-            ) -> Paper:
+            ) -> Union[Paper, List[Paper]]:
         '''Paper lookup
 
         :calls: `GET https://api.semanticscholar.org/graph/v1/paper/{paper_id} \
@@ -153,7 +154,11 @@ class SemanticScholar:
 
         return results
 
-    def get_author(self, author_id: str, fields: list = None) -> Author:
+    def get_author(
+                self,
+                author_id: Union[str, List[str]],
+                fields: list = None
+            ) -> Union[Author, List[Author]]:
         '''Author lookup
 
         :calls: `GET https://api.semanticscholar.org/graph/v1/author/\

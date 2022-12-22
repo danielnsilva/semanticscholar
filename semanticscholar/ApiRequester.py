@@ -38,12 +38,19 @@ class ApiRequester:
         retry=retry_if_exception_type(ConnectionRefusedError),
         stop=stop_after_attempt(10)
     )
-    def get_data(self, url: str, parameters: str, headers: dict) -> dict:
+    def get_data(
+                self,
+                url: str,
+                parameters: str,
+                headers: dict,
+                payload: dict = None
+            ) -> dict:
         '''Get data from Semantic Scholar API
 
         :param str url: absolute URL to API endpoint.
         :param str parameters: the parameters to add in the URL.
         :param str headers: request headers.
+        :param dict payload: data for POST requests.
         :returns: data or empty :class:`dict` if not found.
         :rtype: :class:`dict`
         '''
