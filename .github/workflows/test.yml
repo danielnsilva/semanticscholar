@@ -38,5 +38,5 @@ jobs:
 
     needs: test
     name: Coverage
-    if: github.event == 'push'
+    if: ${{ github.event_name == 'push' }}
     uses: ./.github/workflows/coverage.yml
