@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'README.md'
+  workflow_dispatch:
       
 jobs:
   toc:
