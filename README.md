@@ -10,6 +10,9 @@ Unofficial [Semantic Scholar Academic Graph API](https://api.semanticscholar.org
 
 ![](search_paper.gif)
 
+<!-- START doctoc -->
+<!-- END doctoc -->
+
 ## How to install
 ```console
 pip install semanticscholar
