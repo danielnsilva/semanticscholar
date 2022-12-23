@@ -11,3 +11,6 @@ jobs:
     name: Generate TOC
     steps:
       - uses: technote-space/toc-generator@v4
+        with:
+          TOC_TITLE: ''
+          MAX_HEADER_LEVEL: 2
