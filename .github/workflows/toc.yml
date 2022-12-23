@@ -1,0 +1,13 @@
+name: TOC Generator
+
+on:
+  push:
+    paths:
+      - 'README.md'
+      
+jobs:
+  toc:
+    runs-on: ubuntu-latest
+    name: Generate TOC
+    steps:
+      - uses: technote-space/toc-generator@v4
