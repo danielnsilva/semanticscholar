@@ -154,6 +154,7 @@ class SemanticScholarTest(unittest.TestCase):
         data = self.sch.search_paper('turing')
         all_results = [item.title for item in data]
         self.assertRaises(BadQueryParametersException, data.next_page)
+        self.assertEqual(len(all_results), len(data.items))
 
     @test_vcr.use_cassette
     def test_search_paper_fields_of_study(self):
