@@ -10,6 +10,26 @@ Unofficial [Semantic Scholar Academic Graph API](https://api.semanticscholar.org
 
 ![](search_paper.gif)
 
+## Table of Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [How to install](#how-to-install)
+- [Usage](#usage)
+  - [Paper Lookup](#paper-lookup)
+  - [Author Lookup](#author-lookup)
+  - [Search for papers and authors](#search-for-papers-and-authors)
+  - [Traversing search results](#traversing-search-results)
+  - [Query parameters for all methods](#query-parameters-for-all-methods)
+  - [Query parameters for all search methods](#query-parameters-for-all-search-methods)
+  - [Query parameters for search papers](#query-parameters-for-search-papers)
+  - [Other options](#other-options)
+  - [Accessing the Data Partner's API](#accessing-the-data-partners-api)
+- [Semantic Scholar Academic Graph API docs](#semantic-scholar-academic-graph-api-docs)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## How to install
 ```console
 pip install semanticscholar

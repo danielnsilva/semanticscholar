@@ -1,0 +1,17 @@
+name: TOC Generator
+
+on:
+  push:
+    paths:
+      - 'README.md'
+  workflow_dispatch:
+      
+jobs:
+  toc:
+    runs-on: ubuntu-latest
+    name: Generate TOC
+    steps:
+      - uses: technote-space/toc-generator@v4
+        with:
+          TOC_TITLE: ''
+          MAX_HEADER_LEVEL: 3
