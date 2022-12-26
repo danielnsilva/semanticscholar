@@ -19,19 +19,19 @@ class ApiRequester:
         '''
         self._timeout = timeout
 
-    def get_timeout(self) -> int:
+    @property
+    def timeout(self) -> int:
         '''
-        :rtype: :class:`int`
+        :type: :class:`int`
         '''
         return self._timeout
 
-    def set_timeout(self, timeout: int):
+    @timeout.setter
+    def timeout(self, timeout: int) -> None:
         '''
         :param int timeout:
         '''
         self._timeout = timeout
-
-    timeout = property(get_timeout, set_timeout)
 
     @retry(
         wait=wait_fixed(30),
