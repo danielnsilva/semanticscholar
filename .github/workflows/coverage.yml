@@ -1,6 +1,11 @@
 name: Coverage
 
-on: [ workflow_call, workflow_dispatch ]
+on:
+  workflow_call:
+    secrets:
+      CODACY_PROJECT_TOKEN:
+        required: true
+  workflow_dispatch:
 
 jobs:
   coverage:

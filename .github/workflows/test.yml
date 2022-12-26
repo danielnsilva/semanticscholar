@@ -40,3 +40,5 @@ jobs:
     name: Coverage
     if: ${{ github.event_name == 'push' }}
     uses: ./.github/workflows/coverage.yml
+    secrets:
+      CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
