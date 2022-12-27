@@ -14,8 +14,8 @@ class ApiRequester:
 
     def __init__(self, timeout) -> None:
         '''
-        :param float timeout: an exception is raised
-        if the server has not issued a response for timeout seconds.
+        :param float timeout: an exception is raised \
+            if the server has not issued a response for timeout seconds.
         '''
         self._timeout = timeout
 

@@ -24,8 +24,8 @@ class SemanticScholar:
                 graph_api: bool = True
             ) -> None:
         '''
-        :param float timeout: (optional) an exception is raised
-        if the server has not issued a response for timeout seconds.
+        :param float timeout: (optional) an exception is raised \
+            if the server has not issued a response for timeout seconds.
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
         :param bool graph_api: (optional) whether use new Graph API.
