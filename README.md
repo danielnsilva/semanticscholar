@@ -84,7 +84,7 @@ Output:
 > **Warning**
 > From the [official documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper_search): "Because of the subtleties of finding partial phrase matches in different parts of the document, be cautious about interpreting the total field as a count of documents containing any particular word in the query."
 
-To search for authors by keyword:
+To search for authors by name:
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
