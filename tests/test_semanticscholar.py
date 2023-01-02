@@ -107,6 +107,18 @@ class SemanticScholarTest(unittest.TestCase):
                          'Computing Machinery and Intelligence')
 
     @test_vcr.use_cassette
+    def test_get_papers(self):
+        list_of_paper_ids = [
+            'CorpusId:470667',
+            '10.2139/ssrn.2250500',
+            '0f40b1f08821e22e859c6050916cec3667778613']
+        data = self.sch.get_papers(list_of_paper_ids)
+        for item in data:
+            with self.subTest(line=item.paperId):
+                self.assertIn(
+                    'E. Duflo', [author.name for author in item.authors])
+
+    @test_vcr.use_cassette
     def test_timeout(self):
         self.sch.timeout = 0.01
         self.assertEqual(self.sch.timeout, 0.01)
@@ -118,6 +130,14 @@ class SemanticScholarTest(unittest.TestCase):
     def test_get_author(self):
         data = self.sch.get_author(2262347)
         self.assertEqual(data.name, 'A. Turing')
+
+    @test_vcr.use_cassette
+    def test_get_authors(self):
+        list_of_author_ids = ['3234559', '1726629', '1711844']
+        data = self.sch.get_authors(list_of_author_ids)
+        list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
+        self.assertCountEqual(
+            [item.name for item in data], list_of_author_names)
 
     @test_vcr.use_cassette
     def test_not_found(self):

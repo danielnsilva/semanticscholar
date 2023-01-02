@@ -1,0 +1,124 @@
+interactions:
+- request:
+    body: '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '96'
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?&fields=abstract,authors,citationCount,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,paperId,publicationDate,publicationTypes,referenceCount,s2FieldsOfStudy,title,url,venue,year
+  response:
+    body:
+      string: '[{"paperId": "0f40b1f08821e22e859c6050916cec3667778613", "externalIds":
+        {"DOI": "10.1257/rct.1355", "CorpusId": 255313304}, "url": "https://www.semanticscholar.org/paper/0f40b1f08821e22e859c6050916cec3667778613",
+        "title": "Improving Third-Party Audits and Regulatory Compliance in India",
+        "abstract": "Researchers: Esther Duflo Michael Greenstone Nick Ryan Rohini
+        Pande Sector(s): Environment, Energy, and Climate Change, Political Economy
+        and Governance, Firms J-PAL office: J-PAL South Asia Location: Ahmedabad and
+        Surat, Gujarat, India Sample: 473 industrial plants Target group: Small and
+        medium enterprises Outcome of interest: Pollution Climate change mitigation
+        Intervention type: Audits Monetary incentives AEA RCT registration number:
+        AEARCTR-0001355 Data: Download from the AEA Partner organization(s): Evidence
+        for Policy Design (EPoD), Government of India, State of Gujarat Pollution
+        Control Board (GPCB), Harvard University Sustainability Science Program (SSP),
+        International Growth Center (IGC), International Initiative for Impact Evaluation
+        (3ie), MIT Center for Energy and Environmental Policy Research (CEEPR), National
+        Science Foundation (NSF)", "venue": "", "year": 2023, "referenceCount": 2,
+        "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true, "fieldsOfStudy":
+        null, "s2FieldsOfStudy": [{"category": "Economics", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
+        [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId": "4711469", "name":
+        "M. Greenstone"}, {"authorId": "2071339188", "name": "Nick Ryan"}, {"authorId":
+        "2159313937", "name": "Rohini Pande"}]}, {"paperId": "c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce",
+        "externalIds": {"MAG": "2951549429", "DOI": "10.2139/ssrn.288970", "CorpusId":
+        470667}, "url": "https://www.semanticscholar.org/paper/c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce",
+        "title": "How Much Should We Trust Differences-in-Differences Estimates?",
+        "abstract": "Most Difference-in-Difference (DD) papers rely on many years
+        of data and focus on serially correlated outcomes. Yet almost all these papers
+        ignore the bias in the estimated standard errors that serial correlation introduce4s.
+        This is especially troubling because the independent variable of interest
+        in DD estimation (e.g., the passage of law) is itself very serially correlated,
+        which will exacerbate the bias in standard errors. To illustrate the severity
+        of this issue, we randomly generate placebo laws in state-level data on female
+        wages from the Current Population Survey. For each law, we use OLS to compute
+        the DD estimate of its ''effect'' as well as the standard error for this estimate.
+        The standard errors are severely biased: with about 20 years of data, DD estimation
+        finds an ''effect'' significant at the 5% level of up to 45% of the placebo
+        laws. Two very simple techniques can solve this problem for large sample sizes.
+        The first technique consists in collapsing the data and ignoring the time-series
+        variation altogether; the second technique is to estimate standard errors
+        while allowing for an arbitrary covariance structure between time periods.
+        We also suggest a third technique, based on randomization inference testing
+        methods, which works well irrespective of sample size. This technique uses
+        the empirical distribution of estimated effects for placebo laws to form the
+        test distribution.", "venue": "", "year": 2001, "referenceCount": 30, "citationCount":
+        9605, "influentialCitationCount": 567, "isOpenAccess": true, "fieldsOfStudy":
+        ["Psychology", "Economics", "Mathematics"], "s2FieldsOfStudy": [{"category":
+        "Psychology", "source": "external"}, {"category": "Economics", "source": "external"},
+        {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+        "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+        "2001-10-01", "journal": {"name": "Experimental & Empirical Studies eJournal"},
+        "authors": [{"authorId": "81141608", "name": "Marianne Bertrand"}, {"authorId":
+        "2259683", "name": "E. Duflo"}, {"authorId": "2062143", "name": "S. Mullainathan"}]},
+        {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3", "externalIds": {"MAG":
+        "157810103", "DOI": "10.2139/ssrn.2250500", "CorpusId": 3142471}, "url": "https://www.semanticscholar.org/paper/cb1ebd913c3724c599f6b276b14b5c6253da68f3",
+        "title": "The Miracle of Microfinance? Evidence from a Randomized Evaluation",
+        "abstract": "Microcredit has spread extremely rapidly since its beginnings
+        in the late 1970s, but whether and how much is helps the poor is the subject
+        of intense debate. This paper reports on the \u2026rst randomized evaluation
+        of the impact of introducing microcredit in a new market. Half of 104 slums
+        in Hyderabad, India were randomly selected for opening of an MFI branch while
+        the remainder were not. We show that the intervention increased total MFI
+        borrow.", "venue": "", "year": 2013, "referenceCount": 66, "citationCount":
+        1956, "influentialCitationCount": 237, "isOpenAccess": true, "fieldsOfStudy":
+        ["Business", "Economics", "Geography"], "s2FieldsOfStudy": [{"category": "Business",
+        "source": "external"}, {"category": "Economics", "source": "external"}, {"category":
+        "Geography", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": "2013-04-10", "journal": {"name":
+        "ERN: Credit Risk (Topic)"}, "authors": [{"authorId": "2259683", "name": "E.
+        Duflo"}, {"authorId": "2422370", "name": "A. Banerjee"}, {"authorId": "4249203",
+        "name": "R. Glennerster"}, {"authorId": "31549526", "name": "Cynthia Kinnan"}]}]
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5608'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 02 Jan 2023 18:37:55 GMT
+      Via:
+      - 1.1 77f67fd09c19551a70ddc9b4f41371ac.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - jo2OTLhE0ax--PnhyCoM3Vi3CdQhu3X8SzJ9ynX4efJcKxUva6Jv1Q==
+      X-Amz-Cf-Pop:
+      - GIG51-P4
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - eIKklFiKvHcFVRA=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '5608'
+      x-amzn-Remapped-Date:
+      - Mon, 02 Jan 2023 18:37:55 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - c963f632-d1ba-42f6-9c34-9349adb8577a
+    status:
+      code: 200
+      message: OK
+version: 1
