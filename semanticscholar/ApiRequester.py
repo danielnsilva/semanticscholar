@@ -1,10 +1,12 @@
-import requests
-from tenacity import (retry,
-                      wait_fixed,
-                      retry_if_exception_type,
-                      stop_after_attempt)
+import json
+from typing import List, Union
 
-from semanticscholar.SemanticScholarException import BadQueryParametersException
+import requests
+from tenacity import (retry, retry_if_exception_type, stop_after_attempt,
+                      wait_fixed)
+
+from semanticscholar.SemanticScholarException import \
+    BadQueryParametersException
 
 
 class ApiRequester:
@@ -44,7 +46,7 @@ class ApiRequester:
                 parameters: str,
                 headers: dict,
                 payload: dict = None
-            ) -> dict:
+            ) -> Union[dict, List[dict]]:
         '''Get data from Semantic Scholar API
 
         :param str url: absolute URL to API endpoint.
@@ -52,11 +54,14 @@ class ApiRequester:
         :param str headers: request headers.
         :param dict payload: data for POST requests.
         :returns: data or empty :class:`dict` if not found.
-        :rtype: :class:`dict`
+        :rtype: :class:`dict` or :class:`List` of :class:`dict`
         '''
 
         url = f'{url}?{parameters}'
-        r = requests.get(url, timeout=self._timeout, headers=headers)
+        method = 'POST' if payload else 'GET'
+        payload = json.dumps(payload) if payload else None
+        r = requests.request(
+            method, url, timeout=self._timeout, headers=headers, data=payload)
 
         data = {}
         if r.status_code == 200:

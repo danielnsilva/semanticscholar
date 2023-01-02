@@ -65,10 +65,10 @@ class SemanticScholar:
 
     def get_paper(
                 self,
-                paper_id: Union[str, List[str]],
+                paper_id: str,
                 include_unknown_refs: bool = False,
                 fields: list = None
-            ) -> Union[Paper, List[Paper]]:
+            ) -> Paper:
         '''Paper lookup
 
         :calls: `GET https://api.semanticscholar.org/graph/v1/paper/{paper_id} \
@@ -105,6 +105,48 @@ class SemanticScholar:
         paper = Paper(data)
 
         return paper
+
+    def get_papers(
+                self,
+                paper_ids: List[str],
+                fields: list = None
+            ) -> List[Paper]:
+        '''Get details for multiple papers at once
+
+        :calls: `POST https://api.semanticscholar.org/graph/v1/paper/batch\
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/\
+            operation/post_graph_get_papers>`_
+
+        :param str paper_ids: list of IDs (must be <= 1000) - S2PaperId,\
+            CorpusId, DOI, ArXivId, MAG, ACL, PMID, PMCID, or URL from:
+
+            - semanticscholar.org
+            - arxiv.org
+            - aclweb.org
+            - acm.org
+            - biorxiv.org
+               
+        :param list fields: (optional) list of the fields to be returned.
+        :returns: papers data
+        :rtype: :class:`List` of :class:`Paper`
+        :raises: BadQueryParametersException: if no paper was found.
+        '''
+
+        if not fields:
+            fields = Paper.SEARCH_FIELDS
+
+        url = f'{self.api_url}/paper/batch'
+
+        fields = ','.join(fields)
+        parameters = f'&fields={fields}'
+
+        payload = { "ids": paper_ids }
+
+        data = self._requester.get_data(
+            url, parameters, self.auth_header, payload)
+        papers = [Paper(item) for item in data]
+
+        return papers
 
     def search_paper(
                 self,
@@ -156,9 +198,9 @@ class SemanticScholar:
 
     def get_author(
                 self,
-                author_id: Union[str, List[str]],
+                author_id: str,
                 fields: list = None
-            ) -> Union[Author, List[Author]]:
+            ) -> Author:
         '''Author lookup
 
         :calls: `GET https://api.semanticscholar.org/graph/v1/author/\
@@ -182,6 +224,39 @@ class SemanticScholar:
         author = Author(data)
 
         return author
+
+    def get_authors(
+                self,
+                author_ids: List[str],
+                fields: list = None
+            ) -> List[Author]:
+        '''Get details for multiple authors at once
+
+        :calls: `POST https://api.semanticscholar.org/graph/v1/author/batch\
+            <https://api.semanticscholar.org/api-docs/graph#tag/Author-Data/\
+            operation/get_graph_get_author>`_
+
+        :param str author_ids: list of S2AuthorId (must be <= 1000).
+        :returns: author data
+        :rtype: :class:`List` of :class:`Author`
+        :raises: BadQueryParametersException: if no author was found.
+        '''
+
+        if not fields:
+            fields = Author.SEARCH_FIELDS
+
+        url = f'{self.api_url}/author/batch'
+
+        fields = ','.join(fields)
+        parameters = f'&fields={fields}'
+
+        payload = { "ids": author_ids }
+
+        data = self._requester.get_data(
+            url, parameters, self.auth_header, payload)
+        authors = [Author(item) for item in data]
+
+        return authors
 
     def search_author(
                 self,
