@@ -27,27 +27,79 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 21 Dec 2022 03:23:31 GMT
+      - Tue, 03 Jan 2023 16:00:34 GMT
       Via:
-      - 1.1 b119d190fd68a1b5c82101503504cff2.cloudfront.net (CloudFront)
+      - 1.1 80e150c3cd619899dc38fb20936dc086.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - kSAigyJt4Ak0wWxJa3hPZDEU6oyyiSrFuyYFxIj8nhHeqhumllzvpQ==
+      - nBcZYrmZQkUBPMYfdHk09L1Og8Au_OA5x879R6rCWc8Y1uz_RgeV4g==
       X-Amz-Cf-Pop:
       - GRU3-P1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - dehYAHw2vHcFchQ=
+      - eLGdYGpIvHcFWPQ=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '38'
       x-amzn-Remapped-Date:
-      - Wed, 21 Dec 2022 03:23:31 GMT
+      - Tue, 03 Jan 2023 16:00:34 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - aa41f970-44a0-4ca0-a988-08f26634e797
+      - e6531cc3-4df9-41c4-945c-4c33ecefffc4
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/author/0?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
+  response:
+    body:
+      string: '{"error":"Author with id 0 not found"}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '39'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 03 Jan 2023 16:00:35 GMT
+      Via:
+      - 1.1 556546966a883b579a433c9e90aa37f8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - _uDqxTap17JNGWPUyZ0AjbQG9rglrKI65fCfOgnl_9tqlHb3Ihfg_w==
+      X-Amz-Cf-Pop:
+      - GRU3-P1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - eLGdiE64vHcFRnQ=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '39'
+      x-amzn-Remapped-Date:
+      - Tue, 03 Jan 2023 16:00:35 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - fe7744cf-fb2e-4e8f-9ac0-e5d094e2e410
     status:
       code: 404
       message: Not Found

@@ -7,3 +7,7 @@ class SemanticScholarException(Exception):
 
 class BadQueryParametersException(SemanticScholarException):
     '''Invalid query params or unsupported fields.'''
+
+
+class ObjectNotFoundExeception(SemanticScholarException):
+    '''Paper or Author ID not found'''

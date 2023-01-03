@@ -87,8 +87,9 @@ class SemanticScholar:
         :param bool include_unknown_refs: (optional) include non referenced \
                paper.
         :param list fields: (optional) list of the fields to be returned.
-        :returns: paper data or empty :class:`dict` if not found.
-        :rtype: :class:`dict`
+        :returns: paper data
+        :rtype: :class:`Paper`
+        :raises: ObjectNotFoundExeception: if Paper ID not found.
         '''
 
         if not fields:
@@ -208,8 +209,9 @@ class SemanticScholar:
             graph#tag/Author-Data/operation/get_graph_get_author>`_
 
         :param str author_id: S2AuthorId.
-        :returns: author data or empty :class:`dict` if not found.
-        :rtype: :class:`dict`
+        :returns: author data
+        :rtype: :class:`Author`
+        :raises: ObjectNotFoundExeception: if Author ID not found.
         '''
 
         if not fields:

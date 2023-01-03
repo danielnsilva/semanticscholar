@@ -9,8 +9,8 @@ from semanticscholar.Author import Author
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
 from semanticscholar.SemanticScholar import SemanticScholar
-from semanticscholar.SemanticScholarException import \
-    BadQueryParametersException
+from semanticscholar.SemanticScholarException import (
+    BadQueryParametersException, ObjectNotFoundExeception)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -114,7 +114,7 @@ class SemanticScholarTest(unittest.TestCase):
             '0f40b1f08821e22e859c6050916cec3667778613']
         data = self.sch.get_papers(list_of_paper_ids)
         for item in data:
-            with self.subTest(line=item.paperId):
+            with self.subTest(subtest=item.paperId):
                 self.assertIn(
                     'E. Duflo', [author.name for author in item.authors])
 
@@ -141,8 +141,10 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_not_found(self):
-        data = self.sch.get_paper(0).raw_data
-        self.assertEqual(len(data), 0)
+        methods = [self.sch.get_paper, self.sch.get_author]
+        for method in methods:
+            with self.subTest(subtest=method.__name__):
+                self.assertRaises(ObjectNotFoundExeception, method, 0)
 
     @test_vcr.use_cassette
     def test_bad_query_parameters(self):
