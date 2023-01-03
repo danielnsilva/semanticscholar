@@ -83,7 +83,7 @@ class SemanticScholar:
                - aclweb.org
                - acm.org
                - biorxiv.org
-               
+
         :param bool include_unknown_refs: (optional) include non referenced \
                paper.
         :param list fields: (optional) list of the fields to be returned.
@@ -125,7 +125,7 @@ class SemanticScholar:
             - aclweb.org
             - acm.org
             - biorxiv.org
-               
+
         :param list fields: (optional) list of the fields to be returned.
         :returns: papers data
         :rtype: :class:`List` of :class:`Paper`
