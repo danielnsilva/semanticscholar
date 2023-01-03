@@ -1,5 +1,5 @@
 import warnings
-from typing import List, Union
+from typing import List
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
