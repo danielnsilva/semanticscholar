@@ -41,7 +41,7 @@ class SemanticScholar:
             self.auth_header = {'x-api-key': api_key}
             if not api_url:
                 self.api_url = self.DEFAULT_PARTNER_API_URL
-        
+
         if not graph_api:
             self.api_url = self.api_url.replace('/graph', '')
 
