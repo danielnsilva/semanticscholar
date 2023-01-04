@@ -11,15 +11,16 @@ interactions:
       User-Agent:
       - python-requests/2.28.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/author/2262347?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
+    uri: https://api.semanticscholar.org/graph/v1/author/2262347?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
   response:
     body:
       string: '{"authorId": "2262347", "externalIds": {"DBLP": ["Alan M. Turing"]},
         "url": "https://www.semanticscholar.org/author/2262347", "name": "A. Turing",
         "aliases": ["A Turing", "A M Turing", "A. M. Turing", "Alan M. Turing", "Alan
         Turing", "Alan Mathison Turing"], "affiliations": [], "homepage": null, "paperCount":
-        60, "citationCount": 12304, "hIndex": 23, "papers": [{"paperId": "5d10faffeae5e9f2ae868626b29e6e9b8047cecb",
-        "externalIds": {"CorpusId": 251848799}, "url": "https://www.semanticscholar.org/paper/5d10faffeae5e9f2ae868626b29e6e9b8047cecb",
+        60, "citationCount": 12397, "hIndex": 23, "papers": [{"paperId": "5d10faffeae5e9f2ae868626b29e6e9b8047cecb",
+        "externalIds": {"CorpusId": 251848799}, "corpusId": 251848799, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/5d10faffeae5e9f2ae868626b29e6e9b8047cecb",
         "title": "Dystopian or Utopian? Two Images of Alan Turing", "abstract": "Turing
         made intriguing statements about the future of arti\ufb01cial intelligence
         (AI) in society. He predicted that machines would eventually \u2018compete
@@ -44,33 +45,36 @@ interactions:
         independent thinking to retain their power. These, he hoped, would be eventually
         rivaled and surpassed by intelligent machines.", "venue": "", "year": 2022,
         "referenceCount": 60, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
-        false, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Art", "source":
-        "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-        null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
-        "947efa54175145240c1a33f62321f23db43571e7", "externalIds": {"DBLP": "phd/Turing38",
-        "MAG": "1970654545", "DOI": "10.1016/b978-044450423-4/50007-3", "CorpusId":
-        40363661}, "url": "https://www.semanticscholar.org/paper/947efa54175145240c1a33f62321f23db43571e7",
+        false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Art", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        null, "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "947efa54175145240c1a33f62321f23db43571e7", "externalIds": {"DBLP":
+        "phd/Turing38", "MAG": "1970654545", "DOI": "10.1016/b978-044450423-4/50007-3",
+        "CorpusId": 40363661}, "corpusId": 40363661, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/947efa54175145240c1a33f62321f23db43571e7",
         "title": "Systems of Logic Based on Ordinals", "abstract": null, "venue":
         "Alan Turing''s Systems of Logic", "year": 2012, "referenceCount": 23, "citationCount":
-        328, "influentialCitationCount": 30, "isOpenAccess": true, "fieldsOfStudy":
-        ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer
-        Science", "source": "external"}, {"category": "Mathematics", "source": "external"},
-        {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": "2012-12-31", "journal": {"name": "Alan Turing''s
-        Systems of Logic"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "b7682dfbd4c03e287265d64e46388d21eedf3394", "externalIds": {"MAG":
-        "46849891", "DOI": "10.1093/oso/9780198250791.003.0017", "CorpusId": 172414532},
-        "url": "https://www.semanticscholar.org/paper/b7682dfbd4c03e287265d64e46388d21eedf3394",
+        328, "influentialCitationCount": 30, "isOpenAccess": true, "openAccessPdf":
+        {"url": "https://pure.mpg.de/pubman/item/item_2403325_2/component/file_2403324/Turing_1939_Sysyems.pdf",
+        "status": null}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+        "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": "2012-12-31", "journal": {"name":
+        "Alan Turing''s Systems of Logic"}, "authors": [{"authorId": "2262347", "name":
+        "A. Turing"}]}, {"paperId": "b7682dfbd4c03e287265d64e46388d21eedf3394", "externalIds":
+        {"MAG": "46849891", "DOI": "10.1093/oso/9780198250791.003.0017", "CorpusId":
+        172414532}, "corpusId": 172414532, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b7682dfbd4c03e287265d64e46388d21eedf3394",
         "title": "Computing Machinery and Intelligence (1950)", "abstract": null,
         "venue": "Ideas That Created the Future", "year": 1989, "referenceCount":
         0, "citationCount": 47, "influentialCitationCount": 2, "isOpenAccess": false,
-        "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
-        Science", "source": "external"}, {"category": "Computer Science", "source":
-        "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1989-06-01",
-        "journal": {"name": "Ideas That Created the Future"}, "authors": [{"authorId":
-        "2262347", "name": "A. Turing"}]}, {"paperId": "6b7b392d5f3284a78fd559439bc735f3f0b08bae",
+        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+        Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        "1989-06-01", "journal": {"name": "Ideas That Created the Future"}, "authors":
+        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "6b7b392d5f3284a78fd559439bc735f3f0b08bae",
         "externalIds": {"DBLP": "journals/cryptologia/X20", "DOI": "10.1080/01611194.2019.1650846",
-        "CorpusId": 212727442}, "url": "https://www.semanticscholar.org/paper/6b7b392d5f3284a78fd559439bc735f3f0b08bae",
+        "CorpusId": 212727442}, "corpusId": 212727442, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/6b7b392d5f3284a78fd559439bc735f3f0b08bae",
         "title": "Review of two collections of essays about Alan Turing", "abstract":
         "2012 was the Alan Turing Year \u2014 the celebration of the 100th anniversary
         of Alan Turing\u2019s birth. Turing\u2019s biographer Andrew Hodges in the
@@ -99,39 +103,41 @@ interactions:
         chapter is a compilation of extracts from [Hilton\u2019s] papers and notes
         left in New Zealand, together with extracts from [Hilton\u2019s]", "venue":
         "Cryptologia", "year": 2020, "referenceCount": 2, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Art",
-        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Review"],
-        "publicationDate": "2020-01-02", "journal": {"volume": "44", "pages": "82
-        - 86", "name": "Cryptologia"}, "authors": [{"authorId": "2262347", "name":
-        "A. Turing"}, {"authorId": "1772040", "name": "Jonathan P. Bowen"}, {"authorId":
-        "3075367", "name": "Mark D. Sprevak"}, {"authorId": "2109033245", "name":
-        "Robin J. Wilson"}, {"authorId": "2085428", "name": "A. Bokulich"}]}, {"paperId":
-        "87aebbd963f929cfb5ac46b0facb5128148758ad", "externalIds": {"CorpusId": 202754269},
-        "url": "https://www.semanticscholar.org/paper/87aebbd963f929cfb5ac46b0facb5128148758ad",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Art", "source": "s2-fos-model"}], "publicationTypes":
+        ["JournalArticle", "Review"], "publicationDate": "2020-01-02", "journal":
+        {"volume": "44", "pages": "82 - 86", "name": "Cryptologia"}, "authors": [{"authorId":
+        "2262347", "name": "A. Turing"}, {"authorId": "1772040", "name": "Jonathan
+        P. Bowen"}, {"authorId": "3075367", "name": "Mark D. Sprevak"}, {"authorId":
+        "2109033245", "name": "Robin J. Wilson"}, {"authorId": "2085428", "name":
+        "A. Bokulich"}]}, {"paperId": "87aebbd963f929cfb5ac46b0facb5128148758ad",
+        "externalIds": {"CorpusId": 202754269}, "corpusId": 202754269, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/87aebbd963f929cfb5ac46b0facb5128148758ad",
         "title": "Development of Moore \u2019 s Law", "abstract": "Many theorists
         would agree that, had it not been for courseware, the construction of online
         algorithms might never have occurred. In this paper, we confirm the visualization
         of superblocks. In this paper we argue that the Turing machine can be made
         pseudorandom, metamorphic, and low-energy.", "venue": "", "year": 2019, "referenceCount":
         27, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-        "journal": null, "authors": [{"authorId": "117077595", "name": "Olivier Pirson"},
-        {"authorId": "2153307", "name": "R. Stallman"}, {"authorId": "2262347", "name":
-        "A. Turing"}, {"authorId": "1717349", "name": "D. Knuth"}]}, {"paperId": "d0a3f97bba5c179bde46fa7db6ee0b5e1899db94",
-        "externalIds": {"DOI": "10.1049/pbpc026e_ch8", "CorpusId": 242953753}, "url":
-        "https://www.semanticscholar.org/paper/d0a3f97bba5c179bde46fa7db6ee0b5e1899db94",
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null,
+        "publicationDate": null, "journal": null, "authors": [{"authorId": "117077595",
+        "name": "Olivier Pirson"}, {"authorId": "2153307", "name": "R. Stallman"},
+        {"authorId": "2262347", "name": "A. Turing"}, {"authorId": "1717349", "name":
+        "D. Knuth"}]}, {"paperId": "d0a3f97bba5c179bde46fa7db6ee0b5e1899db94", "externalIds":
+        {"DOI": "10.1049/pbpc026e_ch8", "CorpusId": 242953753}, "corpusId": 242953753,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d0a3f97bba5c179bde46fa7db6ee0b5e1899db94",
         "title": "Turing machines", "abstract": null, "venue": "Handbook of Mathematical
         Models for Languages and Computation", "year": 2019, "referenceCount": 0,
         "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [], "publicationTypes": null, "publicationDate":
-        "2019-11-12", "journal": {"name": "Handbook of Mathematical Models for Languages
-        and Computation"}, "authors": [{"authorId": "6234493", "name": "D. Hilbert"},
-        {"authorId": "2262347", "name": "A. Turing"}, {"authorId": "2157103111", "name":
-        "M. \u201ccrashes"}]}, {"paperId": "eb320a6d4e58d91c72ba0dc663da10579dd5957d",
-        "externalIds": {"DOI": "10.1090/mbk/121/24", "CorpusId": 241773225}, "url":
-        "https://www.semanticscholar.org/paper/eb320a6d4e58d91c72ba0dc663da10579dd5957d",
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [], "publicationTypes":
+        null, "publicationDate": "2019-11-12", "journal": {"name": "Handbook of Mathematical
+        Models for Languages and Computation"}, "authors": [{"authorId": "6234493",
+        "name": "D. Hilbert"}, {"authorId": "2262347", "name": "A. Turing"}, {"authorId":
+        "2157103111", "name": "M. \u201ccrashes"}]}, {"paperId": "eb320a6d4e58d91c72ba0dc663da10579dd5957d",
+        "externalIds": {"DOI": "10.1090/mbk/121/24", "CorpusId": 241773225}, "corpusId":
+        241773225, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/eb320a6d4e58d91c72ba0dc663da10579dd5957d",
         "title": "Alan Turing", "abstract": "When the name \u201dAlan Turing\u201d
         is mentioned most people think of one or more of the following words: \u201dTuring
         Machine\u201d, \u201dTuring Test\u201d, \u201dEnigma\u201d and \u201dArtificial
@@ -160,31 +166,34 @@ interactions:
         Every Child Should Know\u201d \u2217e-mail: e0425826@student.tuwien.ac.at",
         "venue": "100 Years of Math Milestones", "year": 2019, "referenceCount": 125,
         "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Art", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": "2019-06-12", "journal": {"name":
-        "100 Years of Math Milestones"}, "authors": [{"authorId": "2262347", "name":
-        "A. Turing"}, {"authorId": "98630872", "name": "S. Cooper"}, {"authorId":
-        "2138333896", "name": "Trenz Pruca"}, {"authorId": "2138325070", "name": "Malesuada
-        quis"}, {"authorId": "2138324300", "name": "egestas quis"}, {"authorId": "2138382523",
-        "name": "Alan Turingyear"}, {"authorId": "2136546073", "name": "See A. Hodges"}]},
-        {"paperId": "ecb77b338846ac6dbaecf953984f8d44e76a8def", "externalIds": {"CorpusId":
-        231691745}, "url": "https://www.semanticscholar.org/paper/ecb77b338846ac6dbaecf953984f8d44e76a8def",
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Art", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        "2019-06-12", "journal": {"name": "100 Years of Math Milestones"}, "authors":
+        [{"authorId": "2262347", "name": "A. Turing"}, {"authorId": "98630872", "name":
+        "S. Cooper"}, {"authorId": "2138333896", "name": "Trenz Pruca"}, {"authorId":
+        "2138325070", "name": "Malesuada quis"}, {"authorId": "2138324300", "name":
+        "egestas quis"}, {"authorId": "2138382523", "name": "Alan Turingyear"}, {"authorId":
+        "2136546073", "name": "See A. Hodges"}]}, {"paperId": "ecb77b338846ac6dbaecf953984f8d44e76a8def",
+        "externalIds": {"CorpusId": 231691745}, "corpusId": 231691745, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/ecb77b338846ac6dbaecf953984f8d44e76a8def",
         "title": "Machine Learning, a key component in business model transformation",
         "abstract": null, "venue": "", "year": 2018, "referenceCount": 42, "citationCount":
-        1, "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy":
-        null, "s2FieldsOfStudy": [{"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
-        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "fd77c9ac5ead99b216633aa16d9b664516e6d24a",
-        "externalIds": {"DOI": "10.1201/9781315273587-12", "CorpusId": 240057602},
-        "url": "https://www.semanticscholar.org/paper/fd77c9ac5ead99b216633aa16d9b664516e6d24a",
+        1, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+        "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "fd77c9ac5ead99b216633aa16d9b664516e6d24a", "externalIds": {"DOI":
+        "10.1201/9781315273587-12", "CorpusId": 240057602}, "corpusId": 240057602,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/fd77c9ac5ead99b216633aa16d9b664516e6d24a",
         "title": "Text processing", "abstract": null, "venue": "Elementary Standard
         ML", "year": 2018, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": null, "s2FieldsOfStudy": [], "publicationTypes":
-        null, "publicationDate": "2018-10-08", "journal": {"name": "Elementary Standard
-        ML"}, "authors": [{"authorId": "72482255", "name": "C. Gregg"}, {"authorId":
-        "1764547", "name": "M. Sahami"}, {"authorId": "144124712", "name": "J. Clarke"},
-        {"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "aa2c899534681104e64f0971d7cb1a003dd6efd2",
-        "externalIds": {"CorpusId": 51883623}, "url": "https://www.semanticscholar.org/paper/aa2c899534681104e64f0971d7cb1a003dd6efd2",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+        [], "publicationTypes": null, "publicationDate": "2018-10-08", "journal":
+        {"name": "Elementary Standard ML"}, "authors": [{"authorId": "72482255", "name":
+        "C. Gregg"}, {"authorId": "1764547", "name": "M. Sahami"}, {"authorId": "144124712",
+        "name": "J. Clarke"}, {"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
+        "aa2c899534681104e64f0971d7cb1a003dd6efd2", "externalIds": {"CorpusId": 51883623},
+        "corpusId": 51883623, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/aa2c899534681104e64f0971d7cb1a003dd6efd2",
         "title": "What \u2019 s Missing from Deep Learning ?", "abstract": "A neural
         network model for a mechanism of visual pattern recognition is proposed in
         this paper. The network is self-organized by \"learning without a teacher\",
@@ -211,24 +220,25 @@ interactions:
         the last layer is not affected by the pattern''s position at all. Neither
         is it affected by a small change in shape nor in size of the stimulus pattern.",
         "venue": "", "year": 2017, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-        "Computer Science", "source": "s2-fos-model"}, {"category": "Biology", "source":
-        "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-        null, "authors": [{"authorId": "1708655", "name": "B. Olshausen"}, {"authorId":
-        "145260300", "name": "H. Wills"}, {"authorId": "2262347", "name": "A. Turing"},
-        {"authorId": "41224665", "name": "J. Neumann"}, {"authorId": "1847175", "name":
-        "M. Minsky"}, {"authorId": "143805238", "name": "J. McCarthy"}, {"authorId":
-        "51083130", "name": "F. Rosenblatt"}, {"authorId": "145707626", "name": "N.
-        Wiener"}, {"authorId": "2067567609", "name": "Warren McCulloch"}, {"authorId":
-        "50314979", "name": "W. Pitts"}, {"authorId": "3160228", "name": "K. Fukushima"}]},
-        {"paperId": "b23bc17aa26e4fd9e707698bdfa26d2754a6c6e7", "externalIds": {"MAG":
-        "2467689444", "CorpusId": 159733415}, "url": "https://www.semanticscholar.org/paper/b23bc17aa26e4fd9e707698bdfa26d2754a6c6e7",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+        "Biology", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        null, "journal": null, "authors": [{"authorId": "1708655", "name": "B. Olshausen"},
+        {"authorId": "145260300", "name": "H. Wills"}, {"authorId": "2262347", "name":
+        "A. Turing"}, {"authorId": "41224665", "name": "J. Neumann"}, {"authorId":
+        "1847175", "name": "M. Minsky"}, {"authorId": "143805238", "name": "J. McCarthy"},
+        {"authorId": "51083130", "name": "F. Rosenblatt"}, {"authorId": "145707626",
+        "name": "N. Wiener"}, {"authorId": "2067567609", "name": "Warren McCulloch"},
+        {"authorId": "50314979", "name": "W. Pitts"}, {"authorId": "3160228", "name":
+        "K. Fukushima"}]}, {"paperId": "b23bc17aa26e4fd9e707698bdfa26d2754a6c6e7",
+        "externalIds": {"MAG": "2467689444", "CorpusId": 159733415}, "corpusId": 159733415,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b23bc17aa26e4fd9e707698bdfa26d2754a6c6e7",
         "title": "The President, the Vice President, the Secretary-Treasurer, and
         ARNOLD DRESDEN,2", "abstract": null, "venue": "", "year": 2016, "referenceCount":
         0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": ["History"], "s2FieldsOfStudy": [{"category": "History",
-        "source": "external"}], "publicationTypes": null, "publicationDate": null,
-        "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "3154491",
+        "openAccessPdf": null, "fieldsOfStudy": ["History"], "s2FieldsOfStudy": [{"category":
+        "History", "source": "external"}], "publicationTypes": null, "publicationDate":
+        null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "3154491",
         "name": "A. Tarski"}, {"authorId": "50455788", "name": "S. Maclane"}, {"authorId":
         "40384728", "name": "H. B. Curry"}, {"authorId": "122394125", "name": "Paul
         Marhenkei"}, {"authorId": "101931347", "name": "A. Dresden"}, {"authorId":
@@ -239,7 +249,8 @@ interactions:
         "A. Turing"}, {"authorId": "40245151", "name": "F. B. Fitch"}, {"authorId":
         "104540019", "name": "P. Marhenke"}, {"authorId": "2072295124", "name": "C.
         Duca"}]}, {"paperId": "3180b4f827030c4b3a0ff048d1fee462575ca71f", "externalIds":
-        {"MAG": "2400968335", "CorpusId": 124065102}, "url": "https://www.semanticscholar.org/paper/3180b4f827030c4b3a0ff048d1fee462575ca71f",
+        {"MAG": "2400968335", "CorpusId": 124065102}, "corpusId": 124065102, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/3180b4f827030c4b3a0ff048d1fee462575ca71f",
         "title": "Convergence Rates for Persistence Diagram Estimation in", "abstract":
         "Computational topology has recently seen an important development toward
         data analysis, giving birth to the eld of topological data analysis. Topological
@@ -250,36 +261,40 @@ interactions:
         diagrams can be used as statistics with interesting convergence properties.
         Some numerical experiments are performed in various contexts to illustrate
         our results.", "venue": "", "year": 2015, "referenceCount": 34, "citationCount":
-        3, "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy":
-        ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
-        "external"}, {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
-        [{"authorId": "1760330", "name": "M. Glisse"}, {"authorId": "66876582", "name":
-        "Inria Saclay"}, {"authorId": "2262347", "name": "A. Turing"}, {"authorId":
-        "102582041", "name": "Catherine Labru"}, {"authorId": "38291080", "name":
-        "B. Michel"}]}, {"paperId": "293a50e86c2a2f4a2e213a42e057910aeda09d82", "externalIds":
-        {"MAG": "2185394266", "CorpusId": 125067106}, "url": "https://www.semanticscholar.org/paper/293a50e86c2a2f4a2e213a42e057910aeda09d82",
+        3, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+        "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
+        "name": ""}, "authors": [{"authorId": "1760330", "name": "M. Glisse"}, {"authorId":
+        "66876582", "name": "Inria Saclay"}, {"authorId": "2262347", "name": "A. Turing"},
+        {"authorId": "102582041", "name": "Catherine Labru"}, {"authorId": "38291080",
+        "name": "B. Michel"}]}, {"paperId": "293a50e86c2a2f4a2e213a42e057910aeda09d82",
+        "externalIds": {"MAG": "2185394266", "CorpusId": 125067106}, "corpusId": 125067106,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/293a50e86c2a2f4a2e213a42e057910aeda09d82",
         "title": "\u2022 Hilbert spaces. Weak derivatives. Classical and weak solutions.
         \u2022 Galerkin approximation of elliptic equations. Spectral approximation.
         Finite element approximation in one dimension. Energy estimates. \u2022 Parabolic
         PDEs. Semigroups of operators. Method of lines. Stability of numerical", "abstract":
         null, "venue": "", "year": 2014, "referenceCount": 2, "citationCount": 0,
-        "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy": ["Mathematics"],
-        "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "104483519",
-        "name": "Lecturer Sean Holman"}, {"authorId": "2262347", "name": "A. Turing"},
-        {"authorId": "103905785", "name": "January Exam"}]}, {"paperId": "9f07386256530a0060d99a1ba483a8f5c1f4194b",
+        "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+        "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+        "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
+        "name": ""}, "authors": [{"authorId": "104483519", "name": "Lecturer Sean
+        Holman"}, {"authorId": "2262347", "name": "A. Turing"}, {"authorId": "103905785",
+        "name": "January Exam"}]}, {"paperId": "9f07386256530a0060d99a1ba483a8f5c1f4194b",
         "externalIds": {"MAG": "2029222787", "DOI": "10.1093/ITNOW/BWU030", "CorpusId":
-        109153053}, "url": "https://www.semanticscholar.org/paper/9f07386256530a0060d99a1ba483a8f5c1f4194b",
+        109153053}, "corpusId": 109153053, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9f07386256530a0060d99a1ba483a8f5c1f4194b",
         "title": "Turing: Oracles and Computation", "abstract": null, "venue": "",
         "year": 2014, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "2014-03-01", "journal": {"volume": "56", "pages": "64-65", "name": "Itnow"},
-        "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "0875d9bdd710fe886d7f4543e17dfd581893f538",
-        "externalIds": {"CorpusId": 18099107}, "url": "https://www.semanticscholar.org/paper/0875d9bdd710fe886d7f4543e17dfd581893f538",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": "2014-03-01", "journal": {"volume":
+        "56", "pages": "64-65", "name": "Itnow"}, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "0875d9bdd710fe886d7f4543e17dfd581893f538",
+        "externalIds": {"CorpusId": 18099107}, "corpusId": 18099107, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/0875d9bdd710fe886d7f4543e17dfd581893f538",
         "title": "Watching the Daisies Grow: from Biology to Biomathematics and Bioinformatics
         \u2014 Alan Turing Centenary Special Issue", "abstract": "Preface We can only
         see a short distance ahead, but we can see plenty there that needs to be done.
@@ -312,11 +327,13 @@ interactions:
         issue, we present a selection of papers commemorating Alan Turing and arguing
         that he should be also considered the co-founder of biomathematics and bioinformatics.
         His late works were", "venue": "", "year": 2012, "referenceCount": 0, "citationCount":
-        1, "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy":
-        null, "s2FieldsOfStudy": [{"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
-        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "0a3aa98358b0dd7fc3e0bcf6eef65d959aff3565",
-        "externalIds": {"MAG": "2741266234", "CorpusId": 125093480}, "url": "https://www.semanticscholar.org/paper/0a3aa98358b0dd7fc3e0bcf6eef65d959aff3565",
+        1, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+        "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "0a3aa98358b0dd7fc3e0bcf6eef65d959aff3565", "externalIds": {"MAG":
+        "2741266234", "CorpusId": 125093480}, "corpusId": 125093480, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/0a3aa98358b0dd7fc3e0bcf6eef65d959aff3565",
         "title": "Dusting Off the Turing Test", "abstract": "then inter- est theory
         and a problem about the observation of quantum systems (now as the quantum
         Zeno effect). With his death, train was lost, but the question computa- tion
@@ -332,13 +349,14 @@ interactions:
         discrete symbols a complete the world? If it does, how can make this connection
         manifest? If it does not, where does fail, and what would this tell us about
         fundamental science?", "venue": "", "year": 2012, "referenceCount": 1, "citationCount":
-        6, "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy":
-        ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
-        "external"}, {"category": "Physics", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
-        [{"authorId": "144443425", "name": "A. Hodges"}, {"authorId": "2262347", "name":
-        "A. Turing"}]}, {"paperId": "422ec845a15242fdfc904e1c7d2bfe132c7ec248", "externalIds":
-        {"CorpusId": 18051598}, "url": "https://www.semanticscholar.org/paper/422ec845a15242fdfc904e1c7d2bfe132c7ec248",
+        6, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+        "source": "external"}, {"category": "Physics", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
+        "name": ""}, "authors": [{"authorId": "144443425", "name": "A. Hodges"}, {"authorId":
+        "2262347", "name": "A. Turing"}]}, {"paperId": "422ec845a15242fdfc904e1c7d2bfe132c7ec248",
+        "externalIds": {"CorpusId": 18051598}, "corpusId": 18051598, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/422ec845a15242fdfc904e1c7d2bfe132c7ec248",
         "title": "PLANES OF MORPHISMS AND THE CHARACTERIZATION OF CONTINUOUSLY INTEGRAL,
         COMPLETE RANDOM VARIABLES", "abstract": "Let \u03b8m,\u03bc be an independent,
         right-composite, anti-naturally continuous polytope. Recent interest in smooth
@@ -348,22 +366,24 @@ interactions:
         recent developments in modern integral PDE [25] have raised the question of
         whether e ( 0 ) 6= log ( 1 \u2016\u03c7\u2016 ) \u222a c ( 1 \u2229 i, \u03c0
         )", "venue": "", "year": 2012, "referenceCount": 32, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        null, "journal": null, "authors": [{"authorId": "12989190", "name": "M. Lafourcade"},
-        {"authorId": "2262347", "name": "A. Turing"}, {"authorId": "50294906", "name":
-        "M. Abel"}]}, {"paperId": "4f4b42aa137d5b6df85889cf53901f44cbee643b", "externalIds":
-        {"MAG": "2187383749", "DOI": "10.7551/mitpress/5123.003.0007", "CorpusId":
-        62254832}, "url": "https://www.semanticscholar.org/paper/4f4b42aa137d5b6df85889cf53901f44cbee643b",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+        [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+        null, "publicationDate": null, "journal": null, "authors": [{"authorId": "12989190",
+        "name": "M. Lafourcade"}, {"authorId": "2262347", "name": "A. Turing"}, {"authorId":
+        "50294906", "name": "M. Abel"}]}, {"paperId": "4f4b42aa137d5b6df85889cf53901f44cbee643b",
+        "externalIds": {"MAG": "2187383749", "DOI": "10.7551/mitpress/5123.003.0007",
+        "CorpusId": 62254832}, "corpusId": 62254832, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/4f4b42aa137d5b6df85889cf53901f44cbee643b",
         "title": "Could a machine think", "abstract": null, "venue": "", "year": 2012,
         "referenceCount": 6, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
-        false, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy": [{"category": "Psychology",
-        "source": "external"}], "publicationTypes": null, "publicationDate": null,
-        "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2055661501",
-        "name": "Pascal Ludwig"}, {"authorId": "2262347", "name": "A. Turing"}, {"authorId":
-        "34493294", "name": "J. Searle"}]}, {"paperId": "5cfe755938d14edd5422d72215cf8b733f0284fc",
-        "externalIds": {"DBLP": "journals/cryptologia/TuringB12", "MAG": "2054264625",
-        "DOI": "10.1080/01611194.2012.713803", "CorpusId": 205488183}, "url": "https://www.semanticscholar.org/paper/5cfe755938d14edd5422d72215cf8b733f0284fc",
+        false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
+        [{"category": "Psychology", "source": "external"}], "publicationTypes": null,
+        "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
+        [{"authorId": "2055661501", "name": "Pascal Ludwig"}, {"authorId": "2262347",
+        "name": "A. Turing"}, {"authorId": "34493294", "name": "J. Searle"}]}, {"paperId":
+        "5cfe755938d14edd5422d72215cf8b733f0284fc", "externalIds": {"DBLP": "journals/cryptologia/TuringB12",
+        "MAG": "2054264625", "DOI": "10.1080/01611194.2012.713803", "CorpusId": 205488183},
+        "corpusId": 205488183, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5cfe755938d14edd5422d72215cf8b733f0284fc",
         "title": "Report on Speech Secrecy System DELILAH, a Technical Description
         Compiled by A. M. Turing and Lieutenant D. Bayley REME, 1945\u20131946", "abstract":
         "The book groups themselves might be used as a form of cipher, but this is
@@ -374,21 +394,24 @@ interactions:
         but that is all. Let us run the groups together and call the result \u2018\u2018P=L
         figures\u2019\u2019:", "venue": "Cryptologia", "year": 2012, "referenceCount":
         0, "citationCount": 7, "influentialCitationCount": 1, "isOpenAccess": false,
-        "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
-        Science", "source": "external"}, {"category": "Computer Science", "source":
-        "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-        "2012-10-01", "journal": {"volume": "36", "pages": "295 - 340", "name": "Cryptologia"},
-        "authors": [{"authorId": "2262347", "name": "A. Turing"}, {"authorId": "84292446",
-        "name": "D. Bayley"}]}, {"paperId": "300d41307bb946510bdc111463f5fb71b2a21796",
-        "externalIds": {"MAG": "2274591444", "CorpusId": 124844782}, "url": "https://www.semanticscholar.org/paper/300d41307bb946510bdc111463f5fb71b2a21796",
+        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+        Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+        "publicationDate": "2012-10-01", "journal": {"volume": "36", "pages": "295
+        - 340", "name": "Cryptologia"}, "authors": [{"authorId": "2262347", "name":
+        "A. Turing"}, {"authorId": "84292446", "name": "D. Bayley"}]}, {"paperId":
+        "300d41307bb946510bdc111463f5fb71b2a21796", "externalIds": {"MAG": "2274591444",
+        "CorpusId": 124844782}, "corpusId": 124844782, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/300d41307bb946510bdc111463f5fb71b2a21796",
         "title": "Correspondence with [A.M. Turing]", "abstract": null, "venue": "",
         "year": 2011, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-        [{"category": "Mathematics", "source": "external"}], "publicationTypes": null,
-        "publicationDate": "2011-11-21", "journal": {"volume": "", "name": ""}, "authors":
-        [{"authorId": "51326515", "name": "R. Fisher"}, {"authorId": "2262347", "name":
-        "A. Turing"}]}, {"paperId": "50a1357c04bde76f752aac1dbd2ba2601622ccd4", "externalIds":
-        {"CorpusId": 8641258}, "url": "https://www.semanticscholar.org/paper/50a1357c04bde76f752aac1dbd2ba2601622ccd4",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+        "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}], "publicationTypes":
+        null, "publicationDate": "2011-11-21", "journal": {"volume": "", "name": ""},
+        "authors": [{"authorId": "51326515", "name": "R. Fisher"}, {"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "50a1357c04bde76f752aac1dbd2ba2601622ccd4",
+        "externalIds": {"CorpusId": 8641258}, "corpusId": 8641258, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/50a1357c04bde76f752aac1dbd2ba2601622ccd4",
         "title": "Alan Mathison Turing Universal Turing Machine", "abstract": "Scatter/gather
         I/O must work [54], [59], [62], [68], [68], [70], [70], [70], [95], [95],
         [114], [114], [114], [152], [168], [179], [179], [179], [188], [191]. After
@@ -397,11 +420,12 @@ interactions:
         In order to solve this riddle, we inve stigate how digital-to-analog converters
         can be applied to t he", "venue": "", "year": 2011, "referenceCount": 248,
         "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-        "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "6da083c8833b4000b088ea366f16f1ea8d9b6dad", "externalIds": {"CorpusId":
-        17718604}, "url": "https://www.semanticscholar.org/paper/6da083c8833b4000b088ea366f16f1ea8d9b6dad",
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null,
+        "publicationDate": null, "journal": null, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "6da083c8833b4000b088ea366f16f1ea8d9b6dad",
+        "externalIds": {"CorpusId": 17718604}, "corpusId": 17718604, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/6da083c8833b4000b088ea366f16f1ea8d9b6dad",
         "title": "The legacy of Alan Turing Universal Turing Machine", "abstract":
         "The investigation of 802.11b has evaluated IPv6, and current trends suggest
         that the analysis of local-area networks will soon emerge. Given the current
@@ -410,11 +434,12 @@ interactions:
         often incompatible, but rather on introducing a novel algorithm for the improvement
         of multi-processors (Esparcet).", "venue": "", "year": 2011, "referenceCount":
         243, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-        "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "de7a3c8b0aaf0c84bdaa8c1d7f416a91dbbccc1a", "externalIds": {"CorpusId":
-        17215741}, "url": "https://www.semanticscholar.org/paper/de7a3c8b0aaf0c84bdaa8c1d7f416a91dbbccc1a",
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null,
+        "publicationDate": null, "journal": null, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "de7a3c8b0aaf0c84bdaa8c1d7f416a91dbbccc1a",
+        "externalIds": {"CorpusId": 17215741}, "corpusId": 17215741, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/de7a3c8b0aaf0c84bdaa8c1d7f416a91dbbccc1a",
         "title": "Alan Turing Universal Turing Machine", "abstract": "In recent years,
         much research has been devoted to the synthesis of gigabit switches; on the
         other hand, few have explored the refinement of hash tables. In fact, few
@@ -422,11 +447,12 @@ interactions:
         In this work, we use signed technology to show that architecture and superblocks
         are usually incompatible.", "venue": "", "year": 2011, "referenceCount": 153,
         "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-        "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "2c17cdc749e8a639ed78761b23e8e1d8805ae29c", "externalIds": {"CorpusId":
-        115526721}, "url": "https://www.semanticscholar.org/paper/2c17cdc749e8a639ed78761b23e8e1d8805ae29c",
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null,
+        "publicationDate": null, "journal": null, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "2c17cdc749e8a639ed78761b23e8e1d8805ae29c",
+        "externalIds": {"CorpusId": 115526721}, "corpusId": 115526721, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/2c17cdc749e8a639ed78761b23e8e1d8805ae29c",
         "title": "Turing 1950 1 The Imitation Game", "abstract": "I propose to consider
         the question, \u201cCan machines think?\u201d This should begin with definitions
         of the meaning of the terms \u201cmachine\u201d and \u201cthink.\u201d The
@@ -447,19 +473,20 @@ interactions:
         is A and Y is B\u201d or \u201cX is B and Y is A.\u201d The interrogator is
         allowed to put questions to A and B thus:", "venue": "", "year": 2010, "referenceCount":
         0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Education", "source":
-        "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null,
-        "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Education", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+        null, "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
         {"paperId": "6c9520d25a2f93f1fb4f08bab66d90a1519faaac", "externalIds": {"MAG":
         "2479903735", "DOI": "10.14361/9783839403396-004", "CorpusId": 184361851},
-        "url": "https://www.semanticscholar.org/paper/6c9520d25a2f93f1fb4f08bab66d90a1519faaac",
+        "corpusId": 184361851, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6c9520d25a2f93f1fb4f08bab66d90a1519faaac",
         "title": "Computermaschinerie und Intelligenz (1950)", "abstract": null, "venue":
         "Reader Neue Medien", "year": 2007, "referenceCount": 0, "citationCount":
-        2, "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy":
-        null, "s2FieldsOfStudy": [], "publicationTypes": null, "publicationDate":
-        "2007-12-31", "journal": {"name": "Reader Neue Medien"}, "authors": [{"authorId":
-        "2262347", "name": "A. Turing"}]}, {"paperId": "6e369d363e91a5c09cc33907590b768d52657c0f",
-        "externalIds": {"MAG": "2967838196", "CorpusId": 17359642}, "url": "https://www.semanticscholar.org/paper/6e369d363e91a5c09cc33907590b768d52657c0f",
+        2, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": null, "s2FieldsOfStudy": [], "publicationTypes": null,
+        "publicationDate": "2007-12-31", "journal": {"name": "Reader Neue Medien"},
+        "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "6e369d363e91a5c09cc33907590b768d52657c0f",
+        "externalIds": {"MAG": "2967838196", "CorpusId": 17359642}, "corpusId": 17359642,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6e369d363e91a5c09cc33907590b768d52657c0f",
         "title": "Computing Machinery and Intelligence A.M. Turing", "abstract": "I
         propose to consider the question, \"Can machines think?\" This should begin
         with definitions of the meaning of the terms \"machine\" and \"think.\" The
@@ -472,65 +499,73 @@ interactions:
         a definition I shall replace the question by another, which is closely related
         to it and is expressed in relatively unambiguous words.", "venue": "", "year":
         2007, "referenceCount": 0, "citationCount": 129, "influentialCitationCount":
-        2, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Philosophy",
-        "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-        null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347",
-        "name": "A. Turing"}]}, {"paperId": "18ef39d95593b58013e5b959e83056d7136496b5",
+        2, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes":
+        ["Review"], "publicationDate": null, "journal": {"volume": "", "name": ""},
+        "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "18ef39d95593b58013e5b959e83056d7136496b5",
         "externalIds": {"MAG": "2499467011", "DOI": "10.1093/ACPROF:OSO/9780198565932.003.0023",
-        "CorpusId": 62965306}, "url": "https://www.semanticscholar.org/paper/18ef39d95593b58013e5b959e83056d7136496b5",
+        "CorpusId": 62965306}, "corpusId": 62965306, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/18ef39d95593b58013e5b959e83056d7136496b5",
         "title": "The Turing\u2013Wilkinson lecture series (1946\u20137)", "abstract":
         null, "venue": "", "year": 2005, "referenceCount": 0, "citationCount": 6,
-        "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy": ["Philosophy"],
-        "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
-        null, "publicationDate": "2005-04-14", "journal": {"volume": "", "pages":
-        "459-528", "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"},
-        {"authorId": "2056940608", "name": "J. H. Wilkinson"}]}, {"paperId": "2190254a337fd601af32260dc4133d009933ee65",
-        "externalIds": {"MAG": "2483371858", "DOI": "10.1093/ACPROF:OSO/9780198565932.003.0021",
-        "CorpusId": 64463006}, "url": "https://www.semanticscholar.org/paper/2190254a337fd601af32260dc4133d009933ee65",
+        "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+        "fieldsOfStudy": ["Philosophy"], "s2FieldsOfStudy": [{"category": "Philosophy",
+        "source": "external"}], "publicationTypes": null, "publicationDate": "2005-04-14",
+        "journal": {"volume": "", "pages": "459-528", "name": ""}, "authors": [{"authorId":
+        "2262347", "name": "A. Turing"}, {"authorId": "2056940608", "name": "J. H.
+        Wilkinson"}]}, {"paperId": "2190254a337fd601af32260dc4133d009933ee65", "externalIds":
+        {"MAG": "2483371858", "DOI": "10.1093/ACPROF:OSO/9780198565932.003.0021",
+        "CorpusId": 64463006}, "corpusId": 64463006, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/2190254a337fd601af32260dc4133d009933ee65",
         "title": "Proposed electronic calculator (1945)", "abstract": null, "venue":
         "", "year": 2005, "referenceCount": 0, "citationCount": 49, "influentialCitationCount":
-        1, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Engineering",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2005-04-14",
-        "journal": {"volume": "", "pages": "369-454", "name": ""}, "authors": [{"authorId":
-        "2262347", "name": "A. Turing"}]}, {"paperId": "f8465fea1230ba0f7ca3dea3c4c71278ac576e91",
-        "externalIds": {"MAG": "2490852693", "DOI": "10.1093/ACPROF:OSO/9780198565932.003.0022",
-        "CorpusId": 64507632}, "url": "https://www.semanticscholar.org/paper/f8465fea1230ba0f7ca3dea3c4c71278ac576e91",
+        1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Engineering", "source": "s2-fos-model"}], "publicationTypes":
+        null, "publicationDate": "2005-04-14", "journal": {"volume": "", "pages":
+        "369-454", "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "f8465fea1230ba0f7ca3dea3c4c71278ac576e91", "externalIds": {"MAG":
+        "2490852693", "DOI": "10.1093/ACPROF:OSO/9780198565932.003.0022", "CorpusId":
+        64507632}, "corpusId": 64507632, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f8465fea1230ba0f7ca3dea3c4c71278ac576e91",
         "title": "Notes on memory (1945)", "abstract": null, "venue": "", "year":
         2005, "referenceCount": 0, "citationCount": 1, "influentialCitationCount":
-        1, "isOpenAccess": false, "fieldsOfStudy": ["Philosophy"], "s2FieldsOfStudy":
-        [{"category": "Philosophy", "source": "external"}], "publicationTypes": null,
-        "publicationDate": "2005-04-14", "journal": {"volume": "", "pages": "455-458",
-        "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
-        "05b0cd062fa41d0ca2c7608dc59ac93e898a35aa", "externalIds": {"MAG": "3101684541",
-        "DOI": "10.1093/oso/9780198250791.003.0016", "CorpusId": 232473093}, "url":
-        "https://www.semanticscholar.org/paper/05b0cd062fa41d0ca2c7608dc59ac93e898a35aa",
+        1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
+        "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
+        null, "publicationDate": "2005-04-14", "journal": {"volume": "", "pages":
+        "455-458", "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "05b0cd062fa41d0ca2c7608dc59ac93e898a35aa", "externalIds": {"MAG":
+        "3101684541", "DOI": "10.1093/oso/9780198250791.003.0016", "CorpusId": 232473093},
+        "corpusId": 232473093, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/05b0cd062fa41d0ca2c7608dc59ac93e898a35aa",
         "title": "Intelligent Machinery (1948)", "abstract": null, "venue": "", "year":
-        2004, "referenceCount": 0, "citationCount": 31, "influentialCitationCount":
-        3, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}], "publicationTypes":
-        null, "publicationDate": "2004-09-09", "journal": {"volume": "", "name": ""},
-        "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "13103014e997dd6273e2bc3661353d09165cf90c",
-        "externalIds": {"MAG": "3103227490", "DOI": "10.1093/oso/9780198250791.003.0015",
-        "CorpusId": 229803945}, "url": "https://www.semanticscholar.org/paper/13103014e997dd6273e2bc3661353d09165cf90c",
+        2004, "referenceCount": 0, "citationCount": 32, "influentialCitationCount":
+        4, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}], "publicationTypes": null, "publicationDate": "2004-09-09", "journal":
+        {"volume": "", "name": ""}, "authors": [{"authorId": "2262347", "name": "A.
+        Turing"}]}, {"paperId": "13103014e997dd6273e2bc3661353d09165cf90c", "externalIds":
+        {"MAG": "3103227490", "DOI": "10.1093/oso/9780198250791.003.0015", "CorpusId":
+        229803945}, "corpusId": 229803945, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/13103014e997dd6273e2bc3661353d09165cf90c",
         "title": "Lecture on the Automatic Computing Engine (1947)", "abstract": null,
         "venue": "", "year": 2004, "referenceCount": 0, "citationCount": 6, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "2004-09-09", "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
-        "2262347", "name": "A. Turing"}]}, {"paperId": "15b2a8b748d8063348071beb106b4921c0ef8ba6",
-        "externalIds": {"MAG": "3101010549", "DOI": "10.1093/oso/9780198250791.003.0007",
-        "CorpusId": 232670029}, "url": "https://www.semanticscholar.org/paper/15b2a8b748d8063348071beb106b4921c0ef8ba6",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": "2004-09-09", "journal": {"volume":
+        "", "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "15b2a8b748d8063348071beb106b4921c0ef8ba6", "externalIds": {"MAG":
+        "3101010549", "DOI": "10.1093/oso/9780198250791.003.0007", "CorpusId": 232670029},
+        "corpusId": 232670029, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/15b2a8b748d8063348071beb106b4921c0ef8ba6",
         "title": "Systems of Logic Based on Ordinals (1938)", "abstract": null, "venue":
         "", "year": 2004, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": true, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-        "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "2004-09-09", "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
-        "2262347", "name": "A. Turing"}]}, {"paperId": "1bb2114c24263b0489f24f787fef86f33487f802",
+        0, "isOpenAccess": true, "openAccessPdf": {"url": "https://pure.mpg.de/pubman/item/item_2403325_2/component/file_2403324/Turing_1939_Sysyems.pdf",
+        "status": null}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Philosophy",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2004-09-09",
+        "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "1bb2114c24263b0489f24f787fef86f33487f802",
         "externalIds": {"MAG": "169424043", "DOI": "10.7551/mitpress/6928.003.0016",
-        "CorpusId": 5561670}, "url": "https://www.semanticscholar.org/paper/1bb2114c24263b0489f24f787fef86f33487f802",
+        "CorpusId": 5561670}, "corpusId": 5561670, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/1bb2114c24263b0489f24f787fef86f33487f802",
         "title": "Can Automatic Calculating Machines Be Said to Think", "abstract":
         "Trainable methodologies and the transistor have garnered profound interest
         from both steganographers and cyberinfo rmaticians in the last several years.
@@ -543,15 +578,16 @@ interactions:
         [191] is recursiv ely enumerable, but rather on constructing a pervasive tool
         for evaluating Internet QoS (HolHoveling).", "venue": "", "year": 2004, "referenceCount":
         271, "citationCount": 288, "influentialCitationCount": 14, "isOpenAccess":
-        false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
-        "Computer Science", "source": "external"}, {"category": "Computer Science",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-        "journal": {"volume": "", "pages": "117-132", "name": ""}, "authors": [{"authorId":
-        "143697232", "name": "M. Newman"}, {"authorId": "2262347", "name": "A. Turing"},
-        {"authorId": "2060159667", "name": "Geoffrey Jefferson"}, {"authorId": "34635194",
-        "name": "R. Braithwaite"}, {"authorId": "1692491", "name": "S. Shieber"}]},
-        {"paperId": "6e28b5b4d15ddd352ca9b5bf1bfd128448a3bcdc", "externalIds": {"MAG":
-        "593056538", "CorpusId": 60423929}, "url": "https://www.semanticscholar.org/paper/6e28b5b4d15ddd352ca9b5bf1bfd128448a3bcdc",
+        false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+        Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        null, "journal": {"volume": "", "pages": "117-132", "name": ""}, "authors":
+        [{"authorId": "143697232", "name": "M. Newman"}, {"authorId": "2262347", "name":
+        "A. Turing"}, {"authorId": "2060159667", "name": "Geoffrey Jefferson"}, {"authorId":
+        "34635194", "name": "R. Braithwaite"}, {"authorId": "1692491", "name": "S.
+        Shieber"}]}, {"paperId": "6e28b5b4d15ddd352ca9b5bf1bfd128448a3bcdc", "externalIds":
+        {"MAG": "593056538", "CorpusId": 60423929}, "corpusId": 60423929, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/6e28b5b4d15ddd352ca9b5bf1bfd128448a3bcdc",
         "title": "The Essential Turing: Seminal Writings in Computing, Logic, Philosophy,
         Artificial Intelligence, and Artificial Life plus The Secrets of Enigma",
         "abstract": "Alan Turing 1912-1954 Computable Numbers: A Guide 1. On Computable
@@ -566,23 +602,25 @@ interactions:
         Calculating Machines Be Said to Think? (1952) Artificial Life 15. The Chemical
         Basis of Morphogenesis (1952) 16. Chess (1953) 17. Solvable and Unsolvable
         Problems (1954)", "venue": "", "year": 2004, "referenceCount": 39, "citationCount":
-        151, "influentialCitationCount": 12, "isOpenAccess": false, "fieldsOfStudy":
-        ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer Science",
-        "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
-        "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"}, {"authorId":
-        "118975427", "name": "J. Copeland"}]}, {"paperId": "e4b0b7117d580c5ec4b256bd2d918e977ed08aba",
-        "externalIds": {"MAG": "3105675538", "DOI": "10.1093/oso/9780198250791.003.0013",
-        "CorpusId": 231523578}, "url": "https://www.semanticscholar.org/paper/e4b0b7117d580c5ec4b256bd2d918e977ed08aba",
+        152, "influentialCitationCount": 12, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
+        "Computer Science", "source": "external"}, {"category": "Computer Science",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+        "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}, {"authorId": "118975427", "name": "J. Copeland"}]},
+        {"paperId": "e4b0b7117d580c5ec4b256bd2d918e977ed08aba", "externalIds": {"MAG":
+        "3105675538", "DOI": "10.1093/oso/9780198250791.003.0013", "CorpusId": 231523578},
+        "corpusId": 231523578, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e4b0b7117d580c5ec4b256bd2d918e977ed08aba",
         "title": "Memorandum to OP-20-G on Naval Enigma (c.1941)", "abstract": null,
         "venue": "", "year": 2004, "referenceCount": 0, "citationCount": 2, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Philosophy"], "s2FieldsOfStudy":
-        [{"category": "Philosophy", "source": "external"}, {"category": "History",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2004-09-09",
-        "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347",
-        "name": "A. Turing"}]}, {"paperId": "ef5e79b3ba502350967ae9bff87243fbf140c8b9",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
+        "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
+        "History", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        "2004-09-09", "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
+        "2262347", "name": "A. Turing"}]}, {"paperId": "ef5e79b3ba502350967ae9bff87243fbf140c8b9",
         "externalIds": {"MAG": "3098156012", "DOI": "10.1093/oso/9780198250791.003.0012",
-        "CorpusId": 230737760}, "url": "https://www.semanticscholar.org/paper/ef5e79b3ba502350967ae9bff87243fbf140c8b9",
+        "CorpusId": 230737760}, "corpusId": 230737760, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/ef5e79b3ba502350967ae9bff87243fbf140c8b9",
         "title": "Letter to Winston Churchill (1941)", "abstract": "During 1941, codebreaking
         at Bletchley Park was hindered by shortages of typists and unskilled staV.
         These shortages could have been easily rectiWed, but the codebreakers\u2019
@@ -594,13 +632,15 @@ interactions:
         been done.\u20191 It fell to Stuart Milner-Barry of Hut 6 to deliver the letter
         by hand to 10 Downing Street. In 1986, Milner-Barry recalled his trip to Whitehall:",
         "venue": "", "year": 2004, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Art"], "s2FieldsOfStudy": [{"category":
-        "Art", "source": "external"}, {"category": "History", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": "2004-09-09", "journal": {"volume":
-        "", "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"},
-        {"authorId": "73506204", "name": "Gordon Welchman"}]}, {"paperId": "48ce988e6f5c63cda3d06e3a40bf06dbaf922bb8",
-        "externalIds": {"DBLP": "journals/cryptologia/Turing03", "MAG": "2030737075",
-        "DOI": "10.1080/0161-110391891748", "CorpusId": 12703115}, "url": "https://www.semanticscholar.org/paper/48ce988e6f5c63cda3d06e3a40bf06dbaf922bb8",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Art"],
+        "s2FieldsOfStudy": [{"category": "Art", "source": "external"}, {"category":
+        "History", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        "2004-09-09", "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
+        "2262347", "name": "A. Turing"}, {"authorId": "73506204", "name": "Gordon
+        Welchman"}]}, {"paperId": "48ce988e6f5c63cda3d06e3a40bf06dbaf922bb8", "externalIds":
+        {"DBLP": "journals/cryptologia/Turing03", "MAG": "2030737075", "DOI": "10.1080/0161-110391891748",
+        "CorpusId": 12703115}, "corpusId": 12703115, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/48ce988e6f5c63cda3d06e3a40bf06dbaf922bb8",
         "title": "ALAN M. TURING''S CRITIQUE OF RUNNING SHORT CRIBS ON THE U. S. NAVY
         BOMBE", "abstract": "Unified lossless information have led to many natural
         advances, including the partition table and massive multiplayer online roleplaying
@@ -608,14 +648,15 @@ interactions:
         Lamport clocks a real possibility. In this position paper, we argue that Boolean
         logic and Markov models can agree to accomplish this purpose.", "venue": "Cryptologia",
         "year": 2003, "referenceCount": 196, "citationCount": 1, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
-        "publicationDate": "2003-01-01", "journal": {"volume": "27", "pages": "44
-        - 49", "name": "Cryptologia"}, "authors": [{"authorId": "2262347", "name":
-        "A. Turing"}]}, {"paperId": "26c97e0bccfe60aa7c4c1b613bc890c8ed9a32b9", "externalIds":
-        {"MAG": "1992023589", "DBLP": "journals/cryptologia/Turing01", "DOI": "10.1080/0161-110191889734",
-        "CorpusId": 14207094}, "url": "https://www.semanticscholar.org/paper/26c97e0bccfe60aa7c4c1b613bc890c8ed9a32b9",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": ["JournalArticle"], "publicationDate": "2003-01-01", "journal":
+        {"volume": "27", "pages": "44 - 49", "name": "Cryptologia"}, "authors": [{"authorId":
+        "2262347", "name": "A. Turing"}]}, {"paperId": "26c97e0bccfe60aa7c4c1b613bc890c8ed9a32b9",
+        "externalIds": {"MAG": "1992023589", "DBLP": "journals/cryptologia/Turing01",
+        "DOI": "10.1080/0161-110191889734", "CorpusId": 14207094}, "corpusId": 14207094,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/26c97e0bccfe60aa7c4c1b613bc890c8ed9a32b9",
         "title": "VISIT TO NATIONAL CASH REGISTER CORPORATION OF DAYTON, OHIO", "abstract":
         "In recent years, much research has been devoted to the study of Boolean logic;
         however, few have developed the extensive unification of the location-identity
@@ -625,35 +666,36 @@ interactions:
         [58], [59], [62], [68], [ 68], [68], [70], [95], [99], [114], [128], [129],
         [148], [152], [ 168], [168], [179], [188], [191].", "venue": "Cryptologia",
         "year": 2001, "referenceCount": 206, "citationCount": 179, "influentialCitationCount":
-        1, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
-        "publicationDate": "2001-01-01", "journal": {"volume": "25", "pages": "1 -
-        10", "name": "Cryptologia"}, "authors": [{"authorId": "2262347", "name": "A.
-        Turing"}]}, {"paperId": "b52adf784f9a0ca3b936f39a90cf3445b48dc408", "externalIds":
-        {"MAG": "2798463542", "DOI": "10.1007/3-540-31288-9_9", "CorpusId": 125729536},
-        "url": "https://www.semanticscholar.org/paper/b52adf784f9a0ca3b936f39a90cf3445b48dc408",
+        1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": ["JournalArticle"], "publicationDate": "2001-01-01", "journal":
+        {"volume": "25", "pages": "1 - 10", "name": "Cryptologia"}, "authors": [{"authorId":
+        "2262347", "name": "A. Turing"}]}, {"paperId": "b52adf784f9a0ca3b936f39a90cf3445b48dc408",
+        "externalIds": {"MAG": "2798463542", "DOI": "10.1007/3-540-31288-9_9", "CorpusId":
+        125729536}, "corpusId": 125729536, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b52adf784f9a0ca3b936f39a90cf3445b48dc408",
         "title": "Mathematical logic", "abstract": null, "venue": "", "year": 2001,
         "referenceCount": 0, "citationCount": 2, "influentialCitationCount": 1, "isOpenAccess":
-        false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
-        "Computer Science", "source": "external"}, {"category": "Philosophy", "source":
-        "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-        {"volume": "", "name": ""}, "authors": [{"authorId": "2262347", "name": "A.
-        Turing"}]}, {"paperId": "650d4e7c4fbd68b05f87a46985f1da6f2f4f0ed8", "externalIds":
-        {"MAG": "2316135739", "DOI": "10.1093/PHILMAT/4.3.256", "CorpusId": 5213112},
-        "url": "https://www.semanticscholar.org/paper/650d4e7c4fbd68b05f87a46985f1da6f2f4f0ed8",
+        false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Philosophy",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+        "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "650d4e7c4fbd68b05f87a46985f1da6f2f4f0ed8",
+        "externalIds": {"MAG": "2316135739", "DOI": "10.1093/PHILMAT/4.3.256", "CorpusId":
+        5213112}, "corpusId": 5213112, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/650d4e7c4fbd68b05f87a46985f1da6f2f4f0ed8",
         "title": "Intelligent Machinery, A Heretical Theory*", "abstract": "The analysis
         of interrupts is a structured quagmire. In this position paper, we demonstrate
         the investigation of simulated annealing. KaliNil, our new methodology for
         DNS, is the solution to all of these problems.", "venue": "", "year": 1996,
         "referenceCount": 146, "citationCount": 213, "influentialCitationCount": 7,
-        "isOpenAccess": false, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-        [{"category": "Mathematics", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "1996-09-01", "journal": {"volume": "4", "pages": "256-260", "name": "Philosophia
-        Mathematica"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "509a622da7869a8eb345eea921ed30924a73e6fa", "externalIds": {"CorpusId":
-        18573444}, "url": "https://www.semanticscholar.org/paper/509a622da7869a8eb345eea921ed30924a73e6fa",
+        "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+        "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null,
+        "publicationDate": "1996-09-01", "journal": {"volume": "4", "pages": "256-260",
+        "name": "Philosophia Mathematica"}, "authors": [{"authorId": "2262347", "name":
+        "A. Turing"}]}, {"paperId": "509a622da7869a8eb345eea921ed30924a73e6fa", "externalIds":
+        {"CorpusId": 18573444}, "corpusId": 18573444, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/509a622da7869a8eb345eea921ed30924a73e6fa",
         "title": "Computer poker", "abstract": "Games are an interesting and challenging
         domain for computer science research, having the nice characteristics of a
         clearly deened set of rules and a speciic goal. Developing a program to play
@@ -671,60 +713,70 @@ interactions:
         for academic researchers, and lay some foundations for the sci-entiic exploration
         of this fascinating game.", "venue": "", "year": 1995, "referenceCount": 129,
         "citationCount": 12, "influentialCitationCount": 1, "isOpenAccess": false,
-        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
-        "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-        null, "journal": null, "authors": [{"authorId": "39261667", "name": "D. Billings"},
-        {"authorId": "41224665", "name": "J. Neumann"}, {"authorId": "2262347", "name":
-        "A. Turing"}, {"authorId": "144461837", "name": "C. Shannon"}, {"authorId":
-        "143805236", "name": "J. McCarthy"}, {"authorId": "1717349", "name": "D. Knuth"},
-        {"authorId": "48603437", "name": "A. Newell"}, {"authorId": "2055346931",
-        "name": "Herbert A. Simon"}, {"authorId": "7991309", "name": "A. Samuel"},
-        {"authorId": "145878706", "name": "D. Michie"}, {"authorId": "102213388",
-        "name": "K. Thompson"}]}, {"paperId": "e972b5110d036991078e55bede6608a7cdaf48b1",
-        "externalIds": {"CorpusId": 8597454, "PubMed": "7564963"}, "url": "https://www.semanticscholar.org/paper/e972b5110d036991078e55bede6608a7cdaf48b1",
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+        "publicationDate": null, "journal": null, "authors": [{"authorId": "39261667",
+        "name": "D. Billings"}, {"authorId": "41224665", "name": "J. Neumann"}, {"authorId":
+        "2262347", "name": "A. Turing"}, {"authorId": "144461837", "name": "C. Shannon"},
+        {"authorId": "143805236", "name": "J. McCarthy"}, {"authorId": "1717349",
+        "name": "D. Knuth"}, {"authorId": "48603437", "name": "A. Newell"}, {"authorId":
+        "2055346931", "name": "Herbert A. Simon"}, {"authorId": "7991309", "name":
+        "A. Samuel"}, {"authorId": "145878706", "name": "D. Michie"}, {"authorId":
+        "102213388", "name": "K. Thompson"}]}, {"paperId": "e972b5110d036991078e55bede6608a7cdaf48b1",
+        "externalIds": {"CorpusId": 8597454, "PubMed": "7564963"}, "corpusId": 8597454,
+        "publicationVenue": {"id": "2060f67b-894f-4036-95ff-a11601fc257a", "name":
+        "M.D.Computing", "type": "journal", "alternate_names": ["M.D comput  comput
+        med pract", "M.D. computing : computers in medical practice", "M D Comput",
+        "M D Computing"], "issn": "0724-6811"}, "url": "https://www.semanticscholar.org/paper/e972b5110d036991078e55bede6608a7cdaf48b1",
         "title": "Lecture to the London Mathematical Society on 20 February 1947.
         1986.", "abstract": null, "venue": "M.D.Computing", "year": 1995, "referenceCount":
         0, "citationCount": 166, "influentialCitationCount": 15, "isOpenAccess": false,
-        "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
-        "source": "external"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-        null, "journal": {"volume": "12 5", "pages": "\n          390-7\n        ",
+        "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
+        "Medicine", "source": "external"}], "publicationTypes": ["JournalArticle"],
+        "publicationDate": null, "journal": {"volume": "12 5", "pages": "\n          390-7\n        ",
         "name": "M.D. computing : computers in medical practice"}, "authors": [{"authorId":
         "2262347", "name": "A. Turing"}]}, {"paperId": "33adb5256f85d7835696611b2517797dcb260ddb",
-        "externalIds": {"MAG": "1577952063", "CorpusId": 60626324}, "url": "https://www.semanticscholar.org/paper/33adb5256f85d7835696611b2517797dcb260ddb",
+        "externalIds": {"MAG": "1577952063", "CorpusId": 60626324}, "corpusId": 60626324,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/33adb5256f85d7835696611b2517797dcb260ddb",
         "title": "Manchester computing machine: general topics", "abstract": null,
         "venue": "", "year": 1989, "referenceCount": 0, "citationCount": 1, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "1989-05-01", "journal": {"volume": "", "pages": "194-196", "name": ""}, "authors":
-        [{"authorId": "90657571", "name": "M. J. Lighthill"}, {"authorId": "16909947",
-        "name": "G. C. Tootill"}, {"authorId": "143726570", "name": "J. Miller"},
-        {"authorId": "2262347", "name": "A. Turing"}, {"authorId": "143809548", "name":
-        "E. A. Newman"}]}, {"paperId": "a28fe905a92c75ae2098acacad53c992e4bce52d",
-        "externalIds": {"MAG": "1506559289", "CorpusId": 60659734}, "url": "https://www.semanticscholar.org/paper/a28fe905a92c75ae2098acacad53c992e4bce52d",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": "1989-05-01", "journal": {"volume":
+        "", "pages": "194-196", "name": ""}, "authors": [{"authorId": "90657571",
+        "name": "M. J. Lighthill"}, {"authorId": "16909947", "name": "G. C. Tootill"},
+        {"authorId": "143726570", "name": "J. Miller"}, {"authorId": "2262347", "name":
+        "A. Turing"}, {"authorId": "143809548", "name": "E. A. Newman"}]}, {"paperId":
+        "a28fe905a92c75ae2098acacad53c992e4bce52d", "externalIds": {"MAG": "1506559289",
+        "CorpusId": 60659734}, "corpusId": 60659734, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/a28fe905a92c75ae2098acacad53c992e4bce52d",
         "title": "Local programming methods and conventions", "abstract": null, "venue":
         "", "year": 1989, "referenceCount": 0, "citationCount": 147, "influentialCitationCount":
-        3, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}], "publicationTypes":
-        null, "publicationDate": "1989-05-01", "journal": {"volume": "", "pages":
-        "178", "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "f50fef843592d31124e629420a5d7df39a51fcd7", "externalIds": {"MAG":
-        "1723067587", "CorpusId": 56518797}, "url": "https://www.semanticscholar.org/paper/f50fef843592d31124e629420a5d7df39a51fcd7",
+        3, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}], "publicationTypes": null, "publicationDate": "1989-05-01", "journal":
+        {"volume": "", "pages": "178", "name": ""}, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "f50fef843592d31124e629420a5d7df39a51fcd7",
+        "externalIds": {"MAG": "1723067587", "CorpusId": 56518797}, "corpusId": 56518797,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f50fef843592d31124e629420a5d7df39a51fcd7",
         "title": "Checking a large routine", "abstract": null, "venue": "", "year":
-        1989, "referenceCount": 0, "citationCount": 402, "influentialCitationCount":
-        44, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}], "publicationTypes":
-        null, "publicationDate": "1989-05-01", "journal": {"volume": "", "pages":
-        "70-72", "name": ""}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "fc5ef435b26155d2ea554a8062781739c8ccf296", "externalIds": {"MAG":
-        "627474889", "CorpusId": 190961434}, "url": "https://www.semanticscholar.org/paper/fc5ef435b26155d2ea554a8062781739c8ccf296",
+        1989, "referenceCount": 0, "citationCount": 404, "influentialCitationCount":
+        44, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}], "publicationTypes": null, "publicationDate": "1989-05-01", "journal":
+        {"volume": "", "pages": "70-72", "name": ""}, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "fc5ef435b26155d2ea554a8062781739c8ccf296",
+        "externalIds": {"MAG": "627474889", "CorpusId": 190961434}, "corpusId": 190961434,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/fc5ef435b26155d2ea554a8062781739c8ccf296",
         "title": "Intelligence service : Schriften", "abstract": null, "venue": "",
         "year": 1987, "referenceCount": 0, "citationCount": 46, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
-        [{"category": "Psychology", "source": "external"}], "publicationTypes": null,
-        "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"],
+        "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}], "publicationTypes":
+        null, "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
         [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "401226dbe808714439b7f4fe6ce17e3fb5a6e790",
-        "externalIds": {"CorpusId": 7990676}, "url": "https://www.semanticscholar.org/paper/401226dbe808714439b7f4fe6ce17e3fb5a6e790",
+        "externalIds": {"CorpusId": 7990676}, "corpusId": 7990676, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/401226dbe808714439b7f4fe6ce17e3fb5a6e790",
         "title": "Artificial Intelligence : Usfssg Computers to Think about Thinking
         . Part 1", "abstract": "In 1950, Alan M. Turing, the late deputy director
         of the University of Manchester\u2019s Computing Laboratory in England, proposed
@@ -765,41 +817,46 @@ interactions:
         tasks, but not very well. For example, chess programs were successful at following
         the step-by-step instructions for moving chessmen. But computers couldn\u2019t
         independently gen-", "venue": "", "year": 1983, "referenceCount": 143, "citationCount":
-        181, "influentialCitationCount": 3, "isOpenAccess": false, "fieldsOfStudy":
-        null, "s2FieldsOfStudy": [{"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": ["Review"], "publicationDate": null, "journal": null,
-        "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "a21e47f764df82cd14313faa41e33bda8c232fe7",
-        "externalIds": {"MAG": "1482735464", "DOI": "10.1093/BIOMET/66.2.393", "CorpusId":
-        64330274}, "url": "https://www.semanticscholar.org/paper/a21e47f764df82cd14313faa41e33bda8c232fe7",
+        181, "influentialCitationCount": 3, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+        "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+        null, "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "a21e47f764df82cd14313faa41e33bda8c232fe7", "externalIds": {"MAG":
+        "1482735464", "DOI": "10.1093/BIOMET/66.2.393", "CorpusId": 64330274}, "corpusId":
+        64330274, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a21e47f764df82cd14313faa41e33bda8c232fe7",
         "title": "Studies in the History of Probability and Statistics. XXXVII", "abstract":
         "SUMMARY An account is given of A. M. Turing''s unpublished contributions
         to statistics during 1941 or 1940.", "venue": "", "year": 1979, "referenceCount":
         15, "citationCount": 164, "influentialCitationCount": 3, "isOpenAccess": false,
-        "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
-        "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
-        "external"}, {"category": "Business", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": "1979-08-01", "journal": {"volume": "", "name": ""},
-        "authors": [{"authorId": "2262347", "name": "A. Turing"}, {"authorId": "145179124",
-        "name": "I. Good"}]}, {"paperId": "186bdef34bf03f6a1c74d5b074e956324e9fe746",
-        "externalIds": {"MAG": "34610884", "CorpusId": 115688448}, "url": "https://www.semanticscholar.org/paper/186bdef34bf03f6a1c74d5b074e956324e9fe746",
-        "title": "Solvable and Unsolvable Problems", "abstract": null, "venue": "",
-        "year": 1954, "referenceCount": 0, "citationCount": 182, "influentialCitationCount":
-        36, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+        "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+        {"category": "Mathematics", "source": "external"}, {"category": "Business",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1979-08-01",
         "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347",
-        "name": "A. Turing"}]}, {"paperId": "24fade315dc6a15961184a3c6dfec064591edcd5",
-        "externalIds": {"MAG": "1553055254", "CorpusId": 60504948}, "url": "https://www.semanticscholar.org/paper/24fade315dc6a15961184a3c6dfec064591edcd5",
+        "name": "A. Turing"}, {"authorId": "145179124", "name": "I. Good"}]}, {"paperId":
+        "186bdef34bf03f6a1c74d5b074e956324e9fe746", "externalIds": {"MAG": "34610884",
+        "CorpusId": 115688448}, "corpusId": 115688448, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/186bdef34bf03f6a1c74d5b074e956324e9fe746",
+        "title": "Solvable and Unsolvable Problems", "abstract": null, "venue": "",
+        "year": 1954, "referenceCount": 0, "citationCount": 184, "influentialCitationCount":
+        36, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+        null, "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
+        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "24fade315dc6a15961184a3c6dfec064591edcd5",
+        "externalIds": {"MAG": "1553055254", "CorpusId": 60504948}, "corpusId": 60504948,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/24fade315dc6a15961184a3c6dfec064591edcd5",
         "title": "Review: Arthur W. Burks, The Logic of Programming Electronic Digital
         Computers", "abstract": null, "venue": "", "year": 1953, "referenceCount":
         0, "citationCount": 187, "influentialCitationCount": 3, "isOpenAccess": false,
-        "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
-        Science", "source": "external"}, {"category": "Art", "source": "s2-fos-model"}],
-        "publicationTypes": ["Review"], "publicationDate": "1953-06-01", "journal":
-        {"volume": "18", "pages": "179-179", "name": "Journal of Symbolic Logic"},
-        "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "62660c27d93c50f69b1ed614ad9499f4d849aeec",
-        "externalIds": {"MAG": "2317224626", "DOI": "10.2307/2268956", "CorpusId":
-        61881712}, "url": "https://www.semanticscholar.org/paper/62660c27d93c50f69b1ed614ad9499f4d849aeec",
+        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Art",
+        "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+        "1953-06-01", "journal": {"volume": "18", "pages": "179-179", "name": "Journal
+        of Symbolic Logic"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "62660c27d93c50f69b1ed614ad9499f4d849aeec", "externalIds": {"MAG":
+        "2317224626", "DOI": "10.2307/2268956", "CorpusId": 61881712}, "corpusId":
+        61881712, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/62660c27d93c50f69b1ed614ad9499f4d849aeec",
         "title": "Arthur W. Burks. The logic of programming electronic digital computers.
         Industrial mathematics (Detroit), vol. 1 (1950), pp. 36\u201352.", "abstract":
         "ARTHUR W. BURKS. The logic of programming electronic digital computers. Industrial
@@ -812,14 +869,15 @@ interactions:
         by Goldstine and von Neumann. Planning and coding of problems for an electronic
         computing instrument, vol. 1, Institute for Advanced Study, 1947.", "venue":
         "Journal of Symbolic Logic", "year": 1953, "referenceCount": 0, "citationCount":
-        0, "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy":
-        ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer Science",
-        "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": "1953-06-01", "journal": {"volume":
-        "18", "pages": "179 - 179", "name": "Journal of Symbolic Logic"}, "authors":
-        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "2d5673caa9e6af3a7b82a43f19ee920992db07ad",
-        "externalIds": {"MAG": "3030363341", "DBLP": "journals/x/Turing50", "DOI":
-        "10.1093/MIND/LIX.236.433", "CorpusId": 14636783}, "url": "https://www.semanticscholar.org/paper/2d5673caa9e6af3a7b82a43f19ee920992db07ad",
+        0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
+        "Computer Science", "source": "external"}, {"category": "Computer Science",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1953-06-01",
+        "journal": {"volume": "18", "pages": "179 - 179", "name": "Journal of Symbolic
+        Logic"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
+        "2d5673caa9e6af3a7b82a43f19ee920992db07ad", "externalIds": {"MAG": "3030363341",
+        "DBLP": "journals/x/Turing50", "DOI": "10.1093/MIND/LIX.236.433", "CorpusId":
+        14636783}, "corpusId": 14636783, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/2d5673caa9e6af3a7b82a43f19ee920992db07ad",
         "title": "Computing Machinery and Intelligence", "abstract": "I propose to
         consider the question, \u201cCan machines think?\u201d\u2663 This should begin
         with definitions of the meaning of the terms \u201cmachine\u201d and \u201cthink\u201d.
@@ -830,15 +888,15 @@ interactions:
         and the answer to the question, \u201cCan machines think?\u201d is to be sought
         in a statistical survey such as a Gallup poll.", "venue": "The Philosophy
         of Artificial Intelligence", "year": 1950, "referenceCount": 16, "citationCount":
-        8557, "influentialCitationCount": 492, "isOpenAccess": false, "fieldsOfStudy":
-        ["Computer Science", "Sociology"], "s2FieldsOfStudy": [{"category": "Computer
-        Science", "source": "external"}, {"category": "Sociology", "source": "external"},
-        {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes":
-        ["JournalArticle", "Review"], "publicationDate": "1950-10-01", "journal":
-        {"volume": "LIX", "pages": "433-460", "name": "Mind"}, "authors": [{"authorId":
-        "2262347", "name": "A. Turing"}]}, {"paperId": "c35cf8a54e655e91f8657cf8403d578994fb27c5",
+        8596, "influentialCitationCount": 493, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": ["Computer Science", "Sociology"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Sociology",
+        "source": "external"}, {"category": "Philosophy", "source": "s2-fos-model"}],
+        "publicationTypes": ["JournalArticle", "Review"], "publicationDate": "1950-10-01",
+        "journal": {"volume": "LIX", "pages": "433-460", "name": "Mind"}, "authors":
+        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "c35cf8a54e655e91f8657cf8403d578994fb27c5",
         "externalIds": {"MAG": "2419349071", "DOI": "10.2307/j.ctv8d5sh5.6", "CorpusId":
-        148545092}, "url": "https://www.semanticscholar.org/paper/c35cf8a54e655e91f8657cf8403d578994fb27c5",
+        148545092}, "corpusId": 148545092, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c35cf8a54e655e91f8657cf8403d578994fb27c5",
         "title": "PSYCHOLOGY AND PHILOSOPHY", "abstract": "1. The Imitation Game.
         I PROPOSE tO consider the question, ''Can machines think ? This should begin
         with definitions of the meaning of the terms ''machine'' and ''think''. The
@@ -860,13 +918,18 @@ interactions:
         to A and B thus: C: Will X please tell me the length of his or her hair 2
         Now suppose X is aetually A, then A must answer. It is A''s", "venue": "",
         "year": 1950, "referenceCount": 6, "citationCount": 33, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
-        [{"category": "Psychology", "source": "external"}, {"category": "Philosophy",
-        "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-        null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347",
-        "name": "A. Turing"}]}, {"paperId": "092da8384571c8261858e91e3278e765eedde1d5",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"],
+        "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
+        "Philosophy", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+        "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
+        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "092da8384571c8261858e91e3278e765eedde1d5",
         "externalIds": {"MAG": "2092575189", "DBLP": "journals/jsyml/Turing48", "DOI":
-        "10.2307/2267329", "CorpusId": 5770563}, "url": "https://www.semanticscholar.org/paper/092da8384571c8261858e91e3278e765eedde1d5",
+        "10.2307/2267329", "CorpusId": 5770563}, "corpusId": 5770563, "publicationVenue":
+        {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6", "name": "Journal of Symbolic
+        Logic (JSL)", "type": "journal", "alternate_names": ["J Symb Log", "Journal
+        of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812", "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
+        "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
+        "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/092da8384571c8261858e91e3278e765eedde1d5",
         "title": "Practical forms of type theory", "abstract": "Russell''s theory
         of types, though probably not providing the soundest possible foundation for
         mathematics, follows closely the outlook of most mathematicians. The present
@@ -878,15 +941,20 @@ interactions:
         as well as in doctrine. It will not be necessary to adopt a formal logical
         notation to do so.", "venue": "Journal of Symbolic Logic (JSL)", "year": 1948,
         "referenceCount": 121, "citationCount": 200, "influentialCitationCount": 21,
-        "isOpenAccess": false, "fieldsOfStudy": ["Philosophy", "Computer Science"],
-        "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
-        "Computer Science", "source": "external"}, {"category": "Computer Science",
-        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-        "1948-06-01", "journal": {"volume": "13", "pages": "80 - 94", "name": "Journal
-        of Symbolic Logic"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "65069064b19ec8244044311a2a90fbf2c9161675", "externalIds": {"DBLP":
-        "journals/jsyml/NewmanT42", "MAG": "1988522427", "DOI": "10.2307/2267552",
-        "CorpusId": 17917182}, "url": "https://www.semanticscholar.org/paper/65069064b19ec8244044311a2a90fbf2c9161675",
+        "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy",
+        "Computer Science"], "s2FieldsOfStudy": [{"category": "Philosophy", "source":
+        "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+        "publicationDate": "1948-06-01", "journal": {"volume": "13", "pages": "80
+        - 94", "name": "Journal of Symbolic Logic"}, "authors": [{"authorId": "2262347",
+        "name": "A. Turing"}]}, {"paperId": "65069064b19ec8244044311a2a90fbf2c9161675",
+        "externalIds": {"DBLP": "journals/jsyml/NewmanT42", "MAG": "1988522427", "DOI":
+        "10.2307/2267552", "CorpusId": 17917182}, "corpusId": 17917182, "publicationVenue":
+        {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6", "name": "Journal of Symbolic
+        Logic (JSL)", "type": "journal", "alternate_names": ["J Symb Log", "Journal
+        of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812", "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
+        "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
+        "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/65069064b19ec8244044311a2a90fbf2c9161675",
         "title": "A formal theorem in Church''s theory of types", "abstract": "This
         note is concerned with the logical formalism with types recently introduced
         by Church [1] (and called (C) in this note) It was shewn in his paper (Theorem
@@ -900,15 +968,21 @@ interactions:
         uses, in addition to Axioms 1 to 7 and Y\u03b9, also Axiom 9 (in connection
         with Def. 4), and Axiom 10 (in Theorem 9).", "venue": "Journal of Symbolic
         Logic (JSL)", "year": 1942, "referenceCount": 64, "citationCount": 13, "influentialCitationCount":
-        0, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science", "Mathematics"],
-        "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-        {"category": "Mathematics", "source": "external"}, {"category": "Philosophy",
-        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-        "1942-03-01", "journal": {"volume": "7", "pages": "28 - 33", "name": "Journal
-        of Symbolic Logic"}, "authors": [{"authorId": "143697232", "name": "M. Newman"},
-        {"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "7aa8e40e1b94b5e9fe2e1703ffa7433378b484fe",
-        "externalIds": {"DBLP": "journals/jsyml/Turing42", "MAG": "2065302580", "DOI":
-        "10.2307/2268111", "CorpusId": 17112802}, "url": "https://www.semanticscholar.org/paper/7aa8e40e1b94b5e9fe2e1703ffa7433378b484fe",
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+        "source": "external"}, {"category": "Mathematics", "source": "external"},
+        {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes":
+        ["JournalArticle"], "publicationDate": "1942-03-01", "journal": {"volume":
+        "7", "pages": "28 - 33", "name": "Journal of Symbolic Logic"}, "authors":
+        [{"authorId": "143697232", "name": "M. Newman"}, {"authorId": "2262347", "name":
+        "A. Turing"}]}, {"paperId": "7aa8e40e1b94b5e9fe2e1703ffa7433378b484fe", "externalIds":
+        {"DBLP": "journals/jsyml/Turing42", "MAG": "2065302580", "DOI": "10.2307/2268111",
+        "CorpusId": 17112802}, "corpusId": 17112802, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
+        "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
+        ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
+        "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
+        "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
+        "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/7aa8e40e1b94b5e9fe2e1703ffa7433378b484fe",
         "title": "The use of dots as brackets in Church''s system", "abstract": "Any
         logical system, if its use is to be carried beyond a rather elementary stage,
         needs powerful conventions about abbreviations: in particular one usually
@@ -925,14 +999,15 @@ interactions:
         Quine''s, and Curry''s bracketing systems as well as to the present one.",
         "venue": "Journal of Symbolic Logic (JSL)", "year": 1942, "referenceCount":
         83, "citationCount": 193, "influentialCitationCount": 6, "isOpenAccess": false,
-        "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
-        "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
-        "external"}, {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-        ["JournalArticle"], "publicationDate": "1942-12-01", "journal": {"volume":
-        "7", "pages": "146 - 156", "name": "Journal of Symbolic Logic"}, "authors":
-        [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "891151133781d3e78f19b882015746bafd9bc935",
-        "externalIds": {"DBLP": "journals/jsyml/Turing37a", "MAG": "2799201656", "CorpusId":
-        33223540}, "url": "https://www.semanticscholar.org/paper/891151133781d3e78f19b882015746bafd9bc935",
+        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+        "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+        {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+        "1942-12-01", "journal": {"volume": "7", "pages": "146 - 156", "name": "Journal
+        of Symbolic Logic"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+        {"paperId": "891151133781d3e78f19b882015746bafd9bc935", "externalIds": {"DBLP":
+        "journals/jsyml/Turing37a", "MAG": "2799201656", "CorpusId": 33223540}, "corpusId":
+        33223540, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/891151133781d3e78f19b882015746bafd9bc935",
         "title": "The p-Function in \u03bb-K-Conversion", "abstract": "In the theory
         of conversion it is important to have a formally defined function which assigns
         to any positive integer n the least integer not less than n which has a given
@@ -946,14 +1021,20 @@ interactions:
         that e conv Xu.u(e(u)), and consequently if M-<3(V) then M conv V(M). A formula
         with this property is,", "venue": "J. Symb. Log.", "year": 1937, "referenceCount":
         0, "citationCount": 13, "influentialCitationCount": 0, "isOpenAccess": false,
-        "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category":
-        "Mathematics", "source": "external"}, {"category": "Computer Science", "source":
-        "external"}, {"category": "Mathematics", "source": "s2-fos-model"}, {"category":
-        "Philosophy", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
-        "publicationDate": null, "journal": {"volume": "2", "pages": "164", "name":
-        "J. Symb. Log."}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-        {"paperId": "b300783b3f3bd283ab1cf86b7a51f63469db380f", "externalIds": {"MAG":
-        "2798583139", "DOI": "10.2307/2268281", "CorpusId": 11473119}, "url": "https://www.semanticscholar.org/paper/b300783b3f3bd283ab1cf86b7a51f63469db380f",
+        "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
+        "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+        "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+        "s2-fos-model"}, {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes":
+        ["JournalArticle"], "publicationDate": null, "journal": {"volume": "2", "pages":
+        "164", "name": "J. Symb. Log."}, "authors": [{"authorId": "2262347", "name":
+        "A. Turing"}]}, {"paperId": "b300783b3f3bd283ab1cf86b7a51f63469db380f", "externalIds":
+        {"MAG": "2798583139", "DOI": "10.2307/2268281", "CorpusId": 11473119}, "corpusId":
+        11473119, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
+        "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
+        ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
+        "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
+        "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
+        "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/b300783b3f3bd283ab1cf86b7a51f63469db380f",
         "title": "The \u00fe-function in \u03bb-K-conversion", "abstract": "In the
         theory of conversion it is important to have a formally defined function which
         assigns to any positive integer n the least integer not less than n which
@@ -974,14 +1055,20 @@ interactions:
         n) is convertible to the formula representing the nth positive integer q for
         which T(q) conv 0.", "venue": "Journal of Symbolic Logic (JSL)", "year": 1937,
         "referenceCount": 97, "citationCount": 35, "influentialCitationCount": 3,
-        "isOpenAccess": false, "fieldsOfStudy": ["Physics"], "s2FieldsOfStudy": [{"category":
-        "Physics", "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
-        {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": "1937-12-01", "journal": {"volume": "2", "pages":
-        "164 - 164", "name": "Journal of Symbolic Logic"}, "authors": [{"authorId":
-        "2262347", "name": "A. Turing"}]}, {"paperId": "ee8c779e7823814a5f1746d883ca77b26671b617",
-        "externalIds": {"DBLP": "journals/jsyml/Turing37", "MAG": "1485161910", "DOI":
-        "10.2307/2268280", "CorpusId": 2317046}, "url": "https://www.semanticscholar.org/paper/ee8c779e7823814a5f1746d883ca77b26671b617",
+        "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Physics"],
+        "s2FieldsOfStudy": [{"category": "Physics", "source": "external"}, {"category":
+        "Mathematics", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
+        "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1937-12-01",
+        "journal": {"volume": "2", "pages": "164 - 164", "name": "Journal of Symbolic
+        Logic"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
+        "ee8c779e7823814a5f1746d883ca77b26671b617", "externalIds": {"DBLP": "journals/jsyml/Turing37",
+        "MAG": "1485161910", "DOI": "10.2307/2268280", "CorpusId": 2317046}, "corpusId":
+        2317046, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
+        "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
+        ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
+        "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
+        "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
+        "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/ee8c779e7823814a5f1746d883ca77b26671b617",
         "title": "Computability and \u03bb-definability", "abstract": "Several definitions
         have been given to express an exact meaning corresponding to the intuitive
         idea of \u2018effective calculability\u2019 as applied for instance to functions
@@ -1003,16 +1090,16 @@ interactions:
         and p. 254. The proof that computability implies recursiveness requires no
         more knowledge of computable functions than the ideas underlying the definition:
         the technical details are recalled in \u00a75.", "venue": "Journal of Symbolic
-        Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 385, "influentialCitationCount":
-        38, "isOpenAccess": false, "fieldsOfStudy": ["Computer Science", "Mathematics"],
-        "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-        {"category": "Mathematics", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
-        "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+        Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 386, "influentialCitationCount":
+        38, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+        "source": "external"}, {"category": "Mathematics", "source": "external"},
+        {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
         "1937-12-01", "journal": {"volume": "2", "pages": "153 - 163", "name": "Journal
         of Symbolic Logic"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
         {"paperId": "4d81ff79406cd02e064285e5f61e5b6bde68f5e7", "externalIds": {"CorpusId":
-        18195327}, "url": "https://www.semanticscholar.org/paper/4d81ff79406cd02e064285e5f61e5b6bde68f5e7",
+        18195327}, "corpusId": 18195327, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4d81ff79406cd02e064285e5f61e5b6bde68f5e7",
         "title": "Computing Machinery and Intelligence 1. the Imitation Game", "abstract":
         "I propose to consider the question, \"Can machines think?\" This should begin
         with definitions of the meaning of the terms \"machine\" and \"think.\" The
@@ -1036,10 +1123,10 @@ interactions:
         to try and cause C to make the wrong identification. His answer might therefore
         be: \"My hair is shingled, and the longest strands are about nine inches long.
         \" 11", "venue": "", "year": null, "referenceCount": 0, "citationCount": 0,
-        "influentialCitationCount": 0, "isOpenAccess": false, "fieldsOfStudy": null,
-        "s2FieldsOfStudy": [{"category": "Philosophy", "source": "s2-fos-model"}],
-        "publicationTypes": ["Review"], "publicationDate": null, "journal": null,
-        "authors": [{"authorId": "2262347", "name": "A. Turing"}]}]}
+        "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+        "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Philosophy", "source":
+        "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null,
+        "journal": null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]}]}
 
         '
     headers:
@@ -1048,31 +1135,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '83867'
+      - '90944'
       Content-Type:
       - application/json
       Date:
-      - Wed, 21 Dec 2022 03:18:55 GMT
+      - Tue, 03 Jan 2023 20:49:20 GMT
       Via:
-      - 1.1 66e033c5d10bcbd4e2ec7dc233d3bb5a.cloudfront.net (CloudFront)
+      - 1.1 1854e234bfccfb7a387b67a7feff26d2.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - QFasLS_1rRjl3y-cwRuafYUNN9djTJ0Z3VUisiTJXsxYt82G1VSRpQ==
+      - zwGSDNG6xJAKdJ3vLzqcUQmcZIEhcgFpKHmbQOZKcU854as8ZNUugA==
       X-Amz-Cf-Pop:
       - GRU3-P1
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - degs5HhGPHcF81g=
+      - eLwwjG-jvHcF3GQ=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '83867'
+      - '90944'
       x-amzn-Remapped-Date:
-      - Wed, 21 Dec 2022 03:18:55 GMT
+      - Tue, 03 Jan 2023 20:49:20 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 947888cd-bad9-469c-abd3-beb6872a4c58
+      - 8d5b1c26-9082-41eb-8a3f-6f970fbb83f7
     status:
       code: 200
       message: OK

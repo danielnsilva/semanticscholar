@@ -13,11 +13,12 @@ interactions:
       User-Agent:
       - python-requests/2.28.1
     method: POST
-    uri: https://api.semanticscholar.org/graph/v1/paper/batch?&fields=abstract,authors,citationCount,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,paperId,publicationDate,publicationTypes,referenceCount,s2FieldsOfStudy,title,url,venue,year
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
   response:
     body:
       string: '[{"paperId": "0f40b1f08821e22e859c6050916cec3667778613", "externalIds":
-        {"DOI": "10.1257/rct.1355", "CorpusId": 255313304}, "url": "https://www.semanticscholar.org/paper/0f40b1f08821e22e859c6050916cec3667778613",
+        {"DOI": "10.1257/rct.1355", "CorpusId": 255313304}, "corpusId": 255313304,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0f40b1f08821e22e859c6050916cec3667778613",
         "title": "Improving Third-Party Audits and Regulatory Compliance in India",
         "abstract": "Researchers: Esther Duflo Michael Greenstone Nick Ryan Rohini
         Pande Sector(s): Environment, Energy, and Climate Change, Political Economy
@@ -31,14 +32,16 @@ interactions:
         International Growth Center (IGC), International Initiative for Impact Evaluation
         (3ie), MIT Center for Energy and Environmental Policy Research (CEEPR), National
         Science Foundation (NSF)", "venue": "", "year": 2023, "referenceCount": 2,
-        "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true, "fieldsOfStudy":
-        null, "s2FieldsOfStudy": [{"category": "Economics", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
-        [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId": "4711469", "name":
-        "M. Greenstone"}, {"authorId": "2071339188", "name": "Nick Ryan"}, {"authorId":
-        "2159313937", "name": "Rohini Pande"}]}, {"paperId": "c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce",
-        "externalIds": {"MAG": "2951549429", "DOI": "10.2139/ssrn.288970", "CorpusId":
-        470667}, "url": "https://www.semanticscholar.org/paper/c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce",
+        "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf":
+        {"url": "https://www.povertyactionlab.org/sites/default/files/publications/156_321_QJE_2013_Truth_Telling_Third_Party_Audits.pdf",
+        "status": "BRONZE"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        null, "journal": null, "authors": [{"authorId": "2259683", "name": "E. Duflo"},
+        {"authorId": "4711469", "name": "M. Greenstone"}, {"authorId": "2071339188",
+        "name": "Nick Ryan"}, {"authorId": "2159313937", "name": "Rohini Pande"}]},
+        {"paperId": "c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce", "externalIds": {"MAG":
+        "2951549429", "DOI": "10.2139/ssrn.288970", "CorpusId": 470667}, "corpusId":
+        470667, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce",
         "title": "How Much Should We Trust Differences-in-Differences Estimates?",
         "abstract": "Most Difference-in-Difference (DD) papers rely on many years
         of data and focus on serially correlated outcomes. Yet almost all these papers
@@ -59,7 +62,8 @@ interactions:
         methods, which works well irrespective of sample size. This technique uses
         the empirical distribution of estimated effects for placebo laws to form the
         test distribution.", "venue": "", "year": 2001, "referenceCount": 30, "citationCount":
-        9605, "influentialCitationCount": 567, "isOpenAccess": true, "fieldsOfStudy":
+        9606, "influentialCitationCount": 567, "isOpenAccess": true, "openAccessPdf":
+        {"url": "http://papers.nber.org/papers/w8841.pdf", "status": "BRONZE"}, "fieldsOfStudy":
         ["Psychology", "Economics", "Mathematics"], "s2FieldsOfStudy": [{"category":
         "Psychology", "source": "external"}, {"category": "Economics", "source": "external"},
         {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
@@ -68,7 +72,8 @@ interactions:
         "authors": [{"authorId": "81141608", "name": "Marianne Bertrand"}, {"authorId":
         "2259683", "name": "E. Duflo"}, {"authorId": "2062143", "name": "S. Mullainathan"}]},
         {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3", "externalIds": {"MAG":
-        "157810103", "DOI": "10.2139/ssrn.2250500", "CorpusId": 3142471}, "url": "https://www.semanticscholar.org/paper/cb1ebd913c3724c599f6b276b14b5c6253da68f3",
+        "157810103", "DOI": "10.2139/ssrn.2250500", "CorpusId": 3142471}, "corpusId":
+        3142471, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/cb1ebd913c3724c599f6b276b14b5c6253da68f3",
         "title": "The Miracle of Microfinance? Evidence from a Randomized Evaluation",
         "abstract": "Microcredit has spread extremely rapidly since its beginnings
         in the late 1970s, but whether and how much is helps the poor is the subject
@@ -77,14 +82,16 @@ interactions:
         in Hyderabad, India were randomly selected for opening of an MFI branch while
         the remainder were not. We show that the intervention increased total MFI
         borrow.", "venue": "", "year": 2013, "referenceCount": 66, "citationCount":
-        1956, "influentialCitationCount": 237, "isOpenAccess": true, "fieldsOfStudy":
-        ["Business", "Economics", "Geography"], "s2FieldsOfStudy": [{"category": "Business",
-        "source": "external"}, {"category": "Economics", "source": "external"}, {"category":
-        "Geography", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": "2013-04-10", "journal": {"name":
-        "ERN: Credit Risk (Topic)"}, "authors": [{"authorId": "2259683", "name": "E.
-        Duflo"}, {"authorId": "2422370", "name": "A. Banerjee"}, {"authorId": "4249203",
-        "name": "R. Glennerster"}, {"authorId": "31549526", "name": "Cynthia Kinnan"}]}]
+        1956, "influentialCitationCount": 237, "isOpenAccess": true, "openAccessPdf":
+        {"url": "https://dspace.mit.edu/bitstream/1721.1/79070/1/BanerjeeDuflo13-09.pdf",
+        "status": "BRONZE"}, "fieldsOfStudy": ["Business", "Economics", "Geography"],
+        "s2FieldsOfStudy": [{"category": "Business", "source": "external"}, {"category":
+        "Economics", "source": "external"}, {"category": "Geography", "source": "external"},
+        {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes":
+        null, "publicationDate": "2013-04-10", "journal": {"name": "ERN: Credit Risk
+        (Topic)"}, "authors": [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId":
+        "2422370", "name": "A. Banerjee"}, {"authorId": "4249203", "name": "R. Glennerster"},
+        {"authorId": "31549526", "name": "Cynthia Kinnan"}]}]
 
         '
     headers:
@@ -93,31 +100,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5608'
+      - '6128'
       Content-Type:
       - application/json
       Date:
-      - Mon, 02 Jan 2023 18:37:55 GMT
+      - Tue, 03 Jan 2023 20:52:36 GMT
       Via:
-      - 1.1 77f67fd09c19551a70ddc9b4f41371ac.cloudfront.net (CloudFront)
+      - 1.1 5798112148ae9e672af737182da15f62.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - jo2OTLhE0ax--PnhyCoM3Vi3CdQhu3X8SzJ9ynX4efJcKxUva6Jv1Q==
+      - WnUAq8ITJXxFY-jck8EdLcUF6cv0x81IuNKlGEtmrCbXN0U45AmGVA==
       X-Amz-Cf-Pop:
-      - GIG51-P4
+      - GRU3-P1
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - eIKklFiKvHcFVRA=
+      - eLxPMG2PPHcF2ig=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '5608'
+      - '6128'
       x-amzn-Remapped-Date:
-      - Mon, 02 Jan 2023 18:37:55 GMT
+      - Tue, 03 Jan 2023 20:52:36 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - c963f632-d1ba-42f6-9c34-9349adb8577a
+      - 47394016-64e1-4d0d-a8f8-0972aff8c97e
     status:
       code: 200
       message: OK
