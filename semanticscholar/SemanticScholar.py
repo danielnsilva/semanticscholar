@@ -103,6 +103,9 @@ class SemanticScholar:
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
         if include_unknown_refs:
+            warnings.warn(
+                'include_unknown_refs parameter is deprecated and will be disabled ' +
+                'in the future', DeprecationWarning)
             parameters += '&include_unknown_references=true'
 
         data = self._requester.get_data(url, parameters, self.auth_header)
