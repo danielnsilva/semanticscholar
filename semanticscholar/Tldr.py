@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class Tldr:
     '''
     This class represents auto-generated short summary of the paper from the
@@ -14,6 +17,12 @@ class Tldr:
 
     def __repr__(self) -> str:
         return self.__str__()
+
+    def __getitem__(self, key) -> Any:
+        return self._data.__getitem__(key)
+
+    def keys(self):
+        return self._data.keys()
 
     @property
     def model(self) -> str:

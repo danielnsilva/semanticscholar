@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class Journal:
     '''
     This class represents the Journal where the paper was published.
@@ -14,6 +17,12 @@ class Journal:
 
     def __repr__(self) -> str:
         return self.__str__()
+
+    def __getitem__(self, key) -> Any:
+        return self._data.__getitem__(key)
+
+    def keys(self):
+        return self._data.keys()
 
     @property
     def name(self) -> str:
