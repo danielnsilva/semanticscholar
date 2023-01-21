@@ -43,6 +43,9 @@ class SemanticScholar:
                 self.api_url = self.DEFAULT_PARTNER_API_URL
 
         if not graph_api:
+            warnings.warn(
+                'graph_api parameter is deprecated and will be disabled ' +
+                'in the future', DeprecationWarning)
             self.api_url = self.api_url.replace('/graph', '')
 
         self._timeout = timeout
