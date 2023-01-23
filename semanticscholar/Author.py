@@ -1,8 +1,8 @@
-from typing import Any
 import semanticscholar.Paper
+from semanticscholar.SemanticScholarObject import SemanticScholarObject
 
 
-class Author:
+class Author(SemanticScholarObject):
     '''
     This class abstracts an author.
     '''
@@ -44,6 +44,7 @@ class Author:
     SEARCH_FIELDS = FIELDS
 
     def __init__(self, data) -> None:
+        super().__init__()
         self._affiliations = None
         self._aliases = None
         self._authorId = None
@@ -56,18 +57,6 @@ class Author:
         self._papers = None
         self._url = None
         self._init_attributes(data)
-
-    def __str__(self) -> str:
-        return self._data.__str__()
-
-    def __repr__(self) -> Any:
-        return self._data.__repr__()
-
-    def __getitem__(self, key) -> Any:
-        return self._data.__getitem__(key)
-
-    def keys(self):
-        return self._data.keys()
 
     @property
     def affiliations(self) -> list:

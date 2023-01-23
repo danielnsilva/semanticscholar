@@ -2,10 +2,11 @@ from datetime import datetime
 from typing import Any
 import semanticscholar.Author
 import semanticscholar.Journal
+from semanticscholar.SemanticScholarObject import SemanticScholarObject
 import semanticscholar.Tldr
 
 
-class Paper:
+class Paper(SemanticScholarObject):
     '''
     This class abstracts a paper.
     '''
@@ -112,6 +113,7 @@ class Paper:
     ]
 
     def __init__(self, data) -> None:
+        super().__init__()
         self._abstract = None
         self._authors = None
         self._citationCount = None
@@ -136,18 +138,6 @@ class Paper:
         self._venue = None
         self._year = None
         self._init_attributes(data)
-
-    def __str__(self) -> str:
-        return self._data.__str__()
-
-    def __repr__(self) -> Any:
-        return self._data.__repr__()
-
-    def __getitem__(self, key) -> Any:
-        return self._data.__getitem__(key)
-
-    def keys(self):
-        return self._data.keys()
 
     @property
     def abstract(self) -> str:
