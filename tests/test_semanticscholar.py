@@ -6,6 +6,7 @@ import vcr
 from requests.exceptions import Timeout
 
 from semanticscholar.Author import Author
+from semanticscholar.Citation import Citation
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
@@ -43,6 +44,20 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.raw_data, data)
         self.assertEqual(str(item), str(data))
         self.assertEqual(item['name'], data['name'])
+        self.assertEqual(item.keys(), data.keys())
+        file.close()
+
+    def test_citation(self):
+        file = open('tests/data/Citation.json', encoding='utf-8')
+        data = json.loads(file.read())
+        item = Citation(data)
+        self.assertEqual(item.contexts, data['contexts'])
+        self.assertEqual(item.intents, data['intents'])
+        self.assertEqual(item.isInfluential, data['isInfluential'])
+        self.assertEqual(str(item.paper), str(data['citingPaper']))
+        self.assertEqual(item.raw_data, data)
+        self.assertEqual(str(item), str(data))
+        self.assertEqual(item['contexts'], data['contexts'])
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
@@ -137,6 +152,16 @@ class SemanticScholarTest(unittest.TestCase):
                     'E. Duflo', [author.name for author in item.authors])
 
     @test_vcr.use_cassette
+    def test_get_paper_citations(self):
+        data = self.sch.get_paper_citations('CorpusID:49313245')
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 1000)
+        self.assertEqual(len([item.paper.title for item in data]), 4563)
+        self.assertEqual(
+            data[0].paper.title, 'Learning to Throw With a Handful of Samples '
+                'Using Decision Transformers')
+
+    @test_vcr.use_cassette
     def test_get_paper_references(self):
         data = self.sch.get_paper_references('CorpusID:1033682')
         self.assertEqual(data.offset, 0)
@@ -220,6 +245,8 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_limit_value_exceeded(self):
         test_cases = [
+            (self.sch.get_paper_citations, '10.1093/mind/lix.236.433', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.get_paper_references, '10.1093/mind/lix.236.433', 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.search_author, 'turing', 1001,
