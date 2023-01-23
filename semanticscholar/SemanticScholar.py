@@ -25,8 +25,8 @@ class SemanticScholar:
                 graph_api: bool = True
             ) -> None:
         '''
-        :param float timeout: (optional) an exception is raised
-        if the server has not issued a response for timeout seconds.
+        :param float timeout: (optional) an exception is raised\
+            if the server has not issued a response for timeout seconds.
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
         :param bool graph_api: (optional) whether use new Graph API.
@@ -74,9 +74,8 @@ class SemanticScholar:
             ) -> Paper:
         '''Paper lookup
 
-        :calls: `GET https://api.semanticscholar.org/graph/v1/paper/{paper_id} \
-            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/ \
-            operation/get_graph_get_paper>`_
+        :calls: `GET /paper/{paper_id} <https://api.semanticscholar.org/\
+            api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper>`_
 
         :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL, \
                PMID, PMCID, or URL from:
@@ -91,7 +90,7 @@ class SemanticScholar:
                paper.
         :param list fields: (optional) list of the fields to be returned.
         :returns: paper data
-        :rtype: :class:`Paper`
+        :rtype: :class:`semanticscholar.Paper.Paper`
         :raises: ObjectNotFoundExeception: if Paper ID not found.
         '''
 
@@ -120,9 +119,8 @@ class SemanticScholar:
             ) -> List[Paper]:
         '''Get details for multiple papers at once
 
-        :calls: `POST https://api.semanticscholar.org/graph/v1/paper/batch\
-            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/\
-            operation/post_graph_get_papers>`_
+        :calls: `POST /paper/batch <https://api.semanticscholar.org/api-docs/\
+            graph#tag/Paper-Data/operation/post_graph_get_papers>`_
 
         :param str paper_ids: list of IDs (must be <= 1000) - S2PaperId,\
             CorpusId, DOI, ArXivId, MAG, ACL, PMID, PMCID, or URL from:
@@ -135,7 +133,7 @@ class SemanticScholar:
 
         :param list fields: (optional) list of the fields to be returned.
         :returns: papers data
-        :rtype: :class:`List` of :class:`Paper`
+        :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
         :raises: BadQueryParametersException: if no paper was found.
         '''
 
@@ -165,9 +163,8 @@ class SemanticScholar:
             ) -> PaginatedResults:
         '''Search for papers by keyword
 
-        :calls: `GET https://api.semanticscholar.org/graph/v1/paper/search \
-            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/ \
-            operation/get_graph_get_paper_search>`_
+        :calls: `GET /paper/search <https://api.semanticscholar.org/api-docs/\
+            graph#tag/Paper-Data/operation/get_graph_get_paper_search>`_
 
         :param str query: plain-text search query string.
         :param str year: restrict results to the given range of \
@@ -178,7 +175,7 @@ class SemanticScholar:
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
         :returns: query results.
-        :rtype: :class:`PaginatedResults`
+        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
         if not fields:
@@ -210,13 +207,12 @@ class SemanticScholar:
             ) -> Author:
         '''Author lookup
 
-        :calls: `GET https://api.semanticscholar.org/graph/v1/author/\
-            {author_id} <https://api.semanticscholar.org/api-docs/\
-            graph#tag/Author-Data/operation/get_graph_get_author>`_
+        :calls: `GET /author/{author_id} <https://api.semanticscholar.org/\
+            api-docs/graph#tag/Author-Data/operation/get_graph_get_author>`_
 
         :param str author_id: S2AuthorId.
         :returns: author data
-        :rtype: :class:`Author`
+        :rtype: :class:`semanticscholar.Author.Author`
         :raises: ObjectNotFoundExeception: if Author ID not found.
         '''
 
@@ -240,13 +236,12 @@ class SemanticScholar:
             ) -> List[Author]:
         '''Get details for multiple authors at once
 
-        :calls: `POST https://api.semanticscholar.org/graph/v1/author/batch\
-            <https://api.semanticscholar.org/api-docs/graph#tag/Author-Data/\
-            operation/get_graph_get_author>`_
+        :calls: `POST /author/batch <https://api.semanticscholar.org/api-docs/\
+            graph#tag/Author-Data/operation/get_graph_get_author>`_
 
         :param str author_ids: list of S2AuthorId (must be <= 1000).
         :returns: author data
-        :rtype: :class:`List` of :class:`Author`
+        :rtype: :class:`List` of :class:`semanticscholar.Author.Author`
         :raises: BadQueryParametersException: if no author was found.
         '''
 
@@ -274,16 +269,15 @@ class SemanticScholar:
             ) -> PaginatedResults:
         '''Search for authors by name
 
-        :calls: `GET https://api.semanticscholar.org/graph/v1/author/search\
-            <https://api.semanticscholar.org/api-docs/graph#tag/Author-Data/\
-            operation/get_graph_get_author_search>`_
+        :calls: `GET /author/search <https://api.semanticscholar.org/api-docs/\
+            graph#tag/Author-Data/operation/get_graph_get_author_search>`_
 
         :param str query: plain-text search query string.
         :param list fields: (optional) list of the fields to be returned.
         :param int limit: (optional) maximum number of results to return \
                (must be <= 1000).
         :returns: query results.
-        :rtype: :class:`PaginatedResults`
+        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
         if not fields:
