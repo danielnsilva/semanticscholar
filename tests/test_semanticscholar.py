@@ -152,6 +152,14 @@ class SemanticScholarTest(unittest.TestCase):
                     'E. Duflo', [author.name for author in item.authors])
 
     @test_vcr.use_cassette
+    def test_get_paper_authors(self):
+        data = self.sch.get_paper_authors('CorpusID:54599684')
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 1000)
+        self.assertEqual(len([item for item in data]), 2870)
+        self.assertEqual(data[0].name, 'G. Aad')
+
+    @test_vcr.use_cassette
     def test_get_paper_citations(self):
         data = self.sch.get_paper_citations('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
@@ -245,6 +253,8 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_limit_value_exceeded(self):
         test_cases = [
+            (self.sch.get_paper_authors, '10.1093/mind/lix.236.433', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.get_paper_citations, '10.1093/mind/lix.236.433', 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.get_paper_references, '10.1093/mind/lix.236.433', 1001,
