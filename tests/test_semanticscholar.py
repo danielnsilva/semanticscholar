@@ -192,6 +192,24 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertGreater(data.total, 0)
         self.assertEqual(data.next, 0)
 
+    @test_vcr.use_cassette
+    def test_limit_value_exceeded(self):
+        test_cases = [
+            (self.sch.search_author, 'turing', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
+            (self.sch.search_paper, 'turing', 101,
+             'The limit parameter must be between 1 and 100  inclusive.')
+        ]
+        for method, query, upper_limit, error_message in test_cases:
+            with self.subTest(method=method.__name__, limit=upper_limit):
+                with self.assertRaises(ValueError) as context:
+                    method(query, limit=upper_limit)
+                    self.assertEqual(str(context.exception), error_message)
+            with self.subTest(method=method.__name__, limit=0):
+                with self.assertRaises(ValueError) as context:
+                    method(query, limit=0)
+                    self.assertEqual(str(context.exception), error_message)
+
 
 if __name__ == '__main__':
     unittest.main()

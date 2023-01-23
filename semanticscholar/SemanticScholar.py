@@ -178,6 +178,10 @@ class SemanticScholar:
         :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
+        if limit < 1 or limit > 100:
+            raise ValueError(
+                'The limit parameter must be between 1 and 100 inclusive.')
+
         if not fields:
             fields = Paper.SEARCH_FIELDS
 
@@ -279,6 +283,10 @@ class SemanticScholar:
         :returns: query results.
         :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
+
+        if limit < 1 or limit > 1000:
+            raise ValueError(
+                'The limit parameter must be between 1 and 1000 inclusive.')
 
         if not fields:
             fields = Author.SEARCH_FIELDS
