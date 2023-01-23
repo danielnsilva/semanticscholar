@@ -78,7 +78,7 @@ class ApiRequester:
             raise ObjectNotFoundExeception(data['error'])
         elif r.status_code == 429:
             raise ConnectionRefusedError('HTTP status 429 Too Many Requests.')
-        elif r.status_code == 500:
+        elif r.status_code in [500, 504]:
             data = r.json()
             raise Exception(data['message'])
 
