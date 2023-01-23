@@ -3,8 +3,10 @@ from typing import List
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
+from semanticscholar.BaseReference import BaseReference
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
+from semanticscholar.Reference import Reference
 
 
 class SemanticScholar:
@@ -152,6 +154,51 @@ class SemanticScholar:
         papers = [Paper(item) for item in data]
 
         return papers
+
+    def get_paper_references(
+                self,
+                paper_id: str,
+                fields: list = None,
+                limit: int = 1000
+            ) -> PaginatedResults:
+        '''Get details about a paper's references
+
+        :calls: `POST /paper/{paper_id}/references \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
+            /operation/get_graph_get_paper_references>`_
+
+        :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL,\
+               PMID, PMCID, or URL from:
+
+               - semanticscholar.org
+               - arxiv.org
+               - aclweb.org
+               - acm.org
+               - biorxiv.org
+
+        :param list fields: (optional) list of the fields to be returned.
+        :param int limit: (optional) maximum number of results to return\
+               (must be <= 1000).
+        '''
+
+        if limit < 1 or limit > 1000:
+            raise ValueError(
+                'The limit parameter must be between 1 and 1000 inclusive.')
+
+        if not fields:
+            fields = BaseReference.FIELDS + Paper.SEARCH_FIELDS
+
+        url = f'{self.api_url}/paper/{paper_id}/references'
+
+        results = PaginatedResults(
+                requester=self._requester,
+                data_type=Reference,
+                url=url,
+                fields=fields,
+                limit=limit
+            )
+
+        return results
 
     def search_paper(
                 self,

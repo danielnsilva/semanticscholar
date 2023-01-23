@@ -8,6 +8,7 @@ from requests.exceptions import Timeout
 from semanticscholar.Author import Author
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
+from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
     BadQueryParametersException, ObjectNotFoundExeception)
@@ -91,6 +92,20 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
+    def test_reference(self):
+        file = open('tests/data/Reference.json', encoding='utf-8')
+        data = json.loads(file.read())
+        item = Reference(data)
+        self.assertEqual(item.contexts, data['contexts'])
+        self.assertEqual(item.intents, data['intents'])
+        self.assertEqual(item.isInfluential, data['isInfluential'])
+        self.assertEqual(str(item.paper), str(data['citedPaper']))
+        self.assertEqual(item.raw_data, data)
+        self.assertEqual(str(item), str(data))
+        self.assertEqual(item['contexts'], data['contexts'])
+        self.assertEqual(item.keys(), data.keys())
+        file.close()
+
     def test_tldr(self) -> None:
         file = open('tests/data/Paper.json', encoding='utf-8')
         data = json.loads(file.read())['tldr']
@@ -120,6 +135,16 @@ class SemanticScholarTest(unittest.TestCase):
             with self.subTest(subtest=item.paperId):
                 self.assertIn(
                     'E. Duflo', [author.name for author in item.authors])
+
+    @test_vcr.use_cassette
+    def test_get_paper_references(self):
+        data = self.sch.get_paper_references('CorpusID:1033682')
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 0)
+        self.assertEqual(len(data), 35)
+        self.assertEqual(
+            data[0].paper.title, 'Neural Variational Inference and Learning '
+                'in Belief Networks')
 
     @test_vcr.use_cassette
     def test_timeout(self):
@@ -195,6 +220,8 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_limit_value_exceeded(self):
         test_cases = [
+            (self.sch.get_paper_references, '10.1093/mind/lix.236.433', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.search_author, 'turing', 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.search_paper, 'turing', 101,

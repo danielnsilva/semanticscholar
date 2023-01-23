@@ -14,9 +14,9 @@ class PaginatedResults:
                 requester: ApiRequester,
                 data_type: Any,
                 url: str,
-                query: str,
-                fields: str,
-                limit: int,
+                query: str = None,
+                fields: str = None,
+                limit: int = None,
                 headers: dict = None
             ) -> None:
 
@@ -84,10 +84,9 @@ class PaginatedResults:
         return self._items[key]
 
     def __has_next_page(self) -> bool:
-        has_any_result = self._total > 0
         has_more_results = (self._offset + self._limit) == self._next
         under_limit = (self._offset + self._limit) < 9999
-        return has_any_result and has_more_results and under_limit
+        return has_more_results and under_limit
 
     def __get_next_page(self) -> list:
 
@@ -100,7 +99,7 @@ class PaginatedResults:
             )
 
         self._data = results['data']
-        self._total = results['total']
+        self._total = results['total'] if 'total' in results else 0
         self._offset = results['offset']
         self._next = results['next'] if 'next' in results else 0
 
@@ -114,7 +113,7 @@ class PaginatedResults:
 
     def __build_params(self) -> None:
 
-        self._parameters = f'query={self._query}'
+        self._parameters = f'query={self._query}' if self._query else ''
 
         fields = ','.join(self._fields)
         self._parameters += f'&fields={fields}'
