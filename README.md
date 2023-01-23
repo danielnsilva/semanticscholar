@@ -67,6 +67,48 @@ Output:
 'Alan M. Turing'
 ```
 
+### Retrieve multiple items at once
+
+You can fetch up to 1000 distinct papers or authors in one API call. To do that, provide a list of IDs (array of strings).
+
+Get details for multiple papers:
+```python
+from semanticscholar import SemanticScholar
+sch = SemanticScholar()
+list_of_paper_ids = [
+     'CorpusId:470667',
+     '10.2139/ssrn.2250500',
+     '0f40b1f08821e22e859c6050916cec3667778613'
+]
+results = sch.get_papers(list_of_paper_ids)
+for item in results:
+     print(item.title)
+```
+
+Output:
+```console
+Improving Third-Party Audits and Regulatory Compliance in India
+How Much Should We Trust Differences-in-Differences Estimates?
+The Miracle of Microfinance? Evidence from a Randomized Evaluation
+```
+
+Get details for multiple authors:
+```python
+from semanticscholar import SemanticScholar
+sch = SemanticScholar()
+list_of_author_ids = ['3234559', '1726629', '1711844']
+results = sch.get_authors(list_of_author_ids)
+for item in results:
+     print(item.name)
+```
+
+Output:
+```console
+E. Dijkstra
+D. Parnas
+I. Sommerville
+```
+
 ### Search for papers and authors
 To search for papers by keyword:
 ```python
