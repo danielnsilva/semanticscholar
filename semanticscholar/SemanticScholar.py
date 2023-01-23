@@ -155,7 +155,7 @@ class SemanticScholar:
         papers = [Paper(item) for item in data]
 
         return papers
-    
+
     def get_paper_authors(
                 self,
                 paper_id: str,
@@ -403,6 +403,51 @@ class SemanticScholar:
         authors = [Author(item) for item in data]
 
         return authors
+
+    def get_author_papers(
+                self,
+                author_id: str,
+                fields: list = None,
+                limit: int = 1000
+            ) -> PaginatedResults:
+        '''Get details about a author's papers
+
+        :calls: `POST /paper/{author_id}/papers \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
+            /operation/get_graph_get_author_papers>`_
+
+        :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL,\
+               PMID, PMCID, or URL from:
+
+               - semanticscholar.org
+               - arxiv.org
+               - aclweb.org
+               - acm.org
+               - biorxiv.org
+
+        :param list fields: (optional) list of the fields to be returned.
+        :param int limit: (optional) maximum number of results to return\
+               (must be <= 1000).
+        '''
+
+        if limit < 1 or limit > 1000:
+            raise ValueError(
+                'The limit parameter must be between 1 and 1000 inclusive.')
+
+        if not fields:
+            fields = Paper.SEARCH_FIELDS
+
+        url = f'{self.api_url}/author/{author_id}/papers'
+
+        results = PaginatedResults(
+                requester=self._requester,
+                data_type=Paper,
+                url=url,
+                fields=fields,
+                limit=limit
+            )
+
+        return results
 
     def search_author(
                 self,

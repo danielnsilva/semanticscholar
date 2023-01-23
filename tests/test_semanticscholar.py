@@ -199,6 +199,16 @@ class SemanticScholarTest(unittest.TestCase):
         list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
+ 
+    @test_vcr.use_cassette
+    def test_get_author_papers(self):
+        data = self.sch.get_author_papers(1723755, limit=100)
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len([item for item in data]), 925)
+        self.assertEqual(data[0].title, 'Genetic heterogeneity and '
+                        'tissue-specific patterns of tumors with multiple '
+                        'PIK3CA mutations.')
 
     @test_vcr.use_cassette
     def test_not_found(self):
@@ -258,6 +268,8 @@ class SemanticScholarTest(unittest.TestCase):
             (self.sch.get_paper_citations, '10.1093/mind/lix.236.433', 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.get_paper_references, '10.1093/mind/lix.236.433', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
+            (self.sch.get_author_papers, 1723755, 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.search_author, 'turing', 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),
