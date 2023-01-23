@@ -19,6 +19,7 @@ Unofficial [Semantic Scholar Academic Graph API](https://api.semanticscholar.org
 - [Usage](#usage)
   - [Paper Lookup](#paper-lookup)
   - [Author Lookup](#author-lookup)
+  - [Retrieve multiple items at once](#retrieve-multiple-items-at-once)
   - [Search for papers and authors](#search-for-papers-and-authors)
   - [Traversing search results](#traversing-search-results)
   - [Query parameters for all methods](#query-parameters-for-all-methods)
