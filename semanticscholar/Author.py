@@ -135,13 +135,6 @@ class Author(SemanticScholarObject):
         '''
         return self._url
 
-    @property
-    def raw_data(self) -> dict:
-        '''
-        :type: :class:`dict`
-        '''
-        return self._data
-
     def _init_attributes(self, data):
         self._data = data
         if 'affiliations' in data:

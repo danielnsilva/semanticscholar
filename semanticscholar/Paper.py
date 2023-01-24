@@ -307,13 +307,6 @@ class Paper(SemanticScholarObject):
         '''
         return self._year
 
-    @property
-    def raw_data(self) -> dict:
-        '''
-        :type: :class:`dict`
-        '''
-        return self._data
-
     def _init_attributes(self, data) -> None:
         self._data = data
         if 'abstract' in data:
