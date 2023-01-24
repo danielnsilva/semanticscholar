@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Any
+
 import semanticscholar.Author
 from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.SemanticScholarObject import SemanticScholarObject
