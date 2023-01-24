@@ -212,7 +212,7 @@ class Paper(SemanticScholarObject):
     @property
     def journal(self) -> semanticscholar.Journal.Journal:
         '''
-        :type: :class:`Journal`
+        :type: :class:`semanticscholar.Journal.Journal`
         '''
         return self._journal
 
@@ -282,7 +282,7 @@ class Paper(SemanticScholarObject):
     @property
     def tldr(self) -> semanticscholar.Tldr.Tldr:
         '''
-        :type: :class:`Tldr`
+        :type: :class:`semanticscholar.Tldr.Tldr`
         '''
         return self._tldr
 
