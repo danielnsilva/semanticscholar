@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Any
 import semanticscholar.Author
-import semanticscholar.Journal
+from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.SemanticScholarObject import SemanticScholarObject
 import semanticscholar.Tldr
 
@@ -356,7 +356,8 @@ class Paper(SemanticScholarObject):
         if 'publicationTypes' in data:
             self._publicationTypes = data['publicationTypes']
         if 'publicationVenue' in data:
-            self._publicationVenue = data['publicationVenue']
+            if data['publicationVenue'] is not None:
+                self._publicationVenue = PublicationVenue(data['publicationVenue'])
         if 'referenceCount' in data:
             self._referenceCount = data['referenceCount']
         if 'references' in data:

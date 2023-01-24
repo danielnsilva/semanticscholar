@@ -9,6 +9,7 @@ from semanticscholar.Author import Author
 from semanticscholar.Citation import Citation
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
+from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
@@ -104,6 +105,23 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.raw_data, data)
         self.assertEqual(str(item), str(data))
         self.assertEqual(item['title'], data['title'])
+        self.assertEqual(item.keys(), data.keys())
+        file.close()
+
+    def test_pubication_venue(self):
+        file = open('tests/data/Paper.json', encoding='utf-8')
+        data = json.loads(file.read())['citations'][0]['publicationVenue']
+        item = PublicationVenue(data)
+        self.assertEqual(item.alternate_names, data['alternate_names'])
+        self.assertEqual(item.alternate_urls, data['alternate_urls'])
+        self.assertEqual(item.id, data['id'])
+        self.assertEqual(item.issn, data['issn'])
+        self.assertEqual(item.name, data['name'])
+        self.assertEqual(item.type, data['type'])
+        self.assertEqual(item.url, data['url'])
+        self.assertEqual(item.raw_data, data)
+        self.assertEqual(str(item), str(data))
+        self.assertEqual(item['name'], data['name'])
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
