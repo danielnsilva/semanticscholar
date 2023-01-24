@@ -245,9 +245,9 @@ class Paper(SemanticScholarObject):
         return self._publicationTypes
 
     @property
-    def publicationVenue(self) -> dict:
+    def publicationVenue(self) -> PublicationVenue:
         '''
-        :type: :class:`dict`
+        :type: :class:`semanticscholar.PublicationVenue.PublicationVenue`
         '''
         return self._publicationVenue
 

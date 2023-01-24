@@ -70,6 +70,9 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.pages, data['pages'])
         self.assertEqual(item.volume, data['volume'])
         self.assertEqual(item.raw_data, data)
+        self.assertEqual(str(item), data['name'])
+        self.assertEqual(item['name'], data['name'])
+        self.assertEqual(item.keys(), data.keys())
         file.close()
 
     def test_paper(self) -> None:
@@ -147,6 +150,8 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.text, data['text'])
         self.assertEqual(item.raw_data, data)
         self.assertEqual(str(item), data['text'])
+        self.assertEqual(item['model'], data['model'])
+        self.assertEqual(item.keys(), data.keys())
         file.close()
 
     @test_vcr.use_cassette
