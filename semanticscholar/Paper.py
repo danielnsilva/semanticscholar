@@ -1,9 +1,10 @@
 from datetime import datetime
 
 import semanticscholar.Author
-from semanticscholar.PublicationVenue import PublicationVenue
-from semanticscholar.SemanticScholarObject import SemanticScholarObject
+import semanticscholar.Journal
 import semanticscholar.Tldr
+import semanticscholar.PublicationVenue
+from semanticscholar.SemanticScholarObject import SemanticScholarObject
 
 
 class Paper(SemanticScholarObject):
@@ -245,7 +246,8 @@ class Paper(SemanticScholarObject):
         return self._publicationTypes
 
     @property
-    def publicationVenue(self) -> PublicationVenue:
+    def publicationVenue(self) -> \
+            semanticscholar.PublicationVenue.PublicationVenue:
         '''
         :type: :class:`semanticscholar.PublicationVenue.PublicationVenue`
         '''
@@ -350,7 +352,8 @@ class Paper(SemanticScholarObject):
             self._publicationTypes = data['publicationTypes']
         if 'publicationVenue' in data:
             if data['publicationVenue'] is not None:
-                self._publicationVenue = PublicationVenue(data['publicationVenue'])
+                self._publicationVenue = semanticscholar.PublicationVenue.\
+                    PublicationVenue(data['publicationVenue'])
         if 'referenceCount' in data:
             self._referenceCount = data['referenceCount']
         if 'references' in data:
