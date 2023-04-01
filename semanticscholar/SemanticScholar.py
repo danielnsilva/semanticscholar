@@ -348,7 +348,7 @@ class SemanticScholar:
 
         if fields_of_study:
             fields_of_study = ','.join(fields_of_study)
-            query += f'&fields_of_study={fields_of_study}'
+            query += f'&fieldsOfStudy={fields_of_study}'
 
         results = PaginatedResults(
                 self._requester,
