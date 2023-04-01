@@ -278,6 +278,27 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
 
     @test_vcr.use_cassette
+    def test_search_paper_publication_types(self):
+        data = self.sch.search_paper(
+            'turing', publication_types=['JournalArticle'])
+        self.assertTrue('JournalArticle' in data[0].publicationTypes)
+        data = self.sch.search_paper(
+            'turing', publication_types=['Book', 'Conference'])
+        self.assertTrue(
+            'Book' in data[0].publicationTypes or
+            'Conference' in data[0].publicationTypes)
+
+    @test_vcr.use_cassette
+    def test_search_paper_venue(self):
+        data = self.sch.search_paper('turing', venue=['ArXiv'])
+        self.assertEqual(data[0].venue, 'ArXiv')
+
+    @test_vcr.use_cassette
+    def test_search_paper_open_access_pdf(self):
+        data = self.sch.search_paper('turing', open_access_pdf=True)
+        self.assertTrue(data[0].openAccessPdf)
+
+    @test_vcr.use_cassette
     def test_search_author(self):
         data = self.sch.search_author('turing')
         self.assertGreater(data.total, 0)

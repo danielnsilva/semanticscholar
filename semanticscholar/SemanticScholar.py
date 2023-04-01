@@ -296,6 +296,9 @@ class SemanticScholar:
                 self,
                 query: str,
                 year: str = None,
+                publication_types: list = None,
+                open_access_pdf: bool = None,
+                venue: list = None,
                 fields_of_study: list = None,
                 fields: list = None,
                 limit: int = 100
@@ -308,8 +311,11 @@ class SemanticScholar:
         :param str query: plain-text search query string.
         :param str year: restrict results to the given range of \
                publication year.
-        :param str fields_of_study: restrict results to given field-of-study, \
-               using the s2FieldsOfStudy paper field.
+        :param list publication_type: (optional) restrict results to the given \
+               publication type list.
+        :param bool open_access_pdf: (optional) restrict results to papers \
+               with public PDFs.
+        :param list venue: (optional) restrict results to the given venue list.
         :param list fields: (optional) list of the fields to be returned.
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
@@ -327,6 +333,17 @@ class SemanticScholar:
         url = f'{self.api_url}/paper/search'
 
         query += f'&year={year}' if year else ''
+
+        if publication_types:
+            publication_types = ','.join(publication_types)
+            query += f'&publicationTypes={publication_types}'
+
+        query += '&openAccessPdf' if open_access_pdf else ''
+
+        if venue:
+            venue = ','.join(venue)
+            query += f'&venue={venue}'
+
         if fields_of_study:
             fields_of_study = ','.join(fields_of_study)
             query += f'&fields_of_study={fields_of_study}'
