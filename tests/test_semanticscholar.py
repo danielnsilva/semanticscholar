@@ -278,6 +278,17 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
 
     @test_vcr.use_cassette
+    def test_search_paper_year(self):
+        data = self.sch.search_paper('turing', year=1936)
+        self.assertEqual(data[0].year, 1936)
+
+    @test_vcr.use_cassette
+    def test_search_paper_year_range(self):
+        data = self.sch.search_paper('turing', year='1936-1937')
+        # assert that all results are in the range
+        self.assertTrue(all([1936 <= item.year <= 1937 for item in data]))
+
+    @test_vcr.use_cassette
     def test_search_paper_publication_types(self):
         data = self.sch.search_paper(
             'turing', publication_types=['JournalArticle'])
