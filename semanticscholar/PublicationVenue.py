@@ -3,7 +3,7 @@ from semanticscholar.SemanticScholarObject import SemanticScholarObject
 
 class PublicationVenue(SemanticScholarObject):
     '''
-    This class abstracts a publication venue. 
+    This class abstracts a publication venue.
     '''
 
     def __init__(self, data: dict) -> None:

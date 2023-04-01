@@ -27,21 +27,21 @@ class BaseReference(SemanticScholarObject):
         :type: :class:`list`
         '''
         return self._contexts
-    
+
     @property
     def intents(self) -> list:
         '''
         :type: :class:`list`
         '''
         return self._intents
-    
+
     @property
     def isInfluential(self) -> bool:
         '''
         :type: :class:`bool`
         '''
         return self._isInfluential
-    
+
     @property
     def paper(self) -> Paper:
         '''
