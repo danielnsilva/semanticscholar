@@ -13,7 +13,7 @@ from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, ObjectNotFoundExeception)
+    BadQueryParametersException, ObjectNotFoundException)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -238,7 +238,7 @@ class SemanticScholarTest(unittest.TestCase):
         methods = [self.sch.get_paper, self.sch.get_author]
         for method in methods:
             with self.subTest(subtest=method.__name__):
-                self.assertRaises(ObjectNotFoundExeception, method, 0)
+                self.assertRaises(ObjectNotFoundException, method, 0)
 
     @test_vcr.use_cassette
     def test_bad_query_parameters(self):

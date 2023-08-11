@@ -94,7 +94,7 @@ class SemanticScholar:
         :param list fields: (optional) list of the fields to be returned.
         :returns: paper data
         :rtype: :class:`semanticscholar.Paper.Paper`
-        :raises: ObjectNotFoundExeception: if Paper ID not found.
+        :raises: ObjectNotFoundException: if Paper ID not found.
         '''
 
         if not fields:
@@ -375,7 +375,7 @@ class SemanticScholar:
         :param str author_id: S2AuthorId.
         :returns: author data
         :rtype: :class:`semanticscholar.Author.Author`
-        :raises: ObjectNotFoundExeception: if Author ID not found.
+        :raises: ObjectNotFoundException: if Author ID not found.
         '''
 
         if not fields:

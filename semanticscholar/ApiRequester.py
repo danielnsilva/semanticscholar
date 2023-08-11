@@ -6,7 +6,7 @@ from tenacity import (retry, retry_if_exception_type, stop_after_attempt,
                       wait_fixed)
 
 from semanticscholar.SemanticScholarException import \
-    BadQueryParametersException, ObjectNotFoundExeception
+    BadQueryParametersException, ObjectNotFoundException
 
 
 class ApiRequester:
@@ -75,7 +75,7 @@ class ApiRequester:
             raise PermissionError('HTTP status 403 Forbidden.')
         elif r.status_code == 404:
             data = r.json()
-            raise ObjectNotFoundExeception(data['error'])
+            raise ObjectNotFoundException(data['error'])
         elif r.status_code == 429:
             raise ConnectionRefusedError('HTTP status 429 Too Many Requests.')
         elif r.status_code in [500, 504]:
