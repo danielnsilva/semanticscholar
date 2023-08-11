@@ -8,7 +8,7 @@
 
 Unofficial Python client library for [Semantic Scholar APIs](https://api.semanticscholar.org/), currently supporting the Academic Graph API and Recommendations API.
 
-![](search_paper.gif)
+![Usage example](search_paper.gif)
 
 ## Table of Contents
 
@@ -32,16 +32,20 @@ Unofficial Python client library for [Semantic Scholar APIs](https://api.semanti
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## How to install
+
 ```console
 pip install semanticscholar
 ```
 
 ## Usage
+
 Programmatically retrieve paper and author data by ID or query string.
 Can be used to access both the public API and the S2 Data Partner's API using a private key.
 
 ### Paper Lookup
+
 To access paper data:
+
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
@@ -50,12 +54,15 @@ paper.title
 ```
 
 Output:
+
 ```console
 'Computing Machinery and Intelligence'
 ```
 
 ### Author Lookup
+
 To access author data:
+
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
@@ -64,6 +71,7 @@ author.name
 ```
 
 Output:
+
 ```console
 'Alan M. Turing'
 ```
@@ -73,6 +81,7 @@ Output:
 You can fetch up to 1000 distinct papers or authors in one API call. To do that, provide a list of IDs (array of strings).
 
 Get details for multiple papers:
+
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
@@ -87,6 +96,7 @@ for item in results:
 ```
 
 Output:
+
 ```console
 Improving Third-Party Audits and Regulatory Compliance in India
 How Much Should We Trust Differences-in-Differences Estimates?
@@ -94,6 +104,7 @@ The Miracle of Microfinance? Evidence from a Randomized Evaluation
 ```
 
 Get details for multiple authors:
+
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
@@ -104,6 +115,7 @@ for item in results:
 ```
 
 Output:
+
 ```console
 E. Dijkstra
 D. Parnas
@@ -111,7 +123,9 @@ I. Sommerville
 ```
 
 ### Search for papers and authors
+
 To search for papers by keyword:
+
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
@@ -120,6 +134,7 @@ print(f'{results.total} results.', f'First occurrence: {results[0].title}.')
 ```
 
 Output:
+
 ```console
 492 results. First occurrence: Computing Machinery and Intelligence.
 ```
@@ -129,6 +144,7 @@ Output:
 > From the [official documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper_search): "Because of the subtleties of finding partial phrase matches in different parts of the document, be cautious about interpreting the total field as a count of documents containing any particular word in the query."
 
 To search for authors by name:
+
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
@@ -137,6 +153,7 @@ print(f'{results.total} results.', f'First occurrence: {results[0].title}.')
 ```
 
 Output:
+
 ```console
 4 results. First occurrence: A. Turing.
 ```
@@ -154,6 +171,7 @@ for item in results:
 ```
 
 Output:
+
 ```console
 Computing Machinery and Intelligence
 Computing Machinery and Intelligence (1950)
@@ -175,6 +193,7 @@ for item in results.items:
 ```
 
 Output:
+
 ```console
 Computing Machinery and Intelligence
 Computing Machinery and Intelligence (1950)
@@ -250,6 +269,7 @@ for item in results:
 ```
 
 Output:
+
 ```console
 {'paperId': 'd0bc1501ae6f54dd16534e651d90d2aeeeb1cfc1', 'title': 'Software engineering: What is it?', 'year': 2018}
 {'paperId': 'f70b2f20be241f445a61f33c4b8e76e554760340', 'title': 'Software Engineering for Machine Learning: A Case Study', 'year': 2019}
@@ -273,6 +293,7 @@ len(results)
 ```
 
 Output:
+
 ```console
 5
 ```
@@ -291,6 +312,7 @@ results[0].year
 ```
 
 Output:
+
 ```console
 2000
 ```
@@ -307,6 +329,7 @@ results[0].s2FieldsOfStudy
 ```
 
 Output:
+
 ```console
 [{'category': 'Computer Science', 'source': 'external'}, {'category': 'Computer Science', 'source': 's2-fos-model'}]
 ```
@@ -331,7 +354,9 @@ sch.timeout = 5
 ```
 
 ### Accessing the Data Partner's API
+
 If you are a Semantic Scholar Data Partner you can provide the private key as an optional argument:
+
 ```python
 from semanticscholar import SemanticScholar
 s2_api_key = '40-CharacterPrivateKeyProvidedToPartners'
