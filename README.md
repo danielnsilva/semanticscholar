@@ -338,6 +338,11 @@ s2_api_key = '40-CharacterPrivateKeyProvidedToPartners'
 sch = SemanticScholar(api_key=s2_api_key)
 ```
 
-## Semantic Scholar Academic Graph API docs
+## Semantic Scholar API official docs and additional resources
 
-To get more detailed information about Semantic Scholar Academic Graph API functionalities and limitations, [go to the official documentation](https://api.semanticscholar.org/api-docs/graph). The [Frequently Asked Questions](https://www.semanticscholar.org/faq) page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
+If you have concerns or feedback specific to this library, feel free to [open an issue](https://github.com/danielnsilva/semanticscholar/issues). However, the official documentation provides additional resources for broader API-related issues.
+
+- For details on Semantic Scholar APIs capabilities and limits, [go to the official documentation](https://api.semanticscholar.org/api-docs/graph).
+- The [Frequently Asked Questions](https://www.semanticscholar.org/faq) page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
+- This [official GitHub repository](https://github.com/allenai/s2-folks) allows users to report issues and suggest improvements.
+- There is also a community on [Slack](https://join.slack.com/t/semanticschol-xyj3882/shared_invite/zt-1on75e4jr-c0sXVlxEovvtMRQDnTZYAQ).
