@@ -22,12 +22,13 @@ Unofficial Python client library for [Semantic Scholar APIs](https://api.semanti
   - [Retrieve multiple items at once](#retrieve-multiple-items-at-once)
   - [Search for papers and authors](#search-for-papers-and-authors)
   - [Traversing search results](#traversing-search-results)
+  - [Recommended papers](#recommended-papers)
   - [Query parameters for all methods](#query-parameters-for-all-methods)
   - [Query parameters for all search methods](#query-parameters-for-all-search-methods)
   - [Query parameters for search papers](#query-parameters-for-search-papers)
   - [Other options](#other-options)
   - [Accessing the Data Partner's API](#accessing-the-data-partners-api)
-- [Semantic Scholar Academic Graph API docs](#semantic-scholar-academic-graph-api-docs)
+- [Semantic Scholar API official docs and additional resources](#semantic-scholar-api-official-docs-and-additional-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
