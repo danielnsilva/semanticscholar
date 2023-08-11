@@ -6,7 +6,7 @@
 [![Codacy grade](https://img.shields.io/codacy/grade/1456603c25764b14b441ed509e938154?style=for-the-badge)](https://www.codacy.com/gh/danielnsilva/semanticscholar/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=danielnsilva/semanticscholar&amp;utm_campaign=Badge_Grade)
 [![Codacy coverage](https://img.shields.io/codacy/coverage/1456603c25764b14b441ed509e938154?style=for-the-badge)](https://www.codacy.com/gh/danielnsilva/semanticscholar/dashboard?utm_source=github.com&utm_medium=referral&utm_content=danielnsilva/semanticscholar&utm_campaign=Badge_Coverage)
 
-Unofficial [Semantic Scholar Academic Graph API](https://api.semanticscholar.org/) client library for Python.
+Unofficial Python client library for [Semantic Scholar APIs](https://api.semanticscholar.org/), currently supporting the Academic Graph API and Recommendations API.
 
 ![](search_paper.gif)
 
@@ -184,6 +184,56 @@ On Computing Machinery and Intelligence
 ...
 Building Thinking Machines by Solving Animal Cognition Tasks
 ```
+
+### Recommended papers
+
+To get recommended papers for a given paper:
+
+```python
+from semanticscholar import SemanticScholar
+sch = SemanticScholar()
+results = sch.get_recommended_papers('10.1145/3544585.3544600')
+for item in results:
+     print(item.title)
+```
+
+Output:
+
+```console
+INDUCED SUBGRAPHS AND TREE DECOMPOSITIONS
+On the Deque and Rique Numbers of Complete and Complete Bipartite Graphs
+Exact and Parameterized Algorithms for the Independent Cutset Problem
+On (in)tractability of connection and cut problems
+A survey on constructive methods for the Oberwolfach problem and its variants
+...
+Approximation Algorithms for Directed Weighted Spanners
+```
+
+To get recommended papers based on a list of positive and negative paper examples:
+
+```python
+from semanticscholar import SemanticScholar
+sch = SemanticScholar()
+positive_paper_ids = ['10.1145/3544585.3544600']
+negative_paper_ids = ['10.1145/301250.301271']
+results = sch.get_recommended_papers_from_lists(positive_paper_ids, negative_paper_ids)
+for item in results:
+     print(item.title)
+```
+
+Output:
+
+```console
+BUILDING MINIMUM SPANNING TREES BY LIMITED NUMBER OF NODES OVER TRIANGULATED SET OF INITIAL NODES
+Recognition of chordal graphs and cographs which are Cover-Incomparability graphs
+Minimizing Maximum Unmet Demand by Transportations Between Adjacent Nodes Characterized by Supplies and Demands
+Optimal Near-Linear Space Heaviest Induced Ancestors
+Diameter-2-critical graphs with at most 13 nodes
+...
+Advanced Heuristic and Approximation Algorithms (M2)
+```
+
+You can also omit the list of negative paper IDs; in which case, the API will return recommended papers based on the list of positive paper IDs only.
 
 ### Query parameters for all methods
 

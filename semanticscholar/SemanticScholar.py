@@ -15,8 +15,11 @@ class SemanticScholar:
     Main class to retrieve data from Semantic Scholar Graph API
     '''
 
-    DEFAULT_API_URL = 'https://api.semanticscholar.org/graph/v1'
-    DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org/graph/v1'
+    DEFAULT_API_URL = 'https://api.semanticscholar.org'
+    DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org'
+
+    BASE_PATH_GRAPH = '/graph/v1'
+    BASE_PATH_RECOMMENDATIONS = '/recommendations/v1'
 
     auth_header = {}
 
@@ -24,8 +27,7 @@ class SemanticScholar:
                 self,
                 timeout: int = 10,
                 api_key: str = None,
-                api_url: str = None,
-                graph_api: bool = True
+                api_url: str = None
             ) -> None:
         '''
         :param float timeout: (optional) an exception is raised\
@@ -100,7 +102,8 @@ class SemanticScholar:
         if not fields:
             fields = Paper.FIELDS
 
-        url = f'{self.api_url}/paper/{paper_id}'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/paper/{paper_id}'
 
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
@@ -143,7 +146,8 @@ class SemanticScholar:
         if not fields:
             fields = Paper.SEARCH_FIELDS
 
-        url = f'{self.api_url}/paper/batch'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/paper/batch'
 
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
@@ -190,7 +194,8 @@ class SemanticScholar:
             fields = [item for item in Author.SEARCH_FIELDS
                       if not item.startswith('papers')]
 
-        url = f'{self.api_url}/paper/{paper_id}/authors'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/paper/{paper_id}/authors'
 
         results = PaginatedResults(
                 requester=self._requester,
@@ -235,7 +240,8 @@ class SemanticScholar:
         if not fields:
             fields = BaseReference.FIELDS + Paper.SEARCH_FIELDS
 
-        url = f'{self.api_url}/paper/{paper_id}/citations'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/paper/{paper_id}/citations'
 
         results = PaginatedResults(
                 requester=self._requester,
@@ -280,7 +286,8 @@ class SemanticScholar:
         if not fields:
             fields = BaseReference.FIELDS + Paper.SEARCH_FIELDS
 
-        url = f'{self.api_url}/paper/{paper_id}/references'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/paper/{paper_id}/references'
 
         results = PaginatedResults(
                 requester=self._requester,
@@ -332,7 +339,8 @@ class SemanticScholar:
         if not fields:
             fields = Paper.SEARCH_FIELDS
 
-        url = f'{self.api_url}/paper/search'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/paper/search'
 
         query += f'&year={year}' if year else ''
 
@@ -381,7 +389,8 @@ class SemanticScholar:
         if not fields:
             fields = Author.FIELDS
 
-        url = f'{self.api_url}/author/{author_id}'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/author/{author_id}'
 
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
@@ -410,7 +419,8 @@ class SemanticScholar:
         if not fields:
             fields = Author.SEARCH_FIELDS
 
-        url = f'{self.api_url}/author/batch'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/author/batch'
 
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
@@ -456,7 +466,8 @@ class SemanticScholar:
         if not fields:
             fields = Paper.SEARCH_FIELDS
 
-        url = f'{self.api_url}/author/{author_id}/papers'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/author/{author_id}/papers'
 
         results = PaginatedResults(
                 requester=self._requester,
@@ -494,7 +505,8 @@ class SemanticScholar:
         if not fields:
             fields = Author.SEARCH_FIELDS
 
-        url = f'{self.api_url}/author/search'
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/author/search'
 
         results = PaginatedResults(
                 self._requester,
@@ -507,3 +519,97 @@ class SemanticScholar:
             )
 
         return results
+
+    def get_recommended_papers(
+                self,
+                paper_id: str,
+                fields: list = None,
+                limit: int = 100
+            ) -> List[Paper]:
+        '''Get recommended papers for a single positive example.
+
+        :calls: `GET /recommendations/v1/papers/forpaper/{paper_id} \
+            <https://api.semanticscholar.org/api-docs/recommendations#\
+            tag/Paper-Recommendations/operation/get_papers_for_paper>`_
+
+        :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL,\
+               PMID, PMCID, or URL from:
+
+               - semanticscholar.org
+               - arxiv.org
+               - aclweb.org
+               - acm.org
+               - biorxiv.org
+
+        :param list fields: (optional) list of the fields to be returned.
+        :param int limit: (optional) maximum number of recommendations to \
+            return (must be <= 500).
+        :returns: list of recommendations.
+        :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
+        '''
+
+        if limit < 1 or limit > 500:
+            raise ValueError(
+                'The limit parameter must be between 1 and 500 inclusive.')
+
+        if not fields:
+            fields = Paper.SEARCH_FIELDS
+
+        base_url = self.api_url + self.BASE_PATH_RECOMMENDATIONS
+        url = f'{base_url}/papers/forpaper/{paper_id}'
+
+        fields = ','.join(fields)
+        parameters = f'&fields={fields}&limit={limit}'
+
+        data = self._requester.get_data(url, parameters, self.auth_header)
+        papers = [Paper(item) for item in data['recommendedPapers']]
+
+        return papers
+
+    def get_recommended_papers_from_lists(
+                self,
+                positive_paper_ids: List[str],
+                negative_paper_ids: List[str] = None,
+                fields: list = None,
+                limit: int = 100
+            ) -> List[Paper]:
+        '''Get recommended papers for lists of positive and negative examples.
+
+        :calls: `POST /recommendations/v1/papers/ \
+            <https://api.semanticscholar.org/api-docs/recommendations#\
+            tag/Paper-Recommendations/operation/post_papers>`_
+
+        :param list positive_paper_ids: list of paper IDs \
+            that the returned papers should be related to.
+        :param list negative_paper_ids: (optional) list of paper IDs \
+            that the returned papers should not be related to.
+        :param list fields: (optional) list of the fields to be returned.
+        :param int limit: (optional) maximum number of recommendations to \
+            return (must be <= 500).
+        :returns: list of recommendations.
+        :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
+        '''
+
+        if limit < 1 or limit > 500:
+            raise ValueError(
+                'The limit parameter must be between 1 and 500 inclusive.')
+
+        if not fields:
+            fields = Paper.SEARCH_FIELDS
+
+        base_url = self.api_url + self.BASE_PATH_RECOMMENDATIONS
+        url = f'{base_url}/papers/'
+
+        fields = ','.join(fields)
+        parameters = f'&fields={fields}&limit={limit}'
+
+        payload = {
+            "positivePaperIds": positive_paper_ids,
+            "negativePaperIds": negative_paper_ids
+        }
+
+        data = self._requester.get_data(
+            url, parameters, self.auth_header, payload)
+        papers = [Paper(item) for item in data['recommendedPapers']]
+
+        return papers

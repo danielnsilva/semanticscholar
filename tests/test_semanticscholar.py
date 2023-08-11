@@ -316,6 +316,30 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(data.next, 0)
 
     @test_vcr.use_cassette
+    def test_get_recommended_papers(self):
+        data = self.sch.get_recommended_papers('10.1145/3544585.3544600')
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    def test_get_recommended_papers_from_lists(self):
+        data = self.sch.get_recommended_papers_from_lists(
+            ['10.1145/3544585.3544600'], ['10.1145/301250.301271'])
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    def test_get_recommended_papers_from_lists_positive_only(self):
+        data = self.sch.get_recommended_papers_from_lists(
+            ['10.1145/3544585.3544600', '10.1145/301250.301271'])
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    def test_get_recommended_papers_from_lists_negative_only(self):
+        self.assertRaises(BadQueryParametersException,
+                          self.sch.get_recommended_papers_from_lists,
+                          [],
+                          ['10.1145/3544585.3544600'])
+
+    @test_vcr.use_cassette
     def test_limit_value_exceeded(self):
         test_cases = [
             (self.sch.get_paper_authors, '10.1093/mind/lix.236.433', 1001,
@@ -329,7 +353,12 @@ class SemanticScholarTest(unittest.TestCase):
             (self.sch.search_author, 'turing', 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),
             (self.sch.search_paper, 'turing', 101,
-             'The limit parameter must be between 1 and 100  inclusive.')
+             'The limit parameter must be between 1 and 100 inclusive.'),
+            (self.sch.get_recommended_papers, '10.1145/3544585.3544600', 501,
+             'The limit parameter must be between 1 and 500 inclusive.'),
+            (self.sch.get_recommended_papers_from_lists,
+             ['10.1145/3544585.3544600'], 501,
+             'The limit parameter must be between 1 and 500 inclusive.'),
         ]
         for method, query, upper_limit, error_message in test_cases:
             with self.subTest(method=method.__name__, limit=upper_limit):
