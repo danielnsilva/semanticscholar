@@ -1,2 +1,2 @@
 coverage
-vcrpy
+git+https://github.com/danielnsilva/vcrpy.git

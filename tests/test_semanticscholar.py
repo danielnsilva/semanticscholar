@@ -18,7 +18,10 @@ from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
     cassette_library_dir='tests/data',
-    path_transformer=vcr.VCR.ensure_suffix('.yaml')
+    path_transformer=vcr.VCR.ensure_suffix('.yaml'),
+    record_mode=['new_episodes'],
+    match_on=['uri', 'method', 'body'],
+    drop_unused_requests=True
 )
 
 
