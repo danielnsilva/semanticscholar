@@ -33,7 +33,6 @@ class SemanticScholar:
             if the server has not issued a response for timeout seconds.
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
-        :param bool graph_api: (optional) whether use new Graph API.
         '''
 
         if api_url:
@@ -83,8 +82,6 @@ class SemanticScholar:
                - acm.org
                - biorxiv.org
 
-        :param bool include_unknown_refs: (optional) include non referenced \
-               paper.
         :param list fields: (optional) list of the fields to be returned.
         :returns: paper data
         :rtype: :class:`semanticscholar.Paper.Paper`
