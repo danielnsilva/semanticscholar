@@ -9,44 +9,50 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: GET
-    uri: https://api.semanticscholar.org/recommendations/v1/papers/forpaper/10.1145/3544585.3544600?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
+    uri: https://api.semanticscholar.org/recommendations/v1/papers/forpaper/10.1145/3544585.3544600?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=recent
   response:
     body:
-      string: '{"recommendedPapers": [{"paperId": "f1440558d0f7fa7e67fccf27ceea8a6225e1ff1d",
-        "externalIds": {"CorpusId": 259367415}, "corpusId": 259367415, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/f1440558d0f7fa7e67fccf27ceea8a6225e1ff1d",
-        "title": "INDUCED SUBGRAPHS AND TREE DECOMPOSITIONS", "abstract": ". We say
-        a class C of graphs is clean if for every positive integer t there exists
-        a positive integer w ( t ) such that every graph in C with treewidth more
-        than w ( t ) contains an induced subgraph isomorphic to one of the following:
-        the complete graph K t , the complete bipartite graph K t,t , a subdivision
-        of the ( t \u00d7 t )-wall or the line graph of a subdivision of the ( t \u00d7
-        t )-wall. In this paper, we adapt a method due to Lozin and Razgon (building
-        on earlier ideas of Wei\u00dfauer) to prove that the class of all H -free
-        graphs (that is, graphs with no induced subgraph isomorphic to a fixed graph
-        H ) is clean if and only if H is a forest whose components are subdivided
-        stars. Their method is readily applied to yield the above characterization.
-        However, our main result is much stronger: for every forest H as above, we
-        show that forbidding certain connected graphs containing H as an induced subgraph
-        (rather than H itself) is enough to obtain a clean class of graphs. Along
-        the proof of the latter strengthening, we build on a result of Davies and
-        produce, for every positive integer \u03b7 , a complete description of unavoidable
-        connected induced subgraphs of a connected graph G containing \u03b7 vertices
-        from a suitably large given set of vertices in G . This is of independent
-        interest, and will be used in subsequent papers in this series.", "venue":
-        "", "year": 2023, "referenceCount": 36, "citationCount": 4, "influentialCitationCount":
-        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
-        [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": null, "journal": null, "authors": [{"authorId": "9429084",
-        "name": "Tara Abrishami"}, {"authorId": "40952051", "name": "Bogdan Alecu"},
-        {"authorId": "1797007", "name": "M. Chudnovsky"}, {"authorId": "73591882",
-        "name": "Sepehr Hajebi"}, {"authorId": "1821637", "name": "S. Spirkl"}]},
-        {"paperId": "245e7c27de8cb1d243fbc85f0805a2bc1bcb46f6", "externalIds": {"DBLP":
-        "journals/corr/abs-2306-15395", "ArXiv": "2306.15395", "DOI": "10.48550/arXiv.2306.15395",
-        "CorpusId": 259262070}, "corpusId": 259262070, "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10",
-        "url": "https://www.semanticscholar.org/paper/245e7c27de8cb1d243fbc85f0805a2bc1bcb46f6",
+      string: '{"recommendedPapers": [{"paperId": "90e99604c5b7eb2b24796ce3739cbf4083bbd2ef",
+        "externalIds": {"ArXiv": "2305.15615", "CorpusId": 259367415}, "corpusId":
+        259367415, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/90e99604c5b7eb2b24796ce3739cbf4083bbd2ef",
+        "title": "Induced subgraphs and tree decompositions IX. Grid theorem for perforated
+        graphs", "abstract": "The celebrated Erd\\H{o}s-P\\''{o}sa Theorem, in one
+        formulation, asserts that for every $c\\geq 1$, graphs with no subgraph (or
+        equivalently, minor) isomorphic to the disjoint union of $c$ cycles have bounded
+        treewidth. What can we say about the treewidth of graphs containing no induced
+        subgraph isomorphic to the disjoint union of $c$ cycles? Let us call these
+        graphs $c$-perforated. While $1$-perforated graphs have treewidth one, complete
+        graphs and complete bipartite graphs are examples of $2$-perforated graphs
+        with arbitrarily large treewidth. But there are sparse examples, too: Bonamy,
+        Bonnet, D\\''{e}pr\\''{e}s, Esperet, Geniet, Hilaire, Thomass\\''{e} and Wesolek
+        constructed $2$-perforated graphs with arbitrarily large treewidth and no
+        induced subgraph isomorphic to $K_3$ or $K_{3,3}$; we call these graphs occultations.
+        Indeed, it turns out that a mild (and inevitable) adjustment of occultations
+        provides examples of $2$-perforated graphs with arbitrarily large treewidth
+        and arbitrarily large girth, which we refer to as full occultations. Our main
+        result shows that the converse also holds: for every $c\\geq 1$, a $c$-perforated
+        graph has large treewidth if and only if it contains, as an induced subgraph,
+        either a large complete graph, or a large complete bipartite graph, or a large
+        full occultation. This distinguishes $c$-perforated graphs, among graph classes
+        purely defined by forbidden induced subgraphs, as the first to admit a grid-type
+        theorem incorporating obstructions other than subdivided walls and their line
+        graphs. More generally, for all $c,o\\geq 1$, we establish a full characterization
+        of induced subgraph obstructions to bounded treewidth in graphs containing
+        no induced subgraph isomorphic to the disjoint union of $c$ cycles, each of
+        length at least $o+2$.", "venue": "", "year": 2023, "referenceCount": 23,
+        "citationCount": 2, "influentialCitationCount": 0, "isOpenAccess": false,
+        "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+        [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-05-24",
+        "journal": null, "authors": [{"authorId": "9429084", "name": "Tara Abrishami"},
+        {"authorId": "40952051", "name": "Bogdan Alecu"}, {"authorId": "1797007",
+        "name": "M. Chudnovsky"}, {"authorId": "73591882", "name": "Sepehr Hajebi"},
+        {"authorId": "1821637", "name": "S. Spirkl"}]}, {"paperId": "245e7c27de8cb1d243fbc85f0805a2bc1bcb46f6",
+        "externalIds": {"DBLP": "journals/corr/abs-2306-15395", "ArXiv": "2306.15395",
+        "DOI": "10.48550/arXiv.2306.15395", "CorpusId": 259262070}, "corpusId": 259262070,
+        "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/245e7c27de8cb1d243fbc85f0805a2bc1bcb46f6",
         "title": "On the Deque and Rique Numbers of Complete and Complete Bipartite
         Graphs", "abstract": "Several types of linear layouts of graphs are obtained
         by leveraging known data structures; the most notable representatives are
@@ -146,7 +152,9 @@ interactions:
         "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
         [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
         "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-        "2023-08-08", "journal": null, "authors": []}, {"paperId": "c841fa77bb4c8f77bc55d8b17e6d29ba8ca26a2f",
+        "2023-08-08", "journal": null, "authors": [{"authorId": "12578521", "name":
+        "A. Burgess"}, {"authorId": "3250827", "name": "P. Danziger"}, {"authorId":
+        "1744878", "name": "T. Traetta"}]}, {"paperId": "c841fa77bb4c8f77bc55d8b17e6d29ba8ca26a2f",
         "externalIds": {"ArXiv": "2307.08039", "CorpusId": 259937612}, "corpusId":
         259937612, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c841fa77bb4c8f77bc55d8b17e6d29ba8ca26a2f",
         "title": "On the sizes of generalized cactus graphs", "abstract": "A cactus
@@ -524,7 +532,32 @@ interactions:
         [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
         null, "publicationDate": null, "journal": null, "authors": [{"authorId": "34991966",
         "name": "Chenyu Yan"}, {"authorId": "144608443", "name": "Yang Xiang"}, {"authorId":
-        "1757152", "name": "F. Dragan"}]}, {"paperId": "943aa49d5dabb208eaa02053bd573d25a7363d8e",
+        "1757152", "name": "F. Dragan"}]}, {"paperId": "2f66eb66be253dbc277f1c4091f53b968bbd01d1",
+        "externalIds": {"DOI": "10.3390/computation11080162", "CorpusId": 260941952},
+        "corpusId": 260941952, "publicationVenue": "ae3d9fa9-ef94-4645-8a7c-952ef2e27a08",
+        "url": "https://www.semanticscholar.org/paper/2f66eb66be253dbc277f1c4091f53b968bbd01d1",
+        "title": "The Complexity of the Super Subdivision of Cycle-Related Graphs
+        Using Block Matrices", "abstract": "The complexity (number of spanning trees)
+        in a finite graph \u0393 (network) is crucial. The quantity of spanning trees
+        is a fundamental indicator for assessing the dependability of a network. The
+        best and most dependable network is the one with the most spanning trees.
+        In graph theory, one constantly strives to create novel structures from existing
+        ones. The super subdivision operation produces more complicated networks,
+        and the matrices of these networks can be divided into block matrices. Using
+        methods from linear algebra and the characteristics of block matrices, we
+        derive explicit formulas for determining the complexity of the super subdivision
+        of a certain family of graphs, including the cycle Cn, where n=3,4,5,6; the
+        dumbbell graph Dbm,n; the dragon graph Pm(Cn); the prism graph \u03a0n, where
+        n=3,4; the cycle Cn with a Pn2-chord, where n=4,6; and the complete graph
+        K4. Additionally, 3D plots that were created using our results serve as illustrations.",
+        "venue": "Computation", "year": 2023, "referenceCount": 0, "citationCount":
+        0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Mathematics",
+        "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": ["JournalArticle"], "publicationDate": "2023-08-15", "journal":
+        {"name": "Computation"}, "authors": [{"authorId": "151143220", "name": "Mohamed
+        R. Zeen El Deen"}, {"authorId": "2080055761", "name": "Walaa A. Aboamer"},
+        {"authorId": "1475917233", "name": "H. El-Sherbiny"}]}, {"paperId": "943aa49d5dabb208eaa02053bd573d25a7363d8e",
         "externalIds": {"DBLP": "journals/corr/abs-2307-12547", "ArXiv": "2307.12547",
         "DOI": "10.48550/arXiv.2307.12547", "CorpusId": 260125639}, "corpusId": 260125639,
         "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/943aa49d5dabb208eaa02053bd573d25a7363d8e",
@@ -637,7 +670,7 @@ interactions:
         "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
         "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
         "2023-07-07", "journal": null, "authors": [{"authorId": "103316006", "name":
-        "C. Alves"}, {"authorId": "145720344", "name": "R. Ribeiro"}, {"authorId":
+        "C. Alves"}, {"authorId": "145720344", "name": "Rodrigo Ribeiro"}, {"authorId":
         "145354748", "name": "R. Sanchis"}]}, {"paperId": "86a7a4e57fd71578233ea6471555db4893f836a9",
         "externalIds": {"ArXiv": "2307.06054", "CorpusId": 259837094}, "corpusId":
         259837094, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/86a7a4e57fd71578233ea6471555db4893f836a9",
@@ -687,30 +720,36 @@ interactions:
         "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
         "publicationDate": "2023-07-01", "journal": {"name": "IPSI Transactions on
         Internet Research"}, "authors": [{"authorId": "1388638576", "name": "Jovan
-        G. Radosavljevi\u0107"}]}, {"paperId": "9bc84f5c3f1504f891b92c57873bd1723fea8b46",
-        "externalIds": {"CorpusId": 260056083}, "corpusId": 260056083, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/9bc84f5c3f1504f891b92c57873bd1723fea8b46",
-        "title": "SHORTER LABELING SCHEMES FOR PLANAR GRAPHS\\ast", "abstract": "An
-        adjacency labeling scheme for a given class of graphs is an algorithm that,
-        for every graph G from the class, assigns bit strings (labels) to vertices
-        of G so that for any two vertices u, v, whether u and v are adjacent can be
+        G. Radosavljevi\u0107"}]}, {"paperId": "4b24c46181ee1995d80f4e9e490d4a4a6b1a6a41",
+        "externalIds": {"DBLP": "journals/siamdm/BonamyGP22", "ArXiv": "1908.03341",
+        "MAG": "2968159895", "DOI": "10.1137/1.9781611975994.27", "CorpusId": 199528248},
+        "corpusId": 199528248, "publicationVenue": "5545566b-c0b8-418c-83a5-a986a4657572",
+        "url": "https://www.semanticscholar.org/paper/4b24c46181ee1995d80f4e9e490d4a4a6b1a6a41",
+        "title": "Shorter Labeling Schemes for Planar Graphs", "abstract": "An \\emph{adjacency
+        labeling scheme} for a given class of graphs is an algorithm that for every
+        graph $G$ from the class, assigns bit strings (labels) to vertices of $G$
+        so that for any two vertices $u,v$, whether $u$ and $v$ are adjacent can be
         determined by a fixed procedure that examines only their labels. It is known
-        that planar graphs with n vertices admit a labeling scheme with labels of
-        bit length (2+o(1)) logn. In this work we improve this bound by designing
-        a labeling scheme with labels of bit length ( 4 3 + o(1)) logn. All the labels
-        of the input graph can be computed in polynomial time, while adjacency can
-        be decided from the labels in constant time. In graph-theoretical terms, this
-        implies an explicit construction of a graph on n4/3+o(1) vertices that contains
-        all planar graphs on n vertices as induced subgraphs, improving the previous
-        best upper bound of n2+o(1). Our labeling scheme can be generalized to larger
-        classes of topologically constrained graphs, for instance, to graphs embeddable
-        in any fixed surface or to k-planar graphs for any fixed k, at the cost of
-        larger second-order terms.", "venue": "", "year": 2022, "referenceCount":
-        54, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        null, "journal": null, "authors": [{"authorId": "3345689", "name": "Marthe
-        Bonamy"}, {"authorId": "1692428", "name": "C. Gavoille"}]}, {"paperId": "7341c6cd255d9a363cf9f0d689ac1faaeebcc787",
+        that planar graphs with $n$ vertices admit a labeling scheme with labels of
+        bit length $(2+o(1))\\log{n}$. In this work we improve this bound by designing
+        a labeling scheme with labels of bit length $(\\frac{4}{3}+o(1))\\log{n}$.
+        In graph-theoretical terms, this implies an explicit construction of a graph
+        on $n^{4/3+o(1)}$ vertices that contains all planar graphs on $n$ vertices
+        as induced subgraphs, improving the previous best upper bound of $n^{2+o(1)}$.
+        Our scheme generalizes to graphs of bounded Euler genus with the same label
+        length up to a second-order term. All the labels of the input graph can be
+        computed in polynomial time, while adjacency can be decided from the labels
+        in constant time.", "venue": "ACM-SIAM Symposium on Discrete Algorithms",
+        "year": 2019, "referenceCount": 75, "citationCount": 24, "influentialCitationCount":
+        0, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/1908.03341",
+        "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+        "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+        {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+        "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+        "publicationTypes": ["JournalArticle", "Conference"], "publicationDate": "2019-08-09",
+        "journal": {"name": "ArXiv", "volume": "abs/1908.03341"}, "authors": [{"authorId":
+        "3345689", "name": "Marthe Bonamy"}, {"authorId": "1692428", "name": "C. Gavoille"},
+        {"authorId": "1749507", "name": "Michal Pilipczuk"}]}, {"paperId": "7341c6cd255d9a363cf9f0d689ac1faaeebcc787",
         "externalIds": {"ArXiv": "2307.12154", "CorpusId": 260125205}, "corpusId":
         260125205, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7341c6cd255d9a363cf9f0d689ac1faaeebcc787",
         "title": "Hitting sets and colorings of hypergraphs", "abstract": "In this
@@ -731,31 +770,9 @@ interactions:
         "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-07-22",
         "journal": null, "authors": [{"authorId": "2037490642", "name": "Bal''azs
         Bursics"}, {"authorId": "2224619676", "name": "Bence Csonka"}, {"authorId":
-        "91587635", "name": "L. Szepessy"}]}, {"paperId": "91b404ab1598bb3a6e5332d76bd4fd046824b358",
-        "externalIds": {"ArXiv": "2306.09157", "CorpusId": 259164814}, "corpusId":
-        259164814, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/91b404ab1598bb3a6e5332d76bd4fd046824b358",
-        "title": "Cycles with many chords", "abstract": "How many edges in an $n$-vertex
-        graph will force the existence of a cycle with as many chords as it has vertices?
-        Almost 30 years ago, Chen, Erd\\H{o}s and Staton considered this question
-        and showed that any $n$-vertex graph with $2n^{3/2}$ edges contains such a
-        cycle. We significantly improve this old bound by showing that $\\Omega(n\\log^8n)$
-        edges are enough to guarantee the existence of such a cycle. Our proof exploits
-        a delicate interplay between certain properties of random walks in almost
-        regular expanders. We argue that while the probability that a random walk
-        of certain length in an almost regular expander is self-avoiding is very small,
-        one can still guarantee that it spans many edges (and that it can be closed
-        into a cycle) with large enough probability to ensure that these two events
-        happen simultaneously.", "venue": "", "year": 2023, "referenceCount": 0, "citationCount":
-        0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
-        null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
-        "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": "2023-06-15", "journal": null,
-        "authors": [{"authorId": "2202411253", "name": "Nemanja Dragani''c"}, {"authorId":
-        "2029945", "name": "Abhishek Methuku"}, {"authorId": "2202410619", "name":
-        "David Munh''a Correia"}, {"authorId": "1715847", "name": "B. Sudakov"}]},
-        {"paperId": "a72341ec26b2fe5be9ce8212a25e13b4a345d760", "externalIds": {"ArXiv":
-        "2307.03835", "CorpusId": 259501017}, "corpusId": 259501017, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/a72341ec26b2fe5be9ce8212a25e13b4a345d760",
+        "91587635", "name": "L. Szepessy"}]}, {"paperId": "a72341ec26b2fe5be9ce8212a25e13b4a345d760",
+        "externalIds": {"ArXiv": "2307.03835", "CorpusId": 259501017}, "corpusId":
+        259501017, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a72341ec26b2fe5be9ce8212a25e13b4a345d760",
         "title": "On the eccentric graph of trees", "abstract": "We consider the eccentric
         graph of a graph $G$, denoted by $ecc(G)$, which has the same vertex set as
         $G$, and two vertices in the eccentric graph are adjacent iff their distance
@@ -811,10 +828,13 @@ interactions:
         "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
         "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
         "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        null, "journal": null, "authors": []}, {"paperId": "c1fab9cf4da1b9acc779483060c8d35f54ee20e0",
-        "externalIds": {"DBLP": "journals/corr/abs-2307-13964", "ArXiv": "2307.13964",
-        "DOI": "10.48550/arXiv.2307.13964", "CorpusId": 260165015}, "corpusId": 260165015,
-        "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/c1fab9cf4da1b9acc779483060c8d35f54ee20e0",
+        null, "journal": null, "authors": [{"authorId": "2201623344", "name": "F.
+        Movahedi"}, {"authorId": "143879524", "name": "M. Akhbari"}, {"authorId":
+        "47600619", "name": "R. Hasni"}, {"authorId": "2827021", "name": "Ayman Badawi"}]},
+        {"paperId": "c1fab9cf4da1b9acc779483060c8d35f54ee20e0", "externalIds": {"DBLP":
+        "journals/corr/abs-2307-13964", "ArXiv": "2307.13964", "DOI": "10.48550/arXiv.2307.13964",
+        "CorpusId": 260165015}, "corpusId": 260165015, "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+        "url": "https://www.semanticscholar.org/paper/c1fab9cf4da1b9acc779483060c8d35f54ee20e0",
         "title": "Recognition of chordal graphs and cographs which are Cover-Incomparability
         graphs", "abstract": "Cover-Incomparability graphs (C-I graphs) are an interesting
         class of graphs from posets. A C-I graph is a graph from a poset $P=(V,\\le)$
@@ -851,16 +871,16 @@ interactions:
         of the input graph lead to considerable changes in the run time. On the other
         hand, the proposed solver\u2019s performance is much more stable; it is almost
         always faster than or comparable to the two existing solvers, and its run
-        time always remains low.", "venue": "", "year": 2023, "referenceCount": 22,
+        time always remains low.", "venue": "", "year": 2023, "referenceCount": 23,
         "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
         "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
         "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null,
         "publicationDate": null, "journal": null, "authors": [{"authorId": "103468098",
         "name": "Ioannis Panagiotas"}, {"authorId": "144125088", "name": "Gr\u00e9goire
-        Pichon"}, {"authorId": "2124952264", "name": "Somesh Singh"}, {"authorId":
-        "145674689", "name": "B. U\u00e7ar"}]}, {"paperId": "24cf4ff128ad8bddd9f939838bdea593ad110bd2",
-        "externalIds": {"DOI": "10.5817/cz.muni.eurocomb23-056", "CorpusId": 259477611},
-        "corpusId": 259477611, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/24cf4ff128ad8bddd9f939838bdea593ad110bd2",
+        Pichon"}, {"authorId": "2124952264", "name": "Somesh Singh"}]}, {"paperId":
+        "24cf4ff128ad8bddd9f939838bdea593ad110bd2", "externalIds": {"DOI": "10.5817/cz.muni.eurocomb23-056",
+        "CorpusId": 259477611}, "corpusId": 259477611, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/24cf4ff128ad8bddd9f939838bdea593ad110bd2",
         "title": "Maximum genus orientable embeddings from circuit decompositions
         of dense eulerian graphs and digraphs", "abstract": "Suppose we have an eulerian
         (di)graph with a (directed) circuit decomposition. We show that if the (di)graph
@@ -899,7 +919,10 @@ interactions:
         false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
         [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
         "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-08-03",
-        "journal": null, "authors": []}, {"paperId": "6f9f0bf8e02715d0ce724c4346b9fd74454c4d4c",
+        "journal": null, "authors": [{"authorId": "2159713226", "name": "Rigoberto
+        Fl''orez"}, {"authorId": "2209950308", "name": "Jos''e L. Ram''irez"}, {"authorId":
+        "2123693809", "name": "Fabio A. Velandia"}, {"authorId": "40792531", "name":
+        "Diego Villamizar"}]}, {"paperId": "6f9f0bf8e02715d0ce724c4346b9fd74454c4d4c",
         "externalIds": {"ArXiv": "2307.08113", "CorpusId": 259937107}, "corpusId":
         259937107, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6f9f0bf8e02715d0ce724c4346b9fd74454c4d4c",
         "title": "On the singular pebbling number of a graph", "abstract": "In this
@@ -937,7 +960,42 @@ interactions:
         [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
         ["JournalArticle"], "publicationDate": "2023-08-01", "journal": {"name": "Proyecciones
         (Antofagasta)"}, "authors": [{"authorId": "1584517861", "name": "F. J. Campena"},
-        {"authorId": "1775779", "name": "S. Gervacio"}]}, {"paperId": "54b072145a2dbb60ab6ce49da51d71854ed98318",
+        {"authorId": "1775779", "name": "S. Gervacio"}]}, {"paperId": "23af4d6a47f82aa3dd6ef337df389c84915788da",
+        "externalIds": {"DOI": "10.1002/rsa.21176", "CorpusId": 260716755}, "corpusId":
+        260716755, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/23af4d6a47f82aa3dd6ef337df389c84915788da",
+        "title": "The birth of the strong components", "abstract": "It is known that
+        random directed graphs undergo a phase transition around the point . Earlier,
+        \u0141uczak and Seierstad have established that as when , the asymptotic probability
+        that the strongly connected components of a random directed graph are only
+        cycles and single vertices decreases from 1 to 0 as goes from to . By using
+        techniques from analytic combinatorics, we establish the exact limiting value
+        of this probability as a function of and provide more statistical insights
+        into the structure of a random digraph around, below and above its transition
+        point. We obtain the limiting probability that a random digraph is acyclic
+        and the probability that it has one strongly connected complex component with
+        a given difference between the number of edges and vertices (called excess).
+        Our result can be extended to the case of several complex components with
+        given excesses as well in the whole range of sparse digraphs. Our study is
+        based on a general symbolic method which can deal with a great variety of
+        possible digraph families, and a version of the saddle point method which
+        can be systematically applied to the complex contour integrals appearing from
+        the symbolic method. While the technically easiest model is the model of random
+        multidigraphs, in which multiple edges are allowed, and where edge multiplicities
+        are sampled independently according to a Poisson distribution with a fixed
+        parameter , we also show how to systematically approach the family of simple
+        digraphs, where multiple edges are forbidden, and where 2\u2010cycles are
+        either allowed or not. Our theoretical predictions are supported by numerical
+        simulations when the number of vertices is finite, and we provide tables of
+        numerical values for the integrals of Airy functions that appear in this study.",
+        "venue": "Random Structures &amp; Algorithms", "year": 2023, "referenceCount":
+        46, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+        "publicationDate": "2023-08-07", "journal": {"name": "Random Structures &amp;
+        Algorithms"}, "authors": [{"authorId": "10437446", "name": "S. Dovgal"}, {"authorId":
+        "2192392847", "name": "\u00c9lie de Panafieu"}, {"authorId": "3079960", "name":
+        "D. Ralaivaosaona"}, {"authorId": "2130581", "name": "Vonjy Rasendrahasina"},
+        {"authorId": "38416004", "name": "S. Wagner"}]}, {"paperId": "54b072145a2dbb60ab6ce49da51d71854ed98318",
         "externalIds": {"ArXiv": "2306.14103", "DBLP": "journals/corr/abs-2306-14103",
         "DOI": "10.48550/arXiv.2306.14103", "CorpusId": 259252347}, "corpusId": 259252347,
         "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/54b072145a2dbb60ab6ce49da51d71854ed98318",
@@ -980,34 +1038,29 @@ interactions:
         ["JournalArticle"], "publicationDate": null, "journal": {"name": "International
         Journal of Applied Physics and Mathematics"}, "authors": [{"authorId": "2223185645",
         "name": "Belko Soumana Boubacar"}, {"authorId": "2206831", "name": "M. S.
-        Ibrahim"}]}, {"paperId": "4ee4b1f81877d8bda7fc5105014c53811053f128", "externalIds":
-        {"ArXiv": "2306.09965", "CorpusId": 259188007}, "corpusId": 259188007, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/4ee4b1f81877d8bda7fc5105014c53811053f128",
-        "title": "Lower General Position Sets in Graphs", "abstract": "A subset $S$
-        of vertices of a graph $G$ is a \\emph{general position set} if no shortest
-        path in $G$ contains three or more vertices of $S$. In this paper, we generalise
-        a problem of M. Gardner to graph theory by introducing the \\emph{lower general
-        position number} $\\gp ^-(G)$ of $G$, which is the number of vertices in a
-        smallest maximal general position set of $G$. We show that ${\\rm gp}^-(G)
-        = 2$ if and only if $G$ contains a universal line and determine this number
-        for several classes of graphs, including Kneser graphs $K(n,2)$, line graphs
-        of complete graphs, and Cartesian and direct products of two complete graphs.
-        We also prove several realisation results involving the lower general position
-        number, the general position number and the geodetic number, and compare it
-        with the lower version of the monophonic position number. We provide a sharp
-        upper bound on the size of graphs with given lower general position number.
-        Finally we demonstrate that the decision version of the lower general position
-        problem is NP-complete.", "venue": "", "year": 2023, "referenceCount": 41,
-        "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-        [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
-        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-06-16",
-        "journal": null, "authors": [{"authorId": "1808292", "name": "G. Stefano"},
-        {"authorId": "102240903", "name": "Sandi Klavvzar"}, {"authorId": "2140045521",
-        "name": "A. Krishnakumar"}, {"authorId": "87208183", "name": "J. Tuite"},
-        {"authorId": "3162346", "name": "I. Yero"}]}, {"paperId": "380df0d5cb02c4aaa2977ff23b7311d8aee70228",
-        "externalIds": {"CorpusId": 259377935}, "corpusId": 259377935, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/380df0d5cb02c4aaa2977ff23b7311d8aee70228",
+        Ibrahim"}]}, {"paperId": "80e324792e6b39d86706b37e58d6d33d9b8eab25", "externalIds":
+        {"ArXiv": "2308.05175", "CorpusId": 260775759}, "corpusId": 260775759, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/80e324792e6b39d86706b37e58d6d33d9b8eab25",
+        "title": "Cycles in graphs and in hypergraphs", "abstract": "This is an expository
+        paper. A $1$-cycle in a graph is a set $C$ of edges such that every vertex
+        is contained in an even number of edges from $C$. E.g., a cycle in the sense
+        of graph theory is a $1$-cycle, but not vice versa. It is easy to check that
+        the sum (modulo $2$) of $1$-cycles is a $1$-cycle. In this text we study the
+        following problems: to find $\\bullet$ the number of all 1-cycles in a given
+        graph; $\\bullet$ a small number of 1-cycles in a given graph such that any
+        1-cycle is the sum of some of them. We also consider generalizations (of these
+        problems) to graphs with symmetry, and to $2$-cycles in $2$-dimensional hypergraphs.",
+        "venue": "", "year": 2023, "referenceCount": 12, "citationCount": 0, "influentialCitationCount":
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+        "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+        "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        "2023-08-09", "journal": null, "authors": [{"authorId": "2173754402", "name":
+        "E. Alkin"}, {"authorId": "2087047861", "name": "S. Dzhenzher"}, {"authorId":
+        "104156625", "name": "O. Nikitenko"}, {"authorId": "145798389", "name": "A.
+        Skopenkov"}, {"authorId": "1390918593", "name": "A. Voropaev"}]}, {"paperId":
+        "380df0d5cb02c4aaa2977ff23b7311d8aee70228", "externalIds": {"CorpusId": 259377935},
+        "corpusId": 259377935, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/380df0d5cb02c4aaa2977ff23b7311d8aee70228",
         "title": "Graphical realizations of degree sequences, packing multiple colors
         and random graphs", "abstract": "Given a graph, one obtains its degree sequence
         by placing the degrees of the vertices in an ordered list. We are interested
@@ -1073,27 +1126,7 @@ interactions:
         "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science",
         "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
         "journal": null, "authors": [{"authorId": "3238233", "name": "R. Cori"}, {"authorId":
-        "2698254", "name": "Y. L. Borgne"}]}, {"paperId": "bcb831095577a215841874a1f252038e691d78e6",
-        "externalIds": {"DOI": "10.1117/12.2679167", "CorpusId": 259177421}, "corpusId":
-        259177421, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/bcb831095577a215841874a1f252038e691d78e6",
-        "title": "Gr\u00f6bner bases method for solving N-path in finite graph and
-        its application", "abstract": "Let G be a finite directed graph with no loop
-        and no heavy edges, or an undirected graph with no loops and no edges. \ud835\udc41
-        is a given natural number. This paper proves that the existence problem of
-        two paths with length \ud835\udc41 in G (referred to as \ud835\udc41-path)
-        is completely equivalent to the solutions of a multivariate of polynomial
-        \ud835\udc41 the range of {0,1} or {0,1, \u22121}. Therefore, the Gr\u00f6bner
-        bases method can be used to give an effective discrimination of the existence
-        of the solution. This result can be applied to solve the problems of cutting
-        edge judgment, tree and forest judgment in G.", "venue": "Conference on Pure,
-        Applied, and Computational Mathematics", "year": 2023, "referenceCount": 7,
-        "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "openAccessPdf": null, "fieldsOfStudy": ["Engineering"], "s2FieldsOfStudy":
-        [{"category": "Engineering", "source": "external"}, {"category": "Mathematics",
-        "source": "s2-fos-model"}], "publicationTypes": ["Conference"], "publicationDate":
-        "2023-06-14", "journal": {"pages": "127250N - 127250N-8", "volume": "12725"},
-        "authors": [{"authorId": "2146628666", "name": "Zhiqin Zhao"}, {"authorId":
-        "2220158622", "name": "Xuewei Xiong"}]}, {"paperId": "7d446363c1f6fcf2db8abb1ea9291fa07cf02f2d",
+        "2698254", "name": "Y. L. Borgne"}]}, {"paperId": "7d446363c1f6fcf2db8abb1ea9291fa07cf02f2d",
         "externalIds": {"DOI": "10.37394/23206.2023.22.54", "CorpusId": 259624653},
         "corpusId": 259624653, "publicationVenue": "b3801638-51a5-42c2-9978-788253d8f1de",
         "url": "https://www.semanticscholar.org/paper/7d446363c1f6fcf2db8abb1ea9291fa07cf02f2d",
@@ -1135,10 +1168,14 @@ interactions:
         "", "year": 2023, "referenceCount": 20, "citationCount": 0, "influentialCitationCount":
         0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
         [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": null, "journal": null, "authors": []}, {"paperId":
-        "a77cc69e7feaa7ee7f27c2f465366b8603a3608d", "externalIds": {"DBLP": "conf/hopc/CaoFR23",
-        "DOI": "10.1145/3597635.3598019", "CorpusId": 259949805}, "corpusId": 259949805,
-        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a77cc69e7feaa7ee7f27c2f465366b8603a3608d",
+        null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2862549",
+        "name": "M. Bayer"}, {"authorId": "1766035", "name": "M. Denker"}, {"authorId":
+        "2227748040", "name": "Marija Jeli\u00b4c Milutinovi\u00b4c"}, {"authorId":
+        "102646185", "name": "R. Rowlands"}, {"authorId": "40660829", "name": "S.
+        Sundaram"}, {"authorId": "2114051159", "name": "Lei Xue"}]}, {"paperId": "a77cc69e7feaa7ee7f27c2f465366b8603a3608d",
+        "externalIds": {"DBLP": "conf/hopc/CaoFR23", "DOI": "10.1145/3597635.3598019",
+        "CorpusId": 259949805}, "corpusId": 259949805, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/a77cc69e7feaa7ee7f27c2f465366b8603a3608d",
         "title": "Efficient Construction of Directed Hopsets and Parallel Single-source
         Shortest Paths (Abstract)", "abstract": "The single-source shortest-path problem
         is as follows: given a graph with nonnegative edge weights and a designated
@@ -1187,7 +1224,7 @@ interactions:
         either directed or transitive, for any number of colors. The constructions
         and proofs essentially differ for $c=3$ and $c \\geq 4$ and the type of the
         forbidden triangle.", "venue": "European Conference on Combinatorics, Graph
-        Theory and Applications", "year": 2023, "referenceCount": 22, "citationCount":
+        Theory and Applications", "year": 2023, "referenceCount": 23, "citationCount":
         0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
         "https://journals.muni.cz/eurocomb/article/download/35546/30397", "status":
         "HYBRID"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
@@ -1221,7 +1258,7 @@ interactions:
         "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
         "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
         "2023-07-12", "journal": null, "authors": [{"authorId": "8109919", "name":
-        "Michael Anastos"}, {"authorId": "2506017", "name": "O. Cooley"}, {"authorId":
+        "Michael Anastos"}, {"authorId": "2506017", "name": "Oliver Cooley"}, {"authorId":
         "1694886", "name": "Mihyun Kang"}, {"authorId": "31012884", "name": "Matthew
         Kwan"}]}, {"paperId": "038303f86ef10600a4a3381800b96f4cb780fc74", "externalIds":
         {"ArXiv": "2308.01456", "CorpusId": 260439101}, "corpusId": 260439101, "publicationVenue":
@@ -1239,36 +1276,64 @@ interactions:
         "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
         "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
         "2023-08-02", "journal": null, "authors": [{"authorId": "50998763", "name":
-        "Rose McCarty"}]}, {"paperId": "3e2abfdf3e82164f526914ad1b2bbabb78e34b18",
-        "externalIds": {"CorpusId": 259319397}, "corpusId": 259319397, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/3e2abfdf3e82164f526914ad1b2bbabb78e34b18",
-        "title": "The largest eigenvalue conditions for Hamiltonian and traceable
-        graphs", "abstract": "We consider only finite undirected graphs without loops
-        or multiple edges. Notation and terminology not defined here follow those
-        in [2]. For a graph G, we use n to denote its order |V (G)|. The minimum degree
-        and connectivity of a graph G are denoted by \u03b4(G) and \u03ba(G), respectively.
-        A subset V1 of the vertex set V (G) of G is independent if no two vertices
-        in V1 are adjacent in G. A maximum independent set in a graph G is an independent
-        set of the largest possible size. The independence number, denoted \u03b1(G),
-        of a graph G is the cardinality of a maximum independent set in G. For disjoint
-        vertex subsets X and Y of V (G), we define E(X,Y ) as { e : e = xy \u2208
-        E, x \u2208 X, y \u2208 Y }. A graph G is semiregular if G is bipartite and
-        all the vertices in the same part of bipartition have the same degree. The
-        eigenvalues of a graph G, denoted \u03bb1(G) \u2265 \u03bb2(G) \u2265 \u00b7
-        \u00b7 \u00b7 \u2265 \u03bbn(G), are defined as the eigenvalues of its adjacency
-        matrix A(G). A cycle C in a graph G is called a Hamiltonian cycle of G if
-        C contains all the vertices of G. A graph G is called Hamiltonian if G has
-        a Hamiltonian cycle. A path P in a graph G is called a Hamiltonian path of
-        G if P contains all the vertices of G. A graph G is called traceable if G
-        has a Hamiltonian path. In 2010, Fiedler and Nikiforov [4] obtained the following
-        spectral results for the Hamiltonicity and traceability of graphs.", "venue":
-        "", "year": 2023, "referenceCount": 14, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
-        [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": null, "journal": null, "authors": [{"authorId": "40085651",
-        "name": "Rao Li"}]}, {"paperId": "3b386b7629e06bcb94e75d2a6f7ac9d67231c4e9",
-        "externalIds": {"CorpusId": 260237634}, "corpusId": 260237634, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/3b386b7629e06bcb94e75d2a6f7ac9d67231c4e9",
+        "Rose McCarty"}]}, {"paperId": "0f11938e85ea3b4c5dd3133ab8beb7e01ebe8aed",
+        "externalIds": {"CorpusId": 260961838}, "corpusId": 260961838, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/0f11938e85ea3b4c5dd3133ab8beb7e01ebe8aed",
+        "title": "On Longest Geometrically Increasing Sequences", "abstract": "We
+        consider a problem that comes up in the analysis of the discrete Newton\u2019s
+        algorithm for submodular line optimization . It has to deal with finding longest
+        geometrically increasing sequences , that is finding the longest sequence
+        of partial sums of the elements of a real vector a with n entries, such that
+        each subsequent partial sum is at least twice as large as the previous one.
+        It is known that if we restrict a to contain nonnegative components only,
+        then such a sequence can contain at most n subsets, and that the maximum length
+        is 12 n log 2 n \u00b1 O ( n log log n ) in the general case. This result
+        leads us to consider how the number of negative components in a affects the
+        longest geometrically increasing sequences. We define G ( n, k ) to be the
+        largest m \u2208 N such that there exist a \u2208 R n with exactly k negative
+        components and T 1 , . . . , T m \u2286 [ n ] for which a ( T 1 ) , . . .
+        , a ( T m ) form a geometrically increasing sequence. In this paper, we prove
+        several bounds on G ( n, 1), G ( n, n \u2212 1) and G ( n, n/ 2), as well
+        as several inequalities between different values of G ( n, k ). In addition,
+        we report results from a computational study in which the vector a is drawn
+        from a normal distribution, implying the conjecture that the maximum length
+        in this case grows logarithmically.", "venue": "", "year": 2023, "referenceCount":
+        7, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+        "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        null, "journal": null, "authors": [{"authorId": "2232052705", "name": "Deyan
+        Hadzhi-Manich"}]}, {"paperId": "08c7ee3af3a43a554a182eb667129c85479b6e52",
+        "externalIds": {"ArXiv": "2308.01685", "CorpusId": 260438791}, "corpusId":
+        260438791, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/08c7ee3af3a43a554a182eb667129c85479b6e52",
+        "title": "Inequalities Connecting the Annihilation and Independence Numbers",
+        "abstract": "Given a graph $G$, the number of its vertices is represented
+        by $n(G)$, while the number of its edges is denoted as $m(G)$. An independent
+        set in a graph is a set of vertices where no two vertices are adjacent to
+        each other and the size of the maximum independent set is denoted by $\\alpha(G)$.
+        A matching in a graph refers to a set of edges where no two edges share a
+        common vertex and the maximum matching size is denoted by $\\mu(G)$. If $\\alpha(G)
+        + \\mu(G) = n(G)$, then the graph $G$ is called a K\\\"{o}nig-Egerv\\''{a}ry
+        graph. Considering a graph $G$ with a degree sequence $d_1 \\leq d_2 \\leq
+        \\cdots \\leq d_n$, the annihilation number $a(G)$ is defined as the largest
+        integer $k$ such that the sum of the first $k$ degrees in the sequence is
+        less than or equal to $m(G)$ (Pepper, 2004). It is a known fact that $\\alpha(G)$
+        is less than or equal to $a(G)$ for any graph $G$. Our goal is to estimate
+        the difference between these two parameters. Specifically, we prove a series
+        of inequalities, including $a(G) - \\alpha(G) \\leq \\frac{\\mu(G) - 1}{2}$
+        for trees, $a(G) - \\alpha(G) \\leq 2 + \\mu(G) - 2\\sqrt{1 + \\mu(G)}$ for
+        bipartite graphs and $a(G) - \\alpha(G) \\leq \\mu(G) - 2$ for K\\\"{o}nig-Egerv\\''{a}ry
+        graphs. Furthermore, we demonstrate that these inequalities serve as tight
+        upper bounds for the difference between the annihilation and independence
+        numbers, regardless of the assigned value for $\\mu(G)$.", "venue": "", "year":
+        2023, "referenceCount": 21, "citationCount": 0, "influentialCitationCount":
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+        "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+        "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        "2023-08-03", "journal": null, "authors": [{"authorId": "2148756632", "name":
+        "Ohr Kadrawi"}, {"authorId": "1740755", "name": "Vadim E. Levit"}]}, {"paperId":
+        "3b386b7629e06bcb94e75d2a6f7ac9d67231c4e9", "externalIds": {"CorpusId": 260237634},
+        "corpusId": 260237634, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3b386b7629e06bcb94e75d2a6f7ac9d67231c4e9",
         "title": "Schedule for Contributed Talks", "abstract": ": The adjacency nullity
         of graphs\u2019 and hypergraphs\u2019 adjacency matrices is something of a
         mystery, though there are nice results for some narrow classes of graphs such
@@ -1301,7 +1366,7 @@ interactions:
         "K. Anders"}, {"authorId": "47310333", "name": "Art M. Duval"}, {"authorId":
         "2225438195", "name": "Kirin Martin Leonard"}, {"authorId": "2225441919",
         "name": "Mushunje"}, {"authorId": "2225208383", "name": "Rajat Gupta"}, {"authorId":
-        "2225174793", "name": "Peter Marcus"}, {"authorId": "9694925", "name": "Youngho
+        "90506956", "name": "P. Marcus"}, {"authorId": "9694925", "name": "Youngho
         Yoo"}, {"authorId": "2120211533", "name": "M\u00e1t\u00e9 L. Telek"}, {"authorId":
         "145959856", "name": "John L\u00f3pez"}, {"authorId": "1712273895", "name":
         "Byeongsu Yu"}, {"authorId": "1422365942", "name": "Noah Lebowitz-Lockard"},
@@ -1346,9 +1411,47 @@ interactions:
         {"pages": "8:1-8:18"}, "authors": [{"authorId": "3440697", "name": "P. Charalampopoulos"},
         {"authorId": "8597780", "name": "B. Dudek"}, {"authorId": "1683786", "name":
         "Pawe\u0142 Gawrychowski"}, {"authorId": "1736552620", "name": "Karol Pokorski"}]},
-        {"paperId": "9ac69b4b2e21114c20eea6059649f557bd7aabc7", "externalIds": {"ArXiv":
-        "2307.00116", "CorpusId": 259317145}, "corpusId": 259317145, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/9ac69b4b2e21114c20eea6059649f557bd7aabc7",
+        {"paperId": "a2593b296bb894899485d27523648ebdf28ac32c", "externalIds": {"ArXiv":
+        "2308.07471", "DBLP": "conf/latin/FernandesLM22", "DOI": "10.1007/978-3-031-20624-5_12",
+        "CorpusId": 260900137}, "corpusId": 260900137, "publicationVenue": "6d000b18-518e-4989-9a76-63bda770e1c6",
+        "url": "https://www.semanticscholar.org/paper/a2593b296bb894899485d27523648ebdf28ac32c",
+        "title": "Approximations for the Steiner Multicycle Problem", "abstract":
+        null, "venue": "Latin American Symposium on Theoretical Informatics", "year":
+        2023, "referenceCount": 28, "citationCount": 0, "influentialCitationCount":
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+        "external"}, {"category": "Mathematics", "source": "s2-fos-model"}, {"category":
+        "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+        "publicationDate": "2023-08-14", "journal": {"pages": "188-203"}, "authors":
+        [{"authorId": "1695437", "name": "Cristina G. Fernandes"}, {"authorId": "3320245",
+        "name": "C. N. Lintzmayer"}, {"authorId": "2835510", "name": "Phablo F. S.
+        Moura"}]}, {"paperId": "f1a68b1b31f2a0a375e9747df45d18983e8a2622", "externalIds":
+        {"ArXiv": "2307.11625", "CorpusId": 260091417}, "corpusId": 260091417, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/f1a68b1b31f2a0a375e9747df45d18983e8a2622",
+        "title": "Competition graphs of degree bounded digraphs", "abstract": "If
+        each vertex of an acyclic digraph has indegree at most $i$ and outdegree at
+        most $j$, then it is called an $(i,j)$ digraph, which was introduced by Hefner~{\\it
+        et al.}~(1991). Whereas Hefner~{\\it et al.} characterized $(i,j)$ digraphs
+        whose competition graphs are interval, characterizing the competition graphs
+        of $(i,j)$ digraphs is not an easy task. In this paper, we introduce the concept
+        of $\\langle i,j \\rangle$ digraphs, which relax the acyclicity condition
+        of $(i,j)$ digraphs, and study their competition graphs. By doing so, we obtain
+        quite meaningful results. Firstly, we give a necessary and sufficient condition
+        for a loopless graph being an $\\langle i,j \\rangle$ competition graph for
+        some positive integers $i$ and $j$. Then we study on an $\\langle i,j \\rangle$
+        competition graph being chordal and present a forbidden subdigraph characterization.
+        Finally, we study the family of $\\langle i,j \\rangle$ competition graphs,
+        denoted by $\\mathcal{G}_{\\langle i,j \\rangle}$, and identify the set containment
+        relation on $\\{\\mathcal{G}_{\\langle i,j \\rangle}\\colon\\, i,j \\ge 1\\}$.",
+        "venue": "", "year": 2023, "referenceCount": 17, "citationCount": 0, "influentialCitationCount":
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+        "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+        "2023-07-21", "journal": null, "authors": [{"authorId": "2183210126", "name":
+        "Hojin Chu"}, {"authorId": "2021037075", "name": "Suh-Ryung Kim"}]}, {"paperId":
+        "9ac69b4b2e21114c20eea6059649f557bd7aabc7", "externalIds": {"ArXiv": "2307.00116",
+        "CorpusId": 259317145}, "corpusId": 259317145, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/9ac69b4b2e21114c20eea6059649f557bd7aabc7",
         "title": "The maximum number of odd cycles in a planar graph", "abstract":
         "How many copies of a fixed odd cycle, $C_{2m+1}$, can a planar graph contain?
         We answer this question asymptotically for $m\\in\\{2,3,4\\}$ and prove a
@@ -1421,9 +1524,43 @@ interactions:
         "2023-07-01", "journal": {"name": "The Mathematical Gazette", "pages": "263
         - 272", "volume": "107"}, "authors": [{"authorId": "2968116", "name": "Nima
         Ghanbari"}, {"authorId": "34606741", "name": "S. Alikhani"}]}, {"paperId":
-        "ae93cb07fb13c4de04431278ba8a203a371819fb", "externalIds": {"DOI": "10.5817/cz.muni.eurocomb23-094",
-        "CorpusId": 259477012}, "corpusId": 259477012, "publicationVenue": null, "url":
-        "https://www.semanticscholar.org/paper/ae93cb07fb13c4de04431278ba8a203a371819fb",
+        "9c7658d113c01385c048ee8cd6a1770b67b3b1d2", "externalIds": {"DBLP": "journals/siamcomp/BasteST23",
+        "DOI": "10.1137/21m140482x", "CorpusId": 232204540}, "corpusId": 232204540,
+        "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9c7658d113c01385c048ee8cd6a1770b67b3b1d2",
+        "title": "Hitting Minors on Bounded Treewidth Graphs. IV. An Optimal Algorithm",
+        "abstract": "For a fixed finite collection of graphs F , the F-M-Deletion
+        problem asks, given an n-vertex input graph G, for the minimum number of vertices
+        that intersect all minor models in G of the graphs in F . by Courcelle\u2019s
+        Theorem, this problem can be solved in time fF (tw) \u00b7 nO(1), where tw
+        is the treewidth of G, for some function fF depending on F . In a recent series
+        of articles, we have initiated the programme of optimizing asymptotically
+        the function fF . Here we provide an algorithm showing that fF (tw) = 2O(tw
+        \u00b7 log tw) for every collection F . Prior to this work, the best known
+        function fF was double-exponential in tw . In particular, our algorithm vastly
+        extends the results of Jansen et al. [SODA 2014] for the particular case F
+        = {K5, K3,3} and of Kociumaka and Pilipczuk [Algorithmica 2019] for graphs
+        of bounded genus, and answers an open problem posed by Cygan et al. [Inf Comput
+        2017]. We combine several ingredients such as the machinery of boundaried
+        graphs in dynamic programming via representatives, the Flat Wall Theorem,
+        Bidimensionality, the irrelevant vertex technique, treewidth modulators, and
+        protrusion replacement. Together with our previous results providing single-exponential
+        algorithms for particular collections F [Theor Comput Sci 2020] and general
+        lower bounds [J Comput Syst Sci 2020], our algorithm yields the following
+        complexity dichotomy when F = {H} contains a single connected graph H, assuming
+        the Exponential Time Hypothesis: fH(tw) = 2\u0398(tw) if H is a contraction
+        of the chair or the banner, and fH(tw) = 2\u0398(tw \u00b7 log tw) otherwise.",
+        "venue": "SIAM journal on computing (Print)", "year": 2023, "referenceCount":
+        55, "citationCount": 2, "influentialCitationCount": 0, "isOpenAccess": true,
+        "openAccessPdf": {"url": "https://arxiv.org/pdf/1907.04442", "status": "GREEN"},
+        "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
+        Science", "source": "external"}, {"category": "Computer Science", "source":
+        "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+        ["JournalArticle"], "publicationDate": "2023-07-20", "journal": {"name": "SIAM
+        J. Comput.", "pages": "865-912", "volume": "52"}, "authors": [{"authorId":
+        "37713229", "name": "Julien Baste"}, {"authorId": "2581875", "name": "Ignasi
+        Sau"}, {"authorId": "1724691", "name": "D. Thilikos"}]}, {"paperId": "ae93cb07fb13c4de04431278ba8a203a371819fb",
+        "externalIds": {"DOI": "10.5817/cz.muni.eurocomb23-094", "CorpusId": 259477012},
+        "corpusId": 259477012, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ae93cb07fb13c4de04431278ba8a203a371819fb",
         "title": "Graph covers and generalized snarks", "abstract": "The notion of
         graph cover, also known as locally bijective homomorphism, is a discretization
         of covering spaces known from general topology. It is a pair of incidence-preserving
@@ -1507,7 +1644,25 @@ interactions:
         "name": "Nizamettin Tokar"}, {"authorId": "49901793", "name": "Guantao Chen"},
         {"authorId": "2176234", "name": "Florian Enescu"}, {"authorId": "153757495",
         "name": "Hendricus Van der Holst"}, {"authorId": "50878754", "name": "Zhongshan
-        Li"}, {"authorId": "2109916758", "name": "Yi Zhao"}]}, {"paperId": "eea17f1687b36718a4b5acdd65cd30186d4015f0",
+        Li"}, {"authorId": "2109916758", "name": "Yi Zhao"}]}, {"paperId": "09e4052e782dee6efd25e700dc3254661c49f205",
+        "externalIds": {"ArXiv": "2307.11520", "CorpusId": 260091610}, "corpusId":
+        260091610, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/09e4052e782dee6efd25e700dc3254661c49f205",
+        "title": "Graphs with isolation number equal to one third of the order", "abstract":
+        "A set $D$ of vertices of a graph $G$ is isolating if the set of vertices
+        not in $D$ or with no neighbor in $D$ is independent. The isolation number
+        of $G$, denoted by $\\iota (G)$, is the minimum cardinality of an isolating
+        set of $G$. It is known that $\\iota (G)\\le n/3$, if $G$ is a connected graph
+        of order $n$, $n\\ge 3$, distinct from $C_5$. The main result of this work
+        is the characterisation of unicyclic and block graphs of order $n$ with isolating
+        number equal to $n/3$. Moreover, we provide a family of general graphs attaining
+        this upper bound on the isolation number.", "venue": "", "year": 2023, "referenceCount":
+        11, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+        "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+        [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-07-21",
+        "journal": null, "authors": [{"authorId": "1737057", "name": "M. Lema\u0144ska"},
+        {"authorId": "37109659", "name": "M. Mora"}, {"authorId": "1460302386", "name":
+        "M. J. Souto-Salorio"}]}, {"paperId": "eea17f1687b36718a4b5acdd65cd30186d4015f0",
         "externalIds": {"CorpusId": 260322191}, "corpusId": 260322191, "publicationVenue":
         null, "url": "https://www.semanticscholar.org/paper/eea17f1687b36718a4b5acdd65cd30186d4015f0",
         "title": "Pushing the Boundaries of Combinatorial Graph Isomorphism Algorithms",
@@ -1545,33 +1700,7 @@ interactions:
         0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
         [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
         null, "publicationDate": null, "journal": null, "authors": [{"authorId": "103683723",
-        "name": "Yu. S. Makarychev"}]}, {"paperId": "2a73042eca9441241577f46f32ca522327cf7123",
-        "externalIds": {"CorpusId": 260605946}, "corpusId": 260605946, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/2a73042eca9441241577f46f32ca522327cf7123",
-        "title": "Computation of Node Distances on Hypergraphs", "abstract": "A hypergraph
-        is a generalization of a graph that arises naturally when we consider attribute-sharing
-        among entities. Although a hypergraph can be converted into a graph by expanding
-        its hy-peredges into fully connected subgraphs, going the reverse way is computationally
-        complex and NP-complete. We hence hypothesize that a hypergraph contains more
-        information than a graph. Moreover, it is more convenient to manipulate a
-        hypergraph directly, rather than expanding it into a graph. An open problem
-        in hypergraphs is how to accurately and efficiently calculate their node distances.
-        Once node distances are defined, we can find a node\u2019s nearest neighbors,
-        and perform label propagation on hyper-graphs using a K-nearest neighbors
-        (KNN) approach. In this paper, we propose two methods to achieve this. In
-        the first, we compute expected hitting times of random walks on a hypergraph
-        as node distances; in the second, we generalize the DeepWalk method to hypergraphs.
-        We note that simple random walks (SRW) cannot accurately describe highly complex
-        real-world hypergraphs, which motivates us to introduce frustrated random
-        walks (FRW) to better describe them. Using real-world datasets, we show that
-        FRW and DeepWalk can beat SRW with a large margin. For large and sparse hypergraphs,
-        our method for computing the expected hitting times of random walks is approximately
-        linear in time complexity, rendering it superior to the DeepWalk method.",
-        "venue": "", "year": 2023, "referenceCount": 17, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "s2-fos-model"}, {"category":
-        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        null, "journal": null, "authors": []}, {"paperId": "102031eabb78843afa11aab349c1a36bc5656efe",
+        "name": "Yu. S. Makarychev"}]}, {"paperId": "102031eabb78843afa11aab349c1a36bc5656efe",
         "externalIds": {"DOI": "10.3390/math11132868", "CorpusId": 259696735}, "corpusId":
         259696735, "publicationVenue": "6175efe8-6f8e-4cbe-8cee-d154f4e78627", "url":
         "https://www.semanticscholar.org/paper/102031eabb78843afa11aab349c1a36bc5656efe",
@@ -1618,9 +1747,30 @@ interactions:
         Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
         "publicationDate": "2023-07-29", "journal": {"name": "ArXiv", "volume": "abs/2307.15879"},
         "authors": [{"authorId": "1403056871", "name": "V. A. Melent''ev"}]}, {"paperId":
-        "29c756836c821c480226aea7fbb9890a903bcf54", "externalIds": {"ArXiv": "2308.03414",
-        "CorpusId": 260683619}, "corpusId": 260683619, "publicationVenue": null, "url":
-        "https://www.semanticscholar.org/paper/29c756836c821c480226aea7fbb9890a903bcf54",
+        "5fae9e01d0abe7ef7f1e636b3882323654aaff0c", "externalIds": {"ArXiv": "2308.05772",
+        "CorpusId": 260866204}, "corpusId": 260866204, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/5fae9e01d0abe7ef7f1e636b3882323654aaff0c",
+        "title": "Note on Hamilitonicity of basis graphs of even delta-matroids",
+        "abstract": "We show that the basis graph of an even delta-matroid is Hamiltonian
+        if it has more than two vertices. More strongly, we prove that for two distinct
+        edges $e$ and $f$ sharing a common end, it has a Hamiltonian cycle using $e$
+        and avoiding $f$ unless it has at most two vertices or it is a cycle of length
+        at most four. We also prove that if the basis graph is not a hypercube graph,
+        then each vertex belongs to cycles of every length $\\ell\\ge 3$, and each
+        edge belongs to cycles of every length $\\ell \\ge 4$. For the last theorem,
+        we provide two proofs, one of which uses the result of Naddef (1984) on polytopes
+        and the result of Chepoi (2007) on basis graphs of even delta-matroids, and
+        the other is a direct proof using various properties of even delta-matroids.
+        Our theorems generalize the analogous results for matroids by Holzmann and
+        Harary (1972) and Bondy and Ingleton (1976).", "venue": "", "year": 2023,
+        "referenceCount": 23, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+        false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+        [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+        "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-08-10",
+        "journal": null, "authors": [{"authorId": "2154743617", "name": "Donggyu Kim"},
+        {"authorId": "2958900", "name": "Sang-il Oum"}]}, {"paperId": "29c756836c821c480226aea7fbb9890a903bcf54",
+        "externalIds": {"ArXiv": "2308.03414", "CorpusId": 260683619}, "corpusId":
+        260683619, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/29c756836c821c480226aea7fbb9890a903bcf54",
         "title": "Critical $(P_5,dart)$-Free Graphs", "abstract": "Given two graphs
         $H_1$ and $H_2$, a graph is $(H_1,H_2)$-free if it contains no induced subgraph
         isomorphic to $H_1$ and $H_2$. Let $P_t$ be the path on $t$ vertices. A dart
@@ -1638,9 +1788,10 @@ interactions:
         null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
         "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
         "publicationTypes": null, "publicationDate": "2023-08-07", "journal": null,
-        "authors": []}, {"paperId": "de3006e28e623f4cd487fccfcd1936f8c1ea37a8", "externalIds":
-        {"CorpusId": 260549119}, "corpusId": 260549119, "publicationVenue": null,
-        "url": "https://www.semanticscholar.org/paper/de3006e28e623f4cd487fccfcd1936f8c1ea37a8",
+        "authors": [{"authorId": "2061910111", "name": "Wen Xia"}, {"authorId": "34106946",
+        "name": "Shenwei Huang"}]}, {"paperId": "de3006e28e623f4cd487fccfcd1936f8c1ea37a8",
+        "externalIds": {"CorpusId": 260549119}, "corpusId": 260549119, "publicationVenue":
+        null, "url": "https://www.semanticscholar.org/paper/de3006e28e623f4cd487fccfcd1936f8c1ea37a8",
         "title": "One-wasy trail orientation", "abstract": "Given a graph, does there
         exist an orientation of the edges such that the resulting directed graph is
         strongly connected? Robbins\u2019 theorem [Robbins, Am. Math. Monthly, 1939]
@@ -1666,7 +1817,9 @@ interactions:
         "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
         "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science",
         "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-        "journal": null, "authors": []}, {"paperId": "5233e9785c8088c2fa8475664d42b6e51b83ed16",
+        "journal": null, "authors": [{"authorId": "24034468", "name": "N. Hjuler"},
+        {"authorId": "1902819", "name": "J. Holm"}, {"authorId": "2075610", "name":
+        "E. Rotenberg"}]}, {"paperId": "5233e9785c8088c2fa8475664d42b6e51b83ed16",
         "externalIds": {"DOI": "10.20535/2411-2976.12023.41-50", "CorpusId": 259736329},
         "corpusId": 259736329, "publicationVenue": "16ac1da5-94e6-41a1-b345-b3094bbc1738",
         "url": "https://www.semanticscholar.org/paper/5233e9785c8088c2fa8475664d42b6e51b83ed16",
@@ -1762,9 +1915,53 @@ interactions:
         "authors": [{"authorId": "2202411253", "name": "Nemanja Dragani''c"}, {"authorId":
         "2206163967", "name": "Marc Kaufmann"}, {"authorId": "2202410619", "name":
         "David Munh''a Correia"}, {"authorId": "6850124", "name": "Kalina Petrova"},
-        {"authorId": "41174829", "name": "R. Steiner"}]}, {"paperId": "bca92600c70866855029438fa1ae46d16f4dcb80",
+        {"authorId": "41174829", "name": "R. Steiner"}]}, {"paperId": "9479b98c57649e22e847311f480375d4576d6465",
+        "externalIds": {"DOI": "10.18514/mmn.2023.4133", "CorpusId": 260142353}, "corpusId":
+        260142353, "publicationVenue": "bdad5255-c248-4946-8333-b8b82716373e", "url":
+        "https://www.semanticscholar.org/paper/9479b98c57649e22e847311f480375d4576d6465",
+        "title": "An enumeration approach to network evolution", "abstract": ". A
+        simple theoretical model of network evolution is discussed here. In each step,
+        we add a new vertex to the graph and it is allowed to connect it to maximum
+        degree vertices (hubs) only. Given a constant p , the probability of such
+        a connection is p for any hub. The initial (non-random) graph G 1 is arbitrary
+        but here we investigate mostly the case when G 1 has one vertex. We solve
+        here some particular cases of the problem, using enumeration methods. We obtain
+        not limit theorems but exact results for the parameters discussed.", "venue":
+        "Miskolc Mathematical Notes", "year": 2023, "referenceCount": 15, "citationCount":
+        0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+        "http://mat76.mat.uni-miskolc.hu/mnotes/download_article/4133.pdf", "status":
+        "GOLD"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Mathematics",
+        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+        null, "journal": {"name": "Miskolc Mathematical Notes"}, "authors": [{"authorId":
+        "1692360", "name": "G. Bacs\u00f3"}, {"authorId": "50103768", "name": "J.
+        T\u00fari"}]}, {"paperId": "9264129a4a0f491f01d1085fa1db33475f537d5d", "externalIds":
+        {"CorpusId": 260329885}, "corpusId": 260329885, "publicationVenue": null,
+        "url": "https://www.semanticscholar.org/paper/9264129a4a0f491f01d1085fa1db33475f537d5d",
+        "title": "ON A UBIQUITOUS CARDINAL1", "abstract": ". We consider five combinatorial
+        or topological structures, each with a certain associated minimal cardinal,
+        and we show that these cardinals are always equal even though it is independent
+        of the axioms of set theory as to just what the value of this common cardinal
+        is. The five structures are the set of functions from zV (the set of natural
+        numbers) into N under two partial orderings, the rational numbers with respect
+        to closed embeddings into powers of N, a certain subset of /SV \u2014 N with
+        respect to clopen decompositions, the irrationals with respect to compact
+        decompositions, and a subclass of the Borel sets with respect to closed decompositions.
+        The proofs presented do not require a knowledge of forcing techniques. In
+        this paper we shall consider five different topological or combinatorial structures
+        and certain minimal cardinals associated with each of these. We shall show
+        that although it is consistent with the axioms of Zermelo-Fraenkel set theory
+        that any one of these cardinals takes on any value less than or equal to c
+        (the cardinality of the continuum) subject only to the restriction that it
+        have uncountable cofinality, the five cardinals in question are, nevertheless,
+        always equal. While we shall refer to independence proofs elsewhere, we shall
+        not deal with any here, and, in particular, we shall not use forcing techniques.",
+        "venue": "", "year": 2010, "referenceCount": 7, "citationCount": 0, "influentialCitationCount":
+        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+        [{"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+        null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2168800",
+        "name": "S. H. Hechler"}]}, {"paperId": "bca92600c70866855029438fa1ae46d16f4dcb80",
         "externalIds": {"DBLP": "journals/corr/abs-2307-10332", "ArXiv": "2307.10332",
-        "DOI": "10.48550/arXiv.2307.10332", "CorpusId": 259991854}, "corpusId": 259991854,
+        "DOI": "10.48550/arXiv.2307.10332", "CorpusId": 259991929}, "corpusId": 259991929,
         "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/bca92600c70866855029438fa1ae46d16f4dcb80",
         "title": "Labeling Methods for Partially Ordered Paths", "abstract": "The
         landscape of applications and subroutines relying on shortest path computations
@@ -1788,7 +1985,7 @@ interactions:
         functions studied in the public transportation community. Our results hold
         for general digraphs and therefore surpass previous generalizations that were
         limited to acyclic graphs.", "venue": "arXiv.org", "year": 2023, "referenceCount":
-        33, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+        36, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
         "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
         "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
         {"category": "Mathematics", "source": "external"}, {"category": "Computer
@@ -1871,27 +2068,28 @@ interactions:
         {"DOI": "10.3390/iocma2023-14434", "CorpusId": 259242460}, "corpusId": 259242460,
         "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/183f258e43d733faf66e84cd16b825bf992458d0",
         "title": "A Branch and Bound Algorithm for Counting Independent Sets on Grid
-        Graphs", "abstract": "A relevant problem in combinatorial mathematics is the
-        problem of counting independent sets of a graph G, denoted by i(G). This problem
-        has many applications in combinatorics, physics, chemistry and computer science.
-        For example, in statistical physics, the computation of i(G) has been useful
-        in studying the behavior of the particles of a gas on a space modeled by a
-        grid structure. Regarding hard counting problems, the computation of i(G)
-        for a graph G has been key to determining the frontier between efficient counting
-        and intractable counting procedures. In this article, a novel algorithm for
-        counting independent sets on grid-like structures is presented. We propose
-        a novel algorithm for the computation of i(Gm,n) for a grid graph with m rows
-        and n columns based on the \u2018Branch and Bound\u2019 design technique.
-        The splitting rule in our proposal is based on the well-known vertex reduction
-        rule. The vertex in any subgraph from Gm,n, which is to be selected for the
-        reduction rule, must have four internal incident faces. The ramification process
-        is used to build a computation tree. Our proposal consists of decomposing
-        the initial grid graph until outerplanar graphs are obtained as the \u2018basic
-        subgrids\u2019 associated with the leave nodes of the computation tree. The
-        resulting time-complexity of our proposal is inferior to the time-complexity
-        of other classic methods, such as the transfer matrix method.", "venue": "IOCMA
-        2023", "year": 2023, "referenceCount": 18, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.mdpi.com/2813-0324/7/1/28/pdf?version=1687167298",
+        Graphs", "abstract": ": A relevant problem in combinatorial mathematics is
+        the problem of counting independent sets of a graph G , denoted by i ( G )
+        . This problem has many applications in combinatorics, physics, chemistry
+        and computer science. For example, in statistical physics, the computation
+        of i ( G ) has been useful in studying the behavior of the particles of a
+        gas on a space modeled by a grid structure. Regarding hard counting problems,
+        the computation of i ( G ) for a graph G has been key to determining the frontier
+        between ef\ufb01cient counting and intractable counting procedures. In this
+        article, a novel algorithm for counting independent sets on grid-like structures
+        is presented. We propose a novel algorithm for the computation of i ( G m
+        , n ) for a grid graph with m rows and n columns based on the \u2018Branch
+        and Bound\u2019 design technique. The splitting rule in our proposal is based
+        on the well-known vertex reduction rule. The vertex in any subgraph from G
+        m , n , which is to be selected for the reduction rule, must have four internal
+        incident faces. The rami\ufb01cation process is used to build a computation
+        tree. Our proposal consists of decomposing the initial grid graph until outerplanar
+        graphs are obtained as the \u2018basic subgrids\u2019 associated with the
+        leave nodes of the computation tree. The resulting time-complexity of our
+        proposal is inferior to the time-complexity of other classic methods, such
+        as the transfer matrix method.", "venue": "IOCMA 2023", "year": 2023, "referenceCount":
+        18, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true,
+        "openAccessPdf": {"url": "https://www.mdpi.com/2813-0324/7/1/28/pdf?version=1687167298",
         "status": "HYBRID"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
         "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null,
         "publicationDate": "2023-04-29", "journal": {"name": "IOCMA 2023"}, "authors":
@@ -1931,9 +2129,35 @@ interactions:
         "publicationTypes": ["JournalArticle"], "publicationDate": "2023-07-26", "journal":
         {"name": "ArXiv", "volume": "abs/2307.13921"}, "authors": [{"authorId": "39690143",
         "name": "Will Perkins"}, {"authorId": "2108823898", "name": "Yuzhou Wang"}]},
-        {"paperId": "fc484db5480004bb1d3b389cf4c8b75609da18e4", "externalIds": {"DOI":
-        "10.3934/math.20231223", "CorpusId": 260726538}, "corpusId": 260726538, "publicationVenue":
-        "fcad2179-afdc-4360-ad8b-8b714f64dab3", "url": "https://www.semanticscholar.org/paper/fc484db5480004bb1d3b389cf4c8b75609da18e4",
+        {"paperId": "c61321421cce6c690a622c789be0e121e4e9c807", "externalIds": {"DOI":
+        "10.1002/jgt.23024", "CorpusId": 260796292}, "corpusId": 260796292, "publicationVenue":
+        "d7d15b42-f092-422f-8287-cb47ffe4a422", "url": "https://www.semanticscholar.org/paper/c61321421cce6c690a622c789be0e121e4e9c807",
+        "title": "The average order of a connected induced subgraph of a graph and
+        union\u2010intersection systems", "abstract": "Because connectivity is such
+        a basic concept in graph theory, extremal problems concerning the average
+        order of the connected induced subgraphs of a graph have been of notable interest.
+        A particularly resistant open problem is whether or not, for a connected graph
+        of order , all of whose vertices have degree at least 3, this average is at
+        least . It is shown in this paper that if is a connected, vertex transitive
+        graph, then the average order of the connected induced subgraphs of is at
+        least .The extremal graph theory problems mentioned above lead to a broader
+        theory. The concept of a Union\u2010Intersection System\u00a0(UIS)\u00a0 is
+        introduced, being a finite set of points and a set of subsets of called blocks
+        satisfying the following simple property for all : if , then . To generalize
+        results on the average order of a connected induced subgraph of a graph, it
+        is conjectured that if a UIS is, in various senses, \u201cconnected and regular,\u201d
+        then the average size of a block is at least half the number of points. We
+        prove that if a union\u2010intersection set system is regular, completely
+        irreducible, and nonredundant, then the average size of a block is at least
+        half the number of points.", "venue": "Journal of Graph Theory", "year": 2023,
+        "referenceCount": 18, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+        false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+        "publicationDate": "2023-08-09", "journal": {"name": "Journal of Graph Theory"},
+        "authors": [{"authorId": "2946777", "name": "A. Vince"}]}, {"paperId": "fc484db5480004bb1d3b389cf4c8b75609da18e4",
+        "externalIds": {"DOI": "10.3934/math.20231223", "CorpusId": 260726538}, "corpusId":
+        260726538, "publicationVenue": "fcad2179-afdc-4360-ad8b-8b714f64dab3", "url":
+        "https://www.semanticscholar.org/paper/fc484db5480004bb1d3b389cf4c8b75609da18e4",
         "title": "Skewness and the crossing numbers of graphs", "abstract": "The skewness
         of a graph $ G $, $ sk(G) $, is the smallest number of edges that need to
         be removed from $ G $ to make it planar. The crossing number of a graph $
@@ -1944,15 +2168,15 @@ interactions:
         graphs such that the inequality is equal. In addition, we give a necessary
         and sufficient condition for a graph to have its skewness equal to the crossing
         number and characterize some special graphs with $ sk(G) = cr(G) $.", "venue":
-        "AIMS Mathematics", "year": 2023, "referenceCount": 0, "citationCount": 0,
+        "AIMS Mathematics", "year": 2023, "referenceCount": 17, "citationCount": 0,
         "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
         "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Mathematics", "source":
         "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-        null, "journal": {"name": "AIMS Mathematics"}, "authors": []}, {"paperId":
-        "e9c72a2b2301b1f6b87a43ebe954d0ef999a5d10", "externalIds": {"DBLP": "journals/corr/abs-2307-07284",
-        "ArXiv": "2307.07284", "DOI": "10.48550/arXiv.2307.07284", "CorpusId": 259924549},
-        "corpusId": 259924549, "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10",
-        "url": "https://www.semanticscholar.org/paper/e9c72a2b2301b1f6b87a43ebe954d0ef999a5d10",
+        null, "journal": {"name": "AIMS Mathematics"}, "authors": [{"authorId": "51041977",
+        "name": "Zongpeng Ding"}]}, {"paperId": "e9c72a2b2301b1f6b87a43ebe954d0ef999a5d10",
+        "externalIds": {"DBLP": "journals/corr/abs-2307-07284", "ArXiv": "2307.07284",
+        "DOI": "10.48550/arXiv.2307.07284", "CorpusId": 259924549}, "corpusId": 259924549,
+        "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/e9c72a2b2301b1f6b87a43ebe954d0ef999a5d10",
         "title": "Delaying Decisions and Reservation Costs", "abstract": "We study
         the Feedback Vertex Set and the Vertex Cover problem in a natural variant
         of the classical online model that allows for delayed decisions and reservations.
@@ -2002,7 +2226,7 @@ interactions:
         for the class. It follows that several NP-hard problems such as Stable Set,
         Vertex Cover, Dominating Set and Coloring admit polynomial-time algorithms
         on this class of graphs.", "venue": "", "year": 2023, "referenceCount": 24,
-        "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+        "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
         "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
         [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
         "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-07-25",
@@ -2028,68 +2252,13 @@ interactions:
         "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
         "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
         "publicationDate": "2023-08-03", "journal": {"name": "Random Structures &amp;
-        Algorithms"}, "authors": []}, {"paperId": "a7d2f7155991073df36de2b89b53a24c8e4bd713",
-        "externalIds": {"ArXiv": "2306.09550", "CorpusId": 259187825}, "corpusId":
-        259187825, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a7d2f7155991073df36de2b89b53a24c8e4bd713",
-        "title": "Minimizing an Uncrossed Collection of Drawings", "abstract": "In
-        this paper, we introduce the following new concept in graph drawing. Our task
-        is to find a small collection of drawings such that they all together satisfy
-        some property that is useful for graph visualization. We propose investigating
-        a property where each edge is not crossed in at least one drawing in the collection.
-        We call such collection uncrossed. Such property is motivated by a quintessential
-        problem of the crossing number, where one asks for a plane drawing where the
-        number of edge crossings is minimum. Indeed, if we are allowed to visualize
-        only one drawing, then the one which minimizes the number of crossings is
-        probably the neatest for the first orientation. However, a collection of drawings
-        where each highlights a different aspect of a graph without any crossings
-        could shed even more light on the graph''s structure. We propose two definitions.
-        First, the uncrossed number, minimizes the number of graph drawings in a collection,
-        satisfying the uncrossed property. Second, the uncrossed crossing number,
-        minimizes the total number of crossings in the collection that satisfy the
-        uncrossed property. For both definitions, we establish initial results. We
-        prove that the uncrossed crossing number is NP-hard, but there is an FPT algorithm
-        parameterized by the solution size.", "venue": "", "year": 2023, "referenceCount":
-        40, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
-        "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-        {"category": "Mathematics", "source": "external"}, {"category": "Computer
-        Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "2023-06-15", "journal": null, "authors": [{"authorId": "1456008859", "name":
-        "Petr Hlinven''y"}, {"authorId": "2052310506", "name": "Tom''avs Masavr''ik"}]},
-        {"paperId": "bbf720b8d191f3e1377271190f6b1179d32b2eb9", "externalIds": {"DBLP":
-        "journals/corr/abs-2306-07891", "ArXiv": "2306.07891", "DOI": "10.48550/arXiv.2306.07891",
-        "CorpusId": 259144960}, "corpusId": 259144960, "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10",
-        "url": "https://www.semanticscholar.org/paper/bbf720b8d191f3e1377271190f6b1179d32b2eb9",
-        "title": "Online Matching in Geometric Random Graphs", "abstract": "In online
-        advertisement, ad campaigns are sequentially displayed to users. Both users
-        and campaigns have inherent features, and the former is eligible to the latter
-        if they are ``similar enough''''. We model these interactions as a bipartite
-        geometric random graph: the features of the $2N$ vertices ($N$ users and $N$
-        campaigns) are drawn independently in a metric space and an edge is present
-        between a campaign and a user node if the distance between their features
-        is smaller than $c/N$, where $c>0$ is the parameter of the model. Our contributions
-        are two-fold. In the one-dimensional case, with uniform distribution over
-        the segment $[0,1]$, we derive the size of the optimal offline matching in
-        these bipartite random geometric graphs, and we build an algorithm achieving
-        it (as a benchmark), and analyze precisely its performance. We then turn to
-        the online setting where one side of the graph is known at the beginning while
-        the other part is revealed sequentially. We study the number of matches of
-        the online algorithm closest, which matches any incoming point to its closest
-        available neighbor. We show that its performances can be compared to its fluid
-        limit, completely described as the solution of an explicit PDE. From the latter,
-        we can compute the competitive ratio of closest.", "venue": "arXiv.org", "year":
-        2023, "referenceCount": 30, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
-        "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": ["JournalArticle"], "publicationDate": "2023-06-13", "journal":
-        {"name": "ArXiv", "volume": "abs/2306.07891"}, "authors": [{"authorId": "2117569831",
-        "name": "Flore Sentenac"}, {"authorId": "88972690", "name": "Nathan Noiry"},
-        {"authorId": "2202029", "name": "M. Lerasle"}, {"authorId": "2219976520",
-        "name": "Laurent M''enard"}, {"authorId": "3087994", "name": "Vianney Perchet"}]},
-        {"paperId": "77e1d9edd7ee3e4ab733f0ee25123785f91b0b06", "externalIds": {"ArXiv":
-        "2306.15818", "CorpusId": 259275113}, "corpusId": 259275113, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/77e1d9edd7ee3e4ab733f0ee25123785f91b0b06",
+        Algorithms"}, "authors": [{"authorId": "2195402380", "name": "Lucas Arag\u00e3o"},
+        {"authorId": "81595576", "name": "Maur''icio Collares"}, {"authorId": "2196556518",
+        "name": "Jo\u00e3o Pedro Marciano"}, {"authorId": "1959690", "name": "Ta\u00edsa
+        L. Martins"}, {"authorId": "41227756", "name": "R. Morris"}]}, {"paperId":
+        "77e1d9edd7ee3e4ab733f0ee25123785f91b0b06", "externalIds": {"ArXiv": "2306.15818",
+        "CorpusId": 259275113}, "corpusId": 259275113, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/77e1d9edd7ee3e4ab733f0ee25123785f91b0b06",
         "title": "Total mutual-visibility in graphs with emphasis on lexicographic
         and Cartesian products", "abstract": "Given a connected graph $G$, the total
         mutual-visibility number of $G$, denoted $\\mu_t(G)$, is the cardinality of
@@ -2107,7 +2276,7 @@ interactions:
         number of the first factor in the product. Finally, we give some bounds and
         closed formulae for the total mutual-visibility number of Cartesian product
         graphs.", "venue": "", "year": 2023, "referenceCount": 17, "citationCount":
-        1, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+        2, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
         null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
         "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
         "publicationTypes": null, "publicationDate": "2023-06-27", "journal": null,
@@ -2141,32 +2310,6 @@ interactions:
         "journal": null, "authors": [{"authorId": "13030824", "name": "B. Jahnel"},
         {"authorId": "10163435", "name": "J. Koppl"}, {"authorId": "1420124048", "name":
         "B. Lodewijks"}, {"authorId": "2097710473", "name": "Andr''as T''obi''as"}]},
-        {"paperId": "6a797f945536cf2a5153120867f8878f8322dc86", "externalIds": {"DBLP":
-        "journals/corr/abs-2307-06752", "ArXiv": "2307.06752", "DOI": "10.48550/arXiv.2307.06752",
-        "CorpusId": 259847591}, "corpusId": 259847591, "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10",
-        "url": "https://www.semanticscholar.org/paper/6a797f945536cf2a5153120867f8878f8322dc86",
-        "title": "(k-2)-linear Connected Components in Hypergraphs of Rank K", "abstract":
-        "We define a $q$-linear path in a hypergraph $H$ as a sequence $(e_1,\\ldots,e_L)$
-        of edges of $H$ such that $|e_i \\cap e_{i+1}| \\in [\\![1,q]\\!]$ and $e_i
-        \\cap e_j=\\varnothing$ if $|i-j|>1$. In this paper, we study the connected
-        components associated to these paths when $q=k-2$ where $k$ is the rank of
-        $H$. If $k=3$ then $q=1$ which coincides with the well-known notion of linear
-        path or loose path. We describe the structure of the connected components,
-        using an algorithmic proof which shows that the connected components can be
-        computed in polynomial time. We then mention two consequences of our algorithmic
-        result. The first one is that deciding the winner of the Maker-Breaker game
-        on a hypergraph of rank 3 can be done in polynomial time. The second one is
-        that tractable cases for the NP-complete problem of\"Paths Avoiding Forbidden
-        Pairs\"in a graph can be deduced from the recognition of a special type of
-        line graph of a hypergraph.", "venue": "arXiv.org", "year": 2023, "referenceCount":
-        30, "citationCount": 2, "influentialCitationCount": 0, "isOpenAccess": false,
-        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
-        "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-        {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
-        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-        "2023-07-13", "journal": {"name": "ArXiv", "volume": "abs/2307.06752"}, "authors":
-        [{"authorId": "2186113407", "name": "Florian Galliot"}, {"authorId": "2455586",
-        "name": "Sylvain Gravier"}, {"authorId": "1718249", "name": "Isabelle Sivignon"}]},
         {"paperId": "63e9bcfdb8c6a1c204cbfcfbb7554aa4b076584b", "externalIds": {"CorpusId":
         259359123}, "corpusId": 259359123, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/63e9bcfdb8c6a1c204cbfcfbb7554aa4b076584b",
         "title": "1 Measures of Graph Connectivity", "abstract": "1.1 Normalization:
@@ -2182,7 +2325,31 @@ interactions:
         0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
         null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Mathematics",
         "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-        "journal": null, "authors": []}, {"paperId": "1f8c06da94a516b4931e67d06ab495d52fc53f10",
+        "journal": null, "authors": []}, {"paperId": "1d56818f975db290ed8ac463fcf4fe5613e58dce",
+        "externalIds": {"ArXiv": "2306.16237", "CorpusId": 259275107}, "corpusId":
+        259275107, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1d56818f975db290ed8ac463fcf4fe5613e58dce",
+        "title": "Genus Permutations and Genus Partitions", "abstract": "For a given
+        permutation or set partition there is a natural way to associate a genus.
+        Counting all permutations or partitions of a fixed genus according to cycle
+        lengths or block sizes, respectively, is the main content of this article.
+        After a variable transformation, the generating series are rational functions
+        with poles located at the ramification points in the new variable. The generating
+        series for any genus is given explicitly for permutations and up to genus
+        2 for set partitions. Extending the topological structure not just by the
+        genus but also by adding more boundaries, we derive the generating series
+        of non-crossing partitions on the cylinder from known results of non-crossing
+        permutations on the cylinder. Most, but not all, outcomes of this article
+        are special cases of already known results, however they are not represented
+        in this way in the literature, which however seems to be the canonical way.
+        To make the article as accessible as possible, we avoid going into details
+        into the explicit connections to Topological Recursion and Free Probability
+        Theory, where the original motivation came from.", "venue": "", "year": 2023,
+        "referenceCount": 30, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+        false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Physics"],
+        "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+        "Physics", "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+        "publicationTypes": null, "publicationDate": "2023-06-28", "journal": null,
+        "authors": [{"authorId": "145076561", "name": "A. Hock"}]}, {"paperId": "1f8c06da94a516b4931e67d06ab495d52fc53f10",
         "externalIds": {"ArXiv": "2307.07676", "DBLP": "journals/corr/abs-2307-07676",
         "DOI": "10.48550/arXiv.2307.07676", "CorpusId": 259937566}, "corpusId": 259937566,
         "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/1f8c06da94a516b4931e67d06ab495d52fc53f10",
@@ -2223,10 +2390,10 @@ interactions:
         0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
         Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
         "external"}, {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-        null, "publicationDate": "2023-08-04", "journal": null, "authors": []}, {"paperId":
-        "7a2acc9358aae09de8ccc639060ccf7a33733ef9", "externalIds": {"ArXiv": "2307.08661",
-        "CorpusId": 259937807}, "corpusId": 259937807, "publicationVenue": null, "url":
-        "https://www.semanticscholar.org/paper/7a2acc9358aae09de8ccc639060ccf7a33733ef9",
+        null, "publicationDate": "2023-08-04", "journal": null, "authors": [{"authorId":
+        "2214042435", "name": "Csaba D. T''oth"}]}, {"paperId": "7a2acc9358aae09de8ccc639060ccf7a33733ef9",
+        "externalIds": {"ArXiv": "2307.08661", "CorpusId": 259937807}, "corpusId":
+        259937807, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7a2acc9358aae09de8ccc639060ccf7a33733ef9",
         "title": "Colouring Digraphs", "abstract": "The aim of this thesis is to investigate
         how the structure of a digraph affects its dichromatic number and to extend
         various results on undirected colouring to digraphs. In the first part of
@@ -2302,7 +2469,7 @@ interactions:
         graph. It has no pendant vertex, no isolated vertex and no cut vertex. The
         minimum and maximum degrees are evaluated. So , the radius\u00a0 and diameter
         are studied here.", "venue": "Iraqi Journal of Science", "year": 2023, "referenceCount":
-        17, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true,
+        16, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": true,
         "openAccessPdf": {"url": "https://ijs.uobaghdad.edu.iq/index.php/eijs/article/download/6995/3673",
         "status": "GOLD"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
         "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
@@ -2397,168 +2564,7 @@ interactions:
         [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
         "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2023-07-11",
         "journal": null, "authors": [{"authorId": "49859807", "name": "Nikola Kuzmanovski"},
-        {"authorId": "47752653", "name": "Jamie Radcliffe"}]}, {"paperId": "48c29a73de108e26dafcfcfa233d696795befbdc",
-        "externalIds": {"ArXiv": "2202.09118", "DOI": "10.1002/jgt.22987", "CorpusId":
-        259371843}, "corpusId": 259371843, "publicationVenue": "d7d15b42-f092-422f-8287-cb47ffe4a422",
-        "url": "https://www.semanticscholar.org/paper/48c29a73de108e26dafcfcfa233d696795befbdc",
-        "title": "Polynomial bounds for chromatic number VII. Disjoint holes", "abstract":
-        "A hole in a graph $G$ is an induced cycle of length at least four, and a
-        $k$-multihole in $G$ is a set of pairwise disjoint and nonadjacent holes.
-        It is well known that if $G$ does not contain any holes then its chromatic
-        number is equal to its clique number. In this paper we show that, for any
-        $k$, if $G$ does not contain a $k$-multihole, then its chromatic number is
-        at most a polynomial function of its clique number. We show that the same
-        result holds if we ask for all the holes to be odd or of length four; and
-        if we ask for the holes to be longer than any fixed constant or of length
-        four. This is part of a broader study of graph classes that are polynomially
-        $\\chi$-bounded.", "venue": "Journal of Graph Theory", "year": 2022, "referenceCount":
-        31, "citationCount": 8, "influentialCitationCount": 1, "isOpenAccess": true,
-        "openAccessPdf": {"url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jgt.22987",
-        "status": "HYBRID"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-        [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
-        "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-        "2022-02-18", "journal": {"name": "Journal of Graph Theory"}, "authors": [{"authorId":
-        "1797007", "name": "M. Chudnovsky"}, {"authorId": "145008835", "name": "A.
-        Scott"}, {"authorId": "3696176", "name": "P. Seymour"}]}, {"paperId": "ea73575d03a0f0a7cd56fd29dd7fe47f73d878fb",
-        "externalIds": {"DOI": "10.5817/cz.muni.eurocomb23-106", "CorpusId": 259467469},
-        "corpusId": 259467469, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ea73575d03a0f0a7cd56fd29dd7fe47f73d878fb",
-        "title": "On asymptotic confirmation of the Faudree-Lehel Conjecture on the
-        irregularity strength of graphs", "abstract": "We call a multigraph irregular
-        if it has pairwise distinct vertex degrees. No nontrivial (simple) graph is
-        thus irregular. The irregularity strength of a graph $G$, $s(G)$, is a specific
-        measure of the ``level of irregularity\u2018\u2018 of $G$. It might be defined
-        as the least $k$ such that one may obtain an irregular multigraph of $G$ by
-        multiplying any selected edges of $G$, each into at most $k$ its copies. In
-        other words, $s(G)$ is the least $k$ admitting a $\\{1,2,\\ldots,k\\}$-weighting
-        of the edges of $G$ assuring distinct weighted degrees for all the vertices,
-        where the weighted degree of a vertex is the sum of its incident weights.
-        The most well-known open problem concerning this graph invariant is the conjecture
-        posed in 1987 by Faudree and Lehel that there exists an absolute constant
-        $C$ such that $s(G)\\leq \\frac{n}{d}+C$ for each $d$-regular graph $G$ with
-        $n$ vertices and $d\\geq 2$, whereas a straightforward counting argument implies
-        that $s(G)\\geq \\frac{n}{d}+\\frac{d-1}{d}$. Until very recently this conjecture
-        had remained widely open. We shall discuss recent results confirming it asymptotically,
-        up to a lower order term. If time permits we shall also mention a few related
-        problems, such as the 1--2--3 Conjecture or the concept of irregular subgraphs,
-        introduced recently by Alon and Wei, and progress in research concerning these.",
-        "venue": "European Conference on Combinatorics, Graph Theory and Applications",
-        "year": 2023, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": true, "openAccessPdf": {"url": "https://journals.muni.cz/eurocomb/article/download/35640/30376",
-        "status": "HYBRID"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
-        "Conference"], "publicationDate": "2023-08-28", "journal": {"name": "European
-        Conference on Combinatorics, Graph Theory and Applications"}, "authors": [{"authorId":
-        "1747192", "name": "J. Przybylo"}, {"authorId": "2072968799", "name": "F.
-        Wei"}]}, {"paperId": "4322614d49571122e12892d05fd77bfd568d6744", "externalIds":
-        {"ArXiv": "2308.01242", "CorpusId": 260379222}, "corpusId": 260379222, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/4322614d49571122e12892d05fd77bfd568d6744",
-        "title": "Balanced-chromatic number and Hadwiger-like conjectures", "abstract":
-        "Motivated by different characterizations of planar graphs and the 4-Color
-        Theorem, several structural results concerning graphs of high chromatic number
-        have been obtained. Toward strengthening some of these results, we consider
-        the \\emph{balanced chromatic number}, $\\chi_b(\\hat{G})$, of a signed graph
-        $\\hat{G}$. This is the minimum number of parts into which the vertices of
-        a signed graph can be partitioned so that none of the parts induces a negative
-        cycle. This extends the notion of the chromatic number of a graph since $\\chi(G)=\\chi_b(\\tilde{G})$,
-        where $\\tilde{G}$ denotes the signed graph obtained from~$G$ by replacing
-        each edge with a pair of (parallel) positive and negative edges. We introduce
-        a signed version of Hadwiger''s conjecture as follows. Conjecture: If a signed
-        graph $\\hat{G}$ has no negative loop and no $\\tilde{K_t}$-minor, then its
-        balanced chromatic number is at most $t-1$. We prove that this conjecture
-        is, in fact, equivalent to Hadwiger''s conjecture and show its relation to
-        the Odd Hadwiger Conjecture. Motivated by these results, we also consider
-        the relation between subdivisions and balanced chromatic number. We prove
-        that if $(G, \\sigma)$ has no negative loop and no $\\tilde{K_t}$-subdivision,
-        then it admits a balanced $\\frac{79}{2}t^2$-coloring. This qualitatively
-        generalizes a result of Kawarabayashi (2013) on totally odd subdivisions.",
-        "venue": "", "year": 2023, "referenceCount": 22, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
-        "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
-        "external"}, {"category": "Computer Science", "source": "external"}, {"category":
-        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "2023-08-02", "journal": null, "authors": [{"authorId": "2217483287", "name":
-        "Andrea Jim''enez"}, {"authorId": "145563434", "name": "J. McDonald"}, {"authorId":
-        "2417921", "name": "R. Naserasr"}, {"authorId": "152707032", "name": "Kathryn
-        Nurse"}, {"authorId": "33255932", "name": "D. Quiroz"}]}, {"paperId": "d15f00445c8bd53f5cbfcd01407cc6538c46fbe9",
-        "externalIds": {"ArXiv": "2308.00501", "CorpusId": 260351403}, "corpusId":
-        260351403, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d15f00445c8bd53f5cbfcd01407cc6538c46fbe9",
-        "title": "Structural Parameterizations of the Biclique-Free Vertex Deletion
-        Problem", "abstract": "In this work, we study the Biclique-Free Vertex Deletion
-        problem: Given a graph $G$ and integers $k$ and $i \\le j$, find a set of
-        at most $k$ vertices that intersects every (not necessarily induced) biclique
-        $K_{i, j}$ in $G$. This is a natural generalization of the Bounded-Degree
-        Deletion problem, wherein one asks whether there is a set of at most $k$ vertices
-        whose deletion results in a graph of a given maximum degree $r$. The two problems
-        coincide when $i = 1$ and $j = r + 1$. We show that Biclique-Free Vertex Deletion
-        is fixed-parameter tractable with respect to $k + d$ for the degeneracy $d$
-        by developing a $2^{O(d k^2)} \\cdot n^{O(1)}$-time algorithm. We also show
-        that it can be solved in $2^{O(f k)} \\cdot n^{O(1)}$ time for the feedback
-        vertex number $f$ when $i \\ge 2$. In contrast, we find that it is W[1]-hard
-        for the treedepth for any integer $i \\ge 1$. Finally, we show that Biclique-Free
-        Vertex Deletion has a polynomial kernel for every $i \\ge 1$ when parameterized
-        by the feedback edge number. Previously, for this parameter, its fixed-parameter
-        tractability for $i = 1$ was known [Betzler et al., DAM ''12] but the existence
-        of polynomial kernel was open.", "venue": "", "year": 2023, "referenceCount":
-        38, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-        "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-        [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
-        "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": null, "publicationDate": "2023-08-01", "journal": null,
-        "authors": [{"authorId": "2226259989", "name": "Lito Goldmann"}, {"authorId":
-        "8810314", "name": "Leon Kellerhals"}, {"authorId": "150320816", "name": "Tomohiro
-        Koana"}]}, {"paperId": "442ecc729c5498fb07a10097cb67f628039a0ddc", "externalIds":
-        {"ArXiv": "2306.14249", "CorpusId": 259252489}, "corpusId": 259252489, "publicationVenue":
-        null, "url": "https://www.semanticscholar.org/paper/442ecc729c5498fb07a10097cb67f628039a0ddc",
-        "title": "A Dyck-word tree that controls all odd graphs", "abstract": "An
-        infinite ordered tree $T$ exists that has as its vertex set a collection of
-        tight restricted-growth strings representing all Dyck words; these stand for
-        the cyclic (resp., dihedral) classes and uniform 2-factor cycles of odd graphs
-        (resp., middle-levels graphs). Odd graphs have edge-supplementary arc-factorizations
-        based on Dyck words which, represented as Dyck nests, possess a signature
-        admitting universal updates along $T$ and allowing an arc-factorization view
-        of the Hamilton cycles found by T. M\\\"utze et al.", "venue": "", "year":
-        2023, "referenceCount": 16, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
-        "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-        "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-        "2023-06-25", "journal": null, "authors": [{"authorId": "2271727", "name":
-        "I. Dejter"}]}, {"paperId": "1d886ea26acaa5bd4024df257f193069f7636b87", "externalIds":
-        {"DBLP": "journals/corr/abs-2307-02774", "ArXiv": "2307.02774", "DOI": "10.48550/arXiv.2307.02774",
-        "CorpusId": 259360605}, "corpusId": 259360605, "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10",
-        "url": "https://www.semanticscholar.org/paper/1d886ea26acaa5bd4024df257f193069f7636b87",
-        "title": "Approximation Algorithms for Directed Weighted Spanners", "abstract":
-        "In the pairwise weighted spanner problem, the input consists of an $n$-vertex-directed
-        graph, where each edge is assigned a cost and a length. Given $k$ vertex pairs
-        and a distance constraint for each pair, the goal is to find a minimum-cost
-        subgraph in which the distance constraints are satisfied. This formulation
-        captures many well-studied connectivity problems, including spanners, distance
-        preservers, and Steiner forests. In the offline setting, we show: 1. An $\\tilde{O}(n^{4/5
-        + \\epsilon})$-approximation algorithm for pairwise weighted spanners. When
-        the edges have unit costs and lengths, the best previous algorithm gives an
-        $\\tilde{O}(n^{3/5 + \\epsilon})$-approximation, due to Chlamt\\''a\\v{c},
-        Dinitz, Kortsarz, and Laekhanukit (TALG, 2020). 2. An $\\tilde{O}(n^{1/2+\\epsilon})$-approximation
-        algorithm for all-pair weighted distance preservers. When the edges have unit
-        costs and arbitrary lengths, the best previous algorithm gives an $\\tilde{O}(n^{1/2})$-approximation
-        for all-pair spanners, due to Berman, Bhattacharyya, Makarychev, Raskhodnikova,
-        and Yaroslavtsev (Information and Computation, 2013). In the online setting,
-        we show: 1. An $\\tilde{O}(k^{1/2 + \\epsilon})$-competitive algorithm for
-        pairwise weighted spanners. The state-of-the-art results are $\\tilde{O}(n^{4/5})$-competitive
-        when edges have unit costs and arbitrary lengths, and $\\min\\{\\tilde{O}(k^{1/2
-        + \\epsilon}), \\tilde{O}(n^{2/3 + \\epsilon})\\}$-competitive when edges
-        have unit costs and lengths, due to Grigorescu, Lin, and Quanrud (APPROX,
-        2021). 2. An $\\tilde{O}(k^{\\epsilon})$-competitive algorithm for single-source
-        weighted spanners. Without distance constraints, this problem is equivalent
-        to the directed Steiner tree problem. The best previous algorithm for online
-        directed Steiner trees is $\\tilde{O}(k^{\\epsilon})$-competitive, due to
-        Chakrabarty, Ene, Krishnaswamy, and Panigrahi (SICOMP, 2018).", "venue": "arXiv.org",
-        "year": 2023, "referenceCount": 56, "citationCount": 0, "influentialCitationCount":
-        0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-        Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
-        "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-        "publicationTypes": ["JournalArticle"], "publicationDate": "2023-07-06", "journal":
-        {"name": "ArXiv", "volume": "abs/2307.02774"}, "authors": [{"authorId": "145714076",
-        "name": "Elena Grigorescu"}, {"authorId": "145911174", "name": "Nithish Kumar"},
-        {"authorId": "2115000", "name": "Young-San Lin"}]}]}
+        {"authorId": "47752653", "name": "Jamie Radcliffe"}]}]}
 
         '
     headers:
@@ -2567,31 +2573,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '205579'
+      - '206018'
       Content-Type:
       - application/json
       Date:
-      - Fri, 11 Aug 2023 16:19:30 GMT
+      - Sun, 20 Aug 2023 13:55:49 GMT
       Via:
-      - 1.1 e6d89c5ceb55629774766fd78f60f094.cloudfront.net (CloudFront)
+      - 1.1 77f67fd09c19551a70ddc9b4f41371ac.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - GdB7AVPI3DVjim_s4wWuciqypExd2hFBuwOppqgOA6SgTpeK1ngIlQ==
+      - v8EATT-VwGT50CWkXuEYI4ygmjkNsGi8h2yiIP6p5dEhmsfCyScumw==
       X-Amz-Cf-Pop:
-      - GRU1-P2
+      - GIG51-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - JgPe9ExRPHcFUag=
+      - J9k3tHgUPHcFh6w=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '205579'
+      - '206018'
       x-amzn-Remapped-Date:
-      - Fri, 11 Aug 2023 16:19:30 GMT
+      - Sun, 20 Aug 2023 13:55:49 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - ca3068b0-9b0b-424a-bf72-a7e04680fea7
+      - a39f2767-bbf6-42d1-86c0-6ba553ec45e8
     status:
       code: 200
       message: OK

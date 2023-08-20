@@ -1,5 +1,4 @@
-import warnings
-from typing import List
+from typing import List, Literal
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
@@ -512,7 +511,8 @@ class SemanticScholar:
                 self,
                 paper_id: str,
                 fields: list = None,
-                limit: int = 100
+                limit: int = 100,
+                pool_from: Literal["recent", "all-cs"] = "recent"
             ) -> List[Paper]:
         '''Get recommended papers for a single positive example.
 
@@ -532,9 +532,15 @@ class SemanticScholar:
         :param list fields: (optional) list of the fields to be returned.
         :param int limit: (optional) maximum number of recommendations to \
             return (must be <= 500).
+        :param str pool_from: (optional) which pool of papers to recommend \
+            from. Must be either "recent" or "all-cs".
         :returns: list of recommendations.
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
         '''
+
+        if pool_from not in ["recent", "all-cs"]:
+            raise ValueError(
+                'The pool_from parameter must be either "recent" or "all-cs".')
 
         if limit < 1 or limit > 500:
             raise ValueError(
@@ -547,7 +553,7 @@ class SemanticScholar:
         url = f'{base_url}/papers/forpaper/{paper_id}'
 
         fields = ','.join(fields)
-        parameters = f'&fields={fields}&limit={limit}'
+        parameters = f'&fields={fields}&limit={limit}&from={pool_from}'
 
         data = self._requester.get_data(url, parameters, self.auth_header)
         papers = [Paper(item) for item in data['recommendedPapers']]

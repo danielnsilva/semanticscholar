@@ -321,6 +321,18 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
+    def test_get_recommended_papers_pool_from(self):
+        data = self.sch.get_recommended_papers(
+            '10.1145/3544585.3544600', pool_from="all-cs")
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    def test_get_recommended_papers_pool_from_invalid(self):
+        self.assertRaises(ValueError,
+                          self.sch.get_recommended_papers,
+                          '10.1145/3544585.3544600', pool_from="invalid")
+
+    @test_vcr.use_cassette
     def test_get_recommended_papers_from_lists(self):
         data = self.sch.get_recommended_papers_from_lists(
             ['10.1145/3544585.3544600'], ['10.1145/301250.301271'])
