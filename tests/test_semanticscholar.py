@@ -225,7 +225,7 @@ class SemanticScholarTest(unittest.TestCase):
         list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
- 
+
     @test_vcr.use_cassette
     def test_get_author_papers(self):
         data = self.sch.get_author_papers(1723755, limit=100)
@@ -288,7 +288,6 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_search_paper_year_range(self):
         data = self.sch.search_paper('turing', year='1936-1937')
-        # assert that all results are in the range
         self.assertTrue(all([1936 <= item.year <= 1937 for item in data]))
 
     @test_vcr.use_cassette
