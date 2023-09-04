@@ -1,5 +1,6 @@
-import json
 from typing import List, Union
+import json
+import httpx
 
 import requests
 from tenacity import (retry, retry_if_exception_type, stop_after_attempt,
@@ -35,6 +36,39 @@ class ApiRequester:
         '''
         self._timeout = timeout
 
+    def extract_data(
+                self,
+                r: Union[requests.Response, httpx.Response]
+            ) -> Union[dict, List[dict]]:
+        '''Extract data from fulfilled request
+           and raise errors if request was not successful.
+
+        :param Response r: fulfilled response of API request..
+        :returns: data or empty :class:`dict` if not found.
+        :rtype: :class:`dict` or :class:`List` of :class:`dict`
+        '''
+
+        data = {}
+        if r.status_code == 200:
+            data = r.json()
+            if len(data) == 1 and 'error' in data:
+                data = {}
+        elif r.status_code == 400:
+            data = r.json()
+            raise BadQueryParametersException(data['error'])
+        elif r.status_code == 403:
+            raise PermissionError('HTTP status 403 Forbidden.')
+        elif r.status_code == 404:
+            data = r.json()
+            raise ObjectNotFoundException(data['error'])
+        elif r.status_code == 429:
+            raise ConnectionRefusedError('HTTP status 429 Too Many Requests.')
+        elif r.status_code in [500, 504]:
+            data = r.json()
+            raise Exception(data['message'])
+        
+        return data
+
     @retry(
         wait=wait_fixed(30),
         retry=retry_if_exception_type(ConnectionRefusedError),
@@ -60,26 +94,41 @@ class ApiRequester:
         url = f'{url}?{parameters}'
         method = 'POST' if payload else 'GET'
         payload = json.dumps(payload) if payload else None
+  
         r = requests.request(
             method, url, timeout=self._timeout, headers=headers, data=payload)
 
-        data = {}
-        if r.status_code == 200:
-            data = r.json()
-            if len(data) == 1 and 'error' in data:
-                data = {}
-        elif r.status_code == 400:
-            data = r.json()
-            raise BadQueryParametersException(data['error'])
-        elif r.status_code == 403:
-            raise PermissionError('HTTP status 403 Forbidden.')
-        elif r.status_code == 404:
-            data = r.json()
-            raise ObjectNotFoundException(data['error'])
-        elif r.status_code == 429:
-            raise ConnectionRefusedError('HTTP status 429 Too Many Requests.')
-        elif r.status_code in [500, 504]:
-            data = r.json()
-            raise Exception(data['message'])
+        return self.extract_data(r)
 
-        return data
+    @retry(
+        wait=wait_fixed(30),
+        retry=retry_if_exception_type(ConnectionRefusedError),
+        stop=stop_after_attempt(10)
+    )
+    async def async_get_data(
+                self,
+                url: str,
+                parameters: str,
+                headers: dict,
+                payload: dict = None,
+            ) -> Union[dict, List[dict]]:
+        '''Get data from Semantic Scholar API
+
+        :param str url: absolute URL to API endpoint.
+        :param str parameters: the parameters to add in the URL.
+        :param str headers: request headers.
+        :param dict payload: data for POST requests.
+        :returns: data or empty :class:`dict` if not found.
+        :rtype: :class:`dict` or :class:`List` of :class:`dict`
+        '''
+
+        url = f'{url}?{parameters}'
+        method = 'POST' if payload else 'GET'
+        payload = json.dumps(payload) if payload else None
+
+        async with httpx.AsyncClient() as client:
+            r = await client.request(
+                method, url, timeout=self._timeout, headers=headers, json=payload)
+
+        return self.extract_data(r)
+    

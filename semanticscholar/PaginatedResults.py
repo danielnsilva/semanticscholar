@@ -131,3 +131,96 @@ class PaginatedResults:
         Get next results
         '''
         self.__get_next_page()
+
+class AsyncPaginatedResults(PaginatedResults):
+    '''
+    This class abstracts paginated results from API search, asynchronously.
+    Notice that to instantiate an object of this class, one must use the .create()
+    method instead of the normal constructor, such that the API call can be made
+    asynchronously.
+    You can just iterate over results regardless of the number of pages.
+    '''
+
+    # pylint: disable=W0231
+    def __init__(
+                self,
+                requester: ApiRequester,
+                data_type: Any,
+                url: str,
+                query: str = None,
+                fields: str = None,
+                limit: int = None,
+                headers: dict = None
+            ):
+
+        self._requester = requester
+        self._data_type = data_type
+        self._url = url
+        self._query = query
+        self._fields = fields
+        self._limit = limit
+        self._headers = headers
+
+        self._data = []
+        self._total = 0
+        self._offset = 0 - self._limit
+        self._next = 0
+        self._parameters = ''
+        self._items = []
+
+    # pylint: disable=C0116
+    @classmethod
+    async def create(
+                cls, 
+                requester: ApiRequester,
+                data_type: Any,
+                url: str,
+                query: str = None,
+                fields: str = None,
+                limit: int = None,
+                headers: dict = None
+            ):
+        
+        obj = cls(
+            requester,
+            data_type,
+            url,
+            query,
+            fields,
+            limit,
+            headers
+        )
+        await obj.__get_next_page()
+
+        return obj
+
+    # pylint: disable=W0236
+    async def __get_next_page(self) -> list:
+
+        # pylint: disable=E1101
+        self._PaginatedResults__build_params()
+
+        results = await self._requester.async_get_data(
+                self._url,
+                self._parameters,
+                self._headers
+            )
+
+        self._data = results['data']
+        self._total = results['total'] if 'total' in results else 0
+        self._offset = results['offset']
+        self._next = results['next'] if 'next' in results else 0
+
+        result_items = []
+        for item in results['data']:
+            result_items.append(self._data_type(item))
+
+        self._items += result_items
+
+        return result_items
+
+    async def next_page(self) -> None:
+        '''
+        Get next results
+        '''
+        await self.__get_next_page()
