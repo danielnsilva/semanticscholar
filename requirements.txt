@@ -1,3 +1,4 @@
 requests
 tenacity
 httpx
+vcrpy

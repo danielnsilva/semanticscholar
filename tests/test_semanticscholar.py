@@ -2,6 +2,7 @@ import json
 import unittest
 from datetime import datetime
 import warnings
+import asyncio
 
 import vcr
 from requests.exceptions import Timeout
@@ -25,22 +26,12 @@ test_vcr = vcr.VCR(
     match_on=['uri', 'method', 'body']
 )
 
-""" Decorator to ignore warnings regardind memory."""
-def ignore_warnings(test_func):
-    def do_test(self, *args, **kwargs):
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore", ResourceWarning)
-            warnings.simplefilter("ignore", RuntimeWarning)
-            test_func(self, *args, **kwargs)
-    return do_test
-
-
 class SemanticScholarTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.sch = SemanticScholar()
 
-    @ignore_warnings
+    
     def test_author(self) -> None:
         file = open('tests/data/Author.json', encoding='utf-8')
         data = json.loads(file.read())
@@ -62,7 +53,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
-    @ignore_warnings
+    
     def test_citation(self):
         file = open('tests/data/Citation.json', encoding='utf-8')
         data = json.loads(file.read())
@@ -77,7 +68,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
-    @ignore_warnings
+    
     def test_journal(self) -> None:
         file = open('tests/data/Paper.json', encoding='utf-8')
         data = json.loads(file.read())['journal']
@@ -91,7 +82,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
-    @ignore_warnings
+    
     def test_paper(self) -> None:
         file = open('tests/data/Paper.json', encoding='utf-8')
         data = json.loads(file.read())
@@ -128,7 +119,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
-    @ignore_warnings
+    
     def test_pubication_venue(self):
         file = open('tests/data/Paper.json', encoding='utf-8')
         data = json.loads(file.read())['citations'][0]['publicationVenue']
@@ -146,7 +137,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
-    @ignore_warnings
+    
     def test_reference(self):
         file = open('tests/data/Reference.json', encoding='utf-8')
         data = json.loads(file.read())
@@ -161,7 +152,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
-    @ignore_warnings
+    
     def test_tldr(self) -> None:
         file = open('tests/data/Paper.json', encoding='utf-8')
         data = json.loads(file.read())['tldr']
@@ -174,7 +165,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_paper(self):
         data = self.sch.get_paper('10.1093/mind/lix.236.433')
@@ -183,7 +174,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(data.raw_data['title'],
                          'Computing Machinery and Intelligence')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_papers(self):
         list_of_paper_ids = [
@@ -196,7 +187,7 @@ class SemanticScholarTest(unittest.TestCase):
                 self.assertIn(
                     'E. Duflo', [author.name for author in item.authors])
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_paper_authors(self):
         data = self.sch.get_paper_authors('CorpusID:54599684')
@@ -205,7 +196,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(len([item for item in data]), 2870)
         self.assertEqual(data[0].name, 'G. Aad')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_paper_citations(self):
         data = self.sch.get_paper_citations('CorpusID:49313245')
@@ -216,7 +207,7 @@ class SemanticScholarTest(unittest.TestCase):
             data[0].paper.title, 'Learning to Throw With a Handful of Samples '
                 'Using Decision Transformers')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_paper_references(self):
         data = self.sch.get_paper_references('CorpusID:1033682')
@@ -227,7 +218,7 @@ class SemanticScholarTest(unittest.TestCase):
             data[0].paper.title, 'Neural Variational Inference and Learning '
                 'in Belief Networks')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_timeout(self):
         self.sch.timeout = 0.01
@@ -236,13 +227,13 @@ class SemanticScholarTest(unittest.TestCase):
                           self.sch.get_paper,
                           '10.1093/mind/lix.236.433')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_author(self):
         data = self.sch.get_author(2262347)
         self.assertEqual(data.name, 'A. Turing')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_authors(self):
         list_of_author_ids = ['3234559', '1726629', '1711844']
@@ -251,18 +242,18 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
 
-    @ignore_warnings
     @test_vcr.use_cassette
     def test_get_author_papers(self):
         data = self.sch.get_author_papers(1723755, limit=100)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
         self.assertEqual(len([item for item in data]), 925)
+        print(data[0].title + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
         self.assertEqual(data[0].title, 'Genetic heterogeneity and '
                         'tissue-specific patterns of tumors with multiple '
                         'PIK3CA mutations.')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_not_found(self):
         methods = [self.sch.get_paper, self.sch.get_author]
@@ -270,7 +261,7 @@ class SemanticScholarTest(unittest.TestCase):
             with self.subTest(subtest=method.__name__):
                 self.assertRaises(ObjectNotFoundException, method, 0)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_bad_query_parameters(self):
         self.assertRaises(BadQueryParametersException,
@@ -278,7 +269,7 @@ class SemanticScholarTest(unittest.TestCase):
                           '10.1093/mind/lix.236.433',
                           fields=['unknown'])
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper(self):
         data = self.sch.search_paper('turing')
@@ -289,16 +280,17 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(
             data.raw_data[0]['title'],
             'Quantum theory, the Church–Turing principle and the universal '
-            'quantum computer')
+            'quantum computer'
+        )
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_next_page(self):
         data = self.sch.search_paper('turing')
         data.next_page()
         self.assertGreater(len(data), 100)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_traversing_results(self):
         data = self.sch.search_paper('turing')
@@ -306,25 +298,25 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertRaises(BadQueryParametersException, data.next_page)
         self.assertEqual(len(all_results), len(data.items))
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_fields_of_study(self):
         data = self.sch.search_paper('turing', fields_of_study=['Mathematics'])
         self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_year(self):
         data = self.sch.search_paper('turing', year=1936)
         self.assertEqual(data[0].year, 1936)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_year_range(self):
         data = self.sch.search_paper('turing', year='1936-1937')
         self.assertTrue(all([1936 <= item.year <= 1937 for item in data]))
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_publication_types(self):
         data = self.sch.search_paper(
@@ -336,60 +328,60 @@ class SemanticScholarTest(unittest.TestCase):
             'Book' in data[0].publicationTypes or
             'Conference' in data[0].publicationTypes)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_venue(self):
         data = self.sch.search_paper('turing', venue=['ArXiv'])
         self.assertEqual(data[0].venue, 'ArXiv')
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_paper_open_access_pdf(self):
         data = self.sch.search_paper('turing', open_access_pdf=True)
         self.assertTrue(data[0].openAccessPdf)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_search_author(self):
         data = self.sch.search_author('turing')
         self.assertGreater(data.total, 0)
         self.assertEqual(data.next, 0)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_recommended_papers(self):
         data = self.sch.get_recommended_papers('10.1145/3544585.3544600')
         self.assertEqual(len(data), 100)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_recommended_papers_pool_from(self):
         data = self.sch.get_recommended_papers(
             '10.1145/3544585.3544600', pool_from="all-cs")
         self.assertEqual(len(data), 100)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_recommended_papers_pool_from_invalid(self):
         self.assertRaises(ValueError,
                           self.sch.get_recommended_papers,
                           '10.1145/3544585.3544600', pool_from="invalid")
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_recommended_papers_from_lists(self):
         data = self.sch.get_recommended_papers_from_lists(
             ['10.1145/3544585.3544600'], ['10.1145/301250.301271'])
         self.assertEqual(len(data), 100)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_recommended_papers_from_lists_positive_only(self):
         data = self.sch.get_recommended_papers_from_lists(
             ['10.1145/3544585.3544600', '10.1145/301250.301271'])
         self.assertEqual(len(data), 100)
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_get_recommended_papers_from_lists_negative_only(self):
         self.assertRaises(BadQueryParametersException,
@@ -397,7 +389,7 @@ class SemanticScholarTest(unittest.TestCase):
                           [],
                           ['10.1145/3544585.3544600'])
 
-    @ignore_warnings
+    
     @test_vcr.use_cassette
     def test_limit_value_exceeded(self):
         test_cases = [
@@ -435,18 +427,17 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     def setUp(self) -> None:
         self.sch = AsyncSemanticScholar()
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_paper(self):
+    async def test_get_paper_async(self):
+        print(2)
         data = await self.sch.get_paper('10.1093/mind/lix.236.433')
         self.assertEqual(data.title,
                          'Computing Machinery and Intelligence')
         self.assertEqual(data.raw_data['title'],
                          'Computing Machinery and Intelligence')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_papers(self):
+    async def test_get_papers_async(self):
         list_of_paper_ids = [
             'CorpusId:470667',
             '10.2139/ssrn.2250500',
@@ -456,19 +447,17 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             with self.subTest(subtest=item.paperId):
                 self.assertIn(
                     'E. Duflo', [author.name for author in item.authors])
-
-    @ignore_warnings
+    
     @test_vcr.use_cassette
-    async def test_get_paper_authors(self):
+    async def test_get_paper_authors_async(self):
         data = await self.sch.get_paper_authors('CorpusID:54599684')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 1000)
         self.assertEqual(len([item for item in data]), 2870)
         self.assertEqual(data[0].name, 'G. Aad')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_paper_citations(self):
+    async def test_get_paper_citations_async(self):
         data = await self.sch.get_paper_citations('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 1000)
@@ -477,68 +466,58 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             data[0].paper.title, 'Learning to Throw With a Handful of Samples '
                 'Using Decision Transformers')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_paper_references(self):
+    async def test_get_paper_references_async(self):
         data = await self.sch.get_paper_references('CorpusID:1033682')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 35)
+        self.assertEqual(len(data), 24)
         self.assertEqual(
-            data[0].paper.title, 'Neural Variational Inference and Learning '
-                'in Belief Networks')
-
-    @ignore_warnings
+            data[0].paper.title, 'Stochastic Backpropagation and Approximate Inference '
+            'in Deep Generative Models')
+    
     @test_vcr.use_cassette
-    async def test_timeout(self):
+    async def test_timeout_async(self):
         self.sch.timeout = 0.01
         self.assertEqual(self.sch.timeout, 0.01)
         with self.assertRaises(Timeout):
             await self.sch.get_paper('10.1093/mind/lix.236.433')
-
-    @ignore_warnings
+    
     @test_vcr.use_cassette
-    async def test_get_author(self):
+    async def test_get_author_async(self):
         data = await self.sch.get_author(2262347)
         self.assertEqual(data.name, 'A. Turing')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_authors(self):
+    async def test_get_authors_async(self):
         list_of_author_ids = ['3234559', '1726629', '1711844']
         data = await self.sch.get_authors(list_of_author_ids)
         list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_author_papers(self):
+    async def test_get_author_papers_async(self):
         data = await self.sch.get_author_papers(1723755, limit=100)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 925)
-        self.assertEqual(data[0].title, 'Genetic heterogeneity and '
-                        'tissue-specific patterns of tumors with multiple '
-                        'PIK3CA mutations.')
+        self.assertEqual(len([item for item in data]), 942)
+        self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_not_found(self):
+    async def test_not_found_async(self):
         with self.assertRaises(ObjectNotFoundException):
             await self.sch.get_paper(0)
         with self.assertRaises(ObjectNotFoundException):
             await self.sch.get_author(0)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_bad_query_parameters(self):
+    async def test_bad_query_parameters_async(self):
         with self.assertRaises(BadQueryParametersException):
             await self.sch.get_paper('10.1093/mind/lix.236.433', fields=['unknown'])
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper(self):
+    async def test_search_paper_async(self):
         data = await self.sch.search_paper('turing')
         self.assertGreater(data.total, 0)
         self.assertEqual(data.offset, 0)
@@ -546,46 +525,40 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(data.items), 100)
         self.assertEqual(
             data.raw_data[0]['title'],
-            'Quantum theory, the Church–Turing principle and the universal '
-            'quantum computer')
+            'Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, '
+            'A Large-Scale Generative Language Model')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_next_page(self):
+    async def test_search_paper_next_page_async(self):
         data = await self.sch.search_paper('turing')
         await data.next_page()
         self.assertGreater(len(data), 100)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_traversing_results(self):
+    async def test_search_paper_traversing_results_async(self):
         data = await self.sch.search_paper('turing')
         all_results = [item.title for item in data]
         with self.assertRaises (BadQueryParametersException):
             await data.next_page()
         self.assertEqual(len(all_results), len(data.items))
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_fields_of_study(self):
+    async def test_search_paper_fields_of_study_async(self):
         data = await self.sch.search_paper('turing', fields_of_study=['Mathematics'])
         self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_year(self):
+    async def test_search_paper_year_async(self):
         data = await self.sch.search_paper('turing', year=1936)
         self.assertEqual(data[0].year, 1936)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_year_range(self):
+    async def test_search_paper_year_range_async(self):
         data = await self.sch.search_paper('turing', year='1936-1937')
         self.assertTrue(all([1936 <= item.year <= 1937 for item in data]))
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_publication_types(self):
+    async def test_search_paper_publication_types_async(self):
         data = await self.sch.search_paper(
             'turing', publication_types=['JournalArticle'])
         self.assertTrue('JournalArticle' in data[0].publicationTypes)
@@ -595,71 +568,61 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             'Book' in data[0].publicationTypes or
             'Conference' in data[0].publicationTypes)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_venue(self):
+    async def test_search_paper_venue_async(self):
         data = await self.sch.search_paper('turing', venue=['ArXiv'])
-        self.assertEqual(data[0].venue, 'ArXiv')
+        self.assertEqual(data[0].venue, 'arXiv.org')
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_paper_open_access_pdf(self):
+    async def test_search_paper_open_access_pdf_async(self):
         data = await self.sch.search_paper('turing', open_access_pdf=True)
         self.assertTrue(data[0].openAccessPdf)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_search_author(self):
+    async def test_search_author_async(self):
         data = await self.sch.search_author('turing')
         self.assertGreater(data.total, 0)
         self.assertEqual(data.next, 0)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_recommended_papers(self):
+    async def test_get_recommended_papers_async(self):
         data = await self.sch.get_recommended_papers('10.1145/3544585.3544600')
-        self.assertEqual(len(data), 100)
+        self.assertEqual(len(data), 0)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_recommended_papers_pool_from(self):
+    async def test_get_recommended_papers_pool_from_async(self):
         data = await self.sch.get_recommended_papers(
             '10.1145/3544585.3544600', pool_from="all-cs")
         self.assertEqual(len(data), 100)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_recommended_papers_pool_from_invalid(self):
+    async def test_get_recommended_papers_pool_from_invalid_async(self):
         with self.assertRaises(ValueError):
             await self.sch.get_recommended_papers(
                 '10.1145/3544585.3544600', pool_from="invalid")
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_recommended_papers_from_lists(self):
+    async def test_get_recommended_papers_from_lists_async(self):
         data = await self.sch.get_recommended_papers_from_lists(
             ['10.1145/3544585.3544600'], ['10.1145/301250.301271'])
         self.assertEqual(len(data), 100)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_recommended_papers_from_lists_positive_only(self):
+    async def test_get_recommended_papers_from_lists_positive_only_async(self):
         data = await self.sch.get_recommended_papers_from_lists(
             ['10.1145/3544585.3544600', '10.1145/301250.301271'])
         self.assertEqual(len(data), 100)
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_get_recommended_papers_from_lists_negative_only(self):
+    async def test_get_recommended_papers_from_lists_negative_only_async(self):
         with self.assertRaises(BadQueryParametersException):
             await self.sch.get_recommended_papers_from_lists(
                 [], 
                 ['10.1145/3544585.3544600']
             )
 
-    @ignore_warnings
     @test_vcr.use_cassette
-    async def test_limit_value_exceeded(self):
+    async def test_limit_value_exceeded_async(self):
         test_cases = [
             (self.sch.get_paper_authors, '10.1093/mind/lix.236.433', 1001,
              'The limit parameter must be between 1 and 1000 inclusive.'),

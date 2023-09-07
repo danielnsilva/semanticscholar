@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+    method: GET
+    uri: https://api.semanticscholar.org/recommendations/v1/papers/forpaper/10.1145/3544585.3544600?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=recent
+  response:
+    content: '{"recommendedPapers": []}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Sep 2023 20:23:52 GMT
+      Via:
+      - 1.1 d50f0ffd76e03cff5d1f6328069e44e0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - pgngw6B81StqpBVXyHTqI9ClimDNFKqgwU26o9KfzYIWNI0RPGV-MA==
+      X-Amz-Cf-Pop:
+      - EWR50-C1
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - K5ylzESLvHcFxNw=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '26'
+      x-amzn-Remapped-Date:
+      - Thu, 07 Sep 2023 20:23:52 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 3f5e3a47-3361-4481-acbc-a281e5796f1a
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

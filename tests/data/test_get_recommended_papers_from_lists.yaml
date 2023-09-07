@@ -2594,4 +2594,61 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: '"{\"positivePaperIds\": [\"10.1145/3544585.3544600\"], \"negativePaperIds\":
+      [\"10.1145/301250.301271\"]}"'
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '106'
+      content-type:
+      - application/json
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+    method: POST
+    uri: https://api.semanticscholar.org/recommendations/v1/papers/?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
+  response:
+    content: '{"message": "Internal Server Error"}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '37'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Sep 2023 19:39:18 GMT
+      Via:
+      - 1.1 d3fbeb74a503a5fcf3e4ca458c365012.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - L1Ec602Bt69wf547MGX3exHeHJuVCjnOPclnQK8FDFKegQ956Y12_A==
+      X-Amz-Cf-Pop:
+      - EWR50-C1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - K5sEHFvavHcFi9Q=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '37'
+      x-amzn-Remapped-Date:
+      - Thu, 07 Sep 2023 19:39:18 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 6298b796-7340-4368-99c8-5f57d026cb4f
+    http_version: HTTP/1.1
+    status_code: 500
 version: 1

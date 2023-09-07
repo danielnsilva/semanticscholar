@@ -675,4 +675,623 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=turing&year=1936&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+  response:
+    content: '{"total": 26, "offset": 0, "data": [{"paperId": "0f881a288cda3e142aa702bec81a8120e753c118",
+      "externalIds": {"DOI": "10.1136/bjo.2004.bjdec04ftl", "CorpusId": 27901856,
+      "PubMed": "5335454"}, "corpusId": 27901856, "publicationVenue": {"id": "f5279917-ce2b-489d-8c2f-8a8f80a35559",
+      "name": "British Journal of Ophthalmology", "type": "journal", "alternate_names":
+      ["Br J Ophthalmol"], "issn": "1791-1737", "alternate_issns": ["0007-1161"],
+      "url": "https://bjo.bmj.com/", "alternate_urls": ["http://bjo.bmj.com/", "http://bjo.bmjjournals.com/"]},
+      "url": "https://www.semanticscholar.org/paper/0f881a288cda3e142aa702bec81a8120e753c118",
+      "title": "From the Library", "abstract": "Remembrance of things past \u201cMarcel
+      and Robert were impatient to leave the train when it stopped briefly at the
+      small station. The Parisians usually walked to the Amiots\u2019 house from the
+      station, carrying the blankets that kept them warm on the train, along with
+      their parcels and suitcases down the rue du Chemin de fer, lined on both sides
+      with linden trees. Turing left at the rue de l\u2019Oiseau flesch\u00e9, they
+      passed in front of the ancient hostelry of the same name. Marcel always noticed
+      the optician\u2019s sign consisting of a large pair of spectacles, one lens
+      blue, the other orange, unaware that one day he would transport these glasses
+      hanging high above the optician\u2019s shop into the fictional Combray, where
+      they became a symbol of his book and his conception of the novel.\u201d (Carter
+      WC. Marcel Proust. New Haven: Yale University Press, 2000:26.)", "venue": "British
+      Journal of Ophthalmology", "year": 1936, "referenceCount": 0, "citationCount":
+      36, "influentialCitationCount": 4, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://bjo.bmj.com/content/bjophthalmol/88/12/1608.full.pdf", "status": "BRONZE"},
+      "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
+      "source": "external"}, {"category": "Art", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "1936-05-01", "journal": {"name": "British
+      Journal of Ophthalmology", "pages": "1608 - 1608", "volume": "88"}, "authors":
+      [{"authorId": "144111966", "name": "E. Spencer"}]}, {"paperId": "467e4dcb1bb4ecd2574f26ccb7b004e034707475",
+      "externalIds": {"DOI": "10.1038/137466b0", "CorpusId": 4084850}, "corpusId":
+      4084850, "publicationVenue": {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a",
+      "name": "Nature", "type": "journal", "issn": "0028-0836", "url": "https://www.nature.com/",
+      "alternate_urls": ["http://www.nature.com/nature/", "https://www.nature.com/nature/",
+      "http://www.nature.com/nature/archive/index.html"]}, "url": "https://www.semanticscholar.org/paper/467e4dcb1bb4ecd2574f26ccb7b004e034707475",
+      "title": "Educational Topics and Events", "abstract": null, "venue": "Nature",
+      "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.nature.com/articles/137466b0.pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Education", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Nature", "pages": "466-467", "volume": "137"}, "authors":
+      []}, {"paperId": "7660494f35aecd19fbeff4cb7193f1a5569d3fb2", "externalIds":
+      {"MAG": "2013757505", "DOI": "10.1177/000271623618800104", "CorpusId": 143934704},
+      "corpusId": 143934704, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7660494f35aecd19fbeff4cb7193f1a5569d3fb2",
+      "title": "Class Differences in Fertility", "abstract": "ture. True, in every
+      age of human history, students have observed the failure of the &dquo;upper
+      classes&dquo; to reproduce as rapidly as the &dquo;lower classes.&dquo; But
+      such observations related to the educated and ruling classes which constituted
+      the merest fringe of the entire population in agrarian and handicraft economies.
+      Our present interest is not in the low fertility of powerful but numerically
+      unimportant minorities, but in that of substantial sections of the population.
+      Today, residents of urban communities constitute more than one half, and the
+      white-collar classes perhaps one quarter of the total population. These groups
+      are not sufficiently fertile to replace their own numbers. They are being recruited
+      from the rural and laboring classes which, in a real sense, may be thought of
+      as the nation\u2019s population reservoirs. Differential fertility on this scale
+      appears to be modern.", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
+      29, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category": "Sociology",
+      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "1936-11-01", "journal": {"name": "The
+      Annals of the American Academy of Political and Social Science", "pages": "26
+      - 36", "volume": "188"}, "authors": [{"authorId": "52444043", "name": "F. Notestein"}]},
+      {"paperId": "026cd66127a3be9d57d12cafc7ef08269583bc4c", "externalIds": {"CorpusId":
+      6077362, "PubMed": "19970294"}, "corpusId": 6077362, "publicationVenue": {"id":
+      "4dc96079-a390-468e-85c9-da11a3304053", "name": "American Journal of Pathology",
+      "type": "journal", "alternate_names": ["Am J Pathol"], "issn": "0002-9440",
+      "url": "http://www.clinicalkey.com.au/dura/browse/journalIssue/00029440", "alternate_urls":
+      ["http://www.sciencedirect.com/science/journal/00029440", "http://ajp.amjpathol.org/",
+      "https://ajp.amjpathol.org/", "http://www.amjpathol.org/", "http://www.clinicalkey.com/dura/browse/journalIssue/00029440"]},
+      "url": "https://www.semanticscholar.org/paper/026cd66127a3be9d57d12cafc7ef08269583bc4c",
+      "title": "Meningococcus Myocarditis.", "abstract": "beats per minute and the
+      arterial blood pressure iOO 70. The white blood count was 26,0OO. There were
+      8o per cent neutrophilic pol-morphonuclear leukocytes, 8 per cent lymphocytes,
+      and 12 per cent immature leukocytes. A spinal punc- ture was performed and I;
+      cc. of a thick purulent liquid were removed. The cerebrospinal fluid contained
+      I8,jOO cells per cmm. Smears revealed Gram- negative intracellular biscuit shaped
+      diplococci which morphologically showed the characteristics of meningococci.
+      The content of glucose of three successive specimens of cerebrospinal fluid
+      was o, IO and i8 mg. per ioo cc. respectively. The patient became markedly cyanotic
+      and died 3o hours after admission. The clinical diagnosis was meningococcus
+      meningitis. The possibility of the presence of a meningococcus endocarditis
+      was also considered.", "venue": "American Journal of Pathology", "year": 1936,
+      "referenceCount": 24, "citationCount": 6, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy":
+      [{"category": "Medicine", "source": "external"}, {"category": "Medicine", "source":
+      "s2-fos-model"}, {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": null, "journal": {"name": "The American
+      journal of pathology", "pages": "\n          677-688.1\n        ", "volume":
+      "12 5"}, "authors": [{"authorId": "15024119", "name": "O. Saphir"}]}, {"paperId":
+      "4602c5460fe959e1360a590c7945db34e2cd673e", "externalIds": {"MAG": "2323226389",
+      "DOI": "10.1080/00275514.1936.12017147", "CorpusId": 87536643}, "corpusId":
+      87536643, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4602c5460fe959e1360a590c7945db34e2cd673e",
+      "title": "The use of Ultra-Violet Irradiated Culture Media for Securing Bacteria-Free
+      Cultures of Saprolegnia", "abstract": "In almost all mycological work it is
+      essential to secure and to maintain pure cultures of the fungi being investigated.
+      Yet in many cases, cultures of the fungi, free from bacteria, are extremely
+      difficult to obtain. This preliminary step in an investigation is often tedious
+      and disproportionately time-consuming and hence the major objective of one''s
+      research is often long delayed. The Saprolegniaceae, as a group, are especially
+      troublesome to isolate. This difficulty arises because of the following conditions:
+      these fungi occur in nature accompanied by large numbers of bacteria; usually
+      the fungi themselves are slower in growing than the bacteria; the fungi, when
+      grown on agar, are surrounded by a liquid film, by means of which the bacteria
+      readily accompany the hyphae; the fungi do not grow satisfactorily in the presence
+      of the commonly used bacterial inhibitors; the fungi have temperature and water
+      requirements similar to those of bacteria. Each of these conditions adds to
+      the difficulty of isolation by the common method of repeated transfer, since
+      the hyphae invariably are ac? companied by adhering bacteria. The methods which
+      have been employed in obtaining pure cul? tures of the Saprolegniaceae were
+      ably reviewed by Kauffman (4). These methods as well as those more recently
+      developed not only for the Saprolegniaceae but also for other fungi, may be
+      roughly classified as either mechanical or chemical.", "venue": "", "year":
+      1936, "referenceCount": 6, "citationCount": 7, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Biology"],
+      "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}, {"category":
+      "Biology", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      "1936-07-01", "journal": {"name": "Mycologia", "pages": "324-329", "volume":
+      "28"}, "authors": [{"authorId": "37759254", "name": "I. H. Blank"}, {"authorId":
+      "21627126", "name": "W. Tiffney"}]}, {"paperId": "07854ad206f0361edc5df3d775756630deae1380",
+      "externalIds": {"MAG": "2573975570", "DOI": "10.1051/PARASITE/1936141061", "CorpusId":
+      89808212}, "corpusId": 89808212, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/07854ad206f0361edc5df3d775756630deae1380",
+      "title": "Contribution au remaniement de la classification des n\u00e9matodes
+      de l\u2019ordre des Filariata Skrjabin 1915", "abstract": "Yorke et Maplestone
+      (1926) ont essay\u00e9 de grouper tous les gen\u00ad res de Filariid\u00e6 en
+      sous-familles et ont \u00e9tabli les quatre sous-famil\u00ad les nouvelles des
+      Setariin\u00e6, des Loain\u00e6, des Crassicaudin\u00e6 et des Aproctin\u00e6.
+      Les auteurs se sont bas\u00e9s pour le diagnostic de ces sous-familles sur des
+      caract\u00e8res non \u00e9quivalents. Les Loain\u00e6 sont diff\u00e9renci\u00e9es
+      d\u2019apr\u00e8s la pr\u00e9sence d\u2019\u00e9minences verruqueuses sur la
+      cuticule ; les Setariin\u00e6, d\u2019apr\u00e8s le collet chitineux et la pr\u00e9sence
+      de formations en \u00e9paulettes autour de la cavit\u00e9 buccale ; les Crassi\u00ad
+      caudin\u00e6, d\u2019apr\u00e8s le d\u00e9placement de la vulve \u00e0 l\u2019extr\u00e9mit\u00e9
+      caudale ; les Aproctin\u00e6 \u00e0 cause de l\u2019\u00e9galit\u00e9 et de
+      la ressemblance dans la struc\u00ad ture des spicules, ce qui les distingue
+      des Filariin\u00e6. Ces auteurs subdivisent la famille des Filariid\u00e6 en
+      8 sous-famil\u00ad les : Diplotri\u00e6nin\u00e6 Skrjabin 1916, Micropleurin\u00e6
+      Baylis et Daubney 1922, Crassicaudin\u00e6 Yorke et Maplestone 1926, Setariin\u00e6
+      Yorke et Maplestone 1926, Loain\u00e6 Yorke et Maplestone 1926, Onchocercin\u00e6
+      Leiper 1911, Aproctin\u00e6 Yorke et Maplestone 1926 et Filariin\u00e6 Stiles
+      1907. Parmi les Filariid\u00e6 sont rang\u00e9s encore 6 genres insuffisamment
+      d\u00e9crits et qui ne sont pas inclus dans les sous-familles pr\u00e9c\u00e9dentes
+      ; ce sont les genres : Dicheilonema Dies. 1861, Monopetalonema Dies. 1861, Elaphocephalus
+      Mol. 1860, Solenonema Dies. 1861, Tetracheilonema Dies. 1861 et Filaroides Beneden,
+      1858. Enfin, les deux famil\u00ad les des Filariid\u00e6 Cobbold 1864 et des
+      Dracunculid\u00e6 Leiper 1912 sont r\u00e9unies par Yorke et Maplestone dans
+      une super-famille commune : les Filaroidea Weinl. 1858 (= Filariata Skrj. 1915).
+      La troisi\u00e8me famille des Cystopsid\u00e6 Skrj. 1923 n\u2019\u00e9tait pas
+      signal\u00e9e parce que les auteurs ignoraient l\u2019ouvrage de Skrjabin publi\u00e9
+      en russe. Ces derni\u00e8res ann\u00e9es, toute une s\u00e9rie d\u2019auteurs
+      ont introduit dans la syst\u00e9matique des Filariata des correctifs essentiels
+      : Skrja\u00ad bin et Andreeva (1934) ont montr\u00e9 que les Crassicaudin\u00e6
+      doivent \u00eatre transf\u00e9r\u00e9s des Filariata dans les Spirurata. Travassos
+      a \u00e9lu-", "venue": "", "year": 1936, "referenceCount": 4, "citationCount":
+      6, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://www.parasite-journal.org/articles/parasite/pdf/1936/01/parasite1936141p61.pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
+      "Biology", "source": "external"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Annales de parasitologie humaine et compare\u0301e",
+      "pages": "61-75", "volume": "14"}, "authors": [{"authorId": "88801903", "name":
+      "K. Skrjabin"}, {"authorId": "17044156", "name": "N. Schikhobalova"}]}, {"paperId":
+      "3c51bee906d73b37be02fda3b468a44bfea43ec7", "externalIds": {"MAG": "2063322835",
+      "DOI": "10.1007/BF01778415", "CorpusId": 34298584}, "corpusId": 34298584, "publicationVenue":
+      {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9", "name": "Klinische Wochenschrift",
+      "alternate_names": ["Klin Wochenschr"], "issn": "0023-2173", "alternate_issns":
+      ["1432-1440"], "url": "https://link.springer.com/journal/109"}, "url": "https://www.semanticscholar.org/paper/3c51bee906d73b37be02fda3b468a44bfea43ec7",
+      "title": "Von Einigen Gegengaben der Klinik als dank an die Physiologie", "abstract":
+      null, "venue": "Klinische Wochenschrift", "year": 1936, "referenceCount": 0,
+      "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category": "Biology",
+      "source": "external"}], "publicationTypes": null, "publicationDate": "1936-04-01",
+      "journal": {"name": "Klinische Wochenschrift", "pages": "545-548", "volume":
+      "15"}, "authors": [{"authorId": "17707537", "name": "G. Bergmann"}]}, {"paperId":
+      "7cb3e6479fc354b181a63d56748cff085ef2e99b", "externalIds": {"MAG": "57711298",
+      "DOI": "10.1007/bf03036390", "CorpusId": 92668948}, "corpusId": 92668948, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/7cb3e6479fc354b181a63d56748cff085ef2e99b",
+      "title": "Condition of sparingly soluble substances in gels", "abstract": null,
+      "venue": "", "year": 1936, "referenceCount": 4, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Chemistry"],
+      "s2FieldsOfStudy": [{"category": "Chemistry", "source": "external"}, {"category":
+      "Biology", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "1936-10-01", "journal": {"name": "Proceedings of the Indian Academy of Sciences
+      - Section A", "pages": "468-479", "volume": "4"}, "authors": [{"authorId": "107631284",
+      "name": "R. Khanolkar"}, {"authorId": "144208375", "name": "P. Barve"}, {"authorId":
+      "91060105", "name": "B. N. Desai"}]}, {"paperId": "1a3cb84da1b00043584e42b9bd348c1ac18928fe",
+      "externalIds": {"MAG": "1596689803", "CorpusId": 204463799}, "corpusId": 204463799,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1a3cb84da1b00043584e42b9bd348c1ac18928fe",
+      "title": "Doktor Henri-Martin", "abstract": null, "venue": "", "year": 1936,
+      "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["History"], "s2FieldsOfStudy":
+      [{"category": "History", "source": "external"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Fornv\u00e4nnen", "pages": "359-560", "volume": "31"},
+      "authors": [{"authorId": "2091589851", "name": "Ture J. Arne"}]}, {"paperId":
+      "437b6bc0d58c8a9616847a770b4b96d4e90e954e", "externalIds": {"MAG": "33728040",
+      "DOI": "10.1007/BF01583589", "CorpusId": 43294122}, "corpusId": 43294122, "publicationVenue":
+      {"id": "68d41154-a37b-42b4-a569-8bf2ed7777f0", "name": "Archiv f\u00fcr Klinische
+      und Experimentelle Ohren- Nasen- und Kehlkopfheilkunde", "type": "journal",
+      "alternate_names": ["Archiv f\u00fcr Ohren- Nasen- und Kehlkopfheilkunde", "Arch
+      Ohrenheilkd", "Archiv f\u00fcr Ohrenheilkunde", "Arch Ohren Nasen Kehlkopfheilkd",
+      "Arch Klin Exp Ohren Nasen Kehlkopfheilkd", "Archiv fu\u0308r Ohren-, Nasen-
+      und Kehlkopfheilkunde"], "issn": "0003-9195", "alternate_issns": ["0365-5245",
+      "0302-9530", "1434-4726"]}, "url": "https://www.semanticscholar.org/paper/437b6bc0d58c8a9616847a770b4b96d4e90e954e",
+      "title": "Septische Spondylitis bei Fremdk\u00f6rperperforation. Bericht \u00fcber
+      einen Fall", "abstract": null, "venue": "Archiv f\u00fcr Klinische und Experimentelle
+      Ohren- Nasen- und Kehlkopfheilkunde", "year": 1936, "referenceCount": 1, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
+      "source": "external"}], "publicationTypes": null, "publicationDate": "1936-03-01",
+      "journal": {"name": "Archiv f\u00fcr Ohren-, Nasen- und Kehlkopfheilkunde",
+      "pages": "14-19", "volume": "141"}, "authors": [{"authorId": "1421311755", "name":
+      "Ture Betsholtz"}]}, {"paperId": "077a946cb658e9510f291c48cc5880d84dd1df6e",
+      "externalIds": {"MAG": "2978120065", "DOI": "10.1086/intejethi.46.2.2989363",
+      "CorpusId": 171299537}, "corpusId": 171299537, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/077a946cb658e9510f291c48cc5880d84dd1df6e",
+      "title": "Preface to Sociology. Cyril E. HudsonWhat Religion Is and Does. Horace
+      T. HoufJesus and the Moralists. Edward W. Hirst", "abstract": null, "venue":
+      "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
+      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"name": "Ethics", "pages": "244-245",
+      "volume": "46"}, "authors": [{"authorId": "117212268", "name": "V. Ferm"}]},
+      {"paperId": "f7a64d22997f3202ee648da6ada9eeb1c9e1c213", "externalIds": {"MAG":
+      "2082252310", "DOI": "10.1086/208303", "CorpusId": 145256726}, "corpusId": 145256726,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f7a64d22997f3202ee648da6ada9eeb1c9e1c213",
+      "title": "Book Review:The Church at Work in the Modern World. W. C. Bower",
+      "abstract": null, "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Philosophy"], "s2FieldsOfStudy": [{"category": "Philosophy",
+      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
+      ["Review"], "publicationDate": null, "journal": null, "authors": [{"authorId":
+      "117212268", "name": "V. Ferm"}]}, {"paperId": "f17e5c23c89634805a29eff56d1d001544349775",
+      "externalIds": {"MAG": "2039576618", "DOI": "10.1086/208302", "CorpusId": 170586849},
+      "corpusId": 170586849, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f17e5c23c89634805a29eff56d1d001544349775",
+      "title": "Book Review:Preface to Sociology. Cyril E. Hudson; What Religion Is
+      and Does. Horace T. Houf; Jesus and the Moralists. Edward W. Hirst", "abstract":
+      null, "venue": "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
+      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
+      ["Review"], "publicationDate": null, "journal": {"name": "Ethics", "pages":
+      "244", "volume": "46"}, "authors": [{"authorId": "117212268", "name": "V. Ferm"}]},
+      {"paperId": "f509d5a249aa52f66a2e7e935e942828c8bd322d", "externalIds": {"MAG":
+      "2017205667", "DOI": "10.1007/BF01782154", "CorpusId": 46119893}, "corpusId":
+      46119893, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
+      "name": "Klinische Wochenschrift", "alternate_names": ["Klin Wochenschr"], "issn":
+      "0023-2173", "alternate_issns": ["1432-1440"], "url": "https://link.springer.com/journal/109"},
+      "url": "https://www.semanticscholar.org/paper/f509d5a249aa52f66a2e7e935e942828c8bd322d",
+      "title": "\u00dcber Die Einwirkung von Vitamin C auf Gallenfarbstoff", "abstract":
+      null, "venue": "Klinische Wochenschrift", "year": 1936, "referenceCount": 3,
+      "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Chemistry"], "s2FieldsOfStudy": [{"category": "Chemistry",
+      "source": "external"}], "publicationTypes": null, "publicationDate": "1936-08-01",
+      "journal": {"name": "Klinische Wochenschrift", "pages": "1137-1138", "volume":
+      "15"}, "authors": [{"authorId": "15261808", "name": "F. Lauersen"}, {"authorId":
+      "50311049", "name": "F. Sauerbruch"}]}, {"paperId": "8876e1e84b394c45f28169d44d0ae20e771e7ba0",
+      "externalIds": {"MAG": "1968575889", "DOI": "10.1177/028418513601700506", "CorpusId":
+      70682836}, "corpusId": 70682836, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/8876e1e84b394c45f28169d44d0ae20e771e7ba0",
+      "title": "A Case of Melorheostosis", "abstract": "Melorheostosis is a very uncommon
+      disease: hence I report the fol\u00ad lowing case. The patient is a seaman,
+      forty years old. Familial anamnesis, no remarks. In 1921 he contracted lues,
+      for which he was treated for six weeks in a hospital in Hamburg, seemingly,
+      according to several afterexaminations, with good result. He has lived for four
+      years in South America, and while there repeatedly had malaria, the last time
+      in 1930. In that year he also had dysentery. For some months past he has been
+      an inmate of an asylum for inebriates, from which he was admitted to the medical
+      department of the Diacons'' Home with a transfer diagnosis of lumbago. The part
+      of the anamnesis which refers to his bone disease was brought out only in answer
+      to direct questioning after roentgenography had revealed the condition. This
+      shows how little it had troubled him. For the last ten years he has had the
+      feeling that his right leg was becoming shorter than its fellow, because it
+      did not reach the ground when he stood upright. For seven to ten years it has
+      felt heavier than the left, from the hip downward, and has caused him a feeling
+      of tiredness, which would become painful on any severe effort. This pain caused
+      him to notice a thickening above the ankle. Otherwise the anamnesis contains
+      nothing of interest. His natural functions are in good order. Examination on
+      entry, 23rd Oct., 1934. \u2014 The patient is stoutish, his face somewhat bloodshot.
+      He admits that he has been drinking a good deal, but denies being an alcoholist.
+      The usual physical examina\u00ad tion showed normal conditions. Urine, normal.
+      Blood pressure, 130/75. Pulse, 68. During his stay in the hospital the variations
+      in his tempera\u00ad ture were rather considerable: morning, 36.3\u00b0\u201436.5\u00b0;
+      evening, 37.3\u00b0\u2014 37.6\u00b0. Wassermann, negative. Pirquet, positive.
+      Blood sedimentation", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
+      2, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://www.tandfonline.com/doi/pdf/10.3109/00016923609133386?needAccess=true",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
+      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1936-09-01", "journal":
+      {"name": "Acta Radiologica", "pages": "498 - 505", "volume": "os-17"}, "authors":
+      [{"authorId": "79817220", "name": "P. Natvig"}]}, {"paperId": "4ba57d5f8cdf2ff01b76a42b7329df310ed0045b",
+      "externalIds": {"MAG": "2194048101", "CorpusId": 111144897}, "corpusId": 111144897,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4ba57d5f8cdf2ff01b76a42b7329df310ed0045b",
+      "title": "Stage Construction As It Applies to Indiana Roads", "abstract": "These
+      bridges were framed and erected by a county bridge crew working under the supervision
+      of the county surveyor, who also served as a highway supervisor. The bridge
+      crew consisted of a foreman, a carpenter, a truck driver, and from one to three
+      common laborers. They removed the old struc\u00ad ture, constructed the new
+      one, and made all approach fills necessary to complete the structure in from
+      two to five days time, the time depending on the size of the structure. I-beams
+      were used for stringers on all structures having a span of fourteen feet or
+      over, and the three-inch flooring was fastened to the I-beams with cleats which
+      locked the in\u00ad dividual planks to the stringers and to each other. The
+      road\u00ad way was determined by the type of road on which the struc\u00ad ture
+      was built, and all structures on improved roads or roads which would be improved
+      soon were constructed with not less than eighteen feet of roadway. These structures
+      have proved very satisfactory and the construction of similar ones will be continued
+      in the future. Their life is estimated, on the basis of the life of several
+      old structures in the county, at a minimum of fifteen years when native oak
+      lumber treated with creosote as described in this article is used. Many of the
+      southern and western states use pressure-creosoted timber structures in their
+      state highway systems and find them very satisfactory.", "venue": "", "year":
+      1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
+      "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
+      "History", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "98437890",
+      "name": "Earl B Lockridge"}]}, {"paperId": "40304bc755ae58115aad0d0a5ebc0db82737a06a",
+      "externalIds": {"MAG": "2313150929", "DOI": "10.2331/SUISAN.5.109", "CorpusId":
+      87968458}, "corpusId": 87968458, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/40304bc755ae58115aad0d0a5ebc0db82737a06a",
+      "title": "On the Digestive Ferments of Anguilla japonica (T. & S.) I", "abstract":
+      "On the Digestive Ferments of Anguilla japonica (T . & S.) I. Proteolytic Ferment
+      and its Digestive Action on the law and Heated Fish Muscle. Toyoo TAKAHASHI
+      and Yutaka HIROSAWA SYNOPSIS Various authors have reported on proteases of stomach,
+      pyloric coeca, hepatopancreas and intestine of several kinds of fishes. But
+      none has studied proteolytic enzymes of stomach and intestine of Anguilla japonica
+      in detail. G lycerine extracts of the enzymes in question were found most effective
+      at such tempera tures and pH-values as shown in the following table:-", "venue":
+      "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.jstage.jst.go.jp/article/suisan1932/5/2/5_2_109/_pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
+      "Biology", "source": "external"}, {"category": "Environmental Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "Nippon Suisan Gakkaishi", "pages": "109-112", "volume": "5"}, "authors":
+      [{"authorId": "2117191826", "name": "Toyoo Takahashi"}, {"authorId": "90950895",
+      "name": "Yutaka Hirosawa"}]}, {"paperId": "a3501b1d37d85151a49ca98eb6e7b2cc729dac2f",
+      "externalIds": {"MAG": "2336111574", "PubMedCentral": "5169242", "DOI": "10.1136/jramc-68-06-03",
+      "CorpusId": 31620838, "PubMed": "29012604"}, "corpusId": 31620838, "publicationVenue":
+      {"id": "7bc8c601-4efa-400f-972e-164343190429", "name": "The Indian medical gazette",
+      "type": "journal", "alternate_names": ["Indian med gaz", "Indian medical gazette"],
+      "issn": "0019-5863"}, "url": "https://www.semanticscholar.org/paper/a3501b1d37d85151a49ca98eb6e7b2cc729dac2f",
+      "title": "Heat Exhaustion and Dehydration in the Arabian Desert", "abstract":
+      ". One officer was interested in this point and watched the available . thermometers.
+      In the shade of the wings where the passengerR lay he estimated that the air
+      temperature was about 125 or 130 F. from SOOI1 after sunrise to sunset. This,
+      of course, was a tempera;ture''-much above \u00b0 that of the human body. The
+      air~urni4itL was extremely low, since the air was scorched-dry in its passage
+      over theburnlrig dE:;sert sands, which surrounded the airship on aU sides and
+      continued without water, trees, shade or vegetation for some fifty miles. \u00b0
+      Air JJ1ovement.-A continuous fair breeze-though hot and dry-made conditions
+      seem less -unpleas''a:n t''-\"o -", "venue": "The Indian medical gazette", "year":
+      1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Environmental
+      Science", "Medicine"], "s2FieldsOfStudy": [{"category": "Environmental Science",
+      "source": "external"}, {"category": "Medicine", "source": "external"}, {"category":
+      "Environmental Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1936-12-01", "journal": {"name": "The Indian Medical Gazette",
+      "pages": "712 - 714", "volume": "71"}, "authors": [{"authorId": "3843547", "name":
+      "H. Stott"}]}, {"paperId": "786d864c301a128cde9c45806c995dda34e1ee8d", "externalIds":
+      {"MAG": "2054701221", "DOI": "10.1111/J.1151-2916.1936.TB19836.X", "CorpusId":
+      137668605}, "corpusId": 137668605, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/786d864c301a128cde9c45806c995dda34e1ee8d",
+      "title": "A COMPARISON OF THE THERMAL EXPANSION OF USED SILICA BRICK FROM AN
+      INSULATED AND AN UNINSULATED OPEN\u2010HEARTH FURNACE ROOF*", "abstract": "Measurements
+      of the linear thermal expansion of different zones in the used silica roof brick
+      whose composition and structure have been described by Harvey show that along
+      the length of the brick there are two abrupt changes in expansion. The first,
+      whose existence was predicted by Harvey and by Miller, coincides with the limit
+      of penetration of iron oxide and arises from the fact that in the presence of
+      iron oxide the silica, originally present as cristobalite, has been largely
+      converted to tridymite, which has a different expansion. The limit of penetration
+      of iron oxide is taken as that level at which the average temperature is 1100\u00b0C
+      (2010\u00b0F), the temperature of the ternary eutectic in the system CaO-FeO-SiO2;
+      consequently, the abrupt change in expansion, and therefore a zone of weakness,
+      is to be expected after equilibrium has been established in any open-hearth
+      roof brick whose cold end is below 1100\u00b0C (2010\u00b0F). The second change,
+      which is also due to a discontinuity in the distribution of cristobalite, occurs
+      at that level in the brick at which the average temperature was 1470\u00b0C
+      (2080\u00b0F), the lower limit of the stable range for cristobalite. In each
+      case the change in expansion arises directly from a difference in the length-change
+      at the cristobalite inversion, which takes place at approximately 250\u00b0C
+      (480\u00b0F), so that failure or spalling is most likely to occur when the roof
+      is cooled below or heated through this temperature. The expansion data also
+      show that the inversion temperature of cristobalite increases regularly with
+      the temperature at which it was formed or at which it was brought to equilibrium.
+      \n \nThe data obtained enable the determination of the average distribution
+      of tempera ture through the brick in service, which, combined with existing
+      data on thermal conductivity of silica brick, permits an estimation of the mean
+      thermal conductivity of that part of the brick into which iron oxide has penetrated.
+      This conductivity is greater than that of the rest of the brick and has a negative
+      temperature coefficient in contrast to the positive coefficient for the unaltered
+      part.", "venue": "", "year": 1936, "referenceCount": 0, "citationCount": 1,
+      "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Materials Science"], "s2FieldsOfStudy": [{"category": "Materials
+      Science", "source": "external"}, {"category": "Materials Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "Journal of the American Ceramic Society", "pages": "276-287", "volume":
+      "19"}, "authors": [{"authorId": "102653954", "name": "R. Pierce"}, {"authorId":
+      "81276019", "name": "J. B. Austin"}]}, {"paperId": "382f9e29a9163562c72e2450bdbb60f30bc57189",
+      "externalIds": {"MAG": "1977309720", "DOI": "10.1177/028418513601700403", "CorpusId":
+      71680648}, "corpusId": 71680648, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/382f9e29a9163562c72e2450bdbb60f30bc57189",
+      "title": "Local Growth Disturbances in Tuberculous Disease of the Knee-Joint
+      in Children", "abstract": "Where a chronic state of irritation, in the form
+      of an infectious pro\u00ad cess, exists about a growing joint with its ossifie
+      centres and epiphyseal lines, one may often observe an excessive development
+      at those centres of growth. As its clinical expression one finds in the growing
+      child a meas\u00ad urably greater length on the diseased side than on the other.
+      In connexion with tuberculosis of the knee-joint this has been briefly noted
+      by SORELD E J E R I N E and SINDING-LARSEN, but in general no notice is taken
+      of the symptom, not even in large clinical works. In the roentgenologic litera\u00ad
+      ture equally little attention has been paid to it. I t is true that in 1916
+      FORSSELL, in a paper on tuberculosis of joints, illustrated the subject by an
+      example (the case was of a wrist) and mentioned HAUDEK''S earlier at\u00ad tempts
+      to utilise the growth disturbances about the diseased articulation as a means
+      of diagnosis; but since then these phenomena have, as far as I can find, been
+      almost entirely overlooked, even in otherwise important works on the clinic
+      and roentgenology of the knee-joint. Considering the insufficiency of our other
+      aids to diagnosis of knee-joint diseases \u2014 a matter particularly commented
+      on at the Congress of Surgery in Copen\u00ad hagen, in 1935 \u2014 I believe
+      there is every reason to take HAUDEK''S old idea up again, and to give a concise
+      representation of the growth disturb\u00ad ances in tuberculosis of the knee-joint
+      in children. I t has been found that the knee-joint is the articulation in which
+      phe\u00ad nomena of this order can best be demonstrated and registered. In the
+      first place, already the normal rate of growth is greatest there, in the sec\u00ad
+      ond place the acceleration of the growth is seemingly proportional to the normal
+      growth in the epiphyseal lines. Furthermore the earliest symp\u00ad toms, according
+      to SVEN JOHANSSON''S investigations, most often occur in", "venue": "", "year":
+      1936, "referenceCount": 5, "citationCount": 1, "influentialCitationCount": 0,
+      "isOpenAccess": true, "openAccessPdf": {"url": "https://www.tandfonline.com/doi/pdf/10.3109/00016923609134081?needAccess=true",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
+      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1936-07-01", "journal":
+      {"name": "Acta Radiologica", "pages": "359 - 370", "volume": "os-17"}, "authors":
+      [{"authorId": "84079156", "name": "Maurits Lindblad"}]}, {"paperId": "febcc1caafc0ecb541b155158f29411f07c8fd0d",
+      "externalIds": {"MAG": "110099919", "DOI": "10.1007/BF02982676", "CorpusId":
+      36186479}, "corpusId": 36186479, "publicationVenue": {"id": "ee29410d-3d58-4bcc-8304-b559af9d780a",
+      "name": "Journal Genetika", "type": "journal", "alternate_names": ["J Genet",
+      "Journal of Genetics"], "issn": "0016-6758", "alternate_issns": ["0022-1333"],
+      "url": "http://www.springer.com/life+sci/journal/12041?detailsPage=description",
+      "alternate_urls": ["https://link.springer.com/journal/12041"]}, "url": "https://www.semanticscholar.org/paper/febcc1caafc0ecb541b155158f29411f07c8fd0d",
+      "title": "Inbreeding inEphestia k\u00fchniella Z. (Lepidoptera, phycitidae)",
+      "abstract": null, "venue": "Journal Genetika", "year": 1936, "referenceCount":
+      0, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
+      "Biology", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1936-04-01", "journal": {"name":
+      "Journal of Genetics", "pages": "179-181", "volume": "32"}, "authors": [{"authorId":
+      "49657937", "name": "M. J. Norris"}, {"authorId": "1864237", "name": "O. Richards"}]},
+      {"paperId": "78396ca7b3295df0b1e06d5fd5b64a64b0519e0b", "externalIds": {"MAG":
+      "2041295081", "DOI": "10.1177/000271623618500168", "CorpusId": 144861698}, "corpusId":
+      144861698, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/78396ca7b3295df0b1e06d5fd5b64a64b0519e0b",
+      "title": "LINDEMAN, EDUARD C. Wealth and Cul ture. Pp. ix, 35. New York: Harcourt,
+      Brace & Co., 1936. $3.00", "abstract": "The thesis of this volume can best be
+      given in the author\u2019s words: &dquo;Each civilized unit will need to decide
+      sooner or later how to use its surplus wealth, whether that wealth is produced
+      through individual initiative or collective entities. It is my conviction that
+      decisions of this character will eventually become matters for social consideration.
+      The New State of the future will need social technicians who will be asked to
+      engage in cultural planning just as technological experts and economists will
+      be called upon to plan for orderly material production and distribution. Those
+      who have exercised a similar function during the individualist-competitive phase
+      of modern economy have been to a very large extent, associated with foundations
+      and trusts. Consequently it becomes pertinent to discover how these culture
+      determiners have operated in the past.&dquo; As suggested by the quotation,
+      Dr. Lindeman is concerned with a general and", "venue": "", "year": 1936, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category":
+      "Sociology", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1936-05-01", "journal": {"name":
+      "The Annals of the American Academy of Political and Social Science", "pages":
+      "249 - 250", "volume": "185"}, "authors": [{"authorId": "80927167", "name":
+      "M. M. Willey"}]}, {"paperId": "71b4a350d0d08ab025bbe830c52d986e1d9b28e3", "externalIds":
+      {"PubMedCentral": "5170483", "CorpusId": 11289105, "PubMed": "29013033"}, "corpusId":
+      11289105, "publicationVenue": {"id": "7bc8c601-4efa-400f-972e-164343190429",
+      "name": "The Indian medical gazette", "type": "journal", "alternate_names":
+      ["Indian med gaz", "Indian medical gazette"], "issn": "0019-5863"}, "url": "https://www.semanticscholar.org/paper/71b4a350d0d08ab025bbe830c52d986e1d9b28e3",
+      "title": "Service Notes", "abstract": "The School was inspected on the opening
+      day by SurgeonGeneral P. Hehir. C.B., C.M.G., c I.E. (D.D.M.S., Northern Command),
+      and Colonel Heard, i.m.s., and an opening address was given by Surgeon-General
+      Hehir to the officers attending the course. The Scheme of Training to be carried
+      out in the School as laid down in Army Instructions (India) No. 414?dated 30th
+      April, 1918, is appended hereto. Practical Instruction is given by the C. O.
+      of the Station Hospital, Lieutenant-Colonel Argles, R.A.M.C.; by the S.M.O.,
+      I.M.S., Lieutenant-Colonel Moore. I.M.S., and lectures are delivered by specialists
+      in Sanitation, Surgery, etc. Also lectures and practical demonstrations are
+      being given by the D. A. D. M. S. (Sanitary) and the D. A. D. M. S. (Mobilization).
+      And lec tures on Military Organisation, Field Sketching, Map Reading, etc.,
+      by the General Staff or officers detailed by them. Curriculum. The curriculum
+      is roughly as follow:? Parade daily from 6-30?7-30 A.M., for Squad Drill and
+      Stretcher Drill, and on two days a week for Physical Training. Lectures and
+      practical work from 9 till 3 or 4-30 P.M. A course of equitation (voluntary)
+      was also arranged for, and this was attended by officers in the eveninirs, from
+      6-30 ? 1 7-30.", "venue": "The Indian medical gazette", "year": 1936, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
+      "Medicine", "source": "external"}, {"category": "History", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1936-04-01", "journal":
+      {"name": "The Indian Medical Gazette", "pages": "243 - 244", "volume": "71"},
+      "authors": [{"authorId": "1620478634", "name": "JSeroiqe 3Jotes"}]}, {"paperId":
+      "7a1c4413ed53445fea3807026ad87c475803a22d", "externalIds": {"MAG": "2009665015",
+      "DOI": "10.1177/000271623618600163", "CorpusId": 144182343}, "corpusId": 144182343,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7a1c4413ed53445fea3807026ad87c475803a22d",
+      "title": "TRENTIN, SILVIO. La Crise du Droit et de l''\u00c9tat. Pp. 498. Paris:
+      Librairie Felix Alcan, 1935. 30 francs", "abstract": "ture,&dquo; which constitutes
+      the second part of the book, aside from such inadequacies, gives a very good
+      idea of its importance from Roman times to our own. The third part of the book,
+      entitled &dquo;The Nature of Law,&dquo; is a brief review of some modern theories
+      and approaches. If, in light of its purely introductory character, anything
+      should be said, it is perhaps to the point that the author, in discussing the
+      rational process of lawmaking, has not clearly indicated the extent to which
+      the development of law in modern times has been a rationalization of things
+      accomplished in the social and economic fields. Specifically, the claim so often
+      made that the laws of England and America have safeguarded personal and property
+      rights is farfetched. A critical analysis would indicate that personal liberty
+      and property rights were rather outgrowths of the struggle for the free market.
+      In fact, in the light of the modern wage slavery, the emphasis in English and
+      American theory on rights in the abstract is to all intents and purposes an
+      absurdity, which the author fails to see. It is difficult to understand why
+      a clearer critique of this position has been omitted. To the layman reading
+      the book, the defects in evaluation, emphasis, and interpretation are unimportant
+      when set alongside of its rational message and clarity of expression. To the
+      college student, the book is a valuable general treatment of the field if in
+      the hands of a competent and penetrating instructor. FREDERICK W. KILLIAN University
+      of Newark", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category": "Sociology",
+      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
+      ["Review"], "publicationDate": "1936-07-01", "journal": {"name": "The Annals
+      of the American Academy of Political and Social Science", "pages": "222 - 223",
+      "volume": "186"}, "authors": [{"authorId": "2052107347", "name": "J. Kunz"}]},
+      {"paperId": "d40a884b9d26fccebdbc01de18048724d0ff2213", "externalIds": {"MAG":
+      "2014994292", "DOI": "10.1080/00220973.1936.11010012", "CorpusId": 121503619},
+      "corpusId": 121503619, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d40a884b9d26fccebdbc01de18048724d0ff2213",
+      "title": "The General Nature and Applicability of Index Numbers for Education",
+      "abstract": "Contrary to the belief held by many persons, index numbers are
+      not re stricted to the realm of general econom ics, but are serviceable in many
+      fields, and are equally well adapted to problems which do not directly involve
+      money in any way. Index numbers have received a wider use in the field of education
+      than is generally recognized. Perhaps their varied use in educational problems
+      is not better known because they have not been expressly treated in educational
+      litera ture as a technique of general applica bility. The procedure has been
+      borrowed from economic3 and applied to education al problems by individual workers
+      with out attention having been called explicit ly to the nature of the adaptations
+      that have been made, and to the possibilities of further use, both for immediate
+      serv ice and for research. It is the purpose of this article to make a beginning
+      in this direction. It will discuss some of the general characteristics of index
+      num bers, ^ and refer to the uses that have been made of them in education.
+      The index number technique af fords an important means of indexing (measuring)
+      complex variation. It is especially adapted to measuring changes in phenomena
+      which cannot be objectively identified except in terms of several component
+      or resultant elements. To take a common example, the concept, \"cost of living\",
+      is an abstraction which does not exist as a concrete en tity, and cannot be
+      dealt with directly as a single object. Its status depends upon the many variable
+      elements which compose it. The same thing is true with regard to many of our
+      concepts of quali ties or properties of logically complex phenomena?i.e., those
+      which comprise a number of different kinds of elements. If one desires to measure
+      such a character as \"cost of living\", or \"size\" of school systems, or \"general
+      goodness\" of school systems, one theoretically has four courses open to him:
+      (l) he can rely on a single selected characteristic which can be directly measured
+      or count ed, to represent the general character;", "venue": "", "year": 1936,
+      "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
+      [{"category": "Psychology", "source": "external"}, {"category": "Education",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1936-01-02",
+      "journal": null, "authors": [{"authorId": "17110494", "name": "D. E. Scates"}]},
+      {"paperId": "bc91c3913857cb74a5564ccbaace1d41227e7b23", "externalIds": {"MAG":
+      "2507295321", "DOI": "10.1086/INTEJETHI.46.2.2989364", "CorpusId": 151430710},
+      "corpusId": 151430710, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/bc91c3913857cb74a5564ccbaace1d41227e7b23",
+      "title": "The Church at Work in the Modern World. W. C. Bower", "abstract":
+      null, "venue": "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
+      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
+      "History", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Ethics", "pages": "245-246", "volume": "46"}, "authors":
+      [{"authorId": "117212268", "name": "V. Ferm"}]}]}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '47502'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Sep 2023 19:40:38 GMT
+      Via:
+      - 1.1 11ab138d0b995a9fa4daabbae7fc0b0c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - jeRUNO5bdnGE-gvLDWce838Sdvih00uusSIUL4vCV0yiPTKFWUa58A==
+      X-Amz-Cf-Pop:
+      - EWR50-C1
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - K5sQgGc3vHcFW4g=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '47502'
+      x-amzn-Remapped-Date:
+      - Thu, 07 Sep 2023 19:40:38 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - b4bd9267-7d63-4dda-8bed-00ee59f929f8
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1

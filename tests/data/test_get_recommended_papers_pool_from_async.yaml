@@ -1,0 +1,1948 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+    method: GET
+    uri: https://api.semanticscholar.org/recommendations/v1/papers/forpaper/10.1145/3544585.3544600?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=all-cs
+  response:
+    content: '{"recommendedPapers": [{"paperId": "9c1ab0728d90e35992fe24a1fc43b076e8229eb5",
+      "externalIds": {"MAG": "761778066", "CorpusId": 117069249}, "corpusId": 117069249,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9c1ab0728d90e35992fe24a1fc43b076e8229eb5",
+      "title": "Another view on two graph orientation problems", "abstract": "Note:
+      PRO 00.07 Reference ROSO-CONF-2000-007 Record created on 2006-02-13, modified
+      on 2016-08-08", "venue": "", "year": 2000, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "", "pages":
+      "152", "volume": ""}, "authors": [{"authorId": "2918362", "name": "A. Prodon"}]},
+      {"paperId": "dce1fa5033aafd205a2151cb188ce6e117d9dfdc", "externalIds": {"MAG":
+      "2137393438", "DBLP": "conf/bmei/YaoY09", "DOI": "10.1109/BMEI.2009.5304812",
+      "CorpusId": 2524651}, "corpusId": 2524651, "publicationVenue": "e33b5b9a-d6c0-40c7-93a4-ca5dd12c1837",
+      "url": "https://www.semanticscholar.org/paper/dce1fa5033aafd205a2151cb188ce6e117d9dfdc",
+      "title": "A Note on the Definition of a Tree", "abstract": "Very often trees
+      appear in computer science. For example, information is often stored in treelike
+      data structures and the execution of many recursive programs can be regarded
+      as a traversal of a tree. Moreover, trees are efficiently used to verify many
+      very difficult problems which are still open now. As known, leaves in a tree
+      play an important role in the Steiner tree problem. We show that a connected
+      graph G is a tree if and only if n1(G) = 2+ \u2211 d\u22653(d\u22122)nd(G),
+      where ni(G) is the number of vertices of degree i of G with respect to \u03b4(G)
+      \u2264 i \u2264 \u0394(G), and the number \u03c6(G) of faces of a planar graph
+      G can be expressed as \u03c6(G) = 2 + 1 2 \u2211 d\u22653(d \u2212 2)nd(G).",
+      "venue": "International Conference on BioMedical Engineering and Informatics",
+      "year": 2009, "referenceCount": 6, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"], "publicationDate":
+      "2009-10-30", "journal": {"name": "2009 2nd International Conference on Biomedical
+      Engineering and Informatics", "pages": "1-5"}, "authors": [{"authorId": "145685008",
+      "name": "Ming Yao"}, {"authorId": "145323141", "name": "B. Yao"}]}, {"paperId":
+      "3d1b511ed028a3a948fb647e9bf70699dde74562", "externalIds": {"ArXiv": "2104.04810",
+      "DOI": "10.1007/978-3-030-83823-2_3", "CorpusId": 233210190}, "corpusId": 233210190,
+      "publicationVenue": "03d8c2a4-d329-4119-82c2-72e9a4bee91b", "url": "https://www.semanticscholar.org/paper/3d1b511ed028a3a948fb647e9bf70699dde74562",
+      "title": "Nested Cycles with No Geometric Crossings", "abstract": null, "venue":
+      "Trends in Mathematics", "year": 2021, "referenceCount": 18, "citationCount":
+      13, "influentialCitationCount": 1, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://arxiv.org/pdf/2104.04810", "status": "GREEN"}, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "2021-04-10", "journal": {"name": "Trends in Mathematics"}, "authors": [{"authorId":
+      "2072817790", "name": "Irene Gil Fern''andez"}, {"authorId": "2116670242", "name":
+      "Jaehoon Kim"}, {"authorId": "1965116", "name": "Younjin Kim"}, {"authorId":
+      "2118902602", "name": "Hong Liu"}]}, {"paperId": "7a75ccca8fa9b0e27d933634a975e0c86a15b4d1",
+      "externalIds": {"MAG": "595300436", "CorpusId": 117863185}, "corpusId": 117863185,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7a75ccca8fa9b0e27d933634a975e0c86a15b4d1",
+      "title": "PROBLEMS IN TOPOLOGICAL GRAPH THEORY : QUESTIONS I CAN''T ANSWER",
+      "abstract": ". This paper describes my Problems in Topological Graph Theory,
+      which can be accessed through the world-wide-web at This list of problems is
+      constantly being revised; the interested reader is encour-aged to submit additions
+      and updates.", "venue": "", "year": 1999, "referenceCount": 7, "citationCount":
+      2, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "", "pages":
+      "89-92", "volume": "47"}, "authors": [{"authorId": "2569739", "name": "D. Archdeacon"}]},
+      {"paperId": "ab3eeec31a5e9a68e2387a375cd126e74c35459c", "externalIds": {"DBLP":
+      "books/hal/Bessy12", "MAG": "2288843953", "CorpusId": 11829132}, "corpusId":
+      11829132, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ab3eeec31a5e9a68e2387a375cd126e74c35459c",
+      "title": "Some problems in graph theory and graphs algorithmic theory", "abstract":
+      "This document is a long abstract of my research work, concerning graph theory
+      and algorithms on graphs. It summarizes some results, gives ideas of the proof
+      for some of them and presents the context of the different topics together with
+      some interesting open questions connected to them The first part precises the
+      notations used in the rest of the paper; the second part deals with some problems
+      on cycles in digraphs; the third part is an overview of two graph coloring problems
+      and one problem on structures in colored graphs; finally the fourth part focus
+      on some results in algorithmic graph theory, mainly in parametrized complexity.",
+      "venue": "", "year": 2012, "referenceCount": 175, "citationCount": 2, "influentialCitationCount":
+      1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": "2012-02-09",
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "2768268", "name":
+      "S. Bessy"}]}, {"paperId": "3f41043996c8e1d39f93aae84010e811b70a240f", "externalIds":
+      {"DOI": "10.31219/osf.io/a496n", "CorpusId": 240340516}, "corpusId": 240340516,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3f41043996c8e1d39f93aae84010e811b70a240f",
+      "title": "Another graph partitioning optimization problem", "abstract": "This
+      paper de\ufb01nes yet another graph partitioning problem in the form of a combinatorial
+      optimization problem. A reduction from 3-way Cut (cf. [1]) problem shows that
+      our claim holds.", "venue": "", "year": 2018, "referenceCount": 1, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://osf.io/a496n/download", "status": "GREEN"}, "fieldsOfStudy": null,
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "s2-fos-model"},
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "2018-08-04", "journal": null, "authors": [{"authorId":
+      "145327695", "name": "T. Nguyen"}]}, {"paperId": "2ae438b18ad450248214ee81a129c4561b0fae3b",
+      "externalIds": {"MAG": "2289646049", "ArXiv": "1504.00341", "DBLP": "journals/corr/Farina15",
+      "CorpusId": 14836448}, "corpusId": 14836448, "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      "url": "https://www.semanticscholar.org/paper/2ae438b18ad450248214ee81a129c4561b0fae3b",
+      "title": "A linear time algorithm to compute the impact of all the articulation
+      points", "abstract": "The articulation points of an undirected connected graphs
+      are those vertices whose removal increases the number of connected components
+      of the graph, i.e. the vertices whose removal disconnects the graph. However,
+      not all the articulation points are equal: the removal of some of them might
+      end in a single vertex disconnected from the graph, whilst in other cases the
+      graph can be split in several small pieces. In order to measure the effect of
+      the removal of an articulation point, in \\cite{AFL12} has been proposed the
+      impact, defined as the number of vertices that get disconnected from the main
+      (largest) surviving connected component (CC). In this paper we present the first
+      linear time algorithm ($\\mathcal{O}(m+n)$ for a graph with $n$ vertices and
+      $m$ edges) to compute the impact of all the articulation points of the graph,
+      thus improving from the $\\mathcal{O}(a(m+n))\\approx\\mathcal{O}(nm+n^2)$ of
+      the na\\\"ive algorithm, with $a$ being the number of articulation points of
+      the graph.", "venue": "arXiv.org", "year": 2015, "referenceCount": 6, "citationCount":
+      3, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Computer Science", "source":
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2015-04-01", "journal": {"name": "ArXiv", "volume": "abs/1504.00341"},
+      "authors": [{"authorId": "81885589", "name": "Gabriele Farina"}]}, {"paperId":
+      "1a79452afce78c44961ebde28310a1ae93889563", "externalIds": {"MAG": "2075729213",
+      "DBLP": "journals/comgeo/AichholzerBBBKR15", "DOI": "10.1016/j.comgeo.2015.01.002",
+      "CorpusId": 43596885}, "corpusId": 43596885, "publicationVenue": "d9046364-b534-4cb3-9e20-4dafd5fac877",
+      "url": "https://www.semanticscholar.org/paper/1a79452afce78c44961ebde28310a1ae93889563",
+      "title": "Reprint of: Theta-3 is connected", "abstract": null, "venue": "Computational
+      geometry", "year": 2015, "referenceCount": 11, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2015-07-01", "journal": {"name": "Comput. Geom.", "pages": "407-414", "volume":
+      "48"}, "authors": [{"authorId": "1722964", "name": "O. Aichholzer"}, {"authorId":
+      "1730095", "name": "S. Bae"}, {"authorId": "143880377", "name": "Luis Barba"},
+      {"authorId": "144435719", "name": "P. Bose"}, {"authorId": "31721430", "name":
+      "Matias Korman"}, {"authorId": "1774223", "name": "Andr\u00e9 van Renssen"},
+      {"authorId": "1784150", "name": "Perouz Taslakian"}, {"authorId": "1806582",
+      "name": "S. Verdonschot"}]}, {"paperId": "8606499bc45921285c6a7bfe10fc751009bece08",
+      "externalIds": {"ArXiv": "1306.3916", "DBLP": "journals/corr/abs-1306-3916",
+      "MAG": "2950261448", "DOI": "10.1016/j.jcta.2014.02.006", "CorpusId": 12043969},
+      "corpusId": 12043969, "publicationVenue": "8a32f160-84d2-4c72-b3ab-c5de11116574",
+      "url": "https://www.semanticscholar.org/paper/8606499bc45921285c6a7bfe10fc751009bece08",
+      "title": "Two notions of unit distance graphs", "abstract": null, "venue": "Journal
+      of combinatorial theory. Series A", "year": 2013, "referenceCount": 14, "citationCount":
+      25, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": null,
+      "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "external"}, {"category": "Mathematics", "source": "s2-fos-model"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2013-06-17", "journal": {"name": "J. Comb. Theory, Ser.
+      A", "pages": "1-17", "volume": "125"}, "authors": [{"authorId": "1734327", "name":
+      "N. Alon"}, {"authorId": "1679129", "name": "A. Kupavskii"}]}, {"paperId": "4e41012ae05c58130fcf02fc47f65ec4620fafae",
+      "externalIds": {"CorpusId": 16808789}, "corpusId": 16808789, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/4e41012ae05c58130fcf02fc47f65ec4620fafae",
+      "title": "A 2-Level Cactus Tree Model for the System of Minimum and Minimum+1
+      Edge . . .", "abstract": "3] Ye. Dinitz, \\The 3-edge components and the structural
+      description of all 3-edge cuts in a graph\", 5] Ye. Dinitz and Z. Nutov, \\A
+      2-level cactus tree model for the minimum and minimum+1 edge cuts in a graph
+      and its incremental maintenance\", Proc. the 27th Symposium on Theory of Computing,
+      1995, 509{518. 6] Ye. Dinitz and Z. Nutov, \\A 2-level cactus tree model for
+      the minimum and mini-mum+1 edge cuts in a graph and its incremental maintenance.
+      Part I: the odd case\", a manuscript. 7] Ye. Dinitz and Z. Nutov, \\Cactus-tree
+      type models for families of bisections of a set\", a manuscript. 8] Ye. Dinitz
+      and A. Vainshtein, \\The connectivity carcass of a vertex subset in a graph
+      and its incremental maintenance\", 37 The worst case time for each query is
+      O(1). The initialization time is polynomial in n, and the space required is
+      O(n). Relying on 17], the complexity of incremental maintaining can be reduced
+      to O((u + q + n)(u + q; n)). Notice that the above complexities of maintenance
+      can be reduced substituting each instance of n by n +2 in the following way.
+      At the preprocessing stage, we can build the quotient graph G 0 by shrinking
+      each of the n 0 +2 (0 + 2)-classes of G into a single supervertex and apply
+      our algorithm to G 0 , with n 0 +2 supervertices, instead of G. In this version,
+      the current (0 + 2)-class of a vertex v of G is found as the current (0 + 2)-class
+      of the supervertex of G 0 corresponding to the initial (0 + 2)-class of v. This
+      is done via two queries, where nding the supervertex can be supported by a static
+      data structure in O(1) time. 5 Concluding remarks 1. Observe that the properties
+      mentioned in Theorem 4.1 are similar to those of the cactus tree model for the
+      minimum cuts, though more complicated. Since the structure of the modeling cuts
+      is explicit and, in a sense, simple, and since the representation is compact,
+      our model seems to be convenient to represent the minimum and minimum+1 cuts
+      of graphs in various applications. 2. It is likely that the 2-level cactus model
+      can be a useful tool for handling edge-augmentation problems when the increase
+      of the connectivity is 2. Another possible direction is to use our representation
+      for eeective maintenance of optimal augmentation sets of an incremental \u2026",
+      "venue": "", "year": 1998, "referenceCount": 8, "citationCount": 5, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "143817739",
+      "name": "J. Leeuwen"}]}, {"paperId": "a063b5f1d16a8f1dc7558fa2df7b68304cbe5d64",
+      "externalIds": {"CorpusId": 543563}, "corpusId": 543563, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/a063b5f1d16a8f1dc7558fa2df7b68304cbe5d64",
+      "title": "A Note on the Importance of Collaboration Graphs", "abstract": "Numerous
+      challenging problems in graph theory has attracted the attention and imagination
+      of researchers from physics, computer science, engineering, biology, social
+      science and mathematics. If we put all these different branches one into basket,
+      what evolves is a new science called \u201cNetwork Science\u201d. It calls for
+      a solid scientific foundation and vigorous analysis. Graph theory in general
+      and the collaboration graphs, in particular are well suited for this task. In
+      this paper, we give a overview of the importance of collaboration graphs with
+      its interesting background. Also we study one particular type of collaboration
+      graph and list a number of open problems.", "venue": "", "year": 2011, "referenceCount":
+      16, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "3009830",
+      "name": "V. Yegnanarayanan"}, {"authorId": "47213909", "name": "G. UmaMaheswari"}]},
+      {"paperId": "08c0b8af9322e66fb6118ec2c6c5b12e84342645", "externalIds": {"MAG":
+      "1527003156", "DBLP": "conf/wg/KorachO88", "DOI": "10.1007/3-540-50728-0_37",
+      "CorpusId": 11153206}, "corpusId": 11153206, "publicationVenue": "d62ca42c-06bc-40ff-9463-4ec00915599b",
+      "url": "https://www.semanticscholar.org/paper/08c0b8af9322e66fb6118ec2c6c5b12e84342645",
+      "title": "DFS Tree Construction: Algorithms and Characterizations", "abstract":
+      null, "venue": "International Workshop on Graph-Theoretic Concepts in Computer
+      Science", "year": 1988, "referenceCount": 32, "citationCount": 12, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1988-06-15", "journal": {"pages": "87-106"}, "authors":
+      [{"authorId": "2075614", "name": "E. Korach"}, {"authorId": "2717733", "name":
+      "Zvi Ostfeld"}]}, {"paperId": "992986c934747fa5cb333463f7d65ebb45eb70ab", "externalIds":
+      {"ArXiv": "1707.08047", "MAG": "2747715876", "CorpusId": 51814361}, "corpusId":
+      51814361, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/992986c934747fa5cb333463f7d65ebb45eb70ab",
+      "title": "Not Conway''s 99-Graph Problem", "abstract": "Conway''s 99-graph problem
+      is the second problem amongst the five 1000\\$ 2017 open problems set. Four
+      out of the five remain unsolved to this day, including the 99-graph problem.
+      In this paper we quote Conway''s definition of the problem and give an alternative
+      interpretation of it, which we humorously name \"not Conway''s 99-graph problem\".
+      We solve the alternative interpretation completely.", "venue": "", "year": 2017,
+      "referenceCount": 2, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2017-07-25", "journal": {"name":
+      "arXiv: Combinatorics", "volume": ""}, "authors": [{"authorId": "102924564",
+      "name": "Sa\u2019ar Zehavi"}, {"authorId": "102823772", "name": "Ivo Fagundes
+      David de Olivera"}]}, {"paperId": "ebc079eb670e72206703c9177f162d8a1ea0d441",
+      "externalIds": {"MAG": "2169751036", "DOI": "10.1109/24.210269", "CorpusId":
+      124292011}, "corpusId": 124292011, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ebc079eb670e72206703c9177f162d8a1ea0d441",
+      "title": "Comments on \"Enumeration of all minimal cutsets for a node pair in
+      a graph", "abstract": "The commenters point out that the algorithm of S.A. Kumar
+      and S.H. Lee for the enumeration of all minimal s-t cutsets is defective (see
+      ibid., vol.R-26, p.51-5, April 1979). It is illustrated through an example that
+      their algorithm misses several minimal cutsets. The commenters cite two reasons
+      for this: the adjacency problem and the back-vertex problem. >", "venue": "",
+      "year": 1993, "referenceCount": 3, "citationCount": 8, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "1993-03-01", "journal": {"name": "IEEE Transactions on Reliability", "pages":
+      "44-45", "volume": "42"}, "authors": [{"authorId": "52026059", "name": "V. Sankar"},
+      {"authorId": "145193793", "name": "V. C. Prasad"}, {"authorId": "46455433",
+      "name": "K. Rao"}]}, {"paperId": "49f0e32f5d4a20f1890c29f2abef56700a8fdd6f",
+      "externalIds": {"MAG": "2360271695", "CorpusId": 124166039}, "corpusId": 124166039,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/49f0e32f5d4a20f1890c29f2abef56700a8fdd6f",
+      "title": "Correctly Master Broken Circle Method with Graph Theory", "abstract":
+      "The article points out the errors about \"Broken Circle Method\"of some books
+      by using the theory about \"Directed Tree\" and \"Weighted Graph\"and at the
+      same time it introduces two kinds of new methods.It also explains in detail
+      how to use \"Broken Circle Method\"correctly.", "venue": "", "year": 2007, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "1470902398", "name": "Pan Su-zhen"}]},
+      {"paperId": "9e40076a7a90309285bb2b284bc698ad51159627", "externalIds": {"MAG":
+      "2952226354", "DBLP": "journals/corr/abs-1209-0700", "ArXiv": "1209.0700", "DOI":
+      "10.1016/j.ipl.2013.01.016", "CorpusId": 7040381}, "corpusId": 7040381, "publicationVenue":
+      "44ecc2bb-f8fd-4c6d-bd54-30ca098be91d", "url": "https://www.semanticscholar.org/paper/9e40076a7a90309285bb2b284bc698ad51159627",
+      "title": "A simple test on 2-vertex- and 2-edge-connectivity", "abstract": null,
+      "venue": "Information Processing Letters", "year": 2012, "referenceCount": 17,
+      "citationCount": 75, "influentialCitationCount": 10, "isOpenAccess": true, "openAccessPdf":
+      {"url": "https://arxiv.org/pdf/1209.0700", "status": "GREEN"}, "fieldsOfStudy":
+      ["Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2012-09-04", "journal": {"name": "Inf. Process. Lett.", "pages": "241-244",
+      "volume": "113"}, "authors": [{"authorId": "34189607", "name": "Jens M. Schmidt"}]},
+      {"paperId": "e848d9507658660551e2d0d9033d4a4d1742bd86", "externalIds": {"CorpusId":
+      18862674}, "corpusId": 18862674, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e848d9507658660551e2d0d9033d4a4d1742bd86",
+      "title": "Notes on the Net \u2013 Tree Construction Algorithm", "abstract":
+      "(a) Let rmax = maxp 6=q\u2208P dP (p, q) and rmin = minp6=q\u2208P dP (p, q).
+      Let p\u2217 \u2208 P be arbitrary. Clearly, we have P \u2282 B(p\u2217, rmax).
+      Let i be the smallest integer such that rmax \u2264 2rmin. Then, we have log2(rmax/rmin)
+      = log2(\u03a6(P )) \u2264 i < log2(\u03a6(P )) + 1. By definition of the doubling
+      constant, the ball B(p\u2217, rmax) can be covered by at most \u03bbi+1 < \u03bblog2(\u03a6(P
+      ))+2 balls of radius at most rmax/2. However, for any p \u2208 P , we have B(p,
+      rmax/2) \u2229 P = {p}. It follows that |P | \u2264 \u03bbO(log \u03a6), as
+      desired.", "venue": "", "year": 2006, "referenceCount": 6, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "1734000", "name": "A. M. So"}]},
+      {"paperId": "2d3873e06d3cd1751461418b7a20f54e2d8bd452", "externalIds": {"DBLP":
+      "journals/corr/abs-1009-4447", "ArXiv": "1009.4447", "MAG": "2950496033", "DOI":
+      "10.1109/IPDPS.2011.55", "CorpusId": 1594260}, "corpusId": 1594260, "publicationVenue":
+      "7bb54772-a70c-44df-9b9d-9f3b5354c0e2", "url": "https://www.semanticscholar.org/paper/2d3873e06d3cd1751461418b7a20f54e2d8bd452",
+      "title": "Adding a Referee to an Interconnection Network: What Can(not) Be Computed
+      in One Round", "abstract": "In this paper we ask which properties of a distributed
+      network can be computed from a few amount of local information provided by its
+      nodes. The distributed model we consider is a restriction of the classical $\\cal{CONGEST}$
+      (distributed) model and it is close to the simultaneous messages (communication
+      complexity) model defined by Babai, Kimmel and Lokam. More precisely, each of
+      these $n$ nodes-which only knows its own ID and the IDs of its neighbors- is
+      allowed to send a message of $O(\\log n)$ bits to some central entity, called
+      the referee. Is it possible for the referee to decide some basic structural
+      properties of the network topology $G$? We show that simple questions like,
+      \"does $G$ contain a square?\", \"does $G$ contain a triangle?\" or \"Is the
+      diameter of G at most 3?\" cannot be solved in general. On the other hand, the
+      referee can decode the messages in order to have full knowledge of $G$ when
+      $G$ belongs to many graph classes such as planar graphs, bounded tree width
+      graphs and, more generally, bounded degeneracy graphs. We leave open questions
+      related to the connectivity of arbitrary graphs.", "venue": "IEEE International
+      Parallel and Distributed Processing Symposium", "year": 2010, "referenceCount":
+      22, "citationCount": 27, "influentialCitationCount": 2, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://arxiv.org/pdf/1009.4447", "status": "GREEN"},
+      "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2010-09-22", "journal": {"name": "2011 IEEE International
+      Parallel & Distributed Processing Symposium", "pages": "508-514"}, "authors":
+      [{"authorId": "26593007", "name": "Florent Becker"}, {"authorId": "145899701",
+      "name": "M. Matamala"}, {"authorId": "1736014", "name": "N. Nisse"}, {"authorId":
+      "1824836", "name": "I. Rapaport"}, {"authorId": "2420659", "name": "K. Suchan"},
+      {"authorId": "2553209", "name": "Ioan Todinca"}]}, {"paperId": "18b1598183996e8d972e57ab95a6c7d26ea92a06",
+      "externalIds": {"CorpusId": 15846985}, "corpusId": 15846985, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/18b1598183996e8d972e57ab95a6c7d26ea92a06",
+      "title": "Reports in Informatics Issn 0333-3590 Lex M versus Mcs-m Lex M versus
+      Mcs-m", "abstract": "We study the problem of minimal triangulation of graphs.
+      One of the first algorithms to solve this problem is Lex M, which was presented
+      in 1976. A new algorithm, and a simplification of Lex M, called MCS-M was presented
+      in 2002. In this paper we compare these two algorithms and show that they produce
+      the same set of chordal graphs, answering an open question mentioned by the
+      authors of MCS-M.", "venue": "", "year": 2004, "referenceCount": 15, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "2286924", "name": "Yngve Villanger"},
+      {"authorId": "2104665959", "name": "Lex M versus MCS-M"}]}, {"paperId": "6c5881c95aa4c376c662c2c39292f19c2ceb9899",
+      "externalIds": {"MAG": "2350474652", "CorpusId": 124329471}, "corpusId": 124329471,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6c5881c95aa4c376c662c2c39292f19c2ceb9899",
+      "title": "A Probe into AND/OR Graph Search AJgorithms", "abstract": "The AND/OR
+      graph search algorithms are discussed. We analyze their complexity, and emphasize
+      their advantages and shortcomings as well. Some improved points are put forward.
+      In addition, we porbe into an analogy search method.", "venue": "", "year":
+      1999, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "71730312", "name": "Yang Xian-ze"}]},
+      {"paperId": "69d31752e09d8d5ec96ba7dfcccfab9b03666b84", "externalIds": {"DBLP":
+      "journals/dam/FialaGKLP12", "MAG": "2099793997", "DOI": "10.1016/j.dam.2011.02.004",
+      "CorpusId": 17425083}, "corpusId": 17425083, "publicationVenue": "8287474c-2cf8-4dfe-b1c6-cf6119d879ab",
+      "url": "https://www.semanticscholar.org/paper/69d31752e09d8d5ec96ba7dfcccfab9b03666b84",
+      "title": "Distance three labelings of trees", "abstract": null, "venue": "Discrete
+      Applied Mathematics", "year": 2012, "referenceCount": 41, "citationCount": 11,
+      "influentialCitationCount": 1, "isOpenAccess": true, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Computer Science", "source":
+      "external"}, {"category": "Mathematics", "source": "s2-fos-model"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2012-04-01", "journal": {"name": "Discret. Appl. Math.",
+      "pages": "764-779", "volume": "160"}, "authors": [{"authorId": "40160286", "name":
+      "J. Fiala"}, {"authorId": "1720941", "name": "P. Golovach"}, {"authorId": "144775704",
+      "name": "Jan Kratochv\u00edl"}, {"authorId": "1718606", "name": "B. Lidick\u00fd"},
+      {"authorId": "8867084", "name": "D. Paulusma"}]}, {"paperId": "2c5eb355a56549858391adee075629cc753b2de5",
+      "externalIds": {"CorpusId": 221791526}, "corpusId": 221791526, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/2c5eb355a56549858391adee075629cc753b2de5",
+      "title": "1 A First Encounter with Graphs", "abstract": "There is not much fun
+      in listing basic definitions about graphs (this is quite a bad introduction
+      to start with!) but if we seek a rigorous presentation of results and proofs,
+      then we cannot avoid giving accurate definitions of the objects that we will
+      manipulate, but hopefully nice examples will also come quickly. In this book,
+      we assume that the reader has a basic (or, at least a naive) knowledge of sets
+      and operations on them.", "venue": "", "year": 2016, "referenceCount": 13, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": []}, {"paperId": "6a92e988bc6f8f6e7b5e8955143f3f265a28c622",
+      "externalIds": {"MAG": "2171697943", "DOI": "10.1007/978-3-7091-9076-0_9", "CorpusId":
+      124531701}, "corpusId": 124531701, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6a92e988bc6f8f6e7b5e8955143f3f265a28c622",
+      "title": "Path Problems in Graphs", "abstract": null, "venue": "", "year": 1990,
+      "referenceCount": 14, "citationCount": 62, "influentialCitationCount": 3, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "", "pages":
+      "155-189", "volume": ""}, "authors": [{"authorId": "1685555", "name": "G. Rote"}]},
+      {"paperId": "115bb1a8a7b45745649202af73524517c191b9ea", "externalIds": {"CorpusId":
+      54193941}, "corpusId": 54193941, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/115bb1a8a7b45745649202af73524517c191b9ea",
+      "title": "Graph Theory 2017 \u2013 EPFL \u2013", "abstract": "The first is a
+      multigraph, which can have multiple edges and loops; the corresponding definition
+      would allow the edge set and the edges to be multisets. The second is a directed
+      graph, in which every edge has a direction; in the corresponding definition
+      the edges would be ordered pairs instead of two-element subsets. In this course
+      we mostly avoid these variants for simplicity, although they are certainly very
+      useful objects. The graphs of these type appear, e.g., when trying to model
+      Internet: represent sites (or web pages) as vertices, and links", "venue": "",
+      "year": 2017, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "1679129", "name": "A. Kupavskii"}]},
+      {"paperId": "586b6a34456a13e5d32a6f8bc6c4f9e96f848e2a", "externalIds": {"DBLP":
+      "journals/networks/PandaD07", "MAG": "1976179294", "DOI": "10.1002/net.20198",
+      "CorpusId": 3978885}, "corpusId": 3978885, "publicationVenue": "69d79d4c-49aa-4c2b-b616-80100a634f67",
+      "url": "https://www.semanticscholar.org/paper/586b6a34456a13e5d32a6f8bc6c4f9e96f848e2a",
+      "title": "On tree 3\u2010spanners in directed path graphs", "abstract": "A spanning
+      tree T of a graph G is said to be a tree t\u2010spanner if the distance between
+      any two vertices in T is at most t times their distance in G. While the complexity
+      of the problem of recognizing whether a graph has a tree t\u2010spanner is known
+      for any fixed t\u22603, the case t = 3 is still open. H.\u2010O. Le and V. B.
+      Le (1999, Networks, 34(2), 81\u201087) have shown that every directed path graph
+      admits a tree 3\u2010spanner by proposing an algorithm to construct a tree 3\u2010spanner
+      of a given directed path graph. In this paper, we point out a flaw in their
+      algorithm by producing a directed path graph for which their algorithm fails
+      to produce a tree 3\u2010spanner although the graph admits a tree 3\u2010spanner.
+      Furthermore, we show that directed path graphs need not admit tree 3\u2010spanners
+      in general. Next, we show that directed path graphs of diameter two always admit
+      tree 2\u2010spanners and hence tree 3\u2010spanners. Finally, we show that a
+      tree 2\u2010spanner of a diameter two directed path graph can be constructed
+      in linear time. \u00a9 2007 Wiley Periodicals, Inc. NETWORKS, Vol. 50(3), 203\u2013210
+      2007", "venue": "Networks", "year": 2007, "referenceCount": 21, "citationCount":
+      3, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/net.20198", "status":
+      "BRONZE"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "2007-10-01", "journal": {"name": "Networks",
+      "volume": "50"}, "authors": [{"authorId": "34775605", "name": "B. S. Panda"},
+      {"authorId": "48806821", "name": "Anita Das"}]}, {"paperId": "44a97b79ed90f17e8dbe58e330624f7d398ab729",
+      "externalIds": {"MAG": "1986475947", "DOI": "10.1007/BF01068311", "CorpusId":
+      119895681}, "corpusId": 119895681, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/44a97b79ed90f17e8dbe58e330624f7d398ab729",
+      "title": "A method of constructing minimal failure cuts", "abstract": null,
+      "venue": "", "year": 1991, "referenceCount": 2, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "1991-05-01", "journal": {"name": "Cybernetics and Systems Analysis", "pages":
+      "320-323", "volume": "27"}, "authors": [{"authorId": "2070405946", "name": "D.
+      Alekseev"}]}, {"paperId": "4b6da1a83bdd79202663cc2fe04addbbc74111cf", "externalIds":
+      {"DBLP": "phd/ca/Chaplick12", "MAG": "2564348232", "CorpusId": 125344771}, "corpusId":
+      125344771, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4b6da1a83bdd79202663cc2fe04addbbc74111cf",
+      "title": "Path Graphs and PR-trees", "abstract": "The PR-tree data structure
+      is introduced to characterize the sets of path-tree models of path graphs. We
+      further characterize the sets of directed path-tree models of directed path
+      graphs with a slightly restricted form of the PR-tree called the Strong PR-tree.
+      Additionally, via PR-trees and Strong PR-trees, we characterize path graphs
+      and directed path graphs by their Split Decompositions. Two distinct approaches
+      (Split Decomposition and Reduction ) are presented to construct a PR-tree that
+      captures the path-tree models of a given graph G = (V, E) with n = |V| and m
+      = |E|. An implementation of the split decomposition approach is presented which
+      runs in O (nm) time. Similarly, an implementation of the reduction approach
+      is presented which runs in O (A(n + m) nm) time (where A(s) is the inverse of
+      Ackermann''s function arising from Union-Find [40]). Also, from a PR-tree, an
+      algorithm to construct a corresponding Strong PR-tree is given which runs in
+      O (n + m) time. The sizes of the PR-trees and Strong PR-trees produced by these
+      approaches are O (n + m) with respect to the given graph. Furthermore, we demonstrate
+      that an implicit form of the PR-tree and Strong PR-tree can be represented in
+      O (n) space.", "venue": "", "year": 2012, "referenceCount": 0, "citationCount":
+      2, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1798388",
+      "name": "S. Chaplick"}]}, {"paperId": "f6c952628d866f8418533aa4c70e5ca71c888f88",
+      "externalIds": {"MAG": "2053469126", "DBLP": "journals/dam/Babel00", "DOI":
+      "10.1016/S0166-218X(99)00140-7", "CorpusId": 20123365}, "corpusId": 20123365,
+      "publicationVenue": "8287474c-2cf8-4dfe-b1c6-cf6119d879ab", "url": "https://www.semanticscholar.org/paper/f6c952628d866f8418533aa4c70e5ca71c888f88",
+      "title": "Recognition and Isomorphism of Tree-like P4-connected Graphs", "abstract":
+      null, "venue": "Discrete Applied Mathematics", "year": 2000, "referenceCount":
+      18, "citationCount": 9, "influentialCitationCount": 4, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2000-02-01", "journal":
+      {"name": "Discret. Appl. Math.", "pages": "295-315", "volume": "99"}, "authors":
+      [{"authorId": "3213320", "name": "Luitpold Babel"}]}, {"paperId": "b5d5ff30b6ee8307ed167bb45b479fe2cd17e48b",
+      "externalIds": {"MAG": "148236311", "DBLP": "conf/fun/RytterS12", "DOI": "10.1007/978-3-642-30347-0_34",
+      "CorpusId": 41106666}, "corpusId": 41106666, "publicationVenue": "65c96e9a-f50c-4de5-9d90-08c9301d3d34",
+      "url": "https://www.semanticscholar.org/paper/b5d5ff30b6ee8307ed167bb45b479fe2cd17e48b",
+      "title": "Computing Maximum Hamiltonian Paths in Complete Graphs with Tree Metric",
+      "abstract": null, "venue": "Fun with Algorithms", "year": 2012, "referenceCount":
+      4, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2012-06-04", "journal":
+      {"pages": "346-356"}, "authors": [{"authorId": "1687977", "name": "W. Rytter"},
+      {"authorId": "2392894", "name": "Bartosz Szreder"}]}, {"paperId": "53ff71bdce845c27ca44097d4c87792991827664",
+      "externalIds": {"MAG": "2907875989", "DBLP": "conf/isaac/LoS18", "DOI": "10.4230/LIPIcs.ISAAC.2018.38",
+      "CorpusId": 54448302}, "corpusId": 54448302, "publicationVenue": "01259446-be8e-4510-a20c-cf0cb92f2a75",
+      "url": "https://www.semanticscholar.org/paper/53ff71bdce845c27ca44097d4c87792991827664",
+      "title": "A Cut Tree Representation for Pendant Pairs", "abstract": "Two vertices
+      v and w of a graph G are called a pendant pair if the maximal number of edge-disjoint
+      paths in G between them is precisely min{d(v), d(w)}, where d denotes the degree
+      function. The importance of pendant pairs stems from the fact that they are
+      the key ingredient in one of the simplest and most widely used algorithms for
+      the minimum cut problem today. Mader showed 1974 that every simple graph with
+      minimum degree \u03b4 contains \u03a9(\u03b42) pendant pairs; this is the best
+      bound known so far. We improve this result by showing that every simple graph
+      G with minimum degree \u03b4 \u2265 5 or with edge-connectivity \u03bb \u2265
+      4 or with vertex-connectivity \u03ba \u2265 3 contains in fact \u03a9(\u03b4|V
+      |) pendant pairs. We prove that this bound is tight from several perspectives,
+      and that \u03a9(\u03b4|V |) pendant pairs can be computed efficiently, namely
+      in linear time when a Gomory-Hu tree is given. Our method utilizes a new cut
+      tree representation of graphs. 2012 ACM Subject Classification Mathematics of
+      computing \u2192 Graph theory, Mathematics of computing \u2192 Graph algorithms",
+      "venue": "International Symposium on Algorithms and Computation", "year": 2018,
+      "referenceCount": 16, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle", "Conference"], "publicationDate": null,
+      "journal": {"pages": "38:1-38:9"}, "authors": [{"authorId": "22238802", "name":
+      "O. S. Lo"}, {"authorId": "34189607", "name": "Jens M. Schmidt"}]}, {"paperId":
+      "ea4bae1a0113ab6a7b65dd76d7dc8f41628f252f", "externalIds": {"MAG": "2008343880",
+      "DBLP": "journals/ipl/IzsakN12", "DOI": "10.1016/j.ipl.2011.10.001", "CorpusId":
+      1076087}, "corpusId": 1076087, "publicationVenue": "44ecc2bb-f8fd-4c6d-bd54-30ca098be91d",
+      "url": "https://www.semanticscholar.org/paper/ea4bae1a0113ab6a7b65dd76d7dc8f41628f252f",
+      "title": "A note on labeling schemes for graph connectivity", "abstract": null,
+      "venue": "Information Processing Letters", "year": 2012, "referenceCount": 17,
+      "citationCount": 7, "influentialCitationCount": 1, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": null, "journal":
+      {"name": "Inf. Process. Lett.", "pages": "39-43", "volume": "112"}, "authors":
+      [{"authorId": "2040421", "name": "Rani Izsak"}, {"authorId": "1695516", "name":
+      "Zeev Nutov"}]}, {"paperId": "19868844fa517ea03f47feb71042b2629676fc0e", "externalIds":
+      {"CorpusId": 13296182}, "corpusId": 13296182, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/19868844fa517ea03f47feb71042b2629676fc0e",
+      "title": "2 F eb 2 00 5 How to count trees ?", "abstract": "We propose a new
+      topological invariant of unlabeled trees of N nodes. The invariant is a set
+      of N \u00d7 2 matrices of integers, with j k d i,j and vi as the matrix elements,
+      where di,j are the elements of the distance matrix and vi denotes i-th node''s
+      degree and k \u2208 Z. To compare the invariant calculated for possibly different
+      graphs, the matrix rows are ordered with respect to first column, and \u2014
+      if necessary \u2014 with respect to the second one. We use the new invariant
+      to evaluate from below the number of topologically different unlabeled trees
+      up to N = 17. The results slightly exceed the asymptotic evaluation of Otter.",
+      "venue": "", "year": 2005, "referenceCount": 9, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "102699689", "name": "S. Piec"}, {"authorId":
+      "3209892", "name": "K. Malarz"}, {"authorId": "98639388", "name": "K. K. lakowski"}]},
+      {"paperId": "c54a575be47b73220196ba56a03b6131164b3819", "externalIds": {"MAG":
+      "2256395349", "DOI": "10.17969/JN.V13I1.840", "CorpusId": 124538007}, "corpusId":
+      124538007, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c54a575be47b73220196ba56a03b6131164b3819",
+      "title": "IDENTIFY CONNECTIVITY GRAPH USING A MODIFIED PR\u00dcFER\u2019S ALGORITHM
+      LABELLING TREES", "abstract": "Connectivity of graph easily can be given when
+      we see it with the bare of eyes, but needs an algorithm that can assure the
+      connectivity in computerization. Some graphs require the connectivity in their
+      definitions, such as Hamiltonian graph, Eulerian graph and tree. The connectivity
+      become important in order to solve any of graphs'' problems by using computer
+      technology. Most of the algorithm cannot run perfectly, if the graph which is
+      given was not connected. It is happened to Djikstra and Prufer graphs for example.
+      However, this study will provide the solution by modifying Prufer algorithm
+      to show the connectivity in the graph.", "venue": "", "year": 2013, "referenceCount":
+      8, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2013-03-01",
+      "journal": {"name": "", "volume": "13"}, "authors": [{"authorId": "2078170710",
+      "name": "Al Aiyub"}, {"authorId": "103356282", "name": "M. Ihsan"}, {"authorId":
+      "18154757", "name": "Rahma Zuhra"}]}, {"paperId": "c0bd940f051fa2d5a60811e23d17a8f65e4749d4",
+      "externalIds": {"MAG": "2071921460", "DBLP": "journals/dam/NagamochiI02", "DOI":
+      "10.1016/S0166-218X(01)00349-3", "CorpusId": 11364918}, "corpusId": 11364918,
+      "publicationVenue": "8287474c-2cf8-4dfe-b1c6-cf6119d879ab", "url": "https://www.semanticscholar.org/paper/c0bd940f051fa2d5a60811e23d17a8f65e4749d4",
+      "title": "Graph connectivity and its augmentation: applications of MA orderings",
+      "abstract": null, "venue": "Discrete Applied Mathematics", "year": 2002, "referenceCount":
+      83, "citationCount": 48, "influentialCitationCount": 2, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle", "Review"], "publicationDate": "2002-11-15",
+      "journal": {"name": "Discret. Appl. Math.", "pages": "447-472", "volume": "123"},
+      "authors": [{"authorId": "1718956", "name": "H. Nagamochi"}, {"authorId": "1780924",
+      "name": "T. Ibaraki"}]}, {"paperId": "5942616aef4c13559cc08a1b30a92703efbffc15",
+      "externalIds": {"CorpusId": 18995}, "corpusId": 18995, "publicationVenue": null,
+      "url": "https://www.semanticscholar.org/paper/5942616aef4c13559cc08a1b30a92703efbffc15",
+      "title": "MICHAEL J. PELSMAJER Brief Research Summary (October 2007)", "abstract":
+      "Mostly I study graph theory: sometimes more as mathematics (structural, extremal)
+      and sometimes more as computer science (algorithms, complexity), although one
+      often helps with the other, and I have interests (graph drawing, tree-width)
+      that fall squarely in the middle of of the two fields. As for topics, I have
+      not particularly specialized or restricted the types of problems I work on.
+      Rather, as I look back it seems that for the most part, I selected projects
+      based simply on niceness: of a problem, the people involved, and whether there
+      is an application. Unfortunately my style of working makes it harder to quickly
+      summarize my work, even assuming that the reader knows is familiar with basic
+      graph theory concepts (terminology will agree with [84] or [27] whenever possible.)
+      However, this is what I must do next. Unless specified otherwise, all graphs
+      are assumed to be simple, and G is a graph on n vertices.", "venue": "", "year":
+      2007, "referenceCount": 78, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "1709295",
+      "name": "M. J. Pelsmajer"}]}, {"paperId": "6fbd4bab086f429baa2764e38d172c33c8a33737",
+      "externalIds": {"DOI": "10.1515/9783110635485-002", "CorpusId": 241127096},
+      "corpusId": 241127096, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6fbd4bab086f429baa2764e38d172c33c8a33737",
+      "title": "2 The stable marriage problem", "abstract": "A large part of the course
+      will address ways of \u201cdealing\u201d with NP-hard optimization problems.
+      Recall that these are problems that (unless P = NP) do not have polynomial time
+      algorithms. One example is Vertex Cover. A vertex cover is a subset of vertices
+      in a graph such that every edge in the graph is incident on at least one of
+      the vertices. The associated optimization problem, Vertex Cover, is to find
+      a minimal vertex cover\u2014 i.e., one with the smallest possible number of
+      vertices. Here are some ways we will address NP-hard optimization problems:",
+      "venue": "Optimal Transport", "year": 2021, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2021-01-18", "journal": {"name":
+      "Optimal Transport"}, "authors": [{"authorId": "1717488", "name": "D. Melkebeek"}]},
+      {"paperId": "556bb7c8892c0a5b4e467dd9a0ae29eb70606f77", "externalIds": {"CorpusId":
+      44830960}, "corpusId": 44830960, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/556bb7c8892c0a5b4e467dd9a0ae29eb70606f77",
+      "title": "1 : 2 2-Connectivity in Directed Graphs", "abstract": "We survey some
+      recent results on 2-edge and 2-vertex connectivity problems in directed graphs.
+      Despite being complete analogs of the corresponding notions on undirected graphs,
+      in digraphs 2vertex and 2-edge connectivity have a much richer and more complicated
+      structure. It is thus not surprising that 2-connectivity problems on directed
+      graphs appear to be more difficult than on undirected graphs. For undirected
+      graphs it has been known for over 40 years how to compute all bridges, articulation
+      points, 2-edgeand 2-vertex-connected components in linear time, by simply using
+      depth-first search. In the case of digraphs, however, the very same problems
+      have been much more challenging and required the development of new tools and
+      techniques. 1998 ACM Subject Classification E.1 [Graphs and Networks] Trees,
+      F.2.2 [Nonnumerical Algorithms and Problems] Computations on Discrete Structures,
+      G.2.2 [Graph Algorithms] Trees", "venue": "", "year": 2016, "referenceCount":
+      33, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "2317777", "name": "L. Georgiadis"}, {"authorId":
+      "1688493", "name": "G. Italiano"}, {"authorId": "3170658", "name": "Nikos Parotsidis"}]},
+      {"paperId": "4d39232a5b86f1a09a5d0fd88266cca9940dfac6", "externalIds": {"MAG":
+      "2144852945", "DOI": "10.1109/TCS.1985.1085721", "CorpusId": 122814169}, "corpusId":
+      122814169, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4d39232a5b86f1a09a5d0fd88266cca9940dfac6",
+      "title": "An approximate formula for counting trees in a graph", "abstract":
+      "In the paper, an approximate formula for counting trees in a graph is presented.
+      The formula estimates the change in the number of trees of a reference graph
+      after adding or removing a certain number of lines to obtain a graph with the
+      same number of lines as the graph considered. It is assumed that the reference
+      graph and the graph analyzed have the same number of points. It is also assumed
+      that the number of trees of a reference graph changes with a change in the number
+      of lines identically as in a uniform graph. Special classes of reference graphs
+      are discussed and formulas for counting trees are given.", "venue": "", "year":
+      1985, "referenceCount": 11, "citationCount": 10, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1985-04-01",
+      "journal": {"name": "IEEE Transactions on Circuits and Systems", "pages": "382-385",
+      "volume": "32"}, "authors": [{"authorId": "49421541", "name": "J. Wojciechowski"}]},
+      {"paperId": "4e17e6fdead0569cb58599db02f3c2ad88e6b717", "externalIds": {"MAG":
+      "2314818410", "DOI": "10.1080/0025570X.1988.11977392", "CorpusId": 124525843},
+      "corpusId": 124525843, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4e17e6fdead0569cb58599db02f3c2ad88e6b717",
+      "title": "Tangents to Graphs", "abstract": "Informally the tangent at a point
+      PO to a curve C is the line through PO whose direction is the limit of the direction
+      of the secant POP as P approaches PO along C. We cannot interpret \"P approaches
+      PO along C\" as \"the arc-length PPO approaches zero\" unless we restrict ourselves
+      to rectifiable curves. We therefore interpret it as \"P is on C and close to
+      PO\". We do not want to go into the tricky question of precisely what a curve
+      is, so we allow our definition to apply to any set of points.", "venue": "",
+      "year": 1988, "referenceCount": 1, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1988-12-01",
+      "journal": {"name": "Mathematics Magazine", "pages": "292-294", "volume": "61"},
+      "authors": [{"authorId": "145303470", "name": "H. Thurston"}]}, {"paperId":
+      "87f8c7e5d93dc3f8e376bcc117d5917a3ef42105", "externalIds": {"DBLP": "conf/wg/1992",
+      "MAG": "2487390077", "DOI": "10.1007/3-540-56402-0", "CorpusId": 1572251}, "corpusId":
+      1572251, "publicationVenue": "2f5d0e8a-faad-4f10-b323-2b2e3c439a78", "url":
+      "https://www.semanticscholar.org/paper/87f8c7e5d93dc3f8e376bcc117d5917a3ef42105",
+      "title": "Graph-Theoretic Concepts in Computer Science", "abstract": null, "venue":
+      "Lecture Notes in Computer Science", "year": 1992, "referenceCount": 0, "citationCount":
+      1, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://link.springer.com/content/pdf/bfm:978-3-540-47554-5/1?pdf=chapter%20toc",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "657"},
+      "authors": [{"authorId": "1744120", "name": "F. Fomin"}]}, {"paperId": "bc273d1ef032da0def56f9824d5b4d2ccdf28f23",
+      "externalIds": {"MAG": "2608652533", "DOI": "10.7494/OPMATH.2017.37.4.501",
+      "CorpusId": 20668424}, "corpusId": 20668424, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/bc273d1ef032da0def56f9824d5b4d2ccdf28f23",
+      "title": "Spanning trees with a bounded number of leaves", "abstract": "In 1998,
+      H. Broersma and H. Tuinstra proved that: Given a connected graph \\(G\\) with
+      \\(n\\geq 3\\) vertices, if \\(d(u)+d(v)\\geq n-k+1\\) for all non-adjacent
+      vertices \\(u\\) and \\(v\\) of \\(G\\) (\\(k\\geq 1\\)), then \\(G\\) has a
+      spanning tree with at most \\(k\\) leaves. In this paper, we generalize this
+      result by using implicit degree sum condition of \\(t\\) (\\(2\\leq t\\leq k\\))
+      independent vertices and we prove what follows: Let \\(G\\) be a connected graph
+      on \\(n\\geq 3\\) vertices and \\(k\\geq 2\\) be an integer. If the implicit
+      degree sum of any \\(t\\) independent vertices is at least \\(\\frac{t(n-k)}{2}+1\\)
+      for (\\(k\\geq t\\geq 2\\)), then \\(G\\) has a spanning tree with at most \\(k\\)
+      leaves.", "venue": "", "year": 2017, "referenceCount": 13, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"name": "Opuscula Mathematica", "pages":
+      "501-508", "volume": "37"}, "authors": [{"authorId": "3165098", "name": "Junqing
+      Cai"}, {"authorId": "3262237", "name": "E. Flandrin"}, {"authorId": "2152297901",
+      "name": "Hao Li"}, {"authorId": "2112590308", "name": "Qiang Sun"}]}, {"paperId":
+      "30287549b01c0846d04be53574b4525f4b61fcb6", "externalIds": {"MAG": "806160400",
+      "CorpusId": 118380540}, "corpusId": 118380540, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/30287549b01c0846d04be53574b4525f4b61fcb6",
+      "title": "Disjoint euclidean paths problem (DEPP)", "abstract": "Note: PRO 91.03
+      Reference ROSO-CONF-1991-001 Record created on 2006-02-13, modified on 2016-08-08",
+      "venue": "", "year": 1991, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"name": "", "pages": "10", "volume":
+      ""}, "authors": [{"authorId": "2159430", "name": "T. Liebling"}]}, {"paperId":
+      "12bc78410570753c46db1f61e2250440d39c2fc2", "externalIds": {"MAG": "2503004676",
+      "CorpusId": 56074483}, "corpusId": 56074483, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/12bc78410570753c46db1f61e2250440d39c2fc2",
+      "title": "A Lower Bound on the Degree Distance in a Tree", "abstract": "For
+      a graph G =( V,E), the degree distance of G is defined as DD(G )= {u,v}\u2286V
+      (G) (dG(u )+ dG(v))dG(u,v) where dG(u) (or d(u)) is the degree of the vertex
+      uG , and dG(u,v )i s the distance between u and v. This paper gets a lower bound
+      on the degree distance in a tree in terms of the order and diameter of the tree.
+      Mathematics Subject Classification: 05C05, 05C12", "venue": "", "year": 2010,
+      "referenceCount": 9, "citationCount": 10, "influentialCitationCount": 1, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1937986", "name":
+      "Shubo Chen"}, {"authorId": "2116390163", "name": "Zhijun Guo"}]}, {"paperId":
+      "565d3857b8f6838bd66aea49733c4e3389a8c188", "externalIds": {"MAG": "2385244139",
+      "CorpusId": 124587805}, "corpusId": 124587805, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/565d3857b8f6838bd66aea49733c4e3389a8c188",
+      "title": "A Polynomial Algorithm for Double-Weight Arborescence", "abstract":
+      "In this paper, according to a real example, we build the model of finding the
+      minimum parametric double-weight arborescence in a double-weight directed graph.
+      By solving a series of other problems p2(l), we deduce an algorithm which is
+      polynomial and produces the desired arborescence.", "venue": "", "year": 2002,
+      "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "2103487151", "name": "Tang Ze-ying"}]},
+      {"paperId": "76e3749acb06db8a04d2d19cff03ca5af60e9da1", "externalIds": {"MAG":
+      "2613982400", "CorpusId": 125578588}, "corpusId": 125578588, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/76e3749acb06db8a04d2d19cff03ca5af60e9da1",
+      "title": "Connections between labellings of trees", "abstract": "There are many
+      long-standing conjectures related with some labellings of trees. It is important
+      to connect labellings that are related with conjectures. We find some connections
+      between known labellings of simple graphs.", "venue": "", "year": 2017, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2017-04-01", "journal": {"name":
+      "Bulletin of The Iranian Mathematical Society", "pages": "275-283", "volume":
+      "43"}, "authors": [{"authorId": "145323141", "name": "B. Yao"}, {"authorId":
+      "49544451", "name": "X. Liu"}, {"authorId": "100573736", "name": "M. Yao"}]},
+      {"paperId": "fb20cd2ae4da866a9f8fa54de724d367f09ff235", "externalIds": {"DBLP":
+      "journals/dm/Peroche83", "MAG": "2013751569", "DOI": "10.1016/0012-365X(83)90121-8",
+      "CorpusId": 42546040}, "corpusId": 42546040, "publicationVenue": "2f38f299-9909-4c8e-a12e-76fca8afb42e",
+      "url": "https://www.semanticscholar.org/paper/fb20cd2ae4da866a9f8fa54de724d367f09ff235",
+      "title": "On several sorts of connectivity", "abstract": null, "venue": "Discrete
+      Mathematics", "year": 1983, "referenceCount": 4, "citationCount": 21, "influentialCitationCount":
+      1, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "Discret. Math.", "pages": "267-277", "volume": "46"},
+      "authors": [{"authorId": "2798115", "name": "B. P\u00e9roche"}]}, {"paperId":
+      "409fb15809f4612d5b8c2f76a48feb2fa0dcf094", "externalIds": {"CorpusId": 7719533},
+      "corpusId": 7719533, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/409fb15809f4612d5b8c2f76a48feb2fa0dcf094",
+      "title": "2 Relations on Graphs", "abstract": "So far, trees are defined formally
+      as \u201ctree domains\u201d (TDom \u2286 P(L(N))). Informally, we know that
+      graphs can model some trees. To reason about properties of trees, we define
+      the following functions: sub(T , i) \u2208 TDom\u00d7N\u21c0 TDom := {l | (i
+      :: l) \u2208 T} sub(T ,p) \u2208 TDom\u00d7L(N) \u21c0 TDom := {l | (p@l) \u2208
+      T} Sub(T) \u2208 TDom\u2192 P(TDom) := {sub(T ,p) | p \u2208 L(N)} These functions
+      compute the n-th direct subtree, the subtree reached on path p, and the set
+      of all subtrees of some tree domain T . This leads us to the central definition:
+      Definition 1.1 (Regular Tree) A tree domain T is called regular iff Sub(T) is
+      finite, i.e. there are only finitely many different subtrees. To talk about
+      graphs, we need to define them formally: Definition 1.2 (Graph) A graph G =
+      (V, E) consists of a set V \u2286 N of nodes and an edge function E \u2208 V
+      \u00d7 N \u21c0 V such that \u2200v \u2208 V \u2203n \u2208 N : {m \u2208 N
+      | (v,m) \u2208 Dom(E)} = {0, . . . , n\u2212 1}. A graph is called finite if
+      its node set V is finite. You might know this definition of graphs from automata
+      theory: V is usually called the set of states, and E the transition function.
+      Let\u2019s connect our definitions of trees and graphs now. We can define the
+      extension of the transition function E: . \u2208 V \u00d7L(N) \u2192 V \u222a
+      {\u22a5} Let m \u2208 N, p \u2208 L(N). Then", "venue": "", "year": 2004, "referenceCount":
+      7, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "38448160", "name": "Guido Tack"}]}, {"paperId":
+      "7efc39fd108df88049b06bf37b23a627dcab729f", "externalIds": {"CorpusId": 14922096},
+      "corpusId": 14922096, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7efc39fd108df88049b06bf37b23a627dcab729f",
+      "title": "Graph Connectivity and Network Coding", "abstract": "Graph Connectivity
+      and Network Coding LEUNG, Kai Man Master of Philosophy Department of Computer
+      Science and Engineering The Chinese University of Hong Kong 2011 In this thesis
+      we present a new algebraic formulation to compute edge connectivities in a directed
+      graph, using the ideas developed in network coding. This reduces the problem
+      of computing edge connectivities to solving systems of linear equations, thus
+      allowing us to use tools in linear algebra to design new algorithms. Using the
+      algebraic formulation we obtain faster algorithms for computing single source
+      edge connectivities and all pairs edge connectivities, in some settings the
+      amortized time to compute the edge connectivity for one pair is sublinear. Through
+      this connection, we have also found an interesting use of expanders and superconcentrators
+      to design fast algorithms for some graph connectivity problems.", "venue": "",
+      "year": 2011, "referenceCount": 63, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "120973945",
+      "name": "K. Man"}]}, {"paperId": "956a3fe42ef644650d4674fac13c9496ce9c296b",
+      "externalIds": {"CorpusId": 59456304}, "corpusId": 59456304, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/956a3fe42ef644650d4674fac13c9496ce9c296b",
+      "title": "Rooted Tree Arithmetic and Equations\u2217", "abstract": "We propose
+      a new arithmetic for non-empty rooted unordered trees simply called trees. After
+      discussing tree representation and enumeration, we define the operations of
+      tree addition, multiplication and stretch, prove their properties, and show
+      that all trees can be generated from a starting tree of one vertex. We then
+      show how a given tree can be obtained as the sum or product of two trees, thus
+      defining prime trees with respect to addition and multiplication. In both cases
+      we show how primality can be decided in time polynomial in the number of vertices
+      and we prove that factorization is unique. We then define negative trees and
+      suggest dealing with tree equations, giving some preliminary results. Finally
+      we comment on how our arithmetic might be useful, and discuss preceding studies
+      that have some relations with our. To the best of our knowledge our approach
+      and results are completely new aside for a similar proposal deposited as an
+      arXiv manuscript [6]. 1 Basic properties and notation \u2022 We refer to rooted
+      unordered trees simply called trees. Our trees are non empty. 1 denotes the
+      tree containing exactly one vertex, and is the basic element of our theory.
+      \u2022 In a tree T , r (T ) denotes the root of T ; x \u2208 T denotes any of
+      its vertices; nT and eT respectively denote the numbers of vertices and leaves.
+      A subtree is the tree composed of a vertex x and all its descendants in T .
+      The subtrees routed at the children of x are called subtrees of x. sT denotes
+      the number of subtrees of r (T ). \u2022 A tree T can be represented as a binary
+      sequences ST (the original reference for ordered trees is [10]). In our scheme
+      T is traversed in left to right preorder inserting 1 in the sequence for each
+      vertex encountered, and inserting 0 for each move backwards. Then ST is composed
+      of 2n bits as shown in Figure 1, and has the recursive structure 1 S1 . . .
+      Sk 0, where the Si are the sequences representing the subtrees of r (T ). The
+      sequences for tree 1 is 10. Note that all the prefixes of ST have more 1\u2019s
+      than 0\u2019s except for the whole sequence that has as many 1\u2019s as 0\u2019s.
+      Since T is unordered, the order in which the subsequences Si appear in ST is
+      immaterial (i.e., in general many different sequences represent T ). However
+      a canonical form for trees \u2217Many thanks are due to Federico Poloni and
+      Mahdi Amani for their comments and suggestions. 1 ar X iv :1 51 0. 05 51 2v
+      3 [ cs .D M ] 1 F eb 2 01 6 Figure 1: Tree representation as a binary sequence.
+      S1, S2, S3 represent the subtrees of the root of T . Figure 2: The canonical
+      families of trees F1 to F6 and the corresponding tree enumeration. is established
+      so that their sequences will be uniquely determined, and will result to be ordered
+      for increasing values if interpreted as binary numbers. To this end the trees
+      are grouped into consecutive families F1,F2, . . . as shown in Figure 2, where
+      Fi contains the trees of i vertices. So the trees are ordered for increasing
+      number of vertices, and inside each family the ordering is determined by the
+      canonical form as follows. Trees and sequences are then numbered with increasing
+      natural numbers. \u2022 If the sequences are interpreted as binary numbers,
+      for two trees U, T with nU < nT we have SU < ST because the initial character
+      of each sequence is 1 and SU is shorter than ST . This is consistent with the
+      property that the trees of FnU precede the trees of FnT in the ordering. \u2022
+      The families F1,F2 contain one tree each numbered 1, 2. \u2022 The ordering
+      of the trees in Fn>2 is based on the ordering of the preceding families. Consider
+      the multisets of positive integers whose sum is n\u2212 1. E.g., for n = 6 these
+      multisets are: 1,1,1,1,1 1,1,1,2 1,1,3 1,2,2 1,4 2,3 5 ordered for non-decreasing
+      value of the digits left to right. Each multiset corresponds to a group of consecutive",
+      "venue": "", "year": 2016, "referenceCount": 10, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "1719153", "name": "F. Luccio"}]},
+      {"paperId": "2f037ae0552871e800c3211aba9bd8416bf67c89", "externalIds": {"MAG":
+      "2112489800", "CorpusId": 14067287}, "corpusId": 14067287, "publicationVenue":
+      "8e4b9268-a6c4-4a2b-a02e-7d89e12202ae", "url": "https://www.semanticscholar.org/paper/2f037ae0552871e800c3211aba9bd8416bf67c89",
+      "title": "A new path algebra for finding paths in graphs", "abstract": "Path
+      problems in graphs can generally be formulated and solved by using a suitable
+      algebraic structure whose instances are called path algebras. Each type of path
+      problem requires a different instance of the structure. In this paper we consider
+      a new path algebra, which can be applied for finding one path between any pair
+      of nodes in a graph. We prove that our proposed solution is correct and computationally
+      efficient", "venue": "International Conference on Information Technology Interfaces",
+      "year": 2004, "referenceCount": 9, "citationCount": 4, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["Conference"], "publicationDate": "2004-06-07",
+      "journal": {"name": "26th International Conference on Information Technology
+      Interfaces, 2004.", "pages": "657-662 Vol.1"}, "authors": [{"authorId": "34488686",
+      "name": "R. Manger"}]}, {"paperId": "c29c51bf234ef1d8789d7c4f122e89c64c41aff2",
+      "externalIds": {"MAG": "1642842063", "DOI": "10.1007/978-1-4757-3188-0_5", "CorpusId":
+      118965482}, "corpusId": 118965482, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c29c51bf234ef1d8789d7c4f122e89c64c41aff2",
+      "title": "An exercise in graph theory", "abstract": null, "venue": "", "year":
+      2000, "referenceCount": 0, "citationCount": 10, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "2000-09-01", "journal": {"name": "", "pages": "41-74",
+      "volume": ""}, "authors": [{"authorId": "12725412", "name": "J. S. Moore"}]},
+      {"paperId": "4c36de57235d5800e1f7794cd2e6ad96944f46ba", "externalIds": {"MAG":
+      "2115327685", "DOI": "10.3990/1.978-9036523707", "CorpusId": 154447497}, "corpusId":
+      154447497, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c36de57235d5800e1f7794cd2e6ad96944f46ba",
+      "title": "Sparse cuts, matching-cuts and leafy trees in graphs", "abstract":
+      "In this thesis, three di\u00aeerent graph concepts are studied. A graph (V;E)
+      consists of a set of vertices V and a set of edges E. Graphs are often used
+      as a model for telecommunication networks, where the nodes of the network are
+      represented by the vertices, and an edge is present between two vertices if
+      the corresponding nodes are joined by a direct connection in the network. The
+      two vertices joined by an edge are called its end vertices, and these two vertices
+      are neighbors of each other. The degree of a vertex is its number of neighbors.
+      The problems in this thesis can be explained and motivated using applications
+      in the area of network design and analysis.", "venue": "", "year": 2006, "referenceCount":
+      51, "citationCount": 15, "influentialCitationCount": 1, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://ris.utwente.nl/ws/files/299123195/thesis_Bonsma.pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2006-06-28", "journal": {"name":
+      "", "volume": ""}, "authors": [{"authorId": "1766980", "name": "P. Bonsma"}]},
+      {"paperId": "91db6953c468d934ad694f3fa3015888da11e554", "externalIds": {"MAG":
+      "2171261902", "CorpusId": 124427471}, "corpusId": 124427471, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/91db6953c468d934ad694f3fa3015888da11e554",
+      "title": "An O(n2) maximal planarization algorithm based on PQ-trees", "abstract":
+      "In this paper we investigate the problem how to delete a number of edges from
+      a nonplanar graph G such that the resulting graph G\u2019 is maximal planar,
+      i.e., such that we cannot add an edge e E G \u2013 G\u2019 to G\u2019 without
+      destroying planarity. Actually, our algorithm is a corrected and more generalized
+      version of the maximal planarization algorithm of Jayakumar et al., based on
+      the planarity testing algorithm using PQ-trees of Booth & Lucker. Our algorithm
+      can be implemented to run in O(n\u00b2) time.", "venue": "", "year": 1992, "referenceCount":
+      0, "citationCount": 41, "influentialCitationCount": 3, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "", "volume":
+      ""}, "authors": [{"authorId": "144399130", "name": "G. Kant"}]}, {"paperId":
+      "7e2ed222327072e9397317272d46745f5be7cff9", "externalIds": {"MAG": "2000675724",
+      "DOI": "10.1142/S0129183105008114", "CorpusId": 14367739}, "corpusId": 14367739,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7e2ed222327072e9397317272d46745f5be7cff9",
+      "title": "How To Count Trees", "abstract": "We propose a new topological invariant
+      of unlabeled trees of N nodes. The invariant is a set of N\u00d72 matrices of
+      integers, with \u2211j kdi, j and vi as the matrix elements, where di, j are
+      the elements of the distance matrix and vi denotes ith node''s degree and k\u2208\u2115.
+      To compare the invariant calculated for possibly different graphs, the matrix
+      rows are ordered with respect to the first column, and, if necessary, with respect
+      to the second one. We use the new invariant to evaluate from below the number
+      of topologically different unlabeled trees up to N =17. The results slightly
+      exceed the asymptotic evaluation of Otter.", "venue": "", "year": 2005, "referenceCount":
+      12, "citationCount": 2, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://arxiv.org/pdf/cond-mat/0501594", "status":
+      "GREEN"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2005-10-01", "journal": {"name":
+      "International Journal of Modern Physics C", "pages": "1527-1534", "volume":
+      "16"}, "authors": [{"authorId": "102699689", "name": "S. Piec"}, {"authorId":
+      "3209892", "name": "K. Malarz"}, {"authorId": "35283720", "name": "K. Ku\u0142akowski"}]},
+      {"paperId": "b0ca9b00b3a82a0b155aee04dd496a91d868c092", "externalIds": {"MAG":
+      "2034321641", "DOI": "10.1109/13.34180", "CorpusId": 62682292}, "corpusId":
+      62682292, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b0ca9b00b3a82a0b155aee04dd496a91d868c092",
+      "title": "A note on definitions of trees", "abstract": "A number of definitions
+      of trees appear in various courses of a computer engineering curriculum such
+      as circuits or data structures. It is shown that a commonly used recursive definition
+      of a tree is equivalent to a graph-theoretic definition. This puts the recursive
+      definition in a better perspective relative to the various equivalent forms
+      of graph-based trees. Pedagogically, as both types of definitions are often
+      introduced to students even in the same course, this approach should provide
+      a strong basis for students to understand their relationship. >", "venue": "",
+      "year": 1989, "referenceCount": 0, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "1989-08-01", "journal": {"name": "IEEE Transactions
+      on Education", "pages": "396-398", "volume": "32"}, "authors": [{"authorId":
+      "1707980", "name": "F. Petry"}, {"authorId": "47197659", "name": "R. P. Tucci"}]},
+      {"paperId": "a5bf5c7b1c31306cf51d405d3ce38728454b6ccf", "externalIds": {"MAG":
+      "2083394054", "DBLP": "journals/ipl/Reif87", "DOI": "10.1016/0020-0190(87)90095-0",
+      "CorpusId": 9520804}, "corpusId": 9520804, "publicationVenue": "44ecc2bb-f8fd-4c6d-bd54-30ca098be91d",
+      "url": "https://www.semanticscholar.org/paper/a5bf5c7b1c31306cf51d405d3ce38728454b6ccf",
+      "title": "A Topological Approach to Dynamic Graph Connectivity", "abstract":
+      null, "venue": "Information Processing Letters", "year": 1987, "referenceCount":
+      15, "citationCount": 45, "influentialCitationCount": 1, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1987-04-20", "journal":
+      {"name": "Inf. Process. Lett.", "pages": "65-70", "volume": "25"}, "authors":
+      [{"authorId": "1749706", "name": "J. Reif"}]}, {"paperId": "b8910901ed9e01c05f43546bf319bb9187cdf1dd",
+      "externalIds": {"CorpusId": 18092987}, "corpusId": 18092987, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/b8910901ed9e01c05f43546bf319bb9187cdf1dd",
+      "title": "Ja n 20 05 How to count trees ?", "abstract": "We propose a new topological
+      invariant of unlabeled trees of N nodes. The invariant is a N \u00d7 2 matrix
+      of integers, with j 2 d i,j and vi as the matrix elements, where di,j are the
+      elements of the distance matrix and vi denotes i-th node''s degree. To compare
+      the invariant calculated for possibly different graphs, the matrix rows are
+      ordered with respect to first column, and \u2014 if necessary \u2014 with respect
+      to the second one. We use the new invariant to evaluate from below the number
+      of topologically different unlabeled trees up to N = 17. The results slightly
+      exceed the asymptotic evaluation of Otter.", "venue": "", "year": 2005, "referenceCount":
+      10, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "102699689", "name": "S. Piec"}, {"authorId":
+      "3209892", "name": "K. Malarz"}, {"authorId": "98639388", "name": "K. K. lakowski"}]},
+      {"paperId": "44ba2ac3658e9360247ca3af2116710484cde26b", "externalIds": {"ArXiv":
+      "1911.11494", "CorpusId": 235732408}, "corpusId": 235732408, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/44ba2ac3658e9360247ca3af2116710484cde26b",
+      "title": "The Sitting Closer to Friends than Enemies Problem in Trees", "abstract":
+      "A metric space $\\mathcal{T}$ is a \\emph{real tree} if for any pair of points
+      $x, y \\in \\mathcal{T}$ all topological embeddings $\\sigma$ of the segment
+      $[0,1]$ into $\\mathcal{T}$, such that $\\sigma (0)=x$ and $\\sigma (1)=y$,
+      have the same image (which is then a geodesic segment from $x$ to $y$). A \\emph{signed
+      graph} is a graph where each edge has a positive or negative sign. The \\emph{Sitting
+      Closer to Friends than Enemies} problem in trees has a signed graph $S$ as an
+      input. The purpose is to determine if there exists an injective mapping (called
+      \\emph{valid distance drawing}) from $V(S)$ to the points of a real tree such
+      that, for every $u \\in V(S)$, for every positive neighbor $v$ of $u$, and negative
+      neighbor $w$ of $u$, the distance between $v$ and $u$ is smaller than the distance
+      between $w$ and $u$. In this work, we show that a complete signed graph has
+      a valid distance drawing in a real tree if and only if its subgraph composed
+      of all (and only) its positive edges has an intersection representation by unit
+      balls in a real tree. Besides, as an instrumental result, we show that a graph
+      has an intersection representation by unit balls in a real tree if and only
+      if it has an intersection representation by proper balls, and if and only if
+      it has an intersection representation by arbitrary balls in a real tree.", "venue":
+      "", "year": 2019, "referenceCount": 16, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2019-11-26",
+      "journal": null, "authors": [{"authorId": "145927996", "name": "R. Becerra"},
+      {"authorId": "145040052", "name": "Christopher Thraves Caro"}]}, {"paperId":
+      "ac95dd1989e891d75fc7daa45adeda9dfab50247", "externalIds": {"MAG": "2142314838",
+      "DOI": "10.1287/TRSC.8.1.75", "CorpusId": 121931755}, "corpusId": 121931755,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ac95dd1989e891d75fc7daa45adeda9dfab50247",
+      "title": "Letter to the Editor\u2014On Finding the Absolute and Vertex Centers
+      of a Tree with Distances", "abstract": "We show that a modification of an algorithm
+      that was proposed by A. J. Goldman yields a simpler and more efficient method
+      to locate the absolute and vertex centers of a tree.", "venue": "", "year":
+      1974, "referenceCount": 0, "citationCount": 33, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "1974-02-01", "journal": {"name": "Transportation Science", "pages": "75-77",
+      "volume": "8"}, "authors": [{"authorId": "2612383", "name": "S. Halfin"}]},
+      {"paperId": "4b148178dc02c2be49d3f7a345e3bef5ad2d24ac", "externalIds": {"MAG":
+      "2911416038", "DBLP": "journals/dm/HansenHQ97", "DOI": "10.1016/S0012-365X(96)00187-2",
+      "CorpusId": 15219368}, "corpusId": 15219368, "publicationVenue": "2f38f299-9909-4c8e-a12e-76fca8afb42e",
+      "url": "https://www.semanticscholar.org/paper/4b148178dc02c2be49d3f7a345e3bef5ad2d24ac",
+      "title": "Splitting trees", "abstract": null, "venue": "Discrete Mathematics",
+      "year": 1997, "referenceCount": 7, "citationCount": 16, "influentialCitationCount":
+      3, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "1997-03-15", "journal": {"name": "Discret. Math.", "pages": "403-419", "volume":
+      "165-166"}, "authors": [{"authorId": "144250254", "name": "P. Hansen"}, {"authorId":
+      "144324792", "name": "A. Hertz"}, {"authorId": "2403178", "name": "Nicolas Quinodoz"}]},
+      {"paperId": "d410403037e8a32ea598c7dd104bf0bf5b8fd55b", "externalIds": {"MAG":
+      "2586392344", "DOI": "10.1112/BLMS/18.6.630", "CorpusId": 261427188}, "corpusId":
+      261427188, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d410403037e8a32ea598c7dd104bf0bf5b8fd55b",
+      "title": "ALGORITHMIC GRAPH THEORY", "abstract": "Exercise 1 The treewidth of
+      a graph G can also be defined via the minimum number of cops needed to succeed
+      in the pursuitevasion game defined in the lecture. Show that the minimum number
+      of cops needed to always win the game in finite time is k + 1 iff G\u2019s tree
+      width is k. For the \u201d\u21d2\u201d direction, it is enough to describe informally
+      how a tree decomposition can be derived from a pursuit strategy, and why it
+      fits the definition.", "venue": "", "year": 1986, "referenceCount": 5, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1986-11-01", "journal": {"name":
+      "Bulletin of The London Mathematical Society", "pages": "630-631", "volume":
+      "18"}, "authors": [{"authorId": "2835986", "name": "Rebecca Reiffenh\u00e4user"}]},
+      {"paperId": "63cb2dabb551f55907c6b6dce1a87bea7a590fb8", "externalIds": {"MAG":
+      "2950318982", "DBLP": "journals/combinatorics/HamburgerHK07", "DOI": "10.37236/1020",
+      "CorpusId": 2718292}, "corpusId": 2718292, "publicationVenue": "98ea9a6a-c9d7-4b4e-97ec-ee582bd62fa2",
+      "url": "https://www.semanticscholar.org/paper/63cb2dabb551f55907c6b6dce1a87bea7a590fb8",
+      "title": "On Directed Triangles in Digraphs", "abstract": "Using a recent result
+      of Chudnovsky, Seymour, and Sullivan, we slightly improve two bounds related
+      to the Caccetta-Haggkvist Conjecture. Namely, we show that if $\\alpha\\geq
+      0.35312$, then each $n$-vertex digraph $D$ with minimum outdegree at least $\\alpha
+      n$ has a directed $3$-cycle. If $\\beta\\geq 0.34564$, then every $n$-vertex
+      digraph $D$ in which the outdegree and the indegree of each vertex is at least
+      $\\beta n$ has a directed $3$-cycle.", "venue": "Electronic Journal of Combinatorics",
+      "year": 2007, "referenceCount": 7, "citationCount": 43, "influentialCitationCount":
+      12, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v14i1n19/pdf",
+      "status": "GOLD"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "2007-09-07", "journal": {"name": "Electron.
+      J. Comb.", "volume": "14"}, "authors": [{"authorId": "1716909", "name": "P.
+      Hamburger"}, {"authorId": "1726921", "name": "P. Haxell"}, {"authorId": "1679407",
+      "name": "A. Kostochka"}]}, {"paperId": "afbe8fefba10e64000f34940afc368b4be23e2c7",
+      "externalIds": {"MAG": "2541059431", "DOI": "10.1007/978-3-319-42937-3_15",
+      "CorpusId": 125849932}, "corpusId": 125849932, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/afbe8fefba10e64000f34940afc368b4be23e2c7",
+      "title": "Directed and Undirected Graphs", "abstract": null, "venue": "", "year":
+      2016, "referenceCount": 28, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"name": "", "pages": "121-127", "volume":
+      ""}, "authors": [{"authorId": "34936995", "name": "G. Mazzola"}, {"authorId":
+      "2943731", "name": "Maria Mannone"}, {"authorId": "49789559", "name": "Yan Pang"}]},
+      {"paperId": "5e4341c243f8dacd145ff625dcc1231960bc2839", "externalIds": {"MAG":
+      "970419232", "DOI": "10.1007/978-1-4613-0105-9_40", "CorpusId": 161608365},
+      "corpusId": 161608365, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5e4341c243f8dacd145ff625dcc1231960bc2839",
+      "title": "Seventeen Open Problems", "abstract": null, "venue": "", "year": 2001,
+      "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["History"], "s2FieldsOfStudy":
+      [{"category": "History", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "", "pages": "516-520", "volume": ""}, "authors": [{"authorId":
+      "70054199", "name": "Y. F\u00e9lix"}, {"authorId": "50659135", "name": "S. Halperin"},
+      {"authorId": "2115544044", "name": "Jean-Claude Thomas"}]}, {"paperId": "e01c0c8c212280bbfe3054090f7b5f8de652dd8c",
+      "externalIds": {"MAG": "2892380699", "DBLP": "journals/jam/KolaGN18", "DOI":
+      "10.1155/2018/8186345", "CorpusId": 53294391}, "corpusId": 53294391, "publicationVenue":
+      "7fca2e40-f552-41ac-9a64-d76dc15c981b", "url": "https://www.semanticscholar.org/paper/e01c0c8c212280bbfe3054090f7b5f8de652dd8c",
+      "title": "Infinitely Many Trees with Maximum Number of Holes Zero, One, and
+      Two", "abstract": "<jats:p>An <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M1\"><mml:mi>L</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn mathvariant=\"normal\">2,1</mml:mn><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:math>-coloring of a simple connected graph
+      <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M2\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math>
+      is an assignment <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M3\"><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:math> of nonnegative
+      integers to the vertices of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M4\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math> such that <mml:math
+      xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M5\"><mml:mfenced open=\"|\"
+      close=\"|\" separators=\"|\"><mml:mrow><mml:mi>f</mml:mi><mml:mfenced separators=\"|\"><mml:mrow><mml:mi>u</mml:mi></mml:mrow></mml:mfenced><mml:mo>-</mml:mo><mml:mi>f</mml:mi><mml:mfenced
+      separators=\"|\"><mml:mrow><mml:mi>v</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>\u2a7e</mml:mo><mml:mn
+      mathvariant=\"normal\">2</mml:mn></mml:math> if <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M6\"><mml:mi>d</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>v</mml:mi><mml:mo
+      stretchy=\"false\">)</mml:mo><mml:mo>=</mml:mo><mml:mn mathvariant=\"normal\">1</mml:mn></mml:math>
+      and <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M7\"><mml:mfenced
+      open=\"|\" close=\"|\" separators=\"|\"><mml:mrow><mml:mi>f</mml:mi><mml:mfenced
+      separators=\"|\"><mml:mrow><mml:mi>u</mml:mi></mml:mrow></mml:mfenced><mml:mo>-</mml:mo><mml:mi>f</mml:mi><mml:mfenced
+      separators=\"|\"><mml:mrow><mml:mi>v</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:mfenced><mml:mo>\u2a7e</mml:mo><mml:mn
+      mathvariant=\"normal\">1</mml:mn></mml:math> if <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M8\"><mml:mi>d</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>v</mml:mi><mml:mo
+      stretchy=\"false\">)</mml:mo><mml:mo>=</mml:mo><mml:mn mathvariant=\"normal\">2</mml:mn></mml:math>
+      for all <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M9\"><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>v</mml:mi><mml:mo>\u2208</mml:mo><mml:mi>V</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>,
+      where <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M10\"><mml:mi>d</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>v</mml:mi><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:math> denotes the distance between <mml:math
+      xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M11\"><mml:mrow><mml:mi>u</mml:mi></mml:mrow></mml:math>
+      and <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M12\"><mml:mrow><mml:mi>v</mml:mi></mml:mrow></mml:math>
+      in <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M13\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math>.
+      The span of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M14\"><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:math>
+      is the maximum color assigned by <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M15\"><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:math>. The span of a
+      graph <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M16\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math>,
+      denoted by <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M17\"><mml:mi>\u03bb</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>,
+      is the minimum of span over all <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M18\"><mml:mi>L</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn mathvariant=\"normal\">2,1</mml:mn><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:math>-colorings on <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M19\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math>. An <mml:math
+      xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M20\"><mml:mi>L</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mn mathvariant=\"normal\">2,1</mml:mn><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:math>-coloring of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M21\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math> with span <mml:math
+      xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M22\"><mml:mi>\u03bb</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>
+      is called a span coloring of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M23\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math>. An <mml:math
+      xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M24\"><mml:mi>L</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mn mathvariant=\"normal\">2,1</mml:mn><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:math>-coloring <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M25\"><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:math> is said to be
+      irreducible if there exists no <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M26\"><mml:mi>L</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn mathvariant=\"normal\">2,1</mml:mn><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:math>-coloring g such that <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M27\"><mml:mi>g</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo
+      stretchy=\"false\">)</mml:mo><mml:mo>\u2a7d</mml:mo><mml:mi>f</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>
+      for all <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M28\"><mml:mi>u</mml:mi><mml:mo>\u2208</mml:mo><mml:mi>V</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>
+      and <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M29\"><mml:mi>g</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>v</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo><</mml:mo><mml:mi>f</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>v</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>
+      for some <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M30\"><mml:mi>v</mml:mi><mml:mo>\u2208</mml:mo><mml:mi>V</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>.
+      If <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M31\"><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:math>
+      is an <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M32\"><mml:mi>L</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mn mathvariant=\"normal\">2,1</mml:mn><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:math>-coloring with span <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M33\"><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:math>, then <mml:math
+      xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M34\"><mml:mi>h</mml:mi><mml:mo>\u2208</mml:mo><mml:mfenced
+      open=\"{\" close=\"}\" separators=\"|\"><mml:mrow><mml:mn mathvariant=\"normal\">0,1</mml:mn><mml:mo>,</mml:mo><mml:mn
+      mathvariant=\"normal\">2</mml:mn><mml:mo>,</mml:mo><mml:mo>\u2026</mml:mo><mml:mo>,</mml:mo><mml:mi>k</mml:mi></mml:mrow></mml:mfenced></mml:math>
+      is a hole if there is no <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M35\"><mml:mi>v</mml:mi><mml:mo>\u2208</mml:mo><mml:mi>V</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>
+      such that <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M36\"><mml:mi>f</mml:mi><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>v</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>=</mml:mo><mml:mi>h</mml:mi></mml:math>.
+      The maximum number of holes over all irreducible span colorings of <mml:math
+      xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M37\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math>
+      is denoted by <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M38\"><mml:msub><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mrow><mml:mi>\u03bb</mml:mi></mml:mrow></mml:msub><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:math>.
+      A tree <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M39\"><mml:mrow><mml:mi>T</mml:mi></mml:mrow></mml:math>
+      with maximum degree <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"
+      id=\"M40\"><mml:mrow><mml:mi mathvariant=\"normal\">\u0394</mml:mi></mml:mrow></mml:math>
+      having span <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M41\"><mml:mi
+      mathvariant=\"normal\">\u0394</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant=\"normal\">1</mml:mn></mml:math>
+      is referred to as Type-I tree; otherwise it is Type-II. In this paper, we give
+      a method to construct infinitely many trees with at least one hole from a one-hole
+      tree and infinitely many two-hole trees from a two-hole tree. Also, using the
+      method, we construct infinitely many Type-II trees with maximum number of holes
+      one and two. Further, we give a sufficient condition for a Type-II tree with
+      maximum number of holes zero.</jats:p>", "venue": "Journal of Applied Mathematics",
+      "year": 2018, "referenceCount": 9, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "http://downloads.hindawi.com/journals/jam/2018/8186345.pdf",
+      "status": "GOLD"}, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "external"}, {"category": "Art", "source": "s2-fos-model"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Chemistry", "source":
+      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2018-09-20", "journal":
+      {"name": "J. Appl. Math.", "pages": "8186345:1-8186345:14", "volume": "2018"},
+      "authors": [{"authorId": "2051257", "name": "S. Kola"}, {"authorId": "9424517",
+      "name": "Balakrishna Gudla"}, {"authorId": "144129258", "name": "P. K. Niranjan"}]},
+      {"paperId": "ced09d3f811045ffe6ba52d387318a43c5f1ce89", "externalIds": {"CorpusId":
+      16365725}, "corpusId": 16365725, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ced09d3f811045ffe6ba52d387318a43c5f1ce89",
+      "title": "Problem Set 2-3 Problem 1.1", "abstract": "Let G = (V, E) be a connected
+      graph and g, h be two edge-cost functions such that for all e, e \u2208 E, h(e)
+      \u2264 h(e) \u21d4 g(r) \u2264 g(e). Show there is a single tree which is an
+      MST with respect to g, h. Solution (sketch): We simply show that any tree constructed
+      by Kruskal''s algorithm using the function g, is also a valid output of Kruskal''s
+      algorithm using the function h (recall that Kruskal''s algorithm does not produce
+      a unique tree). To see this, we notice that the cost-functions in Kruskal''s
+      algorithm are only used to select a minimal cost edge. But a minimal cost-edge
+      under the function g is also a minimal-cost edge under the function h and hence,
+      by the correctness of Kruskal, if we run it with cost function g, we also get
+      an MST under the function h. Assume that the edge-costs are time varying and
+      that the cost of an edge e at time t is given by some degree 2 polynomial f
+      e (t). Find the time t at which the cost of the MST of G is minimized. Solution
+      (sketch): The main idea is to partition the time-line into intervals so that,
+      for all values of t within an interval, the ordering of the edges with respect
+      to cost is preserved. Using the observation from the first part, we can then
+      find a single candidate MST per interval and this will be an MST for all times
+      t within that interval. Lastly, we take the smallest candidate. So we are only
+      left with the task of partitioning the time-line. We notice that, if at some
+      time t the ordering of the edge costs changes, then f e (t) = f e (t) for some
+      e, e \u2208 E. Since f e is quadratic, there are at most two solutions to any
+      such equation. Hence, by taking all pairs e, e \u2208 E and finding the solutions
+      of f e (t) = f e (t), we get at most m = 2|E|(|E| \u2212 1)/2 points t 1 ,.
+      .. t m at which the ordering can change. By sorting the points, we can also
+      assume that t 1 \u2264 t 2 ,. .. , \u2264 t m and hence we get our m + 1 time
+      intervals [\u2212\u221e, t 1 ], [t 1 , t 2 ],. .. , [t m\u22121 \u2026", "venue":
+      "", "year": null, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": []}, {"paperId": "6edf478da45763afc3b484d478d67dd848be8ca6",
+      "externalIds": {"MAG": "2089540962", "DOI": "10.1287/MNSC.25.1.105", "CorpusId":
+      207232914}, "corpusId": 207232914, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6edf478da45763afc3b484d478d67dd848be8ca6",
+      "title": "Note\u2014A Simple Edge Elimination Criterion in a Search for the
+      Center of a Graph", "abstract": "This note proposes a new edge elimination criterion
+      in an algorithm whose purpose is to locate the center of a graph. The new criterion
+      requites the same amount of information and computation but generates a stronger
+      lower bound. It therefore reduces substantially the number of edges that have
+      to be checked thoroughly, at a high computational cost, for a possible center
+      point along them.", "venue": "", "year": 1979, "referenceCount": 3, "citationCount":
+      6, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://pubsonline.informs.org/doi/pdf/10.1287/mnsc.25.1.105", "status": "BRONZE"},
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "Management
+      Science", "pages": "105-107", "volume": "25"}, "authors": [{"authorId": "48118154",
+      "name": "J. Halpern"}]}, {"paperId": "2b0eeb1fa404eb835fc0e30429e6e83af77a4d77",
+      "externalIds": {"DBLP": "journals/ijfcs/NarayanaswamyS13", "MAG": "2151153553",
+      "DOI": "10.1142/S0129054113400054", "CorpusId": 28394465}, "corpusId": 28394465,
+      "publicationVenue": "0f60ff8e-f0b7-47a2-9927-2b94f9e44e82", "url": "https://www.semanticscholar.org/paper/2b0eeb1fa404eb835fc0e30429e6e83af77a4d77",
+      "title": "A Unified Framework for Bi(Tri)Connectivity and Chordal Augmentation",
+      "abstract": "For a connected non-complete graph, a vertex separator is a subset
+      of vertices whose deletion increases the number of connected components and
+      the vertex connectivity of the graph refers to the size of a minimum vertex
+      separator. A graph with the vertex connectivity k is said to be k-vertex connected.
+      Given a k-vertex connected graph G, vertex connectivity augmentation determines
+      a smallest set of edges whose augmentation to G makes it (k + 1)-vertex connected.
+      In this paper, we report our study on connectivity augmentation in 1-connected
+      graphs, 2-connected graphs, and k-connected chordal graphs. We first represent
+      the graph under consideration using a \"tree-like\" graph. This tree is unique
+      and explicitly captures the connectivity information of the graph. Using this
+      tree, our proposed data structure maintains the set of equivalence classes based
+      on an equivalence relation on the set of leaves of the tree. This partition
+      determines a set of edges to be augmented to increase the connectivity of the
+      graph by one. Based on our data structure, we present a new combinatorial analysis
+      and an elegant proof of correctness of our linear-time algorithm for an optimum
+      connectivity augmentation. The novelty is in the data structure which is a unified
+      framework for all three augmentations. As far as the run-time analysis is concerned,
+      given the associated tree, our approach yields an augmentation set in linear
+      time.", "venue": "International Journal of Foundations of Computer Science",
+      "year": 2013, "referenceCount": 8, "citationCount": 3, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2013-05-13", "journal": {"name": "Int. J. Found. Comput. Sci.", "pages": "67-94",
+      "volume": "24"}, "authors": [{"authorId": "9884337", "name": "N. Narayanaswamy"},
+      {"authorId": "1693491", "name": "N. Sadagopan"}]}, {"paperId": "e69528b1b977b1452d2950f8461b5bea6690a879",
+      "externalIds": {"DBLP": "conf/soda/PoutreW94", "MAG": "2083418000", "CorpusId":
+      11427008}, "corpusId": 11427008, "publicationVenue": "5545566b-c0b8-418c-83a5-a986a4657572",
+      "url": "https://www.semanticscholar.org/paper/e69528b1b977b1452d2950f8461b5bea6690a879",
+      "title": "Dynamic two-connectivity with backtracking", "abstract": "We give
+      algorithms and data structures that maintain the 2-edge and 2-vertex- connected
+      components of a graph under insertions and deletions of edges and vertices,
+      where dele- tions occur in a backtracking fashion (i.e., deletions undo the
+      insertions in the reverse order). Our algorithms run in (logn) worst-case time
+      per operation and use (n) space, where n is the number of vertices. Using our
+      data structure we can answer queries, which ask whether vertices u and v belong
+      to the same 2-connected component, in (log n) worst-case time.", "venue": "ACM-SIAM
+      Symposium on Discrete Algorithms", "year": 1994, "referenceCount": 37, "citationCount":
+      9, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Computer Science", "source":
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "1994-01-23", "journal": {"pages": "204-212"},
+      "authors": [{"authorId": "2102074", "name": "H. L. Poutr\u00e9"}, {"authorId":
+      "1809902", "name": "J. Westbrook"}]}, {"paperId": "e03042e759495874e3a5c3ed59c42041da85c612",
+      "externalIds": {"DBLP": "journals/endm/AlconGH15", "MAG": "2196828444", "DOI":
+      "10.1016/j.endm.2015.07.025", "CorpusId": 5312188}, "corpusId": 5312188, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/e03042e759495874e3a5c3ed59c42041da85c612",
+      "title": "Pebbling in 2-Paths", "abstract": null, "venue": "Electron. Notes
+      Discret. Math.", "year": 2015, "referenceCount": 10, "citationCount": 9, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2015-12-01", "journal": {"name": "Electron. Notes Discret. Math.", "pages":
+      "145-150", "volume": "50"}, "authors": [{"authorId": "2891026", "name": "L.
+      Alc\u00f3n"}, {"authorId": "143880562", "name": "M. Gutierrez"}, {"authorId":
+      "2813637", "name": "G. Hurlbert"}]}, {"paperId": "23c5af63ab87f826ab7e0bf77664d39b6ec4d223",
+      "externalIds": {"DBLP": "conf/walcom/YamanakaN08a", "MAG": "2126143638", "DOI":
+      "10.7155/jgaa.00174", "CorpusId": 5866531}, "corpusId": 5866531, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/23c5af63ab87f826ab7e0bf77664d39b6ec4d223",
+      "title": "Listing All Plane Graphs", "abstract": "In this paper we give a simple
+      algorithm to generate all connected rooted plane graphs with at most m edges.
+      A \"rooted\" plane graph is a plane graph with one designated (directed) edge
+      on the outer face. The algorithm uses O(m) space and generates such graphs in
+      O(1) time per graph on average without duplications. The algorithm does not
+      output the entire graph but the difference from the previous graph. By modifying
+      the algorithm we can generate all connected (non-rooted) plane graphs with at
+      most m edges in O(m3) time per graph.", "venue": "J. Graph Algorithms Appl.",
+      "year": 2008, "referenceCount": 17, "citationCount": 14, "influentialCitationCount":
+      1, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2008-02-07", "journal": {"name": "J. Graph Algorithms Appl.", "pages": "5-18",
+      "volume": "13"}, "authors": [{"authorId": "1681066", "name": "Katsuhisa Yamanaka"},
+      {"authorId": "1687506", "name": "Shin-Ichi Nakano"}]}, {"paperId": "861bff22c2427c54c8de0f15c8b16eb03077771f",
+      "externalIds": {"MAG": "2008945525", "DOI": "10.1093/TEAMAT/HRP013", "CorpusId":
+      119473881}, "corpusId": 119473881, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/861bff22c2427c54c8de0f15c8b16eb03077771f",
+      "title": "Real world graph connectivity", "abstract": "We present the topic
+      of graph connectivity along with a famous theorem of Menger in the real-world
+      setting of the national computer network infrastructure of National LambdaRail.
+      We include a set of exercises where students reinforce their understanding of
+      graph connectivity by analysing the National LambdaRail network. Finally, we
+      give suggestions for using this module as a project in an undergraduate mathematics
+      course.", "venue": "", "year": 2009, "referenceCount": 0, "citationCount": 0,
+      "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2009-09-01", "journal": {"name":
+      "Teaching Mathematics and Its Applications", "pages": "159-161", "volume": "28"},
+      "authors": [{"authorId": "101630984", "name": "Joy Lind"}, {"authorId": "38907363",
+      "name": "D. Narayan"}]}, {"paperId": "850de428456cbe648c7bfb8a8d10cb186c333b42",
+      "externalIds": {"MAG": "1982886989", "DBLP": "journals/dam/Hurlbert13", "DOI":
+      "10.1016/j.dam.2012.03.010", "CorpusId": 44263153}, "corpusId": 44263153, "publicationVenue":
+      "8287474c-2cf8-4dfe-b1c6-cf6119d879ab", "url": "https://www.semanticscholar.org/paper/850de428456cbe648c7bfb8a8d10cb186c333b42",
+      "title": "General graph pebbling", "abstract": null, "venue": "Discrete Applied
+      Mathematics", "year": 2013, "referenceCount": 73, "citationCount": 30, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2013-06-01", "journal": {"name": "Discret. Appl. Math.",
+      "pages": "1221-1231", "volume": "161"}, "authors": [{"authorId": "2813637",
+      "name": "G. Hurlbert"}]}, {"paperId": "6d915cbd8a02325e735b4af90dbd4b269263f3c5",
+      "externalIds": {"MAG": "2970045796", "CorpusId": 203233532}, "corpusId": 203233532,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6d915cbd8a02325e735b4af90dbd4b269263f3c5",
+      "title": "Allurement of Some Graph Algorithms", "abstract": "The last five decades
+      have witnessed an upsurge of interest and activity in graph theory, particularly
+      among mathematicians and engineers. It has recently emerged as a subject in
+      its own right, as well as being an important mathematical tool in such diverse
+      subjects as operational research, computer science, networking, mobile computing,
+      sociology and many other fields. This book is devoted entirely to computational
+      aspects of graph theory, including graph-theoretic algorithms. The book provide
+      some new algorithms of graph theory such as generation all spanning trees, minimal
+      spanning tree generation, graph colouring algorithm, importance of some special
+      graphs in networking, hiding information and applications of graphs in different
+      areas. The book is useful for graduate and post graduate students of science
+      and engineering and new research scholar to motivate them in the field of graph
+      theory.", "venue": "", "year": 2012, "referenceCount": 0, "citationCount": 0,
+      "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2012-03-14",
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "3084335", "name":
+      "S. Pal"}, {"authorId": "1882382", "name": "S. S. Sarma"}]}, {"paperId": "5023d9b2e6f33238310562edc03f8ee37d34effc",
+      "externalIds": {"CorpusId": 17326515}, "corpusId": 17326515, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/5023d9b2e6f33238310562edc03f8ee37d34effc",
+      "title": "Labeling Schemes 14.1 Adjacency", "abstract": "Imagine you want to
+      repeatedly query a huge graph, e.g., a social or a road network. For example,
+      you might need to find out whether two nodes are connected, or what the distance
+      between two nodes is. Since the graph is so large, you distribute it among multiple
+      servers in your data center. Theorem 14.1. It is possible to assign labels of
+      size 2 log n bits to nodes in a tree so that for every pair u, v of nodes, it
+      is easy to tell whether u is adjacent to v by just looking at u and v''s labels.
+      Proof. Choose a root in the tree arbitrarily so that every non-root node has
+      a parent. The label of each node u consists of two parts: The ID of u (from
+      1 to n), and the ID of u''s parent (or nothing if u is the root). Remarks: \u2022
+      What we have constructed above is called a labeling scheme, more precisely a
+      labeling scheme for adjacency in trees. Formally, a labeling scheme is defined
+      as follows. Definition 14.2. A labeling scheme consists of an encoder e and
+      a decoder d. The encoder e assigns to each node v a label e(v). The decoder
+      d receives the labels of the nodes in question and returns an answer to some
+      query. The largest size (in bits) of a label assigned to a node is called the
+      label size of the labeling scheme. Remarks: \u2022 In Theorem 14.1, the decoder
+      receives two node labels e(u) and e(v), and its answer is Yes or No, depending
+      on whether u and v are adjacent or not. The label size is 2 log n. \u2022 The
+      label size is the complexity measure we are going to focus on in this chapter.
+      The run-time of the encoder and the decoder are two other complexity measures
+      that are studied in the literature.", "venue": "", "year": null, "referenceCount":
+      16, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": []}, {"paperId": "d5f636fd33eb5dfd1294d166a78ccbc54909cdc0",
+      "externalIds": {"MAG": "1999297951", "DOI": "10.1016/0893-9659(93)90116-5",
+      "CorpusId": 119344424}, "corpusId": 119344424, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/d5f636fd33eb5dfd1294d166a78ccbc54909cdc0",
+      "title": "Partitioning the n-cube into sets with mutual distance 1", "abstract":
+      null, "venue": "", "year": 1993, "referenceCount": 1, "citationCount": 2, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.math.uni-bielefeld.de/ahlswede/homepage/public/81.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "1993-07-01", "journal": {"name": "Applied Mathematics
+      Letters", "pages": "17-19", "volume": "6"}, "authors": [{"authorId": "12278872",
+      "name": "A. Blokhuis"}, {"authorId": "1805330", "name": "K. Metsch"}, {"authorId":
+      "144162475", "name": "G. Moorhouse"}, {"authorId": "1743796", "name": "R. Ahlswede"},
+      {"authorId": "1729986", "name": "S. Bezrukov"}]}, {"paperId": "a867daf4878fb8e9b90197c1cebb5ccb92f752f3",
+      "externalIds": {"MAG": "184432384", "DOI": "10.1007/BFB0043820", "CorpusId":
+      117956368}, "corpusId": 117956368, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a867daf4878fb8e9b90197c1cebb5ccb92f752f3",
+      "title": "An algorithm for getting a minimum cut-set of a graph", "abstract":
+      null, "venue": "", "year": 1986, "referenceCount": 2, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "", "pages": "17-24", "volume": ""}, "authors": [{"authorId": "49616149",
+      "name": "I. Arany"}]}, {"paperId": "54b072145a2dbb60ab6ce49da51d71854ed98318",
+      "externalIds": {"DBLP": "journals/corr/abs-2306-14103", "ArXiv": "2306.14103",
+      "DOI": "10.48550/arXiv.2306.14103", "CorpusId": 259252347}, "corpusId": 259252347,
+      "publicationVenue": "1901e811-ee72-4b20-8f7e-de08cd395a10", "url": "https://www.semanticscholar.org/paper/54b072145a2dbb60ab6ce49da51d71854ed98318",
+      "title": "On finding 2-cuts and 3-edge-connected components in parallel", "abstract":
+      "Given a connected undirected multigraph G (a graph that may contain parallel
+      edges), the algorithm of [19] finds the 3-edge-connected components of $G$ in
+      linear time using an innovative graph contraction technique based on a depth-first
+      search. In [21], it was shown that the algorithm can be extended to produce
+      a Mader construction sequence for each 3-edge-connected component, a cactus
+      representation of the 2-cuts (cut-pairs) of each 2-edge-connected component
+      of $G$, and the 1-cuts (bridges) at the same time. In this paper, we further
+      extend the algorithm of [19] to generate the 2-cuts and the 3-edge-connected
+      components of $G$ simultaneously in linear time by performing only one depth-first
+      search over the input graph. Previously known algorithms solve the two problems
+      separately in multiple phases.", "venue": "arXiv.org", "year": 2023, "referenceCount":
+      26, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-06-25", "journal": {"name": "ArXiv", "volume": "abs/2306.14103"},
+      "authors": [{"authorId": "2159047", "name": "Yung H. Tsin"}]}, {"paperId": "3700b2558ce820905993d81462f86c15db24a6f7",
+      "externalIds": {"MAG": "2008436978", "DBLP": "journals/dm/KonheimN73", "DOI":
+      "10.1016/0012-365X(73)90114-3", "CorpusId": 9331802}, "corpusId": 9331802, "publicationVenue":
+      "2f38f299-9909-4c8e-a12e-76fca8afb42e", "url": "https://www.semanticscholar.org/paper/3700b2558ce820905993d81462f86c15db24a6f7",
+      "title": "A note on growing binary trees", "abstract": null, "venue": "Discrete
+      Mathematics", "year": 1973, "referenceCount": 2, "citationCount": 36, "influentialCitationCount":
+      1, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "Discret. Math.", "pages": "57-63", "volume": "4"},
+      "authors": [{"authorId": "2606308", "name": "A. Konheim"}, {"authorId": "28978752",
+      "name": "D. Newman"}]}, {"paperId": "60c1cee5d8d0ae24363ad7c2c827ed2f8a07451d",
+      "externalIds": {"CorpusId": 203602409}, "corpusId": 203602409, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/60c1cee5d8d0ae24363ad7c2c827ed2f8a07451d",
+      "title": "CMSC 420 : Lecture 3 Rooted Trees and Binary Trees", "abstract": "Since
+      we will want to use trees for applications in searching, it will be useful to
+      assign some sense of order and direction to our trees. This will be done by
+      designating a special node, called the root. In the same manner as a family
+      tree, we think of the root as the ancestor of all the other nodes in the tree,
+      or equivalently, the other nodes are descendants of the root. Nodes that have
+      no descendants are called leaves (see Fig. 1(b)). All the others are called
+      internal nodes.", "venue": "", "year": 2019, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "1709509", "name": "D. Mount"}]},
+      {"paperId": "7f0de389496dc9da885130959321a580e5544f08", "externalIds": {"MAG":
+      "2163940503", "DBLP": "conf/soda/Obdrzalek06", "DOI": "10.1145/1109557.1109647",
+      "CorpusId": 14409151}, "corpusId": 14409151, "publicationVenue": "5545566b-c0b8-418c-83a5-a986a4657572",
+      "url": "https://www.semanticscholar.org/paper/7f0de389496dc9da885130959321a580e5544f08",
+      "title": "DAG-width: connectivity measure for directed graphs", "abstract":
+      "Tree-width is a very useful connectivity measure for undirected graphs. We
+      propose a new definition, called DAG-width, for directed graphs which measures
+      how close a graph is to a directed acyclic graph. In addition we define a cops-and-robber
+      game and show that this game characterises exactly the class of graphs of bounded
+      DAG-width. A comparison of DAG-width with tree-width and directed tree-width
+      follows. Finally we show that NP-complete problems can be solved in polynomial
+      time on graphs of bounded DAG-width.", "venue": "ACM-SIAM Symposium on Discrete
+      Algorithms", "year": 2006, "referenceCount": 9, "citationCount": 92, "influentialCitationCount":
+      11, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2006-01-22", "journal": {"pages": "814-821"}, "authors": [{"authorId": "2619678",
+      "name": "J. Obdr\u017e\u00e1lek"}]}, {"paperId": "b6e3f991a632aa101fdceac0eebf4d24b5317545",
+      "externalIds": {"MAG": "2059993753", "DOI": "10.1007/BF01342974", "CorpusId":
+      120717284}, "corpusId": 120717284, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b6e3f991a632aa101fdceac0eebf4d24b5317545",
+      "title": "A note on the number of functional digraphs", "abstract": null, "venue":
+      "", "year": 1961, "referenceCount": 3, "citationCount": 20, "influentialCitationCount":
+      1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "1961-04-01", "journal": {"name": "Mathematische Annalen", "pages": "109-110",
+      "volume": "143"}, "authors": [{"authorId": "35145569", "name": "R. Read"}]},
+      {"paperId": "503aa41c1fe2792ecc8d7d2cd6fca1b147d1f6b7", "externalIds": {"MAG":
+      "2050565077", "DBLP": "journals/dam/CoppersmithV85", "DOI": "10.1016/0166-218X(85)90057-5",
+      "CorpusId": 205054039}, "corpusId": 205054039, "publicationVenue": "8287474c-2cf8-4dfe-b1c6-cf6119d879ab",
+      "url": "https://www.semanticscholar.org/paper/503aa41c1fe2792ecc8d7d2cd6fca1b147d1f6b7",
+      "title": "Solving NP-hard problems in ''almost trees'': Vertex cover", "abstract":
+      null, "venue": "Discrete Applied Mathematics", "year": 1985, "referenceCount":
+      6, "citationCount": 16, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": null, "journal":
+      {"name": "Discret. Appl. Math.", "pages": "27-45", "volume": "10"}, "authors":
+      [{"authorId": "1716227", "name": "D. Coppersmith"}, {"authorId": "1727975",
+      "name": "U. Vishkin"}]}, {"paperId": "517821f1b1be054a27f119d3a98e1c933033353c",
+      "externalIds": {"DBLP": "journals/endm/FominTT05", "MAG": "2031760049", "DOI":
+      "10.1016/j.endm.2005.06.032", "CorpusId": 5761752}, "corpusId": 5761752, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/517821f1b1be054a27f119d3a98e1c933033353c",
+      "title": "Connected Graph Searching in Outerplanar Graphs", "abstract": null,
+      "venue": "Electron. Notes Discret. Math.", "year": 2005, "referenceCount": 6,
+      "citationCount": 27, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "2005-10-15", "journal": {"name": "Electron.
+      Notes Discret. Math.", "pages": "213-216", "volume": "22"}, "authors": [{"authorId":
+      "1744120", "name": "F. Fomin"}, {"authorId": "1724691", "name": "D. Thilikos"},
+      {"authorId": "2553209", "name": "Ioan Todinca"}]}, {"paperId": "602262b1e4a182c3edd650e27fb4886347ca0143",
+      "externalIds": {"CorpusId": 4005105}, "corpusId": 4005105, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/602262b1e4a182c3edd650e27fb4886347ca0143",
+      "title": "Path Problems in Graphs", "abstract": "A large variety of problems
+      in computer science can be viewed from a common viewpoint as instances of \\algebraic\"
+      path problems. Among them are of course path problems in graphs such as the
+      shortest path problem or problems of nding optimal paths with respect to more
+      generally dened objective functions; but also graph problems whose formulations
+      do not directly involve the concept of a path, such as nding all bridges and
+      articulation points of a graph; Moreover, there are even problems which seemingly
+      have nothing to do with graphs, such as the solution of systems of linear equations,
+      partial dierentiation, or the determination of the regular expression describing
+      the language accepted by a nite automaton. We describe the relation among these
+      problems and their common algebraic foundation. We survey algorithms for solving
+      them: vertex elimination algorithms such as Gau-Jordan elimination; and iterative
+      algorithms such as the \\classical\" Jacobi and Gau-Seidel iteration.", "venue":
+      "", "year": 1989, "referenceCount": 19, "citationCount": 38, "influentialCitationCount":
+      3, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2084766321", "name": "G. Unter
+      Rote"}]}, {"paperId": "3c68ebacca08eb4cd78b4d949c5d538c7f200dae", "externalIds":
+      {"MAG": "2083218920", "DOI": "10.2298/PIM0900021A", "CorpusId": 122910794},
+      "corpusId": 122910794, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3c68ebacca08eb4cd78b4d949c5d538c7f200dae",
+      "title": "On a combinatorial game", "abstract": "We introduce a new Nim-like
+      two-player combinatorial game and present a complete winning strategy for the
+      winning side.", "venue": "", "year": 2009, "referenceCount": 6, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "http://www.doiserbia.nb.rs/ft.aspx?id=0350-13020900021A", "status": "BRONZE"},
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Economics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "Publications De L''institut Mathematique", "pages": "21-25",
+      "volume": "86"}, "authors": [{"authorId": "3439732", "name": "Vladica Andreji\u0107"}]},
+      {"paperId": "2411fd5bf42fc385a20fbc05d94a78a705785c19", "externalIds": {"MAG":
+      "2599228288", "DOI": "10.20852/ntmsci.2017.145", "CorpusId": 125772728}, "corpusId":
+      125772728, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/2411fd5bf42fc385a20fbc05d94a78a705785c19",
+      "title": "A new approach to complete graph", "abstract": "A graph consists of
+      a nonempty vertex set and an edge set, deno te G=(V, E). An unordered pair of
+      edge v,w is known as an undirected edge and an ordered pair of edge (v, w) is
+      known a s a directed edge. A graph with directed edges is called a dire cted
+      graph, simply a digraph; otherwise an undirected graph. Usu ally, an undirected
+      graph is simply known as a graph. This pap er gives a new approach to complete
+      graph and investigates some result s rela ed to this idea.", "venue": "", "year":
+      2017, "referenceCount": 3, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "2017-03-26", "journal": {"name": "New Trends in Mathematical Science", "pages":
+      "264-268", "volume": "1"}, "authors": [{"authorId": "102376786", "name": "Basheer
+      Ahamed Mohideen"}]}, {"paperId": "5b948e1039c2894a7e8592b360a68d1e3c18093e",
+      "externalIds": {"MAG": "2574893499", "CorpusId": 125636278}, "corpusId": 125636278,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5b948e1039c2894a7e8592b360a68d1e3c18093e",
+      "title": "A New and Efficient Framework for the Graph Isomorphism Problem",
+      "abstract": "This paper provides a new framework to study graph structure. It
+      enables us to define graph orthogonality and a new metrics on graphs. Furthermore,
+      it enables us to define the coordinate representation of graphs with respect
+      to an ordered set of graphs, which benefits us in the graph isomorphism problem.
+      If any graph of set $A$ has a unique coordinates with respect to a graph set
+      $ B$, then, we call $B$ is a basis for the graphs set $A$. Having a basis, any
+      graph finds a unique coordinates. Thus, the graph isomorphism problem equals
+      to comparison of the coordinates. This fact provides a formal approach to study
+      the computational complexity of the graph isomorphism problem, i.e. finding
+      a suitable basis. We have shown that graphs on at most 3log(n) vertices make
+      a basis for almost every $n$-vertex graphs. This fact, easily, results that
+      graph isomorphism problem can be solved in $\\exp(6\\log^2(n))$ time for almost
+      every pair of $n$-vertex graphs.", "venue": "", "year": 2017, "referenceCount":
+      0, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2017-01-10", "journal": {"name":
+      "arXiv: Combinatorics", "volume": ""}, "authors": [{"authorId": "3161363", "name":
+      "Ameneh Farhadian"}]}, {"paperId": "3bf070bd6c1b68485b245e4356b0acfc9415b9d5",
+      "externalIds": {"CorpusId": 2849241}, "corpusId": 2849241, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/3bf070bd6c1b68485b245e4356b0acfc9415b9d5",
+      "title": "SOME PROBLEMS WITH GENERATING FUNCTION SOLUTIONS", "abstract": "We
+      present three new combinatorial problems with solutions involving generating
+      functions and asymptotic approximations.", "venue": "", "year": 2012, "referenceCount":
+      3, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "144405116", "name": "Russell May"}, {"authorId":
+      "46629994", "name": "J. Landy"}]}, {"paperId": "1be6a74ad353b9f9e45b50bf4aee76b77fe86a12",
+      "externalIds": {"MAG": "2031153", "DOI": "10.1007/BFB0070379", "CorpusId": 115240257},
+      "corpusId": 115240257, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1be6a74ad353b9f9e45b50bf4aee76b77fe86a12",
+      "title": "Pruning and depth first search", "abstract": null, "venue": "", "year":
+      1978, "referenceCount": 8, "citationCount": 1, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "", "pages": "216-224", "volume": ""}, "authors":
+      [{"authorId": "2113156", "name": "G. Haggard"}]}, {"paperId": "d80872f4cdea5496b86a1f1b4e51733046861eeb",
+      "externalIds": {"MAG": "2912744867", "DOI": "10.1155/2019/3764981", "CorpusId":
+      127433412}, "corpusId": 127433412, "publicationVenue": "6401bb05-050b-4beb-8824-066cb2938eb4",
+      "url": "https://www.semanticscholar.org/paper/d80872f4cdea5496b86a1f1b4e51733046861eeb",
+      "title": "Reformulated Reciprocal Degree Distance and Reciprocal Degree Distance
+      of the Complement of the Mycielskian Graph and Generalized Mycielskian", "abstract":
+      "<jats:p>The reformulated reciprocal degree distance is defined for a connected
+      graph <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M1\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:math>
+      as <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M2\"><mml:msub><mml:mrow><mml:mover
+      accent=\"false\"><mml:mrow><mml:mi>R</mml:mi></mml:mrow><mml:mo>\u00af</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>=</mml:mo><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mrow><mml:mrow><mml:mn mathvariant=\"normal\">1</mml:mn></mml:mrow><mml:mo>/</mml:mo><mml:mrow><mml:mn
+      mathvariant=\"normal\">2</mml:mn></mml:mrow></mml:mrow><mml:mo stretchy=\"false\">)</mml:mo><mml:mrow><mml:msub><mml:mo
+      stretchy=\"false\">\u2211</mml:mo><mml:mrow><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>\u03c5</mml:mi><mml:mo>\u2208</mml:mo><mml:mi>V</mml:mi><mml:mfenced
+      separators=\"|\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:msub><mml:mrow><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mrow><mml:mrow><mml:mo stretchy=\"false\">(</mml:mo><mml:msub><mml:mrow><mml:mi>d</mml:mi></mml:mrow><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:msub><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>d</mml:mi></mml:mrow><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:msub><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>\u03c5</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:mrow><mml:mo>/</mml:mo><mml:mrow><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:msub><mml:mrow><mml:mi>d</mml:mi></mml:mrow><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:msub><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>\u03c5</mml:mi><mml:mo
+      stretchy=\"false\">)</mml:mo><mml:mo>+</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:mrow></mml:mrow><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:mrow></mml:mrow><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo>\u2265</mml:mo><mml:mn
+      mathvariant=\"normal\">0</mml:mn></mml:math>, which can be viewed as a weight
+      version of the <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M3\"><mml:mi>t</mml:mi><mml:mo>-</mml:mo></mml:math>Harary
+      index; that is, <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" id=\"M4\"><mml:msub><mml:mrow><mml:mover
+      accent=\"false\"><mml:mrow><mml:mi>H</mml:mi></mml:mrow><mml:mo>\u00af</mml:mo></mml:mover></mml:mrow><mml:mrow><mml:mi>t</mml:mi></mml:mrow></mml:msub><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>G</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>=</mml:mo><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mrow><mml:mrow><mml:mn fontstyle=\"italic\">1</mml:mn></mml:mrow><mml:mo>/</mml:mo><mml:mrow><mml:mn
+      fontstyle=\"italic\">2</mml:mn></mml:mrow></mml:mrow><mml:mo stretchy=\"false\">)</mml:mo><mml:mrow><mml:msub><mml:mo
+      stretchy=\"false\">\u2211</mml:mo><mml:mrow><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>\u03c5</mml:mi><mml:mo>\u2208</mml:mo><mml:mi>V</mml:mi><mml:mfenced
+      separators=\"|\"><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:mfenced></mml:mrow></mml:msub><mml:mrow><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mrow><mml:mrow><mml:mn mathvariant=\"normal\">1</mml:mn></mml:mrow><mml:mo>/</mml:mo><mml:mrow><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:msub><mml:mrow><mml:mi>d</mml:mi></mml:mrow><mml:mrow><mml:mi>G</mml:mi></mml:mrow></mml:msub><mml:mo
+      stretchy=\"false\">(</mml:mo><mml:mi>u</mml:mi><mml:mo>,</mml:mo><mml:mi>\u03c5</mml:mi><mml:mo
+      stretchy=\"false\">)</mml:mo><mml:mo>+</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy=\"false\">)</mml:mo></mml:mrow></mml:mrow><mml:mo
+      stretchy=\"false\">)</mml:mo></mml:mrow></mml:mrow><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo>\u2265</mml:mo><mml:mn
+      mathvariant=\"normal\">0</mml:mn></mml:math>. In this paper, we present the
+      reciprocal degree distance index of the complement of Mycielskian graph and
+      generalize the corresponding results to the generalized Mycielskian graph.</jats:p>",
+      "venue": "Mathematical Problems in Engineering", "year": 2019, "referenceCount":
+      21, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Chemistry",
+      "source": "s2-fos-model"}, {"category": "Art", "source": "s2-fos-model"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Physics", "source":
+      "s2-fos-model"}, {"category": "Medicine", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "2019-01-30", "journal": {"name": "Mathematical Problems
+      in Engineering"}, "authors": [{"authorId": "2152336919", "name": "Feifei Zhao"},
+      {"authorId": "143878403", "name": "H. Bian"}, {"authorId": "2547348", "name":
+      "Haizheng Yu"}, {"authorId": "2112386862", "name": "Min Liu"}]}, {"paperId":
+      "110ed97a82f04b4fac45045f51507f34e2bfee5b", "externalIds": {"MAG": "2185196148",
+      "DBLP": "conf/itat/ForysSF13", "CorpusId": 5222856}, "corpusId": 5222856, "publicationVenue":
+      "fc6a8a1f-6b22-4743-bf09-40b62f8798ba", "url": "https://www.semanticscholar.org/paper/110ed97a82f04b4fac45045f51507f34e2bfee5b",
+      "title": "Trace Shifts - Minimal Case for Independence Relations Given by Five
+      Node Co-Graphs", "abstract": "[\u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022
+      \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022
+      \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022
+      \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022
+      \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022
+      \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022 \u2022", "venue": "Conference
+      on Theory and Practice of Information Technologies", "year": 2013, "referenceCount":
+      22, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"pages": "89-93"}, "authors": [{"authorId": "2730180", "name":
+      "W. Forys"}, {"authorId": "3107011", "name": "G. Semani\u0161in"}, {"authorId":
+      "3172174", "name": "M. Forys"}]}, {"paperId": "af7b21d18b60fccecf0606a9045372c85323810a",
+      "externalIds": {"ArXiv": "2112.08768", "DOI": "10.1007/s00009-022-02096-1",
+      "CorpusId": 245218679}, "corpusId": 245218679, "publicationVenue": "c603edbc-1d22-4459-b06e-57b66fa07c05",
+      "url": "https://www.semanticscholar.org/paper/af7b21d18b60fccecf0606a9045372c85323810a",
+      "title": "Resolving sets tolerant to failures in three-dimensional grids", "abstract":
+      null, "venue": "Mediterranean Journal of Mathematics", "year": 2021, "referenceCount":
+      29, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://link.springer.com/content/pdf/10.1007/s00009-022-02096-1.pdf",
+      "status": "HYBRID"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2021-12-16", "journal": {"name":
+      "Mediterranean Journal of Mathematics", "volume": "19"}, "authors": [{"authorId":
+      "37109659", "name": "M. Mora"}, {"authorId": "2121925337", "name": "Mar\u00eda
+      Jos\u00e9 Souto-Salorio"}, {"authorId": "2079603269", "name": "Ana D. Tarr''io-Tobar"}]},
+      {"paperId": "aaf530fca7b0ceeafc99c56cebf3315e3d133ad4", "externalIds": {"MAG":
+      "2748838085", "DBLP": "conf/gd/BrandenburgEGKLM03", "DOI": "10.1007/978-3-540-24595-7_55",
+      "CorpusId": 7414828}, "corpusId": 7414828, "publicationVenue": "9e547474-7cce-44ae-a90c-095a421ac30f",
+      "url": "https://www.semanticscholar.org/paper/aaf530fca7b0ceeafc99c56cebf3315e3d133ad4",
+      "title": "Selected Open Problems in Graph Drawing", "abstract": null, "venue":
+      "International Symposium Graph Drawing and Network Visualization", "year": 2003,
+      "referenceCount": 134, "citationCount": 61, "influentialCitationCount": 0, "isOpenAccess":
+      true, "openAccessPdf": {"url": "https://link.springer.com/content/pdf/10.1007%2F978-3-540-24595-7_55.pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle", "Conference"], "publicationDate": "2003-09-21",
+      "journal": {"pages": "515-539"}, "authors": [{"authorId": "51222769", "name":
+      "F. Brandenburg"}, {"authorId": "1719358", "name": "D. Eppstein"}, {"authorId":
+      "1679615", "name": "M. Goodrich"}, {"authorId": "9374807", "name": "S. Kobourov"},
+      {"authorId": "1716384", "name": "G. Liotta"}, {"authorId": "1724469", "name":
+      "Petra Mutzel"}]}, {"paperId": "746111a34ec97228fbde5cf369485f5d788d5ce5", "externalIds":
+      {"MAG": "2102671623", "DBLP": "journals/networks/CaiS89", "DOI": "10.1002/net.3230190112",
+      "CorpusId": 206313365}, "corpusId": 206313365, "publicationVenue": "69d79d4c-49aa-4c2b-b616-80100a634f67",
+      "url": "https://www.semanticscholar.org/paper/746111a34ec97228fbde5cf369485f5d788d5ce5",
+      "title": "The minimum augmentation of any graph to a K-edge-connected graph",
+      "abstract": "For a graph G0 = (V, E0) and an integer K, how many edges are needed
+      for augmenting G0 to a K-edge-connected graph? Results in the literature have
+      answered this in several special cases such as when G0 is a tree, or when K
+      = 2. In this paper, we settle the problem in the general case where G0 can be
+      any multigraph and K can be any positive integer. We obtained both good characterization
+      and good algorithm for the problem. Applications of our algorithm are suggested
+      in designing a reliable network aiming at the most effective use of exising
+      network.", "venue": "Networks", "year": 1989, "referenceCount": 3, "citationCount":
+      92, "influentialCitationCount": 5, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Computer Science", "source":
+      "external"}, {"category": "Mathematics", "source": "s2-fos-model"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "Networks", "pages": "151-172",
+      "volume": "19"}, "authors": [{"authorId": "2055943571", "name": "Guo-Ray Cai"},
+      {"authorId": "1995821", "name": "Yugeng Sun"}]}, {"paperId": "23a1bc008ac29b64019865f83013910d62f700a0",
+      "externalIds": {"MAG": "2188056849", "CorpusId": 123316674}, "corpusId": 123316674,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/23a1bc008ac29b64019865f83013910d62f700a0",
+      "title": "Connectivity augmentation algorithms", "abstract": "The main subject
+      of the thesis is connectivity augmentation: we would like to make a given graph
+      k-connected by adding a minimum number of new edges. There are four basic problems
+      in this field, since one might consider both edgeand node-connectivity augmentation
+      in both graphs and digraphs. The thesis wishes to contribute to three out of
+      these four problems: directedand undirected node-connectivity and undirected
+      edge-connectivity augmentation. Although directed edge-connectivity augmentation
+      is not being considered, the last chapter is devoted to a constructive characterization
+      result related to directed edge-connectivity. Let us summarize the main results
+      of the thesis.", "venue": "", "year": 2010, "referenceCount": 74, "citationCount":
+      4, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
+      Science", "source": "external"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "", "volume": ""}, "authors": [{"authorId": "1780476", "name": "L\u00e1szl\u00f3
+      A. V\u00e9gh"}]}, {"paperId": "f9f5621c39ba42ec8129dd0ac7d5560757b1ef8b", "externalIds":
+      {"MAG": "1596935509", "CorpusId": 37696079}, "corpusId": 37696079, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/f9f5621c39ba42ec8129dd0ac7d5560757b1ef8b",
+      "title": "Maintenance of 2- and 3-connected components of graphs; Part I: 2-
+      and 3-edge-connected components", "abstract": "In this paper a data structure
+      is presented to efficiently maintain the 2-and 3-edge-connected components of
+      a graph, under insertions of edges in the graph. Starting from an \"empty\"
+      graph of n nodes, the insertion of e edges takes O( n log n + e) time in total.
+      The data structure a.llows for insertions of nodes a.lso (in the same time bounds,
+      taking n as the fina.l number of nodes). Moreover, at any moment, the data structure
+      can answer the following type of query in 0(1) time: given two nodes in the
+      graph, are these nodes 2-or 3-edge-connected.", "venue": "", "year": 1990, "referenceCount":
+      23, "citationCount": 13, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "", "volume": "9026"}, "authors": [{"authorId": "65972170",
+      "name": "Ja Han La Poutr\u00e9"}, {"authorId": "143817739", "name": "J. Leeuwen"},
+      {"authorId": "1683533", "name": "M. Overmars"}]}, {"paperId": "3d0cc2ac43900e11db1f7ae7b0c2f4ebee7d9435",
+      "externalIds": {"MAG": "3004278482", "DOI": "10.12737/978686", "CorpusId": 214470152},
+      "corpusId": 214470152, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3d0cc2ac43900e11db1f7ae7b0c2f4ebee7d9435",
+      "title": "Fundamentals of the theory and algorithms on graphs", "abstract":
+      "The textbook describes the main theoretical principles of graph theory, the
+      main tasks to be solved using graph structures, and General methods of their
+      solution and specific algorithms, with estimates of their complexity. I covered
+      a lot of the examples given questions to test knowledge and tasks for independent
+      decisions. Along with the control tasks to verify the theoretical training provided
+      practical assignments to develop programs to study topics of graph theory. \nMeets
+      the requirements of Federal state educational standards of higher education
+      of the last generation. \nDesigned for undergraduate and graduate programs,
+      studying information technology, for in-depth training in analysis and design
+      of systems of complex structure. Also the guide can be useful to specialists
+      of the IT sphere in the study of algorithmic aspects of graph theory.", "venue":
+      "", "year": 2020, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "2020-01-30", "journal": {"name": "", "volume": ""},
+      "authors": [{"authorId": "98208987", "name": "N. Gdanskiy"}]}, {"paperId": "fab53c68454815d41e0645410e3082792f032257",
+      "externalIds": {"CorpusId": 207795396}, "corpusId": 207795396, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/fab53c68454815d41e0645410e3082792f032257",
+      "title": "On Greedy-Branching for Vertex Deletion to Tree-Like Graphs", "abstract":
+      "In our work we consider the graph parameter arboricity and deliver an algorithm
+      that reduces the arboricity by deleting vertices from the graph. The arboricity
+      arb(G) for a graph G is defined as the minimum numbers of forests into which
+      its edges can be partitioned. We define the specific problem Arboricity-two-reduction
+      where we are asked to reduce the arboricity of a given graph G to two by deleting
+      at most k vertices. We develop and algorithm for this problem and analyse its
+      running time. Our Arboricity-two-reduction algorithm is inspired by an algorithm
+      due to Cao [1], which solves the problem Feedback Vertex Set. The Feedback Vertex
+      Set is strongly related to Arboricity-two-reduction, since Feedback Vertex Set
+      is just a different term for Arboricity-one-reduction. Arboricity one is equivalent
+      to the graph being a forest. Cao\u2019s algorithm uses a greedy-branching method,
+      which always considers the maximum degree vertex and stores it into either the
+      solution set or, if no solution is found containing this vertex, into an undeletable
+      vertex set out of which the solution cannot contain vertices. Our proposed algorithm
+      for Arboricity-two-reduction uses the same approach with two major modifications.
+      We need different return conditions for the recursion and a new recursion base
+      case. Our base case will be able to solve Arboricity-two-reduction for maximum-degreefour
+      graphs. We show that our algorithm for Arboricity-two-reduction runs in FPT-time,
+      parameterized by k. For the future we desire to solve the general case of arboricity-p-reduction
+      for any p \u2208 N. Our algorithm serves as a starting point for further exploration
+      to find patterns to be able to generalize the algorithm. Arboricityzero-reduction
+      is a different term for Vertex cover. Hence, including our work there now exist
+      algorithms to solve Arboricity-zero-reduction, Arboricity-onereduction, and
+      Arboricity-two-reduction, from which we can extend in the future. To the best
+      of our knowledge we are the first to analyse the computational complexity of
+      Arboricity-two-reduction and provide an algorithm.", "venue": "", "year": 2019,
+      "referenceCount": 16, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": []}, {"paperId": "4dfeacdc2d7bd1beea4adc14f287c39766063578",
+      "externalIds": {"MAG": "2373444390", "CorpusId": 124617066}, "corpusId": 124617066,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4dfeacdc2d7bd1beea4adc14f287c39766063578",
+      "title": "Some Problems on Tree", "abstract": "In the paper a definition of
+      the complete order on tree is given.A property of is proved and some known results
+      in the theory of ordinal numbers is proved by this property,which makes the
+      proving process much simpler.", "venue": "", "year": 2007, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "Journal
+      of Longyan University", "volume": ""}, "authors": [{"authorId": "1476608113",
+      "name": "Huang Zhong-q"}]}]}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '161302'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Sep 2023 20:23:58 GMT
+      Via:
+      - 1.1 cae77502d3847ca96378af9649c50cb4.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Xv97BePpHTPSzwRjRXv9snoxM-GCJ2WTG3AfhLt9MXz-h9rZoekXaw==
+      X-Amz-Cf-Pop:
+      - EWR50-C1
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - K5yl_GkIvHcFbxQ=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '161302'
+      x-amzn-Remapped-Date:
+      - Thu, 07 Sep 2023 20:23:58 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - fcaf77e9-48a9-454a-a527-9e29eedaa37b
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
