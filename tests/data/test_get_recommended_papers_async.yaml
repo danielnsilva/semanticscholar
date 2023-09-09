@@ -28,27 +28,81 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Sep 2023 20:23:52 GMT
+      - Fri, 08 Sep 2023 19:40:57 GMT
       Via:
-      - 1.1 d50f0ffd76e03cff5d1f6328069e44e0.cloudfront.net (CloudFront)
+      - 1.1 f1742871ff3f5482a0c79a4d483d78a8.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - pgngw6B81StqpBVXyHTqI9ClimDNFKqgwU26o9KfzYIWNI0RPGV-MA==
+      - zU7Xf3Ai0jj1Y1C7uckI_Pez-ivifrsN0QtHQN3JrKnmWHq60l-e8w==
       X-Amz-Cf-Pop:
       - EWR50-C1
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - K5ylzESLvHcFxNw=
+      - K8_PfE31vHcFvRg=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '26'
       x-amzn-Remapped-Date:
-      - Thu, 07 Sep 2023 20:23:52 GMT
+      - Fri, 08 Sep 2023 19:40:57 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 3f5e3a47-3361-4481-acbc-a281e5796f1a
+      - 45d08699-3ebb-4b6c-aff8-6b5d53accb34
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - partner.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+      x-api-key:
+      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+    method: GET
+    uri: https://partner.semanticscholar.org/recommendations/v1/papers/forpaper/10.1145/3544585.3544600?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=recent
+  response:
+    content: '{"recommendedPapers": []}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 08 Sep 2023 20:26:05 GMT
+      Via:
+      - 1.1 17a79dcb426270de1bedb2a8dbcb8f72.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - NnicpjVTVejrbcd0US9QKJIrqHdV3RnicnJPrcHKSuRtpwXObVQhxQ==
+      X-Amz-Cf-Pop:
+      - EWR53-C1
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - K9F2tGnXPHcFfYA=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '26'
+      x-amzn-Remapped-Date:
+      - Fri, 08 Sep 2023 20:26:05 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 77ce3ba4-4c04-4e1c-918f-9d8a7f283bb8
     http_version: HTTP/1.1
     status_code: 200
 version: 1

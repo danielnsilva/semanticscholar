@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '"{\"positivePaperIds\": [], \"negativePaperIds\": [\"10.1145/3544585.3544600\"]}"'
+    body: '{"positivePaperIds": [], "negativePaperIds": ["10.1145/3544585.3544600"]}'
     headers:
       accept:
       - '*/*'
@@ -9,7 +9,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '81'
+      - '73'
       content-type:
       - application/json
       host:
@@ -19,7 +19,7 @@ interactions:
     method: POST
     uri: https://api.semanticscholar.org/recommendations/v1/papers/?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
   response:
-    content: '{"message": "Internal Server Error"}
+    content: '{"error":"No positive paper examples given"}
 
       '
     headers:
@@ -28,31 +28,89 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '37'
+      - '45'
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Sep 2023 20:23:52 GMT
+      - Fri, 08 Sep 2023 19:41:00 GMT
       Via:
-      - 1.1 1c7f2900c7652f6226ba50ec8bf3155c.cloudfront.net (CloudFront)
+      - 1.1 0c2947bdc7b8340f8e04a5a58d570236.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - s9tBngm2Pu1t8URL5ZeFBIlENMArpLSs_MmJY4t_M-rigG1tYN6RpA==
+      - BwxoVXC2E4DNoMwHTveuLxKdx92h2uq7o-rz0pLON91QH3RQjNzVhA==
       X-Amz-Cf-Pop:
       - EWR50-C1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - K5yl5FdzPHcFdQw=
+      - K8_P9FPQPHcFbyQ=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '37'
+      - '45'
       x-amzn-Remapped-Date:
-      - Thu, 07 Sep 2023 20:23:52 GMT
+      - Fri, 08 Sep 2023 19:41:00 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - ff8c8d44-9d55-4a06-b017-7f98943ecb51
+      - 8669289f-5335-4440-941e-a1e380e82090
     http_version: HTTP/1.1
-    status_code: 500
+    status_code: 400
+- request:
+    body: '{"positivePaperIds": [], "negativePaperIds": ["10.1145/3544585.3544600"]}'
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '73'
+      content-type:
+      - application/json
+      host:
+      - partner.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+      x-api-key:
+      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+    method: POST
+    uri: https://partner.semanticscholar.org/recommendations/v1/papers/?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
+  response:
+    content: '{"error":"No positive paper examples given"}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 08 Sep 2023 20:26:08 GMT
+      Via:
+      - 1.1 249557823ab8e41dec2ed10311f8ff98.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - o6IEuKnBYU2OT5CUV4vLnTu3NyIpZw1vcFABf9Ec2tld9EJoF9s5hg==
+      X-Amz-Cf-Pop:
+      - EWR53-C1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - K9F3MGfevHcFSXQ=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '45'
+      x-amzn-Remapped-Date:
+      - Fri, 08 Sep 2023 20:26:08 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 16a4ff2a-0e3d-4b13-83da-5ca4e823570c
+    http_version: HTTP/1.1
+    status_code: 400
 version: 1

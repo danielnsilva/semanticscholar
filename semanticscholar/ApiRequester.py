@@ -124,7 +124,6 @@ class ApiRequester:
 
         url = f'{url}?{parameters}'
         method = 'POST' if payload else 'GET'
-        payload = json.dumps(payload) if payload else None
 
         async with httpx.AsyncClient() as client:
             r = await client.request(

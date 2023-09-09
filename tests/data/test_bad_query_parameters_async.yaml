@@ -28,27 +28,81 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Sep 2023 20:23:16 GMT
+      - Fri, 08 Sep 2023 19:40:22 GMT
       Via:
-      - 1.1 b9da5ed239e7d2c1a0b20bd76696c844.cloudfront.net (CloudFront)
+      - 1.1 0c2947bdc7b8340f8e04a5a58d570236.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - IycfSFNMJfAbwWn5ZVW7bWKNGnXiD1iKovQtOhnp4ES8_SdS-K1vZw==
+      - wCnlv4HCdVv-fpgDXJpx3VfPB5t6mRJelMkjQeG3bNBVTsyphOSSsQ==
       X-Amz-Cf-Pop:
       - EWR50-C1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - K5ygOG5JPHcFePQ=
+      - K8_KIEEmvHcFpng=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '58'
       x-amzn-Remapped-Date:
-      - Thu, 07 Sep 2023 20:23:16 GMT
+      - Fri, 08 Sep 2023 19:40:22 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - b12bd672-49c6-466f-ab3e-3d26d954d259
+      - 0cf972aa-3415-4525-9b2c-8bfa3c38957a
+    http_version: HTTP/1.1
+    status_code: 400
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - partner.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+      x-api-key:
+      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+    method: GET
+    uri: https://partner.semanticscholar.org/graph/v1/paper/10.1093/mind/lix.236.433?&fields=unknown
+  response:
+    content: '{"error":"Unrecognized or unsupported fields: [unknown]"}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '58'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 08 Sep 2023 20:24:19 GMT
+      Via:
+      - 1.1 4c18e6ed879a674305cb5156731cf396.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - VK7NU9nL7sl3nWSxMZ3UEvkwqNf2M53OVSS8U28DIksEXmfrizzvxA==
+      X-Amz-Cf-Pop:
+      - EWR53-C1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - K9FmDFktPHcFxzA=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '58'
+      x-amzn-Remapped-Date:
+      - Fri, 08 Sep 2023 20:24:19 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 87fe6440-f798-4700-846d-454530f7d8a0
     http_version: HTTP/1.1
     status_code: 400
 version: 1

@@ -1,0 +1,86 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/paper/CorpusID:49313245/citations?&fields=contexts,intents,isInfluential,abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=1000
+  response:
+    content: '{"message": "Endpoint request timed out"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '41'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 08 Sep 2023 20:12:23 GMT
+      Via:
+      - 1.1 b6217766ccd41d69658fea04297b7c24.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - lRHDltx7k-v9AGZ74fvPN3ieUN3x1sBqzrSZ-9k5DvV3cBAZ1F_OHw==
+      X-Amz-Cf-Pop:
+      - EWR50-C1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - K9DxrHevvHcF7cA=
+      x-amzn-ErrorType:
+      - InternalServerErrorException
+      x-amzn-RequestId:
+      - 09e79f8a-9d98-4ed3-8e26-2546ebf72ba8
+    http_version: HTTP/1.1
+    status_code: 504
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - partner.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+    method: GET
+    uri: https://partner.semanticscholar.org/graph/v1/paper/CorpusID:49313245/citations?&fields=contexts,intents,isInfluential,abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=1000
+  response:
+    content: '{"message": "Endpoint request timed out"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '41'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 08 Sep 2023 20:25:59 GMT
+      Via:
+      - 1.1 a74c33aabb438b6226856fa442878fa2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - MstSXrb5hjSAAj24HHcq0CvDMBMSLkvYLzDj3hGogI51v4731PILFw==
+      X-Amz-Cf-Pop:
+      - EWR53-C1
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - K9FxNHl2PHcFjRg=
+      x-amzn-ErrorType:
+      - InternalServerErrorException
+      x-amzn-RequestId:
+      - d30892e4-b520-4561-8281-08818a205d48
+    http_version: HTTP/1.1
+    status_code: 504
+version: 1
