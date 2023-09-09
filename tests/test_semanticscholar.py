@@ -1,6 +1,3 @@
-import sys
-sys.path.append("/Users/gabrielgtrigo/Github/semanticscholar/")
-
 import json
 import unittest
 from datetime import datetime
