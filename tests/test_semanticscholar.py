@@ -423,19 +423,19 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         data = await self.sch.get_paper_citations('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item.paper.title for item in data]), 4563)
+        self.assertEqual(len([item.paper.title for item in data]), 6220)
         self.assertEqual(
-            data[0].paper.title, 'Learning to Throw With a Handful of Samples '
-                'Using Decision Transformers')
+            data[0].paper.title, 'Self-Attention Mechanism for Dynamic Multi-Step Rop '
+                'Prediction Under Continuous Learning Structure')
 
     @test_vcr.use_cassette
     async def test_get_paper_references_async(self):
-        data = await self.sch.get_paper_references('CorpusID:1033682')
+        data = await self.sch.get_paper_references('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 1)
+        self.assertEqual(len(data), 75)
         self.assertEqual(
-            data[0].paper.title, 'Why Does Unsupervised Pre-training Help Deep Learning?')
+            data[0].paper.title, 'Constituency Parsing with a Self-Attentive Encoder')
     
     @test_vcr.use_cassette
     async def test_timeout_async(self):
