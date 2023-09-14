@@ -1,6 +1,3 @@
-import sys
-sys.path.append("C:/Users/Heichous/Documents/github/semanticscholar/")
-
 import json
 import unittest
 import asyncio
