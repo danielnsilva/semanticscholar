@@ -1,10 +1,12 @@
+import sys
+sys.path.append("C:/Users/Heichous/Documents/github/semanticscholar/")
+
 import json
 import unittest
+import asyncio
 from datetime import datetime
 
 import vcr
-from requests.exceptions import Timeout
-from httpx import TimeoutException
 
 from semanticscholar.Author import Author
 from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
@@ -15,7 +17,8 @@ from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, ObjectNotFoundException)
+    BadQueryParametersException, ObjectNotFoundException, 
+    TimeoutException)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -179,37 +182,37 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_paper_authors(self):
-        data = self.sch.get_paper_authors('CorpusID:54599684')
+        data = self.sch.get_paper_authors('10.2139/ssrn.2250500')
         self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item for item in data]), 2870)
-        self.assertEqual(data[0].name, 'G. Aad')
+        self.assertEqual(data.next, 0)
+        self.assertEqual(len([item for item in data]), 4)
+        self.assertEqual(data[0].name, 'E. Duflo')
 
     @test_vcr.use_cassette
     def test_get_paper_citations(self):
         data = self.sch.get_paper_citations('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item.paper.title for item in data]), 4563)
+        self.assertEqual(len([item.paper.title for item in data]), 6247)
         self.assertEqual(
-            data[0].paper.title, 'Learning to Throw With a Handful of Samples '
-                'Using Decision Transformers')
+            data[0].paper.title, 'A vision transformer-based automated '
+            'human identification using ear biometrics')
 
     @test_vcr.use_cassette
     def test_get_paper_references(self):
         data = self.sch.get_paper_references('CorpusID:1033682')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 35)
+        self.assertEqual(len(data), 61)
         self.assertEqual(
-            data[0].paper.title, 'Neural Variational Inference and Learning '
-                'in Belief Networks')
+            data[0].paper.title, 'The Malicious Use of Artificial Intelligence: '
+            'Forecasting, Prevention, and Mitigation')
 
     @test_vcr.use_cassette
     def test_timeout(self):
         self.sch.timeout = 0.01
         self.assertEqual(self.sch.timeout, 0.01)
-        self.assertRaises(Timeout,
+        self.assertRaises(TimeoutException,
                           self.sch.get_paper,
                           '10.1093/mind/lix.236.433')
 
@@ -231,10 +234,9 @@ class SemanticScholarTest(unittest.TestCase):
         data = self.sch.get_author_papers(1723755, limit=100)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 925)
-        self.assertEqual(data[0].title, 'Genetic heterogeneity and '
-                        'tissue-specific patterns of tumors with multiple '
-                        'PIK3CA mutations.')
+        self.assertEqual(len([item for item in data]), 938)
+        self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38β/MAPK11 to '
+                         'promote virus replication')
 
     @test_vcr.use_cassette
     def test_not_found(self):
@@ -259,8 +261,8 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(len(data.items), 100)
         self.assertEqual(
             data.raw_data[0]['title'],
-            'Quantum theory, the Church–Turing principle and the universal '
-            'quantum computer'
+            'Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, '
+            'A Large-Scale Generative Language Model'
         )
 
     @test_vcr.use_cassette
@@ -271,7 +273,7 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_paper_traversing_results(self):
-        data = self.sch.search_paper('turing')
+        data = self.sch.search_paper('sublinear near optimal edit distance')
         all_results = [item.title for item in data]
         self.assertRaises(BadQueryParametersException, data.next_page)
         self.assertEqual(len(all_results), len(data.items))
@@ -305,7 +307,7 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_search_paper_venue(self):
         data = self.sch.search_paper('turing', venue=['ArXiv'])
-        self.assertEqual(data[0].venue, 'ArXiv')
+        self.assertEqual(data[0].venue, 'arXiv.org')
 
     @test_vcr.use_cassette
     def test_search_paper_open_access_pdf(self):
@@ -320,7 +322,7 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_recommended_papers(self):
-        data = self.sch.get_recommended_papers('10.1145/3544585.3544600')
+        data = self.sch.get_recommended_papers('10.2139/ssrn.2250500')
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
@@ -385,6 +387,30 @@ class SemanticScholarTest(unittest.TestCase):
                     method(query, limit=0)
                     self.assertEqual(str(context.exception), error_message)
 
+    # These last two tests have some async and some sync parts, so 
+    # the async parts are run manually using asyncio.run_until_complete()
+    @test_vcr.use_cassette
+    async def test_get_author_papers_async(self):
+        loop = asyncio.new_event_loop()
+        data = loop.run_until_complete(self.sch.get_author_papers(1723755, limit=100))
+        loop.close()
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len([item for item in data]), 940)
+        self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
+
+    @test_vcr.use_cassette
+    async def test_get_paper_citations_async(self):
+        loop = asyncio.new_event_loop()
+        data = loop.run_until_complete(self.sch.get_paper_citations('CorpusID:49313245'))
+        loop.close()
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 1000)
+        self.assertEqual(len([item.paper.title for item in data]), 6220)
+        self.assertEqual(
+            data[0].paper.title, 'Self-Attention Mechanism for Dynamic Multi-Step Rop '
+                'Prediction Under Continuous Learning Structure')
+
 class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     def setUp(self) -> None:
@@ -419,16 +445,6 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data[0].name, 'E. Duflo')
 
     @test_vcr.use_cassette
-    async def test_get_paper_citations_async(self):
-        data = await self.sch.get_paper_citations('CorpusID:49313245')
-        self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item.paper.title for item in data]), 6220)
-        self.assertEqual(
-            data[0].paper.title, 'Self-Attention Mechanism for Dynamic Multi-Step Rop '
-                'Prediction Under Continuous Learning Structure')
-
-    @test_vcr.use_cassette
     async def test_get_paper_references_async(self):
         data = await self.sch.get_paper_references('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
@@ -458,14 +474,6 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             [item.name for item in data], list_of_author_names)
 
     @test_vcr.use_cassette
-    async def test_get_author_papers_async(self):
-        data = await self.sch.get_author_papers(1723755, limit=100)
-        self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 940)
-        self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
-
-    @test_vcr.use_cassette
     async def test_not_found_async(self):
         with self.assertRaises(ObjectNotFoundException):
             await self.sch.get_paper(0)
@@ -492,7 +500,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_search_paper_next_page_async(self):
         data = await self.sch.search_paper('turing')
-        await data.next_page()
+        await data.async_next_page()
         self.assertGreater(len(data), 100)
 
     @test_vcr.use_cassette
@@ -547,8 +555,8 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_get_recommended_papers_async(self):
-        data = await self.sch.get_recommended_papers('10.1145/3544585.3544600')
-        self.assertEqual(len(data), 0)
+        data = await self.sch.get_recommended_papers('10.2139/ssrn.2250500')
+        self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
     async def test_get_recommended_papers_pool_from_async(self):

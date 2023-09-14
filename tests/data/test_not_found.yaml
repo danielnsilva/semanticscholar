@@ -1,109 +1,5 @@
 interactions:
 - request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.28.1
-    method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/0?&fields=abstract,authors,authors.affiliations,authors.aliases,authors.authorId,authors.citationCount,authors.externalIds,authors.hIndex,authors.homepage,authors.name,authors.paperCount,authors.url,citationCount,citations,citations.abstract,citations.authors,citations.citationCount,citations.corpusId,citations.externalIds,citations.fieldsOfStudy,citations.influentialCitationCount,citations.isOpenAccess,citations.journal,citations.openAccessPdf,citations.paperId,citations.publicationDate,citations.publicationTypes,citations.publicationVenue,citations.referenceCount,citations.s2FieldsOfStudy,citations.title,citations.url,citations.venue,citations.year,corpusId,embedding,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,references,references.abstract,references.authors,references.citationCount,references.citationStyles,references.corpusId,references.externalIds,references.fieldsOfStudy,references.influentialCitationCount,references.isOpenAccess,references.journal,references.openAccessPdf,references.paperId,references.publicationDate,references.publicationTypes,references.publicationVenue,references.referenceCount,references.s2FieldsOfStudy,references.title,references.url,references.venue,references.year,s2FieldsOfStudy,title,tldr,url,venue,year
-  response:
-    body:
-      string: '{"error":"Paper with id 0 not found"}
-
-        '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '38'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 03 Jan 2023 20:52:36 GMT
-      Via:
-      - 1.1 1bcfe6258d4a13f2b6f9b5ee43e42254.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - dxT1js4jcQdboD6YEWy89uOwG6jvs07E8XdM5lrL1KU4J5K9DQYWIQ==
-      X-Amz-Cf-Pop:
-      - GRU3-P1
-      X-Cache:
-      - Error from cloudfront
-      x-amz-apigw-id:
-      - eLxPSEA4vHcFocQ=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '38'
-      x-amzn-Remapped-Date:
-      - Tue, 03 Jan 2023 20:52:36 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - 5abe65df-8c31-4f5b-bafb-5ec3a10f6fcd
-    status:
-      code: 404
-      message: Not Found
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.28.1
-    method: GET
-    uri: https://api.semanticscholar.org/graph/v1/author/0?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
-  response:
-    body:
-      string: '{"error":"Author with id 0 not found"}
-
-        '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '39'
-      Content-Type:
-      - application/json
-      Date:
-      - Tue, 03 Jan 2023 20:49:31 GMT
-      Via:
-      - 1.1 fb6a4eca9caced7b791557c24b8c6606.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - HcEHz6PSh2rjlSQDB1j_v9UVoTpwIoFV6-_60yMvBdJySYC-8CgeDQ==
-      X-Amz-Cf-Pop:
-      - GRU3-P1
-      X-Cache:
-      - Error from cloudfront
-      x-amz-apigw-id:
-      - eLwyYHfvvHcFubQ=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '39'
-      x-amzn-Remapped-Date:
-      - Tue, 03 Jan 2023 20:49:31 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - 4e6cbe9d-1fba-4fcf-9237-dd9603b7c699
-    status:
-      code: 404
-      message: Not Found
-- request:
     body: ''
     headers:
       accept:
@@ -132,27 +28,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Sep 2023 19:39:21 GMT
+      - Wed, 13 Sep 2023 21:45:59 GMT
       Via:
-      - 1.1 7608da25eb5aed0ce7cca5fc0587c650.cloudfront.net (CloudFront)
+      - 1.1 3aa2aa1b7b816f70e94675c9a63f98d0.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 4ntCXbk7Jmq5oCe8l1dlYfnGmIvhgapd7gi2GNGFfwnRjppiYgiEhg==
+      - 2pTpx7kJnQH0JSiEriCIAYzR1ohqtLsQBj6V8UOoMO0GPhN__AcUYQ==
       X-Amz-Cf-Pop:
       - EWR50-C1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - K5sEhFb7PHcFyzw=
+      - LNwPqFhDvHcFn2g=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '38'
       x-amzn-Remapped-Date:
-      - Thu, 07 Sep 2023 19:39:21 GMT
+      - Wed, 13 Sep 2023 21:45:59 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 09443ae3-26d6-4bc0-ae11-487d8b99c0cc
+      - 286e5203-1613-458e-958f-3d5a5b6af073
     http_version: HTTP/1.1
     status_code: 404
 - request:
@@ -184,27 +80,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Sep 2023 19:39:21 GMT
+      - Wed, 13 Sep 2023 21:48:22 GMT
       Via:
-      - 1.1 cb7f1fdf6954dd7324e8117a63207a3c.cloudfront.net (CloudFront)
+      - 1.1 78151a5252ddc63300143dbe81b1f0c4.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - e4kKmZ1QMTGGi1LALHUUpTa4zK6zMCs-LqfFahOSPZQ_9TPTgYzamA==
+      - PGpfJnIOwe2iVdPtKOPGAGiVnyLx9DOoev5_nfGStTOiMLyJIlcgXA==
       X-Amz-Cf-Pop:
       - EWR50-C1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - K5sEkGlnPHcFRtA=
+      - LNwmFHfFvHcFyrw=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '39'
       x-amzn-Remapped-Date:
-      - Thu, 07 Sep 2023 19:39:21 GMT
+      - Wed, 13 Sep 2023 21:48:22 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - ba24f12b-56f7-490e-bc32-270235ffc267
+      - 1f15bfee-dde8-44b9-ad57-0fe2a8ff9acb
     http_version: HTTP/1.1
     status_code: 404
 version: 1

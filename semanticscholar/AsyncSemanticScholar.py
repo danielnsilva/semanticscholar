@@ -1,17 +1,17 @@
 from typing import List, Literal
 
-from semanticscholar.ApiRequester import ApiRequester
+from semanticscholar.ApiRequester import Requester
 from semanticscholar.Author import Author
 from semanticscholar.BaseReference import BaseReference
 from semanticscholar.Citation import Citation
-from semanticscholar.PaginatedResults import AsyncPaginatedResults
+from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
 
 
 class AsyncSemanticScholar:
     '''
-    Main class to retrieve data from Semantic Scholar Graph API
+    Main class to retrieve data from Semantic Scholar Graph API asynchronously.
     '''
 
     DEFAULT_API_URL = 'https://api.semanticscholar.org'
@@ -46,7 +46,7 @@ class AsyncSemanticScholar:
                 self.api_url = self.DEFAULT_PARTNER_API_URL
 
         self._timeout = timeout
-        self._requester = ApiRequester(self._timeout)
+        self._requester = Requester(self._timeout)
 
     @property
     def timeout(self) -> int:
@@ -97,7 +97,7 @@ class AsyncSemanticScholar:
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
 
-        data = await self._requester.async_get_data(url, parameters, self.auth_header)
+        data = await self._requester.get_data(url, parameters, self.auth_header)
         paper = Paper(data)
 
         return paper
@@ -138,7 +138,7 @@ class AsyncSemanticScholar:
 
         payload = { "ids": paper_ids }
 
-        data = await self._requester.async_get_data(
+        data = await self._requester.get_data(
             url, parameters, self.auth_header, payload)
         papers = [Paper(item) for item in data]
 
@@ -149,7 +149,7 @@ class AsyncSemanticScholar:
                 paper_id: str,
                 fields: list = None,
                 limit: int = 1000
-            ) -> AsyncPaginatedResults:
+            ) -> PaginatedResults:
         '''Get details about a paper's authors
 
         :calls: `POST /paper/{paper_id}/authors \
@@ -181,7 +181,7 @@ class AsyncSemanticScholar:
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f'{base_url}/paper/{paper_id}/authors'
 
-        results = await AsyncPaginatedResults.create(
+        results = await PaginatedResults.create(
                 requester=self._requester,
                 data_type=Author,
                 url=url,
@@ -196,7 +196,7 @@ class AsyncSemanticScholar:
                 paper_id: str,
                 fields: list = None,
                 limit: int = 1000
-            ) -> AsyncPaginatedResults:
+            ) -> PaginatedResults:
         '''Get details about a paper's citations
 
         :calls: `POST /paper/{paper_id}/citations \
@@ -227,7 +227,7 @@ class AsyncSemanticScholar:
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f'{base_url}/paper/{paper_id}/citations'
 
-        results = await AsyncPaginatedResults.create(
+        results = await PaginatedResults.create(
                 requester=self._requester,
                 data_type=Citation,
                 url=url,
@@ -242,7 +242,7 @@ class AsyncSemanticScholar:
                 paper_id: str,
                 fields: list = None,
                 limit: int = 1000
-            ) -> AsyncPaginatedResults:
+            ) -> PaginatedResults:
         '''Get details about a paper's references
 
         :calls: `POST /paper/{paper_id}/references \
@@ -273,7 +273,7 @@ class AsyncSemanticScholar:
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f'{base_url}/paper/{paper_id}/references'
 
-        results = await AsyncPaginatedResults.create(
+        results = await PaginatedResults.create(
                 requester=self._requester,
                 data_type=Reference,
                 url=url,
@@ -293,7 +293,7 @@ class AsyncSemanticScholar:
                 fields_of_study: list = None,
                 fields: list = None,
                 limit: int = 100
-            ) -> AsyncPaginatedResults:
+            ) -> PaginatedResults:
         '''Search for papers by keyword
 
         :calls: `GET /paper/search <https://api.semanticscholar.org/api-docs/\
@@ -313,7 +313,7 @@ class AsyncSemanticScholar:
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
         :returns: query results.
-        :rtype: :class:`semanticscholar.AsyncPaginatedResults.AsyncPaginatedResults`
+        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
         if limit < 1 or limit > 100:
@@ -342,7 +342,7 @@ class AsyncSemanticScholar:
             fields_of_study = ','.join(fields_of_study)
             query += f'&fieldsOfStudy={fields_of_study}'
 
-        results = await AsyncPaginatedResults.create(
+        results = await PaginatedResults.create(
                 self._requester,
                 Paper,
                 url,
@@ -379,7 +379,7 @@ class AsyncSemanticScholar:
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
 
-        data = await self._requester.async_get_data(url, parameters, self.auth_header)
+        data = await self._requester.get_data(url, parameters, self.auth_header)
         author = Author(data)
 
         return author
@@ -411,7 +411,7 @@ class AsyncSemanticScholar:
 
         payload = { "ids": author_ids }
 
-        data = await self._requester.async_get_data(
+        data = await self._requester.get_data(
             url, parameters, self.auth_header, payload)
         authors = [Author(item) for item in data]
 
@@ -422,7 +422,7 @@ class AsyncSemanticScholar:
                 author_id: str,
                 fields: list = None,
                 limit: int = 1000
-            ) -> AsyncPaginatedResults:
+            ) -> PaginatedResults:
         '''Get details about a author's papers
 
         :calls: `POST /paper/{author_id}/papers \
@@ -453,7 +453,7 @@ class AsyncSemanticScholar:
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f'{base_url}/author/{author_id}/papers'
 
-        results = await AsyncPaginatedResults.create(
+        results = await PaginatedResults.create(
                 requester=self._requester,
                 data_type=Paper,
                 url=url,
@@ -468,7 +468,7 @@ class AsyncSemanticScholar:
                 query: str,
                 fields: list = None,
                 limit: int = 1000
-            ) -> AsyncPaginatedResults:
+            ) -> PaginatedResults:
         '''Search for authors by name
 
         :calls: `GET /author/search <https://api.semanticscholar.org/api-docs/\
@@ -479,7 +479,7 @@ class AsyncSemanticScholar:
         :param int limit: (optional) maximum number of results to return \
                (must be <= 1000).
         :returns: query results.
-        :rtype: :class:`semanticscholar.AsyncPaginatedResults.AsyncPaginatedResults`
+        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
         if limit < 1 or limit > 1000:
@@ -492,7 +492,7 @@ class AsyncSemanticScholar:
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f'{base_url}/author/search'
 
-        results = await AsyncPaginatedResults.create(
+        results = await PaginatedResults.create(
                 self._requester,
                 Author,
                 url,
@@ -552,7 +552,7 @@ class AsyncSemanticScholar:
         fields = ','.join(fields)
         parameters = f'&fields={fields}&limit={limit}&from={pool_from}'
 
-        data = await self._requester.async_get_data(url, parameters, self.auth_header)
+        data = await self._requester.get_data(url, parameters, self.auth_header)
         papers = [Paper(item) for item in data['recommendedPapers']]
 
         return papers
@@ -599,7 +599,7 @@ class AsyncSemanticScholar:
             "negativePaperIds": negative_paper_ids
         }
 
-        data = await self._requester.async_get_data(
+        data = await self._requester.get_data(
             url, parameters, self.auth_header, payload)
         papers = [Paper(item) for item in data['recommendedPapers']]
 

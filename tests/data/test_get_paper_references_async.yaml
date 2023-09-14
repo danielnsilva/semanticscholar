@@ -15,7 +15,7 @@ interactions:
     method: GET
     uri: https://partner.semanticscholar.org/graph/v1/paper/CorpusID:49313245/references?&fields=contexts,intents,isInfluential,abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=1000
   response:
-    content: '{"offset": 0, "data": [{"contexts": [], "intents": [], "isInfluential":
+    content: '{"offset": 0, "data": [{"intents": [], "contexts": [], "isInfluential":
       false, "citedPaper": {"paperId": "928f9dccb806a3278d20d82cc53781c5f44e2bb1",
       "externalIds": {"DBLP": "journals/corr/abs-1805-01052", "MAG": "2799253188",
       "ACL": "P18-1249", "ArXiv": "1805.01052", "DOI": "10.18653/v1/P18-1249", "CorpusId":
@@ -45,20 +45,19 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2018-05-02", "journal": {"pages": "2676-2686"}, "authors":
       [{"authorId": "143808231", "name": "Nikita Kitaev"}, {"authorId": "38666915",
-      "name": "D. Klein"}]}}, {"contexts": ["We evaluate on five datasets with diverse
-      sources, including image captions (SNLI), transcribed speech, popular fiction,
-      and government reports (MNLI), Wikipedia articles (QNLI), science exams (SciTail)
-      or news articles (RTE).", "Task Datasets Natural language inference SNLI [5],
-      MultiNLI [66], Question NLI [64], RTE [4], SciTail [25] Question Answering RACE
-      [30], Story Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora
-      Question Pairs [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2
-      [54], CoLA [65]", "Our method significantly outperforms the baselines on four
-      of the five datasets, achieving absolute improvements of upto 1.5% on MNLI,
-      5% on SciTail, 5.8% on QNLI and 0.6% on SNLI over the previous best results."],
-      "intents": ["methodology"], "isInfluential": true, "citedPaper": {"paperId":
-      "cf8c493079702ec420ab4fc9c0fabb56b2a16c84", "externalIds": {"MAG": "2788496822",
-      "DBLP": "conf/aaai/KhotSC18", "DOI": "10.1609/aaai.v32i1.12022", "CorpusId":
-      24462950}, "corpusId": 24462950, "publicationVenue": {"id": "bdc2e585-4e48-4e36-8af1-6d859763d405",
+      "name": "D. Klein"}]}}, {"intents": ["methodology"], "contexts": ["We evaluate
+      on five datasets with diverse sources, including image captions (SNLI), transcribed
+      speech, popular fiction, and government reports (MNLI), Wikipedia articles (QNLI),
+      science exams (SciTail) or news articles (RTE).", "Task Datasets Natural language
+      inference SNLI [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail [25]
+      Question Answering RACE [30], Story Cloze [40] Sentence similarity MSR Paraphrase
+      Corpus [14], Quora Question Pairs [9], STS Benchmark [6] Classification Stanford
+      Sentiment Treebank-2 [54], CoLA [65]", "Our method significantly outperforms
+      the baselines on four of the five datasets, achieving absolute improvements
+      of upto 1.5% on MNLI, 5% on SciTail, 5.8% on QNLI and 0.6% on SNLI over the
+      previous best results."], "isInfluential": true, "citedPaper": {"paperId": "cf8c493079702ec420ab4fc9c0fabb56b2a16c84",
+      "externalIds": {"MAG": "2788496822", "DBLP": "conf/aaai/KhotSC18", "DOI": "10.1609/aaai.v32i1.12022",
+      "CorpusId": 24462950}, "corpusId": 24462950, "publicationVenue": {"id": "bdc2e585-4e48-4e36-8af1-6d859763d405",
       "name": "AAAI Conference on Artificial Intelligence", "type": "conference",
       "alternate_names": ["National Conference on Artificial Intelligence", "National
       Conf Artif Intell", "AAAI Conf Artif Intell", "AAAI"], "url": "http://www.aaai.org/"},
@@ -79,21 +78,21 @@ interactions:
       baseline. As a step forward, we demonstrate that one can improve accuracy on
       SciTail by 5% using a new neural model that exploits linguistic structure.\n
       \n", "venue": "AAAI Conference on Artificial Intelligence", "year": 2018, "referenceCount":
-      35, "citationCount": 363, "influentialCitationCount": 90, "isOpenAccess": true,
+      35, "citationCount": 364, "influentialCitationCount": 90, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://ojs.aaai.org/index.php/AAAI/article/download/12022/11881",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Philosophy", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"], "publicationDate":
       "2018-04-27", "journal": {"pages": "5189-5197"}, "authors": [{"authorId": "2236429",
       "name": "Tushar Khot"}, {"authorId": "48229640", "name": "Ashish Sabharwal"},
-      {"authorId": "48323507", "name": "Peter Clark"}]}}, {"contexts": ["3 - - Stochastic
-      Answer Network [35] (3x) 80.", "Although there has been a lot of recent interest
-      [58, 35, 44], the task remains challenging due to the presence of a wide variety
-      of phenomena like lexical entailment, coreference, and lexical and syntactic
-      ambiguity."], "intents": ["background"], "isInfluential": false, "citedPaper":
-      {"paperId": "6084b58d8b4b0caf3a2a7f3a1bee1cc527927e39", "externalIds": {"ArXiv":
-      "1804.07888", "MAG": "2798459010", "DBLP": "journals/corr/abs-1804-07888", "CorpusId":
-      5058361}, "corpusId": 5058361, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      {"authorId": "48323507", "name": "Peter Clark"}]}}, {"intents": ["background"],
+      "contexts": ["3 - - Stochastic Answer Network [35] (3x) 80.", "Although there
+      has been a lot of recent interest [58, 35, 44], the task remains challenging
+      due to the presence of a wide variety of phenomena like lexical entailment,
+      coreference, and lexical and syntactic ambiguity."], "isInfluential": false,
+      "citedPaper": {"paperId": "6084b58d8b4b0caf3a2a7f3a1bee1cc527927e39", "externalIds":
+      {"ArXiv": "1804.07888", "MAG": "2798459010", "DBLP": "journals/corr/abs-1804-07888",
+      "CorpusId": 5058361}, "corpusId": 5058361, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
       "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/6084b58d8b4b0caf3a2a7f3a1bee1cc527927e39",
       "title": "Stochastic Answer Networks for Natural Language Inference", "abstract":
@@ -110,31 +109,32 @@ interactions:
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "2018-04-21", "journal": {"volume": "abs/1804.07888", "name": "ArXiv"}, "authors":
       [{"authorId": "2108860856", "name": "Xiaodong Liu"}, {"authorId": "1800354",
-      "name": "Kevin Duh"}, {"authorId": "1800422", "name": "Jianfeng Gao"}]}}, {"contexts":
-      ["5% on the recently introduced GLUE multi-task benchmark [64].", "8 Multi-task
-      BiLSTM + ELMo + Attn [64] 18.", "Natural Language Inference The task of natural
-      language inference (NLI), also known as recognizing textual entailment, involves
-      reading a pair of sentences and judging the relationship between them from one
-      of entailment, contradiction or neutral.", "Figure 2(left) illustrates the performance
-      of our approach on MultiNLI and RACE as a function of the number of layers transferred.",
-      "Task Datasets Natural language inference SNLI [5], MultiNLI [66], Question
-      NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story Cloze [40]
-      Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS
-      Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA [65]",
-      "Our method significantly outperforms the baselines on four of the five datasets,
-      achieving absolute improvements of upto 1.5% on MNLI, 5% on SciTail, 5.8% on
-      QNLI and 0.6% on SNLI over the previous best results.", "We observe that the
-      auxiliary objective helps on the NLI tasks and QQP.", "0 - Single-task BiLSTM
-      + ELMo + Attn [64] 35.", "The performance delta on QQP is significant, with
-      a 4.2% absolute improvement over Single-task BiLSTM + ELMo + Attn.", "Some of
-      these tasks are available as part of the recently released GLUE multi-task benchmark
-      [64], which we make use of.", "We observe the standard result that transferring
-      embeddings improves performance and that each transformer layer provides further
-      benefits up to 9% for full transfer on MultiNLI.", "Our results also indicate
-      that our approach works well across datasets of different sizes, from smaller
-      datasets such as STS-B (\u22485.7k training examples) \u2013 to the largest
-      one \u2013 SNLI (\u2248550k training examples).", "Table 2 details various results
-      on the different NLI tasks for our model and previous state-of-the-art approaches.",
+      "name": "Kevin Duh"}, {"authorId": "1800422", "name": "Jianfeng Gao"}]}}, {"intents":
+      ["background", "methodology"], "contexts": ["5% on the recently introduced GLUE
+      multi-task benchmark [64].", "8 Multi-task BiLSTM + ELMo + Attn [64] 18.", "Natural
+      Language Inference The task of natural language inference (NLI), also known
+      as recognizing textual entailment, involves reading a pair of sentences and
+      judging the relationship between them from one of entailment, contradiction
+      or neutral.", "Figure 2(left) illustrates the performance of our approach on
+      MultiNLI and RACE as a function of the number of layers transferred.", "Task
+      Datasets Natural language inference SNLI [5], MultiNLI [66], Question NLI [64],
+      RTE [4], SciTail [25] Question Answering RACE [30], Story Cloze [40] Sentence
+      similarity MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark
+      [6] Classification Stanford Sentiment Treebank-2 [54], CoLA [65]", "Our method
+      significantly outperforms the baselines on four of the five datasets, achieving
+      absolute improvements of upto 1.5% on MNLI, 5% on SciTail, 5.8% on QNLI and
+      0.6% on SNLI over the previous best results.", "We observe that the auxiliary
+      objective helps on the NLI tasks and QQP.", "0 - Single-task BiLSTM + ELMo +
+      Attn [64] 35.", "The performance delta on QQP is significant, with a 4.2% absolute
+      improvement over Single-task BiLSTM + ELMo + Attn.", "Some of these tasks are
+      available as part of the recently released GLUE multi-task benchmark [64], which
+      we make use of.", "We observe the standard result that transferring embeddings
+      improves performance and that each transformer layer provides further benefits
+      up to 9% for full transfer on MultiNLI.", "Our results also indicate that our
+      approach works well across datasets of different sizes, from smaller datasets
+      such as STS-B (\u22485.7k training examples) \u2013 to the largest one \u2013
+      SNLI (\u2248550k training examples).", "Table 2 details various results on the
+      different NLI tasks for our model and previous state-of-the-art approaches.",
       "For instance, we achieve absolute improvements of 8.9% on commonsense reasoning
       (Stories Cloze Test) [40], 5.7% on question answering (RACE) [30], 1.5% on textual
       entailment (MultiNLI) [66] and 5.5% on the recently introduced GLUE multi-task
@@ -143,11 +143,11 @@ interactions:
       (MNLI), Wikipedia articles (QNLI), science exams (SciTail) or news articles
       (RTE).", "Given the strong performance of our approach on larger NLI datasets,
       it is likely our model will benefit from multi-task training as well but we
-      have not explored this currently."], "intents": ["background", "methodology"],
-      "isInfluential": true, "citedPaper": {"paperId": "451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
-      "externalIds": {"MAG": "2951235279", "ACL": "W18-5446", "DBLP": "conf/iclr/WangSMHLB19",
-      "ArXiv": "1804.07461", "DOI": "10.18653/v1/W18-5446", "CorpusId": 5034059},
-      "corpusId": 5034059, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
+      have not explored this currently."], "isInfluential": true, "citedPaper": {"paperId":
+      "451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c", "externalIds": {"MAG": "2951235279",
+      "ACL": "W18-5446", "DBLP": "conf/iclr/WangSMHLB19", "ArXiv": "1804.07461", "DOI":
+      "10.18653/v1/W18-5446", "CorpusId": 5034059}, "corpusId": 5034059, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
       "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language
       Understanding", "abstract": "Human ability to understand language is general,
       flexible, and robust. In contrast, most NLU models above the word level are
@@ -170,7 +170,7 @@ interactions:
       models still achieve fairly low absolute scores. Analysis with our diagnostic
       dataset yields similarly weak performance over all phenomena tested, with some
       exceptions.", "venue": "BlackboxNLP@EMNLP", "year": 2018, "referenceCount":
-      76, "citationCount": 4377, "influentialCitationCount": 1140, "isOpenAccess":
+      76, "citationCount": 4392, "influentialCitationCount": 1141, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/W18-5446.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -179,7 +179,7 @@ interactions:
       "name": "Alex Wang"}, {"authorId": "50286460", "name": "Amanpreet Singh"}, {"authorId":
       "38614754", "name": "Julian Michael"}, {"authorId": "145783676", "name": "Felix
       Hill"}, {"authorId": "39455775", "name": "Omer Levy"}, {"authorId": "3644767",
-      "name": "Samuel R. Bowman"}]}}, {"contexts": [], "intents": [], "isInfluential":
+      "name": "Samuel R. Bowman"}]}}, {"intents": [], "contexts": [], "isInfluential":
       false, "citedPaper": {"paperId": "7b29f45df975ed1e4c3864b6ab4483f11086aa76",
       "externalIds": {"ArXiv": "1804.06323", "DBLP": "conf/naacl/QiSFPN18", "MAG":
       "2798081680", "ACL": "N18-2084", "DOI": "10.18653/v1/N18-2084", "CorpusId":
@@ -207,7 +207,7 @@ interactions:
       "ArXiv"}, "authors": [{"authorId": "145270896", "name": "Ye Qi"}, {"authorId":
       "39670454", "name": "Devendra Singh Sachan"}, {"authorId": "40895015", "name":
       "Matthieu Felix"}, {"authorId": "51177454", "name": "Sarguna Padmanabhan"},
-      {"authorId": "1700325", "name": "Graham Neubig"}]}}, {"contexts": [], "intents":
+      {"authorId": "1700325", "name": "Graham Neubig"}]}}, {"intents": [], "contexts":
       [], "isInfluential": false, "citedPaper": {"paperId": "d66ad3628c11c45bde5d4b65b9c1109a95d364d4",
       "externalIds": {"DBLP": "journals/corr/abs-1803-09074", "ArXiv": "1803.09074",
       "MAG": "2794554529", "CorpusId": 4417366}, "corpusId": 4417366, "publicationVenue":
@@ -238,9 +238,9 @@ interactions:
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "2018-03-24", "journal": {"volume": "abs/1803.09074", "name": "ArXiv"}, "authors":
       [{"authorId": "144447820", "name": "Yi Tay"}, {"authorId": "26336902", "name":
-      "Anh Tuan Luu"}, {"authorId": "144194328", "name": "S. Hui"}]}}, {"contexts":
-      ["Method Story Cloze RACE-m RACE-h RACE val-LS-skip [55] 76."], "intents": ["methodology"],
-      "isInfluential": false, "citedPaper": {"paperId": "72c2cc507bc7203bcb4eaf6a3df6e9e8f8514e31",
+      "Anh Tuan Luu"}, {"authorId": "144194328", "name": "S. Hui"}]}}, {"intents":
+      ["methodology"], "contexts": ["Method Story Cloze RACE-m RACE-h RACE val-LS-skip
+      [55] 76."], "isInfluential": false, "citedPaper": {"paperId": "72c2cc507bc7203bcb4eaf6a3df6e9e8f8514e31",
       "externalIds": {"ArXiv": "1803.05547", "ACL": "N18-2015", "DBLP": "conf/naacl/SrinivasanAR18",
       "MAG": "2949898382", "DOI": "10.18653/v1/N18-2015", "CorpusId": 3929706}, "corpusId":
       3929706, "publicationVenue": {"id": "01103732-3808-4930-b8e4-7e9e68d5c68d",
@@ -268,24 +268,24 @@ interactions:
       "publicationDate": "2018-03-15", "journal": {"volume": "abs/1803.05547", "name":
       "ArXiv"}, "authors": [{"authorId": "50106987", "name": "Siddarth Srinivasan"},
       {"authorId": "2066379254", "name": "Richa Arora"}, {"authorId": "2757194", "name":
-      "Mark O. Riedl"}]}}, {"contexts": ["Other approaches [43, 44, 38] use hidden
-      representations from a", "An alternative dataset, the 1B Word Benchmark, which
-      is used by a similar approach, ELMo [44], is approximately the same size\nbut
-      is shuffled at a sentence level - destroying long-range structure.", "Recent
-      research has looked at various objectives such as language modeling [44], machine
-      translation [38], and discourse coherence [22], with each method outperforming
-      the others on different tasks.", "Method MNLI-m MNLI-mm SNLI SciTail QNLI RTE
-      ESIM + ELMo [44] (5x) - 89.", "The performance delta on QQP is significant,
-      with a 4.2% absolute improvement over Single-task BiLSTM + ELMo + Attn.", "Although
-      there has been a lot of recent interest [58, 35, 44], the task remains challenging
-      due to the presence of a wide variety of phenomena like lexical entailment,
-      coreference, and lexical and syntactic ambiguity.", "Existing techniques involve
-      a combination of making task-specific changes to the model architecture [43,
-      44], using intricate learning schemes [21] and adding auxiliary learning objectives
-      [50].", "An alternative dataset, the 1B Word Benchmark, which is used by a similar
-      approach, ELMo [44], is approximately the same size", "Previous work proposed
-      learning task specific architectures on top of transferred representations [44]."],
-      "intents": ["background", "methodology"], "isInfluential": true, "citedPaper":
+      "Mark O. Riedl"}]}}, {"intents": ["background", "methodology"], "contexts":
+      ["Other approaches [43, 44, 38] use hidden representations from a", "An alternative
+      dataset, the 1B Word Benchmark, which is used by a similar approach, ELMo [44],
+      is approximately the same size\nbut is shuffled at a sentence level - destroying
+      long-range structure.", "Recent research has looked at various objectives such
+      as language modeling [44], machine translation [38], and discourse coherence
+      [22], with each method outperforming the others on different tasks.", "Method
+      MNLI-m MNLI-mm SNLI SciTail QNLI RTE ESIM + ELMo [44] (5x) - 89.", "The performance
+      delta on QQP is significant, with a 4.2% absolute improvement over Single-task
+      BiLSTM + ELMo + Attn.", "Although there has been a lot of recent interest [58,
+      35, 44], the task remains challenging due to the presence of a wide variety
+      of phenomena like lexical entailment, coreference, and lexical and syntactic
+      ambiguity.", "Existing techniques involve a combination of making task-specific
+      changes to the model architecture [43, 44], using intricate learning schemes
+      [21] and adding auxiliary learning objectives [50].", "An alternative dataset,
+      the 1B Word Benchmark, which is used by a similar approach, ELMo [44], is approximately
+      the same size", "Previous work proposed learning task specific architectures
+      on top of transferred representations [44]."], "isInfluential": true, "citedPaper":
       {"paperId": "3febb2bed8865945e7fddc99efd791887bb7e14f", "externalIds": {"MAG":
       "2962739339", "DBLP": "journals/corr/abs-1802-05365", "ArXiv": "1802.05365",
       "ACL": "N18-1202", "DOI": "10.18653/v1/N18-1202", "CorpusId": 3626819}, "corpusId":
@@ -305,7 +305,7 @@ interactions:
       showing that exposing the deep internals of the pre-trained network is crucial,
       allowing downstream models to mix different types of semi-supervision signals.",
       "venue": "North American Chapter of the Association for Computational Linguistics",
-      "year": 2018, "referenceCount": 64, "citationCount": 9905, "influentialCitationCount":
+      "year": 2018, "referenceCount": 64, "citationCount": 9920, "influentialCitationCount":
       1590, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-1202.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -315,10 +315,10 @@ interactions:
       {"authorId": "50043859", "name": "Mark Neumann"}, {"authorId": "2136562", "name":
       "Mohit Iyyer"}, {"authorId": "40642935", "name": "Matt Gardner"}, {"authorId":
       "143997772", "name": "Christopher Clark"}, {"authorId": "2544107", "name": "Kenton
-      Lee"}, {"authorId": "1982950", "name": "Luke Zettlemoyer"}]}}, {"contexts":
-      ["Phrase-level or sentence-level embeddings, which can be trained using an unlabeled
-      corpus, have been used to encode text into suitable vector representations for
-      various target tasks [28, 32, 1, 36, 22, 12, 56, 31]."], "intents": ["methodology"],
+      Lee"}, {"authorId": "1982950", "name": "Luke Zettlemoyer"}]}}, {"intents": ["methodology"],
+      "contexts": ["Phrase-level or sentence-level embeddings, which can be trained
+      using an unlabeled corpus, have been used to encode text into suitable vector
+      representations for various target tasks [28, 32, 1, 36, 22, 12, 56, 31]."],
       "isInfluential": false, "citedPaper": {"paperId": "afc2850945a871e72c245818f9bc141bd659b453",
       "externalIds": {"MAG": "2950511028", "DBLP": "journals/corr/abs-1804-00079",
       "ArXiv": "1804.00079", "CorpusId": 4567927}, "corpusId": 4567927, "publicationVenue":
@@ -350,16 +350,16 @@ interactions:
       "2018-02-15", "journal": {"volume": "abs/1804.00079", "name": "ArXiv"}, "authors":
       [{"authorId": "50324141", "name": "Sandeep Subramanian"}, {"authorId": "3382568",
       "name": "A. Trischler"}, {"authorId": "1751762", "name": "Yoshua Bengio"}, {"authorId":
-      "1972076", "name": "C. Pal"}]}}, {"contexts": ["Phrase-level or sentence-level
-      embeddings, which can be trained using an unlabeled corpus, have been used to
-      encode text into suitable vector representations for various target tasks [28,
-      32, 1, 36, 22, 12, 56, 31]."], "intents": ["methodology"], "isInfluential":
-      false, "citedPaper": {"paperId": "ad31866da7f14ae21bd38df0a3b1ffd1a1438122",
-      "externalIds": {"MAG": "2963644595", "DBLP": "conf/iclr/LogeswaranL18", "ArXiv":
-      "1803.02893", "CorpusId": 3525802}, "corpusId": 3525802, "publicationVenue":
-      {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40", "name": "International Conference
-      on Learning Representations", "type": "conference", "alternate_names": ["Int
-      Conf Learn Represent", "ICLR"], "url": "https://iclr.cc/"}, "url": "https://www.semanticscholar.org/paper/ad31866da7f14ae21bd38df0a3b1ffd1a1438122",
+      "1972076", "name": "C. Pal"}]}}, {"intents": ["methodology"], "contexts": ["Phrase-level
+      or sentence-level embeddings, which can be trained using an unlabeled corpus,
+      have been used to encode text into suitable vector representations for various
+      target tasks [28, 32, 1, 36, 22, 12, 56, 31]."], "isInfluential": false, "citedPaper":
+      {"paperId": "ad31866da7f14ae21bd38df0a3b1ffd1a1438122", "externalIds": {"MAG":
+      "2963644595", "DBLP": "conf/iclr/LogeswaranL18", "ArXiv": "1803.02893", "CorpusId":
+      3525802}, "corpusId": 3525802, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
+      "name": "International Conference on Learning Representations", "type": "conference",
+      "alternate_names": ["Int Conf Learn Represent", "ICLR"], "url": "https://iclr.cc/"},
+      "url": "https://www.semanticscholar.org/paper/ad31866da7f14ae21bd38df0a3b1ffd1a1438122",
       "title": "An efficient framework for learning sentence representations", "abstract":
       "In this work we propose a simple and efficient framework for learning sentence
       representations from unlabelled data. Drawing inspiration from the distributional
@@ -379,15 +379,15 @@ interactions:
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle"], "publicationDate": "2018-02-15", "journal": {"volume": "abs/1803.02893",
       "name": "ArXiv"}, "authors": [{"authorId": "2876316", "name": "L. Logeswaran"},
-      {"authorId": "1697141", "name": "Honglak Lee"}]}}, {"contexts": ["For our model
-      architecture, we use the Transformer [62], which has been shown to perform strongly
-      on various tasks such as machine translation [62], document generation [34],
-      and syntactic parsing [29].", "In our experiments, we use a multi-layer Transformer
-      decoder [34] for the language model, which is a variant of the transformer [62]."],
-      "intents": ["methodology"], "isInfluential": false, "citedPaper": {"paperId":
-      "8691706ad0cf5e83969658b2e6bfffdc379440c9", "externalIds": {"DBLP": "journals/corr/abs-1801-10198",
-      "ArXiv": "1801.10198", "MAG": "2963045354", "CorpusId": 3608234}, "corpusId":
-      3608234, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
+      {"authorId": "1697141", "name": "Honglak Lee"}]}}, {"intents": ["methodology"],
+      "contexts": ["For our model architecture, we use the Transformer [62], which
+      has been shown to perform strongly on various tasks such as machine translation
+      [62], document generation [34], and syntactic parsing [29].", "In our experiments,
+      we use a multi-layer Transformer decoder [34] for the language model, which
+      is a variant of the transformer [62]."], "isInfluential": false, "citedPaper":
+      {"paperId": "8691706ad0cf5e83969658b2e6bfffdc379440c9", "externalIds": {"DBLP":
+      "journals/corr/abs-1801-10198", "ArXiv": "1801.10198", "MAG": "2963045354",
+      "CorpusId": 3608234}, "corpusId": 3608234, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
       "name": "International Conference on Learning Representations", "type": "conference",
       "alternate_names": ["Int Conf Learn Represent", "ICLR"], "url": "https://iclr.cc/"},
       "url": "https://www.semanticscholar.org/paper/8691706ad0cf5e83969658b2e6bfffdc379440c9",
@@ -402,7 +402,7 @@ interactions:
       articles. When given reference documents, we show it can extract relevant factual
       information as reflected in perplexity, ROUGE scores and human evaluations.",
       "venue": "International Conference on Learning Representations", "year": 2018,
-      "referenceCount": 22, "citationCount": 625, "influentialCitationCount": 98,
+      "referenceCount": 22, "citationCount": 628, "influentialCitationCount": 99,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -411,12 +411,12 @@ interactions:
       {"authorId": "144413479", "name": "Mohammad Saleh"}, {"authorId": "38627717",
       "name": "Etienne Pot"}, {"authorId": "2065067542", "name": "Ben Goodrich"},
       {"authorId": "35474601", "name": "Ryan Sepassi"}, {"authorId": "40527594", "name":
-      "Lukasz Kaiser"}, {"authorId": "1846258", "name": "Noam M. Shazeer"}]}}, {"contexts":
-      ["[13] and Howard and Ruder [21] follow this method to improve text classification.",
-      "Existing techniques involve a combination of making task-specific changes to
-      the model architecture [43, 44], using intricate learning schemes [21] and adding
-      auxiliary learning objectives [50].", "Dai et al. [13] and Howard and Ruder
-      [21] follow this method to improve text classification."], "intents": ["methodology"],
+      "Lukasz Kaiser"}, {"authorId": "1846258", "name": "Noam M. Shazeer"}]}}, {"intents":
+      ["methodology"], "contexts": ["[13] and Howard and Ruder [21] follow this method
+      to improve text classification.", "Existing techniques involve a combination
+      of making task-specific changes to the model architecture [43, 44], using intricate
+      learning schemes [21] and adding auxiliary learning objectives [50].", "Dai
+      et al. [13] and Howard and Ruder [21] follow this method to improve text classification."],
       "isInfluential": false, "citedPaper": {"paperId": "1e077413b25c4d34945cc2707e17e46ed4fe784a",
       "externalIds": {"MAG": "2798812533", "DBLP": "conf/acl/RuderH18", "ACL": "P18-1031",
       "DOI": "10.18653/v1/P18-1031", "CorpusId": 40100965}, "corpusId": 40100965,
@@ -436,17 +436,17 @@ interactions:
       labeled examples, it matches the performance of training from scratch on 100
       times more data. We open-source our pretrained models and code.", "venue": "Annual
       Meeting of the Association for Computational Linguistics", "year": 2018, "referenceCount":
-      57, "citationCount": 2983, "influentialCitationCount": 294, "isOpenAccess":
+      57, "citationCount": 2992, "influentialCitationCount": 294, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/P18-1031.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2018-01-18", "journal": {"pages": "328-339"}, "authors":
       [{"authorId": "2093348519", "name": "Jeremy Howard"}, {"authorId": "2884561",
-      "name": "Sebastian Ruder"}]}}, {"contexts": ["Although there has been a lot
-      of recent interest [58, 35, 44], the task remains challenging due to the presence
-      of a wide variety of phenomena like lexical entailment, coreference, and lexical
-      and syntactic ambiguity."], "intents": ["background"], "isInfluential": false,
+      "name": "Sebastian Ruder"}]}}, {"intents": ["background"], "contexts": ["Although
+      there has been a lot of recent interest [58, 35, 44], the task remains challenging
+      due to the presence of a wide variety of phenomena like lexical entailment,
+      coreference, and lexical and syntactic ambiguity."], "isInfluential": false,
       "citedPaper": {"paperId": "f14dc3dba4a58fd380cce41e44552fd5f7812a4c", "externalIds":
       {"DBLP": "journals/corr/abs-1801-00102", "MAG": "2782363479", "CorpusId": 195346747},
       "corpusId": 195346747, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
@@ -473,7 +473,7 @@ interactions:
       ["JournalArticle"], "publicationDate": "2017-12-30", "journal": {"volume": "abs/1801.00102",
       "name": "ArXiv"}, "authors": [{"authorId": "144447820", "name": "Yi Tay"}, {"authorId":
       "26336902", "name": "Anh Tuan Luu"}, {"authorId": "144194328", "name": "S. Hui"}]}},
-      {"contexts": [], "intents": [], "isInfluential": false, "citedPaper": {"paperId":
+      {"intents": [], "contexts": [], "isInfluential": false, "citedPaper": {"paperId":
       "45dfef0cc1ed96558c1c650432ce39d6a1050b6a", "externalIds": {"MAG": "2768282280",
       "DBLP": "journals/corr/abs-1711-05101", "ArXiv": "1711.05101", "CorpusId": 3312944},
       "corpusId": 3312944, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
@@ -496,14 +496,14 @@ interactions:
       with warm restarts (AdamWR) that has strong anytime performance while achieving
       state-of-the-art results on CIFAR-10 and ImageNet32x32. Our source code will
       become available after the review process.", "venue": "arXiv.org", "year": 2017,
-      "referenceCount": 23, "citationCount": 1250, "influentialCitationCount": 207,
+      "referenceCount": 23, "citationCount": 1252, "influentialCitationCount": 206,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
       "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Review"], "publicationDate": "2017-11-14", "journal": {"volume": "abs/1711.05101",
       "name": "ArXiv"}, "authors": [{"authorId": "1678656", "name": "I. Loshchilov"},
-      {"authorId": "144661829", "name": "F. Hutter"}]}}, {"contexts": [], "intents":
+      {"authorId": "144661829", "name": "F. Hutter"}]}}, {"intents": [], "contexts":
       [], "isInfluential": false, "citedPaper": {"paperId": "4e013e6c800666c5bc611ca820ae437a7139cbb6",
       "externalIds": {"DBLP": "journals/corr/abs-1711-04964", "ArXiv": "1711.04964",
       "MAG": "2768331480", "CorpusId": 195346709}, "corpusId": 195346709, "publicationVenue":
@@ -530,7 +530,7 @@ interactions:
       [{"authorId": "2636690", "name": "Yichong Xu"}, {"authorId": "46700348", "name":
       "Jingjing Liu"}, {"authorId": "1800422", "name": "Jianfeng Gao"}, {"authorId":
       "1752875", "name": "Yelong Shen"}, {"authorId": "2108860856", "name": "Xiaodong
-      Liu"}]}}, {"contexts": [], "intents": [], "isInfluential": false, "citedPaper":
+      Liu"}]}}, {"intents": [], "contexts": [], "isInfluential": false, "citedPaper":
       {"paperId": "e3d772986d176057aca2f5e3eb783da53b559134", "externalIds": {"MAG":
       "2949520888", "ArXiv": "1711.00043", "DBLP": "journals/corr/abs-1711-00043",
       "CorpusId": 3518190}, "corpusId": 3518190, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
@@ -559,7 +559,7 @@ interactions:
       "publicationDate": "2017-10-31", "journal": {"volume": "abs/1711.00043", "name":
       "ArXiv"}, "authors": [{"authorId": "1830914", "name": "Guillaume Lample"}, {"authorId":
       "8905591", "name": "Ludovic Denoyer"}, {"authorId": "1706809", "name": "Marc''Aurelio
-      Ranzato"}]}}, {"contexts": [], "intents": [], "isInfluential": false, "citedPaper":
+      Ranzato"}]}}, {"intents": [], "contexts": [], "isInfluential": false, "citedPaper":
       {"paperId": "2cdc28b4f34410ff70099ae845daaaa25813f0e9", "externalIds": {"MAG":
       "2758815496", "ACL": "D17-1168", "DBLP": "conf/emnlp/ChaturvediPR17", "DOI":
       "10.18653/v1/D17-1168", "CorpusId": 27249900}, "corpusId": 27249900, "publicationVenue":
@@ -590,8 +590,8 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2017-09-01", "journal": {"pages": "1603-1614"}, "authors":
       [{"authorId": "37202877", "name": "Snigdha Chaturvedi"}, {"authorId": "1981962",
-      "name": "Haoruo Peng"}, {"authorId": "144590225", "name": "D. Roth"}]}}, {"contexts":
-      ["0 - - ECNU (mixed ensemble) [60] - - - 81."], "intents": [], "isInfluential":
+      "name": "Haoruo Peng"}, {"authorId": "144590225", "name": "D. Roth"}]}}, {"intents":
+      [], "contexts": ["0 - - ECNU (mixed ensemble) [60] - - - 81."], "isInfluential":
       false, "citedPaper": {"paperId": "caa8a41d58e386c56f56d46bbe79df9cb1087338",
       "externalIds": {"DBLP": "conf/semeval/TianZLW17", "ACL": "S17-2028", "MAG":
       "2752289368", "DOI": "10.18653/v1/S17-2028", "CorpusId": 31826507}, "corpusId":
@@ -612,11 +612,11 @@ interactions:
       "publicationTypes": ["JournalArticle"], "publicationDate": "2017-08-01", "journal":
       {"pages": "191-197"}, "authors": [{"authorId": "2338841", "name": "Junfeng Tian"},
       {"authorId": "1800668", "name": "Zhi-Min Zhou"}, {"authorId": "143745020", "name":
-      "Man Lan"}, {"authorId": "3174675", "name": "Yuanbin Wu"}]}}, {"contexts": ["Recent
-      research has looked at various objectives such as language modeling [44], machine
-      translation [38], and discourse coherence [22], with each method outperforming
-      the others on different tasks.", "Other approaches [43, 44, 38] use hidden representations
-      from a"], "intents": ["methodology"], "isInfluential": false, "citedPaper":
+      "Man Lan"}, {"authorId": "3174675", "name": "Yuanbin Wu"}]}}, {"intents": ["methodology"],
+      "contexts": ["Recent research has looked at various objectives such as language
+      modeling [44], machine translation [38], and discourse coherence [22], with
+      each method outperforming the others on different tasks.", "Other approaches
+      [43, 44, 38] use hidden representations from a"], "isInfluential": false, "citedPaper":
       {"paperId": "bc8fa64625d9189f5801837e7b133e7fe3c581f7", "externalIds": {"ArXiv":
       "1708.00107", "MAG": "2949553999", "DBLP": "journals/corr/abs-1708-00107", "CorpusId":
       9447219}, "corpusId": 9447219, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/bc8fa64625d9189f5801837e7b133e7fe3c581f7",
@@ -639,21 +639,21 @@ interactions:
       ["JournalArticle", "Conference"], "publicationDate": "2017-08-01", "journal":
       {"pages": "6294-6305"}, "authors": [{"authorId": "143775536", "name": "Bryan
       McCann"}, {"authorId": "40518045", "name": "James Bradbury"}, {"authorId": "2228109",
-      "name": "Caiming Xiong"}, {"authorId": "2166511", "name": "R. Socher"}]}}, {"contexts":
-      ["Task Datasets Natural language inference SNLI [5], MultiNLI [66], Question
-      NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story Cloze [40]
-      Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS
-      Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA [65]",
-      "Our results also indicate that our approach works well across datasets of different
-      sizes, from smaller datasets such as STS-B (\u22485.7k training examples) \u2013
-      to the largest one \u2013 SNLI (\u2248550k training examples).", "We use three
-      datasets for this task \u2013 the Microsoft Paraphrase corpus (MRPC) [14] (collected
-      from news sources), the Quora Question Pairs (QQP) dataset [9], and the Semantic
-      Textual Similarity benchmark (STS-B) [6].", "We obtain state-of-the-art results
-      on two of the three semantic similarity tasks (Table 4) with a 1 point absolute
-      gain on STS-B."], "intents": ["methodology"], "isInfluential": true, "citedPaper":
-      {"paperId": "a23fa96e7217ba0e9405d9e1fe3cdedd57b6e096", "externalIds": {"ArXiv":
-      "1708.00055", "MAG": "3104033643", "ACL": "S17-2001", "DBLP": "journals/corr/abs-1708-00055",
+      "name": "Caiming Xiong"}, {"authorId": "2166511", "name": "R. Socher"}]}}, {"intents":
+      ["methodology"], "contexts": ["Task Datasets Natural language inference SNLI
+      [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail [25] Question Answering
+      RACE [30], Story Cloze [40] Sentence similarity MSR Paraphrase Corpus [14],
+      Quora Question Pairs [9], STS Benchmark [6] Classification Stanford Sentiment
+      Treebank-2 [54], CoLA [65]", "Our results also indicate that our approach works
+      well across datasets of different sizes, from smaller datasets such as STS-B
+      (\u22485.7k training examples) \u2013 to the largest one \u2013 SNLI (\u2248550k
+      training examples).", "We use three datasets for this task \u2013 the Microsoft
+      Paraphrase corpus (MRPC) [14] (collected from news sources), the Quora Question
+      Pairs (QQP) dataset [9], and the Semantic Textual Similarity benchmark (STS-B)
+      [6].", "We obtain state-of-the-art results on two of the three semantic similarity
+      tasks (Table 4) with a 1 point absolute gain on STS-B."], "isInfluential": true,
+      "citedPaper": {"paperId": "a23fa96e7217ba0e9405d9e1fe3cdedd57b6e096", "externalIds":
+      {"ArXiv": "1708.00055", "MAG": "3104033643", "ACL": "S17-2001", "DBLP": "journals/corr/abs-1708-00055",
       "DOI": "10.18653/v1/S17-2001", "CorpusId": 4421747}, "corpusId": 4421747, "publicationVenue":
       {"id": "70713d09-6e4b-4554-9d3f-94d08aba320c", "name": "International Workshop
       on Semantic Evaluation", "type": "conference", "alternate_names": ["SemEval
@@ -672,7 +672,7 @@ interactions:
       the STS Benchmark is introduced as a new shared training and evaluation set
       carefully selected from the corpus of English STS shared task data (2012-2017).",
       "venue": "International Workshop on Semantic Evaluation", "year": 2017, "referenceCount":
-      90, "citationCount": 1348, "influentialCitationCount": 275, "isOpenAccess":
+      90, "citationCount": 1350, "influentialCitationCount": 275, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/S17-2001.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -681,23 +681,23 @@ interactions:
       "journal": {"pages": "1-14"}, "authors": [{"authorId": "46724030", "name": "Daniel
       Matthew Cer"}, {"authorId": "1700007", "name": "Mona T. Diab"}, {"authorId":
       "1733049", "name": "Eneko Agirre"}, {"authorId": "1405529953", "name": "I. Lopez-Gazpio"},
-      {"authorId": "1702974", "name": "Lucia Specia"}]}}, {"contexts": ["Our work
-      suggests that achieving significant performance gains is indeed possible, and
-      offers hints as to what models (Transformers) and data sets (text with long
-      range dependencies) work best with this approach.", "The LSTM only outperforms
-      the Transformer on one dataset \u2013 MRPC. Finally, we also compare with our
-      transformer architecture directly trained on supervised target tasks, without
-      pre-training.", "For our model architecture, we use the Transformer [62], which
-      has been shown to perform strongly on various tasks such as machine translation
-      [62], document generation [34], and syntactic parsing [29].", "We observe a
-      5.6 average score drop when using the LSTM instead of the Transformer.", "We
-      also observe the LSTM exhibits higher variance in its zero-shot performance
-      suggesting that the inductive bias of the Transformer architecture assists in
-      transfer.", "In our experiments, we use a multi-layer Transformer decoder [34]
-      for the language model, which is a variant of the transformer [62].", "Second,
-      we analyze the effect of the Transformer by comparing it with a single layer
-      2048 unit LSTM using the same framework.", "Model specifications Our model largely
-      follows the original transformer work [62]."], "intents": ["methodology"], "isInfluential":
+      {"authorId": "1702974", "name": "Lucia Specia"}]}}, {"intents": ["methodology"],
+      "contexts": ["Our work suggests that achieving significant performance gains
+      is indeed possible, and offers hints as to what models (Transformers) and data
+      sets (text with long range dependencies) work best with this approach.", "The
+      LSTM only outperforms the Transformer on one dataset \u2013 MRPC. Finally, we
+      also compare with our transformer architecture directly trained on supervised
+      target tasks, without pre-training.", "For our model architecture, we use the
+      Transformer [62], which has been shown to perform strongly on various tasks
+      such as machine translation [62], document generation [34], and syntactic parsing
+      [29].", "We observe a 5.6 average score drop when using the LSTM instead of
+      the Transformer.", "We also observe the LSTM exhibits higher variance in its
+      zero-shot performance suggesting that the inductive bias of the Transformer
+      architecture assists in transfer.", "In our experiments, we use a multi-layer
+      Transformer decoder [34] for the language model, which is a variant of the transformer
+      [62].", "Second, we analyze the effect of the Transformer by comparing it with
+      a single layer 2048 unit LSTM using the same framework.", "Model specifications
+      Our model largely follows the original transformer work [62]."], "isInfluential":
       true, "citedPaper": {"paperId": "204e3073870fae3d05bcbc2f6a8e263d9b72e776",
       "externalIds": {"DBLP": "journals/corr/VaswaniSPUJGKP17", "ArXiv": "1706.03762",
       "MAG": "2950858113", "CorpusId": 13756489}, "corpusId": 13756489, "publicationVenue":
@@ -717,8 +717,8 @@ interactions:
       of the training costs of the best models from the literature. We show that the
       Transformer generalizes well to other tasks by applying it successfully to English
       constituency parsing both with large and limited training data.", "venue": "NIPS",
-      "year": 2017, "referenceCount": 42, "citationCount": 67621, "influentialCitationCount":
-      13858, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "year": 2017, "referenceCount": 42, "citationCount": 67893, "influentialCitationCount":
+      13897, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle", "Conference"], "publicationDate": "2017-06-12", "journal":
@@ -727,14 +727,14 @@ interactions:
       "3877127", "name": "Niki Parmar"}, {"authorId": "39328010", "name": "Jakob Uszkoreit"},
       {"authorId": "145024664", "name": "Llion Jones"}, {"authorId": "19177000", "name":
       "Aidan N. Gomez"}, {"authorId": "40527594", "name": "Lukasz Kaiser"}, {"authorId":
-      "3443442", "name": "Illia Polosukhin"}]}}, {"contexts": ["Phrase-level or sentence-level
-      embeddings, which can be trained using an unlabeled corpus, have been used to
-      encode text into suitable vector representations for various target tasks [28,
-      32, 1, 36, 22, 12, 56, 31]."], "intents": ["methodology"], "isInfluential":
-      false, "citedPaper": {"paperId": "ee7b883e35d754ae4f71c21bb71f9f03e4ffbb2c",
-      "externalIds": {"DBLP": "conf/emnlp/ConneauKSBB17", "ArXiv": "1705.02364", "MAG":
-      "2949308238", "ACL": "D17-1070", "DOI": "10.18653/v1/D17-1070", "CorpusId":
-      28971531}, "corpusId": 28971531, "publicationVenue": {"id": "41bf9ed3-85b3-4c90-b015-150e31690253",
+      "3443442", "name": "Illia Polosukhin"}]}}, {"intents": ["methodology"], "contexts":
+      ["Phrase-level or sentence-level embeddings, which can be trained using an unlabeled
+      corpus, have been used to encode text into suitable vector representations for
+      various target tasks [28, 32, 1, 36, 22, 12, 56, 31]."], "isInfluential": false,
+      "citedPaper": {"paperId": "ee7b883e35d754ae4f71c21bb71f9f03e4ffbb2c", "externalIds":
+      {"DBLP": "conf/emnlp/ConneauKSBB17", "ArXiv": "1705.02364", "MAG": "2949308238",
+      "ACL": "D17-1070", "DOI": "10.18653/v1/D17-1070", "CorpusId": 28971531}, "corpusId":
+      28971531, "publicationVenue": {"id": "41bf9ed3-85b3-4c90-b015-150e31690253",
       "name": "Conference on Empirical Methods in Natural Language Processing", "type":
       "conference", "alternate_names": ["Empir Method Nat Lang Process", "Empirical
       Methods in Natural Language Processing", "Conf Empir Method Nat Lang Process",
@@ -753,7 +753,7 @@ interactions:
       work tends to indicate the suitability of natural language inference for transfer
       learning to other NLP tasks. Our encoder is publicly available.", "venue": "Conference
       on Empirical Methods in Natural Language Processing", "year": 2017, "referenceCount":
-      45, "citationCount": 1840, "influentialCitationCount": 362, "isOpenAccess":
+      45, "citationCount": 1843, "influentialCitationCount": 363, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/D17-1070.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -762,14 +762,14 @@ interactions:
       "ArXiv"}, "authors": [{"authorId": "2480903", "name": "Alexis Conneau"}, {"authorId":
       "1743722", "name": "Douwe Kiela"}, {"authorId": "144518416", "name": "Holger
       Schwenk"}, {"authorId": "2934336", "name": "Lo\u00efc Barrault"}, {"authorId":
-      "1713934", "name": "Antoine Bordes"}]}}, {"contexts": ["More recently, Rei [50]
-      added an auxiliary language modeling objective to their target task objective
-      and demonstrated performance gains on sequence labeling tasks.", "Existing techniques
-      involve a combination of making task-specific changes to the model architecture
-      [43, 44], using intricate learning schemes [21] and adding auxiliary learning
-      objectives [50].", "This is in line with prior work [50, 43], who also observed
-      improved performance with such an auxiliary objective."], "intents": ["result",
-      "background", "methodology"], "isInfluential": false, "citedPaper": {"paperId":
+      "1713934", "name": "Antoine Bordes"}]}}, {"intents": ["result", "background",
+      "methodology"], "contexts": ["More recently, Rei [50] added an auxiliary language
+      modeling objective to their target task objective and demonstrated performance
+      gains on sequence labeling tasks.", "Existing techniques involve a combination
+      of making task-specific changes to the model architecture [43, 44], using intricate
+      learning schemes [21] and adding auxiliary learning objectives [50].", "This
+      is in line with prior work [50, 43], who also observed improved performance
+      with such an auxiliary objective."], "isInfluential": false, "citedPaper": {"paperId":
       "ac17cfa150d802750b46220084d850cfdb64d1c1", "externalIds": {"ACL": "P17-1194",
       "ArXiv": "1704.07156", "MAG": "2609130030", "DBLP": "journals/corr/Rei17", "DOI":
       "10.18653/v1/P17-1194", "CorpusId": 16386838}, "corpusId": 16386838, "publicationVenue":
@@ -795,10 +795,10 @@ interactions:
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2017-04-24", "journal": {"pages": "2121-2130"}, "authors":
-      [{"authorId": "145687301", "name": "Marek Rei"}]}}, {"contexts": ["Phrase-level
-      or sentence-level embeddings, which can be trained using an unlabeled corpus,
-      have been used to encode text into suitable vector representations for various
-      target tasks [28, 32, 1, 36, 22, 12, 56, 31]."], "intents": ["methodology"],
+      [{"authorId": "145687301", "name": "Marek Rei"}]}}, {"intents": ["methodology"],
+      "contexts": ["Phrase-level or sentence-level embeddings, which can be trained
+      using an unlabeled corpus, have been used to encode text into suitable vector
+      representations for various target tasks [28, 32, 1, 36, 22, 12, 56, 31]."],
       "isInfluential": false, "citedPaper": {"paperId": "3f1802d3f4f5f6d66875dac09112f978f12e1e1e",
       "externalIds": {"MAG": "2752172973", "DBLP": "conf/iclr/AroraLM17", "CorpusId":
       64908139}, "corpusId": 64908139, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
@@ -807,19 +807,19 @@ interactions:
       "url": "https://www.semanticscholar.org/paper/3f1802d3f4f5f6d66875dac09112f978f12e1e1e",
       "title": "A Simple but Tough-to-Beat Baseline for Sentence Embeddings", "abstract":
       null, "venue": "International Conference on Learning Representations", "year":
-      2017, "referenceCount": 0, "citationCount": 1165, "influentialCitationCount":
+      2017, "referenceCount": 0, "citationCount": 1166, "influentialCitationCount":
       187, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"}],
       "publicationTypes": ["JournalArticle"], "publicationDate": "2017-04-24", "journal":
       {"volume": "", "name": ""}, "authors": [{"authorId": "145563465", "name": "Sanjeev
       Arora"}, {"authorId": "40609253", "name": "Yingyu Liang"}, {"authorId": "1901958",
-      "name": "Tengyu Ma"}]}}, {"contexts": ["Recent research has looked at various
-      objectives such as language modeling [44], machine translation [38], and discourse
-      coherence [22], with each method outperforming the others on different tasks.",
-      "Phrase-level or sentence-level embeddings, which can be trained using an unlabeled
-      corpus, have been used to encode text into suitable vector representations for
-      various target tasks [28, 32, 1, 36, 22, 12, 56, 31]."], "intents": ["methodology"],
-      "isInfluential": false, "citedPaper": {"paperId": "a97dc52807d80454e78d255f9fbd7b0fab56bd03",
+      "name": "Tengyu Ma"}]}}, {"intents": ["methodology"], "contexts": ["Recent research
+      has looked at various objectives such as language modeling [44], machine translation
+      [38], and discourse coherence [22], with each method outperforming the others
+      on different tasks.", "Phrase-level or sentence-level embeddings, which can
+      be trained using an unlabeled corpus, have been used to encode text into suitable
+      vector representations for various target tasks [28, 32, 1, 36, 22, 12, 56,
+      31]."], "isInfluential": false, "citedPaper": {"paperId": "a97dc52807d80454e78d255f9fbd7b0fab56bd03",
       "externalIds": {"ArXiv": "1705.00557", "DBLP": "journals/corr/JerniteBS17",
       "MAG": "2610858497", "CorpusId": 6694822}, "corpusId": 6694822, "publicationVenue":
       {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10", "name": "arXiv.org", "alternate_names":
@@ -840,19 +840,19 @@ interactions:
       "publicationDate": "2017-04-23", "journal": {"volume": "abs/1705.00557", "name":
       "ArXiv"}, "authors": [{"authorId": "2262249", "name": "Yacine Jernite"}, {"authorId":
       "3644767", "name": "Samuel R. Bowman"}, {"authorId": "1746662", "name": "D.
-      Sontag"}]}}, {"contexts": ["5% on textual entailment (MultiNLI) [66] and 5.",
-      "Figure 2(left) illustrates the performance of our approach on MultiNLI and
-      RACE as a function of the number of layers transferred.", "Task Datasets Natural
-      language inference SNLI [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail
-      [25] Question Answering RACE [30], Story Cloze [40] Sentence similarity MSR
-      Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark [6] Classification
-      Stanford Sentiment Treebank-2 [54], CoLA [65]", "We observe the standard result
-      that transferring embeddings improves performance and that each transformer
-      layer provides further benefits up to 9% for full transfer on MultiNLI.", "For
-      instance, we achieve absolute improvements of 8.9% on commonsense reasoning
-      (Stories Cloze Test) [40], 5.7% on question answering (RACE) [30], 1.5% on textual
-      entailment (MultiNLI) [66] and 5.5% on the recently introduced GLUE multi-task
-      benchmark [64]."], "intents": ["background", "methodology"], "isInfluential":
+      Sontag"}]}}, {"intents": ["background", "methodology"], "contexts": ["5% on
+      textual entailment (MultiNLI) [66] and 5.", "Figure 2(left) illustrates the
+      performance of our approach on MultiNLI and RACE as a function of the number
+      of layers transferred.", "Task Datasets Natural language inference SNLI [5],
+      MultiNLI [66], Question NLI [64], RTE [4], SciTail [25] Question Answering RACE
+      [30], Story Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora
+      Question Pairs [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2
+      [54], CoLA [65]", "We observe the standard result that transferring embeddings
+      improves performance and that each transformer layer provides further benefits
+      up to 9% for full transfer on MultiNLI.", "For instance, we achieve absolute
+      improvements of 8.9% on commonsense reasoning (Stories Cloze Test) [40], 5.7%
+      on question answering (RACE) [30], 1.5% on textual entailment (MultiNLI) [66]
+      and 5.5% on the recently introduced GLUE multi-task benchmark [64]."], "isInfluential":
       true, "citedPaper": {"paperId": "5ded2b8c64491b4a67f6d39ce473d4b9347a672e",
       "externalIds": {"DBLP": "journals/corr/WilliamsNB17", "ACL": "N18-1101", "MAG":
       "2952324856", "ArXiv": "1704.05426", "DOI": "10.18653/v1/N18-1101", "CorpusId":
@@ -874,30 +874,30 @@ interactions:
       NLI corpus shows that it represents a substantially more difficult task than
       does that corpus, despite the two showing similar levels of inter-annotator
       agreement.", "venue": "North American Chapter of the Association for Computational
-      Linguistics", "year": 2017, "referenceCount": 56, "citationCount": 3110, "influentialCitationCount":
-      688, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-1101.pdf",
+      Linguistics", "year": 2017, "referenceCount": 56, "citationCount": 3122, "influentialCitationCount":
+      690, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-1101.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2017-04-18", "journal": {"pages": "1112-1122"}, "authors":
       [{"authorId": "81840293", "name": "Adina Williams"}, {"authorId": "10666396",
       "name": "Nikita Nangia"}, {"authorId": "3644767", "name": "Samuel R. Bowman"}]}},
-      {"contexts": ["On these tasks, our model again outperforms the previous best
-      results by significant margins - up to 8.9% on Story Cloze, and 5.7% overall
-      on RACE.", "Figure 2(left) illustrates the performance of our approach on MultiNLI
-      and RACE as a function of the number of layers transferred.", "Task Datasets
-      Natural language inference SNLI [5], MultiNLI [66], Question NLI [64], RTE [4],
-      SciTail [25] Question Answering RACE [30], Story Cloze [40] Sentence similarity
-      MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark [6] Classification
-      Stanford Sentiment Treebank-2 [54], CoLA [65]", "7% on question answering (RACE)
-      [30], 1.", "For instance, we achieve absolute improvements of 8.9% on commonsense
-      reasoning (Stories Cloze Test) [40], 5.7% on question answering (RACE) [30],
-      1.5% on textual entailment (MultiNLI) [66] and 5.5% on the recently introduced
-      GLUE multi-task benchmark [64].", "We use the recently released RACE dataset
-      [30], consisting of English passages with associated questions from middle and
-      high school exams.", "For RACE (question answering), we pick the answer the
-      generative model assigns the highest average token log-probability when conditioned
-      on the document and question."], "intents": ["methodology"], "isInfluential":
+      {"intents": ["methodology"], "contexts": ["On these tasks, our model again outperforms
+      the previous best results by significant margins - up to 8.9% on Story Cloze,
+      and 5.7% overall on RACE.", "Figure 2(left) illustrates the performance of our
+      approach on MultiNLI and RACE as a function of the number of layers transferred.",
+      "Task Datasets Natural language inference SNLI [5], MultiNLI [66], Question
+      NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story Cloze [40]
+      Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS
+      Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA [65]",
+      "7% on question answering (RACE) [30], 1.", "For instance, we achieve absolute
+      improvements of 8.9% on commonsense reasoning (Stories Cloze Test) [40], 5.7%
+      on question answering (RACE) [30], 1.5% on textual entailment (MultiNLI) [66]
+      and 5.5% on the recently introduced GLUE multi-task benchmark [64].", "We use
+      the recently released RACE dataset [30], consisting of English passages with
+      associated questions from middle and high school exams.", "For RACE (question
+      answering), we pick the answer the generative model assigns the highest average
+      token log-probability when conditioned on the document and question."], "isInfluential":
       true, "citedPaper": {"paperId": "636a79420d838eabe4af7fb25d6437de45ab64e8",
       "externalIds": {"ACL": "D17-1082", "ArXiv": "1704.04683", "DBLP": "conf/emnlp/LaiXLYH17",
       "MAG": "2606964149", "DOI": "10.18653/v1/D17-1082", "CorpusId": 6826032}, "corpusId":
@@ -921,7 +921,7 @@ interactions:
       The dataset is freely available at http://www.cs.cmu.edu/~glai1/data/race/ and
       the code is available at https://github.com/qizhex/RACE_AR_baselines.", "venue":
       "Conference on Empirical Methods in Natural Language Processing", "year": 2017,
-      "referenceCount": 21, "citationCount": 930, "influentialCitationCount": 240,
+      "referenceCount": 21, "citationCount": 935, "influentialCitationCount": 240,
       "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/D17-1082.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -930,23 +930,23 @@ interactions:
       "ArXiv"}, "authors": [{"authorId": "1857734", "name": "Guokun Lai"}, {"authorId":
       "1912046", "name": "Qizhe Xie"}, {"authorId": "2391802", "name": "Hanxiao Liu"},
       {"authorId": "35729970", "name": "Yiming Yang"}, {"authorId": "144547315", "name":
-      "E. Hovy"}]}}, {"contexts": ["On these tasks, our model again outperforms the
-      previous best results by significant margins - up to 8.9% on Story Cloze, and
-      5.7% overall on RACE.", "In addition, we evaluate on the Story Cloze Test [40],
-      which involves selecting the correct ending to multi-sentence stories from two
-      options.", "Task Datasets Natural language inference SNLI [5], MultiNLI [66],
-      Question NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story
-      Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs
-      [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA
-      [65]", "9% on commonsense reasoning (Stories Cloze Test) [40], 5.", "For instance,
-      we achieve absolute improvements of 8.9% on commonsense reasoning (Stories Cloze
-      Test) [40], 5.7% on question answering (RACE) [30], 1.5% on textual entailment
-      (MultiNLI) [66] and 5.5% on the recently introduced GLUE multi-task benchmark
-      [64]."], "intents": ["background", "methodology"], "isInfluential": true, "citedPaper":
-      {"paperId": "97394554eb5a74c3160c6bd743fcd3e4bd6cbe28", "externalIds": {"DBLP":
-      "conf/eacl/MostafazadehRLC17", "ACL": "W17-0906", "MAG": "2692059227", "DOI":
-      "10.18653/v1/W17-0906", "CorpusId": 13746570}, "corpusId": 13746570, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/97394554eb5a74c3160c6bd743fcd3e4bd6cbe28",
+      "E. Hovy"}]}}, {"intents": ["background", "methodology"], "contexts": ["On these
+      tasks, our model again outperforms the previous best results by significant
+      margins - up to 8.9% on Story Cloze, and 5.7% overall on RACE.", "In addition,
+      we evaluate on the Story Cloze Test [40], which involves selecting the correct
+      ending to multi-sentence stories from two options.", "Task Datasets Natural
+      language inference SNLI [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail
+      [25] Question Answering RACE [30], Story Cloze [40] Sentence similarity MSR
+      Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark [6] Classification
+      Stanford Sentiment Treebank-2 [54], CoLA [65]", "9% on commonsense reasoning
+      (Stories Cloze Test) [40], 5.", "For instance, we achieve absolute improvements
+      of 8.9% on commonsense reasoning (Stories Cloze Test) [40], 5.7% on question
+      answering (RACE) [30], 1.5% on textual entailment (MultiNLI) [66] and 5.5% on
+      the recently introduced GLUE multi-task benchmark [64]."], "isInfluential":
+      true, "citedPaper": {"paperId": "97394554eb5a74c3160c6bd743fcd3e4bd6cbe28",
+      "externalIds": {"DBLP": "conf/eacl/MostafazadehRLC17", "ACL": "W17-0906", "MAG":
+      "2692059227", "DOI": "10.18653/v1/W17-0906", "CorpusId": 13746570}, "corpusId":
+      13746570, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/97394554eb5a74c3160c6bd743fcd3e4bd6cbe28",
       "title": "LSDSem 2017 Shared Task: The Story Cloze Test", "abstract": "The LSDSem\u201917
       shared task is the Story Cloze Test, a new evaluation for story understanding
       and script learning. This test provides a system with a four-sentence story
@@ -964,16 +964,15 @@ interactions:
       "name": "N. Mostafazadeh"}, {"authorId": "46617131", "name": "Michael Roth"},
       {"authorId": "1767336", "name": "Annie Louis"}, {"authorId": "1729918", "name":
       "Nathanael Chambers"}, {"authorId": "145844737", "name": "James F. Allen"}]}},
-      {"contexts": ["Existing techniques involve a combination of making task-specific
-      changes to the model architecture [43, 44], using intricate learning schemes
-      [21] and adding auxiliary learning objectives [50].", "This is in line with
-      prior work [50, 43], who also observed improved performance with such an auxiliary
-      objective.", "Other approaches [43, 44, 38] use hidden representations from
-      a"], "intents": ["result", "methodology"], "isInfluential": false, "citedPaper":
-      {"paperId": "0bb4cadc80c0afaf29c57518dc9c06f8fcfa5f38", "externalIds": {"DBLP":
-      "journals/corr/PetersABP17", "MAG": "2610748790", "ArXiv": "1705.00108", "ACL":
-      "P17-1161", "DOI": "10.18653/v1/P17-1161", "CorpusId": 7197241}, "corpusId":
-      7197241, "publicationVenue": {"id": "1e33b3be-b2ab-46e9-96e8-d4eb4bad6e44",
+      {"intents": ["result", "methodology"], "contexts": ["Existing techniques involve
+      a combination of making task-specific changes to the model architecture [43,
+      44], using intricate learning schemes [21] and adding auxiliary learning objectives
+      [50].", "This is in line with prior work [50, 43], who also observed improved
+      performance with such an auxiliary objective.", "Other approaches [43, 44, 38]
+      use hidden representations from a"], "isInfluential": false, "citedPaper": {"paperId":
+      "0bb4cadc80c0afaf29c57518dc9c06f8fcfa5f38", "externalIds": {"DBLP": "journals/corr/PetersABP17",
+      "MAG": "2610748790", "ArXiv": "1705.00108", "ACL": "P17-1161", "DOI": "10.18653/v1/P17-1161",
+      "CorpusId": 7197241}, "corpusId": 7197241, "publicationVenue": {"id": "1e33b3be-b2ab-46e9-96e8-d4eb4bad6e44",
       "name": "Annual Meeting of the Association for Computational Linguistics", "type":
       "conference", "alternate_names": ["Annu Meet Assoc Comput Linguistics", "Meeting
       of the Association for Computational Linguistics", "ACL", "Meet Assoc Comput
@@ -1000,7 +999,7 @@ interactions:
       {"volume": "abs/1705.00108", "name": "ArXiv"}, "authors": [{"authorId": "39139825",
       "name": "Matthew E. Peters"}, {"authorId": "145585097", "name": "Waleed Ammar"},
       {"authorId": "1857797", "name": "Chandra Bhagavatula"}, {"authorId": "39071178",
-      "name": "Russell Power"}]}}, {"contexts": [], "intents": [], "isInfluential":
+      "name": "Russell Power"}]}}, {"intents": [], "contexts": [], "isInfluential":
       false, "citedPaper": {"paperId": "62f3d3015cee122bd147d7d878c85f70cc15680d",
       "externalIds": {"MAG": "2949532563", "ArXiv": "1611.09842", "DBLP": "journals/corr/ZhangIE16a",
       "DOI": "10.1109/CVPR.2017.76", "CorpusId": 9658690}, "corpusId": 9658690, "publicationVenue":
@@ -1019,8 +1018,8 @@ interactions:
       cross-channel prediction tasks, we induce a representation within the network
       which transfers well to other, unseen tasks. This method achieves state-of-the-art
       performance on several large-scale transfer learning benchmarks.", "venue":
-      "Computer Vision and Pattern Recognition", "year": 2016, "referenceCount": 58,
-      "citationCount": 613, "influentialCitationCount": 40, "isOpenAccess": true,
+      "Computer Vision and Pattern Recognition", "year": 2016, "referenceCount": 56,
+      "citationCount": 614, "influentialCitationCount": 40, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://arxiv.org/pdf/1611.09842", "status": null},
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
@@ -1028,11 +1027,11 @@ interactions:
       "2016-11-29", "journal": {"pages": "645-654", "name": "2017 IEEE Conference
       on Computer Vision and Pattern Recognition (CVPR)"}, "authors": [{"authorId":
       "2844849", "name": "Richard Zhang"}, {"authorId": "2094770", "name": "Phillip
-      Isola"}, {"authorId": "1763086", "name": "Alexei A. Efros"}]}}, {"contexts":
-      ["In recent work, the method has been used to help train deep neural networks
-      on various tasks like image classification [69], speech recognition [68], entity
-      disambiguation [17] and machine translation [48]."], "intents": ["methodology"],
-      "isInfluential": false, "citedPaper": {"paperId": "85f94d8098322f8130512b4c6c4627548ce4a6cc",
+      Isola"}, {"authorId": "1763086", "name": "Alexei A. Efros"}]}}, {"intents":
+      ["methodology"], "contexts": ["In recent work, the method has been used to help
+      train deep neural networks on various tasks like image classification [69],
+      speech recognition [68], entity disambiguation [17] and machine translation
+      [48]."], "isInfluential": false, "citedPaper": {"paperId": "85f94d8098322f8130512b4c6c4627548ce4a6cc",
       "externalIds": {"MAG": "2951991713", "ArXiv": "1611.02683", "DBLP": "conf/emnlp/RamachandranLL17",
       "ACL": "D17-1039", "DOI": "10.18653/v1/D17-1039", "CorpusId": 3488076}, "corpusId":
       3488076, "publicationVenue": {"id": "41bf9ed3-85b3-4c90-b015-150e31690253",
@@ -1063,9 +1062,9 @@ interactions:
       "publicationDate": "2016-11-08", "journal": {"volume": "abs/1611.02683", "name":
       "ArXiv"}, "authors": [{"authorId": "3377142", "name": "Prajit Ramachandran"},
       {"authorId": "35025299", "name": "Peter J. Liu"}, {"authorId": "2827616", "name":
-      "Quoc V. Le"}]}}, {"contexts": ["Since layernorm [2] is used extensively throughout
-      the model, a simple weight initialization of N(0, 0."], "intents": ["methodology"],
-      "isInfluential": false, "citedPaper": {"paperId": "97fb4e3d45bb098e27e0071448b6152217bd35a5",
+      "Quoc V. Le"}]}}, {"intents": ["methodology"], "contexts": ["Since layernorm
+      [2] is used extensively throughout the model, a simple weight initialization
+      of N(0, 0."], "isInfluential": false, "citedPaper": {"paperId": "97fb4e3d45bb098e27e0071448b6152217bd35a5",
       "externalIds": {"MAG": "3037932933", "DBLP": "journals/corr/BaKH16", "ArXiv":
       "1607.06450", "CorpusId": 8236317}, "corpusId": 8236317, "publicationVenue":
       {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10", "name": "arXiv.org", "alternate_names":
@@ -1091,7 +1090,7 @@ interactions:
       is very effective at stabilizing the hidden state dynamics in recurrent networks.
       Empirically, we show that layer normalization can substantially reduce the training
       time compared with previously published techniques.", "venue": "arXiv.org",
-      "year": 2016, "referenceCount": 34, "citationCount": 6268, "influentialCitationCount":
+      "year": 2016, "referenceCount": 34, "citationCount": 6291, "influentialCitationCount":
       291, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
@@ -1099,11 +1098,11 @@ interactions:
       "publicationDate": "2016-07-21", "journal": {"volume": "abs/1607.06450", "name":
       "ArXiv"}, "authors": [{"authorId": "2503659", "name": "Jimmy Ba"}, {"authorId":
       "51131802", "name": "J. Kiros"}, {"authorId": "1695689", "name": "Geoffrey E.
-      Hinton"}]}}, {"contexts": ["For the activation function, we used the Gaussian
-      Error Linear Unit (GELU) [18]."], "intents": ["methodology"], "isInfluential":
-      false, "citedPaper": {"paperId": "4361e64f2d12d63476fdc88faf72a0f70d9a2ffb",
-      "externalIds": {"DBLP": "journals/corr/HendrycksG16", "MAG": "2462831000", "CorpusId":
-      2359786}, "corpusId": 2359786, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      Hinton"}]}}, {"intents": ["methodology"], "contexts": ["For the activation function,
+      we used the Gaussian Error Linear Unit (GELU) [18]."], "isInfluential": false,
+      "citedPaper": {"paperId": "4361e64f2d12d63476fdc88faf72a0f70d9a2ffb", "externalIds":
+      {"DBLP": "journals/corr/HendrycksG16", "MAG": "2462831000", "CorpusId": 2359786},
+      "corpusId": 2359786, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
       "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/4361e64f2d12d63476fdc88faf72a0f70d9a2ffb",
       "title": "Bridging Nonlinearities and Stochastic Regularizers with Gaussian
@@ -1121,7 +1120,7 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "2016-06-27", "journal": {"volume": "abs/1606.08415", "name": "ArXiv"}, "authors":
       [{"authorId": "3422872", "name": "Dan Hendrycks"}, {"authorId": "1700980", "name":
-      "Kevin Gimpel"}]}}, {"contexts": [], "intents": [], "isInfluential": false,
+      "Kevin Gimpel"}]}}, {"intents": [], "contexts": [], "isInfluential": false,
       "citedPaper": {"paperId": "05dd7254b632376973f3a1b4d39485da17814df5", "externalIds":
       {"MAG": "2963748441", "DBLP": "journals/corr/RajpurkarZLL16", "ACL": "D16-1264",
       "ArXiv": "1606.05250", "DOI": "10.18653/v1/D16-1264", "CorpusId": 11816014},
@@ -1141,20 +1140,20 @@ interactions:
       performance (86.8%) is much higher, indicating that the dataset presents a good
       challenge problem for future research. \nThe dataset is freely available at
       this https URL", "venue": "Conference on Empirical Methods in Natural Language
-      Processing", "year": 2016, "referenceCount": 28, "citationCount": 5885, "influentialCitationCount":
-      1499, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d16-1264",
+      Processing", "year": 2016, "referenceCount": 28, "citationCount": 5905, "influentialCitationCount":
+      1503, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d16-1264",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2016-06-16", "journal": {"pages": "2383-2392"}, "authors":
       [{"authorId": "2706258", "name": "Pranav Rajpurkar"}, {"authorId": "2151810148",
       "name": "Jian Zhang"}, {"authorId": "2787620", "name": "Konstantin Lopyrev"},
-      {"authorId": "145419642", "name": "Percy Liang"}]}}, {"contexts": ["[13] and
-      Howard and Ruder [21] follow this method to improve text classification."],
-      "intents": ["methodology"], "isInfluential": false, "citedPaper": {"paperId":
-      "4aa9f5150b46320f534de4747a2dd0cd7f3fe292", "externalIds": {"MAG": "2952729433",
-      "DBLP": "conf/nips/DaiL15", "ArXiv": "1511.01432", "CorpusId": 7138078}, "corpusId":
-      7138078, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4aa9f5150b46320f534de4747a2dd0cd7f3fe292",
+      {"authorId": "145419642", "name": "Percy Liang"}]}}, {"intents": ["methodology"],
+      "contexts": ["[13] and Howard and Ruder [21] follow this method to improve text
+      classification."], "isInfluential": false, "citedPaper": {"paperId": "4aa9f5150b46320f534de4747a2dd0cd7f3fe292",
+      "externalIds": {"MAG": "2952729433", "DBLP": "conf/nips/DaiL15", "ArXiv": "1511.01432",
+      "CorpusId": 7138078}, "corpusId": 7138078, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/4aa9f5150b46320f534de4747a2dd0cd7f3fe292",
       "title": "Semi-supervised Sequence Learning", "abstract": "We present two approaches
       to use unlabeled data to improve Sequence Learning with recurrent networks.
       The first approach is to predict what comes next in a sequence, which is a language
@@ -1174,14 +1173,13 @@ interactions:
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Conference"], "publicationDate": "2015-11-04", "journal": {"volume": "abs/1511.01432",
       "name": "ArXiv"}, "authors": [{"authorId": "2555924", "name": "Andrew M. Dai"},
-      {"authorId": "2827616", "name": "Quoc V. Le"}]}}, {"contexts": ["Instead, we
-      use a traversal-style approach [52], where we convert structured inputs into
-      an ordered sequence that our pre-trained model can process.", "During transfer,
-      we utilize task-specific input adaptations derived from traversal-style approaches
-      [52], which process structured text input as a single contiguous sequence of
-      tokens."], "intents": ["methodology"], "isInfluential": false, "citedPaper":
-      {"paperId": "2846e83d405cbe3bf2f0f3b5f635dd8b3c680c45", "externalIds": {"MAG":
-      "2962958286", "ArXiv": "1509.06664", "DBLP": "journals/corr/RocktaschelGHKB15",
+      {"authorId": "2827616", "name": "Quoc V. Le"}]}}, {"intents": ["methodology"],
+      "contexts": ["Instead, we use a traversal-style approach [52], where we convert
+      structured inputs into an ordered sequence that our pre-trained model can process.",
+      "During transfer, we utilize task-specific input adaptations derived from traversal-style
+      approaches [52], which process structured text input as a single contiguous
+      sequence of tokens."], "isInfluential": false, "citedPaper": {"paperId": "2846e83d405cbe3bf2f0f3b5f635dd8b3c680c45",
+      "externalIds": {"MAG": "2962958286", "ArXiv": "1509.06664", "DBLP": "journals/corr/RocktaschelGHKB15",
       "CorpusId": 2135897}, "corpusId": 2135897, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
       "name": "International Conference on Learning Representations", "type": "conference",
       "alternate_names": ["Int Conf Learn Represent", "ICLR"], "url": "https://iclr.cc/"},
@@ -1211,9 +1209,9 @@ interactions:
       [{"authorId": "2620211", "name": "Tim Rockt\u00e4schel"}, {"authorId": "1864353",
       "name": "Edward Grefenstette"}, {"authorId": "2910877", "name": "K. Hermann"},
       {"authorId": "2367821", "name": "Tom\u00e1s Kocisk\u00fd"}, {"authorId": "1685771",
-      "name": "P. Blunsom"}]}}, {"contexts": ["We used a bytepair encoding (BPE) vocabulary
-      with 40,000 merges [53] and residual, embedding, and attention dropouts with
-      a rate of 0."], "intents": ["methodology"], "isInfluential": false, "citedPaper":
+      "name": "P. Blunsom"}]}}, {"intents": ["methodology"], "contexts": ["We used
+      a bytepair encoding (BPE) vocabulary with 40,000 merges [53] and residual, embedding,
+      and attention dropouts with a rate of 0."], "isInfluential": false, "citedPaper":
       {"paperId": "1518039b5001f1836565215eb047526b3ac7f462", "externalIds": {"DBLP":
       "conf/acl/SennrichHB16a", "ArXiv": "1508.07909", "MAG": "2951436078", "ACL":
       "P16-1162", "DOI": "10.18653/v1/P16-1162", "CorpusId": 1114678}, "corpusId":
@@ -1239,7 +1237,7 @@ interactions:
       a back-off dictionary baseline for the WMT 15 translation tasks English-German
       and English-Russian by 1.1 and 1.3 BLEU, respectively.", "venue": "Annual Meeting
       of the Association for Computational Linguistics", "year": 2015, "referenceCount":
-      42, "citationCount": 6083, "influentialCitationCount": 1032, "isOpenAccess":
+      42, "citationCount": 6094, "influentialCitationCount": 1034, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/P16-1162.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -1247,20 +1245,20 @@ interactions:
       "publicationDate": "2015-08-31", "journal": {"volume": "abs/1508.07909", "name":
       "ArXiv"}, "authors": [{"authorId": "2082372", "name": "Rico Sennrich"}, {"authorId":
       "2259100", "name": "B. Haddow"}, {"authorId": "2539211", "name": "Alexandra
-      Birch"}]}}, {"contexts": ["We evaluate on five datasets with diverse sources,
-      including image captions (SNLI), transcribed speech, popular fiction, and government
-      reports (MNLI), Wikipedia articles (QNLI), science exams (SciTail) or news articles
-      (RTE).", "Task Datasets Natural language inference SNLI [5], MultiNLI [66],
-      Question NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story
-      Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs
-      [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA
-      [65]", "Our method significantly outperforms the baselines on four of the five
-      datasets, achieving absolute improvements of upto 1.5% on MNLI, 5% on SciTail,
-      5.8% on QNLI and 0.6% on SNLI over the previous best results.", "Our results
-      also indicate that our approach works well across datasets of different sizes,
-      from smaller datasets such as STS-B (\u22485.7k training examples) \u2013 to
-      the largest one \u2013 SNLI (\u2248550k training examples)."], "intents": ["methodology"],
-      "isInfluential": true, "citedPaper": {"paperId": "f04df4e20a18358ea2f689b4c129781628ef7fc1",
+      Birch"}]}}, {"intents": ["methodology"], "contexts": ["We evaluate on five datasets
+      with diverse sources, including image captions (SNLI), transcribed speech, popular
+      fiction, and government reports (MNLI), Wikipedia articles (QNLI), science exams
+      (SciTail) or news articles (RTE).", "Task Datasets Natural language inference
+      SNLI [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail [25] Question Answering
+      RACE [30], Story Cloze [40] Sentence similarity MSR Paraphrase Corpus [14],
+      Quora Question Pairs [9], STS Benchmark [6] Classification Stanford Sentiment
+      Treebank-2 [54], CoLA [65]", "Our method significantly outperforms the baselines
+      on four of the five datasets, achieving absolute improvements of upto 1.5% on
+      MNLI, 5% on SciTail, 5.8% on QNLI and 0.6% on SNLI over the previous best results.",
+      "Our results also indicate that our approach works well across datasets of different
+      sizes, from smaller datasets such as STS-B (\u22485.7k training examples) \u2013
+      to the largest one \u2013 SNLI (\u2248550k training examples)."], "isInfluential":
+      true, "citedPaper": {"paperId": "f04df4e20a18358ea2f689b4c129781628ef7fc1",
       "externalIds": {"MAG": "1840435438", "ACL": "D15-1075", "ArXiv": "1508.05326",
       "DBLP": "journals/corr/BowmanAPM15", "DOI": "10.18653/v1/D15-1075", "CorpusId":
       14604520}, "corpusId": 14604520, "publicationVenue": {"id": "41bf9ed3-85b3-4c90-b015-150e31690253",
@@ -1281,19 +1279,19 @@ interactions:
       some sophisticated existing entailment models, and it allows a neural network-based
       model to perform competitively on natural language inference benchmarks for
       the first time.", "venue": "Conference on Empirical Methods in Natural Language
-      Processing", "year": 2015, "referenceCount": 39, "citationCount": 3336, "influentialCitationCount":
-      921, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d15-1075",
+      Processing", "year": 2015, "referenceCount": 39, "citationCount": 3343, "influentialCitationCount":
+      924, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d15-1075",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2015-08-21", "journal": {"pages": "632-642"}, "authors":
       [{"authorId": "3644767", "name": "Samuel R. Bowman"}, {"authorId": "32301760",
       "name": "Gabor Angeli"}, {"authorId": "144922861", "name": "Christopher Potts"},
-      {"authorId": "144783904", "name": "Christopher D. Manning"}]}}, {"contexts":
-      ["Phrase-level or sentence-level embeddings, which can be trained using an unlabeled
-      corpus, have been used to encode text into suitable vector representations for
-      various target tasks [28, 32, 1, 36, 22, 12, 56, 31]."], "intents": ["methodology"],
-      "isInfluential": false, "citedPaper": {"paperId": "6e795c6e9916174ae12349f5dc3f516570c17ce8",
+      {"authorId": "144783904", "name": "Christopher D. Manning"}]}}, {"intents":
+      ["methodology"], "contexts": ["Phrase-level or sentence-level embeddings, which
+      can be trained using an unlabeled corpus, have been used to encode text into
+      suitable vector representations for various target tasks [28, 32, 1, 36, 22,
+      12, 56, 31]."], "isInfluential": false, "citedPaper": {"paperId": "6e795c6e9916174ae12349f5dc3f516570c17ce8",
       "externalIds": {"DBLP": "journals/corr/KirosZSZTUF15", "ArXiv": "1506.06726",
       "MAG": "1486649854", "CorpusId": 9126867}, "corpusId": 9126867, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/6e795c6e9916174ae12349f5dc3f516570c17ce8",
@@ -1309,7 +1307,7 @@ interactions:
       ranking, question-type classification and 4 benchmark sentiment and subjectivity
       datasets. The end result is an off-the-shelf encoder that can produce highly
       generic sentence representations that are robust and perform well in practice.",
-      "venue": "NIPS", "year": 2015, "referenceCount": 43, "citationCount": 2182,
+      "venue": "NIPS", "year": 2015, "referenceCount": 43, "citationCount": 2184,
       "influentialCitationCount": 272, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
@@ -1318,9 +1316,9 @@ interactions:
       "name": "Ryan Kiros"}, {"authorId": "1844940337", "name": "Yukun Zhu"}, {"authorId":
       "145124475", "name": "R. Salakhutdinov"}, {"authorId": "1804104", "name": "R.
       Zemel"}, {"authorId": "2422559", "name": "R. Urtasun"}, {"authorId": "143805211",
-      "name": "A. Torralba"}, {"authorId": "37895334", "name": "S. Fidler"}]}}, {"contexts":
-      ["1 Setup Unsupervised pre-training We use the BooksCorpus dataset [71] for
-      training the language model."], "intents": ["methodology"], "isInfluential":
+      "name": "A. Torralba"}, {"authorId": "37895334", "name": "S. Fidler"}]}}, {"intents":
+      ["methodology"], "contexts": ["1 Setup Unsupervised pre-training We use the
+      BooksCorpus dataset [71] for training the language model."], "isInfluential":
       false, "citedPaper": {"paperId": "0e6824e137847be0599bb0032e37042ed2ef5045",
       "externalIds": {"ArXiv": "1506.06724", "DBLP": "journals/corr/ZhuKZSUTF15",
       "MAG": "2949433733", "DOI": "10.1109/ICCV.2015.11", "CorpusId": 6866988}, "corpusId":
@@ -1343,7 +1341,7 @@ interactions:
       from multiple sources. We demonstrate good quantitative performance for movie/book
       alignment and show several qualitative examples that showcase the diversity
       of tasks our model can be used for.", "venue": "IEEE International Conference
-      on Computer Vision", "year": 2015, "referenceCount": 44, "citationCount": 2007,
+      on Computer Vision", "year": 2015, "referenceCount": 44, "citationCount": 2010,
       "influentialCitationCount": 252, "isOpenAccess": true, "openAccessPdf": {"url":
       "http://www.cs.toronto.edu/%7Ezemel/documents/align.pdf", "status": null}, "fieldsOfStudy":
       ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
@@ -1354,12 +1352,12 @@ interactions:
       "3450996", "name": "Ryan Kiros"}, {"authorId": "1804104", "name": "R. Zemel"},
       {"authorId": "145124475", "name": "R. Salakhutdinov"}, {"authorId": "2422559",
       "name": "R. Urtasun"}, {"authorId": "143805211", "name": "A. Torralba"}, {"authorId":
-      "37895334", "name": "S. Fidler"}]}}, {"contexts": ["This corpus has been shown
-      to contain more reasoning type questions that other datasets like CNN [19] or
-      SQuaD [47], providing the perfect evaluation for our model which is trained
-      to handle long-range contexts."], "intents": ["background"], "isInfluential":
-      false, "citedPaper": {"paperId": "d1505c6123c102e53eb19dff312cb25cea840b72",
-      "externalIds": {"ArXiv": "1506.03340", "MAG": "2949615363", "DBLP": "journals/corr/HermannKGEKSB15",
+      "37895334", "name": "S. Fidler"}]}}, {"intents": ["background"], "contexts":
+      ["This corpus has been shown to contain more reasoning type questions that other
+      datasets like CNN [19] or SQuaD [47], providing the perfect evaluation for our
+      model which is trained to handle long-range contexts."], "isInfluential": false,
+      "citedPaper": {"paperId": "d1505c6123c102e53eb19dff312cb25cea840b72", "externalIds":
+      {"ArXiv": "1506.03340", "MAG": "2949615363", "DBLP": "journals/corr/HermannKGEKSB15",
       "CorpusId": 6203757}, "corpusId": 6203757, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/d1505c6123c102e53eb19dff312cb25cea840b72",
       "title": "Teaching Machines to Read and Comprehend", "abstract": "Teaching machines
@@ -1371,8 +1369,8 @@ interactions:
       reading comprehension data. This allows us to develop a class of attention based
       deep neural networks that learn to read real documents and answer complex questions
       with minimal prior knowledge of language structure.", "venue": "NIPS", "year":
-      2015, "referenceCount": 22, "citationCount": 2978, "influentialCitationCount":
-      508, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      2015, "referenceCount": 22, "citationCount": 2987, "influentialCitationCount":
+      509, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle", "Conference"], "publicationDate": "2015-06-10", "journal":
@@ -1381,11 +1379,11 @@ interactions:
       {"authorId": "1864353", "name": "Edward Grefenstette"}, {"authorId": "2311318",
       "name": "Lasse Espeholt"}, {"authorId": "2062879616", "name": "Will Kay"}, {"authorId":
       "2573615", "name": "Mustafa Suleyman"}, {"authorId": "1685771", "name": "P.
-      Blunsom"}]}}, {"contexts": ["We used the Adam optimization scheme [27] with
-      a max learning rate of 2."], "intents": ["methodology"], "isInfluential": false,
-      "citedPaper": {"paperId": "a6cb366736791bcccc5c8639de5a8f9636bf87e8", "externalIds":
-      {"ArXiv": "1412.6980", "DBLP": "journals/corr/KingmaB14", "MAG": "2953006900",
-      "CorpusId": 6628106}, "corpusId": 6628106, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
+      Blunsom"}]}}, {"intents": ["methodology"], "contexts": ["We used the Adam optimization
+      scheme [27] with a max learning rate of 2."], "isInfluential": false, "citedPaper":
+      {"paperId": "a6cb366736791bcccc5c8639de5a8f9636bf87e8", "externalIds": {"ArXiv":
+      "1412.6980", "DBLP": "journals/corr/KingmaB14", "MAG": "2953006900", "CorpusId":
+      6628106}, "corpusId": 6628106, "publicationVenue": {"id": "939c6e1d-0d17-4d6e-8a82-66d960df0e40",
       "name": "International Conference on Learning Representations", "type": "conference",
       "alternate_names": ["Int Conf Learn Represent", "ICLR"], "url": "https://iclr.cc/"},
       "url": "https://www.semanticscholar.org/paper/a6cb366736791bcccc5c8639de5a8f9636bf87e8",
@@ -1405,19 +1403,19 @@ interactions:
       compares favorably to other stochastic optimization methods. Finally, we discuss
       AdaMax, a variant of Adam based on the infinity norm.", "venue": "International
       Conference on Learning Representations", "year": 2014, "referenceCount": 27,
-      "citationCount": 122956, "influentialCitationCount": 20929, "isOpenAccess":
+      "citationCount": 123149, "influentialCitationCount": 20940, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "2014-12-22", "journal": {"volume": "abs/1412.6980", "name": "CoRR"}, "authors":
       [{"authorId": "1726807", "name": "Diederik P. Kingma"}, {"authorId": "2503659",
-      "name": "Jimmy Ba"}]}}, {"contexts": ["Over the last few years, researchers
-      have demonstrated the benefits of using word embeddings [11, 39, 42], which
-      are trained on unlabeled corpora, to improve performance on a variety of tasks
-      [8, 11, 26, 45].", "The most compelling evidence for this so far has been the
-      extensive use of pretrained word embeddings [10, 39, 42] to improve performance
-      on a range of NLP tasks [8, 11, 26, 45]."], "intents": ["background"], "isInfluential":
+      "name": "Jimmy Ba"}]}}, {"intents": ["background"], "contexts": ["Over the last
+      few years, researchers have demonstrated the benefits of using word embeddings
+      [11, 39, 42], which are trained on unlabeled corpora, to improve performance
+      on a variety of tasks [8, 11, 26, 45].", "The most compelling evidence for this
+      so far has been the extensive use of pretrained word embeddings [10, 39, 42]
+      to improve performance on a range of NLP tasks [8, 11, 26, 45]."], "isInfluential":
       false, "citedPaper": {"paperId": "f37e1b62a767a307c046404ca96bc140b3e68cb5",
       "externalIds": {"DBLP": "conf/emnlp/PenningtonSM14", "MAG": "2250539671", "ACL":
       "D14-1162", "DOI": "10.3115/v1/D14-1162", "CorpusId": 1957433}, "corpusId":
@@ -1440,23 +1438,23 @@ interactions:
       substructure, as evidenced by its performance of 75% on a recent word analogy
       task. It also outperforms related models on similarity tasks and named entity
       recognition.", "venue": "Conference on Empirical Methods in Natural Language
-      Processing", "year": 2014, "referenceCount": 32, "citationCount": 27518, "influentialCitationCount":
-      4442, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.3115/v1/d14-1162",
+      Processing", "year": 2014, "referenceCount": 32, "citationCount": 27551, "influentialCitationCount":
+      4448, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.3115/v1/d14-1162",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2014-10-01", "journal": {"pages": "1532-1543"}, "authors":
       [{"authorId": "143845796", "name": "Jeffrey Pennington"}, {"authorId": "2166511",
       "name": "R. Socher"}, {"authorId": "144783904", "name": "Christopher D. Manning"}]}},
-      {"contexts": ["Over the last few years, researchers have demonstrated the benefits
-      of using word embeddings [11, 39, 42], which are trained on unlabeled corpora,
-      to improve performance on a variety of tasks [8, 11, 26, 45].", "The most compelling
-      evidence for this so far has been the extensive use of pretrained word embeddings
-      [10, 39, 42] to improve performance on a range of NLP tasks [8, 11, 26, 45]."],
-      "intents": ["background"], "isInfluential": false, "citedPaper": {"paperId":
-      "1f6ba0782862ec12a5ec6d7fb608523d55b0c6ba", "externalIds": {"ArXiv": "1408.5882",
-      "DBLP": "journals/corr/Kim14f", "MAG": "2949541494", "ACL": "D14-1181", "DOI":
-      "10.3115/v1/D14-1181", "CorpusId": 9672033}, "corpusId": 9672033, "publicationVenue":
+      {"intents": ["background"], "contexts": ["Over the last few years, researchers
+      have demonstrated the benefits of using word embeddings [11, 39, 42], which
+      are trained on unlabeled corpora, to improve performance on a variety of tasks
+      [8, 11, 26, 45].", "The most compelling evidence for this so far has been the
+      extensive use of pretrained word embeddings [10, 39, 42] to improve performance
+      on a range of NLP tasks [8, 11, 26, 45]."], "isInfluential": false, "citedPaper":
+      {"paperId": "1f6ba0782862ec12a5ec6d7fb608523d55b0c6ba", "externalIds": {"ArXiv":
+      "1408.5882", "DBLP": "journals/corr/Kim14f", "MAG": "2949541494", "ACL": "D14-1181",
+      "DOI": "10.3115/v1/D14-1181", "CorpusId": 9672033}, "corpusId": 9672033, "publicationVenue":
       {"id": "41bf9ed3-85b3-4c90-b015-150e31690253", "name": "Conference on Empirical
       Methods in Natural Language Processing", "type": "conference", "alternate_names":
       ["Empir Method Nat Lang Process", "Empirical Methods in Natural Language Processing",
@@ -1472,20 +1470,19 @@ interactions:
       task-specific and static vectors. The CNN models discussed herein improve upon
       the state of the art on 4 out of 7 tasks, which include sentiment analysis and
       question classification.", "venue": "Conference on Empirical Methods in Natural
-      Language Processing", "year": 2014, "referenceCount": 33, "citationCount": 11986,
-      "influentialCitationCount": 2004, "isOpenAccess": true, "openAccessPdf": {"url":
+      Language Processing", "year": 2014, "referenceCount": 33, "citationCount": 11997,
+      "influentialCitationCount": 2005, "isOpenAccess": true, "openAccessPdf": {"url":
       "https://aclanthology.org/D14-1181.pdf", "status": null}, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle", "Conference"], "publicationDate": "2014-08-25", "journal":
       {"pages": "1746-1751"}, "authors": [{"authorId": "38367242", "name": "Yoon Kim"}]}},
-      {"contexts": ["Phrase-level or sentence-level embeddings, which can be trained
-      using an unlabeled corpus, have been used to encode text into suitable vector
-      representations for various target tasks [28, 32, 1, 36, 22, 12, 56, 31]."],
-      "intents": ["methodology"], "isInfluential": false, "citedPaper": {"paperId":
-      "f3de86aeb442216a8391befcacb49e58b478f512", "externalIds": {"DBLP": "conf/icml/LeM14",
-      "ArXiv": "1405.4053", "MAG": "2949547296", "CorpusId": 2407601}, "corpusId":
-      2407601, "publicationVenue": {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29",
+      {"intents": ["methodology"], "contexts": ["Phrase-level or sentence-level embeddings,
+      which can be trained using an unlabeled corpus, have been used to encode text
+      into suitable vector representations for various target tasks [28, 32, 1, 36,
+      22, 12, 56, 31]."], "isInfluential": false, "citedPaper": {"paperId": "f3de86aeb442216a8391befcacb49e58b478f512",
+      "externalIds": {"DBLP": "conf/icml/LeM14", "ArXiv": "1405.4053", "MAG": "2949547296",
+      "CorpusId": 2407601}, "corpusId": 2407601, "publicationVenue": {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29",
       "name": "International Conference on Machine Learning", "type": "conference",
       "alternate_names": ["ICML", "Int Conf Mach Learn"], "url": "https://icml.cc/"},
       "url": "https://www.semanticscholar.org/paper/f3de86aeb442216a8391befcacb49e58b478f512",
@@ -1505,18 +1502,18 @@ interactions:
       representations. Finally, we achieve new state-of-the-art results on several
       text classification and sentiment analysis tasks.", "venue": "International
       Conference on Machine Learning", "year": 2014, "referenceCount": 43, "citationCount":
-      8290, "influentialCitationCount": 1193, "isOpenAccess": false, "openAccessPdf":
+      8299, "influentialCitationCount": 1194, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2014-05-16", "journal": {"pages": "1188-1196"}, "authors":
       [{"authorId": "2827616", "name": "Quoc V. Le"}, {"authorId": "2047446108", "name":
-      "Tomas Mikolov"}]}}, {"contexts": ["Over the last few years, researchers have
-      demonstrated the benefits of using word embeddings [11, 39, 42], which are trained
-      on unlabeled corpora, to improve performance on a variety of tasks [8, 11, 26,
-      45].", "The most compelling evidence for this so far has been the extensive
-      use of pretrained word embeddings [10, 39, 42] to improve performance on a range
-      of NLP tasks [8, 11, 26, 45]."], "intents": ["background"], "isInfluential":
+      "Tomas Mikolov"}]}}, {"intents": ["background"], "contexts": ["Over the last
+      few years, researchers have demonstrated the benefits of using word embeddings
+      [11, 39, 42], which are trained on unlabeled corpora, to improve performance
+      on a variety of tasks [8, 11, 26, 45].", "The most compelling evidence for this
+      so far has been the extensive use of pretrained word embeddings [10, 39, 42]
+      to improve performance on a range of NLP tasks [8, 11, 26, 45]."], "isInfluential":
       false, "citedPaper": {"paperId": "87f40e6f3022adbc1f1905e3e506abad05a9964f",
       "externalIds": {"DBLP": "conf/nips/MikolovSCCD13", "ArXiv": "1310.4546", "MAG":
       "2153579005", "CorpusId": 16447573}, "corpusId": 16447573, "publicationVenue":
@@ -1535,7 +1532,7 @@ interactions:
       Motivated by this example, we present a simple method for finding phrases in
       text, and show that learning good vector representations for millions of phrases
       is possible.", "venue": "NIPS", "year": 2013, "referenceCount": 25, "citationCount":
-      30161, "influentialCitationCount": 4193, "isOpenAccess": false, "openAccessPdf":
+      30182, "influentialCitationCount": 4194, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
@@ -1543,18 +1540,18 @@ interactions:
       "journal": {"pages": "3111-3119"}, "authors": [{"authorId": "2047446108", "name":
       "Tomas Mikolov"}, {"authorId": "1701686", "name": "Ilya Sutskever"}, {"authorId":
       "2118440152", "name": "Kai Chen"}, {"authorId": "32131713", "name": "G. Corrado"},
-      {"authorId": "49959210", "name": "J. Dean"}]}}, {"contexts": ["Task Datasets
-      Natural language inference SNLI [5], MultiNLI [66], Question NLI [64], RTE [4],
-      SciTail [25] Question Answering RACE [30], Story Cloze [40] Sentence similarity
-      MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark [6] Classification
-      Stanford Sentiment Treebank-2 [54], CoLA [65]", "For SST-2 (sentiment analysis),
-      we append the token very to each example and restrict the language model\u2019s
-      output distribution to only the words positive and negative and guess the token
-      it assigns higher probability to as the prediction.", "The model also achieves
-      91.3% accuracy on SST-2, which is competitive with the state-of-the-art results.",
-      "The Stanford Sentiment Treebank (SST-2) [54], on the other hand, is a standard
-      binary classification task."], "intents": ["background", "methodology"], "isInfluential":
-      true, "citedPaper": {"paperId": "687bac2d3320083eb4530bf18bb8f8f721477600",
+      {"authorId": "49959210", "name": "J. Dean"}]}}, {"intents": ["background", "methodology"],
+      "contexts": ["Task Datasets Natural language inference SNLI [5], MultiNLI [66],
+      Question NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story
+      Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs
+      [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA
+      [65]", "For SST-2 (sentiment analysis), we append the token very to each example
+      and restrict the language model\u2019s output distribution to only the words
+      positive and negative and guess the token it assigns higher probability to as
+      the prediction.", "The model also achieves 91.3% accuracy on SST-2, which is
+      competitive with the state-of-the-art results.", "The Stanford Sentiment Treebank
+      (SST-2) [54], on the other hand, is a standard binary classification task."],
+      "isInfluential": true, "citedPaper": {"paperId": "687bac2d3320083eb4530bf18bb8f8f721477600",
       "externalIds": {"MAG": "2251939518", "DBLP": "conf/emnlp/SocherPWCMNP13", "ACL":
       "D13-1170", "CorpusId": 990233}, "corpusId": 990233, "publicationVenue": {"id":
       "41bf9ed3-85b3-4c90-b015-150e31690253", "name": "Conference on Empirical Methods
@@ -1579,7 +1576,7 @@ interactions:
       capture the effects of negation and its scope at various tree levels for both
       positive and negative phrases.", "venue": "Conference on Empirical Methods in
       Natural Language Processing", "year": 2013, "referenceCount": 49, "citationCount":
-      6677, "influentialCitationCount": 1231, "isOpenAccess": false, "openAccessPdf":
+      6685, "influentialCitationCount": 1232, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -1588,7 +1585,7 @@ interactions:
       "Alex Perelygin"}, {"authorId": "2110402830", "name": "Jean Wu"}, {"authorId":
       "1964541", "name": "Jason Chuang"}, {"authorId": "144783904", "name": "Christopher
       D. Manning"}, {"authorId": "34699434", "name": "A. Ng"}, {"authorId": "144922861",
-      "name": "Christopher Potts"}]}}, {"contexts": [], "intents": [], "isInfluential":
+      "name": "Christopher Potts"}]}}, {"intents": [], "contexts": [], "isInfluential":
       false, "citedPaper": {"paperId": "0e5fa90e28fab414c8ef3ac6ca937c6195c2860e",
       "externalIds": {"ACL": "D13-1090", "MAG": "2250565861", "DBLP": "conf/emnlp/JiE13",
       "CorpusId": 14169402}, "corpusId": 14169402, "publicationVenue": {"id": "41bf9ed3-85b3-4c90-b015-150e31690253",
@@ -1614,18 +1611,18 @@ interactions:
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Conference"], "publicationDate": "2013-10-01", "journal": {"pages": "891-896"},
       "authors": [{"authorId": "40608686", "name": "Yangfeng Ji"}, {"authorId": "144154709",
-      "name": "Jacob Eisenstein"}]}}, {"contexts": ["In recent work, the method has
-      been used to help train deep neural networks on various tasks like image classification
-      [69], speech recognition [68], entity disambiguation [17] and machine translation
-      [48]."], "intents": ["methodology"], "isInfluential": false, "citedPaper": {"paperId":
-      "10ce58375314f90f83ca3bb88840cbc67bf8050f", "externalIds": {"DBLP": "conf/acl/HeLLZZW13",
-      "ACL": "P13-2006", "MAG": "2157191138", "DOI": "10.1007/978-3-319-25816-4_22",
-      "CorpusId": 7512771}, "corpusId": 7512771, "publicationVenue": {"id": "1e33b3be-b2ab-46e9-96e8-d4eb4bad6e44",
-      "name": "Annual Meeting of the Association for Computational Linguistics", "type":
-      "conference", "alternate_names": ["Annu Meet Assoc Comput Linguistics", "Meeting
-      of the Association for Computational Linguistics", "ACL", "Meet Assoc Comput
-      Linguistics"], "url": "https://www.aclweb.org/anthology/venues/acl/"}, "url":
-      "https://www.semanticscholar.org/paper/10ce58375314f90f83ca3bb88840cbc67bf8050f",
+      "name": "Jacob Eisenstein"}]}}, {"intents": ["methodology"], "contexts": ["In
+      recent work, the method has been used to help train deep neural networks on
+      various tasks like image classification [69], speech recognition [68], entity
+      disambiguation [17] and machine translation [48]."], "isInfluential": false,
+      "citedPaper": {"paperId": "10ce58375314f90f83ca3bb88840cbc67bf8050f", "externalIds":
+      {"DBLP": "conf/acl/HeLLZZW13", "ACL": "P13-2006", "MAG": "2157191138", "DOI":
+      "10.1007/978-3-319-25816-4_22", "CorpusId": 7512771}, "corpusId": 7512771, "publicationVenue":
+      {"id": "1e33b3be-b2ab-46e9-96e8-d4eb4bad6e44", "name": "Annual Meeting of the
+      Association for Computational Linguistics", "type": "conference", "alternate_names":
+      ["Annu Meet Assoc Comput Linguistics", "Meeting of the Association for Computational
+      Linguistics", "ACL", "Meet Assoc Comput Linguistics"], "url": "https://www.aclweb.org/anthology/venues/acl/"},
+      "url": "https://www.semanticscholar.org/paper/10ce58375314f90f83ca3bb88840cbc67bf8050f",
       "title": "Learning Entity Representation for Entity Disambiguation", "abstract":
       null, "venue": "Annual Meeting of the Association for Computational Linguistics",
       "year": 2013, "referenceCount": 38, "citationCount": 150, "influentialCitationCount":
@@ -1637,10 +1634,10 @@ interactions:
       He"}, {"authorId": "1803054", "name": "Shujie Liu"}, {"authorId": "2112143809",
       "name": "Mu Li"}, {"authorId": "92660691", "name": "Ming Zhou"}, {"authorId":
       "1817730", "name": "Longkai Zhang"}, {"authorId": "1781885", "name": "Houfeng
-      Wang"}]}}, {"contexts": ["For DPRD [46] (winograd schemas), we replace the definite
-      pronoun with the two possible referrents and predict the resolution that the
-      generative model assigns higher average token log-probability to the rest of
-      the sequence after the substitution."], "intents": ["methodology"], "isInfluential":
+      Wang"}]}}, {"intents": ["methodology"], "contexts": ["For DPRD [46] (winograd
+      schemas), we replace the definite pronoun with the two possible referrents and
+      predict the resolution that the generative model assigns higher average token
+      log-probability to the rest of the sequence after the substitution."], "isInfluential":
       false, "citedPaper": {"paperId": "b0c5f72790cca220541ea4809d1e43b4bdad1124",
       "externalIds": {"DBLP": "conf/emnlp/RahmanN12", "ACL": "D12-1071", "MAG": "1752492850",
       "CorpusId": 15274877}, "corpusId": 15274877, "publicationVenue": {"id": "41bf9ed3-85b3-4c90-b015-150e31690253",
@@ -1666,12 +1663,12 @@ interactions:
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Conference"], "publicationDate": "2012-07-12", "journal": {"pages": "777-789"},
       "authors": [{"authorId": "38999890", "name": "Altaf Rahman"}, {"authorId": "145106110",
-      "name": "Vincent Ng"}]}}, {"contexts": ["Over the last few years, researchers
-      have demonstrated the benefits of using word embeddings [11, 39, 42], which
-      are trained on unlabeled corpora, to improve performance on a variety of tasks
-      [8, 11, 26, 45].", "The most compelling evidence for this so far has been the
-      extensive use of pretrained word embeddings [10, 39, 42] to improve performance
-      on a range of NLP tasks [8, 11, 26, 45]."], "intents": ["background"], "isInfluential":
+      "name": "Vincent Ng"}]}}, {"intents": ["background"], "contexts": ["Over the
+      last few years, researchers have demonstrated the benefits of using word embeddings
+      [11, 39, 42], which are trained on unlabeled corpora, to improve performance
+      on a variety of tasks [8, 11, 26, 45].", "The most compelling evidence for this
+      so far has been the extensive use of pretrained word embeddings [10, 39, 42]
+      to improve performance on a range of NLP tasks [8, 11, 26, 45]."], "isInfluential":
       false, "citedPaper": {"paperId": "bc1022b031dc6c7019696492e8116598097a8c12",
       "externalIds": {"MAG": "2158899491", "ArXiv": "1103.0398", "DBLP": "journals/jmlr/CollobertWBKKK11",
       "DOI": "10.5555/1953048.2078186", "CorpusId": 351666}, "corpusId": 351666, "publicationVenue":
@@ -1700,10 +1697,10 @@ interactions:
       [{"authorId": "2939803", "name": "Ronan Collobert"}, {"authorId": "145183709",
       "name": "J. Weston"}, {"authorId": "52184096", "name": "L. Bottou"}, {"authorId":
       "21432929", "name": "Michael Karlen"}, {"authorId": "2645384", "name": "K. Kavukcuoglu"},
-      {"authorId": "46283650", "name": "P. Kuksa"}]}}, {"contexts": ["In recent work,
-      the method has been used to help train deep neural networks on various tasks
-      like image classification [69], speech recognition [68], entity disambiguation
-      [17] and machine translation [48]."], "intents": ["methodology"], "isInfluential":
+      {"authorId": "46283650", "name": "P. Kuksa"}]}}, {"intents": ["methodology"],
+      "contexts": ["In recent work, the method has been used to help train deep neural
+      networks on various tasks like image classification [69], speech recognition
+      [68], entity disambiguation [17] and machine translation [48]."], "isInfluential":
       false, "citedPaper": {"paperId": "ecd4bc32bb2717c96f76dd100fcd1255a07bd656",
       "externalIds": {"MAG": "217970951", "CorpusId": 18141431}, "corpusId": 18141431,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ecd4bc32bb2717c96f76dd100fcd1255a07bd656",
@@ -1729,13 +1726,13 @@ interactions:
       Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "2010-12-01", "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
       "144580027", "name": "Dong Yu"}, {"authorId": "144718788", "name": "L. Deng"},
-      {"authorId": "35188630", "name": "George E. Dahl"}]}}, {"contexts": ["The most
-      compelling evidence for this so far has been the extensive use of pretrained
-      word embeddings [10, 39, 42] to improve performance on a range of NLP tasks
-      [8, 11, 26, 45].", "Early work by Collobert and Weston [10] used a wide variety
-      of auxiliary NLP tasks such as POS tagging, chunking, named entity recognition,
-      and language modeling to improve semantic role labeling."], "intents": ["background"],
-      "isInfluential": false, "citedPaper": {"paperId": "57458bc1cffe5caa45a885af986d70f723f406b4",
+      {"authorId": "35188630", "name": "George E. Dahl"}]}}, {"intents": ["background"],
+      "contexts": ["The most compelling evidence for this so far has been the extensive
+      use of pretrained word embeddings [10, 39, 42] to improve performance on a range
+      of NLP tasks [8, 11, 26, 45].", "Early work by Collobert and Weston [10] used
+      a wide variety of auxiliary NLP tasks such as POS tagging, chunking, named entity
+      recognition, and language modeling to improve semantic role labeling."], "isInfluential":
+      false, "citedPaper": {"paperId": "57458bc1cffe5caa45a885af986d70f723f406b4",
       "externalIds": {"DBLP": "conf/icml/CollobertW08", "MAG": "2117130368", "DOI":
       "10.1145/1390156.1390177", "CorpusId": 2617020}, "corpusId": 2617020, "publicationVenue":
       {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29", "name": "International Conference
@@ -1753,15 +1750,15 @@ interactions:
       for the shared tasks. We show how both multitask learning and semi-supervised
       learning improve the generalization of the shared tasks, resulting in state-of-the-art-performance.",
       "venue": "International Conference on Machine Learning", "year": 2008, "referenceCount":
-      25, "citationCount": 5547, "influentialCitationCount": 295, "isOpenAccess":
+      25, "citationCount": 5552, "influentialCitationCount": 295, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "2008-07-05", "journal": {"pages": "160-167"}, "authors":
       [{"authorId": "2939803", "name": "Ronan Collobert"}, {"authorId": "145183709",
-      "name": "J. Weston"}]}}, {"contexts": ["Early works explored the use of the
-      technique in image classification [20, 49, 63] and regression tasks [3]."],
-      "intents": [], "isInfluential": false, "citedPaper": {"paperId": "843959ffdccf31c6694d135fad07425924f785b1",
+      "name": "J. Weston"}]}}, {"intents": [], "contexts": ["Early works explored
+      the use of the technique in image classification [20, 49, 63] and regression
+      tasks [3]."], "isInfluential": false, "citedPaper": {"paperId": "843959ffdccf31c6694d135fad07425924f785b1",
       "externalIds": {"DBLP": "conf/icml/VincentLBM08", "MAG": "2025768430", "DOI":
       "10.1145/1390156.1390294", "CorpusId": 207168299}, "corpusId": 207168299, "publicationVenue":
       {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29", "name": "International Conference
@@ -1779,8 +1776,8 @@ interactions:
       perspective or from a generative model perspective. Comparative experiments
       clearly show the surprising advantage of corrupting the input of autoencoders
       on a pattern classification benchmark suite.", "venue": "International Conference
-      on Machine Learning", "year": 2008, "referenceCount": 28, "citationCount": 6506,
-      "influentialCitationCount": 539, "isOpenAccess": true, "openAccessPdf": {"url":
+      on Machine Learning", "year": 2008, "referenceCount": 29, "citationCount": 6510,
+      "influentialCitationCount": 540, "isOpenAccess": true, "openAccessPdf": {"url":
       "http://www.iro.umontreal.ca/~vincentp/Publications/denoising_autoencoders_tr1316.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
@@ -1789,9 +1786,9 @@ interactions:
       {"pages": "1096-1103"}, "authors": [{"authorId": "120247189", "name": "Pascal
       Vincent"}, {"authorId": "1777528", "name": "H. Larochelle"}, {"authorId": "1751762",
       "name": "Yoshua Bengio"}, {"authorId": "1798462", "name": "Pierre-Antoine Manzagol"}]}},
-      {"contexts": ["This paradigm has attracted significant interest, with applications
-      to tasks like sequence labeling [24, 33, 57] or text classification [41, 70]."],
-      "intents": ["methodology"], "isInfluential": false, "citedPaper": {"paperId":
+      {"intents": ["methodology"], "contexts": ["This paradigm has attracted significant
+      interest, with applications to tasks like sequence labeling [24, 33, 57] or
+      text classification [41, 70]."], "isInfluential": false, "citedPaper": {"paperId":
       "7ece4e8d31f872d928369ac2cf58a616a7182112", "externalIds": {"MAG": "2154326713",
       "DBLP": "conf/acl/SuzukiI08", "ACL": "P08-1076", "CorpusId": 647664}, "corpusId":
       647664, "publicationVenue": {"id": "1e33b3be-b2ab-46e9-96e8-d4eb4bad6e44", "name":
@@ -1819,9 +1816,9 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2008-06-01", "journal": {"pages": "665-673"}, "authors":
       [{"authorId": "144042991", "name": "Jun Suzuki"}, {"authorId": "34789234", "name":
-      "Hideki Isozaki"}]}}, {"contexts": ["Early works explored the use of the technique
-      in image classification [20, 49, 63] and regression tasks [3]."], "intents":
-      [], "isInfluential": false, "citedPaper": {"paperId": "932c2a02d462abd75af018125413b1ceaa1ee3f4",
+      "Hideki Isozaki"}]}}, {"intents": [], "contexts": ["Early works explored the
+      use of the technique in image classification [20, 49, 63] and regression tasks
+      [3]."], "isInfluential": false, "citedPaper": {"paperId": "932c2a02d462abd75af018125413b1ceaa1ee3f4",
       "externalIds": {"DBLP": "conf/nips/RanzatoPCL06", "MAG": "2172174689", "DOI":
       "10.7551/mitpress/7503.003.0147", "CorpusId": 819006}, "corpusId": 819006, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/932c2a02d462abd75af018125413b1ceaa1ee3f4",
@@ -1848,9 +1845,9 @@ interactions:
       "publicationDate": "2006-12-04", "journal": {"pages": "1137-1144"}, "authors":
       [{"authorId": "1706809", "name": "Marc''Aurelio Ranzato"}, {"authorId": "2060013",
       "name": "Christopher S. Poultney"}, {"authorId": "3295092", "name": "S. Chopra"},
-      {"authorId": "1688882", "name": "Yann LeCun"}]}}, {"contexts": ["This paradigm
-      has attracted significant interest, with applications to tasks like sequence
-      labeling [24, 33, 57] or text classification [41, 70]."], "intents": ["methodology"],
+      {"authorId": "1688882", "name": "Yann LeCun"}]}}, {"intents": ["methodology"],
+      "contexts": ["This paradigm has attracted significant interest, with applications
+      to tasks like sequence labeling [24, 33, 57] or text classification [41, 70]."],
       "isInfluential": false, "citedPaper": {"paperId": "d5f5110d65eda0d2df7329582a232a86bf9a3a65",
       "externalIds": {"ACL": "P06-1027", "DBLP": "conf/acl/JiaoWLGS06", "MAG": "2150969560",
       "DOI": "10.3115/1220175.1220202", "CorpusId": 89684}, "corpusId": 89684, "publicationVenue":
@@ -1881,9 +1878,9 @@ interactions:
       "name": ""}, "authors": [{"authorId": "145644673", "name": "Feng Jiao"}, {"authorId":
       "1721114", "name": "Shaojun Wang"}, {"authorId": "2109465325", "name": "Chi-Hoon
       Lee"}, {"authorId": "143686063", "name": "R. Greiner"}, {"authorId": "1714772",
-      "name": "Dale Schuurmans"}]}}, {"contexts": ["Early works explored the use of
-      the technique in image classification [20, 49, 63] and regression tasks [3]."],
-      "intents": [], "isInfluential": false, "citedPaper": {"paperId": "8978cf7574ceb35f4c3096be768c7547b28a35d0",
+      "name": "Dale Schuurmans"}]}}, {"intents": [], "contexts": ["Early works explored
+      the use of the technique in image classification [20, 49, 63] and regression
+      tasks [3]."], "isInfluential": false, "citedPaper": {"paperId": "8978cf7574ceb35f4c3096be768c7547b28a35d0",
       "externalIds": {"MAG": "2136922672", "DBLP": "journals/neco/HintonOT06", "DOI":
       "10.1162/neco.2006.18.7.1527", "CorpusId": 2309950, "PubMed": "16764513"}, "corpusId":
       2309950, "publicationVenue": {"id": "69b9bcdd-8229-4a00-a6e0-00f0e99a2bf3",
@@ -1907,8 +1904,8 @@ interactions:
       by long ravines in the free-energy landscape of the top-level associative memory,
       and it is easy to explore these ravines by using the directed connections to
       display what the associative memory has in mind.", "venue": "Neural Computation",
-      "year": 2006, "referenceCount": 31, "citationCount": 14946, "influentialCitationCount":
-      1319, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
+      "year": 2006, "referenceCount": 31, "citationCount": 14954, "influentialCitationCount":
+      1320, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
       "Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category": "Medicine",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -1916,8 +1913,8 @@ interactions:
       "2006-07-01", "journal": {"volume": "18", "pages": "1527-1554", "name": "Neural
       Computation"}, "authors": [{"authorId": "1695689", "name": "Geoffrey E. Hinton"},
       {"authorId": "2217144", "name": "Simon Osindero"}, {"authorId": "1725303", "name":
-      "Y. Teh"}]}}, {"contexts": ["These parameters are trained using stochastic gradient
-      descent [51]."], "intents": ["background"], "isInfluential": false, "citedPaper":
+      "Y. Teh"}]}}, {"intents": ["background"], "contexts": ["These parameters are
+      trained using stochastic gradient descent [51]."], "isInfluential": false, "citedPaper":
       {"paperId": "34ddd8865569c2c32dec9bf7ffc817ff42faaa01", "externalIds": {"MAG":
       "1994616650", "DOI": "10.1214/AOMS/1177729586", "CorpusId": 16945044}, "corpusId":
       16945044, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/34ddd8865569c2c32dec9bf7ffc817ff42faaa01",
@@ -1927,33 +1924,33 @@ interactions:
       to find the solution x=0 of the equation M(x) = a, where x is a given constant.
       we give a method for making successive experiments at levels x1, x2,... in such
       a way that x, will tend to 0 in probability.", "venue": "", "year": 1951, "referenceCount":
-      0, "citationCount": 7779, "influentialCitationCount": 993, "isOpenAccess": true,
+      0, "citationCount": 7787, "influentialCitationCount": 995, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-22/issue-3/A-Stochastic-Approximation-Method/10.1214/aoms/1177729586.pdf",
       "status": null}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
       "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1951-09-01",
       "journal": {"volume": "22", "pages": "400-407", "name": "Annals of Mathematical
       Statistics"}, "authors": [{"authorId": "145648751", "name": "H. Robbins"}]}},
-      {"contexts": ["Task Datasets Natural language inference SNLI [5], MultiNLI [66],
-      Question NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story
-      Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs
-      [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA
-      [65]", "Our model obtains an score of 45.4 on CoLA, which is an especially big
-      jump over the previous best result of 35.0, showcasing the innate linguistic
-      bias learned by our model.", "The Corpus of Linguistic Acceptability (CoLA)
-      [65] contains expert judgements on whether a sentence is grammatical or not,
-      and tests the innate linguistic bias of trained models.", "For CoLA (linguistic
-      acceptability), examples are scored as the average token log-probability the
-      generative model assigns and predictions are made by thresholding."], "intents":
-      ["background", "methodology"], "isInfluential": true, "citedPaper": {"paperId":
+      {"intents": ["background", "methodology"], "contexts": ["Task Datasets Natural
+      language inference SNLI [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail
+      [25] Question Answering RACE [30], Story Cloze [40] Sentence similarity MSR
+      Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark [6] Classification
+      Stanford Sentiment Treebank-2 [54], CoLA [65]", "Our model obtains an score
+      of 45.4 on CoLA, which is an especially big jump over the previous best result
+      of 35.0, showcasing the innate linguistic bias learned by our model.", "The
+      Corpus of Linguistic Acceptability (CoLA) [65] contains expert judgements on
+      whether a sentence is grammatical or not, and tests the innate linguistic bias
+      of trained models.", "For CoLA (linguistic acceptability), examples are scored
+      as the average token log-probability the generative model assigns and predictions
+      are made by thresholding."], "isInfluential": true, "citedPaper": {"paperId":
       null, "externalIds": null, "corpusId": null, "publicationVenue": null, "url":
       null, "title": "Corpus of linguistic acceptability", "abstract": null, "venue":
       "http://nyu-mll.github.io/cola", "year": 2018, "referenceCount": null, "citationCount":
       null, "influentialCitationCount": null, "isOpenAccess": null, "openAccessPdf":
       null, "fieldsOfStudy": null, "s2FieldsOfStudy": null, "publicationTypes": null,
-      "publicationDate": null, "journal": null, "authors": []}}, {"contexts": ["Method
-      Classification Semantic Similarity GLUE CoLA SST2 MRPC STSB QQP (mc) (acc) (F1)
-      (pc) (F1) Sparse byte mLSTM [16] - 93."], "intents": ["methodology"], "isInfluential":
+      "publicationDate": null, "journal": null, "authors": []}}, {"intents": ["methodology"],
+      "contexts": ["Method Classification Semantic Similarity GLUE CoLA SST2 MRPC
+      STSB QQP (mc) (acc) (F1) (pc) (F1) Sparse byte mLSTM [16] - 93."], "isInfluential":
       false, "citedPaper": {"paperId": "a07609c2ed39d049d3e59b61408fb600c6ab0950",
       "externalIds": {"CorpusId": 52220661}, "corpusId": 52220661, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/a07609c2ed39d049d3e59b61408fb600c6ab0950",
@@ -1972,23 +1969,23 @@ interactions:
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": null, "authors": [{"authorId": "145565184", "name": "Scott
       Gray"}, {"authorId": "38909097", "name": "Alec Radford"}, {"authorId": "1726807",
-      "name": "Diederik P. Kingma"}]}}, {"contexts": ["Most deep learning methods
-      require substantial amounts of manually labeled data, which restricts their
-      applicability in many domains that suffer from a dearth of annotated resources
-      [61]."], "intents": ["background"], "isInfluential": false, "citedPaper": {"paperId":
+      "name": "Diederik P. Kingma"}]}}, {"intents": ["background"], "contexts": ["Most
+      deep learning methods require substantial amounts of manually labeled data,
+      which restricts their applicability in many domains that suffer from a dearth
+      of annotated resources [61]."], "isInfluential": false, "citedPaper": {"paperId":
       null, "externalIds": null, "corpusId": null, "publicationVenue": null, "url":
       null, "title": "Opportunities and challenges in working with low-resource languages",
       "abstract": null, "venue": "CMU", "year": 2017, "referenceCount": null, "citationCount":
       null, "influentialCitationCount": null, "isOpenAccess": null, "openAccessPdf":
       null, "fieldsOfStudy": null, "s2FieldsOfStudy": null, "publicationTypes": null,
-      "publicationDate": null, "journal": null, "authors": []}}, {"contexts": ["Task
-      Datasets Natural language inference SNLI [5], MultiNLI [66], Question NLI [64],
-      RTE [4], SciTail [25] Question Answering RACE [30], Story Cloze [40] Sentence
-      similarity MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark
-      [6] Classification Stanford Sentiment Treebank-2 [54], CoLA [65]", "We use three
-      datasets for this task \u2013 the Microsoft Paraphrase corpus (MRPC) [14] (collected
-      from news sources), the Quora Question Pairs (QQP) dataset [9], and the Semantic
-      Textual Similarity benchmark (STS-B) [6]."], "intents": ["methodology"], "isInfluential":
+      "publicationDate": null, "journal": null, "authors": []}}, {"intents": ["methodology"],
+      "contexts": ["Task Datasets Natural language inference SNLI [5], MultiNLI [66],
+      Question NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story
+      Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs
+      [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA
+      [65]", "We use three datasets for this task \u2013 the Microsoft Paraphrase
+      corpus (MRPC) [14] (collected from news sources), the Quora Question Pairs (QQP)
+      dataset [9], and the Semantic Textual Similarity benchmark (STS-B) [6]."], "isInfluential":
       false, "citedPaper": {"paperId": "8ff46c88964a36985f2b45933a3d47b81bd87bd0",
       "externalIds": {"CorpusId": 233225749}, "corpusId": 233225749, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/8ff46c88964a36985f2b45933a3d47b81bd87bd0",
@@ -2007,12 +2004,12 @@ interactions:
       null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2117098079",
       "name": "Zihang Chen"}, {"authorId": "2108838350", "name": "Hongbo Zhang"},
       {"authorId": "2108198028", "name": "Xiaoji Zhang"}, {"authorId": "2111486985",
-      "name": "Leqi Zhao"}]}}, {"contexts": ["Over the last few years, researchers
-      have demonstrated the benefits of using word embeddings [11, 39, 42], which
-      are trained on unlabeled corpora, to improve performance on a variety of tasks
-      [8, 11, 26, 45].", "The most compelling evidence for this so far has been the
-      extensive use of pretrained word embeddings [10, 39, 42] to improve performance
-      on a range of NLP tasks [8, 11, 26, 45]."], "intents": ["background"], "isInfluential":
+      "name": "Leqi Zhao"}]}}, {"intents": ["background"], "contexts": ["Over the
+      last few years, researchers have demonstrated the benefits of using word embeddings
+      [11, 39, 42], which are trained on unlabeled corpora, to improve performance
+      on a variety of tasks [8, 11, 26, 45].", "The most compelling evidence for this
+      so far has been the extensive use of pretrained word embeddings [10, 39, 42]
+      to improve performance on a range of NLP tasks [8, 11, 26, 45]."], "isInfluential":
       false, "citedPaper": {"paperId": "a14045a751f5d8ed387c8630a86a3a2861b90643",
       "externalIds": {"DBLP": "conf/emnlp/ChenM14", "MAG": "2250861254", "ACL": "D14-1082",
       "DOI": "10.3115/v1/D14-1082", "CorpusId": 11616343}, "corpusId": 11616343, "publicationVenue":
@@ -2032,16 +2029,16 @@ interactions:
       and Chinese datasets. Concretely, our parser is able to parse more than 1000
       sentences per second at 92.2% unlabeled attachment score on the English Penn
       Treebank.", "venue": "Conference on Empirical Methods in Natural Language Processing",
-      "year": 2014, "referenceCount": 30, "citationCount": 1756, "influentialCitationCount":
+      "year": 2014, "referenceCount": 30, "citationCount": 1755, "influentialCitationCount":
       167, "isOpenAccess": true, "openAccessPdf": {"url": "https://aclanthology.org/D14-1082.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": null, "journal": {"pages": "740-750"}, "authors": [{"authorId":
       "50536468", "name": "Danqi Chen"}, {"authorId": "144783904", "name": "Christopher
-      D. Manning"}]}}, {"contexts": ["Subsequent research [15] demonstrated that pre-training
-      acts as a regularization scheme, enabling better generalization in deep neural
-      networks."], "intents": ["background"], "isInfluential": false, "citedPaper":
+      D. Manning"}]}}, {"intents": ["background"], "contexts": ["Subsequent research
+      [15] demonstrated that pre-training acts as a regularization scheme, enabling
+      better generalization in deep neural networks."], "isInfluential": false, "citedPaper":
       {"paperId": "97474c55c834584b71f006557aed70e09eb6eb47", "externalIds": {"MAG":
       "2338441747", "CorpusId": 62437194}, "corpusId": 62437194, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/97474c55c834584b71f006557aed70e09eb6eb47",
@@ -2052,16 +2049,16 @@ interactions:
       Science", "source": "external"}, {"category": "Education", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
       "name": ""}, "authors": [{"authorId": "2075923288", "name": "P. Gl\u00f6ckner"}]}},
-      {"contexts": ["We evaluate on five datasets with diverse sources, including
-      image captions (SNLI), transcribed speech, popular fiction, and government reports
-      (MNLI), Wikipedia articles (QNLI), science exams (SciTail) or news articles
-      (RTE).", "Task Datasets Natural language inference SNLI [5], MultiNLI [66],
-      Question NLI [64], RTE [4], SciTail [25] Question Answering RACE [30], Story
-      Cloze [40] Sentence similarity MSR Paraphrase Corpus [14], Quora Question Pairs
-      [9], STS Benchmark [6] Classification Stanford Sentiment Treebank-2 [54], CoLA
-      [65]", "On RTE, one of the smaller datasets we evaluate on (2490 examples),
-      we achieve an accuracy of 56%, which is below the 61.7% reported by a multi-task
-      biLSTM model."], "intents": ["methodology"], "isInfluential": true, "citedPaper":
+      {"intents": ["methodology"], "contexts": ["We evaluate on five datasets with
+      diverse sources, including image captions (SNLI), transcribed speech, popular
+      fiction, and government reports (MNLI), Wikipedia articles (QNLI), science exams
+      (SciTail) or news articles (RTE).", "Task Datasets Natural language inference
+      SNLI [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail [25] Question Answering
+      RACE [30], Story Cloze [40] Sentence similarity MSR Paraphrase Corpus [14],
+      Quora Question Pairs [9], STS Benchmark [6] Classification Stanford Sentiment
+      Treebank-2 [54], CoLA [65]", "On RTE, one of the smaller datasets we evaluate
+      on (2490 examples), we achieve an accuracy of 56%, which is below the 61.7%
+      reported by a multi-task biLSTM model."], "isInfluential": true, "citedPaper":
       {"paperId": "db8885a0037fe47d973ade79d696586453710233", "externalIds": {"DBLP":
       "conf/tac/BentivogliMDDG09", "CorpusId": 858065}, "corpusId": 858065, "publicationVenue":
       {"id": "4e9e07f8-6008-4ffc-b3c0-92c327e36463", "name": "Text Analysis Conference",
@@ -2087,8 +2084,8 @@ interactions:
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       null, "journal": null, "authors": [{"authorId": "2486762", "name": "L. Bentivogli"},
       {"authorId": "48323507", "name": "Peter Clark"}, {"authorId": "7465342", "name":
-      "Ido Dagan"}, {"authorId": "2380885", "name": "Danilo Giampiccolo"}]}}, {"contexts":
-      [], "intents": [], "isInfluential": false, "citedPaper": {"paperId": "351ec42df2b60c6042addf96e6b98673bbaf4dfd",
+      "Ido Dagan"}, {"authorId": "2380885", "name": "Danilo Giampiccolo"}]}}, {"intents":
+      [], "contexts": [], "isInfluential": false, "citedPaper": {"paperId": "351ec42df2b60c6042addf96e6b98673bbaf4dfd",
       "externalIds": {"DBLP": "conf/tac/GiampiccoloDMDC08", "MAG": "2473625419", "CorpusId":
       12381965}, "corpusId": 12381965, "publicationVenue": {"id": "4e9e07f8-6008-4ffc-b3c0-92c327e36463",
       "name": "Text Analysis Conference", "type": "conference", "alternate_names":
@@ -2113,9 +2110,9 @@ interactions:
       "name": "Danilo Giampiccolo"}, {"authorId": "2122755", "name": "H. Dang"}, {"authorId":
       "1712352", "name": "B. Magnini"}, {"authorId": "7465342", "name": "Ido Dagan"},
       {"authorId": "1772891", "name": "Elena Cabrio"}, {"authorId": "83415753", "name":
-      "W. Dolan"}]}}, {"contexts": ["Early works explored the use of the technique
-      in image classification [20, 49, 63] and regression tasks [3]."], "intents":
-      [], "isInfluential": false, "citedPaper": {"paperId": "43c8a545f7166659e9e21c88fe234e0323855216",
+      "W. Dolan"}]}}, {"intents": [], "contexts": ["Early works explored the use of
+      the technique in image classification [20, 49, 63] and regression tasks [3]."],
+      "isInfluential": false, "citedPaper": {"paperId": "43c8a545f7166659e9e21c88fe234e0323855216",
       "externalIds": {"MAG": "2540556213", "CorpusId": 196065172}, "corpusId": 196065172,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/43c8a545f7166659e9e21c88fe234e0323855216",
       "title": "Greedy Layer-Wise Training of Deep Networks", "abstract": "Complexity
@@ -2143,7 +2140,7 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
       "journal": {"volume": "", "pages": "153-160", "name": ""}, "authors": [{"authorId":
       "1707625", "name": "B. Scholkopf"}, {"authorId": "145039030", "name": "J. Platt"},
-      {"authorId": "153379696", "name": "T. Hofmann"}]}}, {"contexts": [], "intents":
+      {"authorId": "153379696", "name": "T. Hofmann"}]}}, {"intents": [], "contexts":
       [], "isInfluential": false, "citedPaper": {"paperId": "25ca8792a1c183f4dd88dcebcf8a54202b483bb0",
       "externalIds": {"MAG": "2540989424", "CorpusId": 63802904}, "corpusId": 63802904,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/25ca8792a1c183f4dd88dcebcf8a54202b483bb0",
@@ -2169,9 +2166,9 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
       "journal": {"volume": "", "pages": "1137-1144", "name": ""}, "authors": [{"authorId":
       "1707625", "name": "B. Scholkopf"}, {"authorId": "145039030", "name": "J. Platt"},
-      {"authorId": "153379696", "name": "T. Hofmann"}]}}, {"contexts": ["This paradigm
-      has attracted significant interest, with applications to tasks like sequence
-      labeling [24, 33, 57] or text classification [41, 70]."], "intents": ["methodology"],
+      {"authorId": "153379696", "name": "T. Hofmann"}]}}, {"intents": ["methodology"],
+      "contexts": ["This paradigm has attracted significant interest, with applications
+      to tasks like sequence labeling [24, 33, 57] or text classification [41, 70]."],
       "isInfluential": false, "citedPaper": {"paperId": "8eefd28eb47e72794bb0355d8abcbebaac9d8ab1",
       "externalIds": {"DBLP": "books/mit/06/NigamMM06", "MAG": "2486125749", "DOI":
       "10.7551/mitpress/9780262033589.003.0003", "CorpusId": 256574}, "corpusId":
@@ -2203,7 +2200,7 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
       "journal": {"pages": "32-55"}, "authors": [{"authorId": "145172877", "name":
       "K. Nigam"}, {"authorId": "143753639", "name": "A. McCallum"}, {"authorId":
-      "40975594", "name": "Tom Michael Mitchell"}]}}, {"contexts": [], "intents":
+      "40975594", "name": "Tom Michael Mitchell"}]}}, {"intents": [], "contexts":
       [], "isInfluential": false, "citedPaper": {"paperId": "03bafef700d35112a9926dd1b2be91a4aa6984a4",
       "externalIds": {"MAG": "2547509932", "CorpusId": 126247181}, "corpusId": 126247181,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/03bafef700d35112a9926dd1b2be91a4aa6984a4",
@@ -2218,17 +2215,17 @@ interactions:
       null, "publicationDate": null, "journal": {"volume": "", "pages": "33-55", "name":
       ""}, "authors": [{"authorId": "1730609", "name": "O. Chapelle"}, {"authorId":
       "1411416797", "name": "Bernhard Sch\u00c3\u00b6lkopf"}, {"authorId": "2281542",
-      "name": "A. Zien"}]}}, {"contexts": ["Task Datasets Natural language inference
-      SNLI [5], MultiNLI [66], Question NLI [64], RTE [4], SciTail [25] Question Answering
-      RACE [30], Story Cloze [40] Sentence similarity MSR Paraphrase Corpus [14],
-      Quora Question Pairs [9], STS Benchmark [6] Classification Stanford Sentiment
-      Treebank-2 [54], CoLA [65]", "The LSTM only outperforms the Transformer on one
-      dataset \u2013 MRPC. Finally, we also compare with our transformer architecture
-      directly trained on supervised target tasks, without pre-training.", "We use
-      three datasets for this task \u2013 the Microsoft Paraphrase corpus (MRPC) [14]
-      (collected from news sources), the Quora Question Pairs (QQP) dataset [9], and
-      the Semantic Textual Similarity benchmark (STS-B) [6]."], "intents": ["methodology"],
-      "isInfluential": false, "citedPaper": {"paperId": "475354f10798f110d34792b6d88f31d6d5cb099e",
+      "name": "A. Zien"}]}}, {"intents": ["methodology"], "contexts": ["Task Datasets
+      Natural language inference SNLI [5], MultiNLI [66], Question NLI [64], RTE [4],
+      SciTail [25] Question Answering RACE [30], Story Cloze [40] Sentence similarity
+      MSR Paraphrase Corpus [14], Quora Question Pairs [9], STS Benchmark [6] Classification
+      Stanford Sentiment Treebank-2 [54], CoLA [65]", "The LSTM only outperforms the
+      Transformer on one dataset \u2013 MRPC. Finally, we also compare with our transformer
+      architecture directly trained on supervised target tasks, without pre-training.",
+      "We use three datasets for this task \u2013 the Microsoft Paraphrase corpus
+      (MRPC) [14] (collected from news sources), the Quora Question Pairs (QQP) dataset
+      [9], and the Semantic Textual Similarity benchmark (STS-B) [6]."], "isInfluential":
+      false, "citedPaper": {"paperId": "475354f10798f110d34792b6d88f31d6d5cb099e",
       "externalIds": {"ACL": "I05-5002", "MAG": "131533222", "DBLP": "conf/acl-iwp/DolanB05",
       "CorpusId": 16639476}, "corpusId": 16639476, "publicationVenue": {"id": "e783305c-5d8a-44b9-b7a2-449d474a85b2",
       "name": "International Joint Conference on Natural Language Processing", "type":
@@ -2247,30 +2244,30 @@ interactions:
       to describing the corpus itself, we explore a number of issues that arose in
       defining guidelines for the human raters.", "venue": "International Joint Conference
       on Natural Language Processing", "year": 2005, "referenceCount": 50, "citationCount":
-      1204, "influentialCitationCount": 232, "isOpenAccess": false, "openAccessPdf":
+      1206, "influentialCitationCount": 231, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
       "83415753", "name": "W. Dolan"}, {"authorId": "3125776", "name": "Chris Brockett"}]}},
-      {"contexts": ["This paradigm has attracted significant interest, with applications
-      to tasks like sequence labeling [24, 33, 57] or text classification [41, 70]."],
-      "intents": ["methodology"], "isInfluential": false, "citedPaper": {"paperId":
+      {"intents": ["methodology"], "contexts": ["This paradigm has attracted significant
+      interest, with applications to tasks like sequence labeling [24, 33, 57] or
+      text classification [41, 70]."], "isInfluential": false, "citedPaper": {"paperId":
       "a007f46b3303bdb50e705b441c367e595666538c", "externalIds": {"MAG": "2136504847",
       "CorpusId": 2731141}, "corpusId": 2731141, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/a007f46b3303bdb50e705b441c367e595666538c",
       "title": "Semi-Supervised Learning Literature Survey", "abstract": null, "venue":
-      "", "year": 2005, "referenceCount": 187, "citationCount": 4248, "influentialCitationCount":
+      "", "year": 2005, "referenceCount": 187, "citationCount": 4252, "influentialCitationCount":
       252, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Education", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
       "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
-      "1832364", "name": "Xiaojin Zhu"}]}}, {"contexts": ["This paradigm has attracted
-      significant interest, with applications to tasks like sequence labeling [24,
-      33, 57] or text classification [41, 70].", "The earliest approaches used unlabeled
-      data to compute word-level or phrase-level statistics, which were then used
-      as features in a supervised model [33]."], "intents": ["methodology"], "isInfluential":
-      false, "citedPaper": {"paperId": "31b4c03d721dc10b87c178277c1d369f91db8f0e",
+      "1832364", "name": "Xiaojin Zhu"}]}}, {"intents": ["methodology"], "contexts":
+      ["This paradigm has attracted significant interest, with applications to tasks
+      like sequence labeling [24, 33, 57] or text classification [41, 70].", "The
+      earliest approaches used unlabeled data to compute word-level or phrase-level
+      statistics, which were then used as features in a supervised model [33]."],
+      "isInfluential": false, "citedPaper": {"paperId": "31b4c03d721dc10b87c178277c1d369f91db8f0e",
       "externalIds": {"MAG": "2158049734", "CorpusId": 14740218}, "corpusId": 14740218,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/31b4c03d721dc10b87c178277c1d369f91db8f0e",
       "title": "Semi-Supervised Learning for Natural Language", "abstract": "Statistical
@@ -2299,16 +2296,16 @@ interactions:
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
-      [{"authorId": "2075292388", "name": "P. Liang"}]}}, {"contexts": ["This corpus
-      has been shown to contain more reasoning type questions that other datasets
-      like CNN [19] or SQuaD [47], providing the perfect evaluation for our model
-      which is trained to handle long-range contexts."], "intents": ["background"],
-      "isInfluential": false, "citedPaper": {"paperId": null, "externalIds": null,
-      "corpusId": "236503748", "publicationVenue": null, "url": null, "title": "and
-      P", "abstract": null, "venue": "", "year": null, "referenceCount": null, "citationCount":
-      null, "influentialCitationCount": null, "isOpenAccess": null, "openAccessPdf":
-      null, "fieldsOfStudy": null, "s2FieldsOfStudy": null, "publicationTypes": null,
-      "publicationDate": null, "journal": null, "authors": []}}]}
+      [{"authorId": "2075292388", "name": "P. Liang"}]}}, {"intents": ["background"],
+      "contexts": ["This corpus has been shown to contain more reasoning type questions
+      that other datasets like CNN [19] or SQuaD [47], providing the perfect evaluation
+      for our model which is trained to handle long-range contexts."], "isInfluential":
+      false, "citedPaper": {"paperId": null, "externalIds": null, "corpusId": "236503748",
+      "publicationVenue": null, "url": null, "title": "and P", "abstract": null, "venue":
+      "", "year": null, "referenceCount": null, "citationCount": null, "influentialCitationCount":
+      null, "isOpenAccess": null, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      null, "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
+      []}}]}
 
       '
     headers:
@@ -2321,27 +2318,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 09 Sep 2023 15:03:05 GMT
+      - Wed, 13 Sep 2023 21:45:36 GMT
       Via:
-      - 1.1 e5eaa3ec30b881d1cd974c31701ba952.cloudfront.net (CloudFront)
+      - 1.1 f78e2a2d083c0945ee670c9d5d179e9e.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - uAqzH2iPghIJw7XubIPIn9JMkJTsJxt4wbHOsPMhWSWZ5bAmhtjAsA==
+      - li3ZvCJDoGWxaA_x73AVFI7zivHu_BJkDmO0DUsKxg8jGeLlo9Mh3w==
       X-Amz-Cf-Pop:
       - EWR53-C1
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - K_pc5EtHPHcFprA=
+      - LNwMAEDOvHcF2bA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '188403'
       x-amzn-Remapped-Date:
-      - Sat, 09 Sep 2023 15:03:05 GMT
+      - Wed, 13 Sep 2023 21:45:36 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 97eda63c-ec0c-4bdd-8004-04ee28728df1
+      - 2c097954-6981-4c07-87f7-4a63fd55bb1d
     http_version: HTTP/1.1
     status_code: 200
 version: 1

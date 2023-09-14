@@ -1,26 +1,22 @@
 from typing import List, Union
-import json
-import httpx
 
-import requests
+import httpx
 from tenacity import (retry, retry_if_exception_type, stop_after_attempt,
                       wait_fixed)
 
 from semanticscholar.SemanticScholarException import \
-    BadQueryParametersException, ObjectNotFoundException
+    BadQueryParametersException, ObjectNotFoundException, \
+    TimeoutException
 
 
-class ApiRequester:
-    '''
-    This class handles calls to Semantic Scholar API.
-    '''
+class Requester:
 
     def __init__(self, timeout) -> None:
         '''
         :param float timeout: an exception is raised \
             if the server has not issued a response for timeout seconds.
         '''
-        self._timeout = timeout
+        self.timeout = timeout
 
     @property
     def timeout(self) -> int:
@@ -36,17 +32,37 @@ class ApiRequester:
         '''
         self._timeout = timeout
 
-    def extract_data(
+    @retry(
+        wait=wait_fixed(30),
+        retry=retry_if_exception_type(ConnectionRefusedError),
+        stop=stop_after_attempt(10)
+    )
+    async def get_data(
                 self,
-                r: Union[requests.Response, httpx.Response]
+                url: str,
+                parameters: str,
+                headers: dict,
+                payload: dict = None
             ) -> Union[dict, List[dict]]:
-        '''Extract data from fulfilled request
-           and raise errors if request was not successful.
+        '''Get data from Semantic Scholar API
 
-        :param Response r: fulfilled response of API request..
+        :param str url: absolute URL to API endpoint.
+        :param str parameters: the parameters to add in the URL.
+        :param str headers: request headers.
+        :param dict payload: data for POST requests.
         :returns: data or empty :class:`dict` if not found.
         :rtype: :class:`dict` or :class:`List` of :class:`dict`
         '''
+
+        url = f'{url}?{parameters}'
+        method = 'POST' if payload else 'GET'
+
+        async with httpx.AsyncClient() as client:
+            try:
+                r = await client.request(
+                    method, url, timeout=self._timeout, headers=headers, json=payload)
+            except httpx.TimeoutException:
+                raise TimeoutException("Request timed out.")
 
         data = {}
         if r.status_code == 200:
@@ -66,68 +82,6 @@ class ApiRequester:
         elif r.status_code in [500, 504]:
             data = r.json()
             raise Exception(data['message'])
-        
+
         return data
-
-    @retry(
-        wait=wait_fixed(30),
-        retry=retry_if_exception_type(ConnectionRefusedError),
-        stop=stop_after_attempt(10)
-    )
-    def get_data(
-                self,
-                url: str,
-                parameters: str,
-                headers: dict,
-                payload: dict = None
-            ) -> Union[dict, List[dict]]:
-        '''Get data from Semantic Scholar API
-
-        :param str url: absolute URL to API endpoint.
-        :param str parameters: the parameters to add in the URL.
-        :param str headers: request headers.
-        :param dict payload: data for POST requests.
-        :returns: data or empty :class:`dict` if not found.
-        :rtype: :class:`dict` or :class:`List` of :class:`dict`
-        '''
-
-        url = f'{url}?{parameters}'
-        method = 'POST' if payload else 'GET'
-        payload = json.dumps(payload) if payload else None
-  
-        r = requests.request(
-            method, url, timeout=self._timeout, headers=headers, data=payload)
-
-        return self.extract_data(r)
-
-    @retry(
-        wait=wait_fixed(30),
-        retry=retry_if_exception_type(ConnectionRefusedError),
-        stop=stop_after_attempt(10)
-    )
-    async def async_get_data(
-                self,
-                url: str,
-                parameters: str,
-                headers: dict,
-                payload: dict = None,
-            ) -> Union[dict, List[dict]]:
-        '''Get data from Semantic Scholar API
-
-        :param str url: absolute URL to API endpoint.
-        :param str parameters: the parameters to add in the URL.
-        :param str headers: request headers.
-        :param dict payload: data for POST requests.
-        :returns: data or empty :class:`dict` if not found.
-        :rtype: :class:`dict` or :class:`List` of :class:`dict`
-        '''
-
-        url = f'{url}?{parameters}'
-        method = 'POST' if payload else 'GET'
-
-        async with httpx.AsyncClient() as client:
-            r = await client.request(
-                method, url, timeout=self._timeout, headers=headers, json=payload)
-
-        return self.extract_data(r)
     

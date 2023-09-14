@@ -9,58 +9,6 @@ interactions:
       connection:
       - keep-alive
       host:
-      - api.semanticscholar.org
-      user-agent:
-      - python-httpx/0.24.1
-    method: GET
-    uri: https://api.semanticscholar.org/recommendations/v1/papers/forpaper/10.1145/3544585.3544600?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=recent
-  response:
-    content: '{"recommendedPapers": []}
-
-      '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '26'
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 08 Sep 2023 19:40:57 GMT
-      Via:
-      - 1.1 f1742871ff3f5482a0c79a4d483d78a8.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - zU7Xf3Ai0jj1Y1C7uckI_Pez-ivifrsN0QtHQN3JrKnmWHq60l-e8w==
-      X-Amz-Cf-Pop:
-      - EWR50-C1
-      X-Cache:
-      - Miss from cloudfront
-      x-amz-apigw-id:
-      - K8_PfE31vHcFvRg=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '26'
-      x-amzn-Remapped-Date:
-      - Fri, 08 Sep 2023 19:40:57 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - 45d08699-3ebb-4b6c-aff8-6b5d53accb34
-    http_version: HTTP/1.1
-    status_code: 200
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
       - partner.semanticscholar.org
       user-agent:
       - python-httpx/0.24.1
@@ -82,27 +30,1812 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 08 Sep 2023 20:26:05 GMT
+      - Wed, 13 Sep 2023 21:45:37 GMT
       Via:
-      - 1.1 17a79dcb426270de1bedb2a8dbcb8f72.cloudfront.net (CloudFront)
+      - 1.1 249557823ab8e41dec2ed10311f8ff98.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - NnicpjVTVejrbcd0US9QKJIrqHdV3RnicnJPrcHKSuRtpwXObVQhxQ==
+      - dVi9CnkKNPaoOGAeaMFxu9ROYAO5POvh4bEuOeLRdqSoefEUH630SA==
       X-Amz-Cf-Pop:
       - EWR53-C1
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - K9F2tGnXPHcFfYA=
+      - LNwMNEhEPHcFeeg=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '26'
       x-amzn-Remapped-Date:
-      - Fri, 08 Sep 2023 20:26:05 GMT
+      - Wed, 13 Sep 2023 21:45:37 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 77ce3ba4-4c04-4e1c-918f-9d8a7f283bb8
+      - 017509db-6b64-4cf6-8963-271e8e8f6c93
+    http_version: HTTP/1.1
+    status_code: 200
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - partner.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+      x-api-key:
+      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+    method: GET
+    uri: https://partner.semanticscholar.org/recommendations/v1/papers/forpaper/10.2139/ssrn.2250500?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=recent
+  response:
+    content: '{"recommendedPapers": [{"paperId": "3a0cf4b1517784b8485ab51fc0b92c32be1c4bb8",
+      "externalIds": {"CorpusId": 261495640}, "corpusId": 261495640, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/3a0cf4b1517784b8485ab51fc0b92c32be1c4bb8",
+      "title": "Microcredit: Impacts and promising innovations", "abstract": "Findings
+      on the impacts of microcredit continue to evolve. Early evidence from randomized
+      evaluations in low-and middle-income countries showed that the classic microcredit
+      model did not lead to transformative impacts on income or consumption for the
+      average borrower across many contexts. However, a subset of high-potential entrepreneurs
+      saw high returns to microcredit. More recent research similarly finds that certain
+      groups like experienced business owners can have high returns to credit", "venue":
+      "", "year": 2023, "referenceCount": 39, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": []}, {"paperId": "9b29079f16228f251933eb3bbae54d6e2b2c4ebf",
+      "externalIds": {"CorpusId": 261426648}, "corpusId": 261426648, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/9b29079f16228f251933eb3bbae54d6e2b2c4ebf",
+      "title": "2015-Evidence on Microcredit: Rethinking Financial Tools for the Poor",
+      "abstract": "USAID and micro\ufb01nance institutions use recent evidence to
+      shift from traditional micro\ufb01nance to other approaches. In the early 2000s,
+      microcredit received extensive praise as a poverty-\ufb01ghting tool, while
+      critics claimed it indebted poor households. At the time, however, little rigorous
+      evidence existed on its impacts. Six randomized evaluations, led by IPA-and
+      J-PAL a\ufb03liates, found that microcredit had some bene\ufb01ts, such as expanding
+      business activity, but did not reduce poverty or lead to empowerment for women
+      on average. Nor were the loans harmful. In 2018, the U.S. Agency for International
+      Development cited this research, along with other IPA studies, in its decision
+      to shift from traditional micro\ufb01nance to the Graduation Approach and building
+      more inclusive markets. The evidence also contributed to a shift in public opinion
+      and helped propel the micro\ufb01nance industry in new directions to expand
+      \ufb01nancial access to the extreme poor.", "venue": "", "year": 2023, "referenceCount":
+      1, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2237651454", "name": "A. Banerjee"},
+      {"authorId": "4645317", "name": "Jonathan Zinman"}, {"authorId": "103194620",
+      "name": "D. College"}]}, {"paperId": "d0f6c0303253c27283c8d98ae47e23216b3f5630",
+      "externalIds": {"MAG": "2230671864", "DOI": "10.2139/ssrn.2020197", "CorpusId":
+      102487908}, "corpusId": 102487908, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d0f6c0303253c27283c8d98ae47e23216b3f5630",
+      "title": "Rethinking Conditionality: Turkey\u2019s EU Accession and the Kurdish
+      Question", "abstract": "In this paper we look at the Turkish reform process
+      with regard to the Kurdish minority from the perspective of Europeanization
+      and in the light of the external incentives model. As a result, the paper provides
+      a systematic analysis of recent political developments in this area. Additionally,
+      our analysis leads to the questioning of some basic premises of the external
+      incentives model. Most notably in this specific case we find that credible EU
+      commitment, rather than low adoption costs and weak veto players, has constituted
+      a necessary and sufficient condition for the reform process. Likewise, we find
+      a dynamic relationship between EU induced democratic reforms and adoption costs
+      that is largely overlooked in the model.", "venue": "", "year": 2012, "referenceCount":
+      62, "citationCount": 5, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://pure.uvt.nl/ws/files/1452309/SSRN_Rethinking_Conditionality.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Political Science"], "s2FieldsOfStudy":
+      [{"category": "Political Science", "source": "external"}, {"category": "Economics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2012-03-12",
+      "journal": {"name": "European Public Law: National eJournal"}, "authors": [{"authorId":
+      "87367149", "name": "F. Cengiz"}, {"authorId": "48710067", "name": "L. Hoffmann"}]},
+      {"paperId": "c30e0f3a95bdf26609c1e74cc6f3f92b2ee7d7f2", "externalIds": {"DOI":
+      "10.33834/bkr.v9i1.342", "CorpusId": 260718565}, "corpusId": 260718565, "publicationVenue":
+      "73d2a282-9131-45d9-aff6-63d9a26dadaa", "url": "https://www.semanticscholar.org/paper/c30e0f3a95bdf26609c1e74cc6f3f92b2ee7d7f2",
+      "title": "Macroeconomics after Kalecki and Keynes: Post-Keynesian Foundations",
+      "abstract": "It is great news for the Heterodox community the release of the
+      new textbook by Eckhard Hein. I had the difficult task of finishing my review
+      just after the release of an excellent summary of the book provided by Marc
+      Lavoie. I will try to take advantage of Lavoie\u2019s (2023) careful review,
+      which I strongly recommend, by making a shorter overall summary of the book.
+      I will highlight some interesting features of the book, such as the policy-oriented
+      perspective and the capacity to build bridges within the post-Keynesian community
+      and with other Heterodox perspectives.", "venue": "Brazilian Keynesian Review",
+      "year": 2023, "referenceCount": 10, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": "2023-07-18", "journal": {"name": "Brazilian Keynesian
+      Review"}, "authors": [{"authorId": "97968673", "name": "Ricardo Summa"}]}, {"paperId":
+      "f8492176593a5dea34ac427da4e876d9b0b69d2d", "externalIds": {"CorpusId": 261497864},
+      "corpusId": 261497864, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f8492176593a5dea34ac427da4e876d9b0b69d2d",
+      "title": ": Welcome remarks - inauguration of the 7th annual conference on international
+      economics", "abstract": "Within the last six years the Bank has had to deal
+      with the large decline in oil prices experienced in 2014 and 2015, the threat
+      of cancelation of NAFTA, the threat of the imposition of various tariffs and
+      quotas and, more recently, with the multiple shocks to global trade and financial
+      markets that resulted from the pandemic. Some of the insights gained by our
+      participation in this conference have surely been valuable in coping with these
+      tasks.", "venue": "", "year": 2022, "referenceCount": 1, "citationCount": 0,
+      "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "2237478681", "name": "Johns Hopkins"}]}, {"paperId":
+      "97dc709ec6aa39ec8cd8bc5bbbedec74512e7f04", "externalIds": {"CorpusId": 260871442},
+      "corpusId": 260871442, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/97dc709ec6aa39ec8cd8bc5bbbedec74512e7f04",
+      "title": "Did Indian Federalism Fail Punjab?", "abstract": "As our first experiment
+      on creating an online book review panel on a landmark piece of research, we
+      invited three experts on the Punjab economy to review a book with a second Indian
+      reprint in 2019 from their own vantage points. Reviewers wrote their reports
+      independently from each other, so there was bound to be some duplication. Finally,
+      all the reviews were sent to the author to seek a response.", "venue": "", "year":
+      2020, "referenceCount": 22, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Business", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "2231506848",
+      "name": "Harpreet K Narang"}]}, {"paperId": "a6bf4c702b23cabd1499eb580d2ee0e33a6bc42d",
+      "externalIds": {"CorpusId": 260068786}, "corpusId": 260068786, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/a6bf4c702b23cabd1499eb580d2ee0e33a6bc42d",
+      "title": "Is the 100% Reserve Reform Finally Getting Topical?", "abstract":
+      "The author considers the various 100% Reserve plans that have appeared since
+      the interwar period and have since then been adapted, but never implemented
+      as such. He then highlights their common features as well as their differences
+      and exposes the criticisms voiced against them. Overall, the 100% Reserve reform
+      does not appear as a meaningful opportunity to improve the functioning of banking
+      systems. However, the reform is, in some respects, getting more topical.", "venue":
+      "", "year": 2021, "referenceCount": 29, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "History", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "1741521127",
+      "name": "C. Pfister"}]}, {"paperId": "f8fee753b034951320bfb882d861dd3385f85859",
+      "externalIds": {"CorpusId": 261587195}, "corpusId": 261587195, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/f8fee753b034951320bfb882d861dd3385f85859",
+      "title": "the Democratic side,", "abstract": "In their 2022 paper, \u201cSmall
+      Campaign Donors,\u201d four economists \u2014 Laurent Bouton, Julia Cag\u00e9,
+      Edgard Dewitte and Vincent Pons \u2014 document the striking increase in low-dollar
+      ($200 or less) campaign contributions in recent years. (Very recently, in part
+      because Donald Trump is no longer in the White House and in part because Joe
+      Biden has not been able to raise voter enthusiasm, low-dollar contributions
+      have declined, although they remain a crucial source of cash for candidates.)",
+      "venue": "", "year": 2023, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "2238383577",
+      "name": "Laurent Bouton"}, {"authorId": "2238383230", "name": "Julia Cag\u00e9"},
+      {"authorId": "133885715", "name": "Edgard Dewitte"}, {"authorId": "2238383085",
+      "name": "Richard Pildes"}]}, {"paperId": "c37bf063055593b6e69a2a909dfbcad14e33b892",
+      "externalIds": {"DOI": "10.12968/eyed.2023.24.2.35", "CorpusId": 260858892},
+      "corpusId": 260858892, "publicationVenue": "6b273131-c2df-4d28-b1cd-6b22aab59f54",
+      "url": "https://www.semanticscholar.org/paper/c37bf063055593b6e69a2a909dfbcad14e33b892",
+      "title": "What if Ofsted gets it wrong? Unpicking the aftermath in practice,
+      reality and the future", "abstract": "David Meechan, senior lecturer at the
+      University of Northampton, shares his experiences supporting a private setting
+      that challenged their \u2018Inadequate\u2019 rating from an inspection in November
+      2022. After the complaint, the setting was reinspected in April 2023 and received
+      a \u2018Good\u2019 rating across the board.", "venue": "Early Years Educator",
+      "year": 2023, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Medicine", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-09-02", "journal": {"name": "Early Years Educator"},
+      "authors": [{"authorId": "2231480019", "name": "David Meecha"}]}, {"paperId":
+      "489614ded9de396dc0772372c837915b48cbe939", "externalIds": {"CorpusId": 260329951},
+      "corpusId": 260329951, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/489614ded9de396dc0772372c837915b48cbe939",
+      "title": "Hacienda P\u00fablica Espa\u00f1ola/Review of Public Economics", "abstract":
+      "We offer the first study on vulnerability adaptation to subjective well-being,
+      using rich panel data over the past two decades for Russia. We found no adaption
+      to vulnerability for life satisfaction and subjective wealth, with longer vulnerability
+      spells associated with more negative subjective welfare. Some evidence indicates
+      that despite little differences between urban and rural areas in life satisfaction,
+      rural areas exhibit a more robust lack of adaptation for subjective wealth,
+      particularly for longer durations of vulnerability. More education generally
+      indicates a stronger lack of adaptation for life satisfaction, but similar levels
+      of adaptation for subjective wealth.", "venue": "", "year": 2023, "referenceCount":
+      25, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "46244780", "name": "Hai-Anh
+      H. Dang"}, {"authorId": "108116930", "name": "Kseniya Abanokova"}, {"authorId":
+      "143627013", "name": "Michael Lokshin"}]}, {"paperId": "aef117b4004f4ac8cc5916508bec5ddaef4db36e",
+      "externalIds": {"DOI": "10.1163/22134360-00000052", "CorpusId": 260074541},
+      "corpusId": 260074541, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/aef117b4004f4ac8cc5916508bec5ddaef4db36e",
+      "title": "That Unexpected Margin of Capital", "abstract": "\n For many years,
+      a weapon in the armory of those advocating for Eric Williams\u2019s thesis that
+      the profits from slavery helped finance the Industrial Revolution in Britain
+      has been a speech made by Winston Churchill making that very point. Williams
+      himself referred to the speech in 1942, as did George Padmore in 1953, but neither
+      provided chapter and verse. Subsequently, a whole raft of commentators has followed
+      suit, but always only via a reference to Williams or Padmore. This research
+      note provides the original date and context for Churchill\u2019s words.", "venue":
+      "New West Indian Guide / Nieuwe West-Indische Gids", "year": 2023, "referenceCount":
+      2, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "History", "source": "s2-fos-model"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2023-07-21", "journal":
+      {"name": "New West Indian Guide / Nieuwe West-Indische Gids"}, "authors": [{"authorId":
+      "46844866", "name": "P. Hulme"}]}, {"paperId": "7a4da51d9440d2c9898e3b10c37de0b3030316be",
+      "externalIds": {"CorpusId": 261259549}, "corpusId": 261259549, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/7a4da51d9440d2c9898e3b10c37de0b3030316be",
+      "title": "Long-Run Enterprise Responses to Redistribution: Experimental Evidence
+      from Kenya", "abstract": "We study the longer-term (5-7 year) enterprise effects
+      of a large-scale, randomised unconditional cash transfer programme in Kenya,
+      which can provide important insights into enterprise responses to redistribution
+      and social protection programmes. Initial analyses suggest some persistent effects
+      in terms of the size and number of enterprises in areas that randomly received
+      more cash as a result of the programme.", "venue": "", "year": 2023, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}, {"category": "Business", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
+      [{"authorId": "1572386858", "name": "D. Egger"}, {"authorId": "5493144", "name":
+      "J. Haushofer"}, {"authorId": "101383008", "name": "Grady Killeen"}, {"authorId":
+      "144624624", "name": "E. Miguel"}, {"authorId": "2147308360", "name": "M. Walker"}]},
+      {"paperId": "cf222728c13af29ed0ddd327f066fb31c4a7b6b5", "externalIds": {"CorpusId":
+      260359131}, "corpusId": 260359131, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/cf222728c13af29ed0ddd327f066fb31c4a7b6b5",
+      "title": "Texas A&", "abstract": "This Article uses comparative evidence to
+      inform the ongoing debate about the selection and discipline of judges. In recent
+      decades, many countries around the world have created judicial councils, institutions
+      designed to maintain an appropriate balance between judicial independence and
+      accountability. Our Article has two aims. First, we provide a theory of the
+      formation of judicial councils and identify some of the dimensions along which
+      they differ. Second, we test the extent to which different designs of judicial
+      council affect judicial quality. We find that there is little relationship between
+      councils and quality. We also offer a positive explanation for why judicial
+      councils nevertheless remain attractive institutions.", "venue": "", "year":
+      2021, "referenceCount": 4, "citationCount": 4, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Political Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2004996977",
+      "name": "Nuno Garoupa"}, {"authorId": "2487499", "name": "Tom Ginsburg"}, {"authorId":
+      "2226311942", "name": "Gross Cunha"}, {"authorId": "93193883", "name": "E. Gerelli"},
+      {"authorId": "100694261", "name": "J. Gordley"}, {"authorId": "144188346", "name":
+      "F. Hanssen"}, {"authorId": "74710659", "name": "Richard Mcadams"}, {"authorId":
+      "2226359676", "name": "Maria Angela Oliveira"}, {"authorId": "144461859", "name":
+      "Limor Riza"}, {"authorId": "2226309746", "name": "Larry Solum"}, {"authorId":
+      "2226311227", "name": "Alexi Trochev"}, {"authorId": "2089999785", "name": "S.
+      Hemmen"}, {"authorId": "2226311636", "name": "Rebecca Crouse"}, {"authorId":
+      "2226437660", "name": "Sofia Garcia"}, {"authorId": "80461512", "name": "Christopher
+      R. Minelli"}, {"authorId": "2064034081", "name": "A. Porto"}]}, {"paperId":
+      "ce9701c6d9e403d94f8d6b6bfd752939a62b04f1", "externalIds": {"CorpusId": 260044423},
+      "corpusId": 260044423, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ce9701c6d9e403d94f8d6b6bfd752939a62b04f1",
+      "title": "1 Academic Freedom in Asia from 1900 to 2021 A Quantitative Overview",
+      "abstract": "Empirical research on academic freedom violations faces several
+      obstacles. Most notably, these include efforts to conceal information, a hesitation
+      to report violations and incomplete statistics, reporting biases and other information
+      effects, and shifting standards of assessment.1 Events data are particularly
+      prone to reporting biases. Additionally, the absence of particular events\u2014such
+      as politically motivated dismissals of academics\u2014is not necessarily a sign
+      of a high degree of freedom. In highly repressive settings, the absence of such
+      events may instead be the result of a chilling effect following earlier encroachments
+      and subsequent selfcensorship among academics.", "venue": "", "year": 2022,
+      "referenceCount": 22, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Environmental Science", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "118474898",
+      "name": "Katrin Kinzelbach"}]}, {"paperId": "fd57c259d4bb6a39e81e24ba7fda4871f5530115",
+      "externalIds": {"CorpusId": 260385033}, "corpusId": 260385033, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/fd57c259d4bb6a39e81e24ba7fda4871f5530115",
+      "title": ": A counterpoise to today\u2019s bonus culture", "abstract": "The
+      last decades have seen a marked increase in the use of incentive pay as \ufb01rms
+      compete for talent. This column weighs up the pros and cons of an alternative
+      way to giving people incentives, namely, honouring them. It argues that bestowing
+      awards instead of increasing bonuses or other forms of monetary compensation
+      constitutes a valuable alternative to induce effort without contributing to
+      inequality in the distribution of income.", "venue": "", "year": 2019, "referenceCount":
+      12, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "144572963", "name": "B. Frey"},
+      {"authorId": "3325860", "name": "Jana Gallus"}]}, {"paperId": "1d6e5df94ba770d0cb5f58540090b9d186126bac",
+      "externalIds": {"CorpusId": 260330455}, "corpusId": 260330455, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/1d6e5df94ba770d0cb5f58540090b9d186126bac",
+      "title": "Hacienda Pu\u0301blica Espan\u0303ola/Review of Public Economics",
+      "abstract": "This study examines the impact of the shadow economy on taxation
+      in seven Latin American countries between 1993 and 2018. The technique is built
+      using a MIMIC model and a bootstrap panel Granger causality approach. The results
+      show that the variables are related causally, with the shadow economy having
+      a detrimental impact on tax revenues. Governments are advised to embark on labor
+      market and institutional reforms, reduce barriers to firm entry, provide a reliable
+      and sufficient regulatory environment, and provide employee social protection
+      as ways to reduce the informal economy. JEL Classifications: O17, H26, H27",
+      "venue": "", "year": 2023, "referenceCount": 34, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}, {"category": "Business",
+      "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "40929199", "name": "Manuchehr
+      Irandoust"}]}, {"paperId": "9f0500250e7d0473bb9d1e0f436e61514a770cfc", "externalIds":
+      {"CorpusId": 261008720}, "corpusId": 261008720, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/9f0500250e7d0473bb9d1e0f436e61514a770cfc",
+      "title": "D21 \u2013 Jane\u02c7cek method", "abstract": "Is it possible to find
+      a voting system which maintains an equality of voting rights and at the same
+      time gives greater impact to wellinformed and engaged voters? Yes, it is possible.
+      Our proposed voting system solves this apparent paradox. In addition to this
+      principal benefit, it also enables voters to re-balance the political spectrum
+      away from extremists and reduce the threat of dishonest or corrupt political
+      actors.", "venue": "", "year": 2021, "referenceCount": 49, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "2232454866", "name": "PhD. Karel Jane\u02c7cek"}]},
+      {"paperId": "61b1c4ff2045fe41835f95cffdf6f2c3e7b5d35f", "externalIds": {"DOI":
+      "10.3406/ecoap.1957.3870", "CorpusId": 261085177}, "corpusId": 261085177, "publicationVenue":
+      "6e566dcf-4143-4de1-b317-7d33af556a4a", "url": "https://www.semanticscholar.org/paper/61b1c4ff2045fe41835f95cffdf6f2c3e7b5d35f",
+      "title": "Quelques r\u00e9sultats marquants des enqu\u00eates am\u00e9ricaines
+      sur les anticipations des entrepreneurs", "abstract": "The author presents a
+      survey and critical appreciation of recent attempts in, the United Stales to
+      evaluate the use of expedational and probability data for business forecasliny.
+      The author concludes that expectation surveys have big possibilities though,
+      as yet, they are in their infancy. Perhaps more important than their use in
+      business forecasting, will be the possibilities, opened up by these inquiries,
+      for the integration of empirical and theoretical economics.", "venue": "Economie
+      appliquee", "year": 1957, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"},
+      "authors": [{"authorId": "2066341771", "name": "M. Bowman"}]}, {"paperId": "db9086886a81a8978299a03ac91607113e247e80",
+      "externalIds": {"CorpusId": 260841172}, "corpusId": 260841172, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/db9086886a81a8978299a03ac91607113e247e80",
+      "title": "FTC-DOJ Proposed Merger Guidelines", "abstract": "Seeking direct input
+      from the public has been a vital part of bringing our merger enforcement in
+      line with the realities of today\u2019s markets. Since launching our review
+      of the guidelines, we have received over 5,000 comments and held numerous public
+      listening sessions to hear directly from a wide variety of market participants,
+      including state attorneys general, workers, farmers, physicians, pharmacists,
+      restaurant owners, and creators. Beyond showcasing the consolidation that has
+      occurred across sectors, the comments capture the tangible effects that mergers
+      have had on people\u2019s lives.", "venue": "", "year": 2023, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "117023288", "name": "Lina M.
+      Khan"}, {"authorId": "49280333", "name": "R. Slaughter"}, {"authorId": "122067813",
+      "name": "Alvaro M. Bedoya"}]}, {"paperId": "8f2496c4f79f544ae2e821655150bfa36acf2740",
+      "externalIds": {"CorpusId": 260358387}, "corpusId": 260358387, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/8f2496c4f79f544ae2e821655150bfa36acf2740",
+      "title": "Voting on the Flag of the Weimar Republic", "abstract": "We describe
+      and analyze the voting process leading to the compromise achieved in the Weimar
+      Flag Controversy. We also o\u2044er a simple theoretical model that attempts
+      to capture the main forces at work. These forces are: 1) the addition of a compromise
+      alternative that is located between the main ideological positions on the left
+      and on the right; 2) the interdependence of preferences that makes the compromise
+      salient; and 3) a voting process that gradually reveals and aggregates information.
+      Finally, we compare the theoretical insights with the observed outcome.", "venue":
+      "", "year": 2023, "referenceCount": 43, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "3010350",
+      "name": "Alex Gershkov"}, {"authorId": "34732812", "name": "Andreas Kleiner"},
+      {"authorId": "2488559", "name": "B. Moldovanu"}, {"authorId": "2693099", "name":
+      "Xianwen Shi"}]}, {"paperId": "850c46392225ad642ee2c30e6292e34ed2a21d0f", "externalIds":
+      {"DOI": "10.1162/rest_a_00774", "CorpusId": 221592149}, "corpusId": 221592149,
+      "publicationVenue": "5e19119a-7591-4c54-8255-61a8db3575d5", "url": "https://www.semanticscholar.org/paper/850c46392225ad642ee2c30e6292e34ed2a21d0f",
+      "title": "Defaults and Donations: Evidence from a Field Experiment", "abstract":
+      "Abstract We study the effects of defaults on charitable giving in a large-scale
+      field experiment on an online fundraising platform. We exogenously vary default
+      options along two choice dimensions: the charitable donation decision and the
+      \u201cco-donation\u201d decision regarding how much to contribute to supporting
+      the platform. We document a strong effect of defaults on individual behavior
+      but nevertheless find that aggregate donation levels are unaffected by defaults.
+      In contrast, co-donations increase in the default amount. We complement our
+      experimental results with a structural model that investigates whether personalizing
+      defaults based on individuals'' donation histories can increase donation revenues.",
+      "venue": "Review of Economics and Statistics", "year": 2019, "referenceCount":
+      142, "citationCount": 95, "influentialCitationCount": 8, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://curis.ku.dk/ws/files/235962944/rest_a_00774.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "2019-12-01", "journal": {"name": "Review of Economics and Statistics", "pages":
+      "808-826", "volume": "101"}, "authors": [{"authorId": "49962021", "name": "Steffen
+      Altmann"}, {"authorId": "1953018", "name": "A. Falk"}, {"authorId": "2227438253",
+      "name": "Paul Heidhues"}, {"authorId": "7443358", "name": "Rajshri Jayaraman"},
+      {"authorId": "103043411", "name": "Marrit Teirlinck"}]}, {"paperId": "7b782b3f93b8102b1ccad748ba20660d8b50ce43",
+      "externalIds": {"DOI": "10.1257/jel.61.3.1188.r1", "CorpusId": 261478333}, "corpusId":
+      261478333, "publicationVenue": "e4c3372b-3695-4380-baf1-2413baad6b83", "url":
+      "https://www.semanticscholar.org/paper/7b782b3f93b8102b1ccad748ba20660d8b50ce43",
+      "title": "Prioritarianism in Practice", "abstract": "Kaushik Basu of Cornell
+      University reviews \u201cPrioritarianism in Practice\u201d edited by Matthew
+      D. Adler and Ole F. Norheim. The Econlit abstract of this book begins: \u201cTwelve
+      papers explore the use of prioritarianism as a methodology for evaluating governmental
+      policy, highlighting the value of giving extra weight to the well-being of the
+      worse off in policy assessment across a variety of domains.\u201d", "venue":
+      "Journal of Economic Literature", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Psychology", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Review"], "publicationDate":
+      "2023-09-01", "journal": {"name": "Journal of Economic Literature"}, "authors":
+      [{"authorId": "1743389", "name": "K. Basu"}]}, {"paperId": "e80fd68d7f7a67fce17a7c08e493cecd15cd1793",
+      "externalIds": {"DOI": "10.3406/ecoap.2004.3131", "CorpusId": 261136324}, "corpusId":
+      261136324, "publicationVenue": "6e566dcf-4143-4de1-b317-7d33af556a4a", "url":
+      "https://www.semanticscholar.org/paper/e80fd68d7f7a67fce17a7c08e493cecd15cd1793",
+      "title": "Les d\u00e9terminants r\u00e9currents de la formation des bulles financi\u00e8res.",
+      "abstract": "This article tries to answer the question that aroused, or rather
+      than should have aroused in a much more massive way than it has done so far,
+      the expansion, at the end of the last century, of one of the biggest financial
+      bubbles in modem History. After a survey of the various qualitative and quantitative
+      elements that should have allowed qualifying the vertiginous rise of stock-market
+      value as a bubble, the article questions the principle of informative efficiency.
+      The last part display a new approach built from the microstructure of the markets.",
+      "venue": "Economie appliquee", "year": 2004, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Review"], "publicationDate":
+      null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"}, "authors": [{"authorId":
+      "144997465", "name": "J. Ninet"}]}, {"paperId": "02428b74e36e9dda92ca9059e64a21a04ddfe420",
+      "externalIds": {"CorpusId": 260367094}, "corpusId": 260367094, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/02428b74e36e9dda92ca9059e64a21a04ddfe420",
+      "title": "Accidental Cumulation in Studies of Clientelism, Vote Buying, and
+      Governance", "abstract": "The current focus of political science and political
+      economy research in less developed countries lies with problems of governance,
+      with a strong focus on clientelism and speci\ufb01cally on vote buying. With
+      the exception of the Metaketa research on information campaigns, investigations
+      into these topics have proceeded without formal coordination and, for the most
+      part, via individually-designed case studies. Despite this disjointedness and
+      informality, some \ufb01ndings seem to have cumulated. I argue that the main
+      novel results to have emerged from this research stream come from uncovering
+      new facts rather than articulating new causal questions or providing new answers
+      to established questions. Thanks to the use of relatively standardized survey
+      instruments and improved sampling methods, case studies now provide precise
+      quantitative estimates of the frequency of vote buying. However, the wide range
+      of new data points suggests we may need to rethink our understanding of previous
+      causal investigations into vote buying. [150 words]", "venue": "", "year": 2023,
+      "referenceCount": 69, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Business", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "48553897", "name": "M. Golden"}]},
+      {"paperId": "80da543ac931260e7eda7566a545ff1814ba6219", "externalIds": {"MAG":
+      "2281986034", "DOI": "10.2139/ssrn.2737138", "CorpusId": 33251877}, "corpusId":
+      33251877, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/80da543ac931260e7eda7566a545ff1814ba6219",
+      "title": "Are Small Firms Labor Constrained? Experimental Evidence from Ghana",
+      "abstract": "We report the results of a field experiment that randomly placed
+      unemployed young people as apprentices with small firms in Ghana and included
+      no cash subsidy to firms (or workers) beyond in-kind recruitment services. Treated
+      firms experienced increases in firm size of approximately half a worker and
+      firm profits of approximately 10 percent for each apprentice placement offered,
+      documenting frictions to novice hiring. We interpret the program as providing
+      a novel worker screening technology to firms, as (voluntary) worker participation
+      included nonmonetary application costs, echoing the widespread use of an entrance
+      fee mechanism for hiring apprentices in the existing labor market. (JEL D22,
+      J13, J23, L25, M51, M53, O14)", "venue": "American Economic Journal: Applied
+      Economics", "year": 2016, "referenceCount": 75, "citationCount": 31, "influentialCitationCount":
+      4, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Business"],
+      "s2FieldsOfStudy": [{"category": "Business", "source": "external"}, {"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "2016-02-23", "journal": {"name": "ERPN: Communities (Topic)"}, "authors": [{"authorId":
+      "101977506", "name": "J. Mccasland"}, {"authorId": "49527648", "name": "Morgan
+      Hardy"}]}, {"paperId": "0927ae4208ff7761fafcb2245b66e01ff5c306c6", "externalIds":
+      {"DOI": "10.2308/jiar-2023-037", "CorpusId": 261625321}, "corpusId": 261625321,
+      "publicationVenue": "90648e3e-04e3-4a11-a8b9-2b6244443c6b", "url": "https://www.semanticscholar.org/paper/0927ae4208ff7761fafcb2245b66e01ff5c306c6",
+      "title": "Reflections on the 20-Year Anniversary of Worldwide IFRS Adoption",
+      "abstract": "\n At the Ninth International Conference of the Journal of International
+      Accounting Research, Editor Steve Lin organized a plenary session titled \u201c20
+      Years of IFRS Research\u201d to commemorate the 20th anniversary of the worldwide
+      adoption of International Financial Reporting Standards (IFRS). During the session,
+      each panelist presented their views on what we have learned from researching
+      IFRS for the past 20 years and where we should go from here. This article presents
+      a short essay from each panelist summarizing their comments, as well as related
+      issues that were not fully explored at the conference.", "venue": "Journal of
+      International Accounting Research", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Business", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-09-01", "journal": {"name": "Journal of International Accounting Research"},
+      "authors": [{"authorId": "144549470", "name": "Stefano Cascino"}, {"authorId":
+      "2238637992", "name": "Holger Daske"}, {"authorId": "36051174", "name": "Mark
+      L. Defond"}, {"authorId": "100676087", "name": "Annita Florou"}, {"authorId":
+      "50818260", "name": "Joachim Gassen"}, {"authorId": "2238567985", "name": "Mingyi
+      Hung"}]}, {"paperId": "90c12428361ac2817e672a904e84c413b75d688a", "externalIds":
+      {"CorpusId": 260385058}, "corpusId": 260385058, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/90c12428361ac2817e672a904e84c413b75d688a",
+      "title": "THE ECONOMICS OF ART IS DEFINITELY WORTHWILE", "abstract": "Klamer\u2019s
+      speech has resounded not only through the Low Countries but also across the
+      Alpine heights. Bruno Frey, economist in Z\u00fcrich, demonstrates the inconsistency
+      and instability of the economic views widely held by the population of the art
+      world, maintaining that these artists and experts can learn a great deal from
+      economists. He claims that commercialization is a far smaller evil than Klamer
+      believes. Swiss experience with popular referendums shows that art is not sullied
+      by direct democracy.", "venue": "", "year": null, "referenceCount": 10, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "144572963", "name": "B. Frey"}]}, {"paperId":
+      "244561dab35931d38437f7b1ca660e5de0c648a9", "externalIds": {"DOI": "10.59861/ansgk.2353-8392.2018.2.pp195-207",
+      "CorpusId": 259964978}, "corpusId": 259964978, "publicationVenue": "defaa800-a231-4c32-ba82-d81f93c5b63d",
+      "url": "https://www.semanticscholar.org/paper/244561dab35931d38437f7b1ca660e5de0c648a9",
+      "title": "Theoretical and methodological aspects of the study on public opinion
+      manipulation technologies", "abstract": "The author argues that electoral process
+      is particularly indicative of studies on political manipulation, because during
+      this period all manipulative resources are mobilized, which en- courages people
+      to actively support certain forces. The mechanisms of political manipulation
+      are constantly working, improving, so that at the right time they can be activated
+      at full capacity helping to achieve the desired outcome. Manipulation is not
+      limited to electoral practices. It can be successful provided it\u2019s total
+      or full coverage, continuous and leaves no alternative and there are no large-scale
+      contradictory manipulative actions.", "venue": "Studium Europy \u015arodkowej
+      i Wschodniej", "year": 2014, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Political Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": null, "journal": {"name": "Studium Europy
+      \u015arodkowej i Wschodniej"}, "authors": [{"authorId": "1573844941", "name":
+      "Andrii Konet"}]}, {"paperId": "154827a8a49982261f704aab08a259c6bfd6dcb4", "externalIds":
+      {"DOI": "10.1515/for-2023-2024", "CorpusId": 261065603}, "corpusId": 261065603,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/154827a8a49982261f704aab08a259c6bfd6dcb4",
+      "title": "Anticipating the Consequences of Filibuster Reforms", "abstract":
+      "Abstract Reformers have offered many proposals for changing the Senate filibuster,
+      ranging from modest adjustments to outright abolition. I draw on formal models
+      of obstruction in legislatures to analyze the consequences of three such proposals:
+      creating an opportunity to close debate with a simple majority vote after a
+      sufficiently long floor debate, making it more onerous for the minority to sustain
+      filibusters, and outright abolishing the filibuster. In each of these cases,
+      the models offer a more complete understanding of the effects of these proposals.",
+      "venue": "The Forum", "year": 2023, "referenceCount": 17, "citationCount": 0,
+      "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://www.degruyter.com/document/doi/10.1515/for-2023-2024/pdf", "status":
+      "HYBRID"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-08-24", "journal": {"name": "The Forum", "volume": "0"}, "authors": [{"authorId":
+      "39935656", "name": "Christian Fong"}]}, {"paperId": "7cb732460cdad7ab0d77d5d1c548ef5d6b3a1c95",
+      "externalIds": {"DOI": "10.1002/nba.31539", "CorpusId": 260872882}, "corpusId":
+      260872882, "publicationVenue": "79386721-62ed-416a-a913-c3948cf56095", "url":
+      "https://www.semanticscholar.org/paper/7cb732460cdad7ab0d77d5d1c548ef5d6b3a1c95",
+      "title": "When thanking donors, the sooner the better, experts say", "abstract":
+      "For many nonprofits facing time constraints, showing donor appreciation is
+      often relegated to extended \u201cthank\u2010a\u2010thons\u201d that engage
+      staff members and boards in tedious sessions of jotting down thank\u2010you
+      notes and sending them to larges batches of donors over the course of a week
+      or two. While this may be better than not sending any thank\u2010you at all,
+      it often comes too late in the cycle to matter much to the donor, experts say.",
+      "venue": "Nonprofit Business Advisor", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Education", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-08-12", "journal": {"name": "Nonprofit Business Advisor"}, "authors":
+      []}, {"paperId": "2500873908026eb9066c86b068a00b4e965747e4", "externalIds":
+      {"DOI": "10.1007/s11151-023-09913-1", "CorpusId": 260903008}, "corpusId": 260903008,
+      "publicationVenue": "4c75a9b0-1ed1-46be-8c99-445ed5396e94", "url": "https://www.semanticscholar.org/paper/2500873908026eb9066c86b068a00b4e965747e4",
+      "title": "Corporate Leniency Programs for Antitrust: Past, Present, and Future",
+      "abstract": null, "venue": "Review of Industrial Organization", "year": 2023,
+      "referenceCount": 36, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      true, "openAccessPdf": {"url": "https://link.springer.com/content/pdf/10.1007/s11151-023-09913-1.pdf",
+      "status": "HYBRID"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-08-29", "journal": {"name": "Review of Industrial Organization"},
+      "authors": [{"authorId": "91055101", "name": "J. Hinloopen"}, {"authorId": "2398551",
+      "name": "S. Onderstal"}, {"authorId": "97934328", "name": "A. Soetevent"}]},
+      {"paperId": "35ee9d93b4bba9af76d8516348b31ca4986ce0e0", "externalIds": {"CorpusId":
+      260005421}, "corpusId": 260005421, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/35ee9d93b4bba9af76d8516348b31ca4986ce0e0",
+      "title": "How the \ufb01nancial sector in India was reformed", "abstract": "R
+      2 was 0.04. When the dependent variable was re-expressed as the log of the number
+      of shares traded, the coe\ufb03cient of before was -0.10917 with a t statistic
+      of -1.622. The R 2 was 0.03. These results suggest that, if anything, the post-event
+      turnover was higher than the pre-event turnover. Note that the few days with
+      event-related elevated turnover were removed from this regression.", "venue":
+      "", "year": 2006, "referenceCount": 43, "citationCount": 20, "influentialCitationCount":
+      4, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "117328266",
+      "name": "Susan Thomas"}]}, {"paperId": "d38ed7a1165727a9f9da8e53f922167e9fd720e6",
+      "externalIds": {"DOI": "10.3406/ecoap.1988.2106", "CorpusId": 261142383}, "corpusId":
+      261142383, "publicationVenue": "6e566dcf-4143-4de1-b317-7d33af556a4a", "url":
+      "https://www.semanticscholar.org/paper/d38ed7a1165727a9f9da8e53f922167e9fd720e6",
+      "title": "Strat\u00e9gies bancaires internationales et risque-pays", "abstract":
+      "Since it appeared in the late 70s, the concept of country risk has evolved
+      in relation with the strategies of commercial banks towards LDCs. Particularly
+      ; the emergence of a secondary market for debts has marked the end of the standard
+      scheme of solvency analysis based on current account and reserves criteria.
+      Country risk analysis is now directed towards the survey of the immediately
+      prevailing situation on the one hand (for the purpose of market arbitrage),
+      as well as to that of political and economic structures (in order to define
+      stable targets or to initiate debt-to-equity conversions) on the other hand.",
+      "venue": "Economie appliquee", "year": 1988, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Review"], "publicationDate":
+      null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"}, "authors": [{"authorId":
+      "103422964", "name": "Philippe Norel"}, {"authorId": "70031128", "name": "C.
+      Quenan"}, {"authorId": "2233617595", "name": "Marie-Claire Sarry"}]}, {"paperId":
+      "3c6dc57d0f005356f5b7bb9fe8ac12e5fccc2eb2", "externalIds": {"CorpusId": 260857158},
+      "corpusId": 260857158, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3c6dc57d0f005356f5b7bb9fe8ac12e5fccc2eb2",
+      "title": "Heterogeneity in Long-Term Returns to Eduction \u2013 An Inconvenient
+      Truth", "abstract": "This paper studies the long-term relationship between parental
+      and child education in Germany, where children are tracked into academic and
+      non-academic track schools at the age of 10. On average, children are more likely
+      to attend an academic track school if their parents attended one. Estimating
+      marginal treatment effect curves, we find that there is no effect for disadvantaged
+      individuals, suggesting that educational policies attempting to improve the
+      educational prospect of disadvantaged individuals may fail to reduce inequalities
+      in the long run. Low labor market returns despite better education is the main
+      explanation for the null effect for these individuals.", "venue": "", "year":
+      2022, "referenceCount": 81, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Education", "source": "s2-fos-model"}, {"category": "Economics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "2079810140", "name": "Anne Z\u00fchlke"},
+      {"authorId": "2075530721", "name": "Philipp Kugler"}, {"authorId": "2222116426",
+      "name": "Tim Ruberg"}]}, {"paperId": "8f6ee960dbf5b421a75bc133d33d3964e1e78558",
+      "externalIds": {"CorpusId": 261401572}, "corpusId": 261401572, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/8f6ee960dbf5b421a75bc133d33d3964e1e78558",
+      "title": "Key Insights", "abstract": "Recent research illuminates the opportunity
+      to increase incomes of microenterprise owners through the provision of capital.
+      Experiments providing capital grants to randomly selected subsets of enterprises
+      show that the average increase in earnings following receipt of a grant is much
+      higher than the interest rates charged by micro lenders. But there is important
+      heterogeneity in the returns. Moreover, results from experiments on loans made
+      through traditional microcredit contracts are disappointing. Research implementing
+      tweaks to microcredit contracts and eliciting information from entrepreneurial
+      communities on potential returns from investments shows some promise in overcoming
+      these issues. Ongoing work on microequity contracts also offers hope for contracts
+      that provide some risk-sharing, allowing entrepreneurs to make riskier investments.",
+      "venue": "", "year": 2019, "referenceCount": 28, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "39076197",
+      "name": "C. Woodruff"}]}, {"paperId": "99816118c5caa91b6cfa53cd6fb06e641cfd0fc9",
+      "externalIds": {"CorpusId": 261036550}, "corpusId": 261036550, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/99816118c5caa91b6cfa53cd6fb06e641cfd0fc9",
+      "title": "HOW RESILIENT IS IMPACT FINANCE TO EXOGENOUS SHOCKS ?", "abstract":
+      "y producing for the first time a specific report dedicated to the social performance
+      of partner microfinance institutions (MFIs), BNP Paribas has sought to assess
+      the actions carried out by these institutions, not only in 2021 but also over
+      30 years of commitment to inclusive finance. The release of this report is in
+      line with the Group''s 2022-2025 strategic plan, which establishes financial
+      inclusion as a priority, by ensuring the monitoring of an indicator dedicated
+      to this subject in its scorecard.", "venue": "", "year": 2022, "referenceCount":
+      2, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2232686168", "name": "Fanny
+      Roussey"}]}, {"paperId": "2b820754e447ba87997e4d7e3875c411d7bcf302", "externalIds":
+      {"CorpusId": 260533120}, "corpusId": 260533120, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/2b820754e447ba87997e4d7e3875c411d7bcf302",
+      "title": "The B.E. Journal of Economic Analysis & Policy", "abstract": "Standard
+      economic theory suggests that more choice is usually better. We address this
+      claim and investigate whether people can cope with the increasing number of
+      television programs and watch the amount of TV they \ufb01nd optimal for themselves
+      or whether they are prone to over-consumption. We \ufb01nd that heavy TV viewers
+      do not bene\ufb01t but instead report lower life satisfaction with access to
+      more TV channels. This \ufb01nding suggests that an identi\ufb01able group of
+      individuals experiences a self-control problem when it comes to TV viewing.",
+      "venue": "", "year": 2011, "referenceCount": 47, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "46173799",
+      "name": "Christine Benesch"}, {"authorId": "144572963", "name": "B. Frey"},
+      {"authorId": "3275394", "name": "A. Stutzer"}]}, {"paperId": "a09886ce1a819d1b6d44ffe64db4503697dd7ee0",
+      "externalIds": {"DOI": "10.58809/lldf1566", "CorpusId": 260598107}, "corpusId":
+      260598107, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a09886ce1a819d1b6d44ffe64db4503697dd7ee0",
+      "title": "The Economic Impact of FHSU on the Local Economy: FY 2022", "abstract":
+      "We evaluate the economic impact Fort Hays State University has on the local
+      economy during fiscal year 2022 by utilizing two estimation methods. These methods
+      focus on the total spending from the institution, the faculty and staff, the
+      students, and the visitors. The results of the analysis estimate the economic
+      impact of the university ranges between $167,862,253 and $239,200,242.", "venue":
+      "John Heinrichs Scholarly &amp; Creative Activities Day", "year": 2023, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://scholars.fhsu.edu/cgi/viewcontent.cgi?article=1260&context=sacad",
+      "status": "BRONZE"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "John Heinrichs Scholarly &amp;
+      Creative Activities Day"}, "authors": [{"authorId": "113846231", "name": "Samuel
+      M. Schreyer"}, {"authorId": "72404198", "name": "Emily Breit"}, {"authorId":
+      "2069098453", "name": "Tom Johansen"}, {"authorId": "2204378197", "name": "null
+      null"}]}, {"paperId": "5f3e0d6e91e5290fe97747ebbab5a26fc3c3812d", "externalIds":
+      {"DOI": "10.1257/jel.61.3.1188.r3", "CorpusId": 261488531}, "corpusId": 261488531,
+      "publicationVenue": "e4c3372b-3695-4380-baf1-2413baad6b83", "url": "https://www.semanticscholar.org/paper/5f3e0d6e91e5290fe97747ebbab5a26fc3c3812d",
+      "title": "The Market Power of Technology: Understanding the Second Gilded Age",
+      "abstract": "Abhinav Gupta of Kenan-Flagler Business School, UNC Chapel Hill
+      reviews \u201cThe Market Power of Technology: Understanding the Second Gilded
+      Age\u201d by Mordecai Kurz. The Econlit abstract of this book begins: \u201cExamines
+      the relationship between economic inequality and the technological market power
+      of firms, considering its policy implications in light of the history of income
+      and wealth inequality since 1889.\u201d", "venue": "Journal of Economic Literature",
+      "year": 2023, "referenceCount": 1, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}, {"category": "History",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Review"],
+      "publicationDate": "2023-09-01", "journal": {"name": "Journal of Economic Literature"},
+      "authors": [{"authorId": "2237398896", "name": "Abhinav Gupta"}]}, {"paperId":
+      "32d08c501a3ebbd43328fe8e91aa0d8558e96181", "externalIds": {"CorpusId": 260531289},
+      "corpusId": 260531289, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/32d08c501a3ebbd43328fe8e91aa0d8558e96181",
+      "title": "SURFACE at Syracuse University SURFACE at Syracuse University", "abstract":
+      "\u201cWe can reverse the critical decline of wages and employment among the
+      disadvantaged in this country....The method is the introduction of employment
+      subsidies.\u2026They take the form of continuing tax credits to private enterprises
+      for their continuing employment of low-wage workers.\u201d", "venue": "", "year":
+      null, "referenceCount": 15, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "1403716988",
+      "name": "Stacy Dickert\u2010Conlin"}, {"authorId": "1401619454", "name": "D.
+      Holtz-eakin"}]}, {"paperId": "544674a8f0962e4f5a424f932aa966c4996010a5", "externalIds":
+      {"CorpusId": 260056341}, "corpusId": 260056341, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/544674a8f0962e4f5a424f932aa966c4996010a5",
+      "title": "About the Joint Programme \u201c High-Frequency Data \u201d", "abstract":
+      "optimism, but the level of optimism appears to have declined somewhat over
+      recent months, with households increasingly reporting that they feel forced
+      to cut expenditures due to the increasing cost of living. \u2022 Business sentiments
+      have, however, been more pessimistic, but contrary to waning consumer confidence,
+      business interest has picked up recently and is projected to cross over into
+      a broad expectation of improvements in the coming months. \u2022 Much of the
+      acceleration in inflation experienced by Lao PDR since early 2022 has been driven
+      by underlying factors that do not respond quickly to available policy levers.
+      This creates particular challenges for efforts to control price level increases.
+      EXECUTIVE SUMMARY B U L L E T I N FEBRUARY 2023 ISSUE 3 0 10 20 30 JOINT PROGRAMME",
+      "venue": "", "year": 2023, "referenceCount": 4, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": []}, {"paperId": "efa5009a10a3c2a22b889c7635659df5c16947ff",
+      "externalIds": {"DOI": "10.1002/tsr.31170", "CorpusId": 261116186}, "corpusId":
+      261116186, "publicationVenue": "267fcabc-68d9-4008-a60d-7a9261f9688f", "url":
+      "https://www.semanticscholar.org/paper/efa5009a10a3c2a22b889c7635659df5c16947ff",
+      "title": "Second Chance Pell sets the stage for rapid expansion of prison college
+      programs", "abstract": "WASHINGTON, D.C. \u2014 Higher education is in need
+      of some good news. The Supreme Court has struck down affirmative action in college
+      admissions and nixed President Biden''s expansive idea to cancel $400 billion
+      of student debt. Polls constantly show the public''s faith in the importance
+      of higher education is sliding, and to top it off, an enrollment cliff is imminent.",
+      "venue": "The Successful Registrar", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Education", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-08-21", "journal": {"name": "The Successful Registrar"}, "authors": [{"authorId":
+      "1665980671", "name": "Wayne D\u2019Orio"}]}, {"paperId": "036616a9be70f19c17f4aa7489b70d0897557a93",
+      "externalIds": {"CorpusId": 259910715}, "corpusId": 259910715, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/036616a9be70f19c17f4aa7489b70d0897557a93",
+      "title": "IN THE US CONGRESS SINCE 1789 Has the US reached peak political fragmentation",
+      "abstract": "We finally determine what, if any, relationship exists between
+      political partisanship and financial markets using a look-back period that extends
+      to the founding of the Republic. We generally find no relationship between partisanship
+      proxies and returns, all else being equal, but observe a relationship with the
+      volatility of US bonds (equities) which tends to be higher (lower) during periods
+      of elevated levels of partisanship, albeit with unconvincing statistical significance.
+      20th January 2023", "venue": "", "year": 2023, "referenceCount": 4, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": []}, {"paperId": "77d3fe4cec99865c223be9751699fdf8be4720c5",
+      "externalIds": {"CorpusId": 260330133}, "corpusId": 260330133, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/77d3fe4cec99865c223be9751699fdf8be4720c5",
+      "title": "Do Management Interventions Last? Evidence from Vietnamese SMEs",
+      "abstract": ": We conducted randomised experiments to provide management training
+      for 312 small Vietnamese manufacturers in 2010 and repeatedly collected follow-up
+      data in the span of a decade. Analysing panel data constructed from our original
+      surveys with an attrition rate of 4%, we find that our training significantly
+      improved the management quality of the treated entrepreneurs, and such improvement
+      was sustained for at least 5 years. The control entrepreneurs, however, caught
+      up in the longer run.", "venue": "", "year": 2023, "referenceCount": 33, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Business", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "1937901095", "name": "Yuki Higuchi"}, {"authorId":
+      "144668223", "name": "V. Hoang"}, {"authorId": "46211835", "name": "Tetsushi
+      Sonobe"}, {"authorId": "46341389", "name": "Y. Arimoto"}, {"authorId": "66009241",
+      "name": "O. Bandiera"}, {"authorId": "70159523", "name": "N. Bloom"}, {"authorId":
+      "2225981435", "name": "Jun Goto"}, {"authorId": "97806225", "name": "Ryo Kambayashi"},
+      {"authorId": "3019739", "name": "Dean S. Karlan"}, {"authorId": "79636577",
+      "name": "Yoko Kijima"}, {"authorId": "36826927", "name": "Hisaki Kono"}, {"authorId":
+      "49999997", "name": "R. Lemos"}, {"authorId": "40943753", "name": "Yukichi Mano"},
+      {"authorId": "2605227", "name": "K. Masuda"}, {"authorId": "2767550", "name":
+      "P. Martinsson"}, {"authorId": "4868304", "name": "Tomoya Matsumoto"}, {"authorId":
+      "35087527", "name": "K. Otsuka"}, {"authorId": "52148828", "name": "S. Paul"},
+      {"authorId": "46173189", "name": "A. Shenoy"}, {"authorId": "1868620", "name":
+      "R. Sadun"}, {"authorId": "2091903280", "name": "M. Skidmore"}, {"authorId":
+      "2899486", "name": "A. Suzuki"}, {"authorId": "9220271", "name": "Y. Todo"},
+      {"authorId": "108740079", "name": "L. Trinh"}, {"authorId": "8237542", "name":
+      "J. V. Reenen"}, {"authorId": "35680764", "name": "M. Veronesi"}, {"authorId":
+      "37193555", "name": "N. Yoshino"}]}, {"paperId": "3a2aba2937b1a929f7e81ae5ad8ddc096e979a12",
+      "externalIds": {"CorpusId": 261091663}, "corpusId": 261091663, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/3a2aba2937b1a929f7e81ae5ad8ddc096e979a12",
+      "title": "Gendered impact of Covid-19 lockdown on employment: The case of India",
+      "abstract": "In March 2020, India imposed one of the strictest lockdowns in
+      the world to contain the spread of Covid-19 pandemic. As the economic activities
+      came to total suspension of economic activity after the imposition of the lockdown,
+      the unemployment rate reached unprecedented levels. As per CMIE data, the unemployment
+      rate increased by nearly 14.8 percentage points in just one month, rising to
+      23.5% in Apr 2020. However, the distributional effects of economic slowdown
+      have not be shared uniformly. Using panel data, constructed from four rounds
+      of CMIE\u2019s unit level employment survey data, I show that the decline in
+      average employment level for women was higher by 28.1 percentage points relative
+      to men during the lockdown period which further worsened to 41.3 percentage
+      points by December 2020 even as lockdown measures were considerably eased.",
+      "venue": "", "year": 2021, "referenceCount": 10, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "153911836",
+      "name": "A. Anand"}]}, {"paperId": "9241900dedc36ec2f8c7940632b8ccdc046924a3",
+      "externalIds": {"DOI": "10.1111/deci.12614", "CorpusId": 261165340}, "corpusId":
+      261165340, "publicationVenue": "84fce5c2-4517-4318-b42d-856147ab32dd", "url":
+      "https://www.semanticscholar.org/paper/9241900dedc36ec2f8c7940632b8ccdc046924a3",
+      "title": "Diversity, Equity, and Inclusion: decision science research opportunities",
+      "abstract": "As of July 2022, all Fortune 100 companies have made public announcements
+      about their commitments to Diversity, Equity, and Inclusion (DEI). At the same
+      time, more universities are offering DEI certificates or degree programs. Despite
+      this recent social movement, DEI research in decision science remains nascent.
+      DEI can be a politically sensitive topic, but its economic and social impact
+      on organizations and employees deserves careful examination. This article intends
+      to engender a discussion of various DEI research opportunities for decision
+      science researchers to explore.", "venue": "Decision Sciences", "year": 2023,
+      "referenceCount": 15, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Business", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-08-18", "journal": {"name": "Decision Sciences"}, "authors":
+      [{"authorId": "2118763474", "name": "Christopher S. Tang"}]}, {"paperId": "6823a7e862de9f7a1e429e7fb03d763f5ad7a09e",
+      "externalIds": {"CorpusId": 259922528}, "corpusId": 259922528, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/6823a7e862de9f7a1e429e7fb03d763f5ad7a09e",
+      "title": "Original Sin and Natural Cover in CEMAC Area", "abstract": "- The
+      purpose of this article is to see whether export gains are likely to neutralize,
+      even partially, the effect of the valuation of US dollar-denominateddebt in
+      the EMCCA area. The aim is therefore to verify the effectiveness of the natural
+      hedge. Taking the period 1995-2019, we use an empirical method 5based on the
+      heterogeneous dynamic panel estimator with common-correlated effects. We find
+      that the natural hedgeis inefficient, i.e", "venue": "", "year": 2023, "referenceCount":
+      43, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2223535169", "name": "Christin
+      Baudrey Ndong Abessolo"}]}, {"paperId": "f65c1f2d9cfc6a4f8423d0f1e3804f168b2f27d5",
+      "externalIds": {"DOI": "10.1111/roie.12704", "CorpusId": 261163064}, "corpusId":
+      261163064, "publicationVenue": "8b200ebd-fa06-4ed2-884a-b5ab15c09f63", "url":
+      "https://www.semanticscholar.org/paper/f65c1f2d9cfc6a4f8423d0f1e3804f168b2f27d5",
+      "title": "Divert when it does not hurt: The initiation of economic sanctions
+      by US presidents from 1989 to 2015", "abstract": "A dominant argument in the
+      literature is that leaders tend to initiate military disputes in periods plagued
+      by economic distress. This article revisits the diversionary theory and adapts
+      it to the use of economic sanctions in the United States, contending that their
+      use follows a similar diversionary logic. Using a novel dataset on US sanctions
+      from 1989 to 2015, I find that presidents are more likely to use sanctions when
+      unemployment is high and the president''s party power in Congress is weak. I
+      show that when doing so presidents opt for sanctions that inflict little harm
+      on the US economy.", "venue": "Review of International Economics", "year": 2023,
+      "referenceCount": 38, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      true, "openAccessPdf": {"url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/roie.12704",
+      "status": "HYBRID"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-08-18", "journal": {"name": "Review of International
+      Economics"}, "authors": [{"authorId": "1506287568", "name": "Hana Attia"}]},
+      {"paperId": "dcc35fd02b993a7bd29d08b81364f4f11353eb2b", "externalIds": {"DOI":
+      "10.2139/ssrn.4512102", "CorpusId": 260174849}, "corpusId": 260174849, "publicationVenue":
+      "75d7a8c1-d871-42db-a8e4-7cf5146fdb62", "url": "https://www.semanticscholar.org/paper/dcc35fd02b993a7bd29d08b81364f4f11353eb2b",
+      "title": "Diversifying an Index", "abstract": ". In July 2023, Nasdaq announced
+      a \u2018Special Rebalance\u2019 of the Nasdaq-100 index to reduce the index
+      weights of its large constituents. A rebalance as suggested currently by Nasdaq
+      index methodology may have several undesirable effects. These effects can be
+      avoided by a different, but simple rebalancing strategy. Such rebalancing is
+      easily computable and guarantees (a) that the maximum overall index weight does
+      not increase through the rebalancing and (b) that the order of index weights
+      is preserved.", "venue": "Social Science Research Network", "year": 2023, "referenceCount":
+      3, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "SSRN Electronic Journal"}, "authors":
+      [{"authorId": "2212461", "name": "J. Ruf"}]}, {"paperId": "41b560014416c4b0ea49f3b6972ab77258a3cf8a",
+      "externalIds": {"MAG": "781121232", "DOI": "10.61190/fsr.v23i3.3200", "CorpusId":
+      152352552}, "corpusId": 152352552, "publicationVenue": "9078bf2f-eac8-46bb-9027-02f90bbf67c6",
+      "url": "https://www.semanticscholar.org/paper/41b560014416c4b0ea49f3b6972ab77258a3cf8a",
+      "title": "Investor profiles", "abstract": "\n \n \nWomen in the United States
+      face numerous financial challenges: They typically earn less than men do; they
+      have greater probabilities of living in poverty; and they need substantial retirement
+      funds, given their average longevity. Consequently, a comprehensive understanding
+      of how women use investment advice to remedy these challenges is vital. However,
+      the literature is largely mute on this issue. This study helps to fill this
+      gap in the literature by evaluating two profiles of female investors through
+      cluster analysis and logistic regression conducted on a large, nationally representative
+      database collected recently. Predictors of seeking investment advice vary considerably
+      across profiles. \n \n \n", "venue": "Financial Services Review", "year": 2014,
+      "referenceCount": 20, "citationCount": 4, "influentialCitationCount": 0, "isOpenAccess":
+      true, "openAccessPdf": {"url": "https://openjournals.libs.uga.edu/fsr/article/download/3200/2847",
+      "status": "HYBRID"}, "fieldsOfStudy": ["Economics"], "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2014-10-01", "journal":
+      {"name": "Financial Services Review"}, "authors": [{"authorId": "28356718",
+      "name": "Kathryn Simms"}]}, {"paperId": "7eabeeceb2530a002647473a7011de810ffb7179",
+      "externalIds": {"DOI": "10.30707/ijbe164.1.1690386168.691644", "CorpusId": 260228429},
+      "corpusId": 260228429, "publicationVenue": "2905dd07-d411-46f2-9e3a-4f93b8ee8355",
+      "url": "https://www.semanticscholar.org/paper/7eabeeceb2530a002647473a7011de810ffb7179",
+      "title": "UK Universities Face their Toughest Test", "abstract": "The School
+      of Oriental and African Studies seemed a symbol of stability when it celebrated
+      its centenary in 2016 by taking over and renovating the University of London\u2019s
+      imposing Senate House building in central London. It was a bold move to lure
+      the best students. But just three years later its future has become much shakier,
+      with its undergraduate intake down 40 percent and a \u00a37m operating deficit.
+      \u201cThe competition is brutal,\u201d says Professor Stephen Hopgood, Soas\u2019s
+      international pro-director. \u201cWe are small and specialist, and if undergraduate
+      fees are cut, it\u2019s going to be very hard for an institution of our size
+      to survive. It\u2019s never been as tough as this.\u201d", "venue": "International
+      Journal for Business Education", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://ir.library.illinoisstate.edu/cgi/viewcontent.cgi?article=1107&context=ijbe",
+      "status": "BRONZE"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Education", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "International Journal for Business
+      Education"}, "authors": [{"authorId": "2061433062", "name": "A. Jack"}]}, {"paperId":
+      "6702fd6abb78089f72b91875419ad30fb8c5caf8", "externalIds": {"CorpusId": 261066657},
+      "corpusId": 261066657, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6702fd6abb78089f72b91875419ad30fb8c5caf8",
+      "title": "The Delisting Trends and the Signi\ufb01cance of a Healthy Stock Market",
+      "abstract": ". The article \u2018The Incredible Shrinking Singapore Stock Market\u2019
+      (Yap and Redmond 2019) which was published in Bloomberg sets the context of
+      this report. The article which uses the Singapore Stock Exchange as the study
+      subject explores various issues as relates to a delisting trend being observed
+      in the Singapore Stock Exchange, it also does a comparison with other exchanges
+      in Asia and tries to draw conclusions as to whether this has implications on
+      the overall economy.", "venue": "", "year": 2023, "referenceCount": 10, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}, {"category": "Business", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2109745506",
+      "name": "Yichun Zhao"}]}, {"paperId": "3b3b51d26c9536a6e0d3ed3cbd1b511a24abcc29",
+      "externalIds": {"DOI": "10.1017/jch.2023.19", "CorpusId": 261440646}, "corpusId":
+      261440646, "publicationVenue": "8ea9987f-ddc8-48e3-8e60-685e878c4cc5", "url":
+      "https://www.semanticscholar.org/paper/3b3b51d26c9536a6e0d3ed3cbd1b511a24abcc29",
+      "title": "Was There an Administrative Revolution?", "abstract": "\n This essay
+      takes a close look at Maura Dykstra''s monograph Uncertainty in the Empire of
+      Routine (Harvard Asia Center, 2022). It analyzes the book''s multitude of problems,
+      such as its flawed conception, numerous factual blunders, failure to engage
+      existing scholarship, problematic choice of primary sources, and dubious citation
+      practices. Most significantly, this essay aims to provide ample evidence to
+      demonstrate how the book systematically misrepresents the majority of its primary
+      sources to support an untenable thesis. It argues that the book''s central claims
+      are ungrounded in evidence.", "venue": "Journal of Chinese History", "year":
+      2023, "referenceCount": 2, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "History", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-08-31", "journal": {"name": "Journal of Chinese History"},
+      "authors": [{"authorId": "2236975917", "name": "George Zhijian Qiao"}]}, {"paperId":
+      "9c0d2c0a877306b476cadd8e1e86560892cde152", "externalIds": {"CorpusId": 261513004},
+      "corpusId": 261513004, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9c0d2c0a877306b476cadd8e1e86560892cde152",
+      "title": "At the Limits of Cure by Bharat Jayram Venkat (review)", "abstract":
+      "subjects\u201d seriously, even though some never moved beyond drafts and reformers
+      \u201cwere frequently unable to fully enforce their visions on the ground\u201d
+      (p. 260). In doing so, she captures the blend of uncertainty, ambiguity, and
+      ambition that animated schemes for domestic \u201cimprovement\u201d and colonial
+      expansion.", "venue": "", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Art", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": "2023-09-04", "journal":
+      {"name": "Journal of the History of Medicine and Allied Sciences", "pages":
+      "330 - 331", "volume": "78"}, "authors": [{"authorId": "2237642331", "name":
+      "Catriona Ellis"}]}, {"paperId": "33e9272b04f40098ec0ef690ddcc6118de855b6a",
+      "externalIds": {"MAG": "2972968126", "DOI": "10.1086/705551", "CorpusId": 33802966},
+      "corpusId": 33802966, "publicationVenue": "f55d084f-66df-4f19-8cd9-dfeeb5d64fd9",
+      "url": "https://www.semanticscholar.org/paper/33e9272b04f40098ec0ef690ddcc6118de855b6a",
+      "title": "Cutthroat Capitalism versus Cuddly Socialism: Are Americans More Meritocratic
+      and Efficiency-Seeking than Scandinavians?", "abstract": "There are striking
+      differences in inequality and redistribution between the United States and Scandinavia.
+      To study whether there are corresponding differences in social preferences,
+      we conducted a large-scale international social preference experiment where
+      Americans and Norwegians make distributive choices in identical environments.
+      Combining the infrastructure of an international online labor market and that
+      of a leading international data collection agency, we show that Americans and
+      Norwegians differ significantly in fairness views, but not in the importance
+      assigned to efficiency. We also provide causal evidence suggesting that fairness
+      considerations are more fundamental for inequality acceptance than efficiency
+      considerations.", "venue": "Journal of Political Economy", "year": 2016, "referenceCount":
+      139, "citationCount": 172, "influentialCitationCount": 15, "isOpenAccess": true,
+      "openAccessPdf": {"url": "http://humcap.uchicago.edu/RePEc/hka/wpaper/almas_cappelen_tungodden_2017_mmbeliefspaper.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Economics", "Sociology"], "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "external"}, {"category": "Sociology",
+      "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2016-11-15", "journal": {"name":
+      "Journal of Political Economy", "pages": "1753 - 1788", "volume": "128"}, "authors":
+      [{"authorId": "3436570", "name": "Ingvild Alm\u00e5s"}, {"authorId": "2673890",
+      "name": "A. Cappelen"}, {"authorId": "2505047", "name": "B. Tungodden"}]}, {"paperId":
+      "89eeb2d9fa3d765a9f409e600ac45e1a8791ea83", "externalIds": {"CorpusId": 261228009},
+      "corpusId": 261228009, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/89eeb2d9fa3d765a9f409e600ac45e1a8791ea83",
+      "title": "Going Cashless: Government\u2019s Point Reward Program vs. COVID-19",
+      "abstract": "Using credit card transaction data, we examine the impacts of two
+      successive events that promoted cashless payments in Japan: the government\u2019s
+      program and the COVID-19 pandemic. We \ufb01nd that the number of card users
+      was 9-12 percent higher in restau-rants that participated in the program than
+      those that did not. We present a simple framework accounting for the spread
+      of cashless payments. Our model predicts that the impact of the policy intervention
+      diminished as the use of cashless payments increased, which accords well with
+      Japan\u2019s COVID-19 experience. The estimated impact of COVID-19 was around
+      two-thirds of that of the program", "venue": "", "year": 2022, "referenceCount":
+      28, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "46212159", "name": "Toshitaka
+      Sekine"}, {"authorId": "31801487", "name": "T. Shoji"}, {"authorId": "2110544923",
+      "name": "Tsutomu Watanabe"}]}, {"paperId": "4b093a38cc29a6ffe1720e8c9b66c6f7c02495d8",
+      "externalIds": {"CorpusId": 260534430}, "corpusId": 260534430, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/4b093a38cc29a6ffe1720e8c9b66c6f7c02495d8",
+      "title": "Economics of the Shadow Economy.", "abstract": ": The structure, size
+      and development of the shadow economy in Switzerland is analyzed using different
+      methods of estimation: A survey among experts, the discrepancy between various
+      income measures, the participation rate approach, the money approaches, the
+      structural and the causal methods. There is strong evidence that the Swiss shadow
+      economy has grown between the end of the 50s and 1980. The size is esti \u00ad
+      mated to be in the range between 3 % and 4 % of GNP in L975. Compared to other
+      countries the shadow economy in Switzerland is estimated to be one of the smallest",
+      "venue": "", "year": 2023, "referenceCount": 25, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "144572963",
+      "name": "B. Frey"}, {"authorId": "15899818", "name": "H. Weck"}, {"authorId":
+      "2228194861", "name": "MC Si"}, {"authorId": "2228248401", "name": "H. P. SMIT
+      S WECK"}]}, {"paperId": "1fa0a63bddb04db5b9c468b991724a2107b64c6d", "externalIds":
+      {"CorpusId": 260322280}, "corpusId": 260322280, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/1fa0a63bddb04db5b9c468b991724a2107b64c6d",
+      "title": "Hacienda Pu\u0301blica Espan\u0303ola/Review of Public Economics",
+      "abstract": "We document intergenerational mobility in the income distribution
+      in China, using Chinese Household Income Project survey data from the 1990s
+      till 2013. To obtain a robust picture of mobility, we use several measures of
+      mobility: from the most commonly used intergenerational income elasticity to
+      the innovative rank mobility measures. We then estimate quantile regressions
+      to capture variation along the income distribution. Conclusively, our results
+      suggest higher dependence of children\u2019s income on parental income for lower
+      income generational pairs, indicating challenges to promote upward mobility
+      and reducing inequality.", "venue": "", "year": 2023, "referenceCount": 27,
+      "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "2112439245", "name": "Zehua Jiang"}, {"authorId":
+      "82752795", "name": "S. Bandyopadhyay"}]}, {"paperId": "7be326a195af4945d1ec1a4c578c9abb8a3b6f57",
+      "externalIds": {"CorpusId": 260277824}, "corpusId": 260277824, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/7be326a195af4945d1ec1a4c578c9abb8a3b6f57",
+      "title": "and transfers", "abstract": "Research background: The paper investigates
+      the impact of bequest taxation on saving and transfers when parents and children
+      make decisions consistently. It complements the predictions of Gale and Perozek\u2019s
+      life-cycle modeling (2001) when decisions of parents and children are set independently
+      and can be time-inconsistent", "venue": "", "year": 2023, "referenceCount":
+      46, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "1429108429", "name": "J. Kud\u0142a"},
+      {"authorId": "3827974", "name": "R. Kruszewski"}, {"authorId": "33389705", "name":
+      "M. Dudek"}, {"authorId": "150179722", "name": "K. Walczyk"}]}, {"paperId":
+      "5651eb951566a3709db3660f77c70bef71262781", "externalIds": {"CorpusId": 261224486},
+      "corpusId": 261224486, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5651eb951566a3709db3660f77c70bef71262781",
+      "title": "WHY A SOLAR RECEIVABLES FINCO?", "abstract": "This article demonstrates
+      that relieving PayGo companies of the burden of financing their own customer
+      receivables can tremendously increase their profitability. The implications
+      of successfully executing such an endeavor are clear: PayGo companies would
+      become attractive targets for equity investors. The implications for PayGo as
+      a tool of energy access cannot be underestimated.", "venue": "", "year": 2023,
+      "referenceCount": 9, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Business", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2234096879", "name": "L\u00e9a
+      Bouguern"}]}, {"paperId": "2e3d68cf46b4fd4742eba148d04b220214617c75", "externalIds":
+      {"CorpusId": 261587257}, "corpusId": 261587257, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/2e3d68cf46b4fd4742eba148d04b220214617c75",
+      "title": "Pepperdine Digital Commons Pepperdine Digital Commons", "abstract":
+      "We examine the evidence available on the efficacy of demand-side programs intended
+      to stimulate broadband adoption. We review studies that attempt to measure results.
+      Our suggestions for future program evaluations are to include cost-benefit analysis
+      as a standard part of program review and to make clear that the purpose of evaluation
+      is to assess progress made toward the ultimate policy goals rather than the
+      program\u2019s proximate implementation goals. Appropriate data must be collected
+      to draw conclusions, and appropriate statistical methods must be used to determine
+      the causal impacts of a program. This has rarely been done to date", "venue":
+      "", "year": 2022, "referenceCount": 85, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "27435157",
+      "name": "J. Hauge"}, {"authorId": "2484239", "name": "J. Prieger"}]}, {"paperId":
+      "790bb612d0583a08cb09e9e2d9100a4712f48676", "externalIds": {"CorpusId": 249060141},
+      "corpusId": 249060141, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/790bb612d0583a08cb09e9e2d9100a4712f48676",
+      "title": "The time is ripe for \u2018\ufb01nteching\u2019remittances in paradise",
+      "abstract": "Over the last few years, we have seen a remarkable trend in remittance
+      flows, with money sent by people living abroad to their home countries increasing
+      significantly. Today, remittances remain the most important source of external
+      financing for lowand middleincome countries worldwide. Despite a severe global
+      recession and the COVID-19 pandemic, remittances to these countries are projected
+      to have grown a robust 7.3% to reach US$589 billion in 2021.", "venue": "",
+      "year": 2022, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": []}, {"paperId": "c991364f6ebf92cdda91a2bae78b965171d8cb35",
+      "externalIds": {"CorpusId": 260419759}, "corpusId": 260419759, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/c991364f6ebf92cdda91a2bae78b965171d8cb35",
+      "title": "Where are the Chinese economists? The surprising disparity between
+      the economy and economists", "abstract": "China''s GNP is close to, or larger
+      than, that of the US and the per-capita income gap between the countries is
+      closing. Despite this, Chinese economists are absent from the rankings of top
+      academic economists and none has received the Nobel Prize in Economics. This
+      column offers several potential reasons for this, and also argues that the situation
+      is likely to change in the future. Young scholars in particular may be well
+      advised to take this into account, as their careers are likely to benefit if
+      they link up to the Chinese academic market.", "venue": "", "year": 2019, "referenceCount":
+      19, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "144572963", "name": "B. Frey"}]},
+      {"paperId": "81939e19f6e71ae223b03077031650e090f825f0", "externalIds": {"DOI":
+      "10.58809/jdum9783", "CorpusId": 260593149}, "corpusId": 260593149, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/81939e19f6e71ae223b03077031650e090f825f0",
+      "title": "The Effect of Sam Brownback\u2019s Gubernatorial Tenure on Kansan
+      Opinion of Supply-Side Economics", "abstract": "Governor Brownback\u2019s keystone
+      policy was always based in his economics; as governor, he was a proponent of
+      supply-side economics, the same kind favored by Ronald Reagan. This theory of
+      economics purports that the best way to grow an economy is by lowering taxes
+      and decreasing regulation, and letting this extra wealth \u2018trickle down\u2019
+      from the top of the economy to the bottom. By the end of Brownback\u2019s terms,
+      in our experience as Kansans, many moderate Republicans were questioning the
+      efficacy of this policy. With this in mind, we wanted to examine statistics
+      related to this and see whether the trust of moderate republicans in this traditional
+      conservative economic theory was lessened by Brownback\u2019s gubernatorial
+      tenure, or whether the shift in political landscape that led to Laura Kelly\u2019s
+      election stemmed from another factor.", "venue": "John Heinrichs Scholarly &amp;
+      Creative Activities Day", "year": 2020, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://scholars.fhsu.edu/cgi/viewcontent.cgi?article=1004&context=sacad_2020",
+      "status": "GREEN"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "John Heinrichs Scholarly &amp;
+      Creative Activities Day"}, "authors": [{"authorId": "119261890", "name": "E.
+      Barfield"}, {"authorId": "2033343515", "name": "Jay Steinmetz"}, {"authorId":
+      "2204378197", "name": "null null"}]}, {"paperId": "60eb983c35c97420773f1bd7bd31317e6a45174b",
+      "externalIds": {"DOI": "10.3406/ecoap.1988.2093", "CorpusId": 261133076}, "corpusId":
+      261133076, "publicationVenue": "6e566dcf-4143-4de1-b317-7d33af556a4a", "url":
+      "https://www.semanticscholar.org/paper/60eb983c35c97420773f1bd7bd31317e6a45174b",
+      "title": "\u00c9quit\u00e9 fiscale : une simple exp\u00e9rience", "abstract":
+      "The paper analyses John Stuart MilTs equity principle of equal sacrifice. The
+      utility-of-income functions of a sample of fictitious taxpayers are evaluated.
+      These functions are confronted with existing income tax schedules. A general
+      result is that sacrifice (absolute and proportional) is unequal for different
+      tax brackets.", "venue": "Economie appliquee", "year": 1988, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"},
+      "authors": [{"authorId": "2073534592", "name": "Heinz Schleicher"}]}, {"paperId":
+      "4468407a55c5291b796f2201cfd596bfaa75e2ab", "externalIds": {"CorpusId": 261128498},
+      "corpusId": 261128498, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4468407a55c5291b796f2201cfd596bfaa75e2ab",
+      "title": "A Prospect For Technopreneurship", "abstract": "\u2014 One of the
+      most significant changes in the global economy has been the interest in the
+      globalization of economic and commercial activities, which is dependent on information
+      technology and the spread of new organizations with advanced skills and continuous
+      innovation, as well as research centres that consistently publish new technologies,
+      and moves to technopreneurship by fusing entrepreneurship with technology to
+      maintain global competitiveness, which many nations have begun to do. Some countries
+      went above and beyond by aiding small and medium-sized firms, pushing them to
+      follow the Technopreneurship strategy, and recognizing the importance of colleges
+      in attaining these objectives.", "venue": "", "year": 2023, "referenceCount":
+      17, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Business", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2198952932", "name": "Dr. S.
+      Mariadoss"}, {"authorId": "2198949700", "name": "A. Venotha"}]}, {"paperId":
+      "054c37c0de3b3c1c23c9d90e6fdacd8662ef7ebe", "externalIds": {"DOI": "10.1163/24689300-bja10042",
+      "CorpusId": 260071897}, "corpusId": 260071897, "publicationVenue": "71ef7e5f-f996-4e65-b13b-9202819682cc",
+      "url": "https://www.semanticscholar.org/paper/054c37c0de3b3c1c23c9d90e6fdacd8662ef7ebe",
+      "title": "Democracy: Should We Replace Elections with Random Selection?", "abstract":
+      "\nThe aim of this paper is to explore the claim that lotteries are more democratic
+      than elections. The paper starts by looking at the two main forms of equality
+      that give lotteries their democratic appeal: an individually equal chance to
+      be selected for office, and the proportionate representation of groups in the
+      legislature. It shows that they cannot be jointly realized and argues that their
+      egalitarian appeal is more apparent than real. Finally, the paper considers
+      the democratic reasons to value randomly selected assemblies, even if claims
+      about their distinctively egalitarian properties are exaggerated.", "venue":
+      "Danish Yearbook of Philosophy", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-07-20", "journal": {"name": "Danish Yearbook of Philosophy"}, "authors":
+      [{"authorId": "47223143", "name": "A. Lever"}]}, {"paperId": "e6fcfa6f32e159a1879dee6da62a57bea8339312",
+      "externalIds": {"CorpusId": 261177069}, "corpusId": 261177069, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/e6fcfa6f32e159a1879dee6da62a57bea8339312",
+      "title": "Explaining Why", "abstract": "In Busted Sanctions: Explaining Why
+      Eco\u2010 nomic Sanctions Fail, Bryan R. Early explores how third-party states
+      can derail economic coercion using both the tools of trade and foreign aid.
+      The United States has strong economic influence in the international market
+      and a strong ideological orientation toward the use of sanctions, making it
+      the most frequent sanctioner in recent history. This makes responses to its
+      policies an interesting area for exploration, and thus the focus of the book
+      is the sanctioning efforts of the United States. In fact, the publication of
+      this book is welltimed given that the two sanctions cases discussed in depth
+      are the US sanctions against Iran and Cuba\u2014both of which have generated
+      a great deal of recent political attention.", "venue": "", "year": 2020, "referenceCount":
+      1, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Law", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "145721184", "name": "S. Allen"}]},
+      {"paperId": "e7cfc0df70b82ffe5f8aa20b0e446e08a2fcc385", "externalIds": {"CorpusId":
+      261692288}, "corpusId": 261692288, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e7cfc0df70b82ffe5f8aa20b0e446e08a2fcc385",
+      "title": "R EFLECTIONS ON L AND T ENURE S ECURITY I NDICATORS", "abstract":
+      ": This is a reflection note on the existing state of the art on land tenure
+      security indicators. Without being exhaustive nor comprehensive, this reflection
+      note maps some key existing initiatives at measuring tenure security, highlighting
+      key challenges. It goes on to underline the major weakness of the existing state
+      of the art, namely the dearth of poverty relevant and gender sensitive indicators
+      as well as the scarcity of measurement processes which could enhance national
+      ownership beyond cross country comparison and foster societal empowerment and
+      domestic accountability over project monitoring and evaluation.", "venue": "",
+      "year": 2009, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "2239034152",
+      "name": "Knut L Aksa"}, {"authorId": "2239034728", "name": "Noha EL -M Ikawy"}]},
+      {"paperId": "84de546c342430b5792695d869ca55a171519434", "externalIds": {"CorpusId":
+      260697549}, "corpusId": 260697549, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/84de546c342430b5792695d869ca55a171519434",
+      "title": "A tale of \u2018prudence\u2019", "abstract": "It may seem obvious
+      that prudence is a desirable thing when preparing financial information; after
+      all, would you wish for imprudent accounting? However, establishing the characteristics
+      of useful financial reporting has long proved difficult and controversial. Until
+      2010, prudence was included in the International Accounting Standards Board\u2019s
+      (IASB) Conceptual Framework (see figure 1). In the 2010 revision we removed
+      the reference to prudence, but we are now proposing to put prudence back. So
+      why is the IASB seemingly so indecisive? And why should investors care?", "venue":
+      "", "year": 2015, "referenceCount": 0, "citationCount": 6, "influentialCitationCount":
+      1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Education", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": []}, {"paperId": "9dc31289efd546f80fbcc9a6c02eec1f9051d9c9",
+      "externalIds": {"CorpusId": 260419196}, "corpusId": 260419196, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/9dc31289efd546f80fbcc9a6c02eec1f9051d9c9",
+      "title": "Economics and Economists: A European Perspective", "abstract": "This
+      paper endeavors to explain the dif \u00ad ference between America (the United
+      States and Canada) and Western Europe with re \u00ad gard to academic institutions,
+      academic ac \u00ad tivities (the criterion for success and the distribution
+      of scholars \u2019 time among teach \u00ad ing, research, and political activities),
+      and opinions proclaimed. Building on compara \u00ad tive institutional analysis,
+      the fundamental explanation is taken to lie in the differences in market size.",
+      "venue": "", "year": 2022, "referenceCount": 10, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}, {"category": "Education",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "2226635177", "name": "A. E. Perspective"},
+      {"authorId": "2068774738", "name": "B. Rey"}, {"authorId": "2226633939", "name":
+      "R. E. E. ichenberger"}]}, {"paperId": "0e8eb73756121bba3dee199ffd8ba38e6b6e2d8f",
+      "externalIds": {"DOI": "10.1080/02722011.2023.2204796", "CorpusId": 260442226},
+      "corpusId": 260442226, "publicationVenue": "42f8c7a1-d9fd-4fff-a1f3-6edd1b5926cc",
+      "url": "https://www.semanticscholar.org/paper/0e8eb73756121bba3dee199ffd8ba38e6b6e2d8f",
+      "title": "Down with the Senate? Understanding Support for the Abolition of the
+      Senate in Canada", "abstract": "ABSTRACT Various governments have debated the
+      question of whether the Canadian Senate should be abolished or reformed since
+      1980, yet a solution has still not been found. While some advocate for a substantial
+      reform of the institution, others propose to get rid of it completely. Drawing
+      from the 2021 Canadian Election Study, this article explores the underlying
+      value systems that shape opinions on the abolition of the Canadian Senate. The
+      findings suggest that support for the abolition of the Canadian Senate should
+      be understood as part of a set of populist attitudes, the extent of political
+      interest, political knowledge, and party identification.", "venue": "American
+      Review of Canadian Studies", "year": 2023, "referenceCount": 51, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Political Science",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-04-03", "journal": {"name": "American Review of Canadian Studies", "pages":
+      "204 - 217", "volume": "53"}, "authors": [{"authorId": "1725440149", "name":
+      "Marc-Antoine Rancourt"}, {"authorId": "2226796776", "name": "Axel D\u00e9ry"},
+      {"authorId": "145452871", "name": "William Poirier"}, {"authorId": "104030337",
+      "name": "Yannick Dufresne"}]}, {"paperId": "2413ec698f29e1f7245a9fb02449b2fdc06bd35c",
+      "externalIds": {"DOI": "10.1177/10422587231190712", "CorpusId": 261042510},
+      "corpusId": 261042510, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/2413ec698f29e1f7245a9fb02449b2fdc06bd35c",
+      "title": "No Simple Way to Say Goodbye! Untangling the Heterogeneity of Social
+      Venture Founder Exit Intention", "abstract": "Using three theory-based performance
+      criteria as decision attributes, we conducted a conjoint analysis experiment
+      with 105 social venture founder-CEOs to examine their decisions to exit their
+      firms voluntarily. Multilevel regression analysis of founders\u2019 choices
+      revealed that various exit preferences were chosen that did not support theoretical
+      prescriptions. While achieving desired social impact was the main influence
+      on founder exit choices, the heterogeneity of exit preferences led us to parcel
+      them into four distinct groups: idealists, traditionalists, realists, and pragmatists.
+      We discuss our contributions to the entrepreneurial exit and social entrepreneurship
+      research literature and list the implications of our results for practice.",
+      "venue": "Entrepreneurship: Theory & Practice", "year": 2023, "referenceCount":
+      115, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Business", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-08-19", "journal": {"name": "Entrepreneurship Theory
+      and Practice"}, "authors": [{"authorId": "114281911", "name": "Raja Singaram"},
+      {"authorId": "2009028", "name": "J. Kraaijenbrink"}, {"authorId": "98430039",
+      "name": "W. Gartner"}]}, {"paperId": "b8ebd5f281cab31f53744d735978ad2e30650482",
+      "externalIds": {"DOI": "10.35297/qjae.010161", "CorpusId": 260326150}, "corpusId":
+      260326150, "publicationVenue": "2a2734aa-4501-4903-b3a5-d3509ba90045", "url":
+      "https://www.semanticscholar.org/paper/b8ebd5f281cab31f53744d735978ad2e30650482",
+      "title": "Book Review: The Myth of American Inequality: How Government Biases
+      Policy Debate", "abstract": "Gramm, Ekelund, and Early demonstrate in _The Myth
+      of American Inequality_ that the official statistics we rely on grossly misstate
+      poverty, income inequality, and other measures of well-being. They ignore two
+      thirds of welfare benefits as income, omit the income lost due to taxes that
+      people pay for such programs, and use outmoded price indices that magnify price
+      inflation and thereby understate growth in real income, employer-paid benefits
+      and other variables over time. The result is grossly over-hyped problems of
+      poverty, income inequality, and stagnation in living standards.", "venue": "The
+      Quarterly Journal of Austrian Economics", "year": 2023, "referenceCount": 0,
+      "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf":
+      {"url": "https://qjae.scholasticahq.com/article/84733.pdf", "status": "HYBRID"},
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Review"], "publicationDate":
+      "2023-07-29", "journal": {"name": "Quarterly Journal of Austrian Economics"},
+      "authors": [{"authorId": "145726780", "name": "M. Reynolds"}]}, {"paperId":
+      "7267883cf0818cff8682cc1b0c663ea9e557a3aa", "externalIds": {"DOI": "10.3406/ecoap.1987.4094",
+      "CorpusId": 261159958}, "corpusId": 261159958, "publicationVenue": "6e566dcf-4143-4de1-b317-7d33af556a4a",
+      "url": "https://www.semanticscholar.org/paper/7267883cf0818cff8682cc1b0c663ea9e557a3aa",
+      "title": "A Fresh Look At Champernowne\u2019s Five-Parameter Formula", "abstract":
+      "This article re-examines Champernowne\u2019s five-parameter formula and demonstrates
+      its usefulness as a model of income distribution. Procedures for fitting the
+      distribution and obtaining summary measures from the estimated density function
+      are illustrated along with a comparison of the summary measures estimated using
+      standard statistical methods. A comparison is also made with the Dagum model
+      of income distribution", "venue": "Economie appliquee", "year": 1987, "referenceCount":
+      0, "citationCount": 4, "influentialCitationCount": 1, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"},
+      "authors": [{"authorId": "104221581", "name": "F. Campano"}]}, {"paperId": "7e48530b751a172a028ccb7dae5bbf0d5c85432d",
+      "externalIds": {"CorpusId": 259979562}, "corpusId": 259979562, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/7e48530b751a172a028ccb7dae5bbf0d5c85432d",
+      "title": "ECONOMIC PAPERS", "abstract": "Expanding regional eligibility in the
+      access to grants can have important consequences for the performance of firms.
+      We examine a quasi-natural experiment that consisted of a redrawing of administrative
+      areas intended to increase accessibility to European Union (EU) funds using
+      a rich administrative dataset that covers the universe of Portuguese private
+      firms between 2003 and 2010. Our results uncover a positive causal impact of
+      increased eligibility on firms\u2019 sales. In contrast, employment and labour
+      productivity do not seem to be significantly impacted by the reform. The effects
+      are heterogeneous: while sales of firms in the services and non-tradable sectors
+      are positively impacted, sales of firms in more competitive sectors are not
+      affected. JEL-Codes: C21, R10", "venue": "", "year": 2022, "referenceCount":
+      54, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}, {"category": "Business", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
+      [{"authorId": "2119987453", "name": "Jos\u00e9 Mesquita"}, {"authorId": "143845713",
+      "name": "Jo\u00e3o Pereira dos Santos"}, {"authorId": "122029803", "name": "Jos\u00e9
+      Tavares"}]}, {"paperId": "2817602804d92142f16804f9ae0737e9f494d8ca", "externalIds":
+      {"CorpusId": 261216518}, "corpusId": 261216518, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/2817602804d92142f16804f9ae0737e9f494d8ca",
+      "title": "COMMENTARY: The Governors", "abstract": "This past year has not been
+      kind to many of the nation''s governors. Scandals, political backbiting'', and
+      budget deficits have deflated a large portion of the statehouse residents. Although
+      a large crop of Democratic governors was elected to office on the basis of raised
+      expectations, a lot of them have come to adopt Jerry Brown''s notion'' of''
+      \"lowered expectations\" out of necessity if not belief.", "venue": "", "year":
+      2015, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "2234043843",
+      "name": "Dick Behn Edlton"}, {"authorId": "2234143056", "name": "Robert D. Behn
+      Clifford Brown"}, {"authorId": "2056598500", "name": "Robert"}, {"authorId":
+      "2234044222", "name": "Tanya Robert"}, {"authorId": "2234044105", "name": "MeUch
+      G. Ralph"}]}, {"paperId": "f8eaf00221c460ecc687bc574deee6ddb2857d2e", "externalIds":
+      {"DOI": "10.5771/9783748933847", "CorpusId": 261574282}, "corpusId": 261574282,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f8eaf00221c460ecc687bc574deee6ddb2857d2e",
+      "title": "Politikwissenschaft", "abstract": "At the beginning of this textbook
+      it is shown how to deal with politics in a scientific way. Then a walk through
+      the history of political ideas is taken as well as an introduction to modern
+      political science theory. This is followed by a chapter on system analysis and
+      system comparison. It provides an overview of the diversity of political systems
+      and their development patterns, as well as a systematic overview of the most
+      important political structures and their functions. A chapter on the development
+      and analysis of international relations concludes the volume. Control questions,
+      recommended reading, and an extensive index of subjects and persons facilitate
+      access to the content.", "venue": "", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "108373482", "name": "W. Patzelt"}]}, {"paperId":
+      "d8f9dded71ec1f85e3237779a5b8d9990b9e2059", "externalIds": {"DOI": "10.15170/dike.2023.07.01.04",
+      "CorpusId": 261150597}, "corpusId": 261150597, "publicationVenue": "5245be9d-419d-4d9c-95d9-fc5e7b24af25",
+      "url": "https://www.semanticscholar.org/paper/d8f9dded71ec1f85e3237779a5b8d9990b9e2059",
+      "title": "Jog\u00e1tv\u00e9tel vagy modellk\u00f6vet\u00e9s?", "abstract": "The
+      limited liability company was receipted into Hungarian law in 1930. The forty-year
+      delay following the appearance of the German GmbH brought several advantages
+      for Hungarian company law, the legislator created a well thought-out, practical
+      law that also met the long-term needs of the Hungarian economy and the economic
+      actors. Based on the early debates and the first draft of D\u00e1vid Pap and
+      its critique by G\u00e9za Boz\u00f3ky, the author examines the new form of company
+      that started as a similar form of a general partnership, which was then considered
+      by G\u00e9za Boz\u00f3ky as a variant of the joint-stock company form. The paper
+      describes the stages and characteristics of the development of this approach
+      in the mirror of the German (1892) and the Austrian (1906) GmbH Acts.", "venue":
+      "D\u00cdK\u00c9", "year": 2023, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://journals.lib.pte.hu/index.php/dike/article/download/6578/6218",
+      "status": "GOLD"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "History",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-08-22", "journal": {"name": "D\u00cdK\u00c9"}, "authors": [{"authorId":
+      "108401649", "name": "Zsolt Bujt\u00e1r"}]}, {"paperId": "6094ec2cfd61fe1a62a0925f3ef2a3c7ece11931",
+      "externalIds": {"CorpusId": 261468812}, "corpusId": 261468812, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/6094ec2cfd61fe1a62a0925f3ef2a3c7ece11931",
+      "title": "Globalization, Compensation, and the Rise of the Far Right", "abstract":
+      "International economic integration and the ensuing economic shocks increase
+      voters\u2019 support for far right populist parties. Can compensation stem this
+      tide? I investigate this question using novel, geo-located data on globalization-induced
+      job losses. Using a difference-in-differences estimation strategy, I find that
+      additional compensation for globalization-related job losses has no robust effect
+      on far right parties\u2019 vote shares.", "venue": "", "year": 2019, "referenceCount":
+      0, "citationCount": 5, "influentialCitationCount": 1, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2237185898", "name": "Stephanie
+      J. Rickard"}]}, {"paperId": "bbf0f5bb549fb0860e86027e1bf5aa523789ca7e", "externalIds":
+      {"DOI": "10.34068/joe.49.01.05", "CorpusId": 209332483}, "corpusId": 209332483,
+      "publicationVenue": "69d3e08b-7d7d-4b51-82b2-cbf217eccc74", "url": "https://www.semanticscholar.org/paper/bbf0f5bb549fb0860e86027e1bf5aa523789ca7e",
+      "title": "Helping Clientele Understand Elements of the Local Economy Through
+      Input-Output Modeling", "abstract": "Extension clientele often seek assistance
+      from Community Development professionals in understanding how their local economies
+      operate. Provision of local economic data has long been an important role for
+      Extension. But many of the questions clientele raise require substantial analysis
+      of this data. This article demonstrates how an input-output model (IMPLAN) can
+      be used to describe a local economy with considerable precision. The model is
+      appropriate for estimating the economic impacts of current or proposed activities.
+      We include estimations of impacts of initial job losses stemming from the recent
+      recession as well as impacts of a long-term plan for economic recovery.", "venue":
+      "Journal of Extension", "year": 2011, "referenceCount": 11, "citationCount":
+      7, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://tigerprints.clemson.edu/cgi/viewcontent.cgi?article=3117&context=joe",
+      "status": "HYBRID"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2011-02-01", "journal": {"name": "Journal of Extension"},
+      "authors": [{"authorId": "30619129", "name": "T. Blaine"}, {"authorId": "2231509157",
+      "name": "Nancy Elizey"}, {"authorId": "46787800", "name": "Gregory A. Davis"}]},
+      {"paperId": "269843cc0a7830bcf606378cfd729bf8dd50f226", "externalIds": {"DOI":
+      "10.3406/ecoap.1991.2278", "CorpusId": 261146915}, "corpusId": 261146915, "publicationVenue":
+      "6e566dcf-4143-4de1-b317-7d33af556a4a", "url": "https://www.semanticscholar.org/paper/269843cc0a7830bcf606378cfd729bf8dd50f226",
+      "title": "\u00c9conomistes et managers devant l\u2019interrogation prospective",
+      "abstract": "Managers who carry the know-how are as old as human history ; on
+      the opposite, economists have a very new scientific knowledge. \n These two
+      important groups of leaders have different objectives in spite of a common field
+      of interests and often a same vocabulary : price, cost, salary, taxes, credit,
+      rent, change. \n Convergence and divergence : during a long period, the collaboration
+      and convergence between these two groups have been very deve-lopped but we can
+      observe divergences for about ten years, as if they were separately increasing
+      their own thoughts and tools. \n The german unification gives us a good illustration
+      of these issues.", "venue": "Economie appliquee", "year": 1991, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"},
+      "authors": [{"authorId": "94799604", "name": "S. Wickham"}, {"authorId": "153684782",
+      "name": "L. Boyer"}]}, {"paperId": "5630153860b3c706c018ff25c0ffd1790df456ca",
+      "externalIds": {"DOI": "10.1002/ban.31581", "CorpusId": 260875195}, "corpusId":
+      260875195, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5630153860b3c706c018ff25c0ffd1790df456ca",
+      "title": "Framing fundraising in better light may help overcome board member
+      objections", "abstract": "It''s no secret that many board members dislike fundraising\u2014especially
+      if it involves actually asking people for donations. And while there are a wide
+      variety of strategies that nonprofit leaders and development officers can take
+      to encourage their boards in this area, it might all start with a simple change
+      of terminology that, in turn, changes the mindset of a hesitant board, according
+      to fundraising consultant Claire Axelrad.", "venue": "Board &amp; Administrator
+      for Administrators Only", "year": 2023, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Education", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-08-12", "journal": {"name": "Board &amp; Administrator for Administrators
+      Only"}, "authors": []}, {"paperId": "774b0327d93ce0ba298dbebede1aff1efad09be3",
+      "externalIds": {"CorpusId": 261066689}, "corpusId": 261066689, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/774b0327d93ce0ba298dbebede1aff1efad09be3",
+      "title": "Overdraft fees: The link between the traditional and", "abstract":
+      "Policy Research Talk: Data from secondary markets: Insights and implications
+      for development In a recent Policy Research Talk, our own Alvaro Pedraza discussed
+      the role of global and domestic investors in capital markets, using detailed
+      information on the transactions of all investors participating in the Colombian
+      Stock Exchange. Alvaro tackled several questions, such as \u201cWhat is the
+      response of different classes of foreign investors to monetary policy shocks
+      or to equity/debt index rebalancing?\u201d The answers to these questions can
+      provide greater insight into the risks faced by emerging markets and can help
+      guide policymakers and regulators on how to better manage risks.", "venue":
+      "", "year": 2022, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "39983806",
+      "name": "Alvaro Pedraza"}, {"authorId": "2150092801", "name": "Sheng Fang"},
+      {"authorId": "13017391", "name": "C. Goh"}, {"authorId": "1737879724", "name":
+      "Shaomin Li"}, {"authorId": "2211465679", "name": "Giselle Del Carmen"}, {"authorId":
+      "2233003433", "name": "Edgardo Enrique Espinal"}]}, {"paperId": "eaeb0321caeca0f6703e46c3cbd2fc76525b38eb",
+      "externalIds": {"DOI": "10.3406/ecoap.1989.2117", "CorpusId": 261146837}, "corpusId":
+      261146837, "publicationVenue": "6e566dcf-4143-4de1-b317-7d33af556a4a", "url":
+      "https://www.semanticscholar.org/paper/eaeb0321caeca0f6703e46c3cbd2fc76525b38eb",
+      "title": "Cet \u00e2ge de l\u2019aust\u00e9rit\u00e9", "abstract": "Austerity
+      is a permanent policy through which a government tries to cut enought aggregate
+      domestic spending so as to adjust the economy to the so-called market laws.
+      It is proved that what is really at stake in austerity programs is the ability
+      for a governement to control the financial markets. It is shown that austerity
+      is guilty of the growth of unemployment, and of the long run quasi stagnation
+      of the economy. It is also responsible for the increasing destabilization of
+      financial markets.", "venue": "Economie appliquee", "year": 1989, "referenceCount":
+      0, "citationCount": 2, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"},
+      "authors": [{"authorId": "113273184", "name": "Alain Parguez"}]}, {"paperId":
+      "7cca0ac06e9aa2a2ffd527ab6bd60a9fff5250df", "externalIds": {"DOI": "10.1353/dss.2023.a906670",
+      "CorpusId": 261642630}, "corpusId": 261642630, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/7cca0ac06e9aa2a2ffd527ab6bd60a9fff5250df",
+      "title": "Ask a Neoliberal An Interview with J. Bradford DeLong", "abstract":
+      "Abstract:An economist at UC Berkeley and former member of the Clinton administration,
+      DeLong now views the neoliberal project as a failure. But in 1999 he said it
+      was \u201cthe only live utopian program in the world today.\u201d We talked
+      about neoliberalism\u2019s origins, the sources of its appeal, and whether we
+      have really moved beyond it.", "venue": "Dissent (New York)", "year": 2023,
+      "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Political Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-09-01", "journal": {"name": "Dissent", "pages": "51
+      - 57", "volume": "70"}, "authors": [{"authorId": "113284535", "name": "T. Shenk"},
+      {"authorId": "2238753364", "name": "J. B. DeLong"}]}, {"paperId": "f9687296c2744a9f64ee95f157c8c4496f983d6e",
+      "externalIds": {"CorpusId": 260533815}, "corpusId": 260533815, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/f9687296c2744a9f64ee95f157c8c4496f983d6e",
+      "title": "Education in the 2022 Gubernatorial Elections: Political Priorities
+      Among Candidates and Winners", "abstract": "The 2022 campaign and election cycle
+      provided an opportunity to better understand whether these national issues and
+      narratives match those at the state level. By studying the educational agendas
+      of gubernatorial candidates, we can also see whether there were differences
+      between incumbents and nonincumbents, Republicans and Democrats, and candidates
+      in red, blue, and swing states. Perhaps most important, with the election now
+      behind us, we can see what the winners had in common and thereby forecast the
+      next several years of state-level education reform.", "venue": "", "year": 2023,
+      "referenceCount": 1, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Political Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "114995623", "name": "Andy Smarick"}]},
+      {"paperId": "fa13296c170e7edb31a5b8dc89a4c62111c3e4ec", "externalIds": {"DOI":
+      "10.1007/s40888-023-00313-y", "CorpusId": 261132677}, "corpusId": 261132677,
+      "publicationVenue": "2cabfbcd-aadd-4f94-89cb-3734755e2d54", "url": "https://www.semanticscholar.org/paper/fa13296c170e7edb31a5b8dc89a4c62111c3e4ec",
+      "title": "The Danish problem", "abstract": null, "venue": "Economia Politica",
+      "year": 2023, "referenceCount": 12, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-08-24", "journal": {"name": "Economia Politica"}, "authors":
+      [{"authorId": "66207189", "name": "Barry Eichengreen"}]}, {"paperId": "01f0bfbbf594f966a1b10f58557c512e46d4096d",
+      "externalIds": {"CorpusId": 261370409}, "corpusId": 261370409, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/01f0bfbbf594f966a1b10f58557c512e46d4096d",
+      "title": "COVID-19 government support and productivity: Micro-based cross-country
+      evidence 1", "abstract": "This policy brief studies the likely consequences
+      of the COVID-19 pandemic on productivity by employing historical business outcomes
+      matched with corresponding firm-level information on government support. Our
+      cross-country evidence for four small EU countries shows that the pandemic led
+      to a significant short-term decline in productivity predominantly driven by
+      the within-firm growth component. The support appears to be distributed rather
+      efficiently, i", "venue": "", "year": 2021, "referenceCount": 12, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "2179052257", "name": "Tommaso Bighelli"}, {"authorId":
+      "2073941868", "name": "Tibor Lalinsky"}, {"authorId": "2236446354", "name":
+      "CompNet Data Providers"}]}, {"paperId": "bb2a0de02735a2c9bcd1921fae9ff715c0ea8f0b",
+      "externalIds": {"DOI": "10.3233/sji-230013", "CorpusId": 260648373}, "corpusId":
+      260648373, "publicationVenue": "b4703738-a7eb-4a54-be69-f1d0ef29f694", "url":
+      "https://www.semanticscholar.org/paper/bb2a0de02735a2c9bcd1921fae9ff715c0ea8f0b",
+      "title": "The perils of pre-filling: Lessons from the UK\u2019s Annual Survey
+      of Hours and Earning microdata", "abstract": "The role of the National Statistical
+      Institution (NSI) is changing, with many now making microdata available to researchers
+      through secure research environments This provides NSIs with an opportunity
+      to benefit from the methodological input from researchers who challenge the
+      data in new ways This article uses the United Kingdom\u2019s Annual Survey of
+      Hours and Earnings (ASHE) to illustrate the point We study whether the use of
+      prefilled forms in ASHE may create inaccurate values in one of the key fields,
+      workplace location, despite there being no direct evidence of it in the data
+      supplied to researchers. We link surveys to examine the hypothesis that employees
+      working for multi-site employers making an ASHE survey submission are more likely
+      to have their work location incorrectly recorded as the respondent fails to
+      correct the work location variable that has been pre-filled. In the short-term,
+      suggestions are made to improve the quality of ASHE microdata, while longer-term
+      we suggest that the burden of collecting additional data could be offset through
+      greater use of electronic data capture. More generally, in a time when statistical
+      budgets are under pressure, this study encourages NSIs to make greater use of
+      the microdata research community to help inform statistical developments.",
+      "venue": "Statistical Journal of the IAOS", "year": 2023, "referenceCount":
+      20, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": "2023-08-02", "journal": {"name": "Statistical
+      Journal of the IAOS"}, "authors": [{"authorId": "97928000", "name": "D. Whittard"},
+      {"authorId": "144757538", "name": "F. Ritchie"}, {"authorId": "148311484", "name":
+      "V. Phan"}, {"authorId": "5147985", "name": "A. Bryson"}, {"authorId": "3018249",
+      "name": "J. Forth"}, {"authorId": "144932933", "name": "L. Stokes"}, {"authorId":
+      "51973710", "name": "Carl Singleton"}]}, {"paperId": "071ffea41ea17e28e53c8f33b9af4e54925e7c98",
+      "externalIds": {"CorpusId": 261045676}, "corpusId": 261045676, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/071ffea41ea17e28e53c8f33b9af4e54925e7c98",
+      "title": "The Uganda Business Climate Index", "abstract": "A year after the
+      full reopening of the economy, schools nationwide are still grappling with the
+      aftermath of COVID-19 and its containment measures. As such, they are faced
+      with the need to adapt and recover after an extended closure. Notably, trends
+      of persistent increases in school fees have emerged, given the financial strain
+      of the pandemic on schools. Specifically, the extended closure of the economy
+      created significant financial burdens for education institutions, forcing the
+      majority of them to increase school fees to sustain operations, cover additional
+      expenses and make up for lost revenue (Kahunde et al., 2022). Worse still, inflation
+      and rising costs of resources further contributed to the upward trend in school
+      fees (ibid).", "venue": "", "year": 2023, "referenceCount": 4, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}, {"category": "Education", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "134648472",
+      "name": "Rehema Kahunde"}, {"authorId": "2160227069", "name": "Ambrose Ogwang"},
+      {"authorId": "114767767", "name": "P. Lakuma"}]}, {"paperId": "10b806a32fde01e2d0a4c52289e6f952d1d10697",
+      "externalIds": {"DOI": "10.3224/indbez.v29i3.06", "CorpusId": 261308028}, "corpusId":
+      261308028, "publicationVenue": "d2ce8a73-a90c-40db-99b1-695367997229", "url":
+      "https://www.semanticscholar.org/paper/10b806a32fde01e2d0a4c52289e6f952d1d10697",
+      "title": "Gewerkschaftshandeln verstehen? Europ\u00e4ische und US-amerikanische
+      Gewerkschaften im Vergleich", "abstract": "Sanford M. Jacoby: Labor in the Age
+      of Finance. Pensions, Politics, and Corporations from Deindustrialization to
+      Dodd-Frank. Princeton: Princeton University Press, 2021. 368 Seiten, 34 Euro.
+      Thomas Prosser: European Labour Movements in Crisis: From decision to Indifference.
+      Manchester: Manchester University Press, 2019. 208 Seiten, 34 Euro.", "venue":
+      "Industrielle Beziehungen. Zeitschrift f\u00fcr Arbeit, Organisation und Management",
+      "year": 2023, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [], "publicationTypes": ["JournalArticle"], "publicationDate": "2023-08-28",
+      "journal": {"name": "Industrielle Beziehungen. Zeitschrift f\u00fcr Arbeit,
+      Organisation und Management"}, "authors": [{"authorId": "104750458", "name":
+      "Susanne Pernicka"}]}, {"paperId": "50f162c3db577009e35c7d90a09cd11bca2506a2",
+      "externalIds": {"MAG": "2100511539", "DOI": "10.2307/2527217", "CorpusId": 153793596},
+      "corpusId": 153793596, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/50f162c3db577009e35c7d90a09cd11bca2506a2",
+      "title": "On the Persistence of Leadership or Leapfrogging in International
+      Trade", "abstract": "When two countries starting from different quality levels
+      (reflecting different conditions on domestic market demands) open to trade,
+      two possible equilibria arise. In the first, the quality leader maintains its
+      position. In the second, leapfrogging occurs. However, the latter is possible
+      only if the initial quality gap is not too wide. Further, when the risk dominance
+      criterion is used, only the former equilibrium is selected. These results suggest
+      that initial conditions (such as domestic market size or home demand preferences)
+      are important factors in determining relative competitiveness of firms in international
+      markets.", "venue": "", "year": 1996, "referenceCount": 26, "citationCount":
+      100, "influentialCitationCount": 4, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://e-archivo.uc3m.es/bitstream/10016/3683/1/CABRALES_IER_1997_38_4_CA-ps.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Economics"], "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "International
+      Economic Review", "pages": "809-824", "volume": "38"}, "authors": [{"authorId":
+      "47280790", "name": "Massimo Motta"}, {"authorId": "2288142", "name": "Jacques-Fran\u00e7ois
+      Thisse"}, {"authorId": "145934332", "name": "A. Cabrales"}]}, {"paperId": "d40ed09d05e0ec31a6c1ed1810758433773561b8",
+      "externalIds": {"CorpusId": 260976976}, "corpusId": 260976976, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/d40ed09d05e0ec31a6c1ed1810758433773561b8",
+      "title": "The future of payments: Markers for success", "abstract": "The payments
+      industry faces uncertainty on many fronts. Historically, it has been a business
+      in which the incumbents were strongly advantaged and able to enjoy stable or
+      growing revenue streams. Now, however, a disruptive mix of regulatory and consumer
+      behavioral changes, emerging technologies and new competitive thrusts is presenting
+      industry incumbents with unprecedented challenges. These changes are catalyzing
+      new and shifting alliances, which in turn are creating fresh opportunities for
+      industry entrants.", "venue": "", "year": 2011, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Business", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "2232227802", "name": "Monica Adractas"}, {"authorId":
+      "51215137", "name": "D. Ewing"}, {"authorId": "150177179", "name": "K. Rajgopal"}]},
+      {"paperId": "7f5eb04a71d55c5664c0631f3d6752a89bb19abc", "externalIds": {"DOI":
+      "10.1017/S147474562300023X", "CorpusId": 261511871}, "corpusId": 261511871,
+      "publicationVenue": "bde3018b-c97e-40da-9048-e6148686f03e", "url": "https://www.semanticscholar.org/paper/7f5eb04a71d55c5664c0631f3d6752a89bb19abc",
+      "title": "Trade Policy, Openness, and Development: Essays in Honour of L. Alan
+      Winters", "abstract": "Alan Winters was the editor of the World Trade Review
+      (WTR) from December 2008 to mid-2020. Launched in 2002 as a joint initiative
+      of the WTO Secretariat and Cambridge University Press, the WTR has become the
+      leading multidisciplinary journal in the field of international trade broadly
+      defined. In the period during which Alan was editor of the journal, the number
+      of issues grew from three to five, reflecting the significant increase in the
+      number of quality submissions. The impact factor of the journal rose to 1.6
+      in 2020, an increase by 150%, above that of The World Economy, arguably the
+      incumbent in the field when the WTR was created.", "venue": "World Trade Review",
+      "year": 2023, "referenceCount": 21, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": "2023-09-05", "journal": {"name": "World Trade
+      Review", "pages": "297 - 301", "volume": "22"}, "authors": [{"authorId": "2237627358",
+      "name": "Ingo Borchert"}, {"authorId": "2237627361", "name": "Bernard Hoekman"}]},
+      {"paperId": "596296e07e7f36faab246d8acc251d91bbe11a94", "externalIds": {"PubMedCentral":
+      "10364812", "DOI": "10.2147/CEOR.S416625", "CorpusId": 260006728, "PubMed":
+      "37492201"}, "corpusId": 260006728, "publicationVenue": "c66cb448-e4ea-4c3c-a33c-85974448e44c",
+      "url": "https://www.semanticscholar.org/paper/596296e07e7f36faab246d8acc251d91bbe11a94",
+      "title": "COVID-19\u2019s Effects on Macroeconomic Indicators in Ethiopia: Systematic
+      Review of Articles", "abstract": "Introduction In the midst of the COVID-19
+      crisis, it might be difficult to provide the most vulnerable people with access
+      to essential services. The main objective of this article is to lay the foundation
+      for future solutions by collecting the results of previous published articles.
+      Methods This study used a systematic and integrated method that began by searching
+      relevant literature in professional and generally published journal databases
+      from March 2019- December 2021. Results According to the results of the review,
+      COVID-19 has had a significant effect on real and forecasted key macroeconomic
+      variables such as economic growth, unemployment, inflation, poverty levels,
+      and fiscal and monetary policy. In addition, this review reflects the sectorial
+      effect of COVID-19 on health, factor productivity, domestic trade, exports,
+      tourism, international aviation, remittances, the education sector, foreign
+      direct investment, and the Ethiopian economy. Conclusion While appropriate social
+      distance and personal protective equipment strategies exist in all types of
+      markets across the country, the government should take precautions against the
+      recurrence of Covid-19 by disseminating credible information. Finally, fiscal
+      optimization should be seen as a broader intervention in the economy as a whole.",
+      "venue": "ClinicoEconomics and Outcomes Research", "year": 2023, "referenceCount":
+      30, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://www.dovepress.com/getfile.php?fileID=91346",
+      "status": "GOLD"}, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
+      "Medicine", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review", "JournalArticle"], "publicationDate": "2023-07-01",
+      "journal": {"name": "ClinicoEconomics and Outcomes Research: CEOR", "pages":
+      "573 - 578", "volume": "15"}, "authors": [{"authorId": "148190507", "name":
+      "Tesfaye Denano"}]}, {"paperId": "935272c42773cda682e144830caa3a7ba1528b90",
+      "externalIds": {"DOI": "10.1007/s11123-023-00687-y", "CorpusId": 260050157},
+      "corpusId": 260050157, "publicationVenue": "a3804c3d-4da7-4c0d-9398-661b0eaf713c",
+      "url": "https://www.semanticscholar.org/paper/935272c42773cda682e144830caa3a7ba1528b90",
+      "title": "Introduction to the symposium on inequality, discrimination, and productivity",
+      "abstract": null, "venue": "Journal of Productivity Analysis", "year": 2023,
+      "referenceCount": 1, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-07-19", "journal": {"name": "Journal of Productivity
+      Analysis", "pages": "107 - 108", "volume": "60"}, "authors": [{"authorId": "145524706",
+      "name": "Christopher F. Parmeter"}, {"authorId": "16234469", "name": "R. Sickles"}]},
+      {"paperId": "e9143d9abf0c7fbb0c157fddc213f13195da1302", "externalIds": {"DOI":
+      "10.1146/annurev-financial-060623-032258", "CorpusId": 261658163}, "corpusId":
+      261658163, "publicationVenue": "3c88e125-bad7-4ef7-ba66-65db58017be5", "url":
+      "https://www.semanticscholar.org/paper/e9143d9abf0c7fbb0c157fddc213f13195da1302",
+      "title": "Introduction to the ARFE Theme on Financial Economics and COVID-19",
+      "abstract": "The COVID-19 pandemic has arguably been one of the worst global
+      catastrophes over the last several decades. A plethora of real-time research
+      has been produced by the finance profession to try and understand the impact
+      COVID-19 had on financial markets. In this issue, the Annual Review of Financial
+      Economics provides five articles, all touching on different aspects of the COVID-19
+      crisis. This introductory article provides a brief review of these articles.
+      Expected final online publication date for the Annual Review of Financial Economics,
+      Volume 15 is November 2023. Please see http://www.annualreviews.org/page/journal/pubdates
+      for revised estimates.", "venue": "Annual Review of Financial Economics", "year":
+      2023, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": "2023-09-08", "journal": {"name": "Annual Review
+      of Financial Economics"}, "authors": [{"authorId": "2238778929", "name": "Matthew
+      Richardson"}]}, {"paperId": "d5c833b57e2f45e269cdf14d892d7de3034d430e", "externalIds":
+      {"MAG": "2098588232", "DOI": "10.1787/351251420436", "CorpusId": 260577502},
+      "corpusId": 260577502, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d5c833b57e2f45e269cdf14d892d7de3034d430e",
+      "title": "Is Training More Frequent When the Wage Premium Is Smaller", "abstract":
+      "According to Becker [1964], when labour markets are perfectly competitive,
+      general training is paid by the worker, who reaps all the benefits from the
+      investment. Therefore, ceteris paribus, the greater the training wage premium,
+      the greater the investment in general training. Using data from the European
+      Community Household Panel, we compute a proxy of the training wage premium in
+      clusters of homogeneous workers and find that smaller premia induce greater
+      incidence of off-site training, which is likely to impart general skills. Our
+      findings suggest that the Becker model provides insufficient guidance to understand
+      empirical training patterns. Conversely, they are not inconsistent with theories
+      of training in imperfectly competitive labour markets, in which firms may be
+      willing to finance general training if the wage structure is compressed, that
+      is, if the increase in productivity after training is greater than the increase
+      in pay.", "venue": "", "year": 2006, "referenceCount": 68, "citationCount":
+      2, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://www.oecd-ilibrary.org/is-training-more-frequent-when-the-wage-premium-is-smaller_5l9dpf1v6qd2.pdf?itemId=%2Fcontent%2Fpaper%2F351251420436&mimeType=pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Economics"], "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2006-12-05", "journal": {"name":
+      "", "pages": "1-38", "volume": ""}, "authors": [{"authorId": "79458242", "name":
+      "Andrea Bassanini"}, {"authorId": "4860123", "name": "G. Brunello"}]}, {"paperId":
+      "6ae5c03addf1395db27628d1e93bc68cc9420214", "externalIds": {"DOI": "10.3406/ecoap.1961.2641",
+      "CorpusId": 261090733}, "corpusId": 261090733, "publicationVenue": "6e566dcf-4143-4de1-b317-7d33af556a4a",
+      "url": "https://www.semanticscholar.org/paper/6ae5c03addf1395db27628d1e93bc68cc9420214",
+      "title": "Recherche militaire et \u00e9conomie", "abstract": "Military Research
+      and Economy \n The article discusses the characteristics of military research,
+      and suggests that such research enriches the country that undertakes it, not
+      only because high-quality armaments are a valuable export, but because of the
+      perpetual acquisition of knowledge, that derives from military research and
+      armament manufacture and could not easily be otherwise obtained. \n Such research
+      is also argued to be economically valuable at the international level ; although
+      it is only possible for an advanced economy, once it exists it helps keep that
+      economy competitive.", "venue": "Economie appliquee", "year": 1961, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": null, "journal": {"name": "\u00c9conomie appliqu\u00e9e"},
+      "authors": [{"authorId": "2233214559", "name": "Jean-Maurice Gu\u00e9rin"}]}]}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '144309'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 13 Sep 2023 23:45:07 GMT
+      Via:
+      - 1.1 b8508a82603ebd452aecb2900fb8eef0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - HT293O-ObR9GVR0LFjVPNEQqmy1jdzZ764JEXCPVkygyRV9TWPK0fg==
+      X-Amz-Cf-Pop:
+      - EWR53-C1
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - LOBskEK0PHcFTyw=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '144309'
+      x-amzn-Remapped-Date:
+      - Wed, 13 Sep 2023 23:45:07 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 820e106d-1b36-4f3e-a55e-8b3564c0fce8
     http_version: HTTP/1.1
     status_code: 200
 version: 1

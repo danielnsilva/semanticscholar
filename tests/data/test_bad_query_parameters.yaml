@@ -1,57 +1,5 @@
 interactions:
 - request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.28.1
-    method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/10.1093/mind/lix.236.433?&fields=unknown
-  response:
-    body:
-      string: '{"error":"Unrecognized or unsupported fields: [unknown]"}
-
-        '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '58'
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 21 Dec 2022 03:59:51 GMT
-      Via:
-      - 1.1 42a549e60dcb35d3c3908f459bdf9f62.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - QeQUkYUBPTj8H5BcL3xJqWz385T-Tmn_viH1xNPKiic8b4s9neVBLw==
-      X-Amz-Cf-Pop:
-      - GRU3-P1
-      X-Cache:
-      - Error from cloudfront
-      x-amz-apigw-id:
-      - demsqEd1PHcFXnw=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '58'
-      x-amzn-Remapped-Date:
-      - Wed, 21 Dec 2022 03:59:51 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - ca777d01-f572-4eb6-bce2-e9af04cf04be
-    status:
-      code: 400
-      message: Bad Request
-- request:
     body: ''
     headers:
       accept:
@@ -80,27 +28,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Sep 2023 19:38:59 GMT
+      - Wed, 13 Sep 2023 21:45:56 GMT
       Via:
-      - 1.1 7f59e30d6672b7ea91c10bca6108d29a.cloudfront.net (CloudFront)
+      - 1.1 b6217766ccd41d69658fea04297b7c24.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 3uzGih9zQFuMI8tjkqqhjTuL-lsHLhpLkC9hi0sU-ue7_pCHgy6vqw==
+      - e98Cj3bmP0ZHX6Rnclk_otvw6ewcsdlwsG8n39gdGfJRnQzxR4mtkA==
       X-Amz-Cf-Pop:
       - EWR50-C1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - K5sBGEWhvHcFygQ=
+      - LNwPSGY9PHcFsFA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '58'
       x-amzn-Remapped-Date:
-      - Thu, 07 Sep 2023 19:38:59 GMT
+      - Wed, 13 Sep 2023 21:45:56 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 21e78747-7876-44ad-a181-6336b93a5f33
+      - 8b2f928e-25d9-4784-a3b5-375ae7ba5641
     http_version: HTTP/1.1
     status_code: 400
 version: 1

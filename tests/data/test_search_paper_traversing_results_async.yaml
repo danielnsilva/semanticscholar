@@ -17,7 +17,7 @@ interactions:
     method: GET
     uri: https://partner.semanticscholar.org/graph/v1/paper/search?query=sublinear%20near%20optimal%20edit%20distance&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
-    content: '{"total": 81, "offset": 0, "data": [{"paperId": "169a66a031488ce0c8fdd70502945dbf69b045a5",
+    content: '{"total": 82, "offset": 0, "data": [{"paperId": "169a66a031488ce0c8fdd70502945dbf69b045a5",
       "externalIds": {"DBLP": "conf/soda/AndoniN10", "MAG": "2046785857", "DOI": "10.1137/1.9781611973075.8",
       "CorpusId": 1227224}, "corpusId": 1227224, "publicationVenue": {"id": "5545566b-c0b8-418c-83a5-a986a4657572",
       "name": "ACM-SIAM Symposium on Discrete Algorithms", "type": "conference", "alternate_names":
@@ -684,9 +684,11 @@ interactions:
       "publicationTypes": ["JournalArticle"], "publicationDate": "2019-08-28", "journal":
       {"name": "ArXiv", "volume": "abs/1908.10935"}, "authors": [{"authorId": "2115665083",
       "name": "Yihong Wu"}, {"authorId": "144021304", "name": "Harrison H. Zhou"}]},
-      {"paperId": "c9ac4909bd56d1728034d0f6a1227b4bed0a1c69", "externalIds": {"ArXiv":
-      "2309.03810", "CorpusId": 261582395}, "corpusId": 261582395, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/c9ac4909bd56d1728034d0f6a1227b4bed0a1c69",
+      {"paperId": "c9ac4909bd56d1728034d0f6a1227b4bed0a1c69", "externalIds": {"DBLP":
+      "journals/corr/abs-2309-03810", "ArXiv": "2309.03810", "DOI": "10.48550/arXiv.2309.03810",
+      "CorpusId": 261582395}, "corpusId": 261582395, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
+      "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/c9ac4909bd56d1728034d0f6a1227b4bed0a1c69",
       "title": "Three Hardness Results for Graph Similarity Problems", "abstract":
       "Notions of graph similarity provide alternative perspective on the graph isomorphism
       problem and vice-versa. In this paper, we consider measures of similarity arising
@@ -702,18 +704,18 @@ interactions:
       not examine the restricted case where the pairs of graphs are required to have
       the same number of edges. Finally, we study similarity problems on strongly
       regular graphs and prove some near optimal inequalities with interesting consequences
-      on the computational complexity of graph and group isomorphism.", "venue": "",
+      on the computational complexity of graph and group isomorphism.", "venue": "arXiv.org",
       "year": 2023, "referenceCount": 23, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
-      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "2023-09-07", "journal": null, "authors": [{"authorId": "2238388617", "name":
-      "He Sun"}, {"authorId": "133864599", "name": "Danny Vagnozzi"}]}, {"paperId":
-      "c579d931ae83951c940d23196f8c079312dcf8c0", "externalIds": {"PubMedCentral":
-      "4172526", "MAG": "2080019484", "DOI": "10.1371/journal.pone.0107510", "CorpusId":
-      17199791, "PubMed": "25247892"}, "corpusId": 17199791, "publicationVenue": {"id":
-      "0aed7a40-85f3-4c66-9e1b-c1556c57001b", "name": "PLoS ONE", "type": "journal",
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-09-07", "journal": {"name": "ArXiv", "volume": "abs/2309.03810"},
+      "authors": [{"authorId": "2238388617", "name": "He Sun"}, {"authorId": "133864599",
+      "name": "Danny Vagnozzi"}]}, {"paperId": "c579d931ae83951c940d23196f8c079312dcf8c0",
+      "externalIds": {"PubMedCentral": "4172526", "MAG": "2080019484", "DOI": "10.1371/journal.pone.0107510",
+      "CorpusId": 17199791, "PubMed": "25247892"}, "corpusId": 17199791, "publicationVenue":
+      {"id": "0aed7a40-85f3-4c66-9e1b-c1556c57001b", "name": "PLoS ONE", "type": "journal",
       "alternate_names": ["Plo ONE", "PLOS ONE", "PLO ONE"], "issn": "1932-6203",
       "url": "https://journals.plos.org/plosone/", "alternate_urls": ["http://www.plosone.org/"]},
       "url": "https://www.semanticscholar.org/paper/c579d931ae83951c940d23196f8c079312dcf8c0",
@@ -1671,9 +1673,24 @@ interactions:
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "46815131",
-      "name": "Shivani Jain"}]}, {"paperId": "aaadcdc2f1964957f587e780d4a66fe8770fa6e6",
-      "externalIds": {"CorpusId": 212531853}, "corpusId": 212531853, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/aaadcdc2f1964957f587e780d4a66fe8770fa6e6",
+      "name": "Shivani Jain"}]}, {"paperId": "44c3c4da8b0606695e819547da8fc05521f0241b",
+      "externalIds": {"DOI": "10.1186/1471-2105-14-226", "CorpusId": 255795319}, "corpusId":
+      255795319, "publicationVenue": {"id": "be3f884c-b44a-496a-a593-1cad3f89d254",
+      "name": "BMC Bioinformatics", "type": "journal", "alternate_names": ["BMC Bioinform"],
+      "issn": "1471-2105", "url": "http://www.biomedcentral.com/bmcbioinformatics",
+      "alternate_urls": ["http://www.pubmedcentral.nih.gov/tocrender.fcgi?journal=13",
+      "http://www.biomedcentral.com/bmcbioinformatics/"]}, "url": "https://www.semanticscholar.org/paper/44c3c4da8b0606695e819547da8fc05521f0241b",
+      "title": "Fast online and index-based algorithms for approximate search of RNA
+      sequence-structure patterns", "abstract": null, "venue": "BMC Bioinformatics",
+      "year": 2013, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-14-226",
+      "status": "GOLD"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "2013-07-17", "journal": {"name": "BMC Bioinformatics", "volume": "14"}, "authors":
+      [{"authorId": "47100055", "name": "F. Meyer"}, {"authorId": "8419159", "name":
+      "S. Kurtz"}, {"authorId": "49483183", "name": "M. Beckstette"}]}, {"paperId":
+      "aaadcdc2f1964957f587e780d4a66fe8770fa6e6", "externalIds": {"CorpusId": 212531853},
+      "corpusId": 212531853, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/aaadcdc2f1964957f587e780d4a66fe8770fa6e6",
       "title": "Fig-1: Locate all occurrence of the pattern P in a text T. II. IMPLEMENTATION
       OF DIFFERENT PATTERN MATCHING", "abstract": "123 Abstract\u2014 This paper presents
       a comparative study to evaluate experimental results for approximate string
@@ -1696,21 +1713,6 @@ interactions:
       [{"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": null, "journal": null, "authors": [{"authorId": "46815131",
       "name": "Shivani Jain"}, {"authorId": "2113654250", "name": "A. Rao"}]}, {"paperId":
-      "44c3c4da8b0606695e819547da8fc05521f0241b", "externalIds": {"DOI": "10.1186/1471-2105-14-226",
-      "CorpusId": 255795319}, "corpusId": 255795319, "publicationVenue": {"id": "be3f884c-b44a-496a-a593-1cad3f89d254",
-      "name": "BMC Bioinformatics", "type": "journal", "alternate_names": ["BMC Bioinform"],
-      "issn": "1471-2105", "url": "http://www.biomedcentral.com/bmcbioinformatics",
-      "alternate_urls": ["http://www.pubmedcentral.nih.gov/tocrender.fcgi?journal=13",
-      "http://www.biomedcentral.com/bmcbioinformatics/"]}, "url": "https://www.semanticscholar.org/paper/44c3c4da8b0606695e819547da8fc05521f0241b",
-      "title": "Fast online and index-based algorithms for approximate search of RNA
-      sequence-structure patterns", "abstract": null, "venue": "BMC Bioinformatics",
-      "year": 2013, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-14-226",
-      "status": "GOLD"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer
-      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "2013-07-17", "journal": {"name": "BMC Bioinformatics", "volume": "14"}, "authors":
-      [{"authorId": "47100055", "name": "F. Meyer"}, {"authorId": "8419159", "name":
-      "S. Kurtz"}, {"authorId": "49483183", "name": "M. Beckstette"}]}, {"paperId":
       "173499656cb9f1e37445398b4c8ea9d9f7867e67", "externalIds": {"DBLP": "journals/corr/abs-1711-02035",
       "MAG": "2767396238", "ArXiv": "1711.02035", "CorpusId": 125835323}, "corpusId":
       125835323, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
@@ -2661,7 +2663,7 @@ interactions:
       and Zwick\u2019s algorithm [FOCS\u201999] for the original APSP problem in undirected
       graphs with small integer weights.", "venue": "International Colloquium on Automata,
       Languages and Programming", "year": 2021, "referenceCount": 38, "citationCount":
-      6, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      7, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -3216,9 +3218,143 @@ interactions:
       null, "publicationDate": null, "journal": {"name": "", "volume": ""}, "authors":
       [{"authorId": "48068407", "name": "A. Salberg"}, {"authorId": "1993363", "name":
       "J. Hardeberg"}, {"authorId": "1747567", "name": "R. Jenssen"}]}, {"paperId":
-      "1d690c95be7d91570f813ad1ca7944cb759ae974", "externalIds": {"DBLP": "conf/icoin/2006",
-      "MAG": "2505198098", "DOI": "10.1007/11919568", "CorpusId": 20622003}, "corpusId":
-      20622003, "publicationVenue": {"id": "0e129215-7c25-46c9-b04b-a0e9faabf021",
+      "e06ebeeb0995707747654b5dde8aa370c9351b4b", "externalIds": {"CorpusId": 261664565},
+      "corpusId": 261664565, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e06ebeeb0995707747654b5dde8aa370c9351b4b",
+      "title": "Emergent Processes in Group Behavior", "abstract": "Just as neurons
+      interconnect in networks that create structured thoughts beyond the ken of any
+      individual neuron, so people spontaneously organize themselves into groups to
+      create emergent organizations that no individual may intend, comprehend, or
+      even perceive. Recent technological advances have provided us with unprecedented
+      opportunities for conducting controlled laboratory experiments on human collective
+      behavior. We describe two experimental paradigms in which we attempt to build
+      predictive bridges between the beliefs, goals, and cognitive capacities of individuals
+      andpatterns of behavior at the group level, showing how the members of a group
+      dynamically allocate themselves to resources and how innovations diffuse through
+      a social network. Agent-based computational models have provided useful explanatory
+      and predictive accounts. Together, the models and experiments point to tradeoffs
+      between exploration and exploitation\u2014that is, compromises between individuals
+      using their own innovations and using innovations obtained from their peers\u2014and
+      the emergence of group-level organizations such as population waves, bandwagon
+      effects, and spontaneous specialization. KEYWORDS\u2014collective behavior;
+      imitation; social networks; competition; group behavior; foraging It is natural
+      for psychologists to focus on the behavior of single individuals, because introspection
+      provides people with motivation and perspective at this level. However, in a
+      literal sense, we are all participating in entities greater than ourselves.
+      Selforganized collectives of people create emergent group-level patterns that
+      are rarely understood or intended by any individual. A business has a style
+      and ethos that transcends its employees. A culture has a nature, integrity,
+      and systematicity that transcends its inhabitants while still being grounded
+      by their interactions (Atran, Medin, & Ross, 2005). Social phenomena such as
+      the spread of gossip, theWorld-WideWeb, the popularity of cultural icons, legal
+      systems, and scientific establishments all take on a life of their own, complete
+      with their own self-organized divisions of labor and specialization, dynamics,
+      feedback loops, growth, and adaptations. A considerable amount of early work
+      on group behavior from social psychology focused on interpersonal relations
+      and the attributes that characterize good leaders or work teams. However, the
+      social patterns that people form are often organized without explicit leaders,
+      chains of command, or fixed communication networks (Ball, 2004). Examples of
+      such spontaneously emerging social patterns include book recommendations on
+      Amazon.com (which evolve based upon similar readers\u2019 buying habits), fans
+      at a sport stadium, grassroots political movements, the development of a fully
+      cross-indexed and intricately organized online encyclopedia that any person
+      can edit (www. wikipedia.org), and an online venue for media sharing that is
+      freely accessible to both providers and consumers yet still shows striking trends
+      of rich-get-richer popularity (www.youtube.com). In December of 2006, Timemagazine
+      named \u2018\u2018You\u2019\u2019 as Person of the Year in recognition of the
+      power and sophistication of these grass-roots, decentralized communities. To
+      understand the structure and dynamics of human collectives like these, we have
+      developed Internet-based experimental platforms that allow groups of 20 to 200
+      people to interact with each other in real time on networked computers. The
+      experiments use virtual environments in which participants can see the moment-to-moment
+      actions of their peers and immediately respond to their environment by making
+      responses of their own. To understand the results of these experiments, we have
+      developed computational models. Several models of group behavior exist, but
+      rarely are these models tested against detailed data sets obtained from controlled
+      laboratory settings. Often there is a disconcerting mismatch between the simplicity
+      of formal models and the complexities of real-world situations. Our strategy
+      for bridging the gap between computational models and groupbehavior phenomena
+      is to create relatively simple laboratory situations involving groups of people
+      interacting in idealized Address correspondence to Robert L. Goldstone, Psychological
+      and Brain Sciences, Indiana University, Bloomington, IN 47401; e-mail: rgoldsto@indiana.edu.
+      CURRENT DIRECTIONS IN PSYCHOLOGICAL SCIENCE 10 Volume 17\u2014Number 1 Copyright
+      r 2008 Association for Psychological Science environments according to easily
+      stated \u2018\u2018game rules.\u2019\u2019 We admittedly sacrifice some external
+      validity in creating idealized experimental scenarios, but this loss is offset
+      by the nearly exact correspondence of the assumptions underlying our psychological
+      experiments to those of the computational models; this allows the models to
+      be aptly applied without sacrificing their concise explanatory value and genuine
+      predictiveness. In what follows, we focus on two scenarios that capture ubiquitous
+      group patterns: the competition of agents for resources and the dissemination
+      of innovations in social networks. THE COMPETITIVE SEARCH FOR RESOURCES A problem
+      faced by all mobile organisms is how to search their environment for resources.
+      Animals forage their environment for food,Web-users surf the Internet for desired
+      data, and industries mine the land for valuable minerals. When an organism forages
+      in an environment that consists, in part, of other organisms that are also foraging,
+      unique complexities arise. The resources available to each individual are affected
+      not just by that individual\u2019s behavior but also by the simultaneous actions
+      of other individuals. We have been interested in experimentally exploring how
+      human foragers allocate themselves to resources and the time course bywhich
+      that allocation is achieved. Through the Internet (available to the public at
+      http://groups.psych.indiana.edu/), eight groups of 12 to 28 (average5 21) participants
+      competed for food tokens deposited over time in a virtual environment consisting
+      of an 80 80 grid of squares. In Goldstone and Ashpole (2004), a virtual environment
+      was created with two resource pools into which valued food tokens could be deposited
+      with different rates of replenishment. Each pool consisted of a compact region
+      of many squares. The participants\u2019 task was to obtain as many resource
+      tokens as possible during the course of a 270second experiment. A participant
+      obtained a token by being the first tomove on top of it. Participantsmoved square-by-square
+      by pressing arrow keys on their computer keyboard. Resources were divided between
+      two resource pools in various ways. For example, in one condition, food tokens
+      were split evenly (50/50) between the two pools; other conditions had a 65/
+      35 or 80/20 split. The location of the foodwithin a pool followed a normal (Gaussian)
+      distribution with a mean at the center of the pool and a standard deviation
+      of five horizontal and vertical positions. The locations of the pools were randomized
+      under the constraint that the distance between pools was kept approximately
+      constant. One piece of food was delivered to one of the resource pools every
+      4/N seconds, where N is the number of participants. In our \u2018\u2018visible\u2019\u2019
+      condition, each participant could see each other and the entire food distribution.
+      In our \u2018\u2018invisible\u2019\u2019 condition, they could not see the other
+      participants, and so they gradually acquired knowledge of the resource distributions
+      by virtue of their histories of getting food from each location. The dynamics
+      of the distribution of agents to resources in each condition are shown in Figure
+      1, broken down by the three types of resource distribution. Although fast adaptation
+      to the food distributions takes place, the asymptotic distribution of agents
+      systematically undermatches the optimal distribution of agents to resource pools.
+      By undermatching, we mean a distribution of agents that is less uneven than
+      the distribution of resources. For example, in the 65/35 distribution, the 65%
+      pool only attracts an average of 60.6%of the agents. If wewere efficiency consultants,
+      we would recommend that some foragers in the less productive pool move to the
+      more productive pool, as the resources there are being relatively underutilized
+      despite the larger crowd. This finding of undermatching has been obtained with
+      other animal groups, including cichlid fish, mallard ducks, and mites (Kennedy
+      & Gray, 1993). We have also observed this undermatching in collectives of citizens
+      of the virtual world Second Life (http:// secondlife.com/), who were invited
+      to forage for pieces of the world\u2019s currency that we randomly placed in
+      two regions. This undermatching may also explain real-world human foraging behavior,
+      such as the documented inefficiency in sperm whalers\u2019 hunting for whales
+      near the Galapagos Islands in the early 19th century (Whitehead & Hope, 1991).
+      Our results also reveal periodic fluctuations in resource use. A Fourier analysis
+      was applied to the populations at the resource pools over time to reveal cyclic
+      oscillations of migration. Fourier transformations translate a time-varying
+      signal into a set of sinusoidal components. Each sinusoidal component is characterized
+      by a frequency. The power of a component indicates the strength of a periodic
+      response at that frequency. This analysis revealed significantly greater power
+      in the low-frequency spectra for invisible conditions than for visible conditions.
+      For all three invisible conditions, the peak power was at approximately .02
+      cycles/second and was particularly high for the most uneven, 80/20 distribution.
+      This means that in the invisible conditions, agents collectively caused waves
+      of relatively dense crowding at one pool that repeated about once every 50 seconds.
+      There was no evidence for population cycles in the visible conditions, presumably
+      because a person who was tempted to leave their dissatisfying pool for greener
+      pastures would be dissuaded if they saw several other people with the ", "venue":
+      "", "year": 2009, "referenceCount": 12, "citationCount": 1, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Psychology", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2379247",
+      "name": "Robert L. Goldstone"}, {"authorId": "144561434", "name": "Michael E.
+      Roberts"}, {"authorId": "3013567", "name": "T. Gureckis"}]}, {"paperId": "1d690c95be7d91570f813ad1ca7944cb759ae974",
+      "externalIds": {"DBLP": "conf/icoin/2006", "MAG": "2505198098", "DOI": "10.1007/11919568",
+      "CorpusId": 20622003}, "corpusId": 20622003, "publicationVenue": {"id": "0e129215-7c25-46c9-b04b-a0e9faabf021",
       "name": "International Conference on Information Networking", "type": "conference",
       "alternate_names": ["Int Conf Inf Netw", "ICOIN"], "url": "http://www.icoin.org/"},
       "url": "https://www.semanticscholar.org/paper/1d690c95be7d91570f813ad1ca7944cb759ae974",
@@ -3242,31 +3378,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '264187'
+      - '275395'
       Content-Type:
       - application/json
       Date:
-      - Sat, 09 Sep 2023 05:08:43 GMT
+      - Wed, 13 Sep 2023 21:45:53 GMT
       Via:
-      - 1.1 4e4f8ee4f88ce6711f13846e91140c60.cloudfront.net (CloudFront)
+      - 1.1 7f822cbc5468903ff5582a7c6af4c024.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - A8E-kKQo5vHMDqkpHe-r6UILcdP0iwgDRnfydPbNtPDzZDhE3Qezhw==
+      - XUd4P_k-mFJHoGRdSZPpaWH1Ekgi9HO_ri35vkqcQzwqjctqRz_5fQ==
       X-Amz-Cf-Pop:
       - EWR53-C1
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - K-SZcEuXvHcF2Hg=
+      - LNwOtEtYvHcFhuw=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '264187'
+      - '275395'
       x-amzn-Remapped-Date:
-      - Sat, 09 Sep 2023 05:08:43 GMT
+      - Wed, 13 Sep 2023 21:45:53 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - f2090b16-268d-484a-bf4d-6d6d60bbc592
+      - 90d4468a-bba5-45fc-bc51-c676e5e0a90a
     http_version: HTTP/1.1
     status_code: 200
 - request:
@@ -3300,27 +3436,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 09 Sep 2023 05:14:57 GMT
+      - Wed, 13 Sep 2023 22:01:21 GMT
       Via:
-      - 1.1 f78e2a2d083c0945ee670c9d5d179e9e.cloudfront.net (CloudFront)
+      - 1.1 3425db2c749d144a96b60e99c2493db0.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - Zia9odIhT8_0ablLD3uiftMw0imv7RU3cze5K-i2g5dpS5c-zfk6eg==
+      - z_8DrheJ5kLadUNgPWpZQY5IkPbXiGA4DJuH8-_Qqt_WxIjbNeODsQ==
       X-Amz-Cf-Pop:
       - EWR53-C1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - K-TUtHSYvHcFvtg=
+      - LNyf0EaePHcFxHA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '73'
       x-amzn-Remapped-Date:
-      - Sat, 09 Sep 2023 05:14:57 GMT
+      - Wed, 13 Sep 2023 22:01:21 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 2ddd8e2f-c8f3-4d42-8343-38429c0727b0
+      - 1ab93592-0357-4bfe-9009-ac5764b33b2b
     http_version: HTTP/1.1
     status_code: 400
 version: 1

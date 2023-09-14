@@ -10,4 +10,7 @@ class BadQueryParametersException(SemanticScholarException):
 
 
 class ObjectNotFoundException(SemanticScholarException):
-    '''Paper or Author ID not found'''
+    '''Paper or Author ID not found.'''
+
+class TimeoutException(SemanticScholarException):
+    '''Request timed out.'''

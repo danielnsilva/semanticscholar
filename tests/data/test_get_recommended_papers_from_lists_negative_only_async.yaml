@@ -13,62 +13,6 @@ interactions:
       content-type:
       - application/json
       host:
-      - api.semanticscholar.org
-      user-agent:
-      - python-httpx/0.24.1
-    method: POST
-    uri: https://api.semanticscholar.org/recommendations/v1/papers/?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
-  response:
-    content: '{"error":"No positive paper examples given"}
-
-      '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json
-      Date:
-      - Fri, 08 Sep 2023 19:41:00 GMT
-      Via:
-      - 1.1 0c2947bdc7b8340f8e04a5a58d570236.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - BwxoVXC2E4DNoMwHTveuLxKdx92h2uq7o-rz0pLON91QH3RQjNzVhA==
-      X-Amz-Cf-Pop:
-      - EWR50-C1
-      X-Cache:
-      - Error from cloudfront
-      x-amz-apigw-id:
-      - K8_P9FPQPHcFbyQ=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '45'
-      x-amzn-Remapped-Date:
-      - Fri, 08 Sep 2023 19:41:00 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - 8669289f-5335-4440-941e-a1e380e82090
-    http_version: HTTP/1.1
-    status_code: 400
-- request:
-    body: '{"positivePaperIds": [], "negativePaperIds": ["10.1145/3544585.3544600"]}'
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      content-length:
-      - '73'
-      content-type:
-      - application/json
-      host:
       - partner.semanticscholar.org
       user-agent:
       - python-httpx/0.24.1
@@ -90,27 +34,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 08 Sep 2023 20:26:08 GMT
+      - Wed, 13 Sep 2023 21:45:39 GMT
       Via:
-      - 1.1 249557823ab8e41dec2ed10311f8ff98.cloudfront.net (CloudFront)
+      - 1.1 a74c33aabb438b6226856fa442878fa2.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - o6IEuKnBYU2OT5CUV4vLnTu3NyIpZw1vcFABf9Ec2tld9EJoF9s5hg==
+      - bYO0rXkq9avCmOaSATo4YKKK6UI_aJkBcGmguRXRewO_hjJ_C__2_g==
       X-Amz-Cf-Pop:
       - EWR53-C1
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - K9F3MGfevHcFSXQ=
+      - LNwMoG8nvHcF8-A=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '45'
       x-amzn-Remapped-Date:
-      - Fri, 08 Sep 2023 20:26:08 GMT
+      - Wed, 13 Sep 2023 21:45:39 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 16a4ff2a-0e3d-4b13-83da-5ca4e823570c
+      - 361cb0c4-77e2-4a2c-8286-202a47cbd18c
     http_version: HTTP/1.1
     status_code: 400
 version: 1
