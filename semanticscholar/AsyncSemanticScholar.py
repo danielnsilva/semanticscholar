@@ -1,6 +1,6 @@
 from typing import List, Literal
 
-from semanticscholar.ApiRequester import Requester
+from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
 from semanticscholar.BaseReference import BaseReference
 from semanticscholar.Citation import Citation
@@ -46,7 +46,7 @@ class AsyncSemanticScholar:
                 self.api_url = self.DEFAULT_PARTNER_API_URL
 
         self._timeout = timeout
-        self._requester = Requester(self._timeout)
+        self._requester = ApiRequester(self._timeout)
 
     @property
     def timeout(self) -> int:
@@ -97,7 +97,7 @@ class AsyncSemanticScholar:
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
 
-        data = await self._requester.get_data(url, parameters, self.auth_header)
+        data = await self._requester.get_data_async(url, parameters, self.auth_header)
         paper = Paper(data)
 
         return paper
@@ -138,7 +138,7 @@ class AsyncSemanticScholar:
 
         payload = { "ids": paper_ids }
 
-        data = await self._requester.get_data(
+        data = await self._requester.get_data_async(
             url, parameters, self.auth_header, payload)
         papers = [Paper(item) for item in data]
 
@@ -379,7 +379,7 @@ class AsyncSemanticScholar:
         fields = ','.join(fields)
         parameters = f'&fields={fields}'
 
-        data = await self._requester.get_data(url, parameters, self.auth_header)
+        data = await self._requester.get_data_async(url, parameters, self.auth_header)
         author = Author(data)
 
         return author
@@ -411,7 +411,7 @@ class AsyncSemanticScholar:
 
         payload = { "ids": author_ids }
 
-        data = await self._requester.get_data(
+        data = await self._requester.get_data_async(
             url, parameters, self.auth_header, payload)
         authors = [Author(item) for item in data]
 
@@ -552,7 +552,7 @@ class AsyncSemanticScholar:
         fields = ','.join(fields)
         parameters = f'&fields={fields}&limit={limit}&from={pool_from}'
 
-        data = await self._requester.get_data(url, parameters, self.auth_header)
+        data = await self._requester.get_data_async(url, parameters, self.auth_header)
         papers = [Paper(item) for item in data['recommendedPapers']]
 
         return papers
@@ -599,7 +599,7 @@ class AsyncSemanticScholar:
             "negativePaperIds": negative_paper_ids
         }
 
-        data = await self._requester.get_data(
+        data = await self._requester.get_data_async(
             url, parameters, self.auth_header, payload)
         papers = [Paper(item) for item in data['recommendedPapers']]
 

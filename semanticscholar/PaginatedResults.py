@@ -2,7 +2,7 @@ from typing import Any, Union, List
 import asyncio
 import nest_asyncio
 
-from semanticscholar.ApiRequester import Requester
+from semanticscholar.ApiRequester import ApiRequester
 
 
 class PaginatedResults:
@@ -15,7 +15,7 @@ class PaginatedResults:
 
     def __init__(
                 self,
-                requester: Requester,
+                requester: ApiRequester,
                 data_type: Any,
                 url: str,
                 query: str = None,
@@ -107,7 +107,7 @@ class PaginatedResults:
         return has_more_results and under_limit
 
     async def _request_data(self) -> Union[dict, List[dict]]:
-        return await self._requester.get_data(
+        return await self._requester.get_data_async(
             self._url,
             self._parameters,
             self._headers

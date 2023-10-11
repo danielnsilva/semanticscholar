@@ -1,8 +1,11 @@
+import sys
+sys.path.append("C:/Users/Heichous/Documents/github/semanticscholar")
+
 import json
 import unittest
 import asyncio
 from datetime import datetime
-
+from httpx import TimeoutException
 import vcr
 
 from semanticscholar.Author import Author
@@ -14,8 +17,7 @@ from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, ObjectNotFoundException, 
-    TimeoutException)
+    BadQueryParametersException, ObjectNotFoundException)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -388,9 +390,8 @@ class SemanticScholarTest(unittest.TestCase):
     # the async parts are run manually using asyncio.run_until_complete()
     @test_vcr.use_cassette
     async def test_get_author_papers_async(self):
-        loop = asyncio.new_event_loop()
+        loop = asyncio.get_event_loop()
         data = loop.run_until_complete(self.sch.get_author_papers(1723755, limit=100))
-        loop.close()
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
         self.assertEqual(len([item for item in data]), 940)
@@ -398,9 +399,8 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     async def test_get_paper_citations_async(self):
-        loop = asyncio.new_event_loop()
+        loop = asyncio.get_event_loop()
         data = loop.run_until_complete(self.sch.get_paper_citations('CorpusID:49313245'))
-        loop.close()
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 1000)
         self.assertEqual(len([item.paper.title for item in data]), 6220)
@@ -583,7 +583,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     async def test_get_recommended_papers_from_lists_negative_only_async(self):
         with self.assertRaises(BadQueryParametersException):
             await self.sch.get_recommended_papers_from_lists(
-                [], 
+                [],
                 ['10.1145/3544585.3544600']
             )
 

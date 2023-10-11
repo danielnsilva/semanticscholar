@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Literal
 import asyncio
 import nest_asyncio
 
@@ -50,8 +50,8 @@ class SemanticScholar():
 
     def get_paper(
                 self,
-                *args,
-                **kwargs
+                paper_id: str,
+                fields: list = None
             ) -> Paper:
         '''Paper lookup
 
@@ -75,15 +75,18 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         paper = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_paper(*args, **kwargs)
+            self._AsyncSemanticScholar.get_paper(
+                paper_id=paper_id, 
+                fields=fields
+                )
         )
 
         return paper
 
     def get_papers(
                 self,
-                *args,
-                **kwargs
+                paper_ids: List[str],
+                fields: list = None
             ) -> List[Paper]:
         '''Get details for multiple papers at once
 
@@ -107,15 +110,19 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         papers = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_papers(*args, **kwargs)
+            self._AsyncSemanticScholar.get_papers(
+                paper_ids=paper_ids,
+                fields=fields
+                )
         )
 
         return papers
 
     def get_paper_authors(
                 self,
-                *args,
-                **kwargs
+                paper_id: str,
+                fields: list = None,
+                limit: int = 1000
             ) -> PaginatedResults:
         '''Get details about a paper's authors
 
@@ -139,15 +146,20 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         results = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_paper_authors(*args, **kwargs)
+            self._AsyncSemanticScholar.get_paper_authors(
+                paper_id=paper_id,
+                fields=fields,
+                limit=limit
+                )
         )
 
         return results
 
     def get_paper_citations(
                 self,
-                *args,
-                **kwargs
+                paper_id: str,
+                fields: list = None,
+                limit: int = 1000
             ) -> PaginatedResults:
         '''Get details about a paper's citations
 
@@ -171,15 +183,20 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         results = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_paper_citations(*args, **kwargs)
+            self._AsyncSemanticScholar.get_paper_citations(
+                paper_id=paper_id,
+                fields=fields,
+                limit=limit
+                )
         )
 
         return results
 
     def get_paper_references(
                 self,
-                *args,
-                **kwargs,
+                paper_id: str,
+                fields: list = None,
+                limit: int = 1000
             ) -> PaginatedResults:
         '''Get details about a paper's references
 
@@ -203,15 +220,25 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         results = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_paper_references(*args, **kwargs)
+            self._AsyncSemanticScholar.get_paper_references(
+                paper_id=paper_id,
+                fields=fields,
+                limit=limit
+                )
         )
 
         return results
 
     def search_paper(
                 self,
-                *args,
-                **kwargs
+                query: str,
+                year: str = None,
+                publication_types: list = None,
+                open_access_pdf: bool = None,
+                venue: list = None,
+                fields_of_study: list = None,
+                fields: list = None,
+                limit: int = 100
             ) -> PaginatedResults:
         '''Search for papers by keyword
 
@@ -237,15 +264,24 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         results = loop.run_until_complete(
-            self._AsyncSemanticScholar.search_paper(*args, **kwargs)
+            self._AsyncSemanticScholar.search_paper(
+                query=query,
+                year=year,
+                publication_types=publication_types,
+                open_access_pdf=open_access_pdf,
+                venue=venue,
+                fields_of_study=fields_of_study,
+                fields=fields,
+                limit=limit
+                )
         )
 
         return results
 
     def get_author(
                 self,
-                *args,
-                **kwargs
+                author_id: str,
+                fields: list = None
             ) -> Author:
         '''Author lookup
 
@@ -260,15 +296,18 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         author = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_author(*args, **kwargs)
+            self._AsyncSemanticScholar.get_author(
+                author_id=author_id,
+                fields=fields
+                )
         )
 
         return author
 
     def get_authors(
                 self,
-                *args,
-                **kwargs
+                author_ids: List[str],
+                fields: list = None
             ) -> List[Author]:
         '''Get details for multiple authors at once
 
@@ -283,15 +322,19 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         authors = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_authors(*args, **kwargs)
+            self._AsyncSemanticScholar.get_authors(
+                author_ids=author_ids,
+                fields=fields
+                )
         )
 
         return authors
 
     def get_author_papers(
                 self,
-                *args,
-                **kwargs
+                author_id: str,
+                fields: list = None,
+                limit: int = 1000
             ) -> PaginatedResults:
         '''Get details about a author's papers
 
@@ -315,15 +358,20 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         results = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_author_papers(*args, **kwargs)
+            self._AsyncSemanticScholar.get_author_papers(
+                author_id=author_id,
+                fields=fields,
+                limit=limit
+                )
         )
 
         return results
 
     def search_author(
                 self,
-                *args,
-                **kwargs
+                query: str,
+                fields: list = None,
+                limit: int = 1000
             ) -> PaginatedResults:
         '''Search for authors by name
 
@@ -340,15 +388,21 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         results = loop.run_until_complete(
-            self._AsyncSemanticScholar.search_author(*args, **kwargs)
+            self._AsyncSemanticScholar.search_author(
+                query=query,
+                fields=fields,
+                limit=limit
+                )
         )
 
         return results
 
     def get_recommended_papers(
                 self,
-                *args,
-                **kwargs
+                paper_id: str,
+                fields: list = None,
+                limit: int = 100,
+                pool_from: Literal["recent", "all-cs"] = "recent"
             ) -> List[Paper]:
         '''Get recommended papers for a single positive example.
 
@@ -376,15 +430,22 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         papers = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_recommended_papers(*args, **kwargs)
+            self._AsyncSemanticScholar.get_recommended_papers(
+                paper_id=paper_id,
+                fields=fields,
+                limit=limit,
+                pool_from=pool_from
+                )
         )
 
         return papers
 
     def get_recommended_papers_from_lists(
                 self,
-                *args,
-                **kwargs
+                positive_paper_ids: List[str],
+                negative_paper_ids: List[str] = None,
+                fields: list = None,
+                limit: int = 100
             ) -> List[Paper]:
         '''Get recommended papers for lists of positive and negative examples.
 
@@ -405,7 +466,12 @@ class SemanticScholar():
 
         loop = asyncio.get_event_loop()
         papers = loop.run_until_complete(
-            self._AsyncSemanticScholar.get_recommended_papers_from_lists(*args, **kwargs)
+            self._AsyncSemanticScholar.get_recommended_papers_from_lists(
+                positive_paper_ids=positive_paper_ids,
+                negative_paper_ids=negative_paper_ids,
+                fields=fields,
+                limit=limit
+                )
         )
 
         return papers

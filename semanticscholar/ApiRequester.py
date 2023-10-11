@@ -1,15 +1,16 @@
 from typing import List, Union
 
 import httpx
+import asyncio
+import warnings
 from tenacity import (retry, retry_if_exception_type, stop_after_attempt,
                       wait_fixed)
 
 from semanticscholar.SemanticScholarException import \
-    BadQueryParametersException, ObjectNotFoundException, \
-    TimeoutException
+    BadQueryParametersException, ObjectNotFoundException
 
 
-class Requester:
+class ApiRequester:
 
     def __init__(self, timeout) -> None:
         '''
@@ -37,7 +38,7 @@ class Requester:
         retry=retry_if_exception_type(ConnectionRefusedError),
         stop=stop_after_attempt(10)
     )
-    async def get_data(
+    async def get_data_async(
                 self,
                 url: str,
                 parameters: str,
@@ -58,11 +59,8 @@ class Requester:
         method = 'POST' if payload else 'GET'
 
         async with httpx.AsyncClient() as client:
-            try:
-                r = await client.request(
-                    method, url, timeout=self._timeout, headers=headers, json=payload)
-            except httpx.TimeoutException:
-                raise TimeoutException("Request timed out.")
+            r = await client.request(
+                method, url, timeout=self._timeout, headers=headers, json=payload)
 
         data = {}
         if r.status_code == 200:
@@ -84,4 +82,27 @@ class Requester:
             raise Exception(data['message'])
 
         return data
+    
+    def get_data(
+                self,
+                url: str,
+                parameters: str,
+                headers: dict,
+                payload: dict = None
+            ) -> Union[dict, List[dict]]:
+        warnings.warn(
+            "get_data() is deprecated and will be disabled in the future," +
+            " use the async version instead.",
+            DeprecationWarning
+            )
+
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(
+            self.get_data_async(
+                url=url,
+                parameters=parameters,
+                headers=headers,
+                payload=payload
+            )
+        )
     
