@@ -148,6 +148,8 @@ class PaginatedResults:
 
     def _update_params(self, results: Union[dict, List[dict]]) -> list:
 
+        result_items = []
+
         if 'data' in results:
 
             self._data = results['data']
