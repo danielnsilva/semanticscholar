@@ -384,6 +384,11 @@ class SemanticScholarTest(unittest.TestCase):
                     method(query, limit=0)
                     self.assertEqual(str(context.exception), error_message)
 
+    @test_vcr.use_cassette
+    def test_empty_paginated_results(self):
+        data = self.sch.search_paper('n0 r3sult s3arch t3rm')
+        self.assertEqual(data.total, 0)
+
 
 if __name__ == '__main__':
     unittest.main()

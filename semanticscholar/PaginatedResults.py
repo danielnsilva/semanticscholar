@@ -98,16 +98,19 @@ class PaginatedResults:
                 self._headers
             )
 
-        self._data = results['data']
-        self._total = results['total'] if 'total' in results else 0
-        self._offset = results['offset']
-        self._next = results['next'] if 'next' in results else 0
-
         result_items = []
-        for item in results['data']:
-            result_items.append(self._data_type(item))
 
-        self._items += result_items
+        if 'data' in results:
+
+            self._data = results['data']
+            self._total = results['total'] if 'total' in results else 0
+            self._offset = results['offset']
+            self._next = results['next'] if 'next' in results else 0
+
+            for item in results['data']:
+                result_items.append(self._data_type(item))
+
+            self._items += result_items
 
         return result_items
 
