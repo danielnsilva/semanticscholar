@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.31.0
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=n0%20r3sult%20s3arch%20t3rm&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+  response:
+    body:
+      string: '{"total": 0, "offset": 0}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Oct 2023 20:52:10 GMT
+      Via:
+      - 1.1 0e3b340d2469d5d03795669e20d22b7e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 9T-u5B3WlBtHh0vdlJYdSntCzw-Af8fq1GIwjrDlHTEvKNghRqUkKg==
+      X-Amz-Cf-Pop:
+      - GRU3-P4
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - MI9PJGlzvHcF5Uw=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '26'
+      x-amzn-Remapped-Date:
+      - Sun, 01 Oct 2023 20:52:10 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - cd8e8299-426b-4f28-8df8-d149b364eb1f
+    status:
+      code: 200
+      message: OK
+version: 1
