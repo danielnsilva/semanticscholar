@@ -1,7 +1,8 @@
-import json
 from typing import List, Union
 
-import requests
+import httpx
+import asyncio
+import warnings
 from tenacity import (retry, retry_if_exception_type, stop_after_attempt,
                       wait_fixed)
 
@@ -10,16 +11,13 @@ from semanticscholar.SemanticScholarException import \
 
 
 class ApiRequester:
-    '''
-    This class handles calls to Semantic Scholar API.
-    '''
 
     def __init__(self, timeout) -> None:
         '''
         :param float timeout: an exception is raised \
             if the server has not issued a response for timeout seconds.
         '''
-        self._timeout = timeout
+        self.timeout = timeout
 
     @property
     def timeout(self) -> int:
@@ -40,7 +38,7 @@ class ApiRequester:
         retry=retry_if_exception_type(ConnectionRefusedError),
         stop=stop_after_attempt(10)
     )
-    def get_data(
+    async def get_data_async(
                 self,
                 url: str,
                 parameters: str,
@@ -59,9 +57,10 @@ class ApiRequester:
 
         url = f'{url}?{parameters}'
         method = 'POST' if payload else 'GET'
-        payload = json.dumps(payload) if payload else None
-        r = requests.request(
-            method, url, timeout=self._timeout, headers=headers, data=payload)
+
+        async with httpx.AsyncClient() as client:
+            r = await client.request(
+                method, url, timeout=self._timeout, headers=headers, json=payload)
 
         data = {}
         if r.status_code == 200:
@@ -83,3 +82,27 @@ class ApiRequester:
             raise Exception(data['message'])
 
         return data
+    
+    def get_data(
+                self,
+                url: str,
+                parameters: str,
+                headers: dict,
+                payload: dict = None
+            ) -> Union[dict, List[dict]]:
+        warnings.warn(
+            "get_data() is deprecated and will be disabled in the future," +
+            " use the async version instead.",
+            DeprecationWarning
+            )
+
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(
+            self.get_data_async(
+                url=url,
+                parameters=parameters,
+                headers=headers,
+                payload=payload
+            )
+        )
+    

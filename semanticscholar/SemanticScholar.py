@@ -1,26 +1,17 @@
 from typing import List, Literal
+import asyncio
+import nest_asyncio
 
-from semanticscholar.ApiRequester import ApiRequester
-from semanticscholar.Author import Author
-from semanticscholar.BaseReference import BaseReference
-from semanticscholar.Citation import Citation
 from semanticscholar.PaginatedResults import PaginatedResults
+from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
+from semanticscholar.Author import Author
 from semanticscholar.Paper import Paper
-from semanticscholar.Reference import Reference
 
 
-class SemanticScholar:
+class SemanticScholar():
     '''
-    Main class to retrieve data from Semantic Scholar Graph API
+    Main class to retrieve data from Semantic Scholar Graph API synchronously.
     '''
-
-    DEFAULT_API_URL = 'https://api.semanticscholar.org'
-    DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org'
-
-    BASE_PATH_GRAPH = '/graph/v1'
-    BASE_PATH_RECOMMENDATIONS = '/recommendations/v1'
-
-    auth_header = {}
 
     def __init__(
                 self,
@@ -34,19 +25,13 @@ class SemanticScholar:
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
         '''
-
-        if api_url:
-            self.api_url = api_url
-        else:
-            self.api_url = self.DEFAULT_API_URL
-
-        if api_key:
-            self.auth_header = {'x-api-key': api_key}
-            if not api_url:
-                self.api_url = self.DEFAULT_PARTNER_API_URL
-
+        nest_asyncio.apply()
         self._timeout = timeout
-        self._requester = ApiRequester(self._timeout)
+        self._AsyncSemanticScholar = AsyncSemanticScholar(
+            timeout=timeout,
+            api_key=api_key,
+            api_url=api_url
+        )
 
     @property
     def timeout(self) -> int:
@@ -61,7 +46,7 @@ class SemanticScholar:
         :param int timeout:
         '''
         self._timeout = timeout
-        self._requester.timeout = timeout
+        self._AsyncSemanticScholar.timeout = timeout
 
     def get_paper(
                 self,
@@ -88,17 +73,13 @@ class SemanticScholar:
         :raises: ObjectNotFoundException: if Paper ID not found.
         '''
 
-        if not fields:
-            fields = Paper.FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/paper/{paper_id}'
-
-        fields = ','.join(fields)
-        parameters = f'&fields={fields}'
-
-        data = self._requester.get_data(url, parameters, self.auth_header)
-        paper = Paper(data)
+        loop = asyncio.get_event_loop()
+        paper = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_paper(
+                paper_id=paper_id, 
+                fields=fields
+                )
+        )
 
         return paper
 
@@ -127,20 +108,13 @@ class SemanticScholar:
         :raises: BadQueryParametersException: if no paper was found.
         '''
 
-        if not fields:
-            fields = Paper.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/paper/batch'
-
-        fields = ','.join(fields)
-        parameters = f'&fields={fields}'
-
-        payload = { "ids": paper_ids }
-
-        data = self._requester.get_data(
-            url, parameters, self.auth_header, payload)
-        papers = [Paper(item) for item in data]
+        loop = asyncio.get_event_loop()
+        papers = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_papers(
+                paper_ids=paper_ids,
+                fields=fields
+                )
+        )
 
         return papers
 
@@ -170,24 +144,14 @@ class SemanticScholar:
                (must be <= 1000).
         '''
 
-        if limit < 1 or limit > 1000:
-            raise ValueError(
-                'The limit parameter must be between 1 and 1000 inclusive.')
-
-        if not fields:
-            fields = [item for item in Author.SEARCH_FIELDS
-                      if not item.startswith('papers')]
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/paper/{paper_id}/authors'
-
-        results = PaginatedResults(
-                requester=self._requester,
-                data_type=Author,
-                url=url,
+        loop = asyncio.get_event_loop()
+        results = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_paper_authors(
+                paper_id=paper_id,
                 fields=fields,
                 limit=limit
-            )
+                )
+        )
 
         return results
 
@@ -217,23 +181,14 @@ class SemanticScholar:
                (must be <= 1000).
         '''
 
-        if limit < 1 or limit > 1000:
-            raise ValueError(
-                'The limit parameter must be between 1 and 1000 inclusive.')
-
-        if not fields:
-            fields = BaseReference.FIELDS + Paper.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/paper/{paper_id}/citations'
-
-        results = PaginatedResults(
-                requester=self._requester,
-                data_type=Citation,
-                url=url,
+        loop = asyncio.get_event_loop()
+        results = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_paper_citations(
+                paper_id=paper_id,
                 fields=fields,
                 limit=limit
-            )
+                )
+        )
 
         return results
 
@@ -263,23 +218,14 @@ class SemanticScholar:
                (must be <= 1000).
         '''
 
-        if limit < 1 or limit > 1000:
-            raise ValueError(
-                'The limit parameter must be between 1 and 1000 inclusive.')
-
-        if not fields:
-            fields = BaseReference.FIELDS + Paper.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/paper/{paper_id}/references'
-
-        results = PaginatedResults(
-                requester=self._requester,
-                data_type=Reference,
-                url=url,
+        loop = asyncio.get_event_loop()
+        results = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_paper_references(
+                paper_id=paper_id,
                 fields=fields,
                 limit=limit
-            )
+                )
+        )
 
         return results
 
@@ -316,41 +262,19 @@ class SemanticScholar:
         :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
-        if limit < 1 or limit > 100:
-            raise ValueError(
-                'The limit parameter must be between 1 and 100 inclusive.')
-
-        if not fields:
-            fields = Paper.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/paper/search'
-
-        query += f'&year={year}' if year else ''
-
-        if publication_types:
-            publication_types = ','.join(publication_types)
-            query += f'&publicationTypes={publication_types}'
-
-        query += '&openAccessPdf' if open_access_pdf else ''
-
-        if venue:
-            venue = ','.join(venue)
-            query += f'&venue={venue}'
-
-        if fields_of_study:
-            fields_of_study = ','.join(fields_of_study)
-            query += f'&fieldsOfStudy={fields_of_study}'
-
-        results = PaginatedResults(
-                self._requester,
-                Paper,
-                url,
-                query,
-                fields,
-                limit,
-                self.auth_header
-            )
+        loop = asyncio.get_event_loop()
+        results = loop.run_until_complete(
+            self._AsyncSemanticScholar.search_paper(
+                query=query,
+                year=year,
+                publication_types=publication_types,
+                open_access_pdf=open_access_pdf,
+                venue=venue,
+                fields_of_study=fields_of_study,
+                fields=fields,
+                limit=limit
+                )
+        )
 
         return results
 
@@ -370,17 +294,13 @@ class SemanticScholar:
         :raises: ObjectNotFoundException: if Author ID not found.
         '''
 
-        if not fields:
-            fields = Author.FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/author/{author_id}'
-
-        fields = ','.join(fields)
-        parameters = f'&fields={fields}'
-
-        data = self._requester.get_data(url, parameters, self.auth_header)
-        author = Author(data)
+        loop = asyncio.get_event_loop()
+        author = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_author(
+                author_id=author_id,
+                fields=fields
+                )
+        )
 
         return author
 
@@ -400,20 +320,13 @@ class SemanticScholar:
         :raises: BadQueryParametersException: if no author was found.
         '''
 
-        if not fields:
-            fields = Author.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/author/batch'
-
-        fields = ','.join(fields)
-        parameters = f'&fields={fields}'
-
-        payload = { "ids": author_ids }
-
-        data = self._requester.get_data(
-            url, parameters, self.auth_header, payload)
-        authors = [Author(item) for item in data]
+        loop = asyncio.get_event_loop()
+        authors = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_authors(
+                author_ids=author_ids,
+                fields=fields
+                )
+        )
 
         return authors
 
@@ -443,23 +356,14 @@ class SemanticScholar:
                (must be <= 1000).
         '''
 
-        if limit < 1 or limit > 1000:
-            raise ValueError(
-                'The limit parameter must be between 1 and 1000 inclusive.')
-
-        if not fields:
-            fields = Paper.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/author/{author_id}/papers'
-
-        results = PaginatedResults(
-                requester=self._requester,
-                data_type=Paper,
-                url=url,
+        loop = asyncio.get_event_loop()
+        results = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_author_papers(
+                author_id=author_id,
                 fields=fields,
                 limit=limit
-            )
+                )
+        )
 
         return results
 
@@ -482,25 +386,14 @@ class SemanticScholar:
         :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
-        if limit < 1 or limit > 1000:
-            raise ValueError(
-                'The limit parameter must be between 1 and 1000 inclusive.')
-
-        if not fields:
-            fields = Author.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_GRAPH
-        url = f'{base_url}/author/search'
-
-        results = PaginatedResults(
-                self._requester,
-                Author,
-                url,
-                query,
-                fields,
-                limit,
-                self.auth_header
-            )
+        loop = asyncio.get_event_loop()
+        results = loop.run_until_complete(
+            self._AsyncSemanticScholar.search_author(
+                query=query,
+                fields=fields,
+                limit=limit
+                )
+        )
 
         return results
 
@@ -535,25 +428,15 @@ class SemanticScholar:
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
         '''
 
-        if pool_from not in ["recent", "all-cs"]:
-            raise ValueError(
-                'The pool_from parameter must be either "recent" or "all-cs".')
-
-        if limit < 1 or limit > 500:
-            raise ValueError(
-                'The limit parameter must be between 1 and 500 inclusive.')
-
-        if not fields:
-            fields = Paper.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_RECOMMENDATIONS
-        url = f'{base_url}/papers/forpaper/{paper_id}'
-
-        fields = ','.join(fields)
-        parameters = f'&fields={fields}&limit={limit}&from={pool_from}'
-
-        data = self._requester.get_data(url, parameters, self.auth_header)
-        papers = [Paper(item) for item in data['recommendedPapers']]
+        loop = asyncio.get_event_loop()
+        papers = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_recommended_papers(
+                paper_id=paper_id,
+                fields=fields,
+                limit=limit,
+                pool_from=pool_from
+                )
+        )
 
         return papers
 
@@ -581,26 +464,14 @@ class SemanticScholar:
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
         '''
 
-        if limit < 1 or limit > 500:
-            raise ValueError(
-                'The limit parameter must be between 1 and 500 inclusive.')
-
-        if not fields:
-            fields = Paper.SEARCH_FIELDS
-
-        base_url = self.api_url + self.BASE_PATH_RECOMMENDATIONS
-        url = f'{base_url}/papers/'
-
-        fields = ','.join(fields)
-        parameters = f'&fields={fields}&limit={limit}'
-
-        payload = {
-            "positivePaperIds": positive_paper_ids,
-            "negativePaperIds": negative_paper_ids
-        }
-
-        data = self._requester.get_data(
-            url, parameters, self.auth_header, payload)
-        papers = [Paper(item) for item in data['recommendedPapers']]
+        loop = asyncio.get_event_loop()
+        papers = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_recommended_papers_from_lists(
+                positive_paper_ids=positive_paper_ids,
+                negative_paper_ids=negative_paper_ids,
+                fields=fields,
+                limit=limit
+                )
+        )
 
         return papers

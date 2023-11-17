@@ -1,11 +1,12 @@
 import json
 import unittest
+import asyncio
 from datetime import datetime
-
+from httpx import TimeoutException
 import vcr
-from requests.exceptions import Timeout
 
 from semanticscholar.Author import Author
+from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
 from semanticscholar.Citation import Citation
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
@@ -23,7 +24,6 @@ test_vcr = vcr.VCR(
     match_on=['uri', 'method', 'body'],
     drop_unused_requests=True
 )
-
 
 class SemanticScholarTest(unittest.TestCase):
 
@@ -179,37 +179,37 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_paper_authors(self):
-        data = self.sch.get_paper_authors('CorpusID:54599684')
+        data = self.sch.get_paper_authors('10.2139/ssrn.2250500')
         self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item for item in data]), 2870)
-        self.assertEqual(data[0].name, 'G. Aad')
+        self.assertEqual(data.next, 0)
+        self.assertEqual(len([item for item in data]), 4)
+        self.assertEqual(data[0].name, 'E. Duflo')
 
     @test_vcr.use_cassette
     def test_get_paper_citations(self):
         data = self.sch.get_paper_citations('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item.paper.title for item in data]), 4563)
+        self.assertEqual(len([item.paper.title for item in data]), 6247)
         self.assertEqual(
-            data[0].paper.title, 'Learning to Throw With a Handful of Samples '
-                'Using Decision Transformers')
+            data[0].paper.title, 'A vision transformer-based automated '
+            'human identification using ear biometrics')
 
     @test_vcr.use_cassette
     def test_get_paper_references(self):
         data = self.sch.get_paper_references('CorpusID:1033682')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 35)
+        self.assertEqual(len(data), 61)
         self.assertEqual(
-            data[0].paper.title, 'Neural Variational Inference and Learning '
-                'in Belief Networks')
+            data[0].paper.title, 'The Malicious Use of Artificial Intelligence: '
+            'Forecasting, Prevention, and Mitigation')
 
     @test_vcr.use_cassette
     def test_timeout(self):
         self.sch.timeout = 0.01
         self.assertEqual(self.sch.timeout, 0.01)
-        self.assertRaises(Timeout,
+        self.assertRaises(TimeoutException,
                           self.sch.get_paper,
                           '10.1093/mind/lix.236.433')
 
@@ -231,10 +231,9 @@ class SemanticScholarTest(unittest.TestCase):
         data = self.sch.get_author_papers(1723755, limit=100)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 925)
-        self.assertEqual(data[0].title, 'Genetic heterogeneity and '
-                        'tissue-specific patterns of tumors with multiple '
-                        'PIK3CA mutations.')
+        self.assertEqual(len([item for item in data]), 938)
+        self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38β/MAPK11 to '
+                         'promote virus replication')
 
     @test_vcr.use_cassette
     def test_not_found(self):
@@ -259,8 +258,9 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(len(data.items), 100)
         self.assertEqual(
             data.raw_data[0]['title'],
-            'Quantum theory, the Church–Turing principle and the universal '
-            'quantum computer')
+            'Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, '
+            'A Large-Scale Generative Language Model'
+        )
 
     @test_vcr.use_cassette
     def test_search_paper_next_page(self):
@@ -270,7 +270,7 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_paper_traversing_results(self):
-        data = self.sch.search_paper('turing')
+        data = self.sch.search_paper('sublinear near optimal edit distance')
         all_results = [item.title for item in data]
         self.assertRaises(BadQueryParametersException, data.next_page)
         self.assertEqual(len(all_results), len(data.items))
@@ -304,7 +304,7 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_search_paper_venue(self):
         data = self.sch.search_paper('turing', venue=['ArXiv'])
-        self.assertEqual(data[0].venue, 'ArXiv')
+        self.assertEqual(data[0].venue, 'arXiv.org')
 
     @test_vcr.use_cassette
     def test_search_paper_open_access_pdf(self):
@@ -319,7 +319,7 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_recommended_papers(self):
-        data = self.sch.get_recommended_papers('10.1145/3544585.3544600')
+        data = self.sch.get_recommended_papers('10.2139/ssrn.2250500')
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
@@ -384,10 +384,242 @@ class SemanticScholarTest(unittest.TestCase):
                     method(query, limit=0)
                     self.assertEqual(str(context.exception), error_message)
 
+    # These last two tests have some async and some sync parts, so 
+    # the async parts are run manually using asyncio.run_until_complete()
+    @test_vcr.use_cassette
+    async def test_get_author_papers_async(self):
+        loop = asyncio.get_event_loop()
+        data = loop.run_until_complete(self.sch.get_author_papers(1723755, limit=100))
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len([item for item in data]), 940)
+        self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
+
+    @test_vcr.use_cassette
+    async def test_get_paper_citations_async(self):
+        loop = asyncio.get_event_loop()
+        data = loop.run_until_complete(self.sch.get_paper_citations('CorpusID:49313245'))
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 1000)
+        self.assertEqual(len([item.paper.title for item in data]), 6220)
+        self.assertEqual(
+            data[0].paper.title, 'Self-Attention Mechanism for Dynamic Multi-Step Rop '
+                'Prediction Under Continuous Learning Structure')
+
     @test_vcr.use_cassette
     def test_empty_paginated_results(self):
         data = self.sch.search_paper('n0 r3sult s3arch t3rm')
         self.assertEqual(data.total, 0)
+
+class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
+
+    def setUp(self) -> None:
+        self.sch = AsyncSemanticScholar(timeout=1000, api_key="C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0")
+
+    @test_vcr.use_cassette
+    async def test_get_paper_async(self):
+        data = await self.sch.get_paper('10.1093/mind/lix.236.433')
+        self.assertEqual(data.title,
+                         'Computing Machinery and Intelligence')
+        self.assertEqual(data.raw_data['title'],
+                         'Computing Machinery and Intelligence')
+
+    @test_vcr.use_cassette
+    async def test_get_papers_async(self):
+        list_of_paper_ids = [
+            'CorpusId:470667',
+            '10.2139/ssrn.2250500',
+            '0f40b1f08821e22e859c6050916cec3667778613']
+        data = await self.sch.get_papers(list_of_paper_ids)
+        for item in data:
+            with self.subTest(subtest=item.paperId):
+                self.assertIn(
+                    'E. Duflo', [author.name for author in item.authors])
+    
+    @test_vcr.use_cassette
+    async def test_get_paper_authors_async(self):
+        data = await self.sch.get_paper_authors('10.2139/ssrn.2250500')
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 0)
+        self.assertEqual(len([item for item in data]), 4)
+        self.assertEqual(data[0].name, 'E. Duflo')
+
+    @test_vcr.use_cassette
+    async def test_get_paper_references_async(self):
+        data = await self.sch.get_paper_references('CorpusID:49313245')
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 0)
+        self.assertEqual(len(data), 75)
+        self.assertEqual(
+            data[0].paper.title, 'Constituency Parsing with a Self-Attentive Encoder')
+    
+    @test_vcr.use_cassette
+    async def test_timeout_async(self):
+        self.sch.timeout = 0.01
+        self.assertEqual(self.sch.timeout, 0.01)
+        with self.assertRaises(TimeoutException):
+            await self.sch.get_paper('10.1093/mind/lix.236.433')
+    
+    @test_vcr.use_cassette
+    async def test_get_author_async(self):
+        data = await self.sch.get_author(2262347)
+        self.assertEqual(data.name, 'A. Turing')
+
+    @test_vcr.use_cassette
+    async def test_get_authors_async(self):
+        list_of_author_ids = ['3234559', '1726629', '1711844']
+        data = await self.sch.get_authors(list_of_author_ids)
+        list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
+        self.assertCountEqual(
+            [item.name for item in data], list_of_author_names)
+
+    @test_vcr.use_cassette
+    async def test_not_found_async(self):
+        with self.assertRaises(ObjectNotFoundException):
+            await self.sch.get_paper(0)
+        with self.assertRaises(ObjectNotFoundException):
+            await self.sch.get_author(0)
+
+    @test_vcr.use_cassette
+    async def test_bad_query_parameters_async(self):
+        with self.assertRaises(BadQueryParametersException):
+            await self.sch.get_paper('10.1093/mind/lix.236.433', fields=['unknown'])
+
+    @test_vcr.use_cassette
+    async def test_search_paper_async(self):
+        data = await self.sch.search_paper('turing')
+        self.assertGreater(data.total, 0)
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len(data.items), 100)
+        self.assertEqual(
+            data.raw_data[0]['title'],
+            'Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, '
+            'A Large-Scale Generative Language Model')
+
+    @test_vcr.use_cassette
+    async def test_search_paper_next_page_async(self):
+        data = await self.sch.search_paper('turing')
+        await data.async_next_page()
+        self.assertGreater(len(data), 100)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_traversing_results_async(self):
+        data = await self.sch.search_paper('sublinear near optimal edit distance')
+        all_results = [item.title for item in data]
+        with self.assertRaises(BadQueryParametersException):
+            await data.next_page()
+        self.assertEqual(len(all_results), len(data.items))
+
+    @test_vcr.use_cassette
+    async def test_search_paper_fields_of_study_async(self):
+        data = await self.sch.search_paper('turing', fields_of_study=['Mathematics'])
+        self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
+
+    @test_vcr.use_cassette
+    async def test_search_paper_year_async(self):
+        data = await self.sch.search_paper('turing', year=1936)
+        self.assertEqual(data[0].year, 1936)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_year_range_async(self):
+        data = await self.sch.search_paper('turing', year='1936-1937')
+        self.assertTrue(all([1936 <= item.year <= 1937 for item in data]))
+
+    @test_vcr.use_cassette
+    async def test_search_paper_publication_types_async(self):
+        data = await self.sch.search_paper(
+            'turing', publication_types=['JournalArticle'])
+        self.assertTrue('JournalArticle' in data[0].publicationTypes)
+        data = await self.sch.search_paper(
+            'turing', publication_types=['Book', 'Conference'])
+        self.assertTrue(
+            'Book' in data[0].publicationTypes or
+            'Conference' in data[0].publicationTypes)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_venue_async(self):
+        data = await self.sch.search_paper('turing', venue=['ArXiv'])
+        self.assertEqual(data[0].venue, 'arXiv.org')
+
+    @test_vcr.use_cassette
+    async def test_search_paper_open_access_pdf_async(self):
+        data = await self.sch.search_paper('turing', open_access_pdf=True)
+        self.assertTrue(data[0].openAccessPdf)
+
+    @test_vcr.use_cassette
+    async def test_search_author_async(self):
+        data = await self.sch.search_author('turing')
+        self.assertGreater(data.total, 0)
+        self.assertEqual(data.next, 0)
+
+    @test_vcr.use_cassette
+    async def test_get_recommended_papers_async(self):
+        data = await self.sch.get_recommended_papers('10.2139/ssrn.2250500')
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    async def test_get_recommended_papers_pool_from_async(self):
+        data = await self.sch.get_recommended_papers(
+            '10.1145/3544585.3544600', pool_from="all-cs")
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    async def test_get_recommended_papers_pool_from_invalid_async(self):
+        with self.assertRaises(ValueError):
+            await self.sch.get_recommended_papers(
+                '10.1145/3544585.3544600', pool_from="invalid")
+
+    @test_vcr.use_cassette
+    async def test_get_recommended_papers_from_lists_async(self):
+        data = await self.sch.get_recommended_papers_from_lists(
+            ['10.1145/3544585.3544600'], ['10.1145/301250.301271'])
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    async def test_get_recommended_papers_from_lists_positive_only_async(self):
+        data = await self.sch.get_recommended_papers_from_lists(
+            ['10.1145/3544585.3544600', '10.1145/301250.301271'])
+        self.assertEqual(len(data), 100)
+
+    @test_vcr.use_cassette
+    async def test_get_recommended_papers_from_lists_negative_only_async(self):
+        with self.assertRaises(BadQueryParametersException):
+            await self.sch.get_recommended_papers_from_lists(
+                [],
+                ['10.1145/3544585.3544600']
+            )
+
+    @test_vcr.use_cassette
+    async def test_limit_value_exceeded_async(self):
+        test_cases = [
+            (self.sch.get_paper_authors, '10.1093/mind/lix.236.433', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
+            (self.sch.get_paper_citations, '10.1093/mind/lix.236.433', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
+            (self.sch.get_paper_references, '10.1093/mind/lix.236.433', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
+            (self.sch.get_author_papers, 1723755, 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
+            (self.sch.search_author, 'turing', 1001,
+             'The limit parameter must be between 1 and 1000 inclusive.'),
+            (self.sch.search_paper, 'turing', 101,
+             'The limit parameter must be between 1 and 100 inclusive.'),
+            (self.sch.get_recommended_papers, '10.1145/3544585.3544600', 501,
+             'The limit parameter must be between 1 and 500 inclusive.'),
+            (self.sch.get_recommended_papers_from_lists,
+             ['10.1145/3544585.3544600'], 501,
+             'The limit parameter must be between 1 and 500 inclusive.'),
+        ]
+        for method, query, upper_limit, error_message in test_cases:
+            with self.subTest(method=method.__name__, limit=upper_limit):
+                with self.assertRaises(ValueError) as context:
+                    await method(query, limit=upper_limit)
+                    self.assertEqual(str(context.exception), error_message)
+            with self.subTest(method=method.__name__, limit=0):
+                with self.assertRaises(ValueError) as context:
+                    await method(query, limit=0)
+                    self.assertEqual(str(context.exception), error_message)
 
 
 if __name__ == '__main__':

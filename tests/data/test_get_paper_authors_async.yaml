@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - partner.semanticscholar.org
+      user-agent:
+      - python-httpx/0.24.1
+    method: GET
+    uri: https://partner.semanticscholar.org/graph/v1/paper/10.2139/ssrn.2250500/authors?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,url&offset=0&limit=1000
+  response:
+    content: '{"offset": 0, "data": [{"authorId": "2259683", "externalIds": {"DBLP":
+      ["Esther Duflo"]}, "url": "https://www.semanticscholar.org/author/2259683",
+      "name": "E. Duflo", "aliases": ["E. Duflo", "Esther Duflo", "Esther C. Duflo"],
+      "affiliations": [], "homepage": null, "paperCount": 300, "citationCount": 56603,
+      "hIndex": 91}, {"authorId": "2237651454", "externalIds": {"DBLP": ["Abhijit
+      Banerjee 0001"]}, "url": "https://www.semanticscholar.org/author/2237651454",
+      "name": "A. Banerjee", "aliases": ["A. Banerjee", "A. V. Banerjee", "Abhijit
+      V. Banerjee", "Abhijit V Banerjee", "Abhijit Vinayak Banerjee", "Abhijit Banerjee"],
+      "affiliations": [], "homepage": null, "paperCount": 376, "citationCount": 47808,
+      "hIndex": 93}, {"authorId": "4249203", "externalIds": {}, "url": "https://www.semanticscholar.org/author/4249203",
+      "name": "R. Glennerster", "aliases": ["R Glennerster", "R. Glennerster", "Rachel
+      Glennerster"], "affiliations": [], "homepage": null, "paperCount": 108, "citationCount":
+      8184, "hIndex": 31}, {"authorId": "31549526", "externalIds": {}, "url": "https://www.semanticscholar.org/author/31549526",
+      "name": "Cynthia Kinnan", "aliases": ["Cynthia Kinnan"], "affiliations": [],
+      "homepage": null, "paperCount": 32, "citationCount": 2840, "hIndex": 11}]}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1265'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 13 Sep 2023 21:45:35 GMT
+      Via:
+      - 1.1 c9fc8eca0b2b3a083a77fd1cf662c1a8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - SXkSykBIojO98moKwcLQQ-rEDZ6APZyzsFMITHvkrVj1aMpgWHvpZg==
+      X-Amz-Cf-Pop:
+      - EWR53-C1
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - LNwL7GvpvHcFweA=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '1265'
+      x-amzn-Remapped-Date:
+      - Wed, 13 Sep 2023 21:45:35 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - c271e8a5-e330-4fba-8d8f-dee56d4ab08b
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
