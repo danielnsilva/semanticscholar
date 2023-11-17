@@ -11,59 +11,7 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-    method: GET
-    uri: https://api.semanticscholar.org/recommendations/v1/papers/forpaper/10.1145/3544585.3544600?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=recent
-  response:
-    content: '{"recommendedPapers": []}
-
-      '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '26'
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 13 Sep 2023 21:48:16 GMT
-      Via:
-      - 1.1 e6fc68fd040718147cda2e3ef6f63636.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - u9QHJPnmadXpFPZCPcyYMxU0I9ZUzn2AnZXJoFoeWpUYGSWrF22diA==
-      X-Amz-Cf-Pop:
-      - EWR50-C1
-      X-Cache:
-      - Miss from cloudfront
-      x-amz-apigw-id:
-      - LNwlGGa_vHcFvbw=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '26'
-      x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:48:16 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - 60ada209-bf3e-4179-b015-fd501391b74c
-    http_version: HTTP/1.1
-    status_code: 200
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.semanticscholar.org
-      user-agent:
-      - python-httpx/0.24.1
+      - python-httpx/0.25.1
     method: GET
     uri: https://api.semanticscholar.org/recommendations/v1/papers/forpaper/10.2139/ssrn.2250500?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100&from=recent
   response:

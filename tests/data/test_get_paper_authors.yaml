@@ -11,59 +11,7 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-    method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/CorpusID:54599684/authors?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,url&offset=0&limit=1000
-  response:
-    content: '{"offset": 0, "data": []}
-
-      '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '26'
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 13 Sep 2023 21:47:26 GMT
-      Via:
-      - 1.1 e8bd72d9a7c5eaf252aab1ed2d79e1a6.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - CZLCPQxKQFSfYBAvwFJleJKb1DUE2XB--R_vHypqCtrL7Tvl4_o08g==
-      X-Amz-Cf-Pop:
-      - EWR50-C1
-      X-Cache:
-      - Miss from cloudfront
-      x-amz-apigw-id:
-      - LNwdSGt_PHcFsOg=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '26'
-      x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:47:26 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - d22f9492-8add-4dc6-b0ff-f1d0cfbc5b17
-    http_version: HTTP/1.1
-    status_code: 200
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.semanticscholar.org
-      user-agent:
-      - python-httpx/0.24.1
+      - python-httpx/0.25.1
     method: GET
     uri: https://api.semanticscholar.org/graph/v1/paper/10.2139/ssrn.2250500/authors?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,url&offset=0&limit=1000
   response:

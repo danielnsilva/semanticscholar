@@ -1,22 +1,23 @@
 interactions:
 - request:
-    body: null
+    body: ''
     headers:
-      Accept:
+      accept:
       - '*/*'
-      Accept-Encoding:
+      accept-encoding:
       - gzip, deflate
-      Connection:
+      connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.31.0
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.25.1
     method: GET
     uri: https://api.semanticscholar.org/graph/v1/paper/search?query=n0%20r3sult%20s3arch%20t3rm&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
-    body:
-      string: '{"total": 0, "offset": 0}
+    content: '{"total": 0, "offset": 0}
 
-        '
+      '
     headers:
       Access-Control-Allow-Origin:
       - '*'
@@ -27,28 +28,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 01 Oct 2023 20:52:10 GMT
+      - Thu, 16 Nov 2023 21:22:16 GMT
       Via:
-      - 1.1 0e3b340d2469d5d03795669e20d22b7e.cloudfront.net (CloudFront)
+      - 1.1 2199b1b2895d8f15e09ac5a5c5b50dbc.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 9T-u5B3WlBtHh0vdlJYdSntCzw-Af8fq1GIwjrDlHTEvKNghRqUkKg==
+      - C8DZAiXBBgkx-_M4WKH9pQc6cLPmzOWk5AmHgpf-pNm2Us0Zd8-72A==
       X-Amz-Cf-Pop:
-      - GRU3-P4
+      - GIG51-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - MI9PJGlzvHcF5Uw=
+      - OgoxTEGuvHcEj1Q=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '26'
       x-amzn-Remapped-Date:
-      - Sun, 01 Oct 2023 20:52:10 GMT
+      - Thu, 16 Nov 2023 21:22:16 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - cd8e8299-426b-4f28-8df8-d149b364eb1f
-    status:
-      code: 200
-      message: OK
+      - b0482536-09c8-4237-a935-9e84fd128e9b
+    http_version: HTTP/1.1
+    status_code: 200
 version: 1
