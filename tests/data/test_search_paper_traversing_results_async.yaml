@@ -9,16 +9,14 @@ interactions:
       connection:
       - keep-alive
       host:
-      - partner.semanticscholar.org
+      - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-      x-api-key:
-      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+      - python-httpx/0.25.1
     method: GET
-    uri: https://partner.semanticscholar.org/graph/v1/paper/search?query=sublinear%20near%20optimal%20edit%20distance&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=sublinear%20near%20optimal%20edit%20distance&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
-    content: '{"total": 82, "offset": 0, "data": [{"paperId": "169a66a031488ce0c8fdd70502945dbf69b045a5",
-      "externalIds": {"DBLP": "conf/soda/AndoniN10", "MAG": "2046785857", "DOI": "10.1137/1.9781611973075.8",
+    content: '{"total": 81, "offset": 0, "data": [{"paperId": "169a66a031488ce0c8fdd70502945dbf69b045a5",
+      "externalIds": {"MAG": "2046785857", "DBLP": "conf/soda/AndoniN10", "DOI": "10.1137/1.9781611973075.8",
       "CorpusId": 1227224}, "corpusId": 1227224, "publicationVenue": {"id": "5545566b-c0b8-418c-83a5-a986a4657572",
       "name": "ACM-SIAM Symposium on Discrete Algorithms", "type": "conference", "alternate_names":
       ["Symposium on Discrete Algorithms", "ACM-SIAM Symp Discret Algorithm", "Symp
@@ -33,7 +31,7 @@ interactions:
       over previous results from, respectively, [Andoni-Indyk-Krauthgamer, SODA''09]
       and [Batu-Ergun-Kilian-Magen-Raskhodnikova-Rubinfeld-Sami, STOC''03].", "venue":
       "ACM-SIAM Symposium on Discrete Algorithms", "year": 2010, "referenceCount":
-      12, "citationCount": 28, "influentialCitationCount": 4, "isOpenAccess": true,
+      11, "citationCount": 27, "influentialCitationCount": 4, "isOpenAccess": true,
       "openAccessPdf": {"url": "http://www.mit.edu/%7Eandoni/papers/ulamSublinear.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
@@ -74,7 +72,7 @@ interactions:
       on the (local and global) patterns that can emerge during this process and design
       appropriate property testers to effectively detect these patterns.", "venue":
       "Symposium on the Theory of Computing", "year": 2022, "referenceCount": 29,
-      "citationCount": 5, "influentialCitationCount": 1, "isOpenAccess": true, "openAccessPdf":
+      "citationCount": 6, "influentialCitationCount": 1, "isOpenAccess": true, "openAccessPdf":
       {"url": "https://dl.acm.org/doi/pdf/10.1145/3519935.3519990", "status": "BRONZE"},
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
@@ -83,8 +81,49 @@ interactions:
       {"name": "Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing"},
       "authors": [{"authorId": "2535238", "name": "K. Bringmann"}, {"authorId": "2117586564",
       "name": "Alejandro Cassis"}, {"authorId": "2055530844", "name": "N. Fischer"},
-      {"authorId": "3327757", "name": "Vasileios Nakos"}]}, {"paperId": "7435880873bb436c0695882339b3d5e633b3ebf8",
-      "externalIds": {"MAG": "2971308101", "ArXiv": "1905.01254", "DBLP": "conf/mfcs/CliffordGKMU19",
+      {"authorId": "3327757", "name": "Vasileios Nakos"}]}, {"paperId": "255acd4dde36a151842af8f6391a8420ed79c2c9",
+      "externalIds": {"ArXiv": "2311.01793", "DBLP": "journals/corr/abs-2311-01793",
+      "DOI": "10.48550/arXiv.2311.01793", "CorpusId": 265018998}, "corpusId": 265018998,
+      "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10", "name": "arXiv.org",
+      "alternate_names": ["ArXiv"], "issn": "2331-8422", "url": "https://arxiv.org"},
+      "url": "https://www.semanticscholar.org/paper/255acd4dde36a151842af8f6391a8420ed79c2c9",
+      "title": "Near-Optimal Quantum Algorithms for Bounded Edit Distance and Lempel-Ziv
+      Factorization", "abstract": "Classically, the edit distance of two length-$n$
+      strings can be computed in $O(n^2)$ time, whereas an $O(n^{2-\\epsilon})$-time
+      procedure would falsify the Orthogonal Vectors Hypothesis. If the edit distance
+      does not exceed $k$, the running time can be improved to $O(n+k^2)$, which is
+      near-optimal (conditioned on OVH) as a function of $n$ and $k$. Our first main
+      contribution is a quantum $\\tilde{O}(\\sqrt{nk}+k^2)$-time algorithm that uses
+      $\\tilde{O}(\\sqrt{nk})$ queries, where $\\tilde{O}(\\cdot)$ hides polylogarithmic
+      factors. This query complexity is unconditionally optimal, and any significant
+      improvement in the time complexity would resolve a long-standing open question
+      of whether edit distance admits an $O(n^{2-\\epsilon})$-time quantum algorithm.
+      Our divide-and-conquer quantum algorithm reduces the edit distance problem to
+      a case where the strings have small Lempel-Ziv factorizations. Then, it combines
+      a quantum LZ compression algorithm with a classical edit-distance subroutine
+      for compressed strings. The LZ factorization problem can be classically solved
+      in $O(n)$ time, which is unconditionally optimal in the quantum setting. We
+      can, however, hope for a quantum speedup if we parameterize the complexity in
+      terms of the factorization size $z$. Already a generic oracle identification
+      algorithm yields the optimal query complexity of $\\tilde{O}(\\sqrt{nz})$ at
+      the price of exponential running time. Our second main contribution is a quantum
+      algorithm that achieves the optimal time complexity of $\\tilde{O}(\\sqrt{nz})$.
+      The key tool is a novel LZ-like factorization of size $O(z\\log^2n)$ whose subsequent
+      factors can be efficiently computed through a combination of classical and quantum
+      techniques. We can then obtain the string''s run-length encoded Burrows-Wheeler
+      Transform (BWT), construct the $r$-index, and solve many fundamental string
+      processing problems in time $\\tilde{O}(\\sqrt{nz})$.", "venue": "arXiv.org",
+      "year": 2023, "referenceCount": 80, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Physics"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
+      "external"}, {"category": "Physics", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2023-11-03", "journal":
+      {"name": "ArXiv", "volume": "abs/2311.01793"}, "authors": [{"authorId": "38372154",
+      "name": "Daniel Gibney"}, {"authorId": "2265466647", "name": "Ce Jin"}, {"authorId":
+      "1683073", "name": "T. Kociumaka"}, {"authorId": "1733907", "name": "Sharma
+      V. Thankachan"}]}, {"paperId": "7435880873bb436c0695882339b3d5e633b3ebf8", "externalIds":
+      {"MAG": "2971308101", "DBLP": "journals/corr/abs-1905-01254", "ArXiv": "1905.01254",
       "DOI": "10.4230/LIPIcs.MFCS.2019.66", "CorpusId": 145048674}, "corpusId": 145048674,
       "publicationVenue": {"id": "8341fde2-3e67-4fde-bb5c-6f0320d7f114", "name": "International
       Symposium on Mathematical Foundations of Computer Science", "type": "conference",
@@ -99,7 +138,7 @@ interactions:
       subject to the standard SETH-hardness assumption. This effectively closes a
       line of algorithmic research first started in 1993.", "venue": "International
       Symposium on Mathematical Foundations of Computer Science", "year": 2019, "referenceCount":
-      15, "citationCount": 3, "influentialCitationCount": 0, "isOpenAccess": false,
+      15, "citationCount": 4, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -138,7 +177,7 @@ interactions:
       but only for small enough k and c.", "venue": "IEEE Annual Symposium on Foundations
       of Computer Science", "year": 2021, "referenceCount": 37, "citationCount": 6,
       "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
-      "http://arxiv.org/pdf/2111.12706", "status": "GREEN"}, "fieldsOfStudy": ["Computer
+      "https://arxiv.org/pdf/2111.12706", "status": "GREEN"}, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
@@ -147,11 +186,10 @@ interactions:
       "name": "Elazar Goldenberg"}, {"authorId": "1683073", "name": "T. Kociumaka"},
       {"authorId": "1737712", "name": "Robert Krauthgamer"}, {"authorId": "3269130",
       "name": "B. Saha"}]}, {"paperId": "bc89e7e20da2c5674e91eb6c28030def0ef2a4ff",
-      "externalIds": {"ArXiv": "2007.14368", "DBLP": "journals/corr/abs-2007-14368",
-      "MAG": "3045868777", "CorpusId": 220831191}, "corpusId": 220831191, "publicationVenue":
+      "externalIds": {"MAG": "3045868777", "DBLP": "journals/corr/abs-2007-14368",
+      "ArXiv": "2007.14368", "CorpusId": 220831191}, "corpusId": 220831191, "publicationVenue":
       {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10", "name": "arXiv.org", "alternate_names":
-      ["ArXiv"], "issn": "2331-8422", "url": "http://bibpurl.oclc.org/web/7130"},
-      "url": "https://www.semanticscholar.org/paper/bc89e7e20da2c5674e91eb6c28030def0ef2a4ff",
+      ["ArXiv"], "issn": "2331-8422", "url": "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/bc89e7e20da2c5674e91eb6c28030def0ef2a4ff",
       "title": "A Simple Sublinear Algorithm for Gap Edit Distance", "abstract": "We
       study the problem of estimating the edit distance between two $n$-character
       strings. While exact computation in the worst case is believed to require near-quadratic
@@ -173,12 +211,12 @@ interactions:
       "2020-07-28", "journal": {"name": "ArXiv", "volume": "abs/2007.14368"}, "authors":
       [{"authorId": "31332532", "name": "Joshua Brakensiek"}, {"authorId": "1745732",
       "name": "M. Charikar"}, {"authorId": "38651679", "name": "A. Rubinstein"}]},
-      {"paperId": "887db39a940b590140011c0e4e688b2212b0e8ee", "externalIds": {"ArXiv":
-      "1910.00901", "DBLP": "conf/focs/GoldenbergKS19", "MAG": "2971787908", "DOI":
-      "10.1109/FOCS.2019.00070", "CorpusId": 202776351}, "corpusId": 202776351, "publicationVenue":
-      {"id": "68cf0e99-5164-4480-8ed4-8b8416a091df", "name": "IEEE Annual Symposium
-      on Foundations of Computer Science", "type": "conference", "alternate_names":
-      ["FOCS", "IEEE Annu Symp Found Comput Sci"], "url": "http://ieee-focs.org/"},
+      {"paperId": "887db39a940b590140011c0e4e688b2212b0e8ee", "externalIds": {"DBLP":
+      "journals/corr/abs-1910-00901", "ArXiv": "1910.00901", "MAG": "2971787908",
+      "DOI": "10.1109/FOCS.2019.00070", "CorpusId": 202776351}, "corpusId": 202776351,
+      "publicationVenue": {"id": "68cf0e99-5164-4480-8ed4-8b8416a091df", "name": "IEEE
+      Annual Symposium on Foundations of Computer Science", "type": "conference",
+      "alternate_names": ["FOCS", "IEEE Annu Symp Found Comput Sci"], "url": "http://ieee-focs.org/"},
       "url": "https://www.semanticscholar.org/paper/887db39a940b590140011c0e4e688b2212b0e8ee",
       "title": "Sublinear Algorithms for Gap Edit Distance", "abstract": "Abstract\u2014The
       edit distance is a way of quantifying how similar two strings are to one another
@@ -202,8 +240,8 @@ interactions:
       previous algorithms choose which coordinates to query non-adaptively. Moreover,
       it can be extended to solve the t vs t^2-\u03b5 gap problem in time \u00d5(n/t^1-\u03b5+t^3).",
       "venue": "IEEE Annual Symposium on Foundations of Computer Science", "year":
-      2019, "referenceCount": 35, "citationCount": 25, "influentialCitationCount":
-      1, "isOpenAccess": true, "openAccessPdf": {"url": "http://arxiv.org/pdf/1910.00901",
+      2019, "referenceCount": 35, "citationCount": 26, "influentialCitationCount":
+      1, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/1910.00901",
       "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
@@ -212,53 +250,11 @@ interactions:
       IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS)", "pages":
       "1101-1120"}, "authors": [{"authorId": "1752311", "name": "Elazar Goldenberg"},
       {"authorId": "1737712", "name": "Robert Krauthgamer"}, {"authorId": "3269130",
-      "name": "B. Saha"}]}, {"paperId": "2875b388c07381aecdf620990f71394a840fbb0e",
-      "externalIds": {"DBLP": "journals/corr/abs-2107-11530", "ArXiv": "2107.11530",
-      "DOI": "10.1137/1.9781611977073.34", "CorpusId": 236428709}, "corpusId": 236428709,
-      "publicationVenue": {"id": "5545566b-c0b8-418c-83a5-a986a4657572", "name": "ACM-SIAM
-      Symposium on Discrete Algorithms", "type": "conference", "alternate_names":
-      ["Symposium on Discrete Algorithms", "ACM-SIAM Symp Discret Algorithm", "Symp
-      Discret Algorithm", "SODA"], "url": "https://en.wikipedia.org/wiki/Symposium_on_Discrete_Algorithms"},
-      "url": "https://www.semanticscholar.org/paper/2875b388c07381aecdf620990f71394a840fbb0e",
-      "title": "Near-Optimal Average-Case Approximate Trace Reconstruction from Few
-      Traces", "abstract": "In the standard trace reconstruction problem, the goal
-      is to exactly reconstruct an unknown source string x \u2208 {0, 1}n from independent
-      \u201ctraces\u201d, which are copies of x that have been corrupted by a \u03b4-deletion
-      channel which independently deletes each bit of x with probability \u03b4 and
-      concatenates the surviving bits. We study the approximate trace reconstruction
-      problem, in which the goal is only to obtain a high-accuracy approximation of
-      x rather than an exact reconstruction. We give an efficient algorithm, and a
-      near-matching lower bound, for approximate reconstruction of a random source
-      string x \u2208 {0, 1}n from few traces. Our main algorithmic result is a polynomial-time
-      algorithm with the following property: for any deletion rate 0 < \u03b4 < 1
-      (which may depend on n), for almost every source string x \u2208 {0, 1}n, given
-      any number M \u2264 \u0398(1/\u03b4) of traces from Del\u03b4(x), the algorithm
-      constructs a hypothesis string x\u0302 that has edit distance at most n \u00b7
-      (\u03b4M) from x. We also prove a near-matching information-theoretic lower
-      bound showing that given M \u2264 \u0398(1/\u03b4) traces from Del\u03b4(x)
-      for a random n-bit string x, the smallest possible expected edit distance that
-      any algorithm can achieve, regardless of its running time, is n \u00b7 (\u03b4M).
-      Supported by NSF grants CCF-1703925 and IIS-1838154. Supported by NSF grants
-      CCF-1926872 and CCF-1910534. Supported by the Croucher Foundation and the Simons
-      Collaboration on Algorithms and Geometry. Supported by NSF grants CCF-1814873,
-      IIS-1838154, CCF-1563155, and by the Simons Collaboration on Algorithms and
-      Geometry. Supported by NSF grants CCF-1714818, CCF-1822809, IIS-1838154, CCF-1617955,
-      CCF-1740833, and by the Simons Collaboration on Algorithms and Geometry.", "venue":
-      "ACM-SIAM Symposium on Discrete Algorithms", "year": 2021, "referenceCount":
-      28, "citationCount": 7, "influentialCitationCount": 0, "isOpenAccess": true,
-      "openAccessPdf": {"url": "https://arxiv.org/pdf/2107.11530", "status": "GREEN"},
-      "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
-      Science", "source": "external"}, {"category": "Computer Science", "source":
-      "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle", "Conference"], "publicationDate": "2021-07-24", "journal":
-      {"pages": "779-821"}, "authors": [{"authorId": "2145307359", "name": "Xi Chen"},
-      {"authorId": "145202870", "name": "Anindya De"}, {"authorId": "9392134", "name":
-      "Chin Ho Lee"}, {"authorId": "1729835", "name": "R. Servedio"}, {"authorId":
-      "1739180701", "name": "S. Sinha"}]}, {"paperId": "08034a0a533e1a25693970c6f6f04ad8f429c3bc",
-      "externalIds": {"DBLP": "journals/corr/abs-2307-07175", "ArXiv": "2307.07175",
+      "name": "B. Saha"}]}, {"paperId": "08034a0a533e1a25693970c6f6f04ad8f429c3bc",
+      "externalIds": {"ArXiv": "2307.07175", "DBLP": "journals/corr/abs-2307-07175",
       "DOI": "10.48550/arXiv.2307.07175", "CorpusId": 259924560}, "corpusId": 259924560,
       "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10", "name": "arXiv.org",
-      "alternate_names": ["ArXiv"], "issn": "2331-8422", "url": "http://bibpurl.oclc.org/web/7130"},
+      "alternate_names": ["ArXiv"], "issn": "2331-8422", "url": "https://arxiv.org"},
       "url": "https://www.semanticscholar.org/paper/08034a0a533e1a25693970c6f6f04ad8f429c3bc",
       "title": "Approximating Edit Distance in the Fully Dynamic Model", "abstract":
       "The edit distance is a fundamental measure of sequence similarity, defined
@@ -286,19 +282,19 @@ interactions:
       to $n^{o(1)}$. Our solution utilizes an elegant framework of precision sampling
       tree for edit distance approximation (Andoni, Krauthgamer, Onak; 2010).", "venue":
       "arXiv.org", "year": 2023, "referenceCount": 77, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle"], "publicationDate": "2023-07-14", "journal": {"name": "ArXiv",
-      "volume": "abs/2307.07175"}, "authors": [{"authorId": "1683073", "name": "T.
-      Kociumaka"}, {"authorId": "3394383", "name": "A. Mukherjee"}, {"authorId": "3269130",
-      "name": "B. Saha"}]}, {"paperId": "59ba089d36a0a07df6ae035592a17e4de269849c",
-      "externalIds": {"DBLP": "journals/tmm/ZhouWHMYZWZ23", "DOI": "10.1109/TMM.2021.3132156",
-      "CorpusId": 244854950}, "corpusId": 244854950, "publicationVenue": {"id": "10e76a35-58d6-443c-9683-fc16f2dd0a92",
-      "name": "IEEE transactions on multimedia", "type": "journal", "alternate_names":
-      ["IEEE Transactions on Multimedia", "IEEE Trans Multimedia", "IEEE trans multimedia"],
-      "issn": "1520-9210", "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=6046"},
-      "url": "https://www.semanticscholar.org/paper/59ba089d36a0a07df6ae035592a17e4de269849c",
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/2307.07175",
+      "status": "CLOSED"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2023-07-14", "journal": {"name": "ArXiv", "volume": "abs/2307.07175"},
+      "authors": [{"authorId": "1683073", "name": "T. Kociumaka"}, {"authorId": "3394383",
+      "name": "A. Mukherjee"}, {"authorId": "3269130", "name": "B. Saha"}]}, {"paperId":
+      "59ba089d36a0a07df6ae035592a17e4de269849c", "externalIds": {"DBLP": "journals/tmm/ZhouWHMYZWZ23",
+      "DOI": "10.1109/TMM.2021.3132156", "CorpusId": 244854950}, "corpusId": 244854950,
+      "publicationVenue": {"id": "10e76a35-58d6-443c-9683-fc16f2dd0a92", "name": "IEEE
+      transactions on multimedia", "type": "journal", "alternate_names": ["IEEE Transactions
+      on Multimedia", "IEEE Trans Multimedia", "IEEE trans multimedia"], "issn": "1520-9210",
+      "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=6046"}, "url": "https://www.semanticscholar.org/paper/59ba089d36a0a07df6ae035592a17e4de269849c",
       "title": "Caching in Dynamic Environments: A Near-Optimal Online Learning Approach",
       "abstract": "The rapid growth of rich multimedia data in today\u2019s Internet,
       especially video traffic, has challenged the content delivery networks (CDNs).
@@ -320,7 +316,7 @@ interactions:
       Online Learning based replacement, and Deep Reinforcement Learning based replacement,
       in random edge areas from real-world traces (from iQIYI), further verifying
       the effectiveness and robustness on the edge.", "venue": "IEEE transactions
-      on multimedia", "year": 2023, "referenceCount": 46, "citationCount": 6, "influentialCitationCount":
+      on multimedia", "year": 2023, "referenceCount": 46, "citationCount": 7, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -330,11 +326,49 @@ interactions:
       Wang"}, {"authorId": "46622702", "name": "Chenghao Hu"}, {"authorId": "1840978357",
       "name": "Yinan Mao"}, {"authorId": "2152208619", "name": "Haopeng Yan"}, {"authorId":
       "2437353", "name": "Shanghang Zhang"}, {"authorId": "2118839647", "name": "Chuan
-      Wu"}, {"authorId": "145583986", "name": "Wenwu Zhu"}]}, {"paperId": "5f8a00f3eb67a7300512f1f656a67e7d0516936b",
-      "externalIds": {"MAG": "2978300684", "ArXiv": "1910.00773", "DBLP": "conf/isaac/FoxL19",
-      "DOI": "10.1007/s00453-022-00966-4", "CorpusId": 197679750}, "corpusId": 197679750,
-      "publicationVenue": {"id": "300eb16f-ce6c-495a-8da3-2e691bf9051d", "name": "Algorithmica",
-      "type": "journal", "issn": "0178-4617", "url": "https://www.springer.com/computer/theoretical+computer+science/journal/453",
+      Wu"}, {"authorId": "145583986", "name": "Wenwu Zhu"}]}, {"paperId": "2875b388c07381aecdf620990f71394a840fbb0e",
+      "externalIds": {"DBLP": "conf/soda/ChenDLSS22", "ArXiv": "2107.11530", "DOI":
+      "10.1137/1.9781611977073.34", "CorpusId": 236428709}, "corpusId": 236428709,
+      "publicationVenue": {"id": "5545566b-c0b8-418c-83a5-a986a4657572", "name": "ACM-SIAM
+      Symposium on Discrete Algorithms", "type": "conference", "alternate_names":
+      ["Symposium on Discrete Algorithms", "ACM-SIAM Symp Discret Algorithm", "Symp
+      Discret Algorithm", "SODA"], "url": "https://en.wikipedia.org/wiki/Symposium_on_Discrete_Algorithms"},
+      "url": "https://www.semanticscholar.org/paper/2875b388c07381aecdf620990f71394a840fbb0e",
+      "title": "Near-Optimal Average-Case Approximate Trace Reconstruction from Few
+      Traces", "abstract": "In the standard trace reconstruction problem, the goal
+      is to \\emph{exactly} reconstruct an unknown source string $\\mathsf{x} \\in
+      \\{0,1\\}^n$ from independent\"traces\", which are copies of $\\mathsf{x}$ that
+      have been corrupted by a $\\delta$-deletion channel which independently deletes
+      each bit of $\\mathsf{x}$ with probability $\\delta$ and concatenates the surviving
+      bits. We study the \\emph{approximate} trace reconstruction problem, in which
+      the goal is only to obtain a high-accuracy approximation of $\\mathsf{x}$ rather
+      than an exact reconstruction. We give an efficient algorithm, and a near-matching
+      lower bound, for approximate reconstruction of a random source string $\\mathsf{x}
+      \\in \\{0,1\\}^n$ from few traces. Our main algorithmic result is a polynomial-time
+      algorithm with the following property: for any deletion rate $0<\\delta<1$ (which
+      may depend on $n$), for almost every source string $\\mathsf{x} \\in \\{0,1\\}^n$,
+      given any number $M \\leq \\Theta(1/\\delta)$ of traces from $\\mathrm{Del}_\\delta(\\mathsf{x})$,
+      the algorithm constructs a hypothesis string $\\widehat{\\mathsf{x}}$ that has
+      edit distance at most $n \\cdot (\\delta M)^{\\Omega(M)}$ from $\\mathsf{x}$.
+      We also prove a near-matching information-theoretic lower bound showing that
+      given $M \\leq \\Theta(1/\\delta)$ traces from $\\mathrm{Del}_\\delta(\\mathsf{x})$
+      for a random $n$-bit string $\\mathsf{x}$, the smallest possible expected edit
+      distance that any algorithm can achieve, regardless of its running time, is
+      $n \\cdot (\\delta M)^{O(M)}$.", "venue": "ACM-SIAM Symposium on Discrete Algorithms",
+      "year": 2021, "referenceCount": 33, "citationCount": 7, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/2107.11530",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle", "Conference"], "publicationDate": "2021-07-24",
+      "journal": {"name": "ArXiv", "volume": "abs/2107.11530"}, "authors": [{"authorId":
+      "2145307359", "name": "Xi Chen"}, {"authorId": "145202870", "name": "Anindya
+      De"}, {"authorId": "9392134", "name": "Chin Ho Lee"}, {"authorId": "1729835",
+      "name": "R. Servedio"}, {"authorId": "1739180701", "name": "S. Sinha"}]}, {"paperId":
+      "5f8a00f3eb67a7300512f1f656a67e7d0516936b", "externalIds": {"MAG": "2991611170",
+      "DBLP": "journals/algorithmica/FoxL22", "ArXiv": "1910.00773", "DOI": "10.1007/s00453-022-00966-4",
+      "CorpusId": 197679750}, "corpusId": 197679750, "publicationVenue": {"id": "300eb16f-ce6c-495a-8da3-2e691bf9051d",
+      "name": "Algorithmica", "type": "journal", "issn": "0178-4617", "url": "https://www.springer.com/computer/theoretical+computer+science/journal/453",
       "alternate_urls": ["https://link.springer.com/journal/453", "http://www.springer.com/computer/theoretical+computer+science/journal/453"]},
       "url": "https://www.semanticscholar.org/paper/5f8a00f3eb67a7300512f1f656a67e7d0516936b",
       "title": "Approximating the Geometric Edit Distance", "abstract": null, "venue":
@@ -393,7 +427,7 @@ interactions:
       language that can be recognized by these data structures, can also be repaired
       efficiently by our algorithm.", "venue": "IEEE Annual Symposium on Foundations
       of Computer Science", "year": 2014, "referenceCount": 35, "citationCount": 26,
-      "influentialCitationCount": 2, "isOpenAccess": false, "openAccessPdf": null,
+      "influentialCitationCount": 4, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
@@ -451,7 +485,7 @@ interactions:
       (a.k.a. Ulam''s metric). We are thus able to build on algorithms developed for
       the Ulam metric, whose much better algorithmic guarantees usually do not carry
       over to general edit distance.", "venue": "TALG", "year": 2008, "referenceCount":
-      33, "citationCount": 33, "influentialCitationCount": 3, "isOpenAccess": true,
+      33, "citationCount": 32, "influentialCitationCount": 3, "isOpenAccess": true,
       "openAccessPdf": {"url": "http://www.wisdom.weizmann.ac.il/~robi/papers/AK-smooth-ICALP08.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
@@ -460,52 +494,11 @@ interactions:
       ["JournalArticle"], "publicationDate": "2008-07-07", "journal": {"name": "ACM
       Trans. Algorithms", "pages": "44:1-44:25", "volume": "8"}, "authors": [{"authorId":
       "1738395", "name": "Alexandr Andoni"}, {"authorId": "1737712", "name": "Robert
-      Krauthgamer"}]}, {"paperId": "31c607d80105842ec9c0dc8e142cedbfd948d078", "externalIds":
-      {"DBLP": "conf/innovations/HuLW0Z23", "ArXiv": "2209.05676", "DOI": "10.1109/TIT.2023.3289981
-      10.4230/LIPIcs.ITCS.2023.73", "CorpusId": 252211913}, "corpusId": 252211913,
-      "publicationVenue": {"id": "7f22f2c3-81fc-4aa8-8501-b1d58b193fa5", "name": "Information
-      Technology Convergence and Services", "type": "conference", "alternate_names":
-      ["Innov Theor Comput Sci", "ITCS ", "Inf Technol Converg Serv", "Information
-      Technology and Computer Science", "Inf Technol Comput Sci", "Conf Innov Theor
-      Comput Sci", "Conference on Innovations in Theoretical Computer Science", "Innovations
-      in Theoretical Computer Science", "ITCS"], "url": "http://itcs-conf.org/"},
-      "url": "https://www.semanticscholar.org/paper/31c607d80105842ec9c0dc8e142cedbfd948d078",
-      "title": "Recovery from Non-Decomposable Distance Oracles", "abstract": "A line
-      of work has looked at the problem of recovering an input from distance queries.
-      In this setting, there is an unknown sequence $s \\in \\{0,1\\}^{\\leq n}$,
-      and one chooses a set of queries $y \\in \\{0,1\\}^{\\mathcal{O}(n)}$ and receives
-      $d(s,y)$ for a distance function $d$. The goal is to make as few queries as
-      possible to recover $s$. Although this problem is well-studied for decomposable
-      distances, i.e., distances of the form $d(s,y) = \\sum_{i=1}^n f(s_i, y_i)$
-      for some function $f$, which includes the important cases of Hamming distance,
-      $\\ell_p$-norms, and $M$-estimators, to the best of our knowledge this problem
-      has not been studied for non-decomposable distances, for which there are important
-      special cases such as edit distance, dynamic time warping (DTW), Frechet distance,
-      earth mover''s distance, and so on. We initiate the study and develop a general
-      framework for such distances. Interestingly, for some distances such as DTW
-      or Frechet, exact recovery of the sequence $s$ is provably impossible, and so
-      we show by allowing the characters in $y$ to be drawn from a slightly larger
-      alphabet this then becomes possible. In a number of cases we obtain optimal
-      or near-optimal query complexity. We also study the role of adaptivity for a
-      number of different distance functions. One motivation for understanding non-adaptivity
-      is that the query sequence can be fixed and the distances of the input to the
-      queries provide a non-linear embedding of the input, which can be used in downstream
-      applications involving, e.g., neural networks for natural language processing.",
-      "venue": "Information Technology Convergence and Services", "year": 2022, "referenceCount":
-      51, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      "2022-09-13", "journal": {"pages": "73:1-73:22"}, "authors": [{"authorId": "2219820651",
-      "name": "Zhuangfei Hu"}, {"authorId": "2108782531", "name": "Xinda Li"}, {"authorId":
-      "143982862", "name": "David P. Woodruff"}, {"authorId": "40975176", "name":
-      "Hongyang Zhang"}, {"authorId": "48691326", "name": "Shufan Zhang"}]}, {"paperId":
-      "9a71a3e70062297dca10f8c82040f303b0305e4d", "externalIds": {"MAG": "2797057688",
-      "DBLP": "journals/corr/abs-1804-03604", "CorpusId": 126006971}, "corpusId":
-      126006971, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      Krauthgamer"}]}, {"paperId": "9a71a3e70062297dca10f8c82040f303b0305e4d", "externalIds":
+      {"DBLP": "journals/corr/abs-1804-03604", "MAG": "2797057688", "CorpusId": 126006971},
+      "corpusId": 126006971, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
-      "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/9a71a3e70062297dca10f8c82040f303b0305e4d",
+      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/9a71a3e70062297dca10f8c82040f303b0305e4d",
       "title": "Optimal Document Exchange and New Codes for Small Number of Insertions
       and Deletions", "abstract": "This paper gives a communication-optimal document
       exchange protocol and an efficient near optimal derandomization. This also implies
@@ -608,15 +601,15 @@ interactions:
       state-of-the-art algorithms are far from achieving $(1+\\epsilon)$-approximation
       in sublinear time, even for a favorable choice of $k$.", "venue": "Information
       Technology Convergence and Services", "year": 2022, "referenceCount": 42, "citationCount":
-      1, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
-      Science", "source": "external"}, {"category": "Computer Science", "source":
-      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      "2022-11-22", "journal": {"pages": "58:1-58:23"}, "authors": [{"authorId": "1752311",
-      "name": "Elazar Goldenberg"}, {"authorId": "1683073", "name": "T. Kociumaka"},
-      {"authorId": "1737712", "name": "Robert Krauthgamer"}, {"authorId": "3269130",
-      "name": "B. Saha"}]}, {"paperId": "c1ffcc2e43bc54c238f9f066ec80014d9d07a0a5",
-      "externalIds": {"DBLP": "conf/stoc/ChechikC20", "MAG": "3034924176", "DOI":
+      1, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://arxiv.org/pdf/2211.12496", "status": "GREEN"}, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "2022-11-22", "journal": {"pages": "58:1-58:23"},
+      "authors": [{"authorId": "1752311", "name": "Elazar Goldenberg"}, {"authorId":
+      "1683073", "name": "T. Kociumaka"}, {"authorId": "1737712", "name": "Robert
+      Krauthgamer"}, {"authorId": "3269130", "name": "B. Saha"}]}, {"paperId": "c1ffcc2e43bc54c238f9f066ec80014d9d07a0a5",
+      "externalIds": {"MAG": "3034924176", "DBLP": "conf/stoc/ChechikC20", "DOI":
       "10.1145/3357713.3384253", "CorpusId": 219398366}, "corpusId": 219398366, "publicationVenue":
       {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e", "name": "Symposium on the Theory
       of Computing", "type": "conference", "alternate_names": ["Symp Theory Comput",
@@ -645,7 +638,7 @@ interactions:
       time the DSO of Grandoni and Vassilevska Williams has \u00d5(n 0.693) query
       time. In fact, the best query time their algorithm can obtain is (Mn 0.385)
       (with (Mn 3) preprocessing time).", "venue": "Symposium on the Theory of Computing",
-      "year": 2020, "referenceCount": 25, "citationCount": 20, "influentialCitationCount":
+      "year": 2020, "referenceCount": 24, "citationCount": 19, "influentialCitationCount":
       1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -653,7 +646,7 @@ interactions:
       {"name": "Proceedings of the 52nd Annual ACM SIGACT Symposium on Theory of Computing"},
       "authors": [{"authorId": "1725512", "name": "S. Chechik"}, {"authorId": "32626049",
       "name": "S. Cohen"}]}, {"paperId": "625fbb7ed657ca111e4eebd03bc023220d582862",
-      "externalIds": {"DBLP": "journals/corr/abs-1908-10935", "ArXiv": "1908.10935",
+      "externalIds": {"ArXiv": "1908.10935", "DBLP": "journals/corr/abs-1908-10935",
       "MAG": "2970227627", "DOI": "10.4171/msl/29", "CorpusId": 201668974}, "corpusId":
       201668974, "publicationVenue": {"id": "d93b1d3f-e963-4181-8f5e-33f17fccae36",
       "name": "Mathematical Statistics and Learning", "alternate_names": ["Math Stat
@@ -676,7 +669,7 @@ interactions:
       of the components and the quality of the initialization, and that of Daskalakis
       et al \\cite{DTZ17} which requires sample splitting and restarting the EM iteration.",
       "venue": "Mathematical Statistics and Learning", "year": 2019, "referenceCount":
-      48, "citationCount": 27, "influentialCitationCount": 3, "isOpenAccess": true,
+      48, "citationCount": 28, "influentialCitationCount": 3, "isOpenAccess": true,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
@@ -688,7 +681,7 @@ interactions:
       "journals/corr/abs-2309-03810", "ArXiv": "2309.03810", "DOI": "10.48550/arXiv.2309.03810",
       "CorpusId": 261582395}, "corpusId": 261582395, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
-      "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/c9ac4909bd56d1728034d0f6a1227b4bed0a1c69",
+      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/c9ac4909bd56d1728034d0f6a1227b4bed0a1c69",
       "title": "Three Hardness Results for Graph Similarity Problems", "abstract":
       "Notions of graph similarity provide alternative perspective on the graph isomorphism
       problem and vice-versa. In this paper, we consider measures of similarity arising
@@ -706,16 +699,45 @@ interactions:
       regular graphs and prove some near optimal inequalities with interesting consequences
       on the computational complexity of graph and group isomorphism.", "venue": "arXiv.org",
       "year": 2023, "referenceCount": 23, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/2309.03810",
+      "status": "CLOSED"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2023-09-07", "journal":
+      {"name": "ArXiv", "volume": "abs/2309.03810"}, "authors": [{"authorId": "2238388617",
+      "name": "He Sun"}, {"authorId": "133864599", "name": "Danny Vagnozzi"}]}, {"paperId":
+      "4f6a877ba569f5ff61a56a026ce1895fb718a08b", "externalIds": {"DBLP": "conf/recomb/JainGT22",
+      "DOI": "10.1101/2021.02.03.429492", "CorpusId": 231885560}, "corpusId": 231885560,
+      "publicationVenue": {"id": "027ffd21-ebb0-4af8-baf5-911124292fd0", "name": "bioRxiv",
+      "type": "journal", "url": "http://biorxiv.org/"}, "url": "https://www.semanticscholar.org/paper/4f6a877ba569f5ff61a56a026ce1895fb718a08b",
+      "title": "Co-linear Chaining with Overlaps and Gap Costs", "abstract": "Co-linear
+      chaining has proven to be a powerful heuristic for finding near-optimal alignments
+      of long DNA sequences (e.g., long reads or a genome assembly) to a reference.
+      It is used as an intermediate step in several alignment tools that employ a
+      seed-chain-extend strategy. Despite this popularity, efficient subquadratic-time
+      algorithms for the general case where chains support anchor overlaps and gap
+      costs are not currently known. We present algorithms to solve the co-linear
+      chaining problem with anchor overlaps and gap costs in \u00d5(n) time, where
+      n denotes the count of anchors. We also establish the first theoretical connection
+      between co-linear chaining cost and edit distance. Specifically, we prove that
+      for a fixed set of anchors under a carefully designed chaining cost function,
+      the optimal \u2018anchored\u2019 edit distance equals the optimal co-linear
+      chaining cost. Finally, we demonstrate experimentally that optimal co-linear
+      chaining cost under the proposed cost function can be computed orders of magnitude
+      faster than edit distance, and achieves correlation coefficient above 0.9 with
+      edit distance for closely as well as distantly related sequences.", "venue":
+      "bioRxiv", "year": 2021, "referenceCount": 36, "citationCount": 17, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Biology",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Biology", "source": "external"},
+      {"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
-      "publicationDate": "2023-09-07", "journal": {"name": "ArXiv", "volume": "abs/2309.03810"},
-      "authors": [{"authorId": "2238388617", "name": "He Sun"}, {"authorId": "133864599",
-      "name": "Danny Vagnozzi"}]}, {"paperId": "c579d931ae83951c940d23196f8c079312dcf8c0",
-      "externalIds": {"PubMedCentral": "4172526", "MAG": "2080019484", "DOI": "10.1371/journal.pone.0107510",
-      "CorpusId": 17199791, "PubMed": "25247892"}, "corpusId": 17199791, "publicationVenue":
-      {"id": "0aed7a40-85f3-4c66-9e1b-c1556c57001b", "name": "PLoS ONE", "type": "journal",
+      "publicationDate": "2021-02-03", "journal": {"name": "bioRxiv"}, "authors":
+      [{"authorId": "145196266", "name": "Chirag Jain"}, {"authorId": "38372154",
+      "name": "Daniel Gibney"}, {"authorId": "1733907", "name": "Sharma V. Thankachan"}]},
+      {"paperId": "c579d931ae83951c940d23196f8c079312dcf8c0", "externalIds": {"PubMedCentral":
+      "4172526", "MAG": "2080019484", "DOI": "10.1371/journal.pone.0107510", "CorpusId":
+      17199791, "PubMed": "25247892"}, "corpusId": 17199791, "publicationVenue": {"id":
+      "0aed7a40-85f3-4c66-9e1b-c1556c57001b", "name": "PLoS ONE", "type": "journal",
       "alternate_names": ["Plo ONE", "PLOS ONE", "PLO ONE"], "issn": "1932-6203",
       "url": "https://journals.plos.org/plosone/", "alternate_urls": ["http://www.plosone.org/"]},
       "url": "https://www.semanticscholar.org/paper/c579d931ae83951c940d23196f8c079312dcf8c0",
@@ -740,45 +762,64 @@ interactions:
       and four for genera alone. An ancillary authority matching component is included
       which can be used both for misspelled names and for otherwise matching names
       where the associated cited authorities are not identical.", "venue": "PLoS ONE",
-      "year": 2014, "referenceCount": 63, "citationCount": 42, "influentialCitationCount":
+      "year": 2014, "referenceCount": 79, "citationCount": 43, "influentialCitationCount":
       1, "isOpenAccess": true, "openAccessPdf": {"url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0107510&type=printable",
       "status": "GOLD"}, "fieldsOfStudy": ["Computer Science", "Medicine"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Medicine",
+      "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": "2014-09-23", "journal": {"name": "PLoS ONE",
+      "volume": "9"}, "authors": [{"authorId": "48125744", "name": "Anthony J. J.
+      (Tony) Rees"}]}, {"paperId": "31c607d80105842ec9c0dc8e142cedbfd948d078", "externalIds":
+      {"ArXiv": "2209.05676", "DBLP": "journals/corr/abs-2209-05676", "DOI": "10.1109/TIT.2023.3289981",
+      "CorpusId": 252211913}, "corpusId": 252211913, "publicationVenue": {"id": "748e730b-add9-47ee-819d-8ae54e504ef9",
+      "name": "IEEE Transactions on Information Theory", "type": "journal", "alternate_names":
+      ["IEEE Trans Inf Theory"], "issn": "0018-9448", "url": "http://www.comm.utoronto.ca/trans-it/",
+      "alternate_urls": ["https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?puNumber=18",
+      "http://ieeexplore.ieee.org/servlet/opac?punumber=18"]}, "url": "https://www.semanticscholar.org/paper/31c607d80105842ec9c0dc8e142cedbfd948d078",
+      "title": "Recovery From Non-Decomposable Distance Oracles", "abstract": "A line
+      of work has looked at the problem of recovering an input from distance queries.
+      In this setting, there is an unknown sequence <inline-formula> <tex-math notation=\"LaTeX\">$s
+      \\in \\{0,1\\}^{\\leq n}$ </tex-math></inline-formula>, and one chooses a set
+      of queries <inline-formula> <tex-math notation=\"LaTeX\">$y \\in \\{0,1\\}^{
+      \\mathcal {O}(n)}$ </tex-math></inline-formula> and receives <inline-formula>
+      <tex-math notation=\"LaTeX\">$d(s,y)$ </tex-math></inline-formula> for a distance
+      function <inline-formula> <tex-math notation=\"LaTeX\">$d$ </tex-math></inline-formula>.
+      The goal is to make as few queries as possible to recover <inline-formula> <tex-math
+      notation=\"LaTeX\">$s$ </tex-math></inline-formula>. Although this problem is
+      well-studied for decomposable distances, i.e., distances of the form <inline-formula>
+      <tex-math notation=\"LaTeX\">$d(s,y) = \\sum _{i=1}^{n} f(s_{i}, y_{i})$ </tex-math></inline-formula>
+      for some function <inline-formula> <tex-math notation=\"LaTeX\">$f$ </tex-math></inline-formula>,
+      which includes the important cases of Hamming distance, <inline-formula> <tex-math
+      notation=\"LaTeX\">$\\ell _{p}$ </tex-math></inline-formula>-norms, and <inline-formula>
+      <tex-math notation=\"LaTeX\">$M$ </tex-math></inline-formula>-estimators, to
+      the best of our knowledge this problem has not been studied for non-decomposable
+      distances, for which there are important instances including edit distance,
+      dynamic time warping (DTW), Fr\u00e9chet distance, earth mover\u2019s distance,
+      and others. We initiate the study and develop a general framework for such distances.
+      Interestingly, for some distances such as DTW or Fr\u00e9chet, exact recovery
+      of the sequence <inline-formula> <tex-math notation=\"LaTeX\">$s$ </tex-math></inline-formula>
+      is provably impossible, and so we show by allowing the characters in <inline-formula>
+      <tex-math notation=\"LaTeX\">$y$ </tex-math></inline-formula> to be drawn from
+      a slightly larger alphabet this then becomes possible. In a number of cases
+      we obtain optimal or near-optimal query complexity. One motivation for understanding
+      non-adaptivity is that the query sequence can be fixed and provide a non-linear
+      embedding of the input, which can be used in downstream applications involving,
+      e.g., neural networks for natural language processing.", "venue": "IEEE Transactions
+      on Information Theory", "year": 2022, "referenceCount": 60, "citationCount":
+      1, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://drops.dagstuhl.de/opus/volltexte/2023/17576/pdf/LIPIcs-ITCS-2023-73.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-      "publicationTypes": ["JournalArticle", "Review"], "publicationDate": "2014-09-23",
-      "journal": {"name": "PLoS ONE", "volume": "9"}, "authors": [{"authorId": "48125744",
-      "name": "Anthony J. J. (Tony) Rees"}]}, {"paperId": "4f6a877ba569f5ff61a56a026ce1895fb718a08b",
-      "externalIds": {"DBLP": "conf/recomb/JainGT22", "DOI": "10.1101/2021.02.03.429492",
-      "CorpusId": 231885560}, "corpusId": 231885560, "publicationVenue": {"id": "027ffd21-ebb0-4af8-baf5-911124292fd0",
-      "name": "bioRxiv", "type": "journal", "url": "http://biorxiv.org/"}, "url":
-      "https://www.semanticscholar.org/paper/4f6a877ba569f5ff61a56a026ce1895fb718a08b",
-      "title": "Co-linear Chaining with Overlaps and Gap Costs", "abstract": "Co-linear
-      chaining has proven to be a powerful heuristic for finding near-optimal alignments
-      of long DNA sequences (e.g., long reads or a genome assembly) to a reference.
-      It is used as an intermediate step in several alignment tools that employ a
-      seed-chain-extend strategy. Despite this popularity, efficient subquadratic-time
-      algorithms for the general case where chains support anchor overlaps and gap
-      costs are not currently known. We present algorithms to solve the co-linear
-      chaining problem with anchor overlaps and gap costs in \u00d5(n) time, where
-      n denotes the count of anchors. We also establish the first theoretical connection
-      between co-linear chaining cost and edit distance. Specifically, we prove that
-      for a fixed set of anchors under a carefully designed chaining cost function,
-      the optimal \u2018anchored\u2019 edit distance equals the optimal co-linear
-      chaining cost. Finally, we demonstrate experimentally that optimal co-linear
-      chaining cost under the proposed cost function can be computed orders of magnitude
-      faster than edit distance, and achieves correlation coefficient above 0.9 with
-      edit distance for closely as well as distantly related sequences.", "venue":
-      "bioRxiv", "year": 2021, "referenceCount": 35, "citationCount": 13, "influentialCitationCount":
-      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://eprints.iisc.ac.in/74086/1/Springer_RECOMB_13278_246-262_2022.pdf",
-      "status": "GREEN"}, "fieldsOfStudy": ["Biology", "Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Biology", "source": "external"}, {"category": "Computer Science",
-      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-      "publicationTypes": ["JournalArticle"], "publicationDate": "2021-02-03", "journal":
-      {"name": "bioRxiv"}, "authors": [{"authorId": "145196266", "name": "Chirag Jain"},
-      {"authorId": "38372154", "name": "Daniel Gibney"}, {"authorId": "1733907", "name":
-      "Sharma V. Thankachan"}]}, {"paperId": "9e8bb71eac9a11bc9593b64c405d066ce6da7d80",
-      "externalIds": {"DBLP": "journals/corr/abs-2106-08195", "ArXiv": "2106.08195",
-      "DOI": "10.1145/3568398", "CorpusId": 235436184}, "corpusId": 235436184, "publicationVenue":
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2022-09-13", "journal":
+      {"name": "IEEE Transactions on Information Theory", "pages": "6443-6469", "volume":
+      "69"}, "authors": [{"authorId": "2219820651", "name": "Zhuangfei Hu"}, {"authorId":
+      "2108782531", "name": "Xinda Li"}, {"authorId": "143982862", "name": "David
+      P. Woodruff"}, {"authorId": "40975176", "name": "Hongyang Zhang"}, {"authorId":
+      "48691326", "name": "Shufan Zhang"}]}, {"paperId": "9e8bb71eac9a11bc9593b64c405d066ce6da7d80",
+      "externalIds": {"DBLP": "conf/icalp/BringmannD21", "ArXiv": "2106.08195", "DOI":
+      "10.1145/3568398", "CorpusId": 235436184}, "corpusId": 235436184, "publicationVenue":
       {"id": "d024be26-06b0-4afe-8fa3-a297e04fe604", "name": "International Colloquium
       on Automata, Languages and Programming", "type": "conference", "alternate_names":
       ["Int Conf Arab Lang Process", "International Conference on Arabic Language
@@ -807,15 +848,15 @@ interactions:
       time O(n2-\u025b), improving upon the naive bound of O(n\u025b/2) for any \u025b,
       and (3) instead of only in expectation, succeeds with high probability.", "venue":
       "International Colloquium on Automata, Languages and Programming", "year": 2021,
-      "referenceCount": 43, "citationCount": 6, "influentialCitationCount": 0, "isOpenAccess":
+      "referenceCount": 46, "citationCount": 6, "influentialCitationCount": 0, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/3568398",
       "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Conference"], "publicationDate": "2021-06-15", "journal": {"name": "ACM Transactions
       on Algorithms", "pages": "1 - 24", "volume": "19"}, "authors": [{"authorId":
-      "2535238", "name": "K. Bringmann"}, {"authorId": "1403027144", "name": "V. Cohen-Addad"},
-      {"authorId": null, "name": "Debarati Das"}]}, {"paperId": "c6ee88b50084fa7f33a23a5e1d4ed8b30f453550",
+      "2535238", "name": "K. Bringmann"}, {"authorId": "1403027144", "name": "Vincent
+      Cohen-Addad"}, {"authorId": null, "name": "Debarati Das"}]}, {"paperId": "c6ee88b50084fa7f33a23a5e1d4ed8b30f453550",
       "externalIds": {"DBLP": "journals/corr/abs-2107-09497", "ArXiv": "2107.09497",
       "DOI": "10.4230/LIPIcs.FSTTCS.2021.11", "CorpusId": 236134500}, "corpusId":
       236134500, "publicationVenue": {"id": "0398fa1f-37da-4d9e-b0a2-1cae8e598047",
@@ -847,7 +888,7 @@ interactions:
       {"pages": "11:1-11:23"}, "authors": [{"authorId": "29846222", "name": "Diptarka
       Chakraborty"}, {"authorId": null, "name": "Debarati Das"}, {"authorId": "1737712",
       "name": "Robert Krauthgamer"}]}, {"paperId": "b6b55bf181beba096144aa1a16df9b6f9530c5a3",
-      "externalIds": {"DBLP": "conf/cpm/Charalampopoulos20a", "MAG": "3037365099",
+      "externalIds": {"MAG": "3037365099", "DBLP": "conf/cpm/Charalampopoulos20a",
       "DOI": "10.4230/LIPIcs.CPM.2020.9", "CorpusId": 219553664}, "corpusId": 219553664,
       "publicationVenue": {"id": "25085e3f-671a-46a2-a7d6-dd5563940ec8", "name": "Annual
       Symposium on Combinatorial Pattern Matching", "type": "conference", "alternate_names":
@@ -880,7 +921,7 @@ interactions:
       "publicationDate": null, "journal": {"pages": "9:1-9:13"}, "authors": [{"authorId":
       "3440697", "name": "P. Charalampopoulos"}, {"authorId": "1683073", "name": "T.
       Kociumaka"}, {"authorId": "34762109", "name": "S. Mozes"}]}, {"paperId": "d8c1c979f247e57902dc7ab9ddcee4651af1feff",
-      "externalIds": {"DBLP": "phd/ndltd/Onak10", "MAG": "1537954077", "CorpusId":
+      "externalIds": {"MAG": "1537954077", "DBLP": "phd/ndltd/Onak10", "CorpusId":
       11604393}, "corpusId": 11604393, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d8c1c979f247e57902dc7ab9ddcee4651af1feff",
       "title": "New sublinear methods in the struggle against classical problems",
       "abstract": "We study the time and query complexity of approximation algorithms
@@ -936,20 +977,20 @@ interactions:
       our lower bound provides the first rigorous separation on the complexity of
       approximation between edit distance and Ulam distance. (Copies available exclusively
       from MIT Libraries, Rm. 14-0551, Cambridge, MA 02139-4307. Ph. 617-253-5668;
-      Fax 617-253-1690.)", "venue": "", "year": 2010, "referenceCount": 83, "citationCount":
-      17, "influentialCitationCount": 6, "isOpenAccess": false, "openAccessPdf": null,
+      Fax 617-253-1690.)", "venue": "", "year": 2010, "referenceCount": 82, "citationCount":
+      14, "influentialCitationCount": 3, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
       "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1730859",
       "name": "Krzysztof Onak"}]}, {"paperId": "12d19744e03f9f1888fb2af1645cb1b8c0583cdb",
-      "externalIds": {"MAG": "2971374205", "ArXiv": "2111.10538", "DBLP": "journals/corr/abs-2111-10538",
-      "DOI": "10.1109/FOCS.2019.00071", "CorpusId": 202787397}, "corpusId": 202787397,
-      "publicationVenue": {"id": "68cf0e99-5164-4480-8ed4-8b8416a091df", "name": "IEEE
-      Annual Symposium on Foundations of Computer Science", "type": "conference",
-      "alternate_names": ["FOCS", "IEEE Annu Symp Found Comput Sci"], "url": "http://ieee-focs.org/"},
-      "url": "https://www.semanticscholar.org/paper/12d19744e03f9f1888fb2af1645cb1b8c0583cdb",
+      "externalIds": {"DBLP": "conf/focs/RubinsteinSSS19", "ArXiv": "2111.10538",
+      "MAG": "2971374205", "DOI": "10.1109/FOCS.2019.00071", "CorpusId": 202787397},
+      "corpusId": 202787397, "publicationVenue": {"id": "68cf0e99-5164-4480-8ed4-8b8416a091df",
+      "name": "IEEE Annual Symposium on Foundations of Computer Science", "type":
+      "conference", "alternate_names": ["FOCS", "IEEE Annu Symp Found Comput Sci"],
+      "url": "http://ieee-focs.org/"}, "url": "https://www.semanticscholar.org/paper/12d19744e03f9f1888fb2af1645cb1b8c0583cdb",
       "title": "Approximation Algorithms for LCS and LIS with Truly Improved Running
       Times", "abstract": "Longest common subsequence (LCS) is a classic and central
       problem in combinatorial optimization. While LCS admits a quadratic time solution,
@@ -967,7 +1008,7 @@ interactions:
       [1] and Chakraborty et al.[2] to present new approximation algorithms for edit
       distance. Our techniques for LCS extend the notion of triangle inequality to
       non-metric settings.", "venue": "IEEE Annual Symposium on Foundations of Computer
-      Science", "year": 2019, "referenceCount": 37, "citationCount": 35, "influentialCitationCount":
+      Science", "year": 2019, "referenceCount": 37, "citationCount": 36, "influentialCitationCount":
       2, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/2111.10538",
       "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
@@ -978,9 +1019,9 @@ interactions:
       "1121-1145"}, "authors": [{"authorId": "38651679", "name": "A. Rubinstein"},
       {"authorId": "3087608", "name": "Saeed Seddighin"}, {"authorId": "143825455",
       "name": "Zhao Song"}, {"authorId": "1743608", "name": "Xiaorui Sun"}]}, {"paperId":
-      "3c3ab51d2b9f5585d92e167338791a60a79d05ae", "externalIds": {"DBLP": "conf/stoc/AndoniGMP13",
-      "MAG": "2090320977", "DOI": "10.1145/2488608.2488726", "CorpusId": 14930864},
-      "corpusId": 14930864, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
+      "3c3ab51d2b9f5585d92e167338791a60a79d05ae", "externalIds": {"MAG": "2090320977",
+      "DBLP": "conf/stoc/AndoniGMP13", "DOI": "10.1145/2488608.2488726", "CorpusId":
+      14930864}, "corpusId": 14930864, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
       "name": "Symposium on the Theory of Computing", "type": "conference", "alternate_names":
       ["Symp Theory Comput", "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/3c3ab51d2b9f5585d92e167338791a60a79d05ae",
       "title": "Homomorphic fingerprints under misalignments: sketching edit and shift
@@ -1010,7 +1051,7 @@ interactions:
       sketches whose size is nearly linear in n. This lower bound addresses a long-standing
       open problem on the low distortion embeddings of edit distance [Question 2.15
       in Naor-Matousek''11, Indyk''01], for the case of linear embeddings.", "venue":
-      "Symposium on the Theory of Computing", "year": 2013, "referenceCount": 49,
+      "Symposium on the Theory of Computing", "year": 2013, "referenceCount": 47,
       "citationCount": 26, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
       [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
@@ -1019,11 +1060,11 @@ interactions:
       {"pages": "931-940"}, "authors": [{"authorId": "1738395", "name": "Alexandr
       Andoni"}, {"authorId": "35243876", "name": "Assaf Goldberger"}, {"authorId":
       "144078750", "name": "A. Mcgregor"}, {"authorId": "2167957", "name": "E. Porat"}]},
-      {"paperId": "f60477229cd7d2e11c1f80484dead929187a2060", "externalIds": {"MAG":
-      "3102299369", "DBLP": "journals/corr/abs-2011-06135", "ArXiv": "2011.06135",
+      {"paperId": "f60477229cd7d2e11c1f80484dead929187a2060", "externalIds": {"DBLP":
+      "journals/corr/abs-2011-06135", "MAG": "3102299369", "ArXiv": "2011.06135",
       "CorpusId": 226306672}, "corpusId": 226306672, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
-      "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/f60477229cd7d2e11c1f80484dead929187a2060",
+      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/f60477229cd7d2e11c1f80484dead929187a2060",
       "title": "Hardness of Approximate Nearest Neighbor Search under L-infinity",
       "abstract": "We show conditional hardness of Approximate Nearest Neighbor Search
       (ANN) under the $\\ell_\\infty$ norm with two simple reductions. Our first reduction
@@ -1043,7 +1084,7 @@ interactions:
       achieving better than $3$-approximation for the $\\ell_1$ and $\\ell_2$ norm.
       Lastly, we show that the approximation factor of $3$ is a barrier for any naive
       gadget reduction from the Orthogonal Vectors problem.", "venue": "arXiv.org",
-      "year": 2020, "referenceCount": 45, "citationCount": 2, "influentialCitationCount":
+      "year": 2020, "referenceCount": 44, "citationCount": 2, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
       "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "external"}, {"category":
@@ -1075,17 +1116,17 @@ interactions:
       Testing (Subclasses of) Halfspaces.- Dynamic Approximate Vertex Cover and Maximum
       Matching.- Local Property Reconstruction and Monotonicity.- Green''s Conjecture
       and Testing Linear Invariant Properties.", "venue": "", "year": 2010, "referenceCount":
-      0, "citationCount": 99, "influentialCitationCount": 2, "isOpenAccess": false,
+      0, "citationCount": 98, "influentialCitationCount": 2, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
       [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1707322",
-      "name": "Oded Goldreich"}]}, {"paperId": "42e6da096c606f638e51d7d5730e402c6e9d84eb",
-      "externalIds": {"ArXiv": "2012.06961", "DBLP": "journals/corr/abs-2012-06961",
-      "MAG": "3112348608", "CorpusId": 229153027}, "corpusId": 229153027, "publicationVenue":
-      {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10", "name": "arXiv.org", "alternate_names":
-      ["ArXiv"], "issn": "2331-8422", "url": "http://bibpurl.oclc.org/web/7130"},
-      "url": "https://www.semanticscholar.org/paper/42e6da096c606f638e51d7d5730e402c6e9d84eb",
+      "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": null, "journal": {"name":
+      "", "volume": ""}, "authors": [{"authorId": "1707322", "name": "Oded Goldreich"}]},
+      {"paperId": "42e6da096c606f638e51d7d5730e402c6e9d84eb", "externalIds": {"MAG":
+      "3112348608", "DBLP": "journals/corr/abs-2012-06961", "ArXiv": "2012.06961",
+      "CorpusId": 229153027}, "corpusId": 229153027, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
+      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/42e6da096c606f638e51d7d5730e402c6e9d84eb",
       "title": "Online Stochastic Optimization with Wasserstein Based Non-stationarity",
       "abstract": "We consider a general online stochastic optimization problem with
       multiple budget constraints over a horizon of finite time periods. At each time
@@ -1111,17 +1152,17 @@ interactions:
       that under both settings, our polices achieve a regret upper bound of optimal
       order. Moreover, our policies could be naturally incorporated with a re-solving
       procedure which further boosts the empirical performance in numerical experiments.",
-      "venue": "arXiv.org", "year": 2020, "referenceCount": 91, "citationCount": 16,
+      "venue": "arXiv.org", "year": 2020, "referenceCount": 88, "citationCount": 19,
       "influentialCitationCount": 1, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
-      "Economics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "2020-12-13", "journal": {"name": "ArXiv", "volume": "abs/2012.06961"},
       "authors": [{"authorId": "152634563", "name": "Jiashuo Jiang"}, {"authorId":
       "47056752", "name": "Xiaocheng Li"}, {"authorId": "1739956009", "name": "Jiawei
       Zhang"}]}, {"paperId": "23fd98b2e11e540a2aaf09d8194115ffb8e41d13", "externalIds":
-      {"MAG": "2184855499", "DBLP": "conf/spdp/EgeciogluI96", "DOI": "10.1109/SPDP.1996.570374",
+      {"MAG": "1950045300", "DBLP": "conf/spdp/EgeciogluI96", "DOI": "10.1109/SPDP.1996.570374",
       "CorpusId": 14719601}, "corpusId": 14719601, "publicationVenue": {"id": "31306872-361d-4fd0-84ff-0e14a1a6a416",
       "name": "IEEE Symposium on Parallel and Distributed Processing", "type": "conference",
       "alternate_names": ["SPDP", "IEEE Symp Parallel Distrib Process"]}, "url": "https://www.semanticscholar.org/paper/23fd98b2e11e540a2aaf09d8194115ffb8e41d13",
@@ -1141,7 +1182,7 @@ interactions:
       with minor modifications. Finally, they present a polylogarithmic O(log/sup
       2/ n) time algorithm based on matrix multiplication which runs on a O(n/sup
       6//log n) processor hypercube.", "venue": "IEEE Symposium on Parallel and Distributed
-      Processing", "year": 1996, "referenceCount": 15, "citationCount": 5, "influentialCitationCount":
+      Processing", "year": 1996, "referenceCount": 14, "citationCount": 5, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -1170,7 +1211,7 @@ interactions:
       null, "journal": null, "authors": [{"authorId": "145714076", "name": "Elena
       Grigorescu"}, {"authorId": "2627314", "name": "Erfan Sadeqi Azer"}, {"authorId":
       "3393628", "name": "Samson Zhou"}]}, {"paperId": "eb3d34e1fb97a00e5be195ee75840da673480bea",
-      "externalIds": {"DBLP": "conf/esws/Costabello14", "MAG": "1808180440", "DOI":
+      "externalIds": {"MAG": "1808180440", "DBLP": "conf/esws/Costabello14", "DOI":
       "10.1007/978-3-319-07443-6_4", "CorpusId": 13175213}, "corpusId": 13175213,
       "publicationVenue": {"id": "c7bde2ee-6ad5-49c7-9498-a01e46c162eb", "name": "Extended
       Semantic Web Conference", "type": "conference", "alternate_names": ["Eur Semantic
@@ -1214,11 +1255,11 @@ interactions:
       "2014-10-01", "journal": {"name": "Int. J. Semantic Web Inf. Syst.", "pages":
       "45-76", "volume": "10"}, "authors": [{"authorId": "3021495", "name": "Luca
       Costabello"}, {"authorId": "1753013", "name": "Fabien L. Gandon"}]}, {"paperId":
-      "c88c4d167da4a2c61668883dfa50552b2ecd60dc", "externalIds": {"MAG": "1794340831",
-      "ArXiv": "1312.5105", "DBLP": "journals/corr/BonchiGK13", "CorpusId": 10680176},
+      "c88c4d167da4a2c61668883dfa50552b2ecd60dc", "externalIds": {"ArXiv": "1312.5105",
+      "MAG": "1794340831", "DBLP": "journals/corr/BonchiGK13", "CorpusId": 10680176},
       "corpusId": 10680176, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
-      "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/c88c4d167da4a2c61668883dfa50552b2ecd60dc",
+      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/c88c4d167da4a2c61668883dfa50552b2ecd60dc",
       "title": "Local correlation clustering", "abstract": "Correlation clustering
       is perhaps the most natural formulation of clustering. Given $n$ objects and
       a pairwise similarity measure, the goal is to cluster the objects so that, to
@@ -1248,16 +1289,17 @@ interactions:
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      "2013-12-18", "journal": {"name": "ArXiv", "volume": "abs/1312.5105"}, "authors":
-      [{"authorId": "1705764", "name": "F. Bonchi"}, {"authorId": "1398620943", "name":
-      "David Garc\u00eda-Soriano"}, {"authorId": "1712289", "name": "Konstantin Kutzkov"}]},
-      {"paperId": "2b7b220be3bad47af114e7daa3b96fd4a2936f55", "externalIds": {"MAG":
-      "2963063124", "ArXiv": "1711.04367", "DBLP": "journals/corr/abs-1711-04367",
-      "DOI": "10.1109/ALLERTON.2017.8262766", "CorpusId": 10554346}, "corpusId": 10554346,
-      "publicationVenue": {"id": "e3e363b2-60f3-46d7-9067-5deaddc3f3f2", "name": "Allerton
-      Conference on Communication, Control, and Computing", "type": "conference",
-      "alternate_names": ["Allerton", "T Conf Commun Control Comput"]}, "url": "https://www.semanticscholar.org/paper/2b7b220be3bad47af114e7daa3b96fd4a2936f55",
+      "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2013-12-18", "journal":
+      {"name": "ArXiv", "volume": "abs/1312.5105"}, "authors": [{"authorId": "1705764",
+      "name": "F. Bonchi"}, {"authorId": "1398620943", "name": "David Garc\u00eda-Soriano"},
+      {"authorId": "1712289", "name": "Konstantin Kutzkov"}]}, {"paperId": "2b7b220be3bad47af114e7daa3b96fd4a2936f55",
+      "externalIds": {"MAG": "2963063124", "DBLP": "journals/corr/abs-1711-04367",
+      "ArXiv": "1711.04367", "DOI": "10.1109/ALLERTON.2017.8262766", "CorpusId": 10554346},
+      "corpusId": 10554346, "publicationVenue": {"id": "e3e363b2-60f3-46d7-9067-5deaddc3f3f2",
+      "name": "Allerton Conference on Communication, Control, and Computing", "type":
+      "conference", "alternate_names": ["Allerton", "T Conf Commun Control Comput"]},
+      "url": "https://www.semanticscholar.org/paper/2b7b220be3bad47af114e7daa3b96fd4a2936f55",
       "title": "Longest alignment with edits in data streams", "abstract": "Analyzing
       patterns in data streams generated by network traffic, sensor networks, or satellite
       feeds is a challenge for systems in which the available storage is limited.
@@ -1296,20 +1338,20 @@ interactions:
       results shows interesting features of the approach, namely rapidly finding a
       near-optimal solution.", "venue": "2008 IEEE/RSJ International Conference on
       Intelligent Robots and Systems", "year": 2008, "referenceCount": 24, "citationCount":
-      29, "influentialCitationCount": 1, "isOpenAccess": true, "openAccessPdf": {"url":
+      27, "influentialCitationCount": 1, "isOpenAccess": true, "openAccessPdf": {"url":
       "https://infoscience.epfl.ch/record/130728/files/mAsadpour08.pdf", "status":
       "GREEN"}, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
       [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
-      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-      "publicationTypes": ["JournalArticle", "Conference"], "publicationDate": "2008-10-14",
-      "journal": {"name": "2008 IEEE/RSJ International Conference on Intelligent Robots
-      and Systems", "pages": "863-869"}, "authors": [{"authorId": "1771574", "name":
-      "M. Asadpour"}, {"authorId": "3210778", "name": "Alexander Spr\u00f6witz"},
-      {"authorId": "1807928", "name": "A. Billard"}, {"authorId": "1799133", "name":
-      "P. Dillenbourg"}, {"authorId": "8038419", "name": "A. Ijspeert"}]}, {"paperId":
-      "135ea9aac86cc83d7c979eeefcf479cfcdeed7fe", "externalIds": {"MAG": "1486707681",
-      "DBLP": "phd/ethos/Cormode03", "CorpusId": 8210461}, "corpusId": 8210461, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/135ea9aac86cc83d7c979eeefcf479cfcdeed7fe",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
+      {"category": "Engineering", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle", "Conference"], "publicationDate": "2008-10-14", "journal":
+      {"name": "2008 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "pages": "863-869"}, "authors": [{"authorId": "1771574", "name": "M. Asadpour"},
+      {"authorId": "3210778", "name": "Alexander Spr\u00f6witz"}, {"authorId": "1807928",
+      "name": "A. Billard"}, {"authorId": "1799133", "name": "P. Dillenbourg"}, {"authorId":
+      "8038419", "name": "A. Ijspeert"}]}, {"paperId": "135ea9aac86cc83d7c979eeefcf479cfcdeed7fe",
+      "externalIds": {"MAG": "1486707681", "DBLP": "phd/ethos/Cormode03", "CorpusId":
+      8210461}, "corpusId": 8210461, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/135ea9aac86cc83d7c979eeefcf479cfcdeed7fe",
       "title": "Sequence distance embeddings", "abstract": "Sequences represent a
       large class of fundamental objects in Computer Science sets, strings, vectors
       and permutations are considered to be sequences. Distances between sequences
@@ -1335,70 +1377,13 @@ interactions:
       that given only a small space, approximate solutions to several similarity and
       clustering problems can be found that are as good as or better than those found
       with prior methods.", "venue": "", "year": 2003, "referenceCount": 160, "citationCount":
-      68, "influentialCitationCount": 5, "isOpenAccess": false, "openAccessPdf": null,
+      66, "influentialCitationCount": 6, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
-      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"name": "", "volume": ""}, "authors":
-      [{"authorId": "1709589", "name": "Graham Cormode"}]}, {"paperId": "109cc4ba10598400b2818693dfc9edfde6254ebd",
-      "externalIds": {"MAG": "2070409660", "DBLP": "journals/algorithmica/HyyroN05",
-      "DOI": "10.1007/s00453-004-1108-z", "CorpusId": 7307909}, "corpusId": 7307909,
-      "publicationVenue": {"id": "300eb16f-ce6c-495a-8da3-2e691bf9051d", "name": "Algorithmica",
-      "type": "journal", "issn": "0178-4617", "url": "https://www.springer.com/computer/theoretical+computer+science/journal/453",
-      "alternate_urls": ["https://link.springer.com/journal/453", "http://www.springer.com/computer/theoretical+computer+science/journal/453"]},
-      "url": "https://www.semanticscholar.org/paper/109cc4ba10598400b2818693dfc9edfde6254ebd",
-      "title": "Bit-Parallel Witnesses and Their Applications \n to Approximate String
-      Matching", "abstract": null, "venue": "Algorithmica", "year": 2004, "referenceCount":
-      25, "citationCount": 36, "influentialCitationCount": 4, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
-      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Computer Science", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      null, "journal": {"name": "Algorithmica", "pages": "203-231", "volume": "41"},
-      "authors": [{"authorId": "1828763", "name": "Heikki Hyyr\u00f6"}, {"authorId":
-      "143678972", "name": "G. Navarro"}]}, {"paperId": "055b549d6235675e8b512f51a6d07f2bd2203869",
-      "externalIds": {"DBLP": "journals/tit/VenkataramananS15", "MAG": "3100438601",
-      "ArXiv": "1310.2026", "DOI": "10.1109/TIT.2015.2466635", "CorpusId": 15728206},
-      "corpusId": 15728206, "publicationVenue": {"id": "748e730b-add9-47ee-819d-8ae54e504ef9",
-      "name": "IEEE Transactions on Information Theory", "type": "journal", "alternate_names":
-      ["IEEE Trans Inf Theory"], "issn": "0018-9448", "url": "http://www.comm.utoronto.ca/trans-it/",
-      "alternate_urls": ["https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?puNumber=18",
-      "http://ieeexplore.ieee.org/servlet/opac?punumber=18"]}, "url": "https://www.semanticscholar.org/paper/055b549d6235675e8b512f51a6d07f2bd2203869",
-      "title": "Low-Complexity Interactive Algorithms for Synchronization From Deletions,
-      Insertions, and Substitutions", "abstract": "Consider two remote nodes having
-      binary sequences X and Y, respectively. Y is an edited version of X, where the
-      editing involves random deletions, insertions, and substitutions, possibly in
-      bursts. The goal is for the node with Y to reconstruct X with minimal exchange
-      of information over a noiseless link. The communication is measured in terms
-      of both the total number of bits exchanged and the number of interactive rounds
-      of communication. This paper focuses on the setting where the number of edits
-      is o(n/log n), where n is the length of X. We first consider the case where
-      the edits are a mixture of insertions and deletions (indels), and propose an
-      interactive synchronization algorithm with near-optimal communication rate and
-      average computational complexity of O(n) arithmetic operations. The algorithm
-      uses interaction to efficiently split the source sequence into substrings containing
-      exactly one deletion or insertion. Each of these substrings is then synchronized
-      using an optimal one-way algorithm based on the single-deletion correcting channel
-      codes of Varshamov and Tenengolts. We then build on this synchronization algorithm
-      in three different ways. First, it is modified to work with a single round of
-      interaction. The reduction in the number of rounds comes at the expense of higher
-      communication, which is quantified. Next, we present an extension to the practically
-      important case where the insertions and deletions may occur in (potentially
-      large) bursts. Finally, we show how to synchronize the sources to within a target
-      Hamming distance. This feature can be used to differentiate between substitution
-      and indel edits. In addition to theoretical performance bounds, we provide several
-      validating simulation results for the proposed algorithms.", "venue": "IEEE
-      Transactions on Information Theory", "year": 2013, "referenceCount": 32, "citationCount":
-      33, "influentialCitationCount": 4, "isOpenAccess": true, "openAccessPdf": {"url":
-      "https://www.repository.cam.ac.uk/bitstream/1810/249100/1/Venkataramanan%20et%20al%202015%20IEEE%20Transactions%20on%20Information%20Theory.pdf",
-      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
-      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-      "publicationTypes": ["JournalArticle"], "publicationDate": "2013-10-08", "journal":
-      {"name": "IEEE Transactions on Information Theory", "pages": "5670-5689", "volume":
-      "61"}, "authors": [{"authorId": "145720083", "name": "R. Venkataramanan"}, {"authorId":
-      "3751982", "name": "Vasuki Narasimha Swamy"}, {"authorId": "144161012", "name":
-      "K. Ramchandran"}]}, {"paperId": "1bfc53742bec159e78db6d45ac9a4ea0ae08d7db",
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1709589",
+      "name": "Graham Cormode"}]}, {"paperId": "1bfc53742bec159e78db6d45ac9a4ea0ae08d7db",
       "externalIds": {"MAG": "2793332341", "DOI": "10.1145/3166186", "CorpusId": 67274739},
       "corpusId": 67274739, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1bfc53742bec159e78db6d45ac9a4ea0ae08d7db",
       "title": "The Sparse Fourier Transform: Theory and Practice", "abstract": "The
@@ -1454,45 +1439,72 @@ interactions:
       of these systems in accordance with the standards of each application domain.
       \n \nThis book is a revised version of the author''s 2016 ACM Dissertation Award
       winning Ph.D. thesis. The revisions include editing, formatting, and minor corrections.",
-      "venue": "", "year": 2018, "referenceCount": 0, "citationCount": 8, "influentialCitationCount":
+      "venue": "", "year": 2018, "referenceCount": 0, "citationCount": 9, "influentialCitationCount":
       1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": "2018-02-22", "journal": {"name": "", "volume": ""},
-      "authors": [{"authorId": "2349340", "name": "Haitham Hassanieh"}]}, {"paperId":
-      "950902253427acd162f3dbd0d0544b34aadca548", "externalIds": {"MAG": "2555411750",
-      "DOI": "10.1109/ALLERTON.2010.5707079", "CorpusId": 15511988}, "corpusId": 15511988,
-      "publicationVenue": {"id": "e3e363b2-60f3-46d7-9067-5deaddc3f3f2", "name": "Allerton
-      Conference on Communication, Control, and Computing", "type": "conference",
-      "alternate_names": ["Allerton", "T Conf Commun Control Comput"]}, "url": "https://www.semanticscholar.org/paper/950902253427acd162f3dbd0d0544b34aadca548",
-      "title": "Interactive low-complexity codes for synchronization from deletions
-      and insertions", "abstract": "We study the problem of synchronization of two
-      remotely located data sources, which are mis-synchronized due to deletions and
-      insertions. This is an important problem since a small number of synchronization
-      errors can induce a large Hamming distance between the two sources. The goal
-      is to effect synchronization with the rate-efficient use of lossless bidirectional
-      links between the two sources. In this work, we focus on the following model.
-      A binary sequence X of length n is edited to generate the sequence at the remote
-      end, say Y, where the editing involves random deletions and insertions, possibly
-      in small bursts. The problem is to synchronize Y with X with minimal exchange
-      of information (in terms of both the average communication rate and the average
-      number of interactive rounds of communication). We focus here on the case where
-      the number of edits is much smaller than n, and propose an interactive algorithm
-      which is computationally simple and has near-optimal communication complexity.
-      Our algorithm works by efficiently splitting the source sequence into pieces
-      containing either just a single deletion/insertion or a single burst deletion/insertion.
-      Each of these pieces is then synchronized using an optimal one-way synchronization
-      code, based on the single-deletion correcting channel codes of Varshamov and
-      Tenengolts (VT codes).", "venue": "Allerton Conference on Communication, Control,
-      and Computing", "year": 2010, "referenceCount": 17, "citationCount": 35, "influentialCitationCount":
-      8, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      ["Conference"], "publicationDate": "2010-09-01", "journal": {"name": "2010 48th
-      Annual Allerton Conference on Communication, Control, and Computing (Allerton)",
-      "pages": "1412-1419"}, "authors": [{"authorId": "145720083", "name": "R. Venkataramanan"},
-      {"authorId": "46702482", "name": "Hao Zhang"}, {"authorId": "144161012", "name":
-      "K. Ramchandran"}]}, {"paperId": "f58239e210caae820ae0bdbc0d4d64421577d67f",
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "2018-02-22", "journal": {"name":
+      "", "volume": ""}, "authors": [{"authorId": "2349340", "name": "Haitham Hassanieh"}]},
+      {"paperId": "055b549d6235675e8b512f51a6d07f2bd2203869", "externalIds": {"DBLP":
+      "journals/tit/VenkataramananS15", "ArXiv": "1310.2026", "MAG": "1941245335",
+      "DOI": "10.1109/TIT.2015.2466635", "CorpusId": 15728206}, "corpusId": 15728206,
+      "publicationVenue": {"id": "748e730b-add9-47ee-819d-8ae54e504ef9", "name": "IEEE
+      Transactions on Information Theory", "type": "journal", "alternate_names": ["IEEE
+      Trans Inf Theory"], "issn": "0018-9448", "url": "http://www.comm.utoronto.ca/trans-it/",
+      "alternate_urls": ["https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?puNumber=18",
+      "http://ieeexplore.ieee.org/servlet/opac?punumber=18"]}, "url": "https://www.semanticscholar.org/paper/055b549d6235675e8b512f51a6d07f2bd2203869",
+      "title": "Low-Complexity Interactive Algorithms for Synchronization From Deletions,
+      Insertions, and Substitutions", "abstract": "Consider two remote nodes having
+      binary sequences X and Y, respectively. Y is an edited version of X, where the
+      editing involves random deletions, insertions, and substitutions, possibly in
+      bursts. The goal is for the node with Y to reconstruct X with minimal exchange
+      of information over a noiseless link. The communication is measured in terms
+      of both the total number of bits exchanged and the number of interactive rounds
+      of communication. This paper focuses on the setting where the number of edits
+      is o(n/log n), where n is the length of X. We first consider the case where
+      the edits are a mixture of insertions and deletions (indels), and propose an
+      interactive synchronization algorithm with near-optimal communication rate and
+      average computational complexity of O(n) arithmetic operations. The algorithm
+      uses interaction to efficiently split the source sequence into substrings containing
+      exactly one deletion or insertion. Each of these substrings is then synchronized
+      using an optimal one-way algorithm based on the single-deletion correcting channel
+      codes of Varshamov and Tenengolts. We then build on this synchronization algorithm
+      in three different ways. First, it is modified to work with a single round of
+      interaction. The reduction in the number of rounds comes at the expense of higher
+      communication, which is quantified. Next, we present an extension to the practically
+      important case where the insertions and deletions may occur in (potentially
+      large) bursts. Finally, we show how to synchronize the sources to within a target
+      Hamming distance. This feature can be used to differentiate between substitution
+      and indel edits. In addition to theoretical performance bounds, we provide several
+      validating simulation results for the proposed algorithms.", "venue": "IEEE
+      Transactions on Information Theory", "year": 2013, "referenceCount": 35, "citationCount":
+      32, "influentialCitationCount": 4, "isOpenAccess": true, "openAccessPdf": {"url":
+      "https://www.repository.cam.ac.uk/bitstream/1810/249100/1/Venkataramanan%20et%20al%202015%20IEEE%20Transactions%20on%20Information%20Theory.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2013-10-08", "journal":
+      {"name": "IEEE Transactions on Information Theory", "pages": "5670-5689", "volume":
+      "61"}, "authors": [{"authorId": "145720083", "name": "R. Venkataramanan"}, {"authorId":
+      "3751982", "name": "Vasuki Narasimha Swamy"}, {"authorId": "144161012", "name":
+      "K. Ramchandran"}]}, {"paperId": "109cc4ba10598400b2818693dfc9edfde6254ebd",
+      "externalIds": {"MAG": "2070409660", "DBLP": "journals/algorithmica/HyyroN05",
+      "DOI": "10.1007/s00453-004-1108-z", "CorpusId": 7307909}, "corpusId": 7307909,
+      "publicationVenue": {"id": "300eb16f-ce6c-495a-8da3-2e691bf9051d", "name": "Algorithmica",
+      "type": "journal", "issn": "0178-4617", "url": "https://www.springer.com/computer/theoretical+computer+science/journal/453",
+      "alternate_urls": ["https://link.springer.com/journal/453", "http://www.springer.com/computer/theoretical+computer+science/journal/453"]},
+      "url": "https://www.semanticscholar.org/paper/109cc4ba10598400b2818693dfc9edfde6254ebd",
+      "title": "Bit-Parallel Witnesses and Their Applications \n to Approximate String
+      Matching", "abstract": null, "venue": "Algorithmica", "year": 2004, "referenceCount":
+      25, "citationCount": 31, "influentialCitationCount": 3, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "Algorithmica", "pages": "203-231", "volume": "41"},
+      "authors": [{"authorId": "1828763", "name": "Heikki Hyyr\u00f6"}, {"authorId":
+      "143678972", "name": "G. Navarro"}]}, {"paperId": "f58239e210caae820ae0bdbc0d4d64421577d67f",
       "externalIds": {"MAG": "2789943307", "DOI": "10.1109/I2C2.2017.8321962", "CorpusId":
       4107794}, "corpusId": 4107794, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f58239e210caae820ae0bdbc0d4d64421577d67f",
       "title": "A font style classification system for English OCR", "abstract": "The
@@ -1517,28 +1529,59 @@ interactions:
       5 different font styles. The performance of algorithm is found to be satisfactory
       with an accuracy of 80%.", "venue": "2017 International Conference on Intelligent
       Computing and Control (I2C2)", "year": 2017, "referenceCount": 11, "citationCount":
-      20, "influentialCitationCount": 5, "isOpenAccess": false, "openAccessPdf": null,
+      21, "influentialCitationCount": 6, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
       "s2-fos-model"}], "publicationTypes": ["Conference"], "publicationDate": "2017-06-01",
       "journal": {"name": "2017 International Conference on Intelligent Computing
       and Control (I2C2)", "pages": "1-5"}, "authors": [{"authorId": "144531464",
       "name": "V. Bharath"}, {"authorId": "147702218", "name": "N. Rani"}]}, {"paperId":
-      "780eb7a94068377852c5a89deadc2c4697bc38c5", "externalIds": {"MAG": "1543611576",
-      "DOI": "10.1007/3-540-68530-8", "CorpusId": 117765714}, "corpusId": 117765714,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/780eb7a94068377852c5a89deadc2c4697bc38c5",
+      "950902253427acd162f3dbd0d0544b34aadca548", "externalIds": {"MAG": "2555411750",
+      "DOI": "10.1109/ALLERTON.2010.5707079", "CorpusId": 15511988}, "corpusId": 15511988,
+      "publicationVenue": {"id": "e3e363b2-60f3-46d7-9067-5deaddc3f3f2", "name": "Allerton
+      Conference on Communication, Control, and Computing", "type": "conference",
+      "alternate_names": ["Allerton", "T Conf Commun Control Comput"]}, "url": "https://www.semanticscholar.org/paper/950902253427acd162f3dbd0d0544b34aadca548",
+      "title": "Interactive low-complexity codes for synchronization from deletions
+      and insertions", "abstract": "We study the problem of synchronization of two
+      remotely located data sources, which are mis-synchronized due to deletions and
+      insertions. This is an important problem since a small number of synchronization
+      errors can induce a large Hamming distance between the two sources. The goal
+      is to effect synchronization with the rate-efficient use of lossless bidirectional
+      links between the two sources. In this work, we focus on the following model.
+      A binary sequence X of length n is edited to generate the sequence at the remote
+      end, say Y, where the editing involves random deletions and insertions, possibly
+      in small bursts. The problem is to synchronize Y with X with minimal exchange
+      of information (in terms of both the average communication rate and the average
+      number of interactive rounds of communication). We focus here on the case where
+      the number of edits is much smaller than n, and propose an interactive algorithm
+      which is computationally simple and has near-optimal communication complexity.
+      Our algorithm works by efficiently splitting the source sequence into pieces
+      containing either just a single deletion/insertion or a single burst deletion/insertion.
+      Each of these pieces is then synchronized using an optimal one-way synchronization
+      code, based on the single-deletion correcting channel codes of Varshamov and
+      Tenengolts (VT codes).", "venue": "Allerton Conference on Communication, Control,
+      and Computing", "year": 2010, "referenceCount": 16, "citationCount": 34, "influentialCitationCount":
+      7, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["Conference"], "publicationDate": "2010-09-01", "journal": {"name": "2010 48th
+      Annual Allerton Conference on Communication, Control, and Computing (Allerton)",
+      "pages": "1412-1419"}, "authors": [{"authorId": "145720083", "name": "R. Venkataramanan"},
+      {"authorId": "46702482", "name": "Hao Zhang"}, {"authorId": "144161012", "name":
+      "K. Ramchandran"}]}, {"paperId": "780eb7a94068377852c5a89deadc2c4697bc38c5",
+      "externalIds": {"MAG": "1543611576", "DOI": "10.1007/3-540-68530-8", "CorpusId":
+      117765714}, "corpusId": 117765714, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/780eb7a94068377852c5a89deadc2c4697bc38c5",
       "title": "Algorit[h]ms - ESA ''98 : 6th Annual European Symposium, Venice, Italy,
       August 24-26, 1998 : proceedings", "abstract": null, "venue": "", "year": 1998,
-      "referenceCount": 0, "citationCount": 63, "influentialCitationCount": 0, "isOpenAccess":
-      true, "openAccessPdf": {"url": "https://link.springer.com/content/pdf/bfm:978-3-540-68530-2/1?pdf=chapter%20toc",
-      "status": "GREEN"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
-      "Mathematics", "source": "external"}, {"category": "Computer Science", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      {"name": "", "volume": "1461"}, "authors": [{"authorId": "2708239", "name":
-      "G. Bilardi"}, {"authorId": "1688493", "name": "G. Italiano"}, {"authorId":
+      "referenceCount": 0, "citationCount": 61, "influentialCitationCount": 0, "isOpenAccess":
+      true, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "", "volume": "1461"}, "authors": [{"authorId": "2708239",
+      "name": "G. Bilardi"}, {"authorId": "1688493", "name": "G. Italiano"}, {"authorId":
       "1750351", "name": "A. Pietracaprina"}, {"authorId": "7688370", "name": "G.
       Pucci"}]}, {"paperId": "86ececa5aca5bf43442a84723a2c4b88ceccecc9", "externalIds":
-      {"MAG": "2130865646", "DBLP": "journals/taslp/CaseyRS08", "DOI": "10.1109/TASL.2008.925883",
+      {"DBLP": "journals/taslp/CaseyRS08", "MAG": "2130865646", "DOI": "10.1109/TASL.2008.925883",
       "CorpusId": 206601845}, "corpusId": 206601845, "publicationVenue": {"id": "96b92082-eb93-4682-be66-0a8fa5f2511c",
       "name": "IEEE Transactions on Audio, Speech, and Language Processing", "type":
       "journal", "alternate_names": ["IEEE Trans Audio Speech Lang Process"], "issn":
@@ -1570,7 +1613,7 @@ interactions:
       two tasks and 75% precision at 70% recall in the third task. Each task was performed
       on a test database comprising 4.5 million audio shingles.", "venue": "IEEE Transactions
       on Audio, Speech, and Language Processing", "year": 2008, "referenceCount":
-      48, "citationCount": 107, "influentialCitationCount": 11, "isOpenAccess": false,
+      46, "citationCount": 104, "influentialCitationCount": 12, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
@@ -1578,21 +1621,21 @@ interactions:
       Speech, and Language Processing", "pages": "1015-1028", "volume": "16"}, "authors":
       [{"authorId": "1734296", "name": "M. Casey"}, {"authorId": "20522319", "name":
       "Christophe Rhodes"}, {"authorId": "145290352", "name": "M. Slaney"}]}, {"paperId":
-      "376ba9d4a2fb324c34865bf66e3217b91d303dee", "externalIds": {"PubMedCentral":
-      "3765529", "DBLP": "journals/bmcbi/MeyerKB13", "MAG": "2058124910", "DOI": "10.1186/1471-2105-14-226",
-      "CorpusId": 13988784, "PubMed": "23865810"}, "corpusId": 13988784, "publicationVenue":
+      "44c3c4da8b0606695e819547da8fc05521f0241b", "externalIds": {"PubMedCentral":
+      "3765529", "MAG": "2058124910", "DBLP": "journals/bmcbi/MeyerKB13", "DOI": "10.1186/1471-2105-14-226",
+      "CorpusId": 255795319, "PubMed": "23865810"}, "corpusId": 255795319, "publicationVenue":
       {"id": "be3f884c-b44a-496a-a593-1cad3f89d254", "name": "BMC Bioinformatics",
       "type": "journal", "alternate_names": ["BMC Bioinform"], "issn": "1471-2105",
       "url": "http://www.biomedcentral.com/bmcbioinformatics", "alternate_urls": ["http://www.pubmedcentral.nih.gov/tocrender.fcgi?journal=13",
-      "http://www.biomedcentral.com/bmcbioinformatics/"]}, "url": "https://www.semanticscholar.org/paper/376ba9d4a2fb324c34865bf66e3217b91d303dee",
+      "http://www.biomedcentral.com/bmcbioinformatics/"]}, "url": "https://www.semanticscholar.org/paper/44c3c4da8b0606695e819547da8fc05521f0241b",
       "title": "Fast online and index-based algorithms for approximate search of RNA
       sequence-structure patterns", "abstract": null, "venue": "BMC Bioinformatics",
-      "year": 2013, "referenceCount": 44, "citationCount": 6, "influentialCitationCount":
+      "year": 2013, "referenceCount": 43, "citationCount": 6, "influentialCitationCount":
       1, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-14-226",
-      "status": "GOLD"}, "fieldsOfStudy": ["Computer Science", "Medicine"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Medicine",
-      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
-      {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "status": "GOLD"}, "fieldsOfStudy": ["Medicine", "Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Medicine", "source": "external"}, {"category": "Computer Science",
+      "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "2013-07-17", "journal": {"name": "BMC Bioinformatics", "pages":
       "226 - 226", "volume": "14"}, "authors": [{"authorId": "47100055", "name": "F.
       Meyer"}, {"authorId": "8419159", "name": "S. Kurtz"}, {"authorId": "49483183",
@@ -1642,15 +1685,14 @@ interactions:
       I give two simple examples for a layout interface (see Figure 1). The rectangles
       represent the slots and the colors represent the items (more red", "venue":
       "", "year": 2017, "referenceCount": 9, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.dpi-proceedings.com/index.php/dtcse/article/download/16038/15546",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "2017-11-28", "journal": {"name": "DEStech Transactions on Computer Science
-      and Engineering", "volume": ""}, "authors": [{"authorId": "144862190", "name":
-      "E. Ivanko"}]}, {"paperId": "2cd166b60816d4ec076eef684b139c1989999d22", "externalIds":
-      {"MAG": "2187092961", "CorpusId": 14893442}, "corpusId": 14893442, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/2cd166b60816d4ec076eef684b139c1989999d22",
+      0, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "2017-11-28", "journal": {"name": "DEStech Transactions
+      on Computer Science and Engineering", "volume": ""}, "authors": [{"authorId":
+      "144862190", "name": "E. Ivanko"}]}, {"paperId": "2cd166b60816d4ec076eef684b139c1989999d22",
+      "externalIds": {"MAG": "2187092961", "CorpusId": 14893442}, "corpusId": 14893442,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/2cd166b60816d4ec076eef684b139c1989999d22",
       "title": "A Comparative Performance Analysis of Approximate String Matching",
       "abstract": "This paper presents a comparative study to evaluate experimental
       results for approximate string matching algorithms on the basis of edit distance.
@@ -1673,24 +1715,9 @@ interactions:
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "46815131",
-      "name": "Shivani Jain"}]}, {"paperId": "44c3c4da8b0606695e819547da8fc05521f0241b",
-      "externalIds": {"DOI": "10.1186/1471-2105-14-226", "CorpusId": 255795319}, "corpusId":
-      255795319, "publicationVenue": {"id": "be3f884c-b44a-496a-a593-1cad3f89d254",
-      "name": "BMC Bioinformatics", "type": "journal", "alternate_names": ["BMC Bioinform"],
-      "issn": "1471-2105", "url": "http://www.biomedcentral.com/bmcbioinformatics",
-      "alternate_urls": ["http://www.pubmedcentral.nih.gov/tocrender.fcgi?journal=13",
-      "http://www.biomedcentral.com/bmcbioinformatics/"]}, "url": "https://www.semanticscholar.org/paper/44c3c4da8b0606695e819547da8fc05521f0241b",
-      "title": "Fast online and index-based algorithms for approximate search of RNA
-      sequence-structure patterns", "abstract": null, "venue": "BMC Bioinformatics",
-      "year": 2013, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-14-226",
-      "status": "GOLD"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer
-      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "2013-07-17", "journal": {"name": "BMC Bioinformatics", "volume": "14"}, "authors":
-      [{"authorId": "47100055", "name": "F. Meyer"}, {"authorId": "8419159", "name":
-      "S. Kurtz"}, {"authorId": "49483183", "name": "M. Beckstette"}]}, {"paperId":
-      "aaadcdc2f1964957f587e780d4a66fe8770fa6e6", "externalIds": {"CorpusId": 212531853},
-      "corpusId": 212531853, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/aaadcdc2f1964957f587e780d4a66fe8770fa6e6",
+      "name": "Shivani Jain"}]}, {"paperId": "aaadcdc2f1964957f587e780d4a66fe8770fa6e6",
+      "externalIds": {"CorpusId": 212531853}, "corpusId": 212531853, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/aaadcdc2f1964957f587e780d4a66fe8770fa6e6",
       "title": "Fig-1: Locate all occurrence of the pattern P in a text T. II. IMPLEMENTATION
       OF DIFFERENT PATTERN MATCHING", "abstract": "123 Abstract\u2014 This paper presents
       a comparative study to evaluate experimental results for approximate string
@@ -1717,7 +1744,7 @@ interactions:
       "MAG": "2767396238", "ArXiv": "1711.02035", "CorpusId": 125835323}, "corpusId":
       125835323, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
-      "http://bibpurl.oclc.org/web/7130"}, "url": "https://www.semanticscholar.org/paper/173499656cb9f1e37445398b4c8ea9d9f7867e67",
+      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/173499656cb9f1e37445398b4c8ea9d9f7867e67",
       "title": "FAMOUS: Fast Approximate string Matching using OptimUm search Schemes",
       "abstract": "Finding approximate occurrences of a pattern in a text using a
       full-text index is a central problem in bioinformatics. Bidirectional indices
@@ -1779,13 +1806,14 @@ interactions:
       "citationCount": 15, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
-      "publicationDate": "2010-06-29", "journal": {"name": "2010 10th IEEE International
-      Conference on Computer and Information Technology", "pages": "643-650"}, "authors":
-      [{"authorId": "2373532", "name": "T. Yoon"}, {"authorId": "2115534065", "name":
-      "Sun-young Park"}, {"authorId": "144767439", "name": "Hwan-Gue Cho"}]}, {"paperId":
-      "42bb7a1af10aedf832ee0c963aaca4071dd6f49a", "externalIds": {"CorpusId": 14814805},
-      "corpusId": 14814805, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/42bb7a1af10aedf832ee0c963aaca4071dd6f49a",
+      "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle", "Conference"], "publicationDate": "2010-06-29",
+      "journal": {"name": "2010 10th IEEE International Conference on Computer and
+      Information Technology", "pages": "643-650"}, "authors": [{"authorId": "2373532",
+      "name": "T. Yoon"}, {"authorId": "2115534065", "name": "Sun-young Park"}, {"authorId":
+      "144767439", "name": "Hwan-Gue Cho"}]}, {"paperId": "42bb7a1af10aedf832ee0c963aaca4071dd6f49a",
+      "externalIds": {"CorpusId": 14814805}, "corpusId": 14814805, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/42bb7a1af10aedf832ee0c963aaca4071dd6f49a",
       "title": "New Models and Algorithms for Multidimensional Approximate Pattern
       Matching", "abstract": "We focus on how to compute the edit distance (or similarity)
       b etween two images and the problem of approximate string matching in two dimens
@@ -1810,28 +1838,28 @@ interactions:
       all text cells are inspected), which is O(knd=md 1) time fork < (m=(d(log (m=d))))d
       1.", "venue": "", "year": 2000, "referenceCount": 46, "citationCount": 7, "influentialCitationCount":
       1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "1389957009",
-      "name": "R. Baeza-Yates"}, {"authorId": "143678972", "name": "G. Navarro"}]},
-      {"paperId": "4a33f17125d41fcfbc75928cc0ea98e9360434f8", "externalIds": {"MAG":
-      "1526548858", "DBLP": "conf/esa/2008", "DOI": "10.1007/978-3-540-87744-8", "CorpusId":
-      1561833}, "corpusId": 1561833, "publicationVenue": {"id": "da625a67-4bac-4737-81b6-af5459021b72",
+      [{"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": null, "authors": [{"authorId": "1389957009", "name": "R. Baeza-Yates"},
+      {"authorId": "143678972", "name": "G. Navarro"}]}, {"paperId": "4a33f17125d41fcfbc75928cc0ea98e9360434f8",
+      "externalIds": {"MAG": "643665888", "DBLP": "conf/esa/2008", "DOI": "10.1007/978-3-540-87744-8",
+      "CorpusId": 1561833}, "corpusId": 1561833, "publicationVenue": {"id": "da625a67-4bac-4737-81b6-af5459021b72",
       "name": "Embedded Systems and Applications", "type": "conference", "alternate_names":
       ["ESA", "European Symposium on Algorithms", "Embed Syst Appl", "Eur Symp Algorithm"],
       "url": "http://esa-symposium.org/"}, "url": "https://www.semanticscholar.org/paper/4a33f17125d41fcfbc75928cc0ea98e9360434f8",
       "title": "Algorithms - ESA 2008, 16th Annual European Symposium, Karlsruhe,
       Germany, September 15-17, 2008. Proceedings", "abstract": null, "venue": "Embedded
       Systems and Applications", "year": 2008, "referenceCount": 0, "citationCount":
-      91, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
-      "https://link.springer.com/content/pdf/bfm:978-3-540-87744-8/1?pdf=chapter%20toc",
-      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
-      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-      "publicationTypes": ["Conference"], "publicationDate": null, "journal": {"volume":
-      "5193"}, "authors": [{"authorId": "145793888", "name": "D. Halperin"}, {"authorId":
-      "1698752", "name": "K. Mehlhorn"}]}, {"paperId": "1227b8f92236ea90d1a0716ce47c18d589b1fdb8",
-      "externalIds": {"MAG": "29414154", "CorpusId": 1325849}, "corpusId": 1325849,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1227b8f92236ea90d1a0716ce47c18d589b1fdb8",
+      91, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": ["Conference"],
+      "publicationDate": null, "journal": {"volume": "5193"}, "authors": [{"authorId":
+      "145793888", "name": "D. Halperin"}, {"authorId": "1698752", "name": "K. Mehlhorn"}]},
+      {"paperId": "1227b8f92236ea90d1a0716ce47c18d589b1fdb8", "externalIds": {"MAG":
+      "29414154", "CorpusId": 1325849}, "corpusId": 1325849, "publicationVenue": null,
+      "url": "https://www.semanticscholar.org/paper/1227b8f92236ea90d1a0716ce47c18d589b1fdb8",
       "title": "Application of the -Nearest-Neighbour Rule to the Classification of
       Banded Chromosomes", "abstract": "The-nearest-neighbour rule based on the edit
       distance is applied to the classification of human chromosomes represented as
@@ -1870,11 +1898,12 @@ interactions:
       "", "year": 1999, "referenceCount": 6, "citationCount": 1, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "144240902",
-      "name": "A. Juan"}]}, {"paperId": "615194fc4725c7a44c6d80e8b3747453ecf6b3ec",
-      "externalIds": {"CorpusId": 1569884}, "corpusId": 1569884, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/615194fc4725c7a44c6d80e8b3747453ecf6b3ec",
+      "Biology", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "", "volume": ""}, "authors": [{"authorId": "144240902", "name": "A.
+      Juan"}]}, {"paperId": "615194fc4725c7a44c6d80e8b3747453ecf6b3ec", "externalIds":
+      {"CorpusId": 1569884}, "corpusId": 1569884, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/615194fc4725c7a44c6d80e8b3747453ecf6b3ec",
       "title": "6 Antennas of RFID Tags", "abstract": "Radio Frequency Identification
       (RFID) is a rapidly developing technology which uses RF signals for automatic
       identification of objects. RFID system generally consists of three components:
@@ -1911,53 +1940,10 @@ interactions:
       Cristina Turcu, ISBN 978-953-7619-72-5, pp. 324, February 2010, INTECH, Croatia,
       downloaded from SCIYO.COM", "venue": "", "year": 2012, "referenceCount": 17,
       "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
-      null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Business", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      null, "authors": [{"authorId": "2065059667", "name": "A. Salama"}]}, {"paperId":
-      "d3a6b52333b168e91021dae4a0e260e3f5ba64da", "externalIds": {"MAG": "1560672642",
-      "DOI": "10.5772/7973", "CorpusId": 60748664}, "corpusId": 60748664, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/d3a6b52333b168e91021dae4a0e260e3f5ba64da",
-      "title": "Antennas of RFID Tags", "abstract": "Radio Frequency Identification
-      (RFID) is a rapidly developing technology which uses RF signals for automatic
-      identification of objects. RFID system generally consists of three components:
-      1) A small electronic data carrying device called a transponder or tag that
-      is attached to the item to be identified, 2) A reader that communicates with
-      the tag using radio frequency signals, 3) A host data processing system that
-      contains the information of the identified item and distributes the information
-      between other remote data processing systems. A typical passive RFID tag consists
-      of an antenna and RFID chip. RFID tags can be active (with battery) or passive
-      (without battery). In particular, passive UHF (860 ~ 960) MHz tags represent
-      a near optimal combination of cost and performance (Hunt et al., 2007). Generally,
-      omni directionality for the tag antenna is preferred to ensure the identification
-      from all directions. The structure of the tag antenna should also be low cost,
-      small in size, have good impedance matching and insensitive to the attached
-      objects to keep performance consistent (Curty et al., 2007). A passive RFID
-      system operates in the following way: RFID reader transmits a modulated RF signal
-      to the RFID tag consisting of an antenna and an integrated circuit chip. The
-      chip receives power from the antenna and responds by varying its input impedance
-      and thus modulating the backscattered signal. Modulation type often used in
-      RFID is amplitude shift keying (ASK) where the chip impedance switches between
-      two states: one is matched to the antenna (chip collects power in that state)
-      and another one is strongly mismatched. The most important RFID system performance
-      characteristic is tag range \u2013 the maximum distance at which RFID reader
-      can either read or write information to the tag. Tag range is defined with respect
-      to a certain read/write rate (percentage of successful reads/writes) which varies
-      with a distance and depends on RFID reader characteristics and propagation environment
-      (Nikitin & Rao, 2006). In this chapter, the operation theory of the RFID system
-      is described. The antenna in RFID system is discussed, and the designing considerations
-      of the antennas for RFID applications are presented. Also the design, simulation
-      and implementation of some commonly used antennas in the RFID system are presented
-      and investigated. IE3D electromagnetic simulator based on Method of Moment (MoM)
-      is used to design some of these antennas. Source: Radio Frequency Identification
-      Fundamentals and Applications, Design Methods and Solutions, Book edited by:
-      Cristina Turcu, ISBN 978-953-7619-72-5, pp. 324, February 2010, INTECH, Croatia,
-      downloaded from SCIYO.COM", "venue": "", "year": 2010, "referenceCount": 15,
-      "citationCount": 4, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf":
-      null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
-      "Computer Science", "source": "external"}, {"category": "Business", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2010-02-01",
-      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "2065059667",
-      "name": "A. Salama"}]}, {"paperId": "681a0a18725a959a53266940bd76fafd3121ed61",
+      null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Engineering",
+      "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": null, "authors":
+      [{"authorId": "2065059667", "name": "A. Salama"}]}, {"paperId": "681a0a18725a959a53266940bd76fafd3121ed61",
       "externalIds": {"MAG": "1603063140", "CorpusId": 117005914}, "corpusId": 117005914,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/681a0a18725a959a53266940bd76fafd3121ed61",
       "title": "Algorithms and computation : 17th International Symposium, ISAAC 2006,
@@ -2037,9 +2023,52 @@ interactions:
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": null, "journal": {"name": "", "volume":
       ""}, "authors": [{"authorId": "2097149575", "name": "\u6d45\u91ce \u54f2\u592b"}]},
-      {"paperId": "16ce934a5234c64df0e88823b84788f746099a12", "externalIds": {"MAG":
-      "2162506849", "CorpusId": 11267530}, "corpusId": 11267530, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/16ce934a5234c64df0e88823b84788f746099a12",
+      {"paperId": "d3a6b52333b168e91021dae4a0e260e3f5ba64da", "externalIds": {"MAG":
+      "1560672642", "DOI": "10.5772/7973", "CorpusId": 60748664}, "corpusId": 60748664,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d3a6b52333b168e91021dae4a0e260e3f5ba64da",
+      "title": "Antennas of RFID Tags", "abstract": "Radio Frequency Identification
+      (RFID) is a rapidly developing technology which uses RF signals for automatic
+      identification of objects. RFID system generally consists of three components:
+      1) A small electronic data carrying device called a transponder or tag that
+      is attached to the item to be identified, 2) A reader that communicates with
+      the tag using radio frequency signals, 3) A host data processing system that
+      contains the information of the identified item and distributes the information
+      between other remote data processing systems. A typical passive RFID tag consists
+      of an antenna and RFID chip. RFID tags can be active (with battery) or passive
+      (without battery). In particular, passive UHF (860 ~ 960) MHz tags represent
+      a near optimal combination of cost and performance (Hunt et al., 2007). Generally,
+      omni directionality for the tag antenna is preferred to ensure the identification
+      from all directions. The structure of the tag antenna should also be low cost,
+      small in size, have good impedance matching and insensitive to the attached
+      objects to keep performance consistent (Curty et al., 2007). A passive RFID
+      system operates in the following way: RFID reader transmits a modulated RF signal
+      to the RFID tag consisting of an antenna and an integrated circuit chip. The
+      chip receives power from the antenna and responds by varying its input impedance
+      and thus modulating the backscattered signal. Modulation type often used in
+      RFID is amplitude shift keying (ASK) where the chip impedance switches between
+      two states: one is matched to the antenna (chip collects power in that state)
+      and another one is strongly mismatched. The most important RFID system performance
+      characteristic is tag range \u2013 the maximum distance at which RFID reader
+      can either read or write information to the tag. Tag range is defined with respect
+      to a certain read/write rate (percentage of successful reads/writes) which varies
+      with a distance and depends on RFID reader characteristics and propagation environment
+      (Nikitin & Rao, 2006). In this chapter, the operation theory of the RFID system
+      is described. The antenna in RFID system is discussed, and the designing considerations
+      of the antennas for RFID applications are presented. Also the design, simulation
+      and implementation of some commonly used antennas in the RFID system are presented
+      and investigated. IE3D electromagnetic simulator based on Method of Moment (MoM)
+      is used to design some of these antennas. Source: Radio Frequency Identification
+      Fundamentals and Applications, Design Methods and Solutions, Book edited by:
+      Cristina Turcu, ISBN 978-953-7619-72-5, pp. 324, February 2010, INTECH, Croatia,
+      downloaded from SCIYO.COM", "venue": "", "year": 2010, "referenceCount": 15,
+      "citationCount": 3, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf":
+      null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Business", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2010-02-01",
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "2065059667",
+      "name": "A. Salama"}]}, {"paperId": "16ce934a5234c64df0e88823b84788f746099a12",
+      "externalIds": {"MAG": "2162506849", "CorpusId": 11267530}, "corpusId": 11267530,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/16ce934a5234c64df0e88823b84788f746099a12",
       "title": "Algorithms and lower bounds in the streaming and sparse recovery models",
       "abstract": "In the data stream computation model, input data is given to us
       sequentially (the data stream), and our goal is to compute or approximate some
@@ -2091,14 +2120,15 @@ interactions:
       the reductions to give an optimal algorithm for SRPSK for the guarantee where
       p = q = 2. (Copies available exclusively from MIT Libraries, Rm. 14-0551, Cambridge,
       MA 02139-4307. Ph. 617-253-5668; Fax 617-253-1690.)", "venue": "", "year": 2012,
-      "referenceCount": 75, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      "referenceCount": 73, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
       [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1688317", "name":
-      "P. Indyk"}, {"authorId": "2836805", "name": "Khanh Do Ba"}]}, {"paperId": "f9c2fb74b2e2847ee6a3d61923e7f8ba37514373",
+      "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "", "volume":
+      ""}, "authors": [{"authorId": "1688317", "name": "P. Indyk"}, {"authorId": "2836805",
+      "name": "Khanh Do Ba"}]}, {"paperId": "7fe51f4d4c54686034fe79bc25dabb43343f20b6",
       "externalIds": {"MAG": "1541952385", "CorpusId": 86526427}, "corpusId": 86526427,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f9c2fb74b2e2847ee6a3d61923e7f8ba37514373",
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7fe51f4d4c54686034fe79bc25dabb43343f20b6",
       "title": "Combinatorial pattern matching : 11th Annual Symposium, CPM 2000,
       Montreal, Canada, June 21-23, 2000 : proceedings", "abstract": "Invited Lectures.-
       Identifying and Filtering Near-Duplicate Documents.- Machine Learning for Efficient
@@ -2260,7 +2290,7 @@ interactions:
       Flow Approximation Used for Exact Graph Partitioning.- A Linear Time Heuristic
       for the Branch-Decomposition of Planar Graphs.- Geometric Speed-Up Techniques
       for Finding Shortest Paths in Large Sparse Graphs.", "venue": "", "year": 2003,
-      "referenceCount": 0, "citationCount": 2, "influentialCitationCount": 0, "isOpenAccess":
+      "referenceCount": 0, "citationCount": 3, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
       [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
@@ -2559,71 +2589,108 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
       "journal": null, "authors": [{"authorId": "2115905227", "name": "Yingfei Dong"},
       {"authorId": "145902418", "name": "D. Du"}, {"authorId": "1712312", "name":
-      "O. Ibarra"}]}, {"paperId": "fecfe06e9e18ae281e2c5c2ef65b1ddd3e68e3a7", "externalIds":
-      {"DBLP": "conf/ciac/2006", "MAG": "1550721562", "DOI": "10.1007/11758471", "CorpusId":
-      28611035}, "corpusId": 28611035, "publicationVenue": {"id": "dc657ba2-0928-4ef1-80aa-d5001fc79764",
-      "name": "International/Italian Conference on Algorithms and Complexity", "type":
-      "conference", "alternate_names": ["CIAC", "International Conference on Algorithms
-      and Complexity", "Int Conf Algorithm Complex"], "url": "http://www.wikicfp.com/cfp/program?id=442"},
-      "url": "https://www.semanticscholar.org/paper/fecfe06e9e18ae281e2c5c2ef65b1ddd3e68e3a7",
-      "title": "Algorithms and Complexity, 6th Italian Conference, CIAC 2006, Rome,
-      Italy, May 29-31, 2006, Proceedings", "abstract": null, "venue": "International/Italian
-      Conference on Algorithms and Complexity", "year": 2006, "referenceCount": 0,
-      "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf":
-      {"url": "https://link.springer.com/content/pdf/bfm:978-3-540-34378-3/1?pdf=chapter%20toc",
-      "status": "GREEN"}, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
-      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
-      "publicationTypes": null, "publicationDate": "2006-07-06", "journal": {"volume":
-      "3998"}, "authors": [{"authorId": "1688493", "name": "G. Italiano"}, {"authorId":
-      "1698687", "name": "T. Calamoneri"}, {"authorId": "1680706", "name": "Irene
-      Finocchi"}]}, {"paperId": "f7678214cb29fe20b9505af4a6ea8bfd60d432c6", "externalIds":
-      {"DOI": "10.1109/tkde.2022.3231780", "CorpusId": 255974699}, "corpusId": 255974699,
-      "publicationVenue": {"id": "c6840156-ee10-4d78-8832-7f8909811576", "name": "IEEE
-      Transactions on Knowledge and Data Engineering", "type": "journal", "alternate_names":
-      ["IEEE Trans Knowl Data Eng"], "issn": "1041-4347", "url": "https://www.computer.org/web/tkde",
-      "alternate_urls": ["http://ieeexplore.ieee.org/servlet/opac?punumber=69"]},
+      "O. Ibarra"}]}, {"paperId": "3b15ffc6a72379e4db16018d0a412f142b47d70a", "externalIds":
+      {"MAG": "1550721562", "CorpusId": 28611035}, "corpusId": 28611035, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/3b15ffc6a72379e4db16018d0a412f142b47d70a",
+      "title": "Algorithms and Complexity: 6th Italian Conference, CIAC 2006, Rome,
+      Italy, May 29-31, 2006, Proceedings", "abstract": "Invited Talks.- Reliable
+      and Efficient Geometric Computing.- Beware of the Model: Reflections on Algorithmic
+      Research.- On Search Problems in Complexity Theory and in Logic (Abstract).-
+      Session 1.- Covering a Set of Points with a Minimum Number of Lines.- Approximation
+      Algorithms for Capacitated Rectangle Stabbing.- In-Place Randomized Slope Selection.-
+      Session 2.- Quadratic Programming and Combinatorial Minimum Weight Product Problems.-
+      Counting All Solutions of Minimum Weight Exact Satisfiability.- Clause Shortening
+      Combined with Pruning Yields a New Upper Bound for Deterministic SAT Algorithms.-
+      Session 3.- Network Discovery and Verification with Distance Queries.- Deciding
+      the FIFO Stability of Networks in Polynomial Time.- Heterogenous Networks Can
+      Be Unstable at Arbitrarily Low Injection Rates.- Session 4.- Provisioning a
+      Virtual Private Network Under the Presence of Non-communicating Groups.- Gathering
+      Algorithms on Paths Under Interference Constraints.- On the Hardness of Range
+      Assignment Problems.- Session 5.- Black Hole Search in Asynchronous Rings Using
+      Tokens.- On Broadcast Scheduling with Limited Energy.- A Near Optimal Scheduler
+      for On-Demand Data Broadcasts.- Session 6.- Fair Cost-Sharing Methods for Scheduling
+      Jobs on Parallel Machines.- Tighter Approximation Bounds for LPT Scheduling
+      in Two Special Cases.- Inapproximability Results for Orthogonal Rectangle Packing
+      Problems with Rotations.- Session 7.- Approximate Hierarchical Facility Location
+      and Applications to the Shallow Steiner Tree and Range Assignment Problems.-
+      An Approximation Algorithm for a Bottleneck Traveling Salesman Problem.- On
+      the Minimum Common Integer Partition Problem.- Session 8.- Matching Subsequences
+      in Trees.- Distance Approximating Trees: Complexity and Algorithms.- How to
+      Pack Directed Acyclic Graphs into Small Blocks.- Session 9.- On-Line Coloring
+      of H-Free Bipartite Graphs.- Distributed Approximation Algorithms for Planar
+      Graphs.- A New NC-Algorithm for Finding a Perfect Matching in d-Regular Bipartite
+      Graphs When d Is Small.- Session 10.- Fixed-Parameter Tractability Results for
+      Feedback Set Problems in Tournaments.- Parameterized Algorithms for Hitting
+      Set: The Weighted Case.- Fixed-Parameter Tractable Generalizations of Cluster
+      Editing.- Session 11.- The Linear Arrangement Problem Parameterized Above Guaranteed
+      Value.- Universal Relations and #P-Completeness.- Locally 2-Dimensional Sperner
+      Problems Complete for the Polynomial Parity Argument Classes.", "venue": "",
+      "year": 2006, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2006-07-06",
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1688493", "name":
+      "G. Italiano"}, {"authorId": "1698687", "name": "T. Calamoneri"}, {"authorId":
+      "1680706", "name": "Irene Finocchi"}]}, {"paperId": "f7678214cb29fe20b9505af4a6ea8bfd60d432c6",
+      "externalIds": {"DBLP": "journals/tkde/LoukidesPS23", "DOI": "10.1109/TKDE.2022.3231780",
+      "CorpusId": 255974699}, "corpusId": 255974699, "publicationVenue": {"id": "c6840156-ee10-4d78-8832-7f8909811576",
+      "name": "IEEE Transactions on Knowledge and Data Engineering", "type": "journal",
+      "alternate_names": ["IEEE Trans Knowl Data Eng"], "issn": "1041-4347", "url":
+      "https://www.computer.org/web/tkde", "alternate_urls": ["http://ieeexplore.ieee.org/servlet/opac?punumber=69"]},
       "url": "https://www.semanticscholar.org/paper/f7678214cb29fe20b9505af4a6ea8bfd60d432c6",
       "title": "Bidirectional String Anchors for Improved Text Indexing and Top-$K$
-      Similarity Search", "abstract": "\u2014The minimizers sampling mechanism is
-      a popular mechanism for string sampling. However, minimizers sampling mechanisms
-      lack good guarantees on the expected size of their samples for different combinations
+      Similarity Search", "abstract": "The minimizers sampling mechanism is a popular
+      mechanism for string sampling. However, minimizers sampling mechanisms lack
+      good guarantees on the expected size of their samples for different combinations
       of their input parameters. Furthermore, indexes constructed over minimizers
       samples lack good worst-case guarantees for on-line pattern searches. In response,
       we propose bidirectional string anchors (bd-anchors), a new string sampling
-      mechanism. Given an integer (cid:96) , our mechanism selects the lexicographically
-      smallest rotation in every length- (cid:96) fragment. We show that, like minimizers
-      samples, bd-anchors samples are approximately uniform, locally consistent, and
-      computable in linear time. Furthermore, our experiments demonstrate that the
-      bd-anchors sample sizes decrease proportionally to (cid:96) ; and that these
-      sizes are competitive to or smaller than the minimizers sample sizes. We theoretically
-      justify these results by analyzing the expected size of bd-anchors samples.
-      We also prove that computing a total order on the input alphabet which minimizes
-      the bd-anchors sample size is NP-hard. We next highlight the bene\ufb01ts of
-      bd-anchors in two important applications: text indexing and top- K similarity
-      search. For the \ufb01rst application, we develop an index for performing on-line
+      mechanism. Given an integer <inline-formula><tex-math notation=\"LaTeX\">$\\ell$</tex-math><alternatives><mml:math><mml:mi>\u2113</mml:mi></mml:math><inline-graphic
+      xlink:href=\"loukides-ieq2-3231780.gif\"/></alternatives></inline-formula>,
+      our mechanism selects the lexicographically smallest rotation in every length-<inline-formula><tex-math
+      notation=\"LaTeX\">$\\ell$</tex-math><alternatives><mml:math><mml:mi>\u2113</mml:mi></mml:math><inline-graphic
+      xlink:href=\"loukides-ieq3-3231780.gif\"/></alternatives></inline-formula> fragment.
+      We show that, like minimizers samples, bd-anchors samples are approximately
+      uniform, locally consistent, and computable in linear time. Furthermore, our
+      experiments demonstrate that the bd-anchors sample sizes decrease proportionally
+      to <inline-formula><tex-math notation=\"LaTeX\">$\\ell$</tex-math><alternatives><mml:math><mml:mi>\u2113</mml:mi></mml:math><inline-graphic
+      xlink:href=\"loukides-ieq4-3231780.gif\"/></alternatives></inline-formula>;
+      and that these sizes are <italic>competitive to or smaller than</italic> the
+      minimizers sample sizes. We theoretically justify these results by analyzing
+      the expected size of bd-anchors samples. We also prove that computing a total
+      order on the input alphabet which minimizes the bd-anchors sample size is NP-hard.
+      We next highlight the benefits of bd-anchors in two important applications:
+      text indexing and top-<inline-formula><tex-math notation=\"LaTeX\">$K$</tex-math><alternatives><mml:math><mml:mi>K</mml:mi></mml:math><inline-graphic
+      xlink:href=\"loukides-ieq5-3231780.gif\"/></alternatives></inline-formula> similarity
+      search. For the first application, we develop an index for performing on-line
       pattern searches in near-optimal time, and show experimentally that a simple
-      implementation of our index is consistently faster for on-line pattern searches
-      than an analogous implementation of a minimizers-based index; we also show that
-      it is substantially faster than two classic text indexes. For the second application,
-      we develop a heuristic for top- K similarity search under edit distance, and
-      show experimentally that it is generally as accurate as the state-of-the-art
-      tool for the same purpose but more than one order of magnitude faster .", "venue":
-      "IEEE Transactions on Knowledge and Data Engineering", "year": 2023, "referenceCount":
-      87, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": true,
-      "openAccessPdf": {"url": "https://kclpure.kcl.ac.uk/ws/files/195931388/Bidirectional_String_Anchors_4.pdf",
-      "status": "GREEN"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "IEEE Transactions on Knowledge and Data Engineering"},
-      "authors": [{"authorId": "1726972", "name": "G. Loukides"}, {"authorId": "1722688",
-      "name": "S. Pissis"}, {"authorId": "89309270", "name": "Michelle Sweering"}]},
-      {"paperId": "5e389e0ed5f9db8d12b0c1e82ff3940012c7a20d", "externalIds": {"ArXiv":
-      "2102.06181", "DBLP": "conf/icalp/ChanWX21", "DOI": "10.4230/LIPIcs.ICALP.2021.47",
-      "CorpusId": 231879759}, "corpusId": 231879759, "publicationVenue": {"id": "d024be26-06b0-4afe-8fa3-a297e04fe604",
-      "name": "International Colloquium on Automata, Languages and Programming", "type":
-      "conference", "alternate_names": ["Int Conf Arab Lang Process", "International
-      Conference on Arabic Language Processing", "Int Colloq Autom Lang Program",
-      "ICALP"], "url": "http://www.eatcs.org/"}, "url": "https://www.semanticscholar.org/paper/5e389e0ed5f9db8d12b0c1e82ff3940012c7a20d",
+      implementation of our index is <italic>consistently faster</italic> for on-line
+      pattern searches than an analogous implementation of a minimizers-based index;
+      we also show that it is <italic>substantially</italic> faster than two classic
+      text indexes. For the second application, we develop a heuristic for top-<inline-formula><tex-math
+      notation=\"LaTeX\">$K$</tex-math><alternatives><mml:math><mml:mi>K</mml:mi></mml:math><inline-graphic
+      xlink:href=\"loukides-ieq6-3231780.gif\"/></alternatives></inline-formula> similarity
+      search under edit distance, and show experimentally that it is generally as
+      <italic>accurate</italic> as the state-of-the-art tool for the same purpose
+      but <italic>more than one order of magnitude faster</italic>.", "venue": "IEEE
+      Transactions on Knowledge and Data Engineering", "year": 2023, "referenceCount":
+      100, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://ir.cwi.nl/pub/32902/32902.pdf", "status":
+      "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2023-11-01", "journal": {"name": "IEEE Transactions on Knowledge and Data Engineering",
+      "pages": "11093-11111", "volume": "35"}, "authors": [{"authorId": "1726972",
+      "name": "G. Loukides"}, {"authorId": "1722688", "name": "S. Pissis"}, {"authorId":
+      "89309270", "name": "Michelle Sweering"}]}, {"paperId": "5e389e0ed5f9db8d12b0c1e82ff3940012c7a20d",
+      "externalIds": {"DBLP": "conf/icalp/ChanWX21", "ArXiv": "2102.06181", "DOI":
+      "10.4230/LIPIcs.ICALP.2021.47", "CorpusId": 231879759}, "corpusId": 231879759,
+      "publicationVenue": {"id": "d024be26-06b0-4afe-8fa3-a297e04fe604", "name": "International
+      Colloquium on Automata, Languages and Programming", "type": "conference", "alternate_names":
+      ["Int Conf Arab Lang Process", "International Conference on Arabic Language
+      Processing", "Int Colloq Autom Lang Program", "ICALP"], "url": "http://www.eatcs.org/"},
+      "url": "https://www.semanticscholar.org/paper/5e389e0ed5f9db8d12b0c1e82ff3940012c7a20d",
       "title": "Algorithms, Reductions and Equivalences for Small Weight Variants
       of All-Pairs Shortest Paths", "abstract": "All-Pairs Shortest Paths (APSP) is
       one of the most well studied problems in graph algorithms. This paper studies
@@ -2662,8 +2729,8 @@ interactions:
       time for the problem. Our techniques also lead to a simpler alternative to Shoshan
       and Zwick\u2019s algorithm [FOCS\u201999] for the original APSP problem in undirected
       graphs with small integer weights.", "venue": "International Colloquium on Automata,
-      Languages and Programming", "year": 2021, "referenceCount": 38, "citationCount":
-      7, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      Languages and Programming", "year": 2021, "referenceCount": 36, "citationCount":
+      8, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -2679,7 +2746,7 @@ interactions:
       "title": "Bidirectional String Anchors: A New String Sampling Mechanism", "abstract":
       "The minimizers sampling mechanism is a popular mechanism for string sampling
       introduced independently by Schleimer et al. [SIGMOD 2003] and by Roberts et
-      al. [Bioinf. 2004]. Given two positive integers w and k, it selects the lexicographically
+      al. [ Bioinf. 2004]. Given two positive integers w and k , it selects the lexicographically
       smallest length-k substring in every fragment of w consecutive length-k substrings
       (in every sliding window of length w + k \u2212 1). Minimizers samples are approximately
       uniform, locally consistent, and computable in linear time. Although they do
@@ -2687,37 +2754,37 @@ interactions:
       They thus have been successfully employed in several string processing applications.
       Two main disadvantages of minimizers sampling mechanisms are: first, they also
       do not have good guarantees on the expected size of their samples for every
-      combination of w and k; and, second, indexes that are constructed over their
+      combination of w and k ; and, second, indexes that are constructed over their
       samples do not have good worst-case guarantees for on-line pattern searches.
       To alleviate these disadvantages, we introduce bidirectional string anchors
-      (bd-anchors), a new string sampling mechanism. Given a positive integer l, our
-      mechanism selects the lexicographically smallest rotation in every length-l
-      fragment (in every sliding window of length l). We show that bd-anchors samples
-      are also approximately uniform, locally consistent, and computable in linear
-      time. In addition, our experiments using several datasets demonstrate that the
-      bd-anchors sample sizes decrease proportionally to l; and that these sizes are
-      competitive to or smaller than the minimizers sample sizes using the analogous
-      sampling parameters. We provide theoretical justification for these results
-      by analyzing the expected size of bd-anchors samples. We also show that by using
-      any bd-anchors sample, we can construct, in near-linear time, an index which
-      requires linear (extra) space in the size of the sample and answers on-line
-      pattern searches in near-optimal time. We further show, using several datasets,
-      that a simple implementation of our index is consistently faster for on-line
-      pattern searches than an analogous implementation of a minimizers-based index
-      [Grabowski and Raniszewski, Softw. Pract. Exp. 2017]. Finally, we highlight
+      (bd-anchors), a new string sampling mechanism. Given a positive integer \u2113
+      , our mechanism selects the lexicographically smallest rotation in every length-\u2113
+      fragment (in every sliding window of length \u2113 ). We show that bd-anchors
+      samples are also approximately uniform, locally consistent, and computable in
+      linear time. In addition, our experiments using several datasets demonstrate
+      that the bd-anchors sample sizes decrease proportionally to \u2113 ; and that
+      these sizes are competitive to or smaller than the minimizers sample sizes using
+      the analogous sampling parameters. We provide theoretical justification for
+      these results by analyzing the expected size of bd-anchors samples. We also
+      show that by using any bd-anchors sample, we can construct, in near-linear time,
+      an index which requires linear (extra) space in the size of the sample and answers
+      on-line pattern searches in near-optimal time. We further show, using several
+      datasets, that a simple implementation of our index is consistently faster for
+      on-line pattern searches than an analogous implementation of a minimizers-based
+      index [Grabowski and Raniszewski, Softw. Pract. Exp. 2017]. Finally, we highlight
       the applicability of bd-anchors by developing an efficient and effective heuristic
       for top-K similarity search under edit distance. We show, using synthetic datasets,
       that our heuristic is more accurate and more than one order of magnitude faster
       in top-K similarity searches than the state-of-the-art tool for the same purpose
-      [Zhang and Zhang, KDD 2020]. 2012 ACM Subject Classification Theory of computation
-      \u2192 Pattern matching", "venue": "Embedded Systems and Applications", "year":
-      2021, "referenceCount": 69, "citationCount": 5, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle", "Conference"], "publicationDate": null, "journal": {"pages":
-      "64:1-64:21"}, "authors": [{"authorId": "1726972", "name": "G. Loukides"}, {"authorId":
-      "1722688", "name": "S. Pissis"}]}, {"paperId": "5aeb1558abead222d1e36bd17db0507a323db017",
+      [Zhang and Zhang, KDD 2020].", "venue": "Embedded Systems and Applications",
+      "year": 2021, "referenceCount": 70, "citationCount": 6, "influentialCitationCount":
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://hal.inria.fr/hal-03395425/document",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Conference"], "publicationDate": null, "journal": {"pages": "64:1-64:21"},
+      "authors": [{"authorId": "1726972", "name": "G. Loukides"}, {"authorId": "1722688",
+      "name": "S. Pissis"}]}, {"paperId": "5aeb1558abead222d1e36bd17db0507a323db017",
       "externalIds": {"MAG": "2225766585", "CorpusId": 19396426}, "corpusId": 19396426,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5aeb1558abead222d1e36bd17db0507a323db017",
       "title": "Nearest neighbor search : the old, the new, and the impossible", "abstract":
@@ -2758,31 +2825,32 @@ interactions:
       in the class of hashing algorithms. Failure of the classical approaches for
       some hard distances. We give an evidence that the classical approaches to NN
       under certain hard distances, such as the string edit", "venue": "", "year":
-      2009, "referenceCount": 165, "citationCount": 112, "influentialCitationCount":
+      2009, "referenceCount": 165, "citationCount": 113, "influentialCitationCount":
       12, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": null, "journal": {"name": "", "volume": ""}, "authors":
       [{"authorId": "1738395", "name": "Alexandr Andoni"}]}, {"paperId": "3ebce51559a6312e0171488f8550d2557c676bb2",
-      "externalIds": {"MAG": "2059879909", "PubMedCentral": "3605350", "DBLP": "journals/bmcbi/VaronW12",
-      "DOI": "10.1186/1471-2105-13-293", "CorpusId": 5377611, "PubMed": "23140486"},
-      "corpusId": 5377611, "publicationVenue": {"id": "be3f884c-b44a-496a-a593-1cad3f89d254",
+      "externalIds": {"MAG": "2059879909", "DBLP": "journals/bmcbi/VaronW12", "PubMedCentral":
+      "3605350", "DOI": "10.1186/1471-2105-13-293", "CorpusId": 5377611, "PubMed":
+      "23140486"}, "corpusId": 5377611, "publicationVenue": {"id": "be3f884c-b44a-496a-a593-1cad3f89d254",
       "name": "BMC Bioinformatics", "type": "journal", "alternate_names": ["BMC Bioinform"],
       "issn": "1471-2105", "url": "http://www.biomedcentral.com/bmcbioinformatics",
       "alternate_urls": ["http://www.pubmedcentral.nih.gov/tocrender.fcgi?journal=13",
       "http://www.biomedcentral.com/bmcbioinformatics/"]}, "url": "https://www.semanticscholar.org/paper/3ebce51559a6312e0171488f8550d2557c676bb2",
       "title": "The tree alignment problem", "abstract": null, "venue": "BMC Bioinformatics",
       "year": 2012, "referenceCount": 50, "citationCount": 31, "influentialCitationCount":
-      4, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-13-293",
+      3, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-13-293",
       "status": "GOLD"}, "fieldsOfStudy": ["Biology", "Medicine", "Computer Science"],
       "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}, {"category":
       "Medicine", "source": "external"}, {"category": "Computer Science", "source":
-      "external"}, {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle"], "publicationDate": "2012-11-09", "journal": {"name": "BMC
-      Bioinformatics", "pages": "293 - 293", "volume": "13"}, "authors": [{"authorId":
-      "145267293", "name": "Andr\u00e9s Var\u00f3n"}, {"authorId": "40384475", "name":
-      "W. Wheeler"}]}, {"paperId": "9bb28b8f94daef420de5acfe5799acf29d79ad97", "externalIds":
-      {"MAG": "2797229299", "DOI": "10.1213/ANE.0000000000002923", "CorpusId": 80083407},
+      "external"}, {"category": "Biology", "source": "s2-fos-model"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2012-11-09", "journal": {"name": "BMC Bioinformatics", "pages":
+      "293 - 293", "volume": "13"}, "authors": [{"authorId": "145267293", "name":
+      "Andr\u00e9s Var\u00f3n"}, {"authorId": "40384475", "name": "W. Wheeler"}]},
+      {"paperId": "9bb28b8f94daef420de5acfe5799acf29d79ad97", "externalIds": {"MAG":
+      "2797229299", "DOI": "10.1213/ANE.0000000000002923", "CorpusId": 80083407},
       "corpusId": 80083407, "publicationVenue": {"id": "10106566-d267-4be8-b7be-3c716007639f",
       "name": "Anesthesia and Analgesia", "type": "journal", "alternate_names": ["Anesthesia
       Analg", "Anesthesia & Analgesia", "Anesthesia  Analg"], "issn": "0003-2999",
@@ -2863,8 +2931,8 @@ interactions:
       "Medicine", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "2018-06-01", "journal": {"name": "Anesthesia & Analgesia"}, "authors": [{"authorId":
       "6278492", "name": "R. Maharaj"}]}, {"paperId": "d1aa65a2b642ed06200d8569ab08691c2be72a09",
-      "externalIds": {"DBLP": "conf/icalp/2015-1", "MAG": "2341570704", "DOI": "10.1007/978-3-662-47672-7",
-      "CorpusId": 10976408}, "corpusId": 10976408, "publicationVenue": {"id": "2f5d0e8a-faad-4f10-b323-2b2e3c439a78",
+      "externalIds": {"MAG": "2341570704", "DOI": "10.1007/978-3-662-47672-7", "CorpusId":
+      10976408}, "corpusId": 10976408, "publicationVenue": {"id": "2f5d0e8a-faad-4f10-b323-2b2e3c439a78",
       "name": "Lecture Notes in Computer Science", "type": "journal", "alternate_names":
       ["LNCS", "Transactions on Computational Systems Biology", "Trans Comput Syst
       Biology", "Lect Note Comput Sci"], "issn": "0302-9743", "alternate_issns": ["1861-2059",
@@ -2873,17 +2941,18 @@ interactions:
       "https://link.springer.com/bookseries/558", "http://link.springer.com/search?query=\"Transactions+on+Computational+Systems+Biology\""]},
       "url": "https://www.semanticscholar.org/paper/d1aa65a2b642ed06200d8569ab08691c2be72a09",
       "title": "Automata, Languages, and Programming", "abstract": null, "venue":
-      "Lecture Notes in Computer Science", "year": 2015, "referenceCount": 28, "citationCount":
+      "Lecture Notes in Computer Science", "year": 2015, "referenceCount": 0, "citationCount":
       2, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
-      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
-      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"volume": "9134"}, "authors": [{"authorId":
-      "1717015", "name": "M. Halld\u00f3rsson"}, {"authorId": "144144899", "name":
-      "K. Iwama"}, {"authorId": "144333021", "name": "N. Kobayashi"}, {"authorId":
-      "1699605", "name": "B. Speckmann"}]}, {"paperId": "4c1dcad4ea992c82b88ab22e309e496c315025ee",
-      "externalIds": {"MAG": "608341459", "CorpusId": 122415557}, "corpusId": 122415557,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c1dcad4ea992c82b88ab22e309e496c315025ee",
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"name": "Lecture Notes in Computer
+      Science", "volume": "9134"}, "authors": [{"authorId": "1717015", "name": "M.
+      Halld\u00f3rsson"}, {"authorId": "144144899", "name": "K. Iwama"}, {"authorId":
+      "144333021", "name": "N. Kobayashi"}, {"authorId": "1699605", "name": "B. Speckmann"}]},
+      {"paperId": "4c1dcad4ea992c82b88ab22e309e496c315025ee", "externalIds": {"MAG":
+      "608341459", "CorpusId": 122415557}, "corpusId": 122415557, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/4c1dcad4ea992c82b88ab22e309e496c315025ee",
       "title": "Algorithms and Computation: 24th International Symposium, ISAAC 2013,
       Hong Kong, China, December 16-18, 2013, Proceedings", "abstract": "Invited Talk
       Paper.- Market Approach to Social Ads: The MyLikes Example and Related Problems.-
@@ -3066,7 +3135,7 @@ interactions:
       "url": "https://www.semanticscholar.org/paper/cb639cb1bd35e9ccd1556ed35fab0a1e2fc9d17a",
       "title": "The tree alignment problem", "abstract": null, "venue": "BMC Bioinformatics",
       "year": 2012, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/track/pdf/10.1186/1471-2105-13-293",
+      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://bmcbioinformatics.biomedcentral.com/counter/pdf/10.1186/1471-2105-13-293",
       "status": "GOLD"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Biology",
       "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": "2012-11-09", "journal": {"name":
@@ -3129,13 +3198,14 @@ interactions:
       high accuracy non-contact measurement method. The accuracy of the craniofacial
       landmark measurement is 0.2mm with one standard deviation, while the accuracy
       of the 3D model is 0.3mm with one standard deviation.", "venue": "", "year":
-      2008, "referenceCount": 10, "citationCount": 9, "influentialCitationCount":
+      2008, "referenceCount": 10, "citationCount": 8, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Medicine", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId":
-      "2406011", "name": "Z. Majid"}, {"authorId": "47658883", "name": "H. Setan"},
-      {"authorId": "1917369", "name": "A. Chong"}]}, {"paperId": "fd24999b70949a4c123224a8c14999211cdfceb6",
+      {"category": "Engineering", "source": "s2-fos-model"}, {"category": "Medicine",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "2406011", "name":
+      "Z. Majid"}, {"authorId": "47658883", "name": "H. Setan"}, {"authorId": "1917369",
+      "name": "A. Chong"}]}, {"paperId": "fd24999b70949a4c123224a8c14999211cdfceb6",
       "externalIds": {"MAG": "1566201749", "CorpusId": 53935514}, "corpusId": 53935514,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/fd24999b70949a4c123224a8c14999211cdfceb6",
       "title": "Image analysis : 16th Scandinavian Conference, SCIA 2009, Oslo, Norway,
@@ -3218,143 +3288,9 @@ interactions:
       null, "publicationDate": null, "journal": {"name": "", "volume": ""}, "authors":
       [{"authorId": "48068407", "name": "A. Salberg"}, {"authorId": "1993363", "name":
       "J. Hardeberg"}, {"authorId": "1747567", "name": "R. Jenssen"}]}, {"paperId":
-      "e06ebeeb0995707747654b5dde8aa370c9351b4b", "externalIds": {"CorpusId": 261664565},
-      "corpusId": 261664565, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e06ebeeb0995707747654b5dde8aa370c9351b4b",
-      "title": "Emergent Processes in Group Behavior", "abstract": "Just as neurons
-      interconnect in networks that create structured thoughts beyond the ken of any
-      individual neuron, so people spontaneously organize themselves into groups to
-      create emergent organizations that no individual may intend, comprehend, or
-      even perceive. Recent technological advances have provided us with unprecedented
-      opportunities for conducting controlled laboratory experiments on human collective
-      behavior. We describe two experimental paradigms in which we attempt to build
-      predictive bridges between the beliefs, goals, and cognitive capacities of individuals
-      andpatterns of behavior at the group level, showing how the members of a group
-      dynamically allocate themselves to resources and how innovations diffuse through
-      a social network. Agent-based computational models have provided useful explanatory
-      and predictive accounts. Together, the models and experiments point to tradeoffs
-      between exploration and exploitation\u2014that is, compromises between individuals
-      using their own innovations and using innovations obtained from their peers\u2014and
-      the emergence of group-level organizations such as population waves, bandwagon
-      effects, and spontaneous specialization. KEYWORDS\u2014collective behavior;
-      imitation; social networks; competition; group behavior; foraging It is natural
-      for psychologists to focus on the behavior of single individuals, because introspection
-      provides people with motivation and perspective at this level. However, in a
-      literal sense, we are all participating in entities greater than ourselves.
-      Selforganized collectives of people create emergent group-level patterns that
-      are rarely understood or intended by any individual. A business has a style
-      and ethos that transcends its employees. A culture has a nature, integrity,
-      and systematicity that transcends its inhabitants while still being grounded
-      by their interactions (Atran, Medin, & Ross, 2005). Social phenomena such as
-      the spread of gossip, theWorld-WideWeb, the popularity of cultural icons, legal
-      systems, and scientific establishments all take on a life of their own, complete
-      with their own self-organized divisions of labor and specialization, dynamics,
-      feedback loops, growth, and adaptations. A considerable amount of early work
-      on group behavior from social psychology focused on interpersonal relations
-      and the attributes that characterize good leaders or work teams. However, the
-      social patterns that people form are often organized without explicit leaders,
-      chains of command, or fixed communication networks (Ball, 2004). Examples of
-      such spontaneously emerging social patterns include book recommendations on
-      Amazon.com (which evolve based upon similar readers\u2019 buying habits), fans
-      at a sport stadium, grassroots political movements, the development of a fully
-      cross-indexed and intricately organized online encyclopedia that any person
-      can edit (www. wikipedia.org), and an online venue for media sharing that is
-      freely accessible to both providers and consumers yet still shows striking trends
-      of rich-get-richer popularity (www.youtube.com). In December of 2006, Timemagazine
-      named \u2018\u2018You\u2019\u2019 as Person of the Year in recognition of the
-      power and sophistication of these grass-roots, decentralized communities. To
-      understand the structure and dynamics of human collectives like these, we have
-      developed Internet-based experimental platforms that allow groups of 20 to 200
-      people to interact with each other in real time on networked computers. The
-      experiments use virtual environments in which participants can see the moment-to-moment
-      actions of their peers and immediately respond to their environment by making
-      responses of their own. To understand the results of these experiments, we have
-      developed computational models. Several models of group behavior exist, but
-      rarely are these models tested against detailed data sets obtained from controlled
-      laboratory settings. Often there is a disconcerting mismatch between the simplicity
-      of formal models and the complexities of real-world situations. Our strategy
-      for bridging the gap between computational models and groupbehavior phenomena
-      is to create relatively simple laboratory situations involving groups of people
-      interacting in idealized Address correspondence to Robert L. Goldstone, Psychological
-      and Brain Sciences, Indiana University, Bloomington, IN 47401; e-mail: rgoldsto@indiana.edu.
-      CURRENT DIRECTIONS IN PSYCHOLOGICAL SCIENCE 10 Volume 17\u2014Number 1 Copyright
-      r 2008 Association for Psychological Science environments according to easily
-      stated \u2018\u2018game rules.\u2019\u2019 We admittedly sacrifice some external
-      validity in creating idealized experimental scenarios, but this loss is offset
-      by the nearly exact correspondence of the assumptions underlying our psychological
-      experiments to those of the computational models; this allows the models to
-      be aptly applied without sacrificing their concise explanatory value and genuine
-      predictiveness. In what follows, we focus on two scenarios that capture ubiquitous
-      group patterns: the competition of agents for resources and the dissemination
-      of innovations in social networks. THE COMPETITIVE SEARCH FOR RESOURCES A problem
-      faced by all mobile organisms is how to search their environment for resources.
-      Animals forage their environment for food,Web-users surf the Internet for desired
-      data, and industries mine the land for valuable minerals. When an organism forages
-      in an environment that consists, in part, of other organisms that are also foraging,
-      unique complexities arise. The resources available to each individual are affected
-      not just by that individual\u2019s behavior but also by the simultaneous actions
-      of other individuals. We have been interested in experimentally exploring how
-      human foragers allocate themselves to resources and the time course bywhich
-      that allocation is achieved. Through the Internet (available to the public at
-      http://groups.psych.indiana.edu/), eight groups of 12 to 28 (average5 21) participants
-      competed for food tokens deposited over time in a virtual environment consisting
-      of an 80 80 grid of squares. In Goldstone and Ashpole (2004), a virtual environment
-      was created with two resource pools into which valued food tokens could be deposited
-      with different rates of replenishment. Each pool consisted of a compact region
-      of many squares. The participants\u2019 task was to obtain as many resource
-      tokens as possible during the course of a 270second experiment. A participant
-      obtained a token by being the first tomove on top of it. Participantsmoved square-by-square
-      by pressing arrow keys on their computer keyboard. Resources were divided between
-      two resource pools in various ways. For example, in one condition, food tokens
-      were split evenly (50/50) between the two pools; other conditions had a 65/
-      35 or 80/20 split. The location of the foodwithin a pool followed a normal (Gaussian)
-      distribution with a mean at the center of the pool and a standard deviation
-      of five horizontal and vertical positions. The locations of the pools were randomized
-      under the constraint that the distance between pools was kept approximately
-      constant. One piece of food was delivered to one of the resource pools every
-      4/N seconds, where N is the number of participants. In our \u2018\u2018visible\u2019\u2019
-      condition, each participant could see each other and the entire food distribution.
-      In our \u2018\u2018invisible\u2019\u2019 condition, they could not see the other
-      participants, and so they gradually acquired knowledge of the resource distributions
-      by virtue of their histories of getting food from each location. The dynamics
-      of the distribution of agents to resources in each condition are shown in Figure
-      1, broken down by the three types of resource distribution. Although fast adaptation
-      to the food distributions takes place, the asymptotic distribution of agents
-      systematically undermatches the optimal distribution of agents to resource pools.
-      By undermatching, we mean a distribution of agents that is less uneven than
-      the distribution of resources. For example, in the 65/35 distribution, the 65%
-      pool only attracts an average of 60.6%of the agents. If wewere efficiency consultants,
-      we would recommend that some foragers in the less productive pool move to the
-      more productive pool, as the resources there are being relatively underutilized
-      despite the larger crowd. This finding of undermatching has been obtained with
-      other animal groups, including cichlid fish, mallard ducks, and mites (Kennedy
-      & Gray, 1993). We have also observed this undermatching in collectives of citizens
-      of the virtual world Second Life (http:// secondlife.com/), who were invited
-      to forage for pieces of the world\u2019s currency that we randomly placed in
-      two regions. This undermatching may also explain real-world human foraging behavior,
-      such as the documented inefficiency in sperm whalers\u2019 hunting for whales
-      near the Galapagos Islands in the early 19th century (Whitehead & Hope, 1991).
-      Our results also reveal periodic fluctuations in resource use. A Fourier analysis
-      was applied to the populations at the resource pools over time to reveal cyclic
-      oscillations of migration. Fourier transformations translate a time-varying
-      signal into a set of sinusoidal components. Each sinusoidal component is characterized
-      by a frequency. The power of a component indicates the strength of a periodic
-      response at that frequency. This analysis revealed significantly greater power
-      in the low-frequency spectra for invisible conditions than for visible conditions.
-      For all three invisible conditions, the peak power was at approximately .02
-      cycles/second and was particularly high for the most uneven, 80/20 distribution.
-      This means that in the invisible conditions, agents collectively caused waves
-      of relatively dense crowding at one pool that repeated about once every 50 seconds.
-      There was no evidence for population cycles in the visible conditions, presumably
-      because a person who was tempted to leave their dissatisfying pool for greener
-      pastures would be dissuaded if they saw several other people with the ", "venue":
-      "", "year": 2009, "referenceCount": 12, "citationCount": 1, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
-      [{"category": "Psychology", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2379247",
-      "name": "Robert L. Goldstone"}, {"authorId": "144561434", "name": "Michael E.
-      Roberts"}, {"authorId": "3013567", "name": "T. Gureckis"}]}, {"paperId": "1d690c95be7d91570f813ad1ca7944cb759ae974",
-      "externalIds": {"DBLP": "conf/icoin/2006", "MAG": "2505198098", "DOI": "10.1007/11919568",
-      "CorpusId": 20622003}, "corpusId": 20622003, "publicationVenue": {"id": "0e129215-7c25-46c9-b04b-a0e9faabf021",
+      "1d690c95be7d91570f813ad1ca7944cb759ae974", "externalIds": {"MAG": "1571621449",
+      "DBLP": "conf/icoin/2006", "DOI": "10.1007/11919568", "CorpusId": 20622003},
+      "corpusId": 20622003, "publicationVenue": {"id": "0e129215-7c25-46c9-b04b-a0e9faabf021",
       "name": "International Conference on Information Networking", "type": "conference",
       "alternate_names": ["Int Conf Inf Netw", "ICOIN"], "url": "http://www.icoin.org/"},
       "url": "https://www.semanticscholar.org/paper/1d690c95be7d91570f813ad1ca7944cb759ae974",
@@ -3363,10 +3299,10 @@ interactions:
       2006, Revised Selected Papers", "abstract": null, "venue": "International Conference
       on Information Networking", "year": 2006, "referenceCount": 0, "citationCount":
       2, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
-      "https://link.springer.com/content/pdf/bfm%3A978-3-540-48564-3%2F1", "status":
-      "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
-      "Computer Science", "source": "external"}, {"category": "Business", "source":
-      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "https://link.springer.com/content/pdf/bfm:978-3-540-48564-3/1?pdf=chapter%20toc",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Engineering", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": null, "journal": {"volume": "3961"},
       "authors": [{"authorId": "3344348", "name": "I. Chong"}, {"authorId": "2039559",
       "name": "K. Kawahara"}]}]}
@@ -3378,31 +3314,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '275395'
+      - '270613'
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 21:45:53 GMT
+      - Tue, 21 Nov 2023 04:21:25 GMT
       Via:
-      - 1.1 7f822cbc5468903ff5582a7c6af4c024.cloudfront.net (CloudFront)
+      - 1.1 d25a1132f04e5b0e596d295b437a27be.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - XUd4P_k-mFJHoGRdSZPpaWH1Ekgi9HO_ri35vkqcQzwqjctqRz_5fQ==
+      - n-J0VBKXcoX_bUegZD3BicQC6h-GbiP0v5tSR5Xe9u4fWrq8uH0SGQ==
       X-Amz-Cf-Pop:
-      - EWR53-C1
+      - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - LNwOtEtYvHcFhuw=
+      - Oux6wFrLvHcEDhg=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '275395'
+      - '270613'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:45:53 GMT
+      - Tue, 21 Nov 2023 04:21:25 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 90d4468a-bba5-45fc-bc51-c676e5e0a90a
+      - ef7bf5d3-28c1-4b3f-ac74-a4f74a3c026e
     http_version: HTTP/1.1
     status_code: 200
 - request:
@@ -3415,13 +3351,11 @@ interactions:
       connection:
       - keep-alive
       host:
-      - partner.semanticscholar.org
+      - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-      x-api-key:
-      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+      - python-httpx/0.25.1
     method: GET
-    uri: https://partner.semanticscholar.org/graph/v1/paper/search?query=sublinear%20near%20optimal%20edit%20distance&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=100&limit=100
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=sublinear%20near%20optimal%20edit%20distance&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=100&limit=100
   response:
     content: '{"error":"Requested data for this limit and/or offset is not available"}
 
@@ -3436,27 +3370,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 22:01:21 GMT
+      - Tue, 21 Nov 2023 04:21:26 GMT
       Via:
-      - 1.1 3425db2c749d144a96b60e99c2493db0.cloudfront.net (CloudFront)
+      - 1.1 c8c6b28a99983d138ae2215ef1bb424a.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - z_8DrheJ5kLadUNgPWpZQY5IkPbXiGA4DJuH8-_Qqt_WxIjbNeODsQ==
+      - 2BZ88XjzPVWcG4TMq69aTIgaDJjUk_uo2ys1Uxeqf3Xk-aTfFZnrhg==
       X-Amz-Cf-Pop:
-      - EWR53-C1
+      - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - LNyf0EaePHcFxHA=
+      - Oux7FEczPHcETzg=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '73'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 22:01:21 GMT
+      - Tue, 21 Nov 2023 04:21:26 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 1ab93592-0357-4bfe-9009-ac5764b33b2b
+      - fe9e19d4-0f5b-4c38-89bf-979445f09c72
     http_version: HTTP/1.1
     status_code: 400
 version: 1

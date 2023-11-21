@@ -13,13 +13,11 @@ interactions:
       content-type:
       - application/json
       host:
-      - partner.semanticscholar.org
+      - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-      x-api-key:
-      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+      - python-httpx/0.25.1
     method: POST
-    uri: https://partner.semanticscholar.org/recommendations/v1/papers/?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
+    uri: https://api.semanticscholar.org/recommendations/v1/papers/?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
   response:
     content: '{"error":"No positive paper examples given"}
 
@@ -34,27 +32,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 21:45:39 GMT
+      - Tue, 21 Nov 2023 04:26:52 GMT
       Via:
-      - 1.1 a74c33aabb438b6226856fa442878fa2.cloudfront.net (CloudFront)
+      - 1.1 381ddca30a3b9978a6c84a246d0a25ce.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - bYO0rXkq9avCmOaSATo4YKKK6UI_aJkBcGmguRXRewO_hjJ_C__2_g==
+      - jPVbk4Z6h7OedXawTEXjDDbxFCDf1yjG1hoWVmjCle4fKRozOf-CuA==
       X-Amz-Cf-Pop:
-      - EWR53-C1
+      - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - LNwMoG8nvHcF8-A=
+      - OuyuAF1rPHcEfMA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '45'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:45:39 GMT
+      - Tue, 21 Nov 2023 04:26:52 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 361cb0c4-77e2-4a2c-8286-202a47cbd18c
+      - 4ffbce15-52dd-483b-bdc7-7f65c169b584
     http_version: HTTP/1.1
     status_code: 400
 version: 1

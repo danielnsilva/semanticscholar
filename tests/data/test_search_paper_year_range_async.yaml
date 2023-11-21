@@ -9,32 +9,63 @@ interactions:
       connection:
       - keep-alive
       host:
-      - partner.semanticscholar.org
+      - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-      x-api-key:
-      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+      - python-httpx/0.25.1
     method: GET
-    uri: https://partner.semanticscholar.org/graph/v1/paper/search?query=turing&year=1936-1937&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=turing&year=1936-1937&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
-    content: '{"total": 54, "offset": 0, "data": [{"paperId": "6e0dd4045eb019513aec535b0208ea3e75dd3563",
-      "externalIds": {"MAG": "2318848039", "DOI": "10.2307/2268810", "CorpusId": 117790504},
-      "corpusId": 117790504, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6e0dd4045eb019513aec535b0208ea3e75dd3563",
+    content: '{"total": 51, "offset": 0, "data": [{"paperId": "ab7790485f26ce65f9d83dd700c43e49058bdd2b",
+      "externalIds": {"MAG": "2126160338", "DBLP": "journals/x/Turing37", "DOI": "10.1112/PLMS/S2-42.1.230",
+      "CorpusId": 73712}, "corpusId": 73712, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ab7790485f26ce65f9d83dd700c43e49058bdd2b",
+      "title": "On computable numbers, with an application to the Entscheidungsproblem",
+      "abstract": "1. Computing machines. 2. Definitions. Automatic machines. Computing
+      machines. Circle and circle-free numbers. Computable sequences and numbers.
+      3. Examples of computing machines. 4. Abbreviated tables Further examples. 5.
+      Enumeration of computable sequences. 6. The universal computing machine. 7.
+      Detailed description of the universal machine. 8. Application of the diagonal
+      process. Pagina 1 di 38 On computable numbers, with an application to the Entscheidungsproblem
+      A. M. ...", "venue": "Proc. London Math. Soc.", "year": 1937, "referenceCount":
+      14, "citationCount": 8066, "influentialCitationCount": 467, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "Proc. London Math. Soc.", "pages": "230-265", "volume":
+      "s2-42"}, "authors": [{"authorId": "2079681794", "name": "A. Turing"}]}, {"paperId":
+      "e660d10c4ea944da68ae3bc1453ff4660a404174", "externalIds": {"MAG": "1522321599",
+      "CorpusId": 117790504}, "corpusId": 117790504, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/e660d10c4ea944da68ae3bc1453ff4660a404174",
       "title": "Review: A. M. Turing, On Computable Numbers, with an Application to
       the Entscheidungsproblem", "abstract": null, "venue": "", "year": 1937, "referenceCount":
-      0, "citationCount": 418, "influentialCitationCount": 16, "isOpenAccess": false,
+      0, "citationCount": 335, "influentialCitationCount": 15, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
       [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
       "1937-03-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "42-43",
       "volume": "2"}, "authors": [{"authorId": "144144981", "name": "A. Church"}]},
-      {"paperId": "d9b72578292a563fc5c482206ce6d8955b6bcc1c", "externalIds": {"MAG":
-      "2317985617", "DOI": "10.1017/S002248120003958X", "CorpusId": 124265230}, "corpusId":
-      124265230, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
-      "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
-      ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
-      "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
-      "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
+      {"paperId": "0f34fcab599aabf0ab46d91c21703a9a86b5f048", "externalIds": {"CorpusId":
+      261749144}, "corpusId": 261749144, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0f34fcab599aabf0ab46d91c21703a9a86b5f048",
+      "title": "On computable numbers with an application to the Entscheidungsproblem
+      ( Paper read 12 November 1936 ) Universal Turing Machine", "abstract": "Cryptographers
+      agree that homogeneous archetypes are an interesting new topic in the field
+      of software engineering, and cryptographers concur. In this position paper,
+      we disconfirm the deployment of Internet QoS, which embodies the unfortunate
+      principles of networking. DIOTA, our new heuristic for virtual machines, is
+      the solution to all of these challenges. Such a claim might seem perverse but
+      has ample historical precedence.", "venue": "", "year": 1936, "referenceCount":
+      47, "citationCount": 95, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "2087393471", "name": "Universal
+      Turing"}, {"authorId": "2087368940", "name": "Machine R I P"}]}, {"paperId":
+      "d9b72578292a563fc5c482206ce6d8955b6bcc1c", "externalIds": {"MAG": "2317985617",
+      "DOI": "10.1017/S002248120003958X", "CorpusId": 124265230}, "corpusId": 124265230,
+      "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6", "name": "Journal
+      of Symbolic Logic (JSL)", "type": "journal", "alternate_names": ["J Symb Log",
+      "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812", "url":
+      "https://www.cambridge.org/core/journals/journal-of-symbolic-logic", "alternate_urls":
+      ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
       "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/d9b72578292a563fc5c482206ce6d8955b6bcc1c",
       "title": "A. M. Turing. On computable numbers, with an application to the Entscheidungs
       problcm. Proceedings of the London Mathematical Society , 2 s. vol. 42 (1936\u20131937),
@@ -64,14 +95,14 @@ interactions:
       as sequences of rationals. Tarski''s restriction to an increase of one unit
       in order type has many attractive features, and avoids certain serious difficulties,
       but is found to be somewhat too restrictive.", "venue": "Journal of Symbolic
-      Logic (JSL)", "year": 1937, "referenceCount": 0, "citationCount": 54, "influentialCitationCount":
+      Logic (JSL)", "year": 1937, "referenceCount": 0, "citationCount": 56, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
       "publicationDate": "1937-03-01", "journal": {"name": "Journal of Symbolic Logic",
       "pages": "42 - 43", "volume": "2"}, "authors": [{"authorId": "144144981", "name":
       "A. Church"}]}, {"paperId": "ee8c779e7823814a5f1746d883ca77b26671b617", "externalIds":
-      {"MAG": "1485161910", "DBLP": "journals/jsyml/Turing37", "DOI": "10.2307/2268280",
+      {"DBLP": "journals/jsyml/Turing37", "MAG": "1485161910", "DOI": "10.2307/2268280",
       "CorpusId": 2317046}, "corpusId": 2317046, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
       "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
       ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
@@ -99,8 +130,8 @@ interactions:
       and p. 254. The proof that computability implies recursiveness requires no more
       knowledge of computable functions than the ideas underlying the definition:
       the technical details are recalled in \u00a75.", "venue": "Journal of Symbolic
-      Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 392, "influentialCitationCount":
-      39, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 381, "influentialCitationCount":
+      32, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
@@ -127,10 +158,10 @@ interactions:
       they became a symbol of his book and his conception of the novel.\u201d (Carter
       WC. Marcel Proust. New Haven: Yale University Press, 2000:26.)", "venue": "British
       Journal of Ophthalmology", "year": 1936, "referenceCount": 0, "citationCount":
-      36, "influentialCitationCount": 4, "isOpenAccess": true, "openAccessPdf": {"url":
+      31, "influentialCitationCount": 3, "isOpenAccess": true, "openAccessPdf": {"url":
       "https://bjo.bmj.com/content/bjophthalmol/88/12/1608.full.pdf", "status": "BRONZE"},
       "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
-      "source": "external"}, {"category": "Art", "source": "s2-fos-model"}], "publicationTypes":
+      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle"], "publicationDate": "1936-05-01", "journal": {"name": "British
       Journal of Ophthalmology", "pages": "1608 - 1608", "volume": "88"}, "authors":
       [{"authorId": "144111966", "name": "E. Spencer"}]}, {"paperId": "b300783b3f3bd283ab1cf86b7a51f63469db380f",
@@ -159,18 +190,18 @@ interactions:
       \u03bbx\u00b7p(t, S(r)), r)}(\u00fe). We therefore put, This enables us to define
       also a formula, such that (T, n) is convertible to the formula representing
       the nth positive integer q for which T(q) conv 0.", "venue": "Journal of Symbolic
-      Logic (JSL)", "year": 1937, "referenceCount": 97, "citationCount": 35, "influentialCitationCount":
-      3, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Physics"],
+      Logic (JSL)", "year": 1937, "referenceCount": 62, "citationCount": 31, "influentialCitationCount":
+      2, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Physics"],
       "s2FieldsOfStudy": [{"category": "Physics", "source": "external"}, {"category":
-      "Mathematics", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1937-12-01",
-      "journal": {"name": "Journal of Symbolic Logic", "pages": "164 - 164", "volume":
-      "2"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
-      "467e4dcb1bb4ecd2574f26ccb7b004e034707475", "externalIds": {"DOI": "10.1038/137466b0",
-      "CorpusId": 4084850}, "corpusId": 4084850, "publicationVenue": {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a",
-      "name": "Nature", "type": "journal", "issn": "0028-0836", "url": "https://www.nature.com/",
-      "alternate_urls": ["http://www.nature.com/nature/", "https://www.nature.com/nature/",
-      "http://www.nature.com/nature/archive/index.html"]}, "url": "https://www.semanticscholar.org/paper/467e4dcb1bb4ecd2574f26ccb7b004e034707475",
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "1937-12-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "164
+      - 164", "volume": "2"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
+      {"paperId": "467e4dcb1bb4ecd2574f26ccb7b004e034707475", "externalIds": {"DOI":
+      "10.1038/137466b0", "CorpusId": 4084850}, "corpusId": 4084850, "publicationVenue":
+      {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a", "name": "Nature", "type": "journal",
+      "issn": "0028-0836", "url": "https://www.nature.com/", "alternate_urls": ["http://www.nature.com/nature/",
+      "https://www.nature.com/nature/", "http://www.nature.com/nature/archive/index.html"]},
+      "url": "https://www.semanticscholar.org/paper/467e4dcb1bb4ecd2574f26ccb7b004e034707475",
       "title": "Educational Topics and Events", "abstract": null, "venue": "Nature",
       "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.nature.com/articles/137466b0.pdf",
@@ -265,8 +296,8 @@ interactions:
       "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
       "1937-03-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "43
       - 44", "volume": "2"}, "authors": [{"authorId": "144144981", "name": "A. Church"}]},
-      {"paperId": "891151133781d3e78f19b882015746bafd9bc935", "externalIds": {"DBLP":
-      "journals/jsyml/Turing37a", "MAG": "2799201656", "CorpusId": 33223540}, "corpusId":
+      {"paperId": "891151133781d3e78f19b882015746bafd9bc935", "externalIds": {"MAG":
+      "2799201656", "DBLP": "journals/jsyml/Turing37a", "CorpusId": 33223540}, "corpusId":
       33223540, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
       "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
       ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
@@ -289,18 +320,17 @@ interactions:
       "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
-      "s2-fos-model"}, {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle"], "publicationDate": null, "journal": {"name": "J. Symb. Log.",
-      "pages": "164", "volume": "2"}, "authors": [{"authorId": "2262347", "name":
-      "A. Turing"}]}, {"paperId": "6f9999c25c08d26f2034dc2c417d887bb610d265", "externalIds":
-      {"MAG": "2051307148", "DOI": "10.1038/139077A0", "CorpusId": 4111181}, "corpusId":
-      4111181, "publicationVenue": {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a",
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "J. Symb. Log.", "pages": "164", "volume": "2"}, "authors":
+      [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "6f9999c25c08d26f2034dc2c417d887bb610d265",
+      "externalIds": {"MAG": "2051307148", "DOI": "10.1038/139077A0", "CorpusId":
+      4111181}, "corpusId": 4111181, "publicationVenue": {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a",
       "name": "Nature", "type": "journal", "issn": "0028-0836", "url": "https://www.nature.com/",
       "alternate_urls": ["http://www.nature.com/nature/", "https://www.nature.com/nature/",
       "http://www.nature.com/nature/archive/index.html"]}, "url": "https://www.semanticscholar.org/paper/6f9999c25c08d26f2034dc2c417d887bb610d265",
       "title": "The Bowl of Integers and the Hexlet", "abstract": null, "venue": "Nature",
-      "year": 1937, "referenceCount": 0, "citationCount": 43, "influentialCitationCount":
-      3, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.nature.com/articles/139077a0.pdf",
+      "year": 1937, "referenceCount": 0, "citationCount": 44, "influentialCitationCount":
+      4, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.nature.com/articles/139077a0.pdf",
       "status": "BRONZE"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
       "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1937-01-09",
@@ -321,7 +351,7 @@ interactions:
       from the rural and laboring classes which, in a real sense, may be thought of
       as the nation\u2019s population reservoirs. Differential fertility on this scale
       appears to be modern.", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
-      29, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      28, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category": "Sociology",
       "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle"], "publicationDate": "1936-11-01", "journal": {"name": "The
@@ -346,23 +376,22 @@ interactions:
       "History", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "1937-07-01", "journal": {"name": "The Annals of the American Academy of Political
       and Social Science", "pages": "211 - 212", "volume": "192"}, "authors": []},
-      {"paperId": "b9a0a9c70f169ce584e2c5eea22bb085f217144b", "externalIds": {"MAG":
-      "2031257947", "DOI": "10.1007/BF02879185", "CorpusId": 39457778}, "corpusId":
-      39457778, "publicationVenue": {"id": "8a91832d-4d26-45b5-afdf-bdbcde6cf6ca",
-      "name": "American Potato Journal", "alternate_names": ["Am Potato J"], "issn":
-      "0003-0589", "alternate_issns": ["1874-9380"], "url": "https://link.springer.com/journal/12230",
-      "alternate_urls": ["http://www.umaine.edu/paa/pubs.htm"]}, "url": "https://www.semanticscholar.org/paper/b9a0a9c70f169ce584e2c5eea22bb085f217144b",
-      "title": "The significance of pre-emergence soil moisture to yield of potatoes
-      on dry land in the western high plains area", "abstract": null, "venue": "American
-      Potato Journal", "year": 1937, "referenceCount": 0, "citationCount": 3, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Environmental
-      Science"], "s2FieldsOfStudy": [{"category": "Environmental Science", "source":
-      "external"}, {"category": "Agricultural And Food Sciences", "source": "s2-fos-model"}],
-      "publicationTypes": null, "publicationDate": "1937-06-01", "journal": {"name":
-      "American Potato Journal", "pages": "189-195", "volume": "14"}, "authors": [{"authorId":
-      "14492879", "name": "H. Werner"}]}, {"paperId": "07854ad206f0361edc5df3d775756630deae1380",
-      "externalIds": {"MAG": "2573975570", "DOI": "10.1051/PARASITE/1936141061", "CorpusId":
-      89808212}, "corpusId": 89808212, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/07854ad206f0361edc5df3d775756630deae1380",
+      {"paperId": "bce73cb84d74dcfe5706a1b572e47cfb295ac535", "externalIds": {"MAG":
+      "2312462060", "DOI": "10.1007/BF01774963", "CorpusId": 31866294}, "corpusId":
+      31866294, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
+      "name": "Klinische Wochenschrift", "alternate_names": ["Klin Wochenschr"], "issn":
+      "0023-2173", "alternate_issns": ["1432-1440"], "url": "https://link.springer.com/journal/109"},
+      "url": "https://www.semanticscholar.org/paper/bce73cb84d74dcfe5706a1b572e47cfb295ac535",
+      "title": "\u00dcber K\u00f6rpereigene Wirkstoffe bei Nervenerregung", "abstract":
+      null, "venue": "Klinische Wochenschrift", "year": 1937, "referenceCount": 19,
+      "citationCount": 3, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Chemistry"], "s2FieldsOfStudy": [{"category": "Chemistry",
+      "source": "external"}], "publicationTypes": null, "publicationDate": "1937-08-01",
+      "journal": {"name": "Klinische Wochenschrift", "pages": "1137-1143", "volume":
+      "16"}, "authors": [{"authorId": "93604567", "name": "H. Staub"}]}, {"paperId":
+      "07854ad206f0361edc5df3d775756630deae1380", "externalIds": {"MAG": "2573975570",
+      "DOI": "10.1051/PARASITE/1936141061", "CorpusId": 89808212}, "corpusId": 89808212,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/07854ad206f0361edc5df3d775756630deae1380",
       "title": "Contribution au remaniement de la classification des n\u00e9matodes
       de l\u2019ordre des Filariata Skrjabin 1915", "abstract": "Yorke et Maplestone
       (1926) ont essay\u00e9 de grouper tous les gen\u00ad res de Filariid\u00e6 en
@@ -395,16 +424,14 @@ interactions:
       : Skrja\u00ad bin et Andreeva (1934) ont montr\u00e9 que les Crassicaudin\u00e6
       doivent \u00eatre transf\u00e9r\u00e9s des Filariata dans les Spirurata. Travassos
       a \u00e9lu-", "venue": "", "year": 1936, "referenceCount": 4, "citationCount":
-      5, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
-      "https://www.parasite-journal.org/articles/parasite/pdf/1936/01/parasite1936141p61.pdf",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
-      "Biology", "source": "external"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "Annales de parasitologie humaine et compare\u0301e",
-      "pages": "61-75", "volume": "14"}, "authors": [{"authorId": "88801903", "name":
-      "K. Skrjabin"}, {"authorId": "17044156", "name": "N. Schikhobalova"}]}, {"paperId":
-      "d02bfb56892373694b7dc057e9e949637654389b", "externalIds": {"MAG": "2765661196",
-      "DOI": "10.1051/PARASITE/1937156500", "CorpusId": 90197592}, "corpusId": 90197592,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d02bfb56892373694b7dc057e9e949637654389b",
+      5, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": null,
+      "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category": "Biology", "source":
+      "external"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "Annales de parasitologie humaine et compare\u0301e", "pages": "61-75",
+      "volume": "14"}, "authors": [{"authorId": "88801903", "name": "K. Skrjabin"},
+      {"authorId": "17044156", "name": "N. Schikhobalova"}]}, {"paperId": "d02bfb56892373694b7dc057e9e949637654389b",
+      "externalIds": {"MAG": "2765661196", "DOI": "10.1051/PARASITE/1937156500", "CorpusId":
+      90197592}, "corpusId": 90197592, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d02bfb56892373694b7dc057e9e949637654389b",
       "title": "Recherches exp\u00e9rimentales sur le cycle \u00e9volutif de Synthetocaulus
       capillaris", "abstract": "La question du Synthetocaulas capillaris, en Bulgarie,
       est, du point de vue \u00e9conomique et scientifique, de grande importance,
@@ -438,7 +465,21 @@ interactions:
       "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}], "publicationTypes":
       null, "publicationDate": null, "journal": {"name": "Annales de parasitologie
       humaine et compare\u0301e", "pages": "500-503", "volume": "15"}, "authors":
-      [{"authorId": "144471138", "name": "P. Pavlov"}]}, {"paperId": "4602c5460fe959e1360a590c7945db34e2cd673e",
+      [{"authorId": "144471138", "name": "P. Pavlov"}]}, {"paperId": "b9a0a9c70f169ce584e2c5eea22bb085f217144b",
+      "externalIds": {"MAG": "2031257947", "DOI": "10.1007/BF02879185", "CorpusId":
+      39457778}, "corpusId": 39457778, "publicationVenue": {"id": "8a91832d-4d26-45b5-afdf-bdbcde6cf6ca",
+      "name": "American Potato Journal", "alternate_names": ["Am Potato J"], "issn":
+      "0003-0589", "alternate_issns": ["1874-9380"], "url": "https://link.springer.com/journal/12230",
+      "alternate_urls": ["http://www.umaine.edu/paa/pubs.htm"]}, "url": "https://www.semanticscholar.org/paper/b9a0a9c70f169ce584e2c5eea22bb085f217144b",
+      "title": "The significance of pre-emergence soil moisture to yield of potatoes
+      on dry land in the western high plains area", "abstract": null, "venue": "American
+      Potato Journal", "year": 1937, "referenceCount": 0, "citationCount": 3, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Environmental
+      Science"], "s2FieldsOfStudy": [{"category": "Environmental Science", "source":
+      "external"}, {"category": "Agricultural and Food Sciences", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1937-06-01", "journal": {"name":
+      "American Potato Journal", "pages": "189-195", "volume": "14"}, "authors": [{"authorId":
+      "14492879", "name": "H. Werner"}]}, {"paperId": "4602c5460fe959e1360a590c7945db34e2cd673e",
       "externalIds": {"MAG": "2323226389", "DOI": "10.1080/00275514.1936.12017147",
       "CorpusId": 87536643}, "corpusId": 87536643, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/4602c5460fe959e1360a590c7945db34e2cd673e",
@@ -491,25 +532,12 @@ interactions:
       "referenceCount": 24, "citationCount": 6, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy":
       [{"category": "Medicine", "source": "external"}, {"category": "Medicine", "source":
-      "s2-fos-model"}, {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle"], "publicationDate": null, "journal": {"name": "The American
-      journal of pathology", "pages": "\n          677-688.1\n        ", "volume":
-      "12 5"}, "authors": [{"authorId": "15024119", "name": "O. Saphir"}]}, {"paperId":
-      "bce73cb84d74dcfe5706a1b572e47cfb295ac535", "externalIds": {"MAG": "2312462060",
-      "DOI": "10.1007/BF01774963", "CorpusId": 31866294}, "corpusId": 31866294, "publicationVenue":
-      {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9", "name": "Klinische Wochenschrift",
-      "alternate_names": ["Klin Wochenschr"], "issn": "0023-2173", "alternate_issns":
-      ["1432-1440"], "url": "https://link.springer.com/journal/109"}, "url": "https://www.semanticscholar.org/paper/bce73cb84d74dcfe5706a1b572e47cfb295ac535",
-      "title": "\u00dcber K\u00f6rpereigene Wirkstoffe bei Nervenerregung", "abstract":
-      null, "venue": "Klinische Wochenschrift", "year": 1937, "referenceCount": 19,
-      "citationCount": 3, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
-      null, "fieldsOfStudy": ["Chemistry"], "s2FieldsOfStudy": [{"category": "Chemistry",
-      "source": "external"}], "publicationTypes": null, "publicationDate": "1937-08-01",
-      "journal": {"name": "Klinische Wochenschrift", "pages": "1137-1143", "volume":
-      "16"}, "authors": [{"authorId": "93604567", "name": "H. Staub"}]}, {"paperId":
-      "f8a64706ae031024a51da3afd36e9114f35942ac", "externalIds": {"MAG": "2078682668",
-      "DOI": "10.1175/1520-0493(1937)65<104:AIZOTO>2.0.CO;2", "CorpusId": 16535801},
-      "corpusId": 16535801, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f8a64706ae031024a51da3afd36e9114f35942ac",
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "The American journal of pathology", "pages": "\n          677-688.1\n        ",
+      "volume": "12 5"}, "authors": [{"authorId": "15024119", "name": "O. Saphir"}]},
+      {"paperId": "f8a64706ae031024a51da3afd36e9114f35942ac", "externalIds": {"MAG":
+      "2078682668", "DOI": "10.1175/1520-0493(1937)65<104:AIZOTO>2.0.CO;2", "CorpusId":
+      16535801}, "corpusId": 16535801, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f8a64706ae031024a51da3afd36e9114f35942ac",
       "title": "Aircraft Icing Zones on the Oakland-Cheyenne Airway", "abstract":
       "ture on the absorption spectrum will not be so great as at the lower pressure
       of the emission layer. We may assume curve (c) of figure 4 to represent with
@@ -539,23 +567,22 @@ interactions:
       of long wave radia.tion by water n p o r n.nd carbon dioxide a t low t8empera
       tures and pressures are much nee,cled.", "venue": "", "year": 1937, "referenceCount":
       10, "citationCount": 2, "influentialCitationCount": 0, "isOpenAccess": true,
-      "openAccessPdf": {"url": "https://journals.ametsoc.org/downloadpdf/journals/mwre/65/3/1520-0493_1937_65_104_aizoto_2_0_co_2.pdf",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Environmental Science"], "s2FieldsOfStudy":
+      "openAccessPdf": null, "fieldsOfStudy": ["Environmental Science"], "s2FieldsOfStudy":
       [{"category": "Environmental Science", "source": "external"}, {"category": "Environmental
-      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1937-03-01", "journal": {"name": "Monthly Weather Review", "pages": "104-108",
-      "volume": "65"}, "authors": [{"authorId": "144011517", "name": "J. A. Riley"}]},
-      {"paperId": "f7a64d22997f3202ee648da6ada9eeb1c9e1c213", "externalIds": {"MAG":
-      "2082252310", "DOI": "10.1086/208303", "CorpusId": 145256726}, "corpusId": 145256726,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f7a64d22997f3202ee648da6ada9eeb1c9e1c213",
-      "title": "Book Review:The Church at Work in the Modern World. W. C. Bower",
-      "abstract": null, "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
-      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Philosophy"], "s2FieldsOfStudy": [{"category": "Philosophy",
-      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
-      ["Review"], "publicationDate": null, "journal": null, "authors": [{"authorId":
-      "117212268", "name": "V. Ferm"}]}, {"paperId": "7cb3e6479fc354b181a63d56748cff085ef2e99b",
-      "externalIds": {"MAG": "57711298", "DOI": "10.1007/bf03036390", "CorpusId":
+      Science", "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1937-03-01", "journal": {"name":
+      "Monthly Weather Review", "pages": "104-108", "volume": "65"}, "authors": [{"authorId":
+      "144011517", "name": "J. A. Riley"}]}, {"paperId": "8765492064fefcc74d7d8b65f15faf83e56c221c",
+      "externalIds": {"MAG": "611061520", "CorpusId": 153216734}, "corpusId": 153216734,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/8765492064fefcc74d7d8b65f15faf83e56c221c",
+      "title": "First chapters in religious philosophy", "abstract": null, "venue":
+      "", "year": 1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
+      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
+      "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "117212268",
+      "name": "V. Ferm"}]}, {"paperId": "7cb3e6479fc354b181a63d56748cff085ef2e99b",
+      "externalIds": {"MAG": "1992436244", "DOI": "10.1007/bf03036390", "CorpusId":
       92668948}, "corpusId": 92668948, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7cb3e6479fc354b181a63d56748cff085ef2e99b",
       "title": "Condition of sparingly soluble substances in gels", "abstract": null,
       "venue": "", "year": 1936, "referenceCount": 4, "citationCount": 1, "influentialCitationCount":
@@ -565,25 +592,7 @@ interactions:
       "1936-10-01", "journal": {"name": "Proceedings of the Indian Academy of Sciences
       - Section A", "pages": "468-479", "volume": "4"}, "authors": [{"authorId": "107631284",
       "name": "R. Khanolkar"}, {"authorId": "144208375", "name": "P. Barve"}, {"authorId":
-      "91060105", "name": "B. N. Desai"}]}, {"paperId": "434c30fd369dc666010d614bc1f3d9b10003b0d2",
-      "externalIds": {"MAG": "1967116923", "DOI": "10.1086/208418", "CorpusId": 171024848},
-      "corpusId": 171024848, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/434c30fd369dc666010d614bc1f3d9b10003b0d2",
-      "title": "Book Review:Towards the Christian Revolution. B. B. Y. Scott, Gregory
-      Vlastos; The Christian View of Man. J. Gresham Machen", "abstract": null, "venue":
-      "", "year": 1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
-      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
-      ["Review"], "publicationDate": "1937-07-01", "journal": null, "authors": [{"authorId":
-      "117212268", "name": "V. Ferm"}]}, {"paperId": "8765492064fefcc74d7d8b65f15faf83e56c221c",
-      "externalIds": {"MAG": "611061520", "CorpusId": 153216734}, "corpusId": 153216734,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/8765492064fefcc74d7d8b65f15faf83e56c221c",
-      "title": "First chapters in religious philosophy", "abstract": null, "venue":
-      "", "year": 1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
-      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
-      "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "117212268",
-      "name": "V. Ferm"}]}, {"paperId": "1a3cb84da1b00043584e42b9bd348c1ac18928fe",
+      "91060105", "name": "B. N. Desai"}]}, {"paperId": "1a3cb84da1b00043584e42b9bd348c1ac18928fe",
       "externalIds": {"MAG": "1596689803", "CorpusId": 204463799}, "corpusId": 204463799,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1a3cb84da1b00043584e42b9bd348c1ac18928fe",
       "title": "Doktor Henri-Martin", "abstract": null, "venue": "", "year": 1936,
@@ -592,30 +601,12 @@ interactions:
       [{"category": "History", "source": "external"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"name": "Fornv\u00e4nnen", "pages": "359-560", "volume": "31"},
       "authors": [{"authorId": "2091589851", "name": "Ture J. Arne"}]}, {"paperId":
-      "8dae15262c1f54ec18113dfc766edddb380490a3", "externalIds": {"MAG": "2507519972",
-      "DOI": "10.1086/INTEJETHI.47.4.2989382", "CorpusId": 171205327}, "corpusId":
-      171205327, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/8dae15262c1f54ec18113dfc766edddb380490a3",
-      "title": "Towards the Christian Revolution. B. B. Y. Scott , Gregory VlastosThe
-      Christian View of Man. J. Gresham Machen", "abstract": null, "venue": "", "year":
-      1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
-      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
-      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
-      "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1937-07-01", "journal": {"name": "Ethics", "pages": "504-506", "volume": "47"},
-      "authors": [{"authorId": "117212268", "name": "V. Ferm"}]}, {"paperId": "4c538678651d71f723d68e34d6ab173a46df0db5",
-      "externalIds": {"MAG": "1519957221", "CorpusId": 162155612}, "corpusId": 162155612,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c538678651d71f723d68e34d6ab173a46df0db5",
-      "title": "Antropologkongressen i Bukarest", "abstract": null, "venue": "", "year":
-      1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
-      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
-      [], "publicationTypes": null, "publicationDate": null, "journal": {"name": "Fornv\u00e4nnen",
-      "pages": "343-349", "volume": "32"}, "authors": [{"authorId": "2091589851",
-      "name": "Ture J. Arne"}]}, {"paperId": "437b6bc0d58c8a9616847a770b4b96d4e90e954e",
-      "externalIds": {"MAG": "33728040", "DOI": "10.1007/BF01583589", "CorpusId":
-      43294122}, "corpusId": 43294122, "publicationVenue": {"id": "68d41154-a37b-42b4-a569-8bf2ed7777f0",
-      "name": "Archiv f\u00fcr Klinische und Experimentelle Ohren- Nasen- und Kehlkopfheilkunde",
-      "type": "journal", "alternate_names": ["Archiv f\u00fcr Ohren- Nasen- und Kehlkopfheilkunde",
-      "Arch Ohrenheilkd", "Archiv f\u00fcr Ohrenheilkunde", "Arch Ohren Nasen Kehlkopfheilkd",
+      "437b6bc0d58c8a9616847a770b4b96d4e90e954e", "externalIds": {"MAG": "2330953354",
+      "DOI": "10.1007/BF01583589", "CorpusId": 43294122}, "corpusId": 43294122, "publicationVenue":
+      {"id": "68d41154-a37b-42b4-a569-8bf2ed7777f0", "name": "Archiv f\u00fcr Klinische
+      und Experimentelle Ohren- Nasen- und Kehlkopfheilkunde", "type": "journal",
+      "alternate_names": ["Archiv f\u00fcr Ohren- Nasen- und Kehlkopfheilkunde", "Arch
+      Ohrenheilkd", "Archiv f\u00fcr Ohrenheilkunde", "Arch Ohren Nasen Kehlkopfheilkd",
       "Arch Klin Exp Ohren Nasen Kehlkopfheilkd", "Archiv fu\u0308r Ohren-, Nasen-
       und Kehlkopfheilkunde"], "issn": "0003-9195", "alternate_issns": ["0365-5245",
       "0302-9530", "1434-4726"]}, "url": "https://www.semanticscholar.org/paper/437b6bc0d58c8a9616847a770b4b96d4e90e954e",
@@ -627,20 +618,18 @@ interactions:
       "source": "external"}], "publicationTypes": null, "publicationDate": "1936-03-01",
       "journal": {"name": "Archiv f\u00fcr Ohren-, Nasen- und Kehlkopfheilkunde",
       "pages": "14-19", "volume": "141"}, "authors": [{"authorId": "1421311755", "name":
-      "Ture Betsholtz"}]}, {"paperId": "077a946cb658e9510f291c48cc5880d84dd1df6e",
-      "externalIds": {"MAG": "2978120065", "DOI": "10.1086/intejethi.46.2.2989363",
-      "CorpusId": 171299537}, "corpusId": 171299537, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/077a946cb658e9510f291c48cc5880d84dd1df6e",
-      "title": "Preface to Sociology. Cyril E. HudsonWhat Religion Is and Does. Horace
-      T. HoufJesus and the Moralists. Edward W. Hirst", "abstract": null, "venue":
-      "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
+      "Ture Betsholtz"}]}, {"paperId": "434c30fd369dc666010d614bc1f3d9b10003b0d2",
+      "externalIds": {"MAG": "1967116923", "DOI": "10.1086/208418", "CorpusId": 171024848},
+      "corpusId": 171024848, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/434c30fd369dc666010d614bc1f3d9b10003b0d2",
+      "title": "Book Review:Towards the Christian Revolution. B. B. Y. Scott, Gregory
+      Vlastos; The Christian View of Man. J. Gresham Machen", "abstract": null, "venue":
+      "", "year": 1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
       "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"name": "Ethics", "pages": "244-245",
-      "volume": "46"}, "authors": [{"authorId": "117212268", "name": "V. Ferm"}]},
-      {"paperId": "f509d5a249aa52f66a2e7e935e942828c8bd322d", "externalIds": {"MAG":
-      "2017205667", "DOI": "10.1007/BF01782154", "CorpusId": 46119893}, "corpusId":
-      46119893, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
+      ["Review"], "publicationDate": "1937-07-01", "journal": null, "authors": [{"authorId":
+      "117212268", "name": "V. Ferm"}]}, {"paperId": "f509d5a249aa52f66a2e7e935e942828c8bd322d",
+      "externalIds": {"MAG": "2017205667", "DOI": "10.1007/BF01782154", "CorpusId":
+      46119893}, "corpusId": 46119893, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
       "name": "Klinische Wochenschrift", "alternate_names": ["Klin Wochenschr"], "issn":
       "0023-2173", "alternate_issns": ["1432-1440"], "url": "https://link.springer.com/journal/109"},
       "url": "https://www.semanticscholar.org/paper/f509d5a249aa52f66a2e7e935e942828c8bd322d",
@@ -651,7 +640,15 @@ interactions:
       "source": "external"}], "publicationTypes": null, "publicationDate": "1936-08-01",
       "journal": {"name": "Klinische Wochenschrift", "pages": "1137-1138", "volume":
       "15"}, "authors": [{"authorId": "15261808", "name": "F. Lauersen"}, {"authorId":
-      "50311049", "name": "F. Sauerbruch"}]}, {"paperId": "9ff60dd0273024b1017db84cb1e858892f089912",
+      "50311049", "name": "F. Sauerbruch"}]}, {"paperId": "4c538678651d71f723d68e34d6ab173a46df0db5",
+      "externalIds": {"MAG": "1519957221", "CorpusId": 162155612}, "corpusId": 162155612,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c538678651d71f723d68e34d6ab173a46df0db5",
+      "title": "Antropologkongressen i Bukarest", "abstract": null, "venue": "", "year":
+      1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [], "publicationTypes": null, "publicationDate": null, "journal": {"name": "Fornv\u00e4nnen",
+      "pages": "343-349", "volume": "32"}, "authors": [{"authorId": "2091589851",
+      "name": "Ture J. Arne"}]}, {"paperId": "9ff60dd0273024b1017db84cb1e858892f089912",
       "externalIds": {"MAG": "2090676860", "DOI": "10.1007/BF02966279", "CorpusId":
       72890927}, "corpusId": 72890927, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9ff60dd0273024b1017db84cb1e858892f089912",
       "title": "Abstracts from Current Literature on Surgery", "abstract": null, "venue":
@@ -661,20 +658,8 @@ interactions:
       "Medicine", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "1937-03-01", "journal": {"name": "Irish Journal of Medical Science (1926-1967)",
       "pages": "822-825", "volume": "15"}, "authors": [{"authorId": "35461679", "name":
-      "F. J. Henry"}]}, {"paperId": "72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a", "externalIds":
-      {"MAG": "2317663764", "DOI": "10.1007/BF03030893", "CorpusId": 123994632}, "corpusId":
-      123994632, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a",
-      "title": "M\u00e9thode de Mesure des Angles par \u00ab R\u00e9P\u00e9titions
-      Fractionn\u00e9ES \u00bb A L\u2019aide D\u2019un Instrument R\u00e9IT\u00e9rateur",
-      "abstract": null, "venue": "", "year": 1937, "referenceCount": 1, "citationCount":
-      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
-      "source": "external"}], "publicationTypes": null, "publicationDate": "1937-10-01",
-      "journal": {"name": "Bulletin g\u00e9od\u00e9sique", "pages": "290-295", "volume":
-      "56"}, "authors": [{"authorId": "102504010", "name": "Gh. Schmerber"}, {"authorId":
-      "92907040", "name": "P. Tardi"}, {"authorId": "102657201", "name": "P. Caillol"}]},
-      {"paperId": "3c51bee906d73b37be02fda3b468a44bfea43ec7", "externalIds": {"MAG":
-      "2063322835", "DOI": "10.1007/BF01778415", "CorpusId": 34298584}, "corpusId":
+      "F. J. Henry"}]}, {"paperId": "3c51bee906d73b37be02fda3b468a44bfea43ec7", "externalIds":
+      {"MAG": "2063322835", "DOI": "10.1007/BF01778415", "CorpusId": 34298584}, "corpusId":
       34298584, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
       "name": "Klinische Wochenschrift", "alternate_names": ["Klin Wochenschr"], "issn":
       "0023-2173", "alternate_issns": ["1432-1440"], "url": "https://link.springer.com/journal/109"},
@@ -809,13 +794,12 @@ interactions:
       of the central origin is induciable if the brain anterior to the midbrain or
       even the anterior colliculi are excluded.", "venue": "", "year": 1937, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true,
-      "openAccessPdf": {"url": "https://www.jstage.jst.go.jp/article/tjem1920/31/1-2/31_1-2_186/_pdf",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
+      "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
       "Medicine", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": "1937-05-31", "journal": {"name":
       "Tohoku Journal of Experimental Medicine", "pages": "186-196", "volume": "31"},
       "authors": [{"authorId": "80543148", "name": "Takeo Mutow"}]}, {"paperId": "d59760079b8867f16cb479ecd77ba2ebfb562986",
-      "externalIds": {"MAG": "2327982553", "DOI": "10.1007/BF02249851", "CorpusId":
+      "externalIds": {"MAG": "2946115342", "DOI": "10.1007/BF02249851", "CorpusId":
       35395368}, "corpusId": 35395368, "publicationVenue": {"id": "bef0f449-837b-4ba1-aa9b-f097a270318d",
       "name": "Zeitschrift f\u00fcr Kinderheilkunde", "alternate_names": ["Z Kinderheilkd"],
       "issn": "0044-2917"}, "url": "https://www.semanticscholar.org/paper/d59760079b8867f16cb479ecd77ba2ebfb562986",
@@ -914,7 +898,7 @@ interactions:
       6-30 ? 1 7-30.", "venue": "The Indian medical gazette", "year": 1936, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
-      "Medicine", "source": "external"}, {"category": "History", "source": "s2-fos-model"}],
+      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
       "publicationTypes": ["JournalArticle"], "publicationDate": "1936-04-01", "journal":
       {"name": "The Indian Medical Gazette", "pages": "243 - 244", "volume": "71"},
       "authors": [{"authorId": "1620478634", "name": "JSeroiqe 3Jotes"}]}, {"paperId":
@@ -944,9 +928,21 @@ interactions:
       "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
       "Education", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "1937-06-01", "journal": null, "authors": [{"authorId": "144324331", "name":
-      "S. Goldsmith"}]}, {"paperId": "646c897b72155eead0994f56eff40174f7694880", "externalIds":
-      {"MAG": "1972421482", "DOI": "10.1177/000271623719100150", "CorpusId": 143010933},
-      "corpusId": 143010933, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/646c897b72155eead0994f56eff40174f7694880",
+      "S. Goldsmith"}]}, {"paperId": "72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a", "externalIds":
+      {"MAG": "2317663764", "DOI": "10.1007/BF03030893", "CorpusId": 123994632}, "corpusId":
+      123994632, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a",
+      "title": "M\u00e9thode de Mesure des Angles par \u00ab R\u00e9P\u00e9titions
+      Fractionn\u00e9ES \u00bb A L\u2019aide D\u2019un Instrument R\u00e9IT\u00e9rateur",
+      "abstract": null, "venue": "", "year": 1937, "referenceCount": 1, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}], "publicationTypes": null, "publicationDate": "1937-10-01",
+      "journal": {"name": "Bulletin g\u00e9od\u00e9sique", "pages": "290-295", "volume":
+      "56"}, "authors": [{"authorId": "102504010", "name": "Gh. Schmerber"}, {"authorId":
+      "92907040", "name": "P. Tardi"}, {"authorId": "102657201", "name": "P. Caillol"}]},
+      {"paperId": "646c897b72155eead0994f56eff40174f7694880", "externalIds": {"MAG":
+      "1972421482", "DOI": "10.1177/000271623719100150", "CorpusId": 143010933}, "corpusId":
+      143010933, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/646c897b72155eead0994f56eff40174f7694880",
       "title": "MARTIN, ROBERT F. Income in Agricul ture, 1929-1935. Pp. xviii, 168.
       New York: National Industrial Conference Board, 1936. $2.50", "abstract": "a
       few prices from the Baltimore and New York markets in order to make some series
@@ -996,16 +992,6 @@ interactions:
       "publicationTypes": ["JournalArticle"], "publicationDate": "1937-09-01", "journal":
       {"name": "Journalism & Mass Communication Quarterly", "pages": "259 - 266",
       "volume": "14"}, "authors": [{"authorId": "46918034", "name": "J. Pollard"}]},
-      {"paperId": "f17e5c23c89634805a29eff56d1d001544349775", "externalIds": {"MAG":
-      "2039576618", "DOI": "10.1086/208302", "CorpusId": 170586849}, "corpusId": 170586849,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f17e5c23c89634805a29eff56d1d001544349775",
-      "title": "Book Review:Preface to Sociology. Cyril E. Hudson; What Religion Is
-      and Does. Horace T. Houf; Jesus and the Moralists. Edward W. Hirst", "abstract":
-      null, "venue": "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
-      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
-      ["Review"], "publicationDate": null, "journal": {"name": "Ethics", "pages":
-      "244", "volume": "46"}, "authors": [{"authorId": "117212268", "name": "V. Ferm"}]},
       {"paperId": "78396ca7b3295df0b1e06d5fd5b64a64b0519e0b", "externalIds": {"MAG":
       "2041295081", "DOI": "10.1177/000271623618500168", "CorpusId": 144861698}, "corpusId":
       144861698, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/78396ca7b3295df0b1e06d5fd5b64a64b0519e0b",
@@ -1046,24 +1032,10 @@ interactions:
       "1937-03-01", "journal": {"name": "Naunyn-Schmiedebergs Archiv f\u00fcr experimentelle
       Pathologie und Pharmakologie", "pages": "255-264", "volume": "188"}, "authors":
       [{"authorId": "40029796", "name": "O. Eichler"}, {"authorId": "21084615", "name":
-      "Fritz Bengeforth"}]}, {"paperId": "febcc1caafc0ecb541b155158f29411f07c8fd0d",
-      "externalIds": {"MAG": "110099919", "DOI": "10.1007/BF02982676", "CorpusId":
-      36186479}, "corpusId": 36186479, "publicationVenue": {"id": "ee29410d-3d58-4bcc-8304-b559af9d780a",
-      "name": "Journal Genetika", "type": "journal", "alternate_names": ["J Genet",
-      "Journal of Genetics"], "issn": "0016-6758", "alternate_issns": ["0022-1333"],
-      "url": "http://www.springer.com/life+sci/journal/12041?detailsPage=description",
-      "alternate_urls": ["https://link.springer.com/journal/12041"]}, "url": "https://www.semanticscholar.org/paper/febcc1caafc0ecb541b155158f29411f07c8fd0d",
-      "title": "Inbreeding inEphestia k\u00fchniella Z. (Lepidoptera, phycitidae)",
-      "abstract": null, "venue": "Journal Genetika", "year": 1936, "referenceCount":
-      0, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
-      "Biology", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}],
-      "publicationTypes": null, "publicationDate": "1936-04-01", "journal": {"name":
-      "Journal of Genetics", "pages": "179-181", "volume": "32"}, "authors": [{"authorId":
-      "49657937", "name": "M. J. Norris"}, {"authorId": "1864237", "name": "O. Richards"}]},
-      {"paperId": "786d864c301a128cde9c45806c995dda34e1ee8d", "externalIds": {"MAG":
-      "2054701221", "DOI": "10.1111/J.1151-2916.1936.TB19836.X", "CorpusId": 137668605},
-      "corpusId": 137668605, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/786d864c301a128cde9c45806c995dda34e1ee8d",
+      "Fritz Bengeforth"}]}, {"paperId": "786d864c301a128cde9c45806c995dda34e1ee8d",
+      "externalIds": {"MAG": "2054701221", "DOI": "10.1111/J.1151-2916.1936.TB19836.X",
+      "CorpusId": 137668605}, "corpusId": 137668605, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/786d864c301a128cde9c45806c995dda34e1ee8d",
       "title": "A COMPARISON OF THE THERMAL EXPANSION OF USED SILICA BRICK FROM AN
       INSULATED AND AN UNINSULATED OPEN\u2010HEARTH FURNACE ROOF*", "abstract": "Measurements
       of the linear thermal expansion of different zones in the used silica roof brick
@@ -1100,9 +1072,24 @@ interactions:
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
       {"name": "Journal of the American Ceramic Society", "pages": "276-287", "volume":
       "19"}, "authors": [{"authorId": "102653954", "name": "R. Pierce"}, {"authorId":
-      "81276019", "name": "J. B. Austin"}]}, {"paperId": "382f9e29a9163562c72e2450bdbb60f30bc57189",
-      "externalIds": {"MAG": "1977309720", "DOI": "10.1177/028418513601700403", "CorpusId":
-      71680648}, "corpusId": 71680648, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/382f9e29a9163562c72e2450bdbb60f30bc57189",
+      "81276019", "name": "J. B. Austin"}]}, {"paperId": "febcc1caafc0ecb541b155158f29411f07c8fd0d",
+      "externalIds": {"MAG": "110099919", "DOI": "10.1007/BF02982676", "CorpusId":
+      36186479}, "corpusId": 36186479, "publicationVenue": {"id": "ee29410d-3d58-4bcc-8304-b559af9d780a",
+      "name": "Journal Genetika", "type": "journal", "alternate_names": ["J Genet",
+      "Journal of Genetics"], "issn": "0016-6758", "alternate_issns": ["0022-1333"],
+      "url": "http://www.springer.com/life+sci/journal/12041?detailsPage=description",
+      "alternate_urls": ["https://link.springer.com/journal/12041"]}, "url": "https://www.semanticscholar.org/paper/febcc1caafc0ecb541b155158f29411f07c8fd0d",
+      "title": "Inbreeding inEphestia k\u00fchniella Z. (Lepidoptera, phycitidae)",
+      "abstract": null, "venue": "Journal Genetika", "year": 1936, "referenceCount":
+      0, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
+      "Biology", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1936-04-01", "journal": {"name":
+      "Journal of Genetics", "pages": "179-181", "volume": "32"}, "authors": [{"authorId":
+      "49657937", "name": "M. J. Norris"}, {"authorId": "1864237", "name": "O. Richards"}]},
+      {"paperId": "382f9e29a9163562c72e2450bdbb60f30bc57189", "externalIds": {"MAG":
+      "1977309720", "DOI": "10.1177/028418513601700403", "CorpusId": 71680648}, "corpusId":
+      71680648, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/382f9e29a9163562c72e2450bdbb60f30bc57189",
       "title": "Local Growth Disturbances in Tuberculous Disease of the Knee-Joint
       in Children", "abstract": "Where a chronic state of irritation, in the form
       of an infectious pro\u00ad cess, exists about a growing joint with its ossifie
@@ -1136,7 +1123,7 @@ interactions:
       "publicationTypes": ["JournalArticle"], "publicationDate": "1936-07-01", "journal":
       {"name": "Acta Radiologica", "pages": "359 - 370", "volume": "os-17"}, "authors":
       [{"authorId": "84079156", "name": "Maurits Lindblad"}]}, {"paperId": "a3501b1d37d85151a49ca98eb6e7b2cc729dac2f",
-      "externalIds": {"MAG": "2336111574", "PubMedCentral": "5169242", "DOI": "10.1136/jramc-68-06-03",
+      "externalIds": {"MAG": "2523021635", "PubMedCentral": "5169242", "DOI": "10.1136/jramc-68-06-03",
       "CorpusId": 31620838, "PubMed": "29012604"}, "corpusId": 31620838, "publicationVenue":
       {"id": "7bc8c601-4efa-400f-972e-164343190429", "name": "The Indian medical gazette",
       "type": "journal", "alternate_names": ["Indian med gaz", "Indian medical gazette"],
@@ -1155,12 +1142,13 @@ interactions:
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Environmental
       Science", "Medicine"], "s2FieldsOfStudy": [{"category": "Environmental Science",
       "source": "external"}, {"category": "Medicine", "source": "external"}, {"category":
-      "Environmental Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
-      "publicationDate": "1936-12-01", "journal": {"name": "The Indian Medical Gazette",
-      "pages": "712 - 714", "volume": "71"}, "authors": [{"authorId": "3843547", "name":
-      "H. Stott"}]}, {"paperId": "40304bc755ae58115aad0d0a5ebc0db82737a06a", "externalIds":
-      {"MAG": "2313150929", "DOI": "10.2331/SUISAN.5.109", "CorpusId": 87968458},
-      "corpusId": 87968458, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/40304bc755ae58115aad0d0a5ebc0db82737a06a",
+      "Environmental Science", "source": "s2-fos-model"}, {"category": "Medicine",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "1936-12-01", "journal": {"name": "The Indian Medical Gazette", "pages": "712
+      - 714", "volume": "71"}, "authors": [{"authorId": "3843547", "name": "H. Stott"}]},
+      {"paperId": "40304bc755ae58115aad0d0a5ebc0db82737a06a", "externalIds": {"MAG":
+      "2313150929", "DOI": "10.2331/SUISAN.5.109", "CorpusId": 87968458}, "corpusId":
+      87968458, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/40304bc755ae58115aad0d0a5ebc0db82737a06a",
       "title": "On the Digestive Ferments of Anguilla japonica (T. & S.) I", "abstract":
       "On the Digestive Ferments of Anguilla japonica (T . & S.) I. Proteolytic Ferment
       and its Digestive Action on the law and Heated Fish Muscle. Toyoo TAKAHASHI
@@ -1170,15 +1158,15 @@ interactions:
       in detail. G lycerine extracts of the enzymes in question were found most effective
       at such tempera tures and pH-values as shown in the following table:-", "venue":
       "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.jstage.jst.go.jp/article/suisan1932/5/2/5_2_109/_pdf",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
-      "Biology", "source": "external"}, {"category": "Environmental Science", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      {"name": "Nippon Suisan Gakkaishi", "pages": "109-112", "volume": "5"}, "authors":
-      [{"authorId": "2117191826", "name": "Toyoo Takahashi"}, {"authorId": "90950895",
-      "name": "Yutaka Hirosawa"}]}, {"paperId": "4ba57d5f8cdf2ff01b76a42b7329df310ed0045b",
-      "externalIds": {"MAG": "2194048101", "CorpusId": 111144897}, "corpusId": 111144897,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4ba57d5f8cdf2ff01b76a42b7329df310ed0045b",
+      0, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Biology"],
+      "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}, {"category":
+      "Environmental Science", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": {"name": "Nippon Suisan Gakkaishi", "pages":
+      "109-112", "volume": "5"}, "authors": [{"authorId": "2117191826", "name": "Toyoo
+      Takahashi"}, {"authorId": "90950895", "name": "Yutaka Hirosawa"}]}, {"paperId":
+      "4ba57d5f8cdf2ff01b76a42b7329df310ed0045b", "externalIds": {"MAG": "2194048101",
+      "CorpusId": 111144897}, "corpusId": 111144897, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/4ba57d5f8cdf2ff01b76a42b7329df310ed0045b",
       "title": "Stage Construction As It Applies to Indiana Roads", "abstract": "These
       bridges were framed and erected by a county bridge crew working under the supervision
       of the county surveyor, who also served as a highway supervisor. The bridge
@@ -1260,17 +1248,7 @@ interactions:
       "Chemistry", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"name": "Zeitschrift f\u00fcr Kristallographie - Crystalline
       Materials", "pages": "123 - 124", "volume": "97"}, "authors": [{"authorId":
-      "16971709", "name": "J. T. Burwell"}]}, {"paperId": "bc91c3913857cb74a5564ccbaace1d41227e7b23",
-      "externalIds": {"MAG": "2507295321", "DOI": "10.1086/INTEJETHI.46.2.2989364",
-      "CorpusId": 151430710}, "corpusId": 151430710, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/bc91c3913857cb74a5564ccbaace1d41227e7b23",
-      "title": "The Church at Work in the Modern World. W. C. Bower", "abstract":
-      null, "venue": "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
-      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
-      "History", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "Ethics", "pages": "245-246", "volume": "46"}, "authors":
-      [{"authorId": "117212268", "name": "V. Ferm"}]}]}
+      "16971709", "name": "J. T. Burwell"}]}]}
 
       '
     headers:
@@ -1279,31 +1257,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '104888'
+      - '102833'
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 21:45:56 GMT
+      - Tue, 21 Nov 2023 04:26:08 GMT
       Via:
-      - 1.1 151ae48d84442f69dffa181fc68bc1da.cloudfront.net (CloudFront)
+      - 1.1 670127d831d6fe067a1d0e61c13cef54.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - C6iX6HCavasZr5o7xrB72a9AKqqATtlEvs3OF2tHygBy_5XTke-A2A==
+      - KfoNMvujpi1GV3fjTtYQl0ImknK0ZoA5J-3Eid-wwsx4T4IrPAnZTQ==
       X-Amz-Cf-Pop:
-      - EWR53-C1
+      - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - LNwPLGP6vHcFZGQ=
+      - OuynDFo3PHcEDbA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '104888'
+      - '102833'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:45:56 GMT
+      - Tue, 21 Nov 2023 04:26:08 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 7f90cde9-8d66-4eec-a0f1-1d020b623706
+      - eab6274d-9576-4b45-ba87-58bb0eb07a02
     http_version: HTTP/1.1
     status_code: 200
 version: 1

@@ -414,7 +414,7 @@ class SemanticScholarTest(unittest.TestCase):
 class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     def setUp(self) -> None:
-        self.sch = AsyncSemanticScholar(timeout=1000, api_key="C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0")
+        self.sch = AsyncSemanticScholar()
 
     @test_vcr.use_cassette
     async def test_get_paper_async(self):
@@ -449,7 +449,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         data = await self.sch.get_paper_references('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 75)
+        self.assertEqual(len(data), 73)
         self.assertEqual(
             data[0].paper.title, 'Constituency Parsing with a Self-Attentive Encoder')
     

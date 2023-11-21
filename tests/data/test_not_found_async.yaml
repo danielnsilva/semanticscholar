@@ -9,13 +9,11 @@ interactions:
       connection:
       - keep-alive
       host:
-      - partner.semanticscholar.org
+      - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-      x-api-key:
-      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+      - python-httpx/0.25.1
     method: GET
-    uri: https://partner.semanticscholar.org/graph/v1/paper/0?&fields=abstract,authors,authors.affiliations,authors.aliases,authors.authorId,authors.citationCount,authors.externalIds,authors.hIndex,authors.homepage,authors.name,authors.paperCount,authors.url,citationCount,citations,citations.abstract,citations.authors,citations.citationCount,citations.corpusId,citations.externalIds,citations.fieldsOfStudy,citations.influentialCitationCount,citations.isOpenAccess,citations.journal,citations.openAccessPdf,citations.paperId,citations.publicationDate,citations.publicationTypes,citations.publicationVenue,citations.referenceCount,citations.s2FieldsOfStudy,citations.title,citations.url,citations.venue,citations.year,corpusId,embedding,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,references,references.abstract,references.authors,references.citationCount,references.citationStyles,references.corpusId,references.externalIds,references.fieldsOfStudy,references.influentialCitationCount,references.isOpenAccess,references.journal,references.openAccessPdf,references.paperId,references.publicationDate,references.publicationTypes,references.publicationVenue,references.referenceCount,references.s2FieldsOfStudy,references.title,references.url,references.venue,references.year,s2FieldsOfStudy,title,tldr,url,venue,year
+    uri: https://api.semanticscholar.org/graph/v1/paper/0?&fields=abstract,authors,authors.affiliations,authors.aliases,authors.authorId,authors.citationCount,authors.externalIds,authors.hIndex,authors.homepage,authors.name,authors.paperCount,authors.url,citationCount,citations,citations.abstract,citations.authors,citations.citationCount,citations.corpusId,citations.externalIds,citations.fieldsOfStudy,citations.influentialCitationCount,citations.isOpenAccess,citations.journal,citations.openAccessPdf,citations.paperId,citations.publicationDate,citations.publicationTypes,citations.publicationVenue,citations.referenceCount,citations.s2FieldsOfStudy,citations.title,citations.url,citations.venue,citations.year,corpusId,embedding,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,references,references.abstract,references.authors,references.citationCount,references.citationStyles,references.corpusId,references.externalIds,references.fieldsOfStudy,references.influentialCitationCount,references.isOpenAccess,references.journal,references.openAccessPdf,references.paperId,references.publicationDate,references.publicationTypes,references.publicationVenue,references.referenceCount,references.s2FieldsOfStudy,references.title,references.url,references.venue,references.year,s2FieldsOfStudy,title,tldr,url,venue,year
   response:
     content: '{"error":"Paper with id 0 not found"}
 
@@ -30,27 +28,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 21:45:43 GMT
+      - Tue, 21 Nov 2023 04:20:55 GMT
       Via:
-      - 1.1 7f822cbc5468903ff5582a7c6af4c024.cloudfront.net (CloudFront)
+      - 1.1 97d891785cd24c4beaf3832c02f5cf04.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 5Oeb1mjmp8rMNTzdAsl-HD2CJhIJcX8IrHdliGRd6dwgpVmVizZdew==
+      - AxWIkD6Q0nd9Nby5LzBKKJLTvUpRXtp3lOv9ihrSYHKz24yj-tiMuQ==
       X-Amz-Cf-Pop:
-      - EWR53-C1
+      - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - LNwNOEnjvHcFXMw=
+      - Oux2KFWhvHcEI9g=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '38'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:45:43 GMT
+      - Tue, 21 Nov 2023 04:20:55 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 758f44bf-b8dd-4735-b31b-5f3094b1e3b7
+      - 97b01102-362b-4732-b0e4-37ee6d7c9f7a
     http_version: HTTP/1.1
     status_code: 404
 - request:
@@ -63,13 +61,11 @@ interactions:
       connection:
       - keep-alive
       host:
-      - partner.semanticscholar.org
+      - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
-      x-api-key:
-      - C0lOxNwpbR2bJnuIFSjL5ilYOjeUa6mrENswCAd0
+      - python-httpx/0.25.1
     method: GET
-    uri: https://partner.semanticscholar.org/graph/v1/author/0?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
+    uri: https://api.semanticscholar.org/graph/v1/author/0?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
   response:
     content: '{"error":"Author with id 0 not found"}
 
@@ -84,27 +80,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 21:45:43 GMT
+      - Tue, 21 Nov 2023 04:20:56 GMT
       Via:
-      - 1.1 e2ddb156cdc225570ee247c2aefc938e.cloudfront.net (CloudFront)
+      - 1.1 5bfc01a743251c97602fd0fa441f1900.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - aGPU_vEwt57jM-bEe9GzvXn-OhiX5PnaaGHT_kYyJXBu2v7IshijGg==
+      - PteltEJRrgucmAX-386hszJS1wBMcB3gvVpfKbZM-H0URShf9_ne2w==
       X-Amz-Cf-Pop:
-      - EWR53-C1
+      - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - LNwNRG1yPHcFVfg=
+      - Oux2SEmDvHcELlA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '39'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:45:43 GMT
+      - Tue, 21 Nov 2023 04:20:56 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 91372cd5-90ea-42d8-8c48-24553613109e
+      - c7a21aae-69f2-473b-9a50-9c4caa6dd970
     http_version: HTTP/1.1
     status_code: 404
 version: 1
