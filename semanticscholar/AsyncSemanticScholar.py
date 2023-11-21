@@ -346,7 +346,8 @@ class AsyncSemanticScholar:
                 query,
                 fields,
                 limit,
-                self.auth_header
+                self.auth_header,
+                max_results=1000
             )
 
         return results
@@ -496,7 +497,8 @@ class AsyncSemanticScholar:
                 query,
                 fields,
                 limit,
-                self.auth_header
+                self.auth_header,
+                max_results=1000
             )
 
         return results

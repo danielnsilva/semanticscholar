@@ -21,7 +21,8 @@ class PaginatedResults:
                 query: str = None,
                 fields: str = None,
                 limit: int = None,
-                headers: dict = None
+                headers: dict = None,
+                max_results: int = 10000
             ) -> None:
 
         self._requester = requester
@@ -31,6 +32,7 @@ class PaginatedResults:
         self._fields = fields
         self._limit = limit
         self._headers = headers
+        self._max_results = max_results
 
         self._data = []
         self._total = 0
@@ -103,7 +105,7 @@ class PaginatedResults:
 
     def _has_next_page(self) -> bool:
         has_more_results = (self._offset + self._limit) == self._next
-        under_limit = (self._offset + self._limit) < 9999
+        under_limit = (self._offset + self._limit) < (self._max_results - 1)
         return has_more_results and under_limit
 
     async def _request_data(self) -> Union[dict, List[dict]]:
