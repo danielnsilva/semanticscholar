@@ -1,5 +1,4 @@
 requests
 tenacity
 httpx
-asyncio
 nest_asyncio
