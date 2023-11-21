@@ -15,7 +15,6 @@ class AsyncSemanticScholar:
     '''
 
     DEFAULT_API_URL = 'https://api.semanticscholar.org'
-    DEFAULT_PARTNER_API_URL = 'https://partner.semanticscholar.org'
 
     BASE_PATH_GRAPH = '/graph/v1'
     BASE_PATH_RECOMMENDATIONS = '/recommendations/v1'
@@ -42,8 +41,6 @@ class AsyncSemanticScholar:
 
         if api_key:
             self.auth_header = {'x-api-key': api_key}
-            if not api_url:
-                self.api_url = self.DEFAULT_PARTNER_API_URL
 
         self._timeout = timeout
         self._requester = ApiRequester(self._timeout)
