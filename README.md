@@ -150,7 +150,7 @@ To search for authors by name:
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
 results = sch.search_author('Alan M. Turing')
-print(f'{results.total} results.', f'First occurrence: {results[0].title}.')
+print(f'{results.total} results.', f'First occurrence: {results[0].name}.')
 ```
 
 Output:
@@ -212,7 +212,7 @@ To get recommended papers for a given paper:
 ```python
 from semanticscholar import SemanticScholar
 sch = SemanticScholar()
-results = sch.get_recommended_papers('10.1145/3544585.3544600')
+results = sch.get_recommended_papers('10.2139/ssrn.2250500')
 for item in results:
      print(item.title)
 ```
@@ -220,13 +220,13 @@ for item in results:
 Output:
 
 ```console
-INDUCED SUBGRAPHS AND TREE DECOMPOSITIONS
-On the Deque and Rique Numbers of Complete and Complete Bipartite Graphs
-Exact and Parameterized Algorithms for the Independent Cutset Problem
-On (in)tractability of connection and cut problems
-A survey on constructive methods for the Oberwolfach problem and its variants
+Microcredit: Impacts and promising innovations
+MIT Open Access
+The Econmics of Badmouthing: Libel Law and the Underworld of the Financial Press in France before World War I
+Give Biden a 6-Point
+Getting more value from Australian Intergenerational Reports
 ...
-Approximation Algorithms for Directed Weighted Spanners
+Structural Change and Economic Dynamics
 ```
 
 To get recommended papers based on a list of positive and negative paper examples:
