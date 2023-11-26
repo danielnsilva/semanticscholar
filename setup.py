@@ -14,7 +14,7 @@ setup(
     author_email='danielnsilva@gmail.com',
     license='MIT',
     packages=['semanticscholar'],
-    python_requires='>=3.7',
+    python_requires='>=3.8',
     install_requires=['tenacity', 'httpx', 'nest_asyncio'],
     test_suite='tests',
     tests_require=['vcrpy'],
