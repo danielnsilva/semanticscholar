@@ -15,7 +15,7 @@ setup(
     license='MIT',
     packages=['semanticscholar'],
     python_requires='>=3.7',
-    install_requires=['requests', 'tenacity'],
+    install_requires=['tenacity', 'httpx', 'nest_asyncio'],
     test_suite='tests',
     tests_require=['vcrpy'],
     classifiers=[
@@ -25,7 +25,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
