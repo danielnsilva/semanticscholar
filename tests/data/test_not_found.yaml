@@ -65,7 +65,7 @@ interactions:
       user-agent:
       - python-httpx/0.25.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/author/0?fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
+    uri: https://api.semanticscholar.org/graph/v1/author/0?fields=affiliations,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
   response:
     content: '{"error":"Author with id 0 not found"}
 
@@ -80,27 +80,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 01 Dec 2023 02:36:20 GMT
+      - Fri, 01 Dec 2023 18:35:42 GMT
       Via:
-      - 1.1 5bfc01a743251c97602fd0fa441f1900.cloudfront.net (CloudFront)
+      - 1.1 1f71c63658c4f74faed3133e50a0708a.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - AwKx1RTdH2rO_QnGT6xwzR4oKf5f4o0RjX9HVJFbnEx3tXanxM9HAg==
+      - lOJXNv9KPq65C9YOW0uZJzUhnlSVE1rObeM0rTIrlWXhCLrap4arMw==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - PPf5xGz5vHcEkRA=
+      - PRsbwEfIPHcEmkg=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '39'
       x-amzn-Remapped-Date:
-      - Fri, 01 Dec 2023 02:36:20 GMT
+      - Fri, 01 Dec 2023 18:35:42 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - c2c22240-4d00-45d4-a708-1da540c6f5eb
+      - a4cdbf91-6766-4703-96aa-13f5c75055a6
     http_version: HTTP/1.1
     status_code: 404
 version: 1

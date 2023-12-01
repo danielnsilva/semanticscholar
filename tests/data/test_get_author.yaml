@@ -13,13 +13,12 @@ interactions:
       user-agent:
       - python-httpx/0.25.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/author/2262347?fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
+    uri: https://api.semanticscholar.org/graph/v1/author/2262347?fields=affiliations,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
   response:
     content: '{"authorId": "2262347", "externalIds": {"DBLP": ["Alan M. Turing"]},
       "url": "https://www.semanticscholar.org/author/2262347", "name": "A. Turing",
-      "aliases": ["A Turing", "A M Turing", "A. M. Turing", "Alan M. Turing", "Alan
-      Turing", "Alan Mathison Turing"], "affiliations": [], "homepage": null, "paperCount":
-      59, "citationCount": 13236, "hIndex": 22, "papers": [{"paperId": "5d10faffeae5e9f2ae868626b29e6e9b8047cecb",
+      "affiliations": [], "homepage": null, "paperCount": 59, "citationCount": 13236,
+      "hIndex": 22, "papers": [{"paperId": "5d10faffeae5e9f2ae868626b29e6e9b8047cecb",
       "externalIds": {"CorpusId": 251848799}, "corpusId": 251848799, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/5d10faffeae5e9f2ae868626b29e6e9b8047cecb",
       "title": "Dystopian or Utopian? Two Images of Alan Turing", "abstract": "Turing
@@ -217,11 +216,12 @@ interactions:
       "year": 2012, "referenceCount": 1, "citationCount": 6, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Physics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "144443425",
-      "name": "A. Hodges"}, {"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
-      "422ec845a15242fdfc904e1c7d2bfe132c7ec248", "externalIds": {"CorpusId": 18051598},
-      "corpusId": 18051598, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/422ec845a15242fdfc904e1c7d2bfe132c7ec248",
+      "Physics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"volume": "", "name": ""}, "authors": [{"authorId": "144443425", "name": "A.
+      Hodges"}, {"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "422ec845a15242fdfc904e1c7d2bfe132c7ec248",
+      "externalIds": {"CorpusId": 18051598}, "corpusId": 18051598, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/422ec845a15242fdfc904e1c7d2bfe132c7ec248",
       "title": "PLANES OF MORPHISMS AND THE CHARACTERIZATION OF CONTINUOUSLY INTEGRAL,
       COMPLETE RANDOM VARIABLES", "abstract": "Let \u03b8m,\u03bc be an independent,
       right-composite, anti-naturally continuous polytope. Recent interest in smooth
@@ -377,12 +377,12 @@ interactions:
       or \u201cX is B and Y is A.\u201d The interrogator is allowed to put questions
       to A and B thus:", "venue": "", "year": 2010, "referenceCount": 0, "citationCount":
       0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Education", "source":
-      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null, "journal":
-      null, "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId":
-      "6c9520d25a2f93f1fb4f08bab66d90a1519faaac", "externalIds": {"MAG": "2479903735",
-      "DOI": "10.14361/9783839403396-004", "CorpusId": 184361851}, "corpusId": 184361851,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6c9520d25a2f93f1fb4f08bab66d90a1519faaac",
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Philosophy", "source":
+      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": null, "journal": null, "authors":
+      [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "6c9520d25a2f93f1fb4f08bab66d90a1519faaac",
+      "externalIds": {"MAG": "2479903735", "DOI": "10.14361/9783839403396-004", "CorpusId":
+      184361851}, "corpusId": 184361851, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6c9520d25a2f93f1fb4f08bab66d90a1519faaac",
       "title": "Computermaschinerie und Intelligenz (1950)", "abstract": null, "venue":
       "Reader Neue Medien", "year": 2007, "referenceCount": 0, "citationCount": 2,
       "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
@@ -586,7 +586,7 @@ interactions:
       "title": "Mathematical logic", "abstract": null, "venue": "", "year": 2001,
       "referenceCount": 0, "citationCount": 2, "influentialCitationCount": 1, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Philosophy",
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
       "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "2262347", "name":
       "A. Turing"}]}, {"paperId": "ff86cd6a800d402b7e64ca0ea913fed5351dc2b5", "externalIds":
@@ -704,7 +704,7 @@ interactions:
       "CorpusId": 60659734}, "corpusId": 60659734, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/a28fe905a92c75ae2098acacad53c992e4bce52d",
       "title": "Local programming methods and conventions", "abstract": null, "venue":
-      "", "year": 1989, "referenceCount": 0, "citationCount": 137, "influentialCitationCount":
+      "", "year": 1989, "referenceCount": 0, "citationCount": 138, "influentialCitationCount":
       3, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -724,7 +724,7 @@ interactions:
       "externalIds": {"MAG": "1723067587", "CorpusId": 56518797}, "corpusId": 56518797,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f50fef843592d31124e629420a5d7df39a51fcd7",
       "title": "Checking a large routine", "abstract": null, "venue": "", "year":
-      1989, "referenceCount": 0, "citationCount": 401, "influentialCitationCount":
+      1989, "referenceCount": 0, "citationCount": 402, "influentialCitationCount":
       39, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -899,8 +899,8 @@ interactions:
       it is difficult to escape the conclusion that the meaning and the answer to
       the question, \u201cCan machines think?\u201d is to be sought in a statistical
       survey such as a Gallup poll.", "venue": "The Philosophy of Artificial Intelligence",
-      "year": 1950, "referenceCount": 14, "citationCount": 9663, "influentialCitationCount":
-      524, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "year": 1950, "referenceCount": 14, "citationCount": 9664, "influentialCitationCount":
+      525, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Sociology"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Sociology", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
@@ -952,7 +952,7 @@ interactions:
       to observe type theory in proofs as well as in doctrine. It will not be necessary
       to adopt a formal logical notation to do so.", "venue": "Journal of Symbolic
       Logic (JSL)", "year": 1948, "referenceCount": 73, "citationCount": 211, "influentialCitationCount":
-      19, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy",
+      20, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy",
       "Computer Science"], "s2FieldsOfStudy": [{"category": "Philosophy", "source":
       "external"}, {"category": "Computer Science", "source": "external"}, {"category":
       "Mathematics", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
@@ -1103,7 +1103,7 @@ interactions:
       and p. 254. The proof that computability implies recursiveness requires no more
       knowledge of computable functions than the ideas underlying the definition:
       the technical details are recalled in \u00a75.", "venue": "Journal of Symbolic
-      Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 384, "influentialCitationCount":
+      Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 385, "influentialCitationCount":
       32, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
@@ -1186,31 +1186,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '97534'
+      - '97544'
       Content-Type:
       - application/json
       Date:
-      - Fri, 01 Dec 2023 02:35:24 GMT
+      - Fri, 01 Dec 2023 18:35:33 GMT
       Via:
-      - 1.1 b57cb95c712a6029fa533d1474f7a2d6.cloudfront.net (CloudFront)
+      - 1.1 c8c6b28a99983d138ae2215ef1bb424a.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - nL_Q14peeLnNPnUsCcfTobjXqzYWQip3tBMVk1uOVlacfcTxN5xW3A==
+      - SakrHbVh2Pcd-uXrXK1oFTQ6Y44TF67ytglE539nhzslZj0qrju_eg==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - PPfxBGIhvHcEctA=
+      - PRsaaE94PHcEV7g=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '97534'
+      - '97544'
       x-amzn-Remapped-Date:
-      - Fri, 01 Dec 2023 02:35:24 GMT
+      - Fri, 01 Dec 2023 18:35:33 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 8cd45075-b831-4035-839b-0b9a53bf5f47
+      - f68fe3e2-ed77-49df-b712-735895245694
     http_version: HTTP/1.1
     status_code: 200
 version: 1

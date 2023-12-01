@@ -9,7 +9,6 @@ class Author(SemanticScholarObject):
 
     FIELDS = [
         'affiliations',
-        'aliases',
         'authorId',
         'citationCount',
         'externalIds',
@@ -46,7 +45,6 @@ class Author(SemanticScholarObject):
     def __init__(self, data) -> None:
         super().__init__()
         self._affiliations = None
-        self._aliases = None
         self._authorId = None
         self._citationCount = None
         self._externalIds = None
@@ -64,13 +62,6 @@ class Author(SemanticScholarObject):
         :type: :class:`list`
         '''
         return self._affiliations
-
-    @property
-    def aliases(self) -> list:
-        '''
-        :type: :class:`list`
-        '''
-        return self._aliases
 
     @property
     def authorId(self) -> str:
@@ -139,8 +130,6 @@ class Author(SemanticScholarObject):
         self._data = data
         if 'affiliations' in data:
             self._affiliations = data['affiliations']
-        if 'aliases' in data:
-            self._aliases = data['aliases']
         if 'authorId' in data:
             self._authorId = data['authorId']
         if 'citationCount' in data:

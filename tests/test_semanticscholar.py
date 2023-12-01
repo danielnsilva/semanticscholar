@@ -37,7 +37,6 @@ class SemanticScholarTest(unittest.TestCase):
         data = json.loads(file.read())
         item = Author(data)
         self.assertEqual(item.affiliations, data['affiliations'])
-        self.assertEqual(item.aliases, data['aliases'])
         self.assertEqual(item.authorId, data['authorId'])
         self.assertEqual(item.citationCount, data['citationCount'])
         self.assertEqual(item.externalIds, data['externalIds'])

@@ -17,16 +17,15 @@ interactions:
       user-agent:
       - python-httpx/0.25.1
     method: POST
-    uri: https://api.semanticscholar.org/graph/v1/author/batch?fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
+    uri: https://api.semanticscholar.org/graph/v1/author/batch?fields=affiliations,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
   response:
     content: '[{"authorId": "3234559", "externalIds": {"DBLP": ["Edsger W. Dijkstra"]},
       "url": "https://www.semanticscholar.org/author/3234559", "name": "E. Dijkstra",
-      "aliases": ["Edsger Dijkstra", "Edsger Wybe Dijkstra", "Edsger W Dijkstra",
-      "E. W. Dijkstra", "Edsger W. Dijkstra"], "affiliations": [], "homepage": null,
-      "paperCount": 266, "citationCount": 48151, "hIndex": 42, "papers": [{"paperId":
-      "0775dd4e4bc72646ec063190c97cbd5cd1e0e048", "externalIds": {"DBLP": "books/mc/22/Dijkstra22b",
-      "DOI": "10.1145/3544585.3544601", "CorpusId": 127891023}, "corpusId": 127891023,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0775dd4e4bc72646ec063190c97cbd5cd1e0e048",
+      "affiliations": [], "homepage": null, "paperCount": 266, "citationCount": 48151,
+      "hIndex": 42, "papers": [{"paperId": "0775dd4e4bc72646ec063190c97cbd5cd1e0e048",
+      "externalIds": {"DBLP": "books/mc/22/Dijkstra22b", "DOI": "10.1145/3544585.3544601",
+      "CorpusId": 127891023}, "corpusId": 127891023, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/0775dd4e4bc72646ec063190c97cbd5cd1e0e048",
       "title": "Recursive Programming", "abstract": "ously, and the available memory
       space is therefore used rather uneconomically. Furthermore\u2014and this is
       a more serious objection\u2014it is then impossible to call in a subroutine
@@ -821,7 +820,7 @@ interactions:
       "", "year": 1998, "referenceCount": 0, "citationCount": 2, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Education", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"volume": "", "pages": "55-67", "name": ""}, "authors": [{"authorId":
       "3234559", "name": "E. Dijkstra"}]}, {"paperId": "10e7facf87c22883d11e9deda3a70f0300895726",
       "externalIds": {"MAG": "2155284496", "DOI": "10.1007/978-3-642-60858-2_5", "CorpusId":
@@ -874,19 +873,21 @@ interactions:
       "title": "My simplest theorem (EWD1232)", "abstract": null, "venue": "", "year":
       1997, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "3234559",
-      "name": "E. Dijkstra"}]}, {"paperId": "7261b86f97ad6abc0c3555ad96f63fe5daf60a23",
-      "externalIds": {"MAG": "2518987169", "CorpusId": 126216930}, "corpusId": 126216930,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7261b86f97ad6abc0c3555ad96f63fe5daf60a23",
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]},
+      {"paperId": "7261b86f97ad6abc0c3555ad96f63fe5daf60a23", "externalIds": {"MAG":
+      "2518987169", "CorpusId": 126216930}, "corpusId": 126216930, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/7261b86f97ad6abc0c3555ad96f63fe5daf60a23",
       "title": "Heuristics for a very simple Euclidean proof", "abstract": null, "venue":
       "", "year": 1997, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": null, "authors": [{"authorId": "3234559",
-      "name": "E. Dijkstra"}]}, {"paperId": "7e7a6d6b733eba90a10220f73d25685361e93ef7",
-      "externalIds": {"MAG": "2219395167", "DOI": "10.1007/978-3-642-60858-2_8", "CorpusId":
-      124433778}, "corpusId": 124433778, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7e7a6d6b733eba90a10220f73d25685361e93ef7",
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": null, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]},
+      {"paperId": "7e7a6d6b733eba90a10220f73d25685361e93ef7", "externalIds": {"MAG":
+      "2219395167", "DOI": "10.1007/978-3-642-60858-2_8", "CorpusId": 124433778},
+      "corpusId": 124433778, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7e7a6d6b733eba90a10220f73d25685361e93ef7",
       "title": "Courtesy Dr. Birgit Schieder (EWD1215)", "abstract": null, "venue":
       "", "year": 1997, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
@@ -900,11 +901,12 @@ interactions:
       null, "venue": "", "year": 1997, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": null, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]},
-      {"paperId": "df2208472d1d63feea73d6f17a9b98ea0366b9c1", "externalIds": {"MAG":
-      "99474823", "DOI": "10.1007/978-3-642-60858-2_11", "CorpusId": 117472520}, "corpusId":
-      117472520, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/df2208472d1d63feea73d6f17a9b98ea0366b9c1",
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      "df2208472d1d63feea73d6f17a9b98ea0366b9c1", "externalIds": {"MAG": "99474823",
+      "DOI": "10.1007/978-3-642-60858-2_11", "CorpusId": 117472520}, "corpusId": 117472520,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/df2208472d1d63feea73d6f17a9b98ea0366b9c1",
       "title": "The transitive closure of a wellfounded relation (EWD1241)", "abstract":
       null, "venue": "", "year": 1997, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
@@ -917,22 +919,22 @@ interactions:
       "title": "The formula for sin.(\u03b1 + \u03b2) (EWD1244a)", "abstract": null,
       "venue": "", "year": 1997, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"volume": "", "pages": "41-42", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
-      "e4439f180daece86dcf5f0ee91f9c74575aa4462", "externalIds": {"MAG": "2119007008",
-      "DOI": "10.1007/978-3-642-60858-2_9", "CorpusId": 122225461}, "corpusId": 122225461,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e4439f180daece86dcf5f0ee91f9c74575aa4462",
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Physics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"volume": "", "pages": "41-42", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "e4439f180daece86dcf5f0ee91f9c74575aa4462",
+      "externalIds": {"MAG": "2119007008", "DOI": "10.1007/978-3-642-60858-2_9", "CorpusId":
+      122225461}, "corpusId": 122225461, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e4439f180daece86dcf5f0ee91f9c74575aa4462",
       "title": "WLOG, or the misery of the unordered pair (EWD1223)", "abstract":
       null, "venue": "", "year": 1997, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Education", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"volume": "", "pages": "33-34", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
-      "ed1722829398dc38e92508e60ad75d3f3b21a5c2", "externalIds": {"MAG": "2156878061",
-      "DOI": "10.1007/978-1-4612-0685-9_4", "CorpusId": 62421690}, "corpusId": 62421690,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ed1722829398dc38e92508e60ad75d3f3b21a5c2",
+      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Philosophy",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"volume": "", "pages": "33-34", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "ed1722829398dc38e92508e60ad75d3f3b21a5c2",
+      "externalIds": {"MAG": "2156878061", "DOI": "10.1007/978-1-4612-0685-9_4", "CorpusId":
+      62421690}, "corpusId": 62421690, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ed1722829398dc38e92508e60ad75d3f3b21a5c2",
       "title": "The tide, not the waves", "abstract": null, "venue": "", "year": 1997,
       "referenceCount": 0, "citationCount": 14, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
@@ -993,12 +995,13 @@ interactions:
       "title": "A bagatelle on Euclid\u2019s Algorithm (EWD1158)", "abstract": null,
       "venue": "", "year": 1996, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"}],
-      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
-      "pages": "21-23", "name": ""}, "authors": [{"authorId": "3234559", "name": "E.
-      Dijkstra"}]}, {"paperId": "5d44a1eb079a7b8e58b5286b5c76e881beb3a1e0", "externalIds":
-      {"MAG": "2490386261", "DOI": "10.1007/978-3-642-61455-2_3", "CorpusId": 184395997},
-      "corpusId": 184395997, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5d44a1eb079a7b8e58b5286b5c76e881beb3a1e0",
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"volume": "", "pages": "21-23", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "5d44a1eb079a7b8e58b5286b5c76e881beb3a1e0",
+      "externalIds": {"MAG": "2490386261", "DOI": "10.1007/978-3-642-61455-2_3", "CorpusId":
+      184395997}, "corpusId": 184395997, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5d44a1eb079a7b8e58b5286b5c76e881beb3a1e0",
       "title": "The balance and the coins (EWD1083)", "abstract": null, "venue": "",
       "year": 1996, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Economics"],
@@ -1080,12 +1083,13 @@ interactions:
       "title": "Bulterman\u2019s theorem on shortest trees (EWD1131)", "abstract":
       null, "venue": "", "year": 1996, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"volume": "", "pages": "15-16", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
-      "dc7038d7d7160675091efb3232a3c31f35e2a236", "externalIds": {"MAG": "2491070518",
-      "DBLP": "conf/nato/Dijkstra96c", "DOI": "10.1007/978-3-642-61455-2_5", "CorpusId":
-      5162301}, "corpusId": 5162301, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/dc7038d7d7160675091efb3232a3c31f35e2a236",
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"volume": "", "pages": "15-16", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "dc7038d7d7160675091efb3232a3c31f35e2a236",
+      "externalIds": {"MAG": "2491070518", "DBLP": "conf/nato/Dijkstra96c", "DOI":
+      "10.1007/978-3-642-61455-2_5", "CorpusId": 5162301}, "corpusId": 5162301, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/dc7038d7d7160675091efb3232a3c31f35e2a236",
       "title": "A prime is in at most 1 way the sum of 2 squares", "abstract": null,
       "venue": "NATO ASI DPD", "year": 1996, "referenceCount": 0, "citationCount":
       0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
@@ -1130,9 +1134,10 @@ interactions:
       "", "year": 1994, "referenceCount": 0, "citationCount": 2, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Engineering", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1994-01-11", "journal": {"volume": "", "pages": "105-117", "name": ""}, "authors":
-      [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "0af598591fc1e541a8c546a8264dbbaf138de4a5",
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1994-01-11",
+      "journal": {"volume": "", "pages": "105-117", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "0af598591fc1e541a8c546a8264dbbaf138de4a5",
       "externalIds": {"MAG": "93023019", "DOI": "10.1007/978-3-642-77572-7_2", "CorpusId":
       115609809}, "corpusId": 115609809, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0af598591fc1e541a8c546a8264dbbaf138de4a5",
       "title": "Well-foundedness and the transitive closure", "abstract": null, "venue":
@@ -1149,13 +1154,13 @@ interactions:
       "", "year": 1992, "referenceCount": 0, "citationCount": 3, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"volume": "", "pages": "17-25", "name": ""}, "authors": [{"authorId":
-      "1760396", "name": "J. Rao"}, {"authorId": "3234559", "name": "E. Dijkstra"}]},
-      {"paperId": "622a8b2e489a8842e77aef71e5a4e695c666eb00", "externalIds": {"MAG":
-      "342597797", "DBLP": "conf/nato/Dijkstra92", "DOI": "10.1007/978-3-662-02880-3_7",
-      "CorpusId": 46089734}, "corpusId": 46089734, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/622a8b2e489a8842e77aef71e5a4e695c666eb00",
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"volume": "", "pages": "17-25", "name": ""}, "authors": [{"authorId": "1760396",
+      "name": "J. Rao"}, {"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      "622a8b2e489a8842e77aef71e5a4e695c666eb00", "externalIds": {"MAG": "342597797",
+      "DBLP": "conf/nato/Dijkstra92", "DOI": "10.1007/978-3-662-02880-3_7", "CorpusId":
+      46089734}, "corpusId": 46089734, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/622a8b2e489a8842e77aef71e5a4e695c666eb00",
       "title": "The Unification of Three Calculi", "abstract": null, "venue": "NATO
       ASI PDC", "year": 1992, "referenceCount": 5, "citationCount": 8, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
@@ -1193,21 +1198,20 @@ interactions:
       "title": "On our proof format", "abstract": null, "venue": "", "year": 1990,
       "referenceCount": 0, "citationCount": 4, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Philosophy",
-      "source": "s2-fos-model"}, {"category": "Biology", "source": "s2-fos-model"}],
-      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
-      "pages": "21-29", "name": ""}, "authors": [{"authorId": "3234559", "name": "E.
-      Dijkstra"}, {"authorId": "2755537", "name": "C. S. Scholten"}]}, {"paperId":
-      "5767cbdd9286ff1cf7f5f92a45f774a32e404d41", "externalIds": {"MAG": "975921262",
-      "DOI": "10.1007/978-1-4612-3228-5_6", "CorpusId": 118482037}, "corpusId": 118482037,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5767cbdd9286ff1cf7f5f92a45f774a32e404d41",
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"volume": "", "pages": "21-29", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}, {"authorId": "2755537", "name": "C. S. Scholten"}]},
+      {"paperId": "5767cbdd9286ff1cf7f5f92a45f774a32e404d41", "externalIds": {"MAG":
+      "975921262", "DOI": "10.1007/978-1-4612-3228-5_6", "CorpusId": 118482037}, "corpusId":
+      118482037, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/5767cbdd9286ff1cf7f5f92a45f774a32e404d41",
       "title": "Some properties of predicate transformers", "abstract": null, "venue":
       "", "year": 1990, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"volume": "", "pages": "81-120", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId":
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"volume": "", "pages": "81-120",
+      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId":
       "2755537", "name": "C. S. Scholten"}]}, {"paperId": "605b80c373e27dec5b1ea09143b28e2b8854f93a",
       "externalIds": {"MAG": "332050894", "DOI": "10.1007/978-1-4612-3228-5_8", "CorpusId":
       118408202}, "corpusId": 118408202, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/605b80c373e27dec5b1ea09143b28e2b8854f93a",
@@ -1215,20 +1219,22 @@ interactions:
       null, "venue": "", "year": 1990, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"volume": "", "pages": "147-170", "name": ""}, "authors":
-      [{"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId": "2755537", "name":
-      "C. S. Scholten"}]}, {"paperId": "69600d0578fc284ee91f892a275c996f7d751603",
-      "externalIds": {"MAG": "238734636", "DOI": "10.1007/978-1-4612-3228-5_11", "CorpusId":
-      117322909}, "corpusId": 117322909, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/69600d0578fc284ee91f892a275c996f7d751603",
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"volume": "", "pages": "147-170", "name": ""}, "authors": [{"authorId": "3234559",
+      "name": "E. Dijkstra"}, {"authorId": "2755537", "name": "C. S. Scholten"}]},
+      {"paperId": "69600d0578fc284ee91f892a275c996f7d751603", "externalIds": {"MAG":
+      "238734636", "DOI": "10.1007/978-1-4612-3228-5_11", "CorpusId": 117322909},
+      "corpusId": 117322909, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/69600d0578fc284ee91f892a275c996f7d751603",
       "title": "Converse predicate transformers", "abstract": null, "venue": "", "year":
       1990, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"volume": "", "pages": "201-208",
-      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId":
-      "2755537", "name": "C. S. Scholten"}]}, {"paperId": "6ca67f45b0504e5679139fe1ca9c33a72d54abda",
+      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"volume": "", "pages": "201-208", "name": ""}, "authors":
+      [{"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId": "2755537", "name":
+      "C. S. Scholten"}]}, {"paperId": "6ca67f45b0504e5679139fe1ca9c33a72d54abda",
       "externalIds": {"MAG": "2326127844", "CorpusId": 62003183}, "corpusId": 62003183,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6ca67f45b0504e5679139fe1ca9c33a72d54abda",
       "title": "Reasoning about programs (videotape)", "abstract": null, "venue":
@@ -1244,8 +1250,8 @@ interactions:
       "year": 1990, "referenceCount": 0, "citationCount": 1, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"volume": "", "pages": "30-80", "name":
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"volume": "", "pages": "30-80", "name":
       ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId":
       "2755537", "name": "C. S. Scholten"}]}, {"paperId": "8aa02ff2807719ae705282cd72b936f19acd9e0f",
       "externalIds": {"MAG": "2098792684", "DOI": "10.1007/978-1-4612-3228-5_9", "CorpusId":
@@ -1271,17 +1277,17 @@ interactions:
       0, "citationCount": 62, "influentialCitationCount": 1, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "3234559",
-      "name": "E. Dijkstra"}]}, {"paperId": "be94f80b0645879e5b81e1e53bbb126047858b1e",
-      "externalIds": {"MAG": "2235673032", "DOI": "10.1007/978-1-4612-3228-5_12",
-      "CorpusId": 123713149}, "corpusId": 123713149, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/be94f80b0645879e5b81e1e53bbb126047858b1e",
+      Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
+      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      "be94f80b0645879e5b81e1e53bbb126047858b1e", "externalIds": {"MAG": "2235673032",
+      "DOI": "10.1007/978-1-4612-3228-5_12", "CorpusId": 123713149}, "corpusId": 123713149,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/be94f80b0645879e5b81e1e53bbb126047858b1e",
       "title": "The strongest postcondition", "abstract": null, "venue": "", "year":
       1990, "referenceCount": 0, "citationCount": 7, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": null, "journal": {"volume": "", "pages": "209-215",
       "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId":
       "2755537", "name": "C. S. Scholten"}]}, {"paperId": "c137a5f463e2c6a4f4341ce2239b47daaec1e0ec",
@@ -1311,7 +1317,7 @@ interactions:
       1990, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"volume": "", "pages": "17-20", "name": ""}, "authors": [{"authorId":
       "3234559", "name": "E. Dijkstra"}, {"authorId": "102480135", "name": "Carel
       S. Schotten"}]}, {"paperId": "f8d766c64b167aa0689d7581d1d04661d95b072b", "externalIds":
@@ -1407,13 +1413,13 @@ interactions:
       "abstract": null, "venue": "", "year": 1989, "referenceCount": 1, "citationCount":
       5, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
-      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
-      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
-      "pages": "223-232", "name": ""}, "authors": [{"authorId": "3234559", "name":
-      "E. Dijkstra"}]}, {"paperId": "0ea08e43bac626fe2cd944e3c5ca835f8d81f3b7", "externalIds":
-      {"MAG": "2045028045", "DBLP": "journals/bit/Dijkstra88", "DOI": "10.1007/BF01941120",
-      "CorpusId": 28523639}, "corpusId": 28523639, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/0ea08e43bac626fe2cd944e3c5ca835f8d81f3b7",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"volume": "", "pages": "223-232",
+      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      "0ea08e43bac626fe2cd944e3c5ca835f8d81f3b7", "externalIds": {"MAG": "2045028045",
+      "DBLP": "journals/bit/Dijkstra88", "DOI": "10.1007/BF01941120", "CorpusId":
+      28523639}, "corpusId": 28523639, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0ea08e43bac626fe2cd944e3c5ca835f8d81f3b7",
       "title": "On binary operators and their derived relations", "abstract": null,
       "venue": "BIT", "year": 1988, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
@@ -1470,9 +1476,10 @@ interactions:
       1987, "referenceCount": 0, "citationCount": 2, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Physics"],
       "s2FieldsOfStudy": [{"category": "Physics", "source": "external"}, {"category":
-      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1987-06-01", "journal": {"volume": "", "pages": "243-260", "name": ""}, "authors":
-      [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "9ca344c21b8e1dadf5cae387c7577fb31c84703b",
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1987-06-01",
+      "journal": {"volume": "", "pages": "243-260", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "9ca344c21b8e1dadf5cae387c7577fb31c84703b",
       "externalIds": {"MAG": "193628247", "DOI": "10.1007/978-3-642-82921-5_1", "CorpusId":
       60422229}, "corpusId": 60422229, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9ca344c21b8e1dadf5cae387c7577fb31c84703b",
       "title": "On the nature of computing science", "abstract": null, "venue": "",
@@ -1527,22 +1534,23 @@ interactions:
       null, "venue": "", "year": 1986, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Physics"],
       "s2FieldsOfStudy": [{"category": "Physics", "source": "external"}, {"category":
-      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1986-12-31", "journal": {"volume": "", "pages": "503-504", "name": ""}, "authors":
-      [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "79e4eaf7dbd219f1cec2d3d844e0e035da03eb62",
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Physics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1986-12-31",
+      "journal": {"volume": "", "pages": "503-504", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "79e4eaf7dbd219f1cec2d3d844e0e035da03eb62",
       "externalIds": {"MAG": "1980026967", "DOI": "10.1007/BF03023921", "CorpusId":
       120847834}, "corpusId": 120847834, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/79e4eaf7dbd219f1cec2d3d844e0e035da03eb62",
       "title": "On a cultural gap", "abstract": null, "venue": "", "year": 1986, "referenceCount":
       0, "citationCount": 34, "influentialCitationCount": 1, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category":
-      "Sociology", "source": "external"}], "publicationTypes": null, "publicationDate":
-      "1986-03-01", "journal": {"volume": "8", "pages": "48-52", "name": "The Mathematical
-      Intelligencer"}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]},
-      {"paperId": "d1ecd587f7f7b58f471341e7866ec29caa9a1a04", "externalIds": {"DBLP":
-      "journals/acta/DijkstraG86", "MAG": "2065067715", "DOI": "10.1007/BF00268074",
-      "CorpusId": 27732111}, "corpusId": 27732111, "publicationVenue": {"id": "0c66bac6-fc2b-46b2-8953-fda36a3cefd5",
-      "name": "Acta Informatica", "type": "journal", "alternate_names": ["Acta Inform"],
-      "issn": "0001-5903", "url": "https://www.springer.com/computer/theoretical+computer+science/journal/236",
+      "Sociology", "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1986-03-01", "journal": {"volume":
+      "8", "pages": "48-52", "name": "The Mathematical Intelligencer"}, "authors":
+      [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "d1ecd587f7f7b58f471341e7866ec29caa9a1a04",
+      "externalIds": {"DBLP": "journals/acta/DijkstraG86", "MAG": "2065067715", "DOI":
+      "10.1007/BF00268074", "CorpusId": 27732111}, "corpusId": 27732111, "publicationVenue":
+      {"id": "0c66bac6-fc2b-46b2-8953-fda36a3cefd5", "name": "Acta Informatica", "type":
+      "journal", "alternate_names": ["Acta Inform"], "issn": "0001-5903", "url": "https://www.springer.com/computer/theoretical+computer+science/journal/236",
       "alternate_urls": ["http://www.springer.com/computer/theoretical+computer+science/journal/236",
       "https://link.springer.com/journal/236"]}, "url": "https://www.semanticscholar.org/paper/d1ecd587f7f7b58f471341e7866ec29caa9a1a04",
       "title": "A simple fixpoint argument without the restriction to continuity",
@@ -1677,12 +1685,12 @@ interactions:
       "title": "An Exercise for Dr. R. M. Burstall", "abstract": null, "venue": "",
       "year": 1982, "referenceCount": 0, "citationCount": 8, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"volume": "", "pages": "215-216",
-      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
-      "089dbaddb839843720f525ce843c0d7a8f039e06", "externalIds": {"MAG": "348908286",
-      "DOI": "10.1007/978-1-4612-5695-3_41", "CorpusId": 174476346}, "corpusId": 174476346,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/089dbaddb839843720f525ce843c0d7a8f039e06",
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Medicine", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"volume": "", "pages": "215-216", "name": ""}, "authors":
+      [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "089dbaddb839843720f525ce843c0d7a8f039e06",
+      "externalIds": {"MAG": "348908286", "DOI": "10.1007/978-1-4612-5695-3_41", "CorpusId":
+      174476346}, "corpusId": 174476346, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/089dbaddb839843720f525ce843c0d7a8f039e06",
       "title": "More About the Function \u201cfusc\u201d (A Sequel to EWD570)", "abstract":
       null, "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 8, "influentialCitationCount":
       2, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Physics"],
@@ -1744,9 +1752,9 @@ interactions:
       "year": 1982, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Education", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"volume": "", "pages": "110-119", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"volume": "", "pages": "110-119",
+      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
       "1a15ceddf1ff128a07ad8c3fe31c9d7cd11e2a5f", "externalIds": {"MAG": "261707013",
       "DOI": "10.1007/978-1-4612-5695-3_55", "CorpusId": 60345101}, "corpusId": 60345101,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1a15ceddf1ff128a07ad8c3fe31c9d7cd11e2a5f",
@@ -1859,7 +1867,7 @@ interactions:
       "abstract": null, "venue": "", "year": 1982, "referenceCount": 0, "citationCount":
       18, "influentialCitationCount": 1, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
-      "source": "external"}, {"category": "Education", "source": "s2-fos-model"}],
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
       "pages": "259-263", "name": ""}, "authors": [{"authorId": "3234559", "name":
       "E. Dijkstra"}]}, {"paperId": "4a7b89f2957f8bb03c16e06a19bd69438ad1591d", "externalIds":
@@ -1876,10 +1884,10 @@ interactions:
       "DOI": "10.1007/978-1-4612-5695-3_54", "CorpusId": 123626065}, "corpusId": 123626065,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4b09afab9bc2b986c4fe4fed067dc17115e40925",
       "title": "The Mathematics Behind the Banker\u2019s Algorithm", "abstract": null,
-      "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 33, "influentialCitationCount":
+      "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 34, "influentialCitationCount":
       2, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Art", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"volume": "", "pages": "308-312", "name": ""}, "authors":
       [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "4bdf1ce9ae67005e1ac9f924d06cfb535f164319",
       "externalIds": {"MAG": "992250731", "DOI": "10.1007/978-1-4612-5695-3_28", "CorpusId":
@@ -1897,12 +1905,13 @@ interactions:
       "title": "On Making Solutions More and More Fine-Grained", "abstract": null,
       "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 9, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"}],
-      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
-      "pages": "292-307", "name": ""}, "authors": [{"authorId": "3234559", "name":
-      "E. Dijkstra"}]}, {"paperId": "54f9239a55f1fb4f9f22e955d576cc1b5473ea70", "externalIds":
-      {"MAG": "309306838", "DOI": "10.1007/978-1-4612-5695-3_56", "CorpusId": 174256100},
-      "corpusId": 174256100, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/54f9239a55f1fb4f9f22e955d576cc1b5473ea70",
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"volume": "", "pages": "292-307",
+      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      "54f9239a55f1fb4f9f22e955d576cc1b5473ea70", "externalIds": {"MAG": "309306838",
+      "DOI": "10.1007/978-1-4612-5695-3_56", "CorpusId": 174256100}, "corpusId": 174256100,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/54f9239a55f1fb4f9f22e955d576cc1b5473ea70",
       "title": "Trip Report E. W. Dijkstra, Newcastle-upon-Tyne, 5\u201310 Sept. 1977",
       "abstract": null, "venue": "", "year": 1982, "referenceCount": 3, "citationCount":
       0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
@@ -1917,7 +1926,7 @@ interactions:
       "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 10, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["History"],
       "s2FieldsOfStudy": [{"category": "History", "source": "external"}, {"category":
-      "Education", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"volume": "", "pages": "268-276", "name": ""}, "authors":
       [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "5c8c3aedfb4e12e01b69bbac308e7a29a5f97ddc",
       "externalIds": {"MAG": "1526582584", "DOI": "10.1007/978-1-4612-5695-3_33",
@@ -1973,21 +1982,23 @@ interactions:
       the Nondeterminacy in the Way I Did", "abstract": null, "venue": "", "year":
       1982, "referenceCount": 0, "citationCount": 4, "influentialCitationCount": 1,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
-      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"}],
-      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
-      "pages": "284-287", "name": ""}, "authors": [{"authorId": "3234559", "name":
-      "E. Dijkstra"}]}, {"paperId": "73aa4a3785dea97f2fd4fc7cf137254876bcb139", "externalIds":
-      {"MAG": "74141201", "DOI": "10.1007/978-94-009-7893-5_8", "CorpusId": 115461393},
-      "corpusId": 115461393, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/73aa4a3785dea97f2fd4fc7cf137254876bcb139",
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": {"volume": "", "pages": "284-287", "name":
+      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      "73aa4a3785dea97f2fd4fc7cf137254876bcb139", "externalIds": {"MAG": "74141201",
+      "DOI": "10.1007/978-94-009-7893-5_8", "CorpusId": 115461393}, "corpusId": 115461393,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/73aa4a3785dea97f2fd4fc7cf137254876bcb139",
       "title": "Repaying Our Debts", "abstract": null, "venue": "", "year": 1982,
       "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Education",
-      "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-      null, "journal": {"volume": "", "pages": "135-141", "name": ""}, "authors":
-      [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "77f3be9cb5bcbfbc0ab42739d98d5fae9998ce39",
-      "externalIds": {"MAG": "2154995575", "DOI": "10.1007/978-1-4612-5695-3_8", "CorpusId":
-      145810834}, "corpusId": 145810834, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/77f3be9cb5bcbfbc0ab42739d98d5fae9998ce39",
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": null, "journal": {"volume":
+      "", "pages": "135-141", "name": ""}, "authors": [{"authorId": "3234559", "name":
+      "E. Dijkstra"}]}, {"paperId": "77f3be9cb5bcbfbc0ab42739d98d5fae9998ce39", "externalIds":
+      {"MAG": "2154995575", "DOI": "10.1007/978-1-4612-5695-3_8", "CorpusId": 145810834},
+      "corpusId": 145810834, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/77f3be9cb5bcbfbc0ab42739d98d5fae9998ce39",
       "title": "Acceptance Speech for the AFIPS Harry Goode Memorial Award 1974",
       "abstract": null, "venue": "", "year": 1982, "referenceCount": 0, "citationCount":
       0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
@@ -2012,7 +2023,7 @@ interactions:
       "title": "A Great Improvement", "abstract": null, "venue": "", "year": 1982,
       "referenceCount": 0, "citationCount": 1, "influentialCitationCount": 1, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
       "journal": {"volume": "", "pages": "217-219", "name": ""}, "authors": [{"authorId":
       "3234559", "name": "E. Dijkstra"}]}, {"paperId": "87cddb64e07a70decb0da63c30f8a45a55338fc5",
@@ -2033,9 +2044,10 @@ interactions:
       "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 4, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Geography"],
       "s2FieldsOfStudy": [{"category": "Geography", "source": "external"}, {"category":
-      "Medicine", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"volume": "", "pages": "264-267", "name": ""}, "authors":
-      [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId": "9392f965bf1519a8898eecb78827f4166f20d9bb",
+      "Environmental Science", "source": "s2-fos-model"}, {"category": "Biology",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"volume": "", "pages": "264-267", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "9392f965bf1519a8898eecb78827f4166f20d9bb",
       "externalIds": {"MAG": "302841227", "DOI": "10.1007/978-1-4612-5695-3_43", "CorpusId":
       127796703}, "corpusId": 127796703, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9392f965bf1519a8898eecb78827f4166f20d9bb",
       "title": "Trip Report E. W. Dijkstra, Poland and USSR, 4\u201325 September 1976",
@@ -2051,7 +2063,7 @@ interactions:
       "title": "On Subgoal Induction", "abstract": null, "venue": "", "year": 1982,
       "referenceCount": 2, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
       "journal": {"volume": "", "pages": "223-224", "name": ""}, "authors": [{"authorId":
       "3234559", "name": "E. Dijkstra"}]}, {"paperId": "a08c6d12a19363fc7cb980eb124ba6b33009b396",
@@ -2157,12 +2169,12 @@ interactions:
       "", "year": 1982, "referenceCount": 0, "citationCount": 17, "influentialCitationCount":
       1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Materials
       Science"], "s2FieldsOfStudy": [{"category": "Materials Science", "source": "external"},
-      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"volume": "", "pages": "34-35", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
-      "c0a71908902f4a2a9f5841b466fbd40cc6ea5e3f", "externalIds": {"MAG": "308327990",
-      "DOI": "10.1007/978-1-4612-5695-3_42", "CorpusId": 118348984}, "corpusId": 118348984,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c0a71908902f4a2a9f5841b466fbd40cc6ea5e3f",
+      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Engineering",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"volume": "", "pages": "34-35", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "c0a71908902f4a2a9f5841b466fbd40cc6ea5e3f",
+      "externalIds": {"MAG": "308327990", "DOI": "10.1007/978-1-4612-5695-3_42", "CorpusId":
+      118348984}, "corpusId": 118348984, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c0a71908902f4a2a9f5841b466fbd40cc6ea5e3f",
       "title": "A Proof of a Theorem Communicated to Us by S. Ghosh", "abstract":
       null, "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
@@ -2186,13 +2198,13 @@ interactions:
       "", "year": 1982, "referenceCount": 0, "citationCount": 15, "influentialCitationCount":
       1, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
-      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"volume": "", "pages": "334-337", "name": ""}, "authors":
-      [{"authorId": "2755537", "name": "C. S. Scholten"}, {"authorId": "3234559",
-      "name": "E. Dijkstra"}]}, {"paperId": "ce1e60a32925cc49e3c489bb32c462c6ee417292",
-      "externalIds": {"MAG": "179854718", "DOI": "10.1007/978-1-4612-5695-3_15", "CorpusId":
-      59871234}, "corpusId": 59871234, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ce1e60a32925cc49e3c489bb32c462c6ee417292",
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"volume": "", "pages": "334-337", "name": ""}, "authors": [{"authorId":
+      "2755537", "name": "C. S. Scholten"}, {"authorId": "3234559", "name": "E. Dijkstra"}]},
+      {"paperId": "ce1e60a32925cc49e3c489bb32c462c6ee417292", "externalIds": {"MAG":
+      "179854718", "DOI": "10.1007/978-1-4612-5695-3_15", "CorpusId": 59871234}, "corpusId":
+      59871234, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ce1e60a32925cc49e3c489bb32c462c6ee417292",
       "title": "Monotonic Replacement Algorithms and Their Implementation", "abstract":
       null, "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 1, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
@@ -2217,9 +2229,9 @@ interactions:
       "year": 1982, "referenceCount": 0, "citationCount": 2, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"volume": "", "pages": "174-183", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"volume": "", "pages": "174-183",
+      "name": ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
       "d7b25f6cc47e3f5f9af4a8b55fb51058f4bec8c8", "externalIds": {"MAG": "82606404",
       "DOI": "10.1007/978-1-4612-5695-3_1", "CorpusId": 59835027}, "corpusId": 59835027,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d7b25f6cc47e3f5f9af4a8b55fb51058f4bec8c8",
@@ -2237,12 +2249,12 @@ interactions:
       null, "venue": "", "year": 1982, "referenceCount": 0, "citationCount": 23, "influentialCitationCount":
       4, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Education", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"volume": "", "pages": "22-30", "name":
-      ""}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}, {"paperId":
-      "e39157ba0efc854513f6cbaddfadcc23c7304a01", "externalIds": {"MAG": "80376730",
-      "DOI": "10.1007/978-1-4612-5695-3_10", "CorpusId": 159102219}, "corpusId": 159102219,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e39157ba0efc854513f6cbaddfadcc23c7304a01",
+      {"category": "Mathematics", "source": "s2-fos-model"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"volume": "", "pages": "22-30", "name": ""}, "authors": [{"authorId":
+      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "e39157ba0efc854513f6cbaddfadcc23c7304a01",
+      "externalIds": {"MAG": "80376730", "DOI": "10.1007/978-1-4612-5695-3_10", "CorpusId":
+      159102219}, "corpusId": 159102219, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e39157ba0efc854513f6cbaddfadcc23c7304a01",
       "title": "Inside \u201cMathematics Inc.\u201d", "abstract": null, "venue": "",
       "year": 1982, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
@@ -2767,7 +2779,7 @@ interactions:
       the final state, is not necessarily uniquely determined by the initial state.
       For the formal derivation of programs expressed in terms of these constructs,
       a calculus will be be shown.", "venue": "Communications of the ACM", "year":
-      1975, "referenceCount": 3, "citationCount": 2074, "influentialCitationCount":
+      1975, "referenceCount": 3, "citationCount": 2075, "influentialCitationCount":
       98, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/360933.360975",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -2860,7 +2872,7 @@ interactions:
       readily\u2014and quite systematically\u2014implemented if the different processes
       can be granted mutually exclusive access to a common store in which \u201cthe
       current system state\u201d is recorded.", "venue": "CACM", "year": 1974, "referenceCount":
-      0, "citationCount": 2202, "influentialCitationCount": 157, "isOpenAccess": true,
+      0, "citationCount": 2203, "influentialCitationCount": 157, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/361179.361202",
       "status": null}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
@@ -3037,7 +3049,7 @@ interactions:
       "https://link.springer.com/journal/236"]}, "url": "https://www.semanticscholar.org/paper/ff568f642a545c7d62df73e7798e3d008b509ea5",
       "title": "Hierarchical ordering of sequential processes", "abstract": null,
       "venue": "Acta Informatica", "year": 1971, "referenceCount": 3, "citationCount":
-      521, "influentialCitationCount": 22, "isOpenAccess": false, "openAccessPdf":
+      523, "influentialCitationCount": 22, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
@@ -3245,8 +3257,8 @@ interactions:
       "CorpusId": 19357737}, "corpusId": 19357737, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/3fea018ca5e6fecf60a90c2612391f9805c86c15",
       "title": "Solution of a problem in concurrent programming control", "abstract":
-      null, "venue": "CACM", "year": 1965, "referenceCount": 0, "citationCount": 848,
-      "influentialCitationCount": 55, "isOpenAccess": true, "openAccessPdf": {"url":
+      null, "venue": "CACM", "year": 1965, "referenceCount": 0, "citationCount": 849,
+      "influentialCitationCount": 56, "isOpenAccess": true, "openAccessPdf": {"url":
       "https://dl.acm.org/doi/pdf/10.1145/365559.365617", "status": null}, "fieldsOfStudy":
       ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
       "external"}, {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -3269,7 +3281,7 @@ interactions:
       means of communication with each other can be made in such a way that at any
       moment one and only one of them is engaged in the \u201ccritical section\u201d
       of its cycle.", "venue": "CACM", "year": 1965, "referenceCount": 0, "citationCount":
-      283, "influentialCitationCount": 8, "isOpenAccess": true, "openAccessPdf": {"url":
+      284, "influentialCitationCount": 8, "isOpenAccess": true, "openAccessPdf": {"url":
       "https://dl.acm.org/doi/pdf/10.1145/365559.365617", "status": null}, "fieldsOfStudy":
       ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
       "external"}, {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -3582,7 +3594,7 @@ interactions:
       branches that end in this node in set II. To start with, set I is empty. From
       then onwards we perform the following two steps repeatedly. Step 1. The shortest
       branch of set II is removed from this set and added to", "venue": "Numerische
-      Mathematik", "year": 1959, "referenceCount": 5, "citationCount": 23762, "influentialCitationCount":
+      Mathematik", "year": 1959, "referenceCount": 5, "citationCount": 23761, "influentialCitationCount":
       1185, "isOpenAccess": true, "openAccessPdf": {"url": "http://www-m3.ma.tum.de/foswiki/pub/MN0506/WebHome/dijkstra.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
@@ -3639,9 +3651,10 @@ interactions:
       "year": 1957, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
-      "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"volume": "", "pages": "1-2", "name": ""}, "authors": [{"authorId":
-      "3234559", "name": "E. Dijkstra"}]}, {"paperId": "0997fbd8f2678cc1fc205a786f21de8602ef9b03",
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"volume": "", "pages": "1-2", "name": ""}, "authors": [{"authorId": "3234559",
+      "name": "E. Dijkstra"}]}, {"paperId": "0997fbd8f2678cc1fc205a786f21de8602ef9b03",
       "externalIds": {"MAG": "2124257918", "CorpusId": 123472731}, "corpusId": 123472731,
       "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0997fbd8f2678cc1fc205a786f21de8602ef9b03",
       "title": "Table of Everett''s interpolation coefficients", "abstract": null,
@@ -3666,13 +3679,11 @@ interactions:
       "publicationTypes": ["JournalArticle"], "publicationDate": "1899-12-30", "journal":
       {"pages": "933-936"}, "authors": [{"authorId": "3234559", "name": "E. Dijkstra"}]}]},
       {"authorId": "1726629", "externalIds": {"DBLP": ["David Lorge Parnas"]}, "url":
-      "https://www.semanticscholar.org/author/1726629", "name": "D. Parnas", "aliases":
-      ["D.l. Parnas", "D. Parnas", "Dave Parnas", "David Parnas", "D. L. Parnas",
-      "David Lorge Parnas", "David L Parnas", "David L. Parnas", "D L Parnas", "David
-      Lorge. Parnas"], "affiliations": [], "homepage": null, "paperCount": 269, "citationCount":
-      19186, "hIndex": 52, "papers": [{"paperId": "7879e540c7bca8fbaae8069652dad6a6d9ab4877",
-      "externalIds": {"MAG": "3203949752", "DOI": "10.4230/DAGSEMREP.178", "CorpusId":
-      244343504}, "corpusId": 244343504, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7879e540c7bca8fbaae8069652dad6a6d9ab4877",
+      "https://www.semanticscholar.org/author/1726629", "name": "D. Parnas", "affiliations":
+      [], "homepage": null, "paperCount": 269, "citationCount": 19186, "hIndex": 52,
+      "papers": [{"paperId": "7879e540c7bca8fbaae8069652dad6a6d9ab4877", "externalIds":
+      {"MAG": "3203949752", "DOI": "10.4230/DAGSEMREP.178", "CorpusId": 244343504},
+      "corpusId": 244343504, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7879e540c7bca8fbaae8069652dad6a6d9ab4877",
       "title": "Practical Methods for Code Documentation and Inspection (Dagstuhl
       Seminar 9720)", "abstract": null, "venue": "", "year": 2021, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
@@ -4445,7 +4456,7 @@ interactions:
       automated.", "venue": "2008 32nd Annual IEEE International Computer Software
       and Applications Conference", "year": 2008, "referenceCount": 16, "citationCount":
       6, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
-      "http://hub.hku.hk/bitstream/10722/55041/1/Fault_propagation.pdf", "status":
+      "http://www.cs.hku.hk/research/techreps/document/TR-2008-06.pdf", "status":
       null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -6681,12 +6692,13 @@ interactions:
       to do. We need precise specifications for systems that are to operate in our
       networks; we also need the ability to enforce those standards. Otherwise, increasing
       diversity might make the situation worse.", "venue": "CACM", "year": 1999, "referenceCount":
-      0, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-      "Computer Science", "source": "s2-fos-model"}, {"category": "Law", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1999-05-01",
-      "journal": {"volume": "42", "pages": "128", "name": "Communications of The ACM"},
-      "authors": [{"authorId": "1726629", "name": "D. Parnas"}]}, {"paperId": "1892b47a3b0707538ae0b21ca4e258eb97239403",
+      0, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/301353.301442",
+      "status": null}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Law", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1999-05-01", "journal": {"volume":
+      "42", "pages": "128", "name": "Communications of The ACM"}, "authors": [{"authorId":
+      "1726629", "name": "D. Parnas"}]}, {"paperId": "1892b47a3b0707538ae0b21ca4e258eb97239403",
       "externalIds": {"DBLP": "conf/tacas/ParnasP99", "MAG": "1587814165", "DOI":
       "10.1007/3-540-49059-0_24", "CorpusId": 15635759}, "corpusId": 15635759, "publicationVenue":
       {"id": "4f5b082d-cee7-4eff-9273-dfedd95a5560", "name": "International Conference
@@ -7036,7 +7048,7 @@ interactions:
       among the engineering disciplines. This article discusses the differences between
       traditional CS programs and most engineering programs, and argues that we need
       SE programs that follow the traditional engineering approach to professional
-      education.", "venue": "IEEE Software", "year": 1999, "referenceCount": 4, "citationCount":
+      education.", "venue": "IEEE Software", "year": 1999, "referenceCount": 5, "citationCount":
       168, "influentialCitationCount": 10, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -7051,7 +7063,7 @@ interactions:
       "url": "https://link.springer.com/journal/10480"}, "url": "https://www.semanticscholar.org/paper/d9a427231e2912cdf1f4b43a1a89443ba5f219d2",
       "title": "Software engineering programmes are not computer science programmes",
       "abstract": null, "venue": "Annals of Software Engineering", "year": 1999, "referenceCount":
-      5, "citationCount": 75, "influentialCitationCount": 5, "isOpenAccess": false,
+      5, "citationCount": 76, "influentialCitationCount": 5, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Engineering"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Engineering", "source": "external"}, {"category": "Computer Science",
@@ -7674,14 +7686,15 @@ interactions:
       OF FIGURES vii LIST OF DEFINITIONS viii", "venue": "", "year": 1994, "referenceCount":
       144, "citationCount": 18, "influentialCitationCount": 2, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
-      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-      "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "1726629", "name":
-      "D. Parnas"}, {"authorId": "2107944057", "name": "Yabo Wang"}]}, {"paperId":
-      "9d0aca7cf319e791066500ab7a2862d54eb7d14a", "externalIds": {"MAG": "1552663",
-      "DBLP": "conf/ifip/Parnas94", "CorpusId": 5158022}, "corpusId": 5158022, "publicationVenue":
-      {"id": "a45e99db-b6f6-4042-8b23-e8c11867e01c", "name": "IFIP Congress", "type":
-      "conference", "alternate_names": ["IFIP", "IFIP Congr"]}, "url": "https://www.semanticscholar.org/paper/9d0aca7cf319e791066500ab7a2862d54eb7d14a",
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Engineering", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
+      "name": ""}, "authors": [{"authorId": "1726629", "name": "D. Parnas"}, {"authorId":
+      "2107944057", "name": "Yabo Wang"}]}, {"paperId": "9d0aca7cf319e791066500ab7a2862d54eb7d14a",
+      "externalIds": {"MAG": "1552663", "DBLP": "conf/ifip/Parnas94", "CorpusId":
+      5158022}, "corpusId": 5158022, "publicationVenue": {"id": "a45e99db-b6f6-4042-8b23-e8c11867e01c",
+      "name": "IFIP Congress", "type": "conference", "alternate_names": ["IFIP", "IFIP
+      Congr"]}, "url": "https://www.semanticscholar.org/paper/9d0aca7cf319e791066500ab7a2862d54eb7d14a",
       "title": "Mathematical Description and Specification of Software", "abstract":
       null, "venue": "IFIP Congress", "year": 1994, "referenceCount": 0, "citationCount":
       30, "influentialCitationCount": 1, "isOpenAccess": false, "openAccessPdf": null,
@@ -8180,7 +8193,7 @@ interactions:
       be applied to the important and previously unsolved problem of automated pre-run-time
       scheduling of processes with arbitrary precedence and exclusion in hard-real-time
       systems. >", "venue": "IEEE Trans. Software Eng.", "year": 1990, "referenceCount":
-      18, "citationCount": 400, "influentialCitationCount": 14, "isOpenAccess": false,
+      18, "citationCount": 401, "influentialCitationCount": 15, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
@@ -8504,7 +8517,7 @@ interactions:
       understand, without reading irrelevant details about other parts of the software.
       The paper includes an extract from a software module guide to illustrate our
       proposals.", "venue": "IEEE Transactions on Software Engineering", "year": 1984,
-      "referenceCount": 17, "citationCount": 531, "influentialCitationCount": 16,
+      "referenceCount": 17, "citationCount": 532, "influentialCitationCount": 16,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Engineering",
@@ -9338,16 +9351,17 @@ interactions:
       introduction of the semaphore concept. This paper contains a solution to the
       problem. It also discusses the need for the generalized operators suggested
       by Patil.", "venue": "Communications of the ACM", "year": 1975, "referenceCount":
-      10, "citationCount": 25, "influentialCitationCount": 0, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": ["Psychology", "Computer Science"],
-      "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
-      "Computer Science", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      "1975-03-01", "journal": {"volume": "18", "pages": "181 - 183", "name": "Communications
-      of the ACM"}, "authors": [{"authorId": "1726629", "name": "D. Parnas"}]}, {"paperId":
-      "c341b85844036dba4a3009ed441cd734bd743e30", "externalIds": {"DBLP": "journals/sigarch/Parnas75",
-      "MAG": "1966071132", "DOI": "10.1145/641746.641750", "CorpusId": 15804558},
-      "corpusId": 15804558, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c341b85844036dba4a3009ed441cd734bd743e30",
+      10, "citationCount": 25, "influentialCitationCount": 0, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/360680.360709",
+      "status": null}, "fieldsOfStudy": ["Psychology", "Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Psychology", "source": "external"}, {"category": "Computer Science",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1975-03-01", "journal":
+      {"volume": "18", "pages": "181 - 183", "name": "Communications of the ACM"},
+      "authors": [{"authorId": "1726629", "name": "D. Parnas"}]}, {"paperId": "c341b85844036dba4a3009ed441cd734bd743e30",
+      "externalIds": {"DBLP": "journals/sigarch/Parnas75", "MAG": "1966071132", "DOI":
+      "10.1145/641746.641750", "CorpusId": 15804558}, "corpusId": 15804558, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/c341b85844036dba4a3009ed441cd734bd743e30",
       "title": "Evaluation criteria for abstract machines with unknown applications",
       "abstract": "The joint Navy/Army Computer Family Architecture (CFA) project
       has been based on finding an abstract design for a computer which can then be
@@ -9557,7 +9571,7 @@ interactions:
       assumption that a module consists of one or more subroutines, will be less efficient
       in most cases. An alternative approach to implementation which does not have
       this effect is sketched.", "venue": "Software Pioneers", "year": 1972, "referenceCount":
-      31, "citationCount": 4763, "influentialCitationCount": 201, "isOpenAccess":
+      31, "citationCount": 4762, "influentialCitationCount": 201, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/361598.361623",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Engineering", "source":
@@ -10064,7 +10078,6 @@ interactions:
       {"authorId": "40044096", "name": "J. McLean"}, {"authorId": "1726629", "name":
       "D. Parnas"}]}]}, {"authorId": "1711844", "externalIds": {"DBLP": ["Ian Sommerville"]},
       "url": "https://www.semanticscholar.org/author/1711844", "name": "I. Sommerville",
-      "aliases": ["I Sommerville", "I. D. Sommerville", "I. Sommerville", "Ian Sommerville"],
       "affiliations": [], "homepage": null, "paperCount": 344, "citationCount": 14416,
       "hIndex": 57, "papers": [{"paperId": "742c5b96ac503368086ec8264818f05ddf45bf13",
       "externalIds": {"MAG": "3035506419", "CorpusId": 230695993}, "corpusId": 230695993,
@@ -10224,15 +10237,16 @@ interactions:
       Technology: 10 Years of Innovation in IEEE Computer", "year": 2018, "referenceCount":
       36, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Business",
-      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2018-09-03",
-      "journal": {"name": "Software Technology: 10 Years of Innovation in IEEE Computer"},
-      "authors": [{"authorId": "1767721", "name": "Sarah Beecham"}, {"authorId": "145423322",
-      "name": "Ita Richardson"}, {"authorId": "1711844", "name": "I. Sommerville"},
-      {"authorId": "1392750911", "name": "P\u00e1draig O''Leary"}, {"authorId": "143663342",
-      "name": "S. Baker"}, {"authorId": "144445984", "name": "J. Noll"}]}, {"paperId":
-      "fa32dab51892628daaf3589bc53e08a0df71b434", "externalIds": {"CorpusId": 67814036},
-      "corpusId": 67814036, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/fa32dab51892628daaf3589bc53e08a0df71b434",
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "2018-09-03", "journal": {"name": "Software Technology: 10 Years of Innovation
+      in IEEE Computer"}, "authors": [{"authorId": "1767721", "name": "Sarah Beecham"},
+      {"authorId": "145423322", "name": "Ita Richardson"}, {"authorId": "1711844",
+      "name": "I. Sommerville"}, {"authorId": "1392750911", "name": "P\u00e1draig
+      O''Leary"}, {"authorId": "143663342", "name": "S. Baker"}, {"authorId": "144445984",
+      "name": "J. Noll"}]}, {"paperId": "fa32dab51892628daaf3589bc53e08a0df71b434",
+      "externalIds": {"CorpusId": 67814036}, "corpusId": 67814036, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/fa32dab51892628daaf3589bc53e08a0df71b434",
       "title": "Loughborough University Institutional Repository Observations of the
       Scottish elections 2007", "abstract": "In the recent Scottish elections, an
       e-counting system was employed to manage the increased complexity of the Scottish
@@ -10817,24 +10831,26 @@ interactions:
       "title": "Software engineering 9th edition (international edition)", "abstract":
       null, "venue": "", "year": 2011, "referenceCount": 0, "citationCount": 92, "influentialCitationCount":
       13, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"}],
-      "publicationTypes": null, "publicationDate": null, "journal": {"volume": "",
-      "name": ""}, "authors": [{"authorId": "1711844", "name": "I. Sommerville"}]},
-      {"paperId": "b13d31d1e1e65f8d5f7ea043dab6c9106e38382d", "externalIds": {"MAG":
-      "2924257552", "CorpusId": 116698545}, "corpusId": 116698545, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/b13d31d1e1e65f8d5f7ea043dab6c9106e38382d",
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Engineering",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "1711844", "name":
+      "I. Sommerville"}]}, {"paperId": "b13d31d1e1e65f8d5f7ea043dab6c9106e38382d",
+      "externalIds": {"MAG": "2924257552", "CorpusId": 116698545}, "corpusId": 116698545,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b13d31d1e1e65f8d5f7ea043dab6c9106e38382d",
       "title": "Software engineering / Ian Sommerville.", "abstract": null, "venue":
       "", "year": 2011, "referenceCount": 0, "citationCount": 75, "influentialCitationCount":
       16, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
-      "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"volume": "", "name": ""}, "authors":
-      [{"authorId": "1711844", "name": "I. Sommerville"}]}, {"paperId": "c6a53e5623a814f8a87ae5c3c17a685a74a7e93b",
-      "externalIds": {"DBLP": "journals/iwc/BaxterS11", "MAG": "2137125422", "DOI":
-      "10.1016/j.intcom.2010.07.003", "CorpusId": 3715724}, "corpusId": 3715724, "publicationVenue":
-      {"id": "b9f99919-55d3-4827-8568-640824b354b9", "name": "Interacting with computers",
-      "type": "journal", "alternate_names": ["Interact comput", "Interacting with
-      Computers", "Interact Comput"], "issn": "0953-5438", "url": "http://iwc.oxfordjournals.org/"},
-      "url": "https://www.semanticscholar.org/paper/c6a53e5623a814f8a87ae5c3c17a685a74a7e93b",
+      "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Engineering", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"volume": "", "name": ""}, "authors": [{"authorId": "1711844", "name": "I.
+      Sommerville"}]}, {"paperId": "c6a53e5623a814f8a87ae5c3c17a685a74a7e93b", "externalIds":
+      {"DBLP": "journals/iwc/BaxterS11", "MAG": "2137125422", "DOI": "10.1016/j.intcom.2010.07.003",
+      "CorpusId": 3715724}, "corpusId": 3715724, "publicationVenue": {"id": "b9f99919-55d3-4827-8568-640824b354b9",
+      "name": "Interacting with computers", "type": "journal", "alternate_names":
+      ["Interact comput", "Interacting with Computers", "Interact Comput"], "issn":
+      "0953-5438", "url": "http://iwc.oxfordjournals.org/"}, "url": "https://www.semanticscholar.org/paper/c6a53e5623a814f8a87ae5c3c17a685a74a7e93b",
       "title": "Socio-technical systems: From design methods to systems engineering",
       "abstract": null, "venue": "Interacting with computers", "year": 2011, "referenceCount":
       156, "citationCount": 940, "influentialCitationCount": 64, "isOpenAccess": true,
@@ -12436,7 +12452,7 @@ interactions:
       "1560106164", "CorpusId": 60936794}, "corpusId": 60936794, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/6448534fef279dd934c49ddb8dd39b0c162d1019",
       "title": "Faceted Service Specification", "abstract": null, "venue": "", "year":
-      2005, "referenceCount": 0, "citationCount": 25, "influentialCitationCount":
+      2005, "referenceCount": 0, "citationCount": 24, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Engineering",
@@ -12554,12 +12570,12 @@ interactions:
       2005, "referenceCount": 0, "citationCount": 3, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
       "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
-      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
-      "publicationDate": null, "journal": {"volume": "22", "pages": "16-23", "name":
-      ""}, "authors": [{"authorId": "1711844", "name": "I. Sommerville"}]}, {"paperId":
-      "b3d82be729c763865ebf1f96954f680c85f5386c", "externalIds": {"MAG": "97788789",
-      "CorpusId": 16198302}, "corpusId": 16198302, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/b3d82be729c763865ebf1f96954f680c85f5386c",
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Engineering", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": null, "journal":
+      {"volume": "22", "pages": "16-23", "name": ""}, "authors": [{"authorId": "1711844",
+      "name": "I. Sommerville"}]}, {"paperId": "b3d82be729c763865ebf1f96954f680c85f5386c",
+      "externalIds": {"MAG": "97788789", "CorpusId": 16198302}, "corpusId": 16198302,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b3d82be729c763865ebf1f96954f680c85f5386c",
       "title": "Addressing the contract issue, standardisation for QoS", "abstract":
       "Higher level service support mechanisms are an integral part of the future
       vision for Web / Grid Services. This paper argues that the areas of discovery,
@@ -12671,7 +12687,9 @@ interactions:
       "title": "Decision Support and paradigms of Decision Making", "abstract": null,
       "venue": "", "year": 2005, "referenceCount": 0, "citationCount": 13, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"}],
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Business", "source": "s2-fos-model"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}, {"category": "Philosophy", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": "2005-04-01", "journal": {"volume":
       "", "name": ""}, "authors": [{"authorId": "39822261", "name": "A. Mackenzie"},
       {"authorId": "2609254", "name": "J. Rooksby"}, {"authorId": "1711844", "name":
@@ -14043,11 +14061,11 @@ interactions:
       turn our houses into homes. Weiser (1996)", "venue": "", "year": 2002, "referenceCount":
       18, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Engineering"], "s2FieldsOfStudy":
-      [{"category": "Engineering", "source": "external"}, {"category": "Art", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      {"volume": "", "name": ""}, "authors": [{"authorId": "1834798", "name": "G.
-      Dewsbury"}, {"authorId": "33388747", "name": "K. Clarke"}, {"authorId": "2089073",
-      "name": "M. Rouncefield"}, {"authorId": "1711844", "name": "I. Sommerville"}]},
+      [{"category": "Engineering", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"volume": "", "name": ""}, "authors": [{"authorId": "1834798", "name":
+      "G. Dewsbury"}, {"authorId": "33388747", "name": "K. Clarke"}, {"authorId":
+      "2089073", "name": "M. Rouncefield"}, {"authorId": "1711844", "name": "I. Sommerville"}]},
       {"paperId": "b4fd607b3c88326b836a30c0ee89d6ebd3122ff2", "externalIds": {"MAG":
       "1534527541", "DOI": "10.1007/978-1-4471-0135-2_20", "CorpusId": 60817218},
       "corpusId": 60817218, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b4fd607b3c88326b836a30c0ee89d6ebd3122ff2",
@@ -14250,7 +14268,7 @@ interactions:
       "url": "https://www.semanticscholar.org/paper/0cf3f64bd173ad17eb1ccc6150eb50528c7fde78",
       "title": "Finding patterns in the fieldwork", "abstract": null, "venue": "European
       Conference on Computer Supported Cooperative Work", "year": 2001, "referenceCount":
-      51, "citationCount": 112, "influentialCitationCount": 6, "isOpenAccess": true,
+      51, "citationCount": 113, "influentialCitationCount": 6, "isOpenAccess": true,
       "openAccessPdf": {"url": "http://www.pliant.org/personal/Tom_Erickson/int_PatternECSCW01_Martin.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -14432,13 +14450,14 @@ interactions:
       "title": "Evolution and Change", "abstract": null, "venue": "Understanding Sharia
       Processes", "year": 2000, "referenceCount": 0, "citationCount": 9, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Sociology"],
-      "s2FieldsOfStudy": [{"category": "Sociology", "source": "external"}], "publicationTypes":
-      null, "publicationDate": "2000-08-01", "journal": {"name": "Understanding Sharia
-      Processes"}, "authors": [{"authorId": "1711844", "name": "I. Sommerville"}]},
-      {"paperId": "ffe01014444625431cf98cd876adb0eb5c238158", "externalIds": {"DBLP":
-      "journals/ijmms/VillerS00", "MAG": "2023174660", "DOI": "10.1006/ijhc.2000.0370",
-      "CorpusId": 17789562}, "corpusId": 17789562, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/ffe01014444625431cf98cd876adb0eb5c238158",
+      "s2FieldsOfStudy": [{"category": "Sociology", "source": "external"}, {"category":
+      "Biology", "source": "s2-fos-model"}, {"category": "Environmental Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2000-08-01",
+      "journal": {"name": "Understanding Sharia Processes"}, "authors": [{"authorId":
+      "1711844", "name": "I. Sommerville"}]}, {"paperId": "ffe01014444625431cf98cd876adb0eb5c238158",
+      "externalIds": {"DBLP": "journals/ijmms/VillerS00", "MAG": "2023174660", "DOI":
+      "10.1006/ijhc.2000.0370", "CorpusId": 17789562}, "corpusId": 17789562, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/ffe01014444625431cf98cd876adb0eb5c238158",
       "title": "Ethnographically informed analysis for software engineers", "abstract":
       "It is increasingly recognized that human, social, and political factors have
       a significant impact on software systems design. To address this, ethnographic
@@ -14724,7 +14743,7 @@ interactions:
       also be helpful for those in industry new to requirements engineering. Accompanying
       Website: http: //www.comp.lancs.ac.uk/computing/resources/re Visit our Website:
       http://www.wiley.com/college/wws", "venue": "", "year": 1998, "referenceCount":
-      0, "citationCount": 1805, "influentialCitationCount": 176, "isOpenAccess": false,
+      0, "citationCount": 1804, "influentialCitationCount": 176, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}, {"category": "Engineering", "source": "s2-fos-model"}],
@@ -14863,7 +14882,7 @@ interactions:
       the process of using PREview which has been designed to allow incremental requirements
       elicitation. Finally, we discuss some practical considerations which emerged
       when the approach was applied in industry.", "venue": "IEEE International Requirements
-      Engineering Conference", "year": 1998, "referenceCount": 22, "citationCount":
+      Engineering Conference", "year": 1998, "referenceCount": 23, "citationCount":
       186, "influentialCitationCount": 9, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science", "Engineering"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Engineering",
@@ -14888,7 +14907,7 @@ interactions:
       "", "year": 1998, "referenceCount": 25, "citationCount": 7, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
       "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
-      "Computer Science", "source": "s2-fos-model"}, {"category": "Business", "source":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Engineering", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
       {"volume": "", "name": ""}, "authors": [{"authorId": "144076208", "name": "P.
       Sawyer"}, {"authorId": "1711844", "name": "I. Sommerville"}, {"authorId": "1788802",
@@ -15091,7 +15110,7 @@ interactions:
       help organizations identify their problem areas and deploy the practices most
       appropriate to their needs. \u00a9 1997 John Wiley & Sons Ltd", "venue": "Software
       Process: Improvement and Practice", "year": 1997, "referenceCount": 40, "citationCount":
-      91, "influentialCitationCount": 11, "isOpenAccess": false, "openAccessPdf":
+      92, "influentialCitationCount": 12, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Business", "source":
       "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"},
@@ -16654,11 +16673,12 @@ interactions:
       1989, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Physics"],
       "s2FieldsOfStudy": [{"category": "Physics", "source": "external"}, {"category":
-      "Physics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1989-04-01", "journal": {"volume": "", "pages": "69-84", "name": ""}, "authors":
-      [{"authorId": "3353753", "name": "S. Potter"}, {"authorId": "2067884564", "name":
-      "John D. Smart"}, {"authorId": "1711844", "name": "I. Sommerville"}, {"authorId":
-      "143748736", "name": "R. Welland"}]}, {"paperId": "c34b8ea2e46664062717deb1ae87b885eb61023e",
+      "Physics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1989-04-01",
+      "journal": {"volume": "", "pages": "69-84", "name": ""}, "authors": [{"authorId":
+      "3353753", "name": "S. Potter"}, {"authorId": "2067884564", "name": "John D.
+      Smart"}, {"authorId": "1711844", "name": "I. Sommerville"}, {"authorId": "143748736",
+      "name": "R. Welland"}]}, {"paperId": "c34b8ea2e46664062717deb1ae87b885eb61023e",
       "externalIds": {"MAG": "1999896771", "DBLP": "journals/mam/Sommerville89", "DOI":
       "10.1016/0141-9331(89)90063-X", "CorpusId": 2368277}, "corpusId": 2368277, "publicationVenue":
       {"id": "0307d116-8505-412a-a866-605d66251194", "name": "Microprocessors and
@@ -17183,31 +17203,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1438531'
+      - '1440419'
       Content-Type:
       - application/json
       Date:
-      - Fri, 01 Dec 2023 02:35:27 GMT
+      - Fri, 01 Dec 2023 18:35:36 GMT
       Via:
-      - 1.1 177c91363a48715973d6b46b02b578e8.cloudfront.net (CloudFront)
+      - 1.1 670127d831d6fe067a1d0e61c13cef54.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - Xky1mpIMmC_r5b7sCaYE026tHlwBiwJbB0hOiIF3g4ZJly3PcXLOBg==
+      - aHUKOhA4ue9daZlCe13n9QkHcFqcfyBZ2j2DhUhjbJBheBYjbjFQTA==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - PPfxbHyTPHcEdBg=
+      - PRsa0GZdvHcEWPw=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '1438531'
+      - '1440419'
       x-amzn-Remapped-Date:
-      - Fri, 01 Dec 2023 02:35:27 GMT
+      - Fri, 01 Dec 2023 18:35:36 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 406a635c-150c-4f5f-a311-27c17999425d
+      - 51c9b9c7-1fd2-454d-992e-899f682a606c
     http_version: HTTP/1.1
     status_code: 200
 version: 1
