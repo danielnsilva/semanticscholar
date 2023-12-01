@@ -17,7 +17,7 @@ interactions:
       user-agent:
       - python-httpx/0.25.1
     method: POST
-    uri: https://api.semanticscholar.org/graph/v1/paper/batch?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
   response:
     content: '[{"paperId": "c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce", "externalIds":
       {"MAG": "2096684396", "DOI": "10.2139/ssrn.288970", "CorpusId": 470667}, "corpusId":
@@ -41,16 +41,15 @@ interactions:
       based on randomization inference testing methods, which works well irrespective
       of sample size. This technique uses the empirical distribution of estimated
       effects for placebo laws to form the test distribution.", "venue": "", "year":
-      2001, "referenceCount": 30, "citationCount": 10025, "influentialCitationCount":
-      547, "isOpenAccess": true, "openAccessPdf": {"url": "http://papers.nber.org/papers/w8841.pdf",
-      "status": "GREEN"}, "fieldsOfStudy": ["Psychology", "Economics", "Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
-      "Economics", "source": "external"}, {"category": "Mathematics", "source": "external"},
-      {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
-      "publicationDate": "2001-10-01", "journal": {"name": "Experimental & Empirical
-      Studies eJournal"}, "authors": [{"authorId": "81141608", "name": "Marianne Bertrand"},
-      {"authorId": "2259683", "name": "E. Duflo"}, {"authorId": "2062143", "name":
-      "S. Mullainathan"}]}, {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3",
+      2001, "referenceCount": 30, "citationCount": 10155, "influentialCitationCount":
+      553, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Psychology",
+      "Economics", "Mathematics"], "s2FieldsOfStudy": [{"category": "Psychology",
+      "source": "external"}, {"category": "Economics", "source": "external"}, {"category":
+      "Mathematics", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": "2001-10-01", "journal":
+      {"name": "Experimental & Empirical Studies eJournal"}, "authors": [{"authorId":
+      "81141608", "name": "Marianne Bertrand"}, {"authorId": "2259683", "name": "E.
+      Duflo"}, {"authorId": "2062143", "name": "S. Mullainathan"}]}, {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3",
       "externalIds": {"MAG": "2148197077", "DOI": "10.2139/ssrn.2250500", "CorpusId":
       3142471}, "corpusId": 3142471, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/cb1ebd913c3724c599f6b276b14b5c6253da68f3",
       "title": "The Miracle of Microfinance? Evidence from a Randomized Evaluation",
@@ -60,8 +59,8 @@ interactions:
       the impact of introducing microcredit in a new market. Half of 104 slums in
       Hyderabad, India were randomly selected for opening of an MFI branch while the
       remainder were not. We show that the intervention increased total MFI borrow.",
-      "venue": "", "year": 2013, "referenceCount": 67, "citationCount": 2044, "influentialCitationCount":
-      239, "isOpenAccess": true, "openAccessPdf": {"url": "https://dspace.mit.edu/bitstream/1721.1/95941/1/Banerjee_The%20miracle.pdf",
+      "venue": "", "year": 2013, "referenceCount": 67, "citationCount": 2064, "influentialCitationCount":
+      240, "isOpenAccess": true, "openAccessPdf": {"url": "https://dspace.mit.edu/bitstream/1721.1/95941/1/Banerjee_The%20miracle.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Business", "Economics", "Geography"],
       "s2FieldsOfStudy": [{"category": "Business", "source": "external"}, {"category":
       "Economics", "source": "external"}, {"category": "Geography", "source": "external"},
@@ -99,31 +98,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5935'
+      - '5870'
       Content-Type:
       - application/json
       Date:
-      - Tue, 21 Nov 2023 04:20:12 GMT
+      - Fri, 01 Dec 2023 02:18:59 GMT
       Via:
-      - 1.1 f28e802e600102d0339fa542ab6a0426.cloudfront.net (CloudFront)
+      - 1.1 27b139952f5aaecbbe18ddd16fc6ff84.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - Qe9Wjloe1Mu3bGmp_jgAEsq_AWVK6_MCMieBdk4x5ICmysebZtE4fg==
+      - dOEMdKq8FWnJM8otoR0Vxg_IeS54Maw2MfcwA9inCFQbhg0v0rgG-A==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - OuxvdETUPHcEeRA=
+      - PPdXBFnCPHcEoew=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '5935'
+      - '5870'
       x-amzn-Remapped-Date:
-      - Tue, 21 Nov 2023 04:20:12 GMT
+      - Fri, 01 Dec 2023 02:18:59 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 09556242-8c28-4b23-b0d0-c165c4e71748
+      - a4ef54b8-9f1d-4370-bcd9-39a64ddb1a42
     http_version: HTTP/1.1
     status_code: 200
 version: 1

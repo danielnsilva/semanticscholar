@@ -13,7 +13,7 @@ interactions:
       user-agent:
       - python-httpx/0.25.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/10.1093/mind/lix.236.433?&fields=unknown
+    uri: https://api.semanticscholar.org/graph/v1/paper/10.1093/mind/lix.236.433?fields=unknown
   response:
     content: '{"error":"Unrecognized or unsupported fields: [unknown]"}
 
@@ -28,27 +28,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 21 Nov 2023 04:20:57 GMT
+      - Fri, 01 Dec 2023 02:19:29 GMT
       Via:
-      - 1.1 5bfc01a743251c97602fd0fa441f1900.cloudfront.net (CloudFront)
+      - 1.1 0e3b340d2469d5d03795669e20d22b7e.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - BShH38ZD6tu-Tk_o5CglgKaFNmHW-EUyHDy88v8CA7YTHOX0SlFNCg==
+      - gLmDEcgK66PKBL1iF22GE69v5Rm91jeLPvU1JVE656FyuC6BGtinQA==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - Oux2mEdovHcEBgw=
+      - PPdbsFOXvHcEWPw=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '58'
       x-amzn-Remapped-Date:
-      - Tue, 21 Nov 2023 04:20:57 GMT
+      - Fri, 01 Dec 2023 02:19:29 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 69b07d73-7eef-4674-af2f-853d1461c567
+      - 3bb79121-8f5d-4786-870d-689544a55729
     http_version: HTTP/1.1
     status_code: 400
 version: 1

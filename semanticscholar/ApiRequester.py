@@ -55,7 +55,7 @@ class ApiRequester:
         :rtype: :class:`dict` or :class:`List` of :class:`dict`
         '''
 
-        url = f'{url}?{parameters}'
+        url = f'{url}?{parameters.lstrip("&")}'
         method = 'POST' if payload else 'GET'
 
         async with httpx.AsyncClient() as client:

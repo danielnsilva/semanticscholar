@@ -13,23 +13,23 @@ interactions:
       user-agent:
       - python-httpx/0.25.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/10.2139/ssrn.2250500/authors?&fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,url&offset=0&limit=1000
+    uri: https://api.semanticscholar.org/graph/v1/paper/10.2139/ssrn.2250500/authors?fields=affiliations,aliases,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,url&offset=0&limit=1000
   response:
     content: '{"offset": 0, "data": [{"authorId": "2259683", "externalIds": {"DBLP":
       ["Esther Duflo"]}, "url": "https://www.semanticscholar.org/author/2259683",
       "name": "E. Duflo", "aliases": ["E. Duflo", "Esther Duflo", "Esther C. Duflo"],
-      "affiliations": [], "homepage": null, "paperCount": 300, "citationCount": 56603,
-      "hIndex": 91}, {"authorId": "2237651454", "externalIds": {"DBLP": ["Abhijit
+      "affiliations": [], "homepage": null, "paperCount": 292, "citationCount": 57000,
+      "hIndex": 90}, {"authorId": "2237651454", "externalIds": {"DBLP": ["Abhijit
       Banerjee 0001"]}, "url": "https://www.semanticscholar.org/author/2237651454",
       "name": "A. Banerjee", "aliases": ["A. Banerjee", "A. V. Banerjee", "Abhijit
       V. Banerjee", "Abhijit V Banerjee", "Abhijit Vinayak Banerjee", "Abhijit Banerjee"],
-      "affiliations": [], "homepage": null, "paperCount": 376, "citationCount": 47808,
-      "hIndex": 93}, {"authorId": "4249203", "externalIds": {}, "url": "https://www.semanticscholar.org/author/4249203",
+      "affiliations": [], "homepage": null, "paperCount": 353, "citationCount": 46347,
+      "hIndex": 90}, {"authorId": "4249203", "externalIds": {}, "url": "https://www.semanticscholar.org/author/4249203",
       "name": "R. Glennerster", "aliases": ["R Glennerster", "R. Glennerster", "Rachel
-      Glennerster"], "affiliations": [], "homepage": null, "paperCount": 108, "citationCount":
-      8184, "hIndex": 31}, {"authorId": "31549526", "externalIds": {}, "url": "https://www.semanticscholar.org/author/31549526",
+      Glennerster"], "affiliations": [], "homepage": null, "paperCount": 112, "citationCount":
+      8317, "hIndex": 30}, {"authorId": "31549526", "externalIds": {}, "url": "https://www.semanticscholar.org/author/31549526",
       "name": "Cynthia Kinnan", "aliases": ["Cynthia Kinnan"], "affiliations": [],
-      "homepage": null, "paperCount": 32, "citationCount": 2840, "hIndex": 11}]}
+      "homepage": null, "paperCount": 33, "citationCount": 2937, "hIndex": 12}]}
 
       '
     headers:
@@ -42,27 +42,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 22:36:26 GMT
+      - Fri, 01 Dec 2023 02:29:02 GMT
       Via:
-      - 1.1 c5e0ddd115d9893ade353cf085d11dba.cloudfront.net (CloudFront)
+      - 1.1 7d4cada96f0b733f4f539a3bab2e2d16.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - nVJ4Pw22rqLxF0N377apkDkTf333ZDHwoYHKmFTSvfu6E5SzMfwgEA==
+      - Nz-IfEu4RJ_DFMbiTm9ZqkesThEG6k-x7io3nuWMdBcPbDjbGWeuhg==
       X-Amz-Cf-Pop:
-      - EWR50-C1
+      - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - LN3otFIsPHcFkRA=
+      - PPe1QGcpPHcET0A=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '1265'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 22:36:26 GMT
+      - Fri, 01 Dec 2023 02:29:02 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 3f73ea6d-5028-4c84-ab9d-5682e63654fb
+      - 76fadb44-e9d3-454d-b6a1-963f8f4cb2e2
     http_version: HTTP/1.1
     status_code: 200
 version: 1

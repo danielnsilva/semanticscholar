@@ -13,7 +13,7 @@ interactions:
       user-agent:
       - python-httpx/0.25.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/CorpusID:49313245/references?&fields=contexts,intents,isInfluential,abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=1000
+    uri: https://api.semanticscholar.org/graph/v1/paper/CorpusID:49313245/references?fields=contexts,intents,isInfluential,abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=1000
   response:
     content: '{"offset": 0, "data": [{"intents": [], "contexts": [], "isInfluential":
       false, "citedPaper": {"paperId": "928f9dccb806a3278d20d82cc53781c5f44e2bb1",
@@ -38,8 +38,8 @@ interactions:
       F1 when using pre-trained word representations. Our parser also outperforms
       the previous best-published accuracy figures on 8 of the 9 languages in the
       SPMRL dataset.", "venue": "Annual Meeting of the Association for Computational
-      Linguistics", "year": 2018, "referenceCount": 21, "citationCount": 438, "influentialCitationCount":
-      56, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/P18-1249.pdf",
+      Linguistics", "year": 2018, "referenceCount": 21, "citationCount": 441, "influentialCitationCount":
+      57, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/P18-1249.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -73,7 +73,7 @@ interactions:
       baseline. As a step forward, we demonstrate that one can improve accuracy on
       SciTail by 5% using a new neural model that exploits linguistic structure.\n
       \n", "venue": "AAAI Conference on Artificial Intelligence", "year": 2018, "referenceCount":
-      36, "citationCount": 382, "influentialCitationCount": 84, "isOpenAccess": true,
+      36, "citationCount": 385, "influentialCitationCount": 84, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://ojs.aaai.org/index.php/AAAI/article/download/12022/11881",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -140,7 +140,7 @@ interactions:
       models still achieve fairly low absolute scores. Analysis with our diagnostic
       dataset yields similarly weak performance over all phenomena tested, with some
       exceptions.", "venue": "BlackboxNLP@EMNLP", "year": 2018, "referenceCount":
-      77, "citationCount": 4756, "influentialCitationCount": 1155, "isOpenAccess":
+      77, "citationCount": 4772, "influentialCitationCount": 1152, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/W18-5446.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -169,7 +169,7 @@ interactions:
       We show that such embeddings can be surprisingly effective in some cases \u2013
       providing gains of up to 20 BLEU points in the most favorable setting.", "venue":
       "North American Chapter of the Association for Computational Linguistics", "year":
-      2018, "referenceCount": 30, "citationCount": 293, "influentialCitationCount":
+      2018, "referenceCount": 30, "citationCount": 296, "influentialCitationCount":
       35, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-2084.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -273,8 +273,8 @@ interactions:
       showing that exposing the deep internals of the pre-trained network is crucial,
       allowing downstream models to mix different types of semi-supervision signals.",
       "venue": "North American Chapter of the Association for Computational Linguistics",
-      "year": 2018, "referenceCount": 64, "citationCount": 10137, "influentialCitationCount":
-      1560, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-1202.pdf",
+      "year": 2018, "referenceCount": 64, "citationCount": 10189, "influentialCitationCount":
+      1561, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-1202.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}],
@@ -312,7 +312,7 @@ interactions:
       improvements in the context of transfer learning and low-resource settings using
       our learned general-purpose representations.", "venue": "International Conference
       on Learning Representations", "year": 2018, "referenceCount": 58, "citationCount":
-      314, "influentialCitationCount": 36, "isOpenAccess": false, "openAccessPdf":
+      316, "influentialCitationCount": 38, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
@@ -366,7 +366,7 @@ interactions:
       articles. When given reference documents, we show it can extract relevant factual
       information as reflected in perplexity, ROUGE scores and human evaluations.",
       "venue": "International Conference on Learning Representations", "year": 2018,
-      "referenceCount": 22, "citationCount": 655, "influentialCitationCount": 94,
+      "referenceCount": 22, "citationCount": 657, "influentialCitationCount": 95,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -400,7 +400,7 @@ interactions:
       labeled examples, it matches the performance of training from scratch on 100
       times more data. We open-source our pretrained models and code.", "venue": "Annual
       Meeting of the Association for Computational Linguistics", "year": 2018, "referenceCount":
-      57, "citationCount": 3068, "influentialCitationCount": 292, "isOpenAccess":
+      57, "citationCount": 3081, "influentialCitationCount": 296, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/P18-1031.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -430,7 +430,7 @@ interactions:
       in parameter size compared to the ESIM and DIIN, while maintaining competitive
       performance. Visual analysis shows that our propagated features are highly interpretable,
       opening new avenues to explainability in neural NLI models.", "venue": "arXiv.org",
-      "year": 2017, "referenceCount": 28, "citationCount": 61, "influentialCitationCount":
+      "year": 2017, "referenceCount": 28, "citationCount": 62, "influentialCitationCount":
       6, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -460,7 +460,7 @@ interactions:
       with warm restarts (AdamWR) that has strong anytime performance while achieving
       state-of-the-art results on CIFAR-10 and ImageNet32x32. Our source code will
       become available after the review process.", "venue": "arXiv.org", "year": 2017,
-      "referenceCount": 23, "citationCount": 1350, "influentialCitationCount": 210,
+      "referenceCount": 23, "citationCount": 1363, "influentialCitationCount": 216,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
       "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "external"}, {"category":
@@ -516,7 +516,7 @@ interactions:
       32.8 and 15.1 on the Multi30k and WMT English-French datasets, without using
       even a single parallel sentence at training time.", "venue": "International
       Conference on Learning Representations", "year": 2017, "referenceCount": 43,
-      "citationCount": 975, "influentialCitationCount": 176, "isOpenAccess": false,
+      "citationCount": 980, "influentialCitationCount": 176, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}],
@@ -600,7 +600,7 @@ interactions:
       question classification (TREC), entailment (SNLI), and question answering (SQuAD).
       For fine-grained sentiment analysis and entailment, CoVe improves performance
       of our baseline models to the state of the art.", "venue": "Neural Information
-      Processing Systems", "year": 2017, "referenceCount": 73, "citationCount": 838,
+      Processing Systems", "year": 2017, "referenceCount": 73, "citationCount": 844,
       "influentialCitationCount": 77, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
@@ -637,7 +637,7 @@ interactions:
       the STS Benchmark is introduced as a new shared training and evaluation set
       carefully selected from the corpus of English STS shared task data (2012-2017).",
       "venue": "International Workshop on Semantic Evaluation", "year": 2017, "referenceCount":
-      91, "citationCount": 1441, "influentialCitationCount": 279, "isOpenAccess":
+      91, "citationCount": 1447, "influentialCitationCount": 278, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/S17-2001.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -654,7 +654,7 @@ interactions:
       our experiments, we use a multi-layer Transformer decoder [34] for the language
       model, which is a variant of the transformer [62]."], "isInfluential": true,
       "citedPaper": {"paperId": "204e3073870fae3d05bcbc2f6a8e263d9b72e776", "externalIds":
-      {"DBLP": "conf/nips/VaswaniSPUJGKP17", "ArXiv": "1706.03762", "MAG": "2950858113",
+      {"MAG": "2950858113", "DBLP": "conf/nips/VaswaniSPUJGKP17", "ArXiv": "1706.03762",
       "CorpusId": 13756489}, "corpusId": 13756489, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
       "name": "Neural Information Processing Systems", "type": "conference", "alternate_names":
       ["Neural Inf Process Syst", "NeurIPS", "NIPS"], "url": "http://neurips.cc/"},
@@ -675,7 +675,7 @@ interactions:
       Transformer generalizes well to other tasks by applying it successfully to English
       constituency parsing both with large and limited training data.", "venue": "Neural
       Information Processing Systems", "year": 2017, "referenceCount": 42, "citationCount":
-      74512, "influentialCitationCount": 14402, "isOpenAccess": false, "openAccessPdf":
+      75366, "influentialCitationCount": 14351, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -711,7 +711,7 @@ interactions:
       work tends to indicate the suitability of natural language inference for transfer
       learning to other NLP tasks. Our encoder is publicly available.", "venue": "Conference
       on Empirical Methods in Natural Language Processing", "year": 2017, "referenceCount":
-      45, "citationCount": 1863, "influentialCitationCount": 354, "isOpenAccess":
+      45, "citationCount": 1873, "influentialCitationCount": 356, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/D17-1070.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -720,7 +720,7 @@ interactions:
       "ArXiv"}, "authors": [{"authorId": "2480903", "name": "Alexis Conneau"}, {"authorId":
       "1743722", "name": "Douwe Kiela"}, {"authorId": "144518416", "name": "Holger
       Schwenk"}, {"authorId": "2934336", "name": "Lo\u00efc Barrault"}, {"authorId":
-      "1713934", "name": "Antoine Bordes"}]}}, {"intents": ["background", "result",
+      "1713934", "name": "Antoine Bordes"}]}}, {"intents": ["result", "background",
       "methodology"], "contexts": ["More recently, Rei [50] added an auxiliary language
       modeling objective to their target task objective and demonstrated performance
       gains on sequence labeling tasks.", "Existing techniques involve a combination
@@ -765,21 +765,23 @@ interactions:
       "url": "https://www.semanticscholar.org/paper/3f1802d3f4f5f6d66875dac09112f978f12e1e1e",
       "title": "A Simple but Tough-to-Beat Baseline for Sentence Embeddings", "abstract":
       null, "venue": "International Conference on Learning Representations", "year":
-      2017, "referenceCount": 0, "citationCount": 1165, "influentialCitationCount":
-      184, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
-      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"}],
-      "publicationTypes": ["JournalArticle"], "publicationDate": "2017-04-24", "journal":
-      {"volume": "", "name": ""}, "authors": [{"authorId": "145563465", "name": "Sanjeev
-      Arora"}, {"authorId": "40609253", "name": "Yingyu Liang"}, {"authorId": "1901958",
-      "name": "Tengyu Ma"}]}}, {"intents": ["methodology"], "contexts": ["Recent research
-      has looked at various objectives such as language modeling [44], machine translation
-      [38], and discourse coherence [22], with each method outperforming the others
-      on different tasks.", "Phrase-level or sentence-level embeddings, which can
-      be trained using an unlabeled corpus, have been used to encode text into suitable
-      vector representations for various target tasks [28, 32, 1, 36, 22, 12, 56,
-      31]."], "isInfluential": false, "citedPaper": {"paperId": "a97dc52807d80454e78d255f9fbd7b0fab56bd03",
-      "externalIds": {"ArXiv": "1705.00557", "MAG": "2610858497", "DBLP": "journals/corr/JerniteBS17",
-      "CorpusId": 6694822}, "corpusId": 6694822, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      2017, "referenceCount": 0, "citationCount": 1177, "influentialCitationCount":
+      188, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Linguistics",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2017-04-24", "journal": {"volume": "", "name": ""}, "authors": [{"authorId":
+      "145563465", "name": "Sanjeev Arora"}, {"authorId": "40609253", "name": "Yingyu
+      Liang"}, {"authorId": "1901958", "name": "Tengyu Ma"}]}}, {"intents": ["methodology"],
+      "contexts": ["Recent research has looked at various objectives such as language
+      modeling [44], machine translation [38], and discourse coherence [22], with
+      each method outperforming the others on different tasks.", "Phrase-level or
+      sentence-level embeddings, which can be trained using an unlabeled corpus, have
+      been used to encode text into suitable vector representations for various target
+      tasks [28, 32, 1, 36, 22, 12, 56, 31]."], "isInfluential": false, "citedPaper":
+      {"paperId": "a97dc52807d80454e78d255f9fbd7b0fab56bd03", "externalIds": {"ArXiv":
+      "1705.00557", "MAG": "2610858497", "DBLP": "journals/corr/JerniteBS17", "CorpusId":
+      6694822}, "corpusId": 6694822, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
       "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
       "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/a97dc52807d80454e78d255f9fbd7b0fab56bd03",
       "title": "Discourse-Based Objectives for Fast Unsupervised Sentence Representation
@@ -789,7 +791,7 @@ interactions:
       text. Our objective is purely discriminative, allowing us to train models many
       times faster than was possible under prior methods, and it yields models which
       perform well in extrinsic evaluations.", "venue": "arXiv.org", "year": 2017,
-      "referenceCount": 33, "citationCount": 105, "influentialCitationCount": 9, "isOpenAccess":
+      "referenceCount": 33, "citationCount": 107, "influentialCitationCount": 9, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
@@ -827,8 +829,8 @@ interactions:
       NLI corpus shows that it represents a substantially more difficult task than
       does that corpus, despite the two showing similar levels of inter-annotator
       agreement.", "venue": "North American Chapter of the Association for Computational
-      Linguistics", "year": 2017, "referenceCount": 55, "citationCount": 3326, "influentialCitationCount":
-      679, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-1101.pdf",
+      Linguistics", "year": 2017, "referenceCount": 55, "citationCount": 3336, "influentialCitationCount":
+      681, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/N18-1101.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}],
@@ -868,7 +870,7 @@ interactions:
       The dataset is freely available at http://www.cs.cmu.edu/~glai1/data/race/ and
       the code is available at https://github.com/qizhex/RACE_AR_baselines.", "venue":
       "Conference on Empirical Methods in Natural Language Processing", "year": 2017,
-      "referenceCount": 22, "citationCount": 977, "influentialCitationCount": 240,
+      "referenceCount": 22, "citationCount": 986, "influentialCitationCount": 244,
       "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/D17-1082.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Education", "source":
@@ -877,7 +879,7 @@ interactions:
       [{"authorId": "1857734", "name": "Guokun Lai"}, {"authorId": "1912046", "name":
       "Qizhe Xie"}, {"authorId": "2391802", "name": "Hanxiao Liu"}, {"authorId": "35729970",
       "name": "Yiming Yang"}, {"authorId": "144547315", "name": "E. Hovy"}]}}, {"intents":
-      ["background", "methodology"], "contexts": ["In addition, we evaluate on the
+      ["methodology", "background"], "contexts": ["In addition, we evaluate on the
       Story Cloze Test [40], which involves selecting the correct ending to multi-sentence
       stories from two options.", "For instance, we achieve absolute improvements
       of 8.9% on commonsense reasoning (Stories Cloze Test) [40], 5.7% on question
@@ -899,7 +901,7 @@ interactions:
       of 100%) requires systems to link various levels of semantics to commonsense
       knowledge. A total of eight systems participated in the shared task, with a
       variety of approaches including.", "venue": "LSDSem@EACL", "year": 2017, "referenceCount":
-      17, "citationCount": 140, "influentialCitationCount": 24, "isOpenAccess": true,
+      17, "citationCount": 141, "influentialCitationCount": 23, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://www.aclweb.org/anthology/W17-0906.pdf", "status":
       null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -938,7 +940,7 @@ interactions:
       that use other forms of transfer or joint learning with additional labeled data
       and task specific gazetteers.", "venue": "Annual Meeting of the Association
       for Computational Linguistics", "year": 2017, "referenceCount": 46, "citationCount":
-      579, "influentialCitationCount": 55, "isOpenAccess": true, "openAccessPdf":
+      582, "influentialCitationCount": 55, "isOpenAccess": true, "openAccessPdf":
       {"url": "https://www.aclweb.org/anthology/P17-1161.pdf", "status": null}, "fieldsOfStudy":
       ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
       "external"}, {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -966,7 +968,7 @@ interactions:
       which transfers well to other, unseen tasks. This method achieves state-of-the-art
       performance on several large-scale transfer learning benchmarks.", "venue":
       "Computer Vision and Pattern Recognition", "year": 2016, "referenceCount": 59,
-      "citationCount": 616, "influentialCitationCount": 35, "isOpenAccess": true,
+      "citationCount": 617, "influentialCitationCount": 36, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://arxiv.org/pdf/1611.09842", "status": null},
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
@@ -1001,7 +1003,7 @@ interactions:
       We also conduct human evaluations on abstractive summarization and find that
       our method outperforms a purely supervised learning baseline in a statistically
       significant manner.", "venue": "Conference on Empirical Methods in Natural Language
-      Processing", "year": 2016, "referenceCount": 62, "citationCount": 266, "influentialCitationCount":
+      Processing", "year": 2016, "referenceCount": 62, "citationCount": 269, "influentialCitationCount":
       11, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/D17-1039.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -1036,8 +1038,8 @@ interactions:
       is very effective at stabilizing the hidden state dynamics in recurrent networks.
       Empirically, we show that layer normalization can substantially reduce the training
       time compared with previously published techniques.", "venue": "arXiv.org",
-      "year": 2016, "referenceCount": 33, "citationCount": 6840, "influentialCitationCount":
-      303, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "year": 2016, "referenceCount": 33, "citationCount": 6903, "influentialCitationCount":
+      314, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
@@ -1060,7 +1062,7 @@ interactions:
       of nonlinearities. We perform an empirical evaluation of the GELU nonlinearity
       against the ReLU and ELU activations and find performance improvements across
       all tasks.", "venue": "arXiv.org", "year": 2016, "referenceCount": 24, "citationCount":
-      499, "influentialCitationCount": 72, "isOpenAccess": false, "openAccessPdf":
+      505, "influentialCitationCount": 73, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
@@ -1089,8 +1091,8 @@ interactions:
       performance (86.8%) is much higher, indicating that the dataset presents a good
       challenge problem for future research. \nThe dataset is freely available at
       this https URL", "venue": "Conference on Empirical Methods in Natural Language
-      Processing", "year": 2016, "referenceCount": 29, "citationCount": 6181, "influentialCitationCount":
-      1483, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d16-1264",
+      Processing", "year": 2016, "referenceCount": 29, "citationCount": 6223, "influentialCitationCount":
+      1491, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d16-1264",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -1119,8 +1121,8 @@ interactions:
       better. With pretraining, we were able to achieve strong performance in many
       classification tasks, such as text classification with IMDB, DBpedia or image
       recognition in CIFAR-10.", "venue": "Neural Information Processing Systems",
-      "year": 2015, "referenceCount": 41, "citationCount": 1088, "influentialCitationCount":
-      72, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "year": 2015, "referenceCount": 41, "citationCount": 1093, "influentialCitationCount":
+      73, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle", "Conference"], "publicationDate": "2015-11-04", "journal":
@@ -1154,7 +1156,7 @@ interactions:
       first generic end-to-end differentiable system that achieves state-of-the-art
       accuracy on a textual entailment dataset.", "venue": "International Conference
       on Learning Representations", "year": 2015, "referenceCount": 34, "citationCount":
-      721, "influentialCitationCount": 82, "isOpenAccess": false, "openAccessPdf":
+      726, "influentialCitationCount": 83, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
@@ -1188,7 +1190,7 @@ interactions:
       a back-off dictionary baseline for the WMT 15 translation tasks English-German
       and English-Russian by 1.1 and 1.3 BLEU, respectively.", "venue": "Annual Meeting
       of the Association for Computational Linguistics", "year": 2015, "referenceCount":
-      41, "citationCount": 6297, "influentialCitationCount": 1029, "isOpenAccess":
+      41, "citationCount": 6328, "influentialCitationCount": 1027, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://www.aclweb.org/anthology/P16-1162.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -1222,8 +1224,8 @@ interactions:
       some sophisticated existing entailment models, and it allows a neural network-based
       model to perform competitively on natural language inference benchmarks for
       the first time.", "venue": "Conference on Empirical Methods in Natural Language
-      Processing", "year": 2015, "referenceCount": 40, "citationCount": 3497, "influentialCitationCount":
-      925, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d15-1075",
+      Processing", "year": 2015, "referenceCount": 40, "citationCount": 3516, "influentialCitationCount":
+      917, "isOpenAccess": true, "openAccessPdf": {"url": "https://doi.org/10.18653/v1/d15-1075",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}],
@@ -1254,7 +1256,7 @@ interactions:
       datasets. The end result is an off-the-shelf encoder that can produce highly
       generic sentence representations that are robust and perform well in practice.",
       "venue": "Neural Information Processing Systems", "year": 2015, "referenceCount":
-      43, "citationCount": 2208, "influentialCitationCount": 280, "isOpenAccess":
+      43, "citationCount": 2223, "influentialCitationCount": 283, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
@@ -1287,7 +1289,7 @@ interactions:
       from multiple sources. We demonstrate good quantitative performance for movie/book
       alignment and show several qualitative examples that showcase the diversity
       of tasks our model can be used for.", "venue": "IEEE International Conference
-      on Computer Vision", "year": 2015, "referenceCount": 44, "citationCount": 2088,
+      on Computer Vision", "year": 2015, "referenceCount": 44, "citationCount": 2103,
       "influentialCitationCount": 251, "isOpenAccess": true, "openAccessPdf": {"url":
       "http://www.cs.toronto.edu/%7Ezemel/documents/align.pdf", "status": null}, "fieldsOfStudy":
       ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
@@ -1317,7 +1319,7 @@ interactions:
       reading comprehension data. This allows us to develop a class of attention based
       deep neural networks that learn to read real documents and answer complex questions
       with minimal prior knowledge of language structure.", "venue": "Neural Information
-      Processing Systems", "year": 2015, "referenceCount": 22, "citationCount": 3054,
+      Processing Systems", "year": 2015, "referenceCount": 22, "citationCount": 3071,
       "influentialCitationCount": 506, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
@@ -1352,7 +1354,7 @@ interactions:
       compares favorably to other stochastic optimization methods. Finally, we discuss
       AdaMax, a variant of Adam based on the infinity norm.", "venue": "International
       Conference on Learning Representations", "year": 2014, "referenceCount": 26,
-      "citationCount": 126885, "influentialCitationCount": 20740, "isOpenAccess":
+      "citationCount": 127604, "influentialCitationCount": 20800, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -1388,8 +1390,8 @@ interactions:
       substructure, as evidenced by its performance of 75% on a recent word analogy
       task. It also outperforms related models on similarity tasks and named entity
       recognition.", "venue": "Conference on Empirical Methods in Natural Language
-      Processing", "year": 2014, "referenceCount": 32, "citationCount": 28098, "influentialCitationCount":
-      4350, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Processing", "year": 2014, "referenceCount": 32, "citationCount": 28316, "influentialCitationCount":
+      4362, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -1420,8 +1422,8 @@ interactions:
       task-specific and static vectors. The CNN models discussed herein improve upon
       the state of the art on 4 out of 7 tasks, which include sentiment analysis and
       question classification.", "venue": "Conference on Empirical Methods in Natural
-      Language Processing", "year": 2014, "referenceCount": 33, "citationCount": 12100,
-      "influentialCitationCount": 2001, "isOpenAccess": true, "openAccessPdf": {"url":
+      Language Processing", "year": 2014, "referenceCount": 33, "citationCount": 12194,
+      "influentialCitationCount": 2020, "isOpenAccess": true, "openAccessPdf": {"url":
       "https://aclanthology.org/D14-1181.pdf", "status": null}, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
@@ -1452,7 +1454,7 @@ interactions:
       representations. Finally, we achieve new state-of-the-art results on several
       text classification and sentiment analysis tasks.", "venue": "International
       Conference on Machine Learning", "year": 2014, "referenceCount": 42, "citationCount":
-      8383, "influentialCitationCount": 1162, "isOpenAccess": false, "openAccessPdf":
+      8461, "influentialCitationCount": 1173, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -1484,7 +1486,7 @@ interactions:
       Motivated by this example, we present a simple method for finding phrases in
       text, and show that learning good vector representations for millions of phrases
       is possible.", "venue": "Neural Information Processing Systems", "year": 2013,
-      "referenceCount": 24, "citationCount": 30435, "influentialCitationCount": 4108,
+      "referenceCount": 24, "citationCount": 30674, "influentialCitationCount": 4156,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science",
       "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science", "source":
       "external"}, {"category": "Mathematics", "source": "external"}, {"category":
@@ -1513,7 +1515,7 @@ interactions:
       with fine-grained n-gram overlap features, yielding performance that is 3% more
       accurate than the prior state-of-the-art.", "venue": "Conference on Empirical
       Methods in Natural Language Processing", "year": 2013, "referenceCount": 26,
-      "citationCount": 155, "influentialCitationCount": 25, "isOpenAccess": false,
+      "citationCount": 157, "influentialCitationCount": 25, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
@@ -1550,7 +1552,7 @@ interactions:
       capture the effects of negation and its scope at various tree levels for both
       positive and negative phrases.", "venue": "Conference on Empirical Methods in
       Natural Language Processing", "year": 2013, "referenceCount": 49, "citationCount":
-      6851, "influentialCitationCount": 1230, "isOpenAccess": false, "openAccessPdf":
+      6915, "influentialCitationCount": 1230, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -1609,7 +1611,7 @@ interactions:
       to this task, which yields a pronoun resolver that outperforms state-of-the-art
       resolvers by nearly 18 points in accuracy on our dataset.", "venue": "Conference
       on Empirical Methods in Natural Language Processing", "year": 2012, "referenceCount":
-      48, "citationCount": 176, "influentialCitationCount": 39, "isOpenAccess": false,
+      48, "citationCount": 178, "influentialCitationCount": 41, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}],
@@ -1640,8 +1642,8 @@ interactions:
       on the basis of vast amounts of mostly unlabeled training data. This work is
       then used as a basis for building a freely available tagging system with good
       performance and minimal computational requirements.", "venue": "Journal of machine
-      learning research", "year": 2011, "referenceCount": 103, "citationCount": 7302,
-      "influentialCitationCount": 726, "isOpenAccess": false, "openAccessPdf": null,
+      learning research", "year": 2011, "referenceCount": 103, "citationCount": 7375,
+      "influentialCitationCount": 733, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
       "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}], "publicationTypes":
@@ -1672,7 +1674,7 @@ interactions:
       is sufficiently large to initialize the DBN weights. On the other hand, with
       additional labeled training data, the fine-tuning phase of DBN training can
       significantly improve the recognition accuracy.", "venue": "", "year": 2010,
-      "referenceCount": 27, "citationCount": 212, "influentialCitationCount": 4, "isOpenAccess":
+      "referenceCount": 27, "citationCount": 213, "influentialCitationCount": 4, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
@@ -1705,8 +1707,8 @@ interactions:
       of minima that support better generalization from the training data set; the
       evidence from these results supports a regularization explanation for the effect
       of pre-training.", "venue": "International Conference on Artificial Intelligence
-      and Statistics", "year": 2010, "referenceCount": 70, "citationCount": 2229,
-      "influentialCitationCount": 77, "isOpenAccess": false, "openAccessPdf": null,
+      and Statistics", "year": 2010, "referenceCount": 69, "citationCount": 2253,
+      "influentialCitationCount": 76, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
@@ -1737,7 +1739,7 @@ interactions:
       for the shared tasks. We show how both multitask learning and semi-supervised
       learning improve the generalization of the shared tasks, resulting in state-of-the-art-performance.",
       "venue": "International Conference on Machine Learning", "year": 2008, "referenceCount":
-      24, "citationCount": 5529, "influentialCitationCount": 298, "isOpenAccess":
+      24, "citationCount": 5600, "influentialCitationCount": 297, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"}],
@@ -1764,8 +1766,8 @@ interactions:
       perspective or from a generative model perspective. Comparative experiments
       clearly show the surprising advantage of corrupting the input of autoencoders
       on a pattern classification benchmark suite.", "venue": "International Conference
-      on Machine Learning", "year": 2008, "referenceCount": 30, "citationCount": 6570,
-      "influentialCitationCount": 514, "isOpenAccess": true, "openAccessPdf": {"url":
+      on Machine Learning", "year": 2008, "referenceCount": 30, "citationCount": 6638,
+      "influentialCitationCount": 521, "isOpenAccess": true, "openAccessPdf": {"url":
       "http://www.iro.umontreal.ca/~vincentp/Publications/denoising_autoencoders_tr1316.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
@@ -1799,7 +1801,7 @@ interactions:
       In addition, our results are superior to the best reported results for all of
       the above test collections.", "venue": "Annual Meeting of the Association for
       Computational Linguistics", "year": 2008, "referenceCount": 19, "citationCount":
-      156, "influentialCitationCount": 16, "isOpenAccess": false, "openAccessPdf":
+      157, "influentialCitationCount": 17, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -1829,7 +1831,7 @@ interactions:
       an error rate slightly lower than the best reported result on the MNIST dataset.
       Finally, an extension of the method is described to learn topographical filter
       maps.", "venue": "Neural Information Processing Systems", "year": 2006, "referenceCount":
-      16, "citationCount": 1274, "influentialCitationCount": 61, "isOpenAccess": false,
+      16, "citationCount": 1290, "influentialCitationCount": 61, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
@@ -1865,7 +1867,7 @@ interactions:
       by initializing weights in a region near a good local minimum, giving rise to
       internal distributed representations that are high-level abstractions of the
       input, bringing better generalization.", "venue": "Neural Information Processing
-      Systems", "year": 2006, "referenceCount": 18, "citationCount": 4316, "influentialCitationCount":
+      Systems", "year": 2006, "referenceCount": 18, "citationCount": 4356, "influentialCitationCount":
       239, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.iro.umontreal.ca/~lisa/pointeurs/BengioNips2006All.pdf",
       "status": null}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -1932,8 +1934,8 @@ interactions:
       by long ravines in the free-energy landscape of the top-level associative memory,
       and it is easy to explore these ravines by using the directed connections to
       display what the associative memory has in mind.", "venue": "Neural Computation",
-      "year": 2006, "referenceCount": 32, "citationCount": 14977, "influentialCitationCount":
-      1259, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
+      "year": 2006, "referenceCount": 32, "citationCount": 15123, "influentialCitationCount":
+      1276, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
       "Mathematics", "Computer Science"], "s2FieldsOfStudy": [{"category": "Medicine",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
@@ -1952,7 +1954,7 @@ interactions:
       to find the solution x=0 of the equation M(x) = a, where x is a given constant.
       we give a method for making successive experiments at levels x1, x2,... in such
       a way that x, will tend to 0 in probability.", "venue": "", "year": 1951, "referenceCount":
-      0, "citationCount": 7841, "influentialCitationCount": 960, "isOpenAccess": true,
+      0, "citationCount": 7936, "influentialCitationCount": 975, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-22/issue-3/A-Stochastic-Approximation-Method/10.1214/aoms/1177729586.pdf",
       "status": null}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
       "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
@@ -1987,12 +1989,12 @@ interactions:
       state-of-the-art in text sentiment analysis and generative modeling of text
       and images. By releasing our kernels in the open we aim to spur further advancement
       in model and algorithm design.", "venue": "", "year": 2017, "referenceCount":
-      28, "citationCount": 134, "influentialCitationCount": 12, "isOpenAccess": false,
+      28, "citationCount": 135, "influentialCitationCount": 12, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": null, "authors": [{"authorId": "145565184", "name": "S. Gray"},
       {"authorId": "38909097", "name": "Alec Radford"}, {"authorId": "1726807", "name":
-      "Diederik P. Kingma"}]}}, {"intents": ["background", "methodology"], "contexts":
+      "Diederik P. Kingma"}]}}, {"intents": ["methodology", "background"], "contexts":
       ["We use three datasets for this task \u2013 the Microsoft Paraphrase corpus
       (MRPC) [14] (collected from news sources), the Quora Question Pairs (QQP) dataset
       [9], and the Semantic Textual Similarity benchmark (STS-B) [6].", "\u2026NLI
@@ -2012,8 +2014,8 @@ interactions:
       users. Effectively detecting duplicate questions not only saves time for seekers
       to find the best answer to their questions, but also reduces the effort of writers
       in terms of answering multiple versions of the same question[1].", "venue":
-      "", "year": 2017, "referenceCount": 12, "citationCount": 150, "influentialCitationCount":
-      26, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      "", "year": 2017, "referenceCount": 12, "citationCount": 151, "influentialCitationCount":
+      24, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": null, "journal": null, "authors": [{"authorId": "2117098079",
       "name": "Zihang Chen"}, {"authorId": "2108838350", "name": "Hongbo Zhang"},
@@ -2052,8 +2054,8 @@ interactions:
       and Chinese datasets. Concretely, our parser is able to parse more than 1000
       sentences per second at 92.2% unlabeled attachment score on the English Penn
       Treebank.", "venue": "Conference on Empirical Methods in Natural Language Processing",
-      "year": 2014, "referenceCount": 30, "citationCount": 1742, "influentialCitationCount":
-      164, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "year": 2014, "referenceCount": 30, "citationCount": 1776, "influentialCitationCount":
+      167, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle", "Conference"], "publicationDate": null, "journal": {"pages":
@@ -2091,8 +2093,8 @@ interactions:
       As for the Pilot, 10 runs were submitted by 3 participants. Finally, the exploratory
       effort started in RTE-5 to perform resource evaluation through ablation tests
       was not only reiterated in RTE-6, but also extended to tools.", "venue": "Text
-      Analysis Conference", "year": 2009, "referenceCount": 16, "citationCount": 644,
-      "influentialCitationCount": 129, "isOpenAccess": false, "openAccessPdf": null,
+      Analysis Conference", "year": 2009, "referenceCount": 16, "citationCount": 647,
+      "influentialCitationCount": 128, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category": "Computer
       Science", "source": "external"}, {"category": "Computer Science", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
@@ -2120,7 +2122,7 @@ interactions:
       the new 3-way task. This paper describes the preparation of the dataset, and
       gives an overview of the results achieved by the participating systems.", "venue":
       "Text Analysis Conference", "year": 2008, "referenceCount": 11, "citationCount":
-      376, "influentialCitationCount": 29, "isOpenAccess": false, "openAccessPdf":
+      378, "influentialCitationCount": 29, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Review"],
@@ -2194,8 +2196,8 @@ interactions:
       pre-commercial thinning and selection and pruning of crop trees. Combined stripwise
       and early heavy thinning ranges between these extremes. However, biodiversity,
       forest recreation and other issues may override these conclusions.", "venue":
-      "", "year": 2006, "referenceCount": 59, "citationCount": 678, "influentialCitationCount":
-      43, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      "", "year": 2006, "referenceCount": 59, "citationCount": 669, "influentialCitationCount":
+      42, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": null, "journal": null, "authors": [{"authorId": "93756545",
       "name": "A. Bolte"}, {"authorId": "2265851818", "name": "Asadollah Mataji"},
@@ -2227,7 +2229,7 @@ interactions:
       to describing the corpus itself, we explore a number of issues that arose in
       defining guidelines for the human raters.", "venue": "International Joint Conference
       on Natural Language Processing", "year": 2005, "referenceCount": 51, "citationCount":
-      1276, "influentialCitationCount": 227, "isOpenAccess": false, "openAccessPdf":
+      1283, "influentialCitationCount": 228, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
@@ -2262,7 +2264,7 @@ interactions:
       in terms of reducing the error using a fixed amount of labeled data. We find
       that sometimes semi-Markov models can also improve performance over Markov models.
       Thesis Supervisor: Michael Collins Title: Assistant Professor, CSAIL", "venue":
-      "", "year": 2005, "referenceCount": 80, "citationCount": 361, "influentialCitationCount":
+      "", "year": 2005, "referenceCount": 80, "citationCount": 366, "influentialCitationCount":
       33, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Linguistics",
@@ -2286,31 +2288,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '186702'
+      - '186817'
       Content-Type:
       - application/json
       Date:
-      - Tue, 21 Nov 2023 04:20:36 GMT
+      - Fri, 01 Dec 2023 02:19:03 GMT
       Via:
-      - 1.1 7d4cada96f0b733f4f539a3bab2e2d16.cloudfront.net (CloudFront)
+      - 1.1 f5002d75963a7ac4e40089e827005b00.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - I7Jca8mlLjbQlgGynKWah3Fhdw8kUzG1iMRglho_6LCjAXRI4Bp9bA==
+      - d265oIqgfQrAE6BhbLJtYmUkKgC8UtV-m4sOf7ah2NDmx-lHnZ46Aw==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - OuxzPHzdPHcENTw=
+      - PPdXoGDmPHcEFUA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '186702'
+      - '186817'
       x-amzn-Remapped-Date:
-      - Tue, 21 Nov 2023 04:20:36 GMT
+      - Fri, 01 Dec 2023 02:19:03 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - a4bc01e1-2324-41f4-a9b8-8b1218c83110
+      - f9886071-962e-4db1-a1ec-dc130d07dbde
     http_version: HTTP/1.1
     status_code: 200
 version: 1

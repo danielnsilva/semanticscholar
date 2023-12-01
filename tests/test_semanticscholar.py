@@ -190,20 +190,20 @@ class SemanticScholarTest(unittest.TestCase):
         data = self.sch.get_paper_citations('CorpusID:49313245')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item.paper.title for item in data]), 6247)
+        self.assertEqual(len([item.paper.title for item in data]), 6974)
         self.assertEqual(
-            data[0].paper.title, 'A vision transformer-based automated '
-            'human identification using ear biometrics')
+            data[0].paper.title, 'Improving the Robustness of '
+            'Transformer-based Large Language Models with Dynamic Attention')
 
     @test_vcr.use_cassette
     def test_get_paper_references(self):
         data = self.sch.get_paper_references('CorpusID:1033682')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 61)
+        self.assertEqual(len(data), 168)
         self.assertEqual(
-            data[0].paper.title, 'The Malicious Use of Artificial Intelligence: '
-            'Forecasting, Prevention, and Mitigation')
+            data[0].paper.title, 'Can We Scale Transformers to Predict '
+            'Parameters of Diverse ImageNet Models?')
 
     @test_vcr.use_cassette
     def test_timeout(self):
@@ -231,7 +231,7 @@ class SemanticScholarTest(unittest.TestCase):
         data = self.sch.get_author_papers(1723755, limit=100)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 938)
+        self.assertEqual(len([item for item in data]), 886)
         self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38β/MAPK11 to '
                          'promote virus replication')
 

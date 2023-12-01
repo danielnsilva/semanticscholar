@@ -15,12 +15,12 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.24.1
+      - python-httpx/0.25.1
     method: POST
-    uri: https://api.semanticscholar.org/graph/v1/paper/batch?&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
   response:
     content: '[{"paperId": "c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce", "externalIds":
-      {"MAG": "2951549429", "DOI": "10.2139/ssrn.288970", "CorpusId": 470667}, "corpusId":
+      {"MAG": "2096684396", "DOI": "10.2139/ssrn.288970", "CorpusId": 470667}, "corpusId":
       470667, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce",
       "title": "How Much Should We Trust Differences-in-Differences Estimates?", "abstract":
       "Most Difference-in-Difference (DD) papers rely on many years of data and focus
@@ -41,17 +41,16 @@ interactions:
       based on randomization inference testing methods, which works well irrespective
       of sample size. This technique uses the empirical distribution of estimated
       effects for placebo laws to form the test distribution.", "venue": "", "year":
-      2001, "referenceCount": 29, "citationCount": 9993, "influentialCitationCount":
-      577, "isOpenAccess": true, "openAccessPdf": {"url": "http://papers.nber.org/papers/w8841.pdf",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Psychology", "Economics", "Mathematics"],
-      "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
-      "Economics", "source": "external"}, {"category": "Mathematics", "source": "external"},
-      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-      ["Review"], "publicationDate": "2001-10-01", "journal": {"name": "Experimental
-      & Empirical Studies eJournal"}, "authors": [{"authorId": "81141608", "name":
-      "Marianne Bertrand"}, {"authorId": "2259683", "name": "E. Duflo"}, {"authorId":
-      "2062143", "name": "S. Mullainathan"}]}, {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3",
-      "externalIds": {"MAG": "157810103", "DOI": "10.2139/ssrn.2250500", "CorpusId":
+      2001, "referenceCount": 30, "citationCount": 10155, "influentialCitationCount":
+      553, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Psychology",
+      "Economics", "Mathematics"], "s2FieldsOfStudy": [{"category": "Psychology",
+      "source": "external"}, {"category": "Economics", "source": "external"}, {"category":
+      "Mathematics", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": "2001-10-01", "journal":
+      {"name": "Experimental & Empirical Studies eJournal"}, "authors": [{"authorId":
+      "81141608", "name": "Marianne Bertrand"}, {"authorId": "2259683", "name": "E.
+      Duflo"}, {"authorId": "2062143", "name": "S. Mullainathan"}]}, {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3",
+      "externalIds": {"MAG": "2148197077", "DOI": "10.2139/ssrn.2250500", "CorpusId":
       3142471}, "corpusId": 3142471, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/cb1ebd913c3724c599f6b276b14b5c6253da68f3",
       "title": "The Miracle of Microfinance? Evidence from a Randomized Evaluation",
       "abstract": "Microcredit has spread extremely rapidly since its beginnings in
@@ -60,9 +59,9 @@ interactions:
       the impact of introducing microcredit in a new market. Half of 104 slums in
       Hyderabad, India were randomly selected for opening of an MFI branch while the
       remainder were not. We show that the intervention increased total MFI borrow.",
-      "venue": "", "year": 2013, "referenceCount": 66, "citationCount": 2043, "influentialCitationCount":
-      242, "isOpenAccess": true, "openAccessPdf": {"url": "https://dspace.mit.edu/bitstream/1721.1/79070/1/BanerjeeDuflo13-09.pdf",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Business", "Economics", "Geography"],
+      "venue": "", "year": 2013, "referenceCount": 67, "citationCount": 2064, "influentialCitationCount":
+      240, "isOpenAccess": true, "openAccessPdf": {"url": "https://dspace.mit.edu/bitstream/1721.1/95941/1/Banerjee_The%20miracle.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Business", "Economics", "Geography"],
       "s2FieldsOfStudy": [{"category": "Business", "source": "external"}, {"category":
       "Economics", "source": "external"}, {"category": "Geography", "source": "external"},
       {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
@@ -85,13 +84,12 @@ interactions:
       (IGC), International Initiative for Impact Evaluation (3ie), MIT Center for
       Energy and Environmental Policy Research (CEEPR), National Science Foundation
       (NSF)", "venue": "", "year": 2023, "referenceCount": 2, "citationCount": 0,
-      "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
-      "https://www.povertyactionlab.org/sites/default/files/publications/156_321_QJE_2013_Truth_Telling_Third_Party_Audits.pdf",
-      "status": "BRONZE"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-      "Economics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": null, "authors": [{"authorId": "2259683", "name": "E. Duflo"},
-      {"authorId": "4711469", "name": "M. Greenstone"}, {"authorId": "2071339188",
-      "name": "Nick Ryan"}]}]
+      "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "authors": [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId":
+      "4711469", "name": "M. Greenstone"}, {"authorId": "2071339188", "name": "Nick
+      Ryan"}]}]
 
       '
     headers:
@@ -100,31 +98,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '6079'
+      - '5870'
       Content-Type:
       - application/json
       Date:
-      - Wed, 13 Sep 2023 21:48:16 GMT
+      - Fri, 01 Dec 2023 02:28:54 GMT
       Via:
-      - 1.1 e8bd72d9a7c5eaf252aab1ed2d79e1a6.cloudfront.net (CloudFront)
+      - 1.1 97d891785cd24c4beaf3832c02f5cf04.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - uVpXt-MkqIHwF9p3aikcxtQN6p8ckuQ0_Wpy2WjTXwDutr2JK7Cm2Q==
+      - PTB955cMTStQuoUP65EnM8cXa11fPyLikH-kIhw-Nmtzo1Nj2pcBaw==
       X-Amz-Cf-Pop:
-      - EWR50-C1
+      - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - LNwlDE6cPHcF30w=
+      - PPe0FEQTvHcEA-w=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '6079'
+      - '5870'
       x-amzn-Remapped-Date:
-      - Wed, 13 Sep 2023 21:48:16 GMT
+      - Fri, 01 Dec 2023 02:28:54 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 8fb74658-074c-43e9-9b91-6d130199ee50
+      - e6cca348-e947-4b90-880a-055684e99378
     http_version: HTTP/1.1
     status_code: 200
 version: 1
