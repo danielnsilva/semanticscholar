@@ -1,0 +1,50 @@
+interactions:
+- request:
+    body: '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}'
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '96'
+      content-type:
+      - application/json
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.25.1
+      x-api-key:
+      - F@k3K3y
+    method: POST
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
+  response:
+    content: '{"message":"Forbidden"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '23'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 01 Dec 2023 17:42:22 GMT
+      Via:
+      - 1.1 0e3b340d2469d5d03795669e20d22b7e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 5GOaOSmWlLCOLN3BYU8v4ZYeCVwcLY3rdViECkesvkiObdK3RVAAKw==
+      X-Amz-Cf-Pop:
+      - GRU3-P4
+      X-Cache:
+      - Error from cloudfront
+      x-amz-apigw-id:
+      - PRkn3G9vvHcETAQ=
+      x-amzn-ErrorType:
+      - ForbiddenException
+      x-amzn-RequestId:
+      - b5de114b-ac94-4023-9e40-17bf4713124d
+    http_version: HTTP/1.1
+    status_code: 403
+version: 1

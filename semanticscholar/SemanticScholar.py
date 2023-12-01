@@ -17,20 +17,24 @@ class SemanticScholar():
                 self,
                 timeout: int = 10,
                 api_key: str = None,
-                api_url: str = None
+                api_url: str = None,
+                debug: bool = False
             ) -> None:
         '''
         :param float timeout: (optional) an exception is raised\
             if the server has not issued a response for timeout seconds.
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
+        :param bool debug: (optional) enable debug mode.
         '''
         nest_asyncio.apply()
         self._timeout = timeout
+        self._debug = debug
         self._AsyncSemanticScholar = AsyncSemanticScholar(
             timeout=timeout,
             api_key=api_key,
-            api_url=api_url
+            api_url=api_url,
+            debug=debug
         )
 
     @property
@@ -47,6 +51,21 @@ class SemanticScholar():
         '''
         self._timeout = timeout
         self._AsyncSemanticScholar.timeout = timeout
+    
+    @property
+    def debug(self) -> bool:
+        '''
+        :type: :class:`bool`
+        '''
+        return self._debug
+    
+    @debug.setter
+    def debug(self, debug: bool) -> None:
+        '''
+        :param bool debug:
+        '''
+        self._debug = debug
+        self._AsyncSemanticScholar.debug = debug
 
     def get_paper(
                 self,

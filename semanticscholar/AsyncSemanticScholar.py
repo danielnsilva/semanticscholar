@@ -25,13 +25,15 @@ class AsyncSemanticScholar:
                 self,
                 timeout: int = 10,
                 api_key: str = None,
-                api_url: str = None
+                api_url: str = None,
+                debug: bool = False
             ) -> None:
         '''
         :param float timeout: (optional) an exception is raised\
             if the server has not issued a response for timeout seconds.
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
+        :param bool debug: (optional) enable debug mode.
         '''
 
         if api_url:
@@ -43,7 +45,8 @@ class AsyncSemanticScholar:
             self.auth_header = {'x-api-key': api_key}
 
         self._timeout = timeout
-        self._requester = ApiRequester(self._timeout)
+        self._debug = debug
+        self._requester = ApiRequester(self._timeout, self._debug)
 
     @property
     def timeout(self) -> int:
@@ -59,6 +62,21 @@ class AsyncSemanticScholar:
         '''
         self._timeout = timeout
         self._requester.timeout = timeout
+    
+    @property
+    def debug(self) -> bool:
+        '''
+        :type: :class:`bool`
+        '''
+        return self._debug
+    
+    @debug.setter
+    def debug(self, debug: bool) -> None:
+        '''
+        :param bool debug:
+        '''
+        self._debug = debug
+        self._requester.debug = debug
 
     async def get_paper(
                 self,

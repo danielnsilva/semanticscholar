@@ -1,4 +1,6 @@
+import io
 import json
+import sys
 import unittest
 import asyncio
 from datetime import datetime
@@ -410,6 +412,24 @@ class SemanticScholarTest(unittest.TestCase):
     def test_empty_paginated_results(self):
         data = self.sch.search_paper('n0 r3sult s3arch t3rm')
         self.assertEqual(data.total, 0)
+
+    @test_vcr.use_cassette
+    def test_debug(self):
+        with open('tests/data/debug_output.txt', 'r') as file:
+            expected_output = file.read()
+        captured_stdout = io.StringIO()
+        sys.stdout = captured_stdout
+        self.sch = SemanticScholar(debug=True, api_key='F@k3K3y')
+        self.assertEqual(self.sch.debug, True)
+        list_of_paper_ids = [
+            'CorpusId:470667',
+            '10.2139/ssrn.2250500',
+            '0f40b1f08821e22e859c6050916cec3667778613']
+        with self.assertRaises(PermissionError):
+            self.sch.get_papers(list_of_paper_ids)
+        sys.stdout = sys.__stdout__
+        self.assertEqual(captured_stdout.getvalue().strip(),
+                         expected_output.strip())
 
 class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
