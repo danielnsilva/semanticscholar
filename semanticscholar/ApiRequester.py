@@ -61,8 +61,6 @@ class ApiRequester:
     
     def _get_caller_function_name(self) -> str:
         stack = inspect.stack()
-        # for item in stack:
-        #     print(inspect.getframeinfo(item[0]).function)
         caller = stack[5]
         frame = caller[0]
         info = inspect.getframeinfo(frame)
