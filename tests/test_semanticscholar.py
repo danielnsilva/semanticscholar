@@ -313,6 +313,40 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertTrue(data[0].openAccessPdf)
 
     @test_vcr.use_cassette
+    def test_search_paper_publication_date_or_year(self):
+        date_ranges = [
+            "2020-01-01",
+            "2020-01",
+            "2020",
+            "2020-01-01:2021-01-01",
+            "2020-01-01:",
+            ":2020-01-01",
+            "2020:2021",
+            "2020:",
+            ":2021",
+        ]
+        for date_range in date_ranges:
+            with self.subTest(date_range=date_range):
+                data = self.sch.search_paper(
+                    'turing', publication_date_or_year=date_range)
+                self.assertTrue(len(data) > 0)
+
+    def test_search_paper_publication_date_or_year_invalid(self):
+        date_ranges = [
+            "2020-01-012021-01-01",
+            "2020-01-01:2021-01-",
+            "2020-01-01:2020-"
+        ]
+        for date_range in date_ranges:
+            with self.subTest(date_range=date_range):
+                self.assertRaises(
+                    ValueError,
+                    self.sch.search_paper,
+                    'turing',
+                    publication_date_or_year=date_range
+                )
+
+    @test_vcr.use_cassette
     def test_search_author(self):
         data = self.sch.search_author('turing')
         self.assertGreater(data.total, 0)
@@ -565,6 +599,37 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     async def test_search_paper_open_access_pdf_async(self):
         data = await self.sch.search_paper('turing', open_access_pdf=True)
         self.assertTrue(data[0].openAccessPdf)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_publication_date_or_year_async(self):
+        date_ranges = [
+            "2020-01-01",
+            "2020-01",
+            "2020",
+            "2020-01-01:2021-01-01",
+            "2020-01-01:",
+            ":2020-01-01",
+            "2020:2021",
+            "2020:",
+            ":2021",
+        ]
+        for date_range in date_ranges:
+            with self.subTest(date_range=date_range):
+                data = await self.sch.search_paper(
+                    'turing', publication_date_or_year=date_range)
+                self.assertTrue(len(data) > 0)
+
+    async def test_search_paper_publication_date_or_year_invalid_async(self):
+        date_ranges = [
+            "2020-01-012021-01-01",
+            "2020-01-01:2021-01-",
+            "2020-01-01:2020-"
+        ]
+        for date_range in date_ranges:
+            with self.subTest(date_range=date_range):
+                with self.assertRaises(ValueError):
+                    await self.sch.search_paper(
+                        'turing', publication_date_or_year=date_range)
 
     @test_vcr.use_cassette
     async def test_search_author_async(self):

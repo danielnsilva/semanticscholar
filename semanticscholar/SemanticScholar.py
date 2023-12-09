@@ -257,6 +257,7 @@ class SemanticScholar():
                 venue: list = None,
                 fields_of_study: list = None,
                 fields: list = None,
+                publication_date_or_year: str = None,
                 limit: int = 100
             ) -> PaginatedResults:
         '''Search for papers by keyword
@@ -275,6 +276,10 @@ class SemanticScholar():
         :param list fields_of_study: (optional) restrict results to given \
                field-of-study list, using the s2FieldsOfStudy paper field.
         :param list fields: (optional) list of the fields to be returned.
+        :param str publication_date_or_year: (optional) restrict results to \
+               the given range of publication date in the format \
+               <start_date>:<end_date>, where dates are in the format \
+               YYYY-MM-DD, YYYY-MM, or YYYY.
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
         :returns: query results.
@@ -291,6 +296,7 @@ class SemanticScholar():
                 venue=venue,
                 fields_of_study=fields_of_study,
                 fields=fields,
+                publication_date_or_year=publication_date_or_year,
                 limit=limit
                 )
         )

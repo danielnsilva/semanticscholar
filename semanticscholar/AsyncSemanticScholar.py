@@ -1,3 +1,4 @@
+import re
 from typing import List, Literal
 
 from semanticscholar.ApiRequester import ApiRequester
@@ -307,6 +308,7 @@ class AsyncSemanticScholar:
                 venue: list = None,
                 fields_of_study: list = None,
                 fields: list = None,
+                publication_date_or_year: str = None,
                 limit: int = 100
             ) -> PaginatedResults:
         '''Search for papers by keyword
@@ -325,6 +327,10 @@ class AsyncSemanticScholar:
         :param list fields_of_study: (optional) restrict results to given \
                field-of-study list, using the s2FieldsOfStudy paper field.
         :param list fields: (optional) list of the fields to be returned.
+        :param str publication_date_or_year: (optional) restrict results to \
+               the given range of publication date in the format \
+               <start_date>:<end_date>, where dates are in the format \
+               YYYY-MM-DD, YYYY-MM, or YYYY.
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
         :returns: query results.
@@ -356,6 +362,17 @@ class AsyncSemanticScholar:
         if fields_of_study:
             fields_of_study = ','.join(fields_of_study)
             query += f'&fieldsOfStudy={fields_of_study}'
+        
+        if publication_date_or_year:
+            single_date_regex = r'\d{4}(-\d{2}(-\d{2})?)?'
+            full_regex = r'^({0})?(:({0})?)?$'.format(single_date_regex)
+            if not bool(re.fullmatch(full_regex, publication_date_or_year)):
+                raise ValueError(
+                    'The publication_date_or_year parameter must be in the \
+                    format <start_date>:<end_date>, where dates are in the \
+                    format YYYY-MM-DD, YYYY-MM, or YYYY.')
+            else:
+                query += f'&publicationDateOrYear={publication_date_or_year}'
 
         results = await PaginatedResults.create(
                 self._requester,
