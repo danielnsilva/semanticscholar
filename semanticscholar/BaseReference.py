@@ -10,6 +10,7 @@ class BaseReference(SemanticScholarObject):
     FIELDS = [
         'contexts',
         'intents',
+        'contextsWithIntent',
         'isInfluential'
     ]
 
@@ -17,6 +18,7 @@ class BaseReference(SemanticScholarObject):
         super().__init__()
         self._contexts = None
         self._intents = None
+        self._contextsWithIntent = None
         self._isInfluential = None
         self._paper = None
         self._init_attributes(data)
@@ -34,6 +36,13 @@ class BaseReference(SemanticScholarObject):
         :type: :class:`list`
         '''
         return self._intents
+
+    @property
+    def contextsWithIntent(self) -> list:
+        '''
+        :type: :class:`list`
+        '''
+        return self._contextsWithIntent
 
     @property
     def isInfluential(self) -> bool:
@@ -55,5 +64,7 @@ class BaseReference(SemanticScholarObject):
             self._contexts = data['contexts']
         if 'intents' in data:
             self._intents = data['intents']
+        if 'contextsWithIntent' in data:
+            self._contextsWithIntent = data['contextsWithIntent']
         if 'isInfluential' in data:
             self._isInfluential = data['isInfluential']
