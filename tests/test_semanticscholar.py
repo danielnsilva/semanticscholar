@@ -347,6 +347,11 @@ class SemanticScholarTest(unittest.TestCase):
                 )
 
     @test_vcr.use_cassette
+    def test_search_paper_min_citation_count(self):
+        data = self.sch.search_paper('turing', min_citation_count=1000)
+        self.assertTrue(all([item.citationCount >= 1000 for item in data]))
+
+    @test_vcr.use_cassette
     def test_search_author(self):
         data = self.sch.search_author('turing')
         self.assertGreater(data.total, 0)
@@ -630,6 +635,11 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
                 with self.assertRaises(ValueError):
                     await self.sch.search_paper(
                         'turing', publication_date_or_year=date_range)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_min_citation_count_async(self):
+        data = await self.sch.search_paper('turing', min_citation_count=1000)
+        self.assertTrue(all([item.citationCount >= 1000 for item in data]))
 
     @test_vcr.use_cassette
     async def test_search_author_async(self):

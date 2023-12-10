@@ -309,6 +309,7 @@ class AsyncSemanticScholar:
                 fields_of_study: list = None,
                 fields: list = None,
                 publication_date_or_year: str = None,
+                min_citation_count: int = None,
                 limit: int = 100
             ) -> PaginatedResults:
         '''Search for papers by keyword
@@ -331,6 +332,8 @@ class AsyncSemanticScholar:
                the given range of publication date in the format \
                <start_date>:<end_date>, where dates are in the format \
                YYYY-MM-DD, YYYY-MM, or YYYY.
+        :param int min_citation_count: (optional) restrict results to papers \
+               with at least the given number of citations.
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
         :returns: query results.
@@ -373,6 +376,9 @@ class AsyncSemanticScholar:
                     format YYYY-MM-DD, YYYY-MM, or YYYY.')
             else:
                 query += f'&publicationDateOrYear={publication_date_or_year}'
+
+        if min_citation_count:
+            query += f'&minCitationCount={min_citation_count}'
 
         results = await PaginatedResults.create(
                 self._requester,

@@ -258,6 +258,7 @@ class SemanticScholar():
                 fields_of_study: list = None,
                 fields: list = None,
                 publication_date_or_year: str = None,
+                min_citation_count: int = None,
                 limit: int = 100
             ) -> PaginatedResults:
         '''Search for papers by keyword
@@ -280,6 +281,8 @@ class SemanticScholar():
                the given range of publication date in the format \
                <start_date>:<end_date>, where dates are in the format \
                YYYY-MM-DD, YYYY-MM, or YYYY.
+        :param int min_citation_count: (optional) restrict results to papers \
+               with at least the given number of citations.
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
         :returns: query results.
@@ -297,6 +300,7 @@ class SemanticScholar():
                 fields_of_study=fields_of_study,
                 fields=fields,
                 publication_date_or_year=publication_date_or_year,
+                min_citation_count=min_citation_count,
                 limit=limit
                 )
         )

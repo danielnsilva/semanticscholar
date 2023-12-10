@@ -1,0 +1,2200 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.25.2
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=turing&minCitationCount=1000&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+  response:
+    content: '{"total": 66, "offset": 0, "data": [{"paperId": "6b0f06617d9f5256a80ed62d9398acb92a55a6bd",
+      "externalIds": {"MAG": "2148132004", "DOI": "10.1098/rspa.1985.0070", "CorpusId":
+      1438116}, "corpusId": 1438116, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6b0f06617d9f5256a80ed62d9398acb92a55a6bd",
+      "title": "Quantum theory, the Church\u2013Turing principle and the universal
+      quantum computer", "abstract": "It is argued that underlying the Church\u2013Turing
+      hypothesis there is an implicit physical assertion. Here, this assertion is
+      presented explicitly as a physical principle: \u2018every finitely realizible
+      physical system can be perfectly simulated by a universal model computing machine
+      operating by finite means\u2019. Classical physics and the universal Turing
+      machine, because the former is continuous and the latter discrete, do not obey
+      the principle, at least in the strong form above. A class of model computing
+      machines that is the quantum generalization of the class of Turing machines
+      is described, and it is shown that quantum theory and the ''universal quantum
+      computer\u2019 are compatible with the principle. Computing machines resembling
+      the universal quantum computer could, in principle, be built and would have
+      many remarkable properties not reproducible by any Turing machine. These do
+      not include the computation of non-recursive functions, but they do include
+      \u2018quantum parallelism\u2019, a method by which certain probabilistic tasks
+      can be performed faster by a universal quantum computer than by any classical
+      restriction of it. The intuitive explanation of these properties places an intolerable
+      strain on all interpretations of quantum theory other than Everett\u2019s. Some
+      of the numerous connections between the quantum theory of computation and the
+      rest of physics are explored. Quantum complexity theory allows a physically
+      more reasonable definition of the \u2018complexity\u2019 or \u2018knowledge\u2019
+      in a physical system than does classical complexity theory.", "venue": "Proceedings
+      of the Royal Society of London. A. Mathematical and Physical Sciences", "year":
+      1985, "referenceCount": 19, "citationCount": 4221, "influentialCitationCount":
+      211, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.cs.berkeley.edu/~christos/classics/Deutsch_quantum_theory.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Physics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "1985-07-08", "journal": {"name": "Proceedings of the
+      Royal Society of London. A. Mathematical and Physical Sciences", "pages": "117
+      - 97", "volume": "400"}, "authors": [{"authorId": "145346874", "name": "D. Deutsch"}]},
+      {"paperId": "c3823aacea60bc1f2cabb9283144690a3d015db5", "externalIds": {"MAG":
+      "2167839676", "DBLP": "journals/corr/GravesWD14", "ArXiv": "1410.5401", "CorpusId":
+      15299054}, "corpusId": 15299054, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
+      "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
+      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/c3823aacea60bc1f2cabb9283144690a3d015db5",
+      "title": "Neural Turing Machines", "abstract": "We extend the capabilities of
+      neural networks by coupling them to external memory resources, which they can
+      interact with by attentional processes. The combined system is analogous to
+      a Turing Machine or Von Neumann architecture but is differentiable end-toend,
+      allowing it to be efficiently trained with gradient descent. Preliminary results
+      demonstrate that Neural Turing Machines can infer simple algorithms such as
+      copying, sorting, and associative recall from input and output examples.", "venue":
+      "arXiv.org", "year": 2014, "referenceCount": 41, "citationCount": 2046, "influentialCitationCount":
+      225, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2014-10-20", "journal": {"name": "ArXiv", "volume": "abs/1410.5401"}, "authors":
+      [{"authorId": "1753223", "name": "Alex Graves"}, {"authorId": "89504302", "name":
+      "Greg Wayne"}, {"authorId": "1841008", "name": "Ivo Danihelka"}]}, {"paperId":
+      "2d5673caa9e6af3a7b82a43f19ee920992db07ad", "externalIds": {"DBLP": "journals/x/Turing50",
+      "MAG": "2145482038", "DOI": "10.1093/MIND/LIX.236.433", "CorpusId": 14636783},
+      "corpusId": 14636783, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/2d5673caa9e6af3a7b82a43f19ee920992db07ad",
+      "title": "Computing Machinery and Intelligence", "abstract": "I propose to consider
+      the question, \u201cCan machines think?\u201d\u2663 This should begin with definitions
+      of the meaning of the terms \u201cmachine\u201d and \u201cthink\u201d. The definitions
+      might be framed so as to reflect so far as possible the normal use of the words,
+      but this attitude is dangerous. If the meaning of the words \u201cmachine\u201d
+      and \u201cthink\u201d are to be found by examining how they are commonly used
+      it is difficult to escape the conclusion that the meaning and the answer to
+      the question, \u201cCan machines think?\u201d is to be sought in a statistical
+      survey such as a Gallup poll.", "venue": "The Philosophy of Artificial Intelligence",
+      "year": 1950, "referenceCount": 14, "citationCount": 9677, "influentialCitationCount":
+      526, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Sociology"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Sociology", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": "1950-10-01", "journal": {"name": "Mind", "pages":
+      "433-460", "volume": "LIX"}, "authors": [{"authorId": "2262347", "name": "A.
+      Turing"}]}, {"paperId": "d635e2843c6fb034e9126aa73ef9c2e4e2c4714d", "externalIds":
+      {"MAG": "1985072454", "DOI": "10.1098/rstb.1952.0012", "CorpusId": 937133},
+      "corpusId": 937133, "publicationVenue": {"id": "6de51a3e-86d6-4b08-92f5-a2a4a3a1c47b",
+      "name": "Philosophical transactions of the Royal Society of London. Series B,
+      Biological sciences", "alternate_names": ["Philos trans R Soc Lond Ser B Biological
+      sci"], "issn": "0080-4622", "alternate_issns": ["2054-0280"], "url": "http://www.jstor.org/action/showPublication?journalCode=philtranroyasoc2"},
+      "url": "https://www.semanticscholar.org/paper/d635e2843c6fb034e9126aa73ef9c2e4e2c4714d",
+      "title": "The chemical basis of morphogenesis", "abstract": "It is suggested
+      that a system of chemical substances, called morphogens, reacting together and
+      diffusing through a tissue, is adequate to account for the main phenomena of
+      morphogenesis. Such a system, although it may originally be quite homogeneous,
+      may later develop a pattern or structure due to an instability of the homogeneous
+      equilibrium, which is triggered off by random disturbances. Such reaction-diffusion
+      systems are considered in some detail in the case of an isolated ring of cells,
+      a mathematically convenient, though biologically unusual system. The investigation
+      is chiefly concerned with the onset of instability. It is found that there are
+      six essentially different forms which this may take. In the most interesting
+      form stationary waves appear on the ring. It is suggested that this might account,
+      for instance, for the tentacle patterns onHydra and for whorled leaves. A system
+      of reactions and diffusion on a sphere is also considered. Such a system appears
+      to account for gastrulation. Another reaction system in two dimensions gives
+      rise to patterns reminiscent of dappling. It is also suggested that stationary
+      waves in two dimensions could account for the phenomena of phyllotaxis.The purpose
+      of this paper is to discuss a possible mechanism by which the genes of a zygote
+      may determine the anatomical structure of the resulting organism. The theory
+      does not make any new hypotheses; it merely suggests that certain well-known
+      physical laws are sufficient to account for many of the facts. The full understanding
+      of the paper requires a good knowledge of mathematics, some biology, and some
+      elementary chemistry. Since readers cannot be expected to be experts in all
+      of these subjects, a number of elementary facts are explained, which can be
+      found in text-books, but whose omission would make the paper difficult reading.",
+      "venue": "Philosophical transactions of the Royal Society of London. Series
+      B, Biological sciences", "year": 1952, "referenceCount": 7, "citationCount":
+      11395, "influentialCitationCount": 582, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "external"}, {"category": "Chemistry", "source": "s2-fos-model"},
+      {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": "1952-08-14", "journal": {"name": "Bulletin of Mathematical
+      Biology", "pages": "153-197", "volume": "52"}, "authors": [{"authorId": "2079681794",
+      "name": "A. Turing"}]}, {"paperId": "ab7790485f26ce65f9d83dd700c43e49058bdd2b",
+      "externalIds": {"MAG": "2126160338", "DBLP": "journals/x/Turing37", "DOI": "10.1112/PLMS/S2-42.1.230",
+      "CorpusId": 73712}, "corpusId": 73712, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ab7790485f26ce65f9d83dd700c43e49058bdd2b",
+      "title": "On computable numbers, with an application to the Entscheidungsproblem",
+      "abstract": "1. Computing machines. 2. Definitions. Automatic machines. Computing
+      machines. Circle and circle-free numbers. Computable sequences and numbers.
+      3. Examples of computing machines. 4. Abbreviated tables Further examples. 5.
+      Enumeration of computable sequences. 6. The universal computing machine. 7.
+      Detailed description of the universal machine. 8. Application of the diagonal
+      process. Pagina 1 di 38 On computable numbers, with an application to the Entscheidungsproblem
+      A. M. ...", "venue": "Proc. London Math. Soc.", "year": 1937, "referenceCount":
+      13, "citationCount": 8200, "influentialCitationCount": 485, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "Proc. London Math. Soc.", "pages": "230-265", "volume":
+      "s2-42"}, "authors": [{"authorId": "2079681794", "name": "A. Turing"}]}, {"paperId":
+      "571b0750085ae3d939525e62af510ee2cee9d5ea", "externalIds": {"DBLP": "conf/nips/SalimansGZCRCC16",
+      "ArXiv": "1606.03498", "MAG": "2949938177", "CorpusId": 1687220}, "corpusId":
+      1687220, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+      "name": "Neural Information Processing Systems", "type": "conference", "alternate_names":
+      ["Neural Inf Process Syst", "NeurIPS", "NIPS"], "url": "http://neurips.cc/"},
+      "url": "https://www.semanticscholar.org/paper/571b0750085ae3d939525e62af510ee2cee9d5ea",
+      "title": "Improved Techniques for Training GANs", "abstract": "We present a
+      variety of new architectural features and training procedures that we apply
+      to the generative adversarial networks (GANs) framework. We focus on two applications
+      of GANs: semi-supervised learning, and the generation of images that humans
+      find visually realistic. Unlike most work on generative models, our primary
+      goal is not to train a model that assigns high likelihood to test data, nor
+      do we require the model to be able to learn well without using any labels. Using
+      our new techniques, we achieve state-of-the-art results in semi-supervised classification
+      on MNIST, CIFAR-10 and SVHN. The generated images are of high quality as confirmed
+      by a visual Turing test: our model generates MNIST samples that humans cannot
+      distinguish from real data, and CIFAR-10 samples that yield a human error rate
+      of 21.3%. We also present ImageNet samples with unprecedented resolution and
+      show that our methods enable the model to learn recognizable features of ImageNet
+      classes.", "venue": "Neural Information Processing Systems", "year": 2016, "referenceCount":
+      28, "citationCount": 7372, "influentialCitationCount": 883, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
+      "publicationDate": "2016-06-10", "journal": {"name": "ArXiv", "volume": "abs/1606.03498"},
+      "authors": [{"authorId": "2887364", "name": "Tim Salimans"}, {"authorId": "153440022",
+      "name": "I. Goodfellow"}, {"authorId": "2563432", "name": "Wojciech Zaremba"},
+      {"authorId": "34415167", "name": "Vicki Cheung"}, {"authorId": "38909097", "name":
+      "Alec Radford"}, {"authorId": "41192764", "name": "Xi Chen"}]}, {"paperId":
+      "044e13d7dd4e0655eb76f0bd00b2c1bdb44e2be3", "externalIds": {"DBLP": "journals/corr/abs-2007-14062",
+      "ArXiv": "2007.14062", "MAG": "3045733172", "CorpusId": 220831004}, "corpusId":
+      220831004, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+      "name": "Neural Information Processing Systems", "type": "conference", "alternate_names":
+      ["Neural Inf Process Syst", "NeurIPS", "NIPS"], "url": "http://neurips.cc/"},
+      "url": "https://www.semanticscholar.org/paper/044e13d7dd4e0655eb76f0bd00b2c1bdb44e2be3",
+      "title": "Big Bird: Transformers for Longer Sequences", "abstract": "Transformers-based
+      models, such as BERT, have been one of the most successful deep learning models
+      for NLP. Unfortunately, one of their core limitations is the quadratic dependency
+      (mainly in terms of memory) on the sequence length due to their full attention
+      mechanism. To remedy this, we propose, BigBird, a sparse attention mechanism
+      that reduces this quadratic dependency to linear. We show that BigBird is a
+      universal approximator of sequence functions and is Turing complete, thereby
+      preserving these properties of the quadratic, full attention model. Along the
+      way, our theoretical analysis reveals some of the benefits of having $O(1)$
+      global tokens (such as CLS), that attend to the entire sequence as part of the
+      sparse attention mechanism. The proposed sparse attention can handle sequences
+      of length up to 8x of what was previously possible using similar hardware. As
+      a consequence of the capability to handle longer context, BigBird drastically
+      improves performance on various NLP tasks such as question answering and summarization.
+      We also propose novel applications to genomics data.", "venue": "Neural Information
+      Processing Systems", "year": 2020, "referenceCount": 118, "citationCount": 1278,
+      "influentialCitationCount": 201, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Computer Science", "Mathematics", "Geography"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "external"}, {"category": "Geography", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2020-07-28", "journal": {"name": "ArXiv", "volume": "abs/2007.14062"},
+      "authors": [{"authorId": "1771307", "name": "M. Zaheer"}, {"authorId": "1947314",
+      "name": "Guru Guruganesh"}, {"authorId": "89890133", "name": "Kumar Avinava
+      Dubey"}, {"authorId": "1643737606", "name": "J. Ainslie"}, {"authorId": "114577307",
+      "name": "Chris Alberti"}, {"authorId": "1722671", "name": "Santiago Onta\u00f1\u00f3n"},
+      {"authorId": "38552691", "name": "Philip Pham"}, {"authorId": "101210026", "name":
+      "Anirudh Ravula"}, {"authorId": "145196279", "name": "Qifan Wang"}, {"authorId":
+      "113906155", "name": "Li Yang"}, {"authorId": "143629707", "name": "Amr Ahmed"}]},
+      {"paperId": "8201e6e687f2de477258e9be53ba7b73ee30d7de", "externalIds": {"MAG":
+      "2326925005", "DBLP": "journals/corr/ZhangIE16", "ArXiv": "1603.08511", "DOI":
+      "10.1007/978-3-319-46487-9_40", "CorpusId": 50698}, "corpusId": 50698, "publicationVenue":
+      {"id": "167fa0ca-e88a-4ef7-a16f-bc66c457c806", "name": "European Conference
+      on Computer Vision", "type": "conference", "alternate_names": ["ECCV", "Eur
+      Conf Comput Vis"], "url": "https://link.springer.com/conference/eccv"}, "url":
+      "https://www.semanticscholar.org/paper/8201e6e687f2de477258e9be53ba7b73ee30d7de",
+      "title": "Colorful Image Colorization", "abstract": null, "venue": "European
+      Conference on Computer Vision", "year": 2016, "referenceCount": 57, "citationCount":
+      3150, "influentialCitationCount": 277, "isOpenAccess": true, "openAccessPdf":
+      {"url": "https://link.springer.com/content/pdf/10.1007/978-3-319-46487-9_40.pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Conference"], "publicationDate": "2016-03-28", "journal": {"pages": "649-666"},
+      "authors": [{"authorId": "2844849", "name": "Richard Zhang"}, {"authorId": "2094770",
+      "name": "Phillip Isola"}, {"authorId": "1763086", "name": "Alexei A. Efros"}]},
+      {"paperId": "9653d5c2c7844347343d073bbedd96e05d52f69b", "externalIds": {"DBLP":
+      "conf/nips/VinyalsFJ15", "MAG": "3037280547", "ArXiv": "1506.03134", "CorpusId":
+      5692837}, "corpusId": 5692837, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+      "name": "Neural Information Processing Systems", "type": "conference", "alternate_names":
+      ["Neural Inf Process Syst", "NeurIPS", "NIPS"], "url": "http://neurips.cc/"},
+      "url": "https://www.semanticscholar.org/paper/9653d5c2c7844347343d073bbedd96e05d52f69b",
+      "title": "Pointer Networks", "abstract": "We introduce a new neural architecture
+      to learn the conditional probability of an output sequence with elements that
+      are discrete tokens corresponding to positions in an input sequence. Such problems
+      cannot be trivially addressed by existent approaches such as sequence-to-sequence
+      [1] and Neural Turing Machines [2], because the number of target classes in
+      each step of the output depends on the length of the input, which is variable.
+      Problems such as sorting variable sized sequences, and various combinatorial
+      optimization problems belong to this class. Our model solves the problem of
+      variable size output dictionaries using a recently proposed mechanism of neural
+      attention. It differs from the previous attention attempts in that, instead
+      of using attention to blend hidden units of an encoder to a context vector at
+      each decoder step, it uses attention as a pointer to select a member of the
+      input sequence as the output. We call this architecture a Pointer Net (Ptr-Net).
+      We show Ptr-Nets can be used to learn approximate solutions to three challenging
+      geometric problems - finding planar convex hulls, computing Delaunay triangulations,
+      and the planar Travelling Salesman Problem - using training examples alone.
+      Ptr-Nets not only improve over sequence-to-sequence with input attention, but
+      also allow us to generalize to variable size output dictionaries. We show that
+      the learnt models generalize beyond the maximum lengths they were trained on.
+      We hope our results on these tasks will encourage a broader exploration of neural
+      learning for discrete problems.", "venue": "Neural Information Processing Systems",
+      "year": 2015, "referenceCount": 21, "citationCount": 2423, "influentialCitationCount":
+      281, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Conference"], "publicationDate": "2015-06-09", "journal": {"pages": "2692-2700"},
+      "authors": [{"authorId": "1689108", "name": "Oriol Vinyals"}, {"authorId": "39067762",
+      "name": "Meire Fortunato"}, {"authorId": "3111912", "name": "N. Jaitly"}]},
+      {"paperId": "815c84ab906e43f3e6322f2ca3fd5e1360c64285", "externalIds": {"MAG":
+      "2341708432", "DOI": "10.1126/science.aab3050", "CorpusId": 11790493, "PubMed":
+      "26659050"}, "corpusId": 11790493, "publicationVenue": {"id": "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad",
+      "name": "Science", "type": "journal", "issn": "0193-4511", "alternate_issns":
+      ["0036-8075"], "url": "https://www.jstor.org/journal/science", "alternate_urls":
+      ["https://www.sciencemag.org/", "http://www.sciencemag.org/", "http://www.jstor.org/journals/00368075.html",
+      "http://www.sciencemag.org/archive/"]}, "url": "https://www.semanticscholar.org/paper/815c84ab906e43f3e6322f2ca3fd5e1360c64285",
+      "title": "Human-level concept learning through probabilistic program induction",
+      "abstract": "Handwritten characters drawn by a model Not only do children learn
+      effortlessly, they do so quickly and with a remarkable ability to use what they
+      have learned as the raw material for creating new stuff. Lake et al. describe
+      a computational model that learns in a similar fashion and does so better than
+      current deep learning algorithms. The model classifies, parses, and recreates
+      handwritten characters, and can generate new letters of the alphabet that look
+      \u201cright\u201d as judged by Turing-like tests of the model''s output in comparison
+      to what real humans produce. Science, this issue p. 1332 Combining the capacity
+      to handle noise with probabilistic learning yields humanlike performance in
+      a computational model. People learning new concepts can often generalize successfully
+      from just a single example, yet machine learning algorithms typically require
+      tens or hundreds of examples to perform with similar accuracy. People can also
+      use learned concepts in richer ways than conventional algorithms\u2014for action,
+      imagination, and explanation. We present a computational model that captures
+      these human learning abilities for a large class of simple visual concepts:
+      handwritten characters from the world\u2019s alphabets. The model represents
+      concepts as simple programs that best explain observed examples under a Bayesian
+      criterion. On a challenging one-shot classification task, the model achieves
+      human-level performance while outperforming recent deep learning approaches.
+      We also present several \u201cvisual Turing tests\u201d probing the model\u2019s
+      creative generalization abilities, which in many cases are indistinguishable
+      from human behavior.", "venue": "Science", "year": 2015, "referenceCount": 98,
+      "citationCount": 2639, "influentialCitationCount": 290, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://science.sciencemag.org/content/sci/350/6266/1332.full.pdf",
+      "status": "CLOSED"}, "fieldsOfStudy": ["Computer Science", "Medicine"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Medicine",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2015-12-11", "journal":
+      {"name": "Science", "pages": "1332 - 1338", "volume": "350"}, "authors": [{"authorId":
+      "2373318", "name": "B. Lake"}, {"authorId": "145124475", "name": "R. Salakhutdinov"},
+      {"authorId": "1763295", "name": "J. Tenenbaum"}]}, {"paperId": "1a8d2e5bb9c646d85308fbd6ce33fce8765e2c26",
+      "externalIds": {"DBLP": "conf/stoc/Cook71", "MAG": "2036265926", "DOI": "10.1145/800157.805047",
+      "CorpusId": 7573663}, "corpusId": 7573663, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
+      "name": "Symposium on the Theory of Computing", "type": "conference", "alternate_names":
+      ["Symp Theory Comput", "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/1a8d2e5bb9c646d85308fbd6ce33fce8765e2c26",
+      "title": "The complexity of theorem-proving procedures", "abstract": "It is
+      shown that any recognition problem solved by a polynomial time-bounded nondeterministic
+      Turing machine can be \u201creduced\u201d to the problem of determining whether
+      a given propositional formula is a tautology. Here \u201creduced\u201d means,
+      roughly speaking, that the first problem can be solved deterministically in
+      polynomial time provided an oracle is available for solving the second. From
+      this notion of reducible, polynomial degrees of difficulty are defined, and
+      it is shown that the problem of determining tautologyhood has the same polynomial
+      degree as the problem of determining whether the first of two given graphs is
+      isomorphic to a subgraph of the second. Other examples are discussed. A method
+      of measuring the complexity of proof procedures for the predicate calculus is
+      introduced and discussed.", "venue": "Symposium on the Theory of Computing",
+      "year": 1971, "referenceCount": 9, "citationCount": 6974, "influentialCitationCount":
+      554, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/800157.805047",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle", "Book", "Conference"], "publicationDate": "1971-05-03", "journal":
+      {"name": "Proceedings of the third annual ACM symposium on Theory of computing"},
+      "authors": [{"authorId": "1765456", "name": "S. Cook"}]}, {"paperId": "79cadc74d31453332cde42ebfddcaae5bb86ed1a",
+      "externalIds": {"DBLP": "journals/cacm/ClarkeES09", "MAG": "2166422915", "DOI":
+      "10.1145/1592761.1592781", "CorpusId": 5857292}, "corpusId": 5857292, "publicationVenue":
+      {"id": "4d9ce1c4-dc84-46b9-903e-e3751c00c7dd", "name": "Communications of the
+      ACM", "type": "journal", "alternate_names": ["Commun ACM", "Communications of
+      The ACM"], "issn": "0001-0782", "url": "http://www.acm.org/pubs/cacm/", "alternate_urls":
+      ["http://portal.acm.org/cacm", "http://www.acm.org/pubs/contents/journals/cacm/",
+      "https://cacm.acm.org/"]}, "url": "https://www.semanticscholar.org/paper/79cadc74d31453332cde42ebfddcaae5bb86ed1a",
+      "title": "Model checking", "abstract": "Turing Lecture from the winners of the
+      2007 ACM A.M. Turing Award. In 1981, Edmund M. Clarke and E. Allen Emerson,
+      working in the USA, and Joseph Sifakis working independently in France, authored
+      seminal papers that founded what has become the highly successful field of model
+      checking. This verification technology provides an algorithmic means of determining
+      whether an abstract model---representing, for example, a hardware or software
+      design---satisfies a formal specification expressed as a temporal logic (TL)
+      formula. Moreover, if the property does not hold, the method identifies a counterexample
+      execution that shows the source of the problem. The progression of model checking
+      to the point where it can be successfully used for complex systems has required
+      the development of sophisticated means of coping with what is known as the state
+      explosion problem. Great strides have been made on this problem over the past
+      28 years by what is now a very large international research community. As a
+      result many major hardware and software companies are beginning to use model
+      checking in practice. Examples of its use include the verification of VLSI circuits,
+      communication protocols, software device drivers, real-time embedded systems,
+      and security algorithms. The work of Clarke, Emerson, and Sifakis continues
+      to be central to the success of this research area. Their work over the years
+      has led to the creation of new logics for specification, new verification algorithms,
+      and surprising theoretical results. Model checking tools, created by both academic
+      and industrial teams, have resulted in an entirely novel approach to verification
+      and test case generation. This approach, for example, often enables engineers
+      in the electronics industry to design complex systems with considerable assurance
+      regarding the correctness of their initial designs. Model checking promises
+      to have an even greater impact on the hardware and software industries in the
+      future. ---Moshe Y. Vardi, Editor-in-Chief", "venue": "Communications of the
+      ACM", "year": 2009, "referenceCount": 52, "citationCount": 4628, "influentialCitationCount":
+      131, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/1592761.1592781",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2009-11-01", "journal": {"name": "Communications of the
+      ACM", "pages": "74 - 84", "volume": "52"}, "authors": [{"authorId": null, "name":
+      "Edmund M. Clarke"}, {"authorId": null, "name": "E. Allen Emerson"}, {"authorId":
+      null, "name": "Joseph Sifakis"}]}, {"paperId": "96b0a95b67aa1ee556db21310b36555a3a373f95",
+      "externalIds": {"MAG": "1493708795", "DBLP": "journals/ir/Kantor01", "DOI":
+      "10.1023/A:1011424425034", "CorpusId": 115386587}, "corpusId": 115386587, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/96b0a95b67aa1ee556db21310b36555a3a373f95",
+      "title": "Foundations of Statistical Natural Language Processing", "abstract":
+      null, "venue": "Information retrieval (Boston)", "year": 2001, "referenceCount":
+      4, "citationCount": 3645, "influentialCitationCount": 329, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"},
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "2001-04-01", "journal": {"name": "Information
+      Retrieval", "pages": "80-81", "volume": "4"}, "authors": [{"authorId": "1705425",
+      "name": "P. Kantor"}]}, {"paperId": "5e49bd8b8394995e7c16ce25f62087d43d6a7b61",
+      "externalIds": {"DBLP": "journals/sigact/Lincoln92", "MAG": "2338576683", "DOI":
+      "10.1145/130956.130958", "CorpusId": 3035174}, "corpusId": 3035174, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/5e49bd8b8394995e7c16ce25f62087d43d6a7b61",
+      "title": "Linear logic", "abstract": "1 Linear Logic Linear logic was introduced
+      by Girard in 1987 11]. Since then many results have supported Girard''s claims
+      such as \\Linear logic is a resource conscious logic\". Increasingly, computer
+      scientists have recognized linear logic as an expressive and powerful logic,
+      with deep connections to concepts from computer science. The expressive power
+      of linear logic is evidenced by some very natural encodings of computational
+      models such as Petri nets, counter machines, Turing machines, and others. This
+      note presents an intuitive overview of linear logic, some recent theoretical
+      results, and some interesting applications of linear logic to computer science.
+      Other introductions to linear logic may be found in 12, 36]. 2 Linear Logic
+      vs Classical and Intuitionistic Logics Linear logic diiers from classical and
+      intuitionistic logic in several fundamental ways. Classical logic may be viewed
+      as if it deals with static propositions about the world where each proposition
+      is either true or false. Because of the static nature of propositions in classical
+      logic, one may \\duplicate\" propositions: P implies (P and P). Implicitly we
+      learn that \\one P is as good as two\". Also, one may discard propositions:
+      (P and Q) implies P. Here the proposition Q has been \\thrown away\". Both of
+      these sentences are valid in classical logic for any P and Q. In linear logic,
+      these sentences are not valid. A linear logician might ask \\Where did the second
+      P come from?\" and \\Where did the Q go?\". Of course these questions are nonse-quiturs
+      in the classical setting, since propositions are assumed to be static, unchanging
+      facts about the world. On the other hand, the rules of linear logic imply that
+      linear propositions stand for dynamic properties or nite resources.", "venue":
+      "SIGA", "year": 1992, "referenceCount": 38, "citationCount": 3303, "influentialCitationCount":
+      349, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/130956.130958",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle", "Review"], "publicationDate": "1992-05-01",
+      "journal": {"name": "SIGACT News", "pages": "29-37", "volume": "23"}, "authors":
+      [{"authorId": "145895495", "name": "P. Lincoln"}]}, {"paperId": "e0535dedb8607d83cd2614317c99913378e89e26",
+      "externalIds": {"DBLP": "journals/neco/MaassNM02", "MAG": "2103179919", "DOI":
+      "10.1162/089976602760407955", "CorpusId": 1045112, "PubMed": "12433288"}, "corpusId":
+      1045112, "publicationVenue": {"id": "69b9bcdd-8229-4a00-a6e0-00f0e99a2bf3",
+      "name": "Neural Computation", "type": "journal", "alternate_names": ["Neural
+      Comput"], "issn": "0899-7667", "url": "http://cognet.mit.edu/library/journals/journal?issn=08997667",
+      "alternate_urls": ["http://ieeexplore.ieee.org/servlet/opac?punumber=6720226",
+      "http://www.mitpressjournals.org/loi/neco", "https://www.mitpressjournals.org/loi/neco"]},
+      "url": "https://www.semanticscholar.org/paper/e0535dedb8607d83cd2614317c99913378e89e26",
+      "title": "Real-Time Computing Without Stable States: A New Framework for Neural
+      Computation Based on Perturbations", "abstract": "A key challenge for neural
+      modeling is to explain how a continuous stream of multimodal input from a rapidly
+      changing environment can be processed by stereotypical recurrent circuits of
+      integrate-and-fire neurons in real time. We propose a new computational model
+      for real-time computing on time-varying input that provides an alternative to
+      paradigms based on Turing machines or attractor neural networks. It does not
+      require a task-dependent construction of neural circuits. Instead, it is based
+      on principles of high-dimensional dynamical systems in combination with statistical
+      learning theory and can be implemented on generic evolved or found recurrent
+      circuitry. It is shown that the inherent transient dynamics of the high-dimensional
+      dynamical system formed by a sufficiently large and heterogeneous neural circuit
+      may serve as universal analog fading memory. Readout neurons can learn to extract
+      in real time from the current state of such recurrent neural circuit information
+      about current and past inputs that may be needed for diverse tasks. Stable internal
+      states are not required for giving a stable output, since transient internal
+      states can be transformed by readout neurons into stable target outputs due
+      to the high dimensionality of the dynamical system. Our approach is based on
+      a rigorous computational model, the liquid state machine, that, unlike Turing
+      machines, does not require sequential transitions between well-defined discrete
+      internal states. It is supported, as the Turing machine is, by rigorous mathematical
+      results that predict universal computational power under idealized conditions,
+      but for the biologically more realistic scenario of real-time processing of
+      time-varying inputs. Our approach provides new perspectives for the interpretation
+      of neural coding, the design of experiments and data analysis in neurophysiology,
+      and the solution of problems in robotics and neurotechnology.", "venue": "Neural
+      Computation", "year": 2002, "referenceCount": 34, "citationCount": 3256, "influentialCitationCount":
+      244, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Medicine"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Medicine", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "2002-11-01", "journal": {"name": "Neural Computation", "pages":
+      "2531-2560", "volume": "14"}, "authors": [{"authorId": "145247053", "name":
+      "W. Maass"}, {"authorId": "1792142", "name": "T. Natschl\u00e4ger"}, {"authorId":
+      "1754307", "name": "H. Markram"}]}, {"paperId": "4c7671550671deba9ec318d867522897f20e19ba",
+      "externalIds": {"MAG": "2105259569", "DOI": "10.1147/RD.176.0525", "CorpusId":
+      14641793}, "corpusId": 14641793, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c7671550671deba9ec318d867522897f20e19ba",
+      "title": "Logical reversibility of computation", "abstract": "The usual general-purpose
+      computing automaton (e.g.. a Turing machine) is logically irreversible- its
+      transition function lacks a single-valued inverse. Here it is shown that such
+      machines may he made logically reversible at every step, while retainillg their
+      simplicity and their ability to do general computations. This result is of great
+      physical interest because it makes plausible the existence of thermodynamically
+      reversible computers which could perform useful computations at useful speed
+      while dissipating considerably less than kT of energy per logical step. In the
+      first stage of its computation the logically reversible automaton parallels
+      the corresponding irreversible automaton, except that it saves all intermediate
+      results, there by avoiding the irreversible operation of erasure. The second
+      stage consists of printing out the desired output. The third stage then reversibly
+      disposes of all the undesired intermediate results by retracing the steps of
+      the first stage in backward order (a process which is only possible because
+      the first stage has been carried out reversibly), there by restoring the machine
+      (except for the now-written output tape) to its original condition. The final
+      machine configuration thus contains the desired output and a reconstructed copy
+      of the input, but no other undesired data. The foregoing results are demonstrated
+      explicitly using a type of three-tape Turing machine. The biosynthesis of messenger
+      RNA is discussed as a physical example of reversible computation.", "venue":
+      "", "year": 1973, "referenceCount": 5, "citationCount": 3706, "influentialCitationCount":
+      227, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Physics", "source": "s2-fos-model"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1973-11-01",
+      "journal": {"name": "Ibm Journal of Research and Development", "pages": "525-532",
+      "volume": "17"}, "authors": [{"authorId": "2623914", "name": "Charles H. Bennett"}]},
+      {"paperId": "1c6c3e5e245869e5282e07a655e475c83e60883e", "externalIds": {"MAG":
+      "2530006810", "DOI": "10.2307/2316720", "CorpusId": 122951574}, "corpusId":
+      122951574, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1c6c3e5e245869e5282e07a655e475c83e60883e",
+      "title": "Theory of Recursive Functions and Effective Computability", "abstract":
+      "Central concerns of the book are related theories of recursively enumerable
+      sets, of degree of un-solvability and turing degrees in particular. A second
+      group of topics has to do with generalizations of recursion theory. The third
+      topics group mentioned is subrecursive computability and subrecursive hierarchies",
+      "venue": "", "year": 1969, "referenceCount": 0, "citationCount": 3293, "influentialCitationCount":
+      126, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1969-06-01",
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1423404594",
+      "name": "Jr. Hartley Rogers"}]}, {"paperId": "128cb6b891aee1b5df099acb48e2efecfcff689f",
+      "externalIds": {"DBLP": "conf/aaaiss/Levesque11", "MAG": "2267020232", "CorpusId":
+      15710851}, "corpusId": 15710851, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/128cb6b891aee1b5df099acb48e2efecfcff689f",
+      "title": "The Winograd Schema Challenge", "abstract": "In this paper, we present
+      an alternative to the Turing Test that has some conceptual and practical advantages.
+      Like the original, it involves responding to typed English sentences, and English-speaking
+      adults will have no difficulty with it. Unlike the original, the subject is
+      not required to engage in a conversation and fool an interrogator into believing
+      she is dealing with a person. Moreover, the test is arranged in such a way that
+      having full access to a large corpus of English text might not help much. Finally,
+      the interrogator or a third party will be able to decide unambiguously after
+      a few minutes whether or not a subject has passed the test.", "venue": "AAAI
+      Spring Symposium: Logical Formalizations of Commonsense Reasoning", "year":
+      2011, "referenceCount": 26, "citationCount": 1041, "influentialCitationCount":
+      207, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "2011-03-20", "journal": {"name": "",
+      "volume": ""}, "authors": [{"authorId": "143634377", "name": "H. Levesque"},
+      {"authorId": "144883814", "name": "E. Davis"}, {"authorId": "40429476", "name":
+      "L. Morgenstern"}]}, {"paperId": "3904315e2eca50d0086e4b7273f7fd707c652230",
+      "externalIds": {"DBLP": "conf/icml/SantoroBBWL16", "MAG": "2472819217", "CorpusId":
+      6466088}, "corpusId": 6466088, "publicationVenue": {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29",
+      "name": "International Conference on Machine Learning", "type": "conference",
+      "alternate_names": ["ICML", "Int Conf Mach Learn"], "url": "https://icml.cc/"},
+      "url": "https://www.semanticscholar.org/paper/3904315e2eca50d0086e4b7273f7fd707c652230",
+      "title": "Meta-Learning with Memory-Augmented Neural Networks", "abstract":
+      "Despite recent breakthroughs in the applications of deep neural networks, one
+      setting that presents a persistent challenge is that of \"one-shot learning.\"
+      Traditional gradient-based networks require a lot of data to learn, often through
+      extensive iterative training. When new data is encountered, the models must
+      inefficiently relearn their parameters to adequately incorporate the new information
+      without catastrophic interference. Architectures with augmented memory capacities,
+      such as Neural Turing Machines (NTMs), offer the ability to quickly encode and
+      retrieve new information, and hence can potentially obviate the downsides of
+      conventional models. Here, we demonstrate the ability of a memory-augmented
+      neural network to rapidly assimilate new data, and leverage this data to make
+      accurate predictions after only a few samples. We also introduce a new method
+      for accessing an external memory that focuses on memory content, unlike previous
+      methods that additionally use memory location-based focusing mechanisms.", "venue":
+      "International Conference on Machine Learning", "year": 2016, "referenceCount":
+      21, "citationCount": 1480, "influentialCitationCount": 81, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Conference"], "publicationDate": "2016-06-19", "journal": {"pages": "1842-1850"},
+      "authors": [{"authorId": "35030998", "name": "Adam Santoro"}, {"authorId": "2258504",
+      "name": "Sergey Bartunov"}, {"authorId": "46378362", "name": "M. Botvinick"},
+      {"authorId": "1688276", "name": "Daan Wierstra"}, {"authorId": "2542999", "name":
+      "T. Lillicrap"}]}, {"paperId": "884bfee7c2c6a874fad2a34207eb266f97a6cc77", "externalIds":
+      {"MAG": "1990236474", "DOI": "10.1162/artl.1995.2.3.333", "CorpusId": 44710180},
+      "corpusId": 44710180, "publicationVenue": {"id": "5ed9f470-65a3-4077-8dab-163b0c5cb9e6",
+      "name": "Artificial Life", "type": "journal", "alternate_names": ["Artif Life"],
+      "issn": "1064-5462", "url": "http://cognet.mit.edu/library/journals/journal?issn=10645462",
+      "alternate_urls": ["http://www.mitpressjournals.org/loi/artl", "https://www.mitpressjournals.org/loi/artl",
+      "https://www.mitpressjournals.org/doi/10.1162/ARTL_a_00243"]}, "url": "https://www.semanticscholar.org/paper/884bfee7c2c6a874fad2a34207eb266f97a6cc77",
+      "title": "Hidden Order: How Adaptation Builds Complexity.", "abstract": "Computer
+      simulations of artificial ecologies typically model the interactions of a population
+      of independently acting, spatially situated, resource-restricted, differently
+      structured, self-reproducing agents. The interactions in such systems are typically
+      highly nonlinear, subject to random perturbation, executed in parallel, and
+      coevolutionary in the sense that the agents interact with each other as well
+      as their environment. Examples of artificial ecologies that possess the above
+      characteristics include Skipper''s \"computer zoo\" of migrating flocks of hierarchically
+      invokable fragments of assembly code [10], Shanahan''s populations of evolutionary
+      automata [9], Lindgren''s coevolving populations of strategies for playing the
+      iterated prisoner''s dilemma game [5], the Turing gas of self-organizing groups
+      of autocatalytic algorithmic fragments of Rasmussen, KnudLsen, and Feldberg
+      [6], Ray''s populations of parasitic and symbiotic self-reproducing assembly
+      code programs [8], the populations of redcode coreworld creatures of Rasmussen,
+      Knudsen, Feldberg, and Hindsholm [7], Werner and Dyer''s populations of males
+      and females that coevolve communication [11], and Ackley and Littman''s artificial
+      world for testing the Baldwin effect concerning learning and evolution [1].
+      Each of these complex adaptive systems (and many others like them) succeed in
+      illustrating one or more key features of living systems. However, each of these
+      systems live up to their name in the worst possible way\u2014they are all exceedingly
+      complex. The emergent behavior and other interesting phenomena are obscured
+      by so much modelspecific detail that it is rarely clear whether the observed
+      phenomena represent any important general principles or are merely artifacts
+      of the details. Moreover, all of these existing systems are computationally
+      expensive and deliver little in the way of important emergent phenomena in relation
+      to the amount of computational effort expended. This excessive overhead is not
+      merely a matter of inefficiency or inconvenience; it may actually preclude emergence
+      of important phenomena that can only materialize in the presence of certain
+      minimum amounts of time or matter. John Holland''s new book, Hidden Order: How
+      Adaptation Builds Complexity [3],", "venue": "Artificial Life", "year": 1995,
+      "referenceCount": 2, "citationCount": 2258, "influentialCitationCount": 255,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Biology",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "Artificial Life", "pages": "333-335", "volume": "2"}, "authors":
+      [{"authorId": "1732302", "name": "J. Koza"}]}, {"paperId": "73c82f0630015c181d7ae6a7ff1d186dc26e29af",
+      "externalIds": {"MAG": "1518039036", "DBLP": "books/daglib/0000928", "DOI":
+      "10.1137/1.9781611971453", "CorpusId": 5517579}, "corpusId": 5517579, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/73c82f0630015c181d7ae6a7ff1d186dc26e29af",
+      "title": "Primal-Dual Interior-Point Methods", "abstract": "Preface Notation
+      1. Introduction. Linear Programming Primal-Dual Methods The Central Path A Primal-Dual
+      Framework Path-Following Methods Potential-Reduction Methods Infeasible Starting
+      Points Superlinear Convergence Extensions Mehrotra''s Predictor-Corrector Algorithm
+      Linear Algebra Issues Karmarkar''s Algorithm 2. Background. Linear Programming
+      and Interior-Point Methods Standard Form Optimality Conditions, Duality, and
+      Solution Sets The B {SYMBOL 200 \\f \"Symbol\"} N Partition and Strict Complementarity
+      A Strictly Interior Point Rank of the Matrix A Bases and Vertices Farkas''s
+      Lemma and a Proof of the Goldman-Tucker Result The Central Path Background.
+      Primal Method Primal-Dual Methods. Development of the Fundamental Ideas Notes
+      and References 3. Complexity Theory. Polynomial Versus Exponential, Worst Case
+      vs Average Case Storing the Problem Data. Dimension and Size The Turing Machine
+      and Rational Arithmetic Primal-Dual Methods and Rational Arithmetic Linear Programming
+      and Rational Numbers Moving to a Solution from an Interior Point Complexity
+      of Simplex, Ellipsoid, and Interior-Point Methods Polynomial and Strongly Polynomial
+      Algorithms Beyond the Turing Machine Model More on the Real-Number Model and
+      Algebraic Complexity A General Complexity Theorem for Path-Following Methods
+      Notes and References 4. Potential-Reduction Methods. A Primal-Dual Potential-Reduction
+      Algorithm Reducing Forces Convergence A Quadratic Estimate of \\Phi _{\\rho
+      } along a Feasible Direction Bounding the Coefficients in The Quadratic Approximation
+      An Estimate of the Reduction in \\Phi _{\\rho } and Polynomial Complexity What
+      About Centrality? Choosing {SYMBOL 114 \\f \"Symbol\"} and {SYMBOL 97 \\f \"Symbol\"}
+      Notes and References 5. Path-Following Algorithms. The Short-Step Path-Following
+      Algorithm Technical Results The Predictor-Corrector Method A Long-Step Path-Following
+      Algorithm Limit Points of the Iteration Sequence Proof of Lemma 5.3 Notes and
+      References 6. Infeasible-Interior-Point Algorithms. The Algorithm Convergence
+      of Algorithm IPF Technical Results I. Bounds on \\nu _k \\delimiter \"026B30D
+      (x^k,s^k) \\delimiter \"026B30D Technical Results II. Bounds on (D^k)^{-1} \\Delta
+      x^k and D^k \\Delta s^k Technical Results III. A Uniform Lower Bound on {SYMBOL
+      97 \\f \"Symbol\"}k Proofs of Theorems 6.1 and 6.2 Limit Points of the Iteration
+      Sequence 7. Superlinear Convergence and Finite Termination. Affine-Scaling Steps
+      An Estimate of ({SYMBOL 68 \\f \"Symbol\"}x, {SYMBOL 68 \\f \"Symbol\"} s).
+      The Feasible Case An Estimate of ({SYMBOL 68 \\f \"Symbol\"} x, {SYMBOL 68 \\f
+      \"Symbol\"} s). The Infeasible Case Algorithm PC Is Superlinear Nearly Quadratic
+      Methods Convergence of Algorithm LPF+ Convergence of the Iteration Sequence
+      {SYMBOL 206 \\f \"Symbol\"}(A,b,c) and Finite Termination A Finite Termination
+      Strategy Recovering an Optimal Basis More on {SYMBOL 206 \\f \"Symbol\"} (A,b,c)
+      Notes and References 8. Extensions. The Monotone LCP Mixed and Horizontal LCP
+      Strict Complementarity and LCP Convex QP Convex Programming Monotone Nonlinear
+      Complementarity and Variational Inequalities Semidefinite Programming Proof
+      of Theorem 8.4. Notes and References 9. Detecting Infeasibility. Self-Duality
+      The Simplified HSD Form The HSDl Form Identifying a Solution-Free Region Implementations
+      of the HSD Formulations Notes and References 10. Practical Aspects of Primal-Dual
+      Algorithms. Motivation for Mehrotra''s Algorithm The Algorithm Superquadratic
+      Convergence Second-Order Trajectory-Following Methods Higher-Order Methods Further
+      Enhancements Notes and References 11. Implementations. Three Forms of the Step
+      Equation The Cholesky Factorization Sparse Cholesky Factorization. Minimum-Degree
+      Orderings Other Orderings Small Pivots in the Cholesky Factorization Dense Columns
+      in A The Augmented System Formulat", "venue": "Other Titles in Applied Mathematics",
+      "year": 1997, "referenceCount": 2, "citationCount": 2462, "influentialCitationCount":
+      207, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1997-01-01",
+      "journal": {"pages": "I-XX, 1-289"}, "authors": [{"authorId": "144731788", "name":
+      "Stephen J. Wright"}]}, {"paperId": "86bb5811e8eb8c835e2b942f7e45530b87856561",
+      "externalIds": {"MAG": "1988374166", "DBLP": "journals/jacm/GoldreichO96", "DOI":
+      "10.1145/233551.233553", "CorpusId": 7502114}, "corpusId": 7502114, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/86bb5811e8eb8c835e2b942f7e45530b87856561",
+      "title": "Software protection and simulation on oblivious RAMs", "abstract":
+      "Software protection is one of the most important issues concerning computer
+      practice. There exist many heuristics and ad-hoc methods for protection, but
+      the problem as a whole has not received the theoretical treatment it deserves.
+      In this paper, we provide theoretical treatment of software protection. We reduce
+      the problem of software protection to the problem of efficient simulation on
+      oblivious RAM.\nA machine is oblivious if thhe sequence in which it accesses
+      memory locations is equivalent for any two inputs with the same running time.
+      For example, an oblivious Turing Machine is one for which the movement of the
+      heads on the tapes is identical for each computation. (Thus, the movement is
+      independent of the actual input.) What is the slowdown in the running time of
+      a machine, if it is required to be oblivious? In 1979, Pippenger and Fischer
+      showed how a two-tape oblivious Turing Machine can simulate, on-line, a one-tape
+      Turing Machine, with a logarithmic slowdown in the running time. We show an
+      analogous result for the random-access machine (RAM) model of computation. In
+      particular, we show how to do an on-line simulation of an arbitrary RAM by a
+      probabilistic oblivious RAM with a polylogaithmic slowdown in the running time.
+      On the other hand, we show that a logarithmic slowdown is a lower bound.", "venue":
+      "JACM", "year": 1996, "referenceCount": 32, "citationCount": 1683, "influentialCitationCount":
+      373, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/233551.233553",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1996-05-01", "journal": {"name": "J. ACM", "pages": "431-473",
+      "volume": "43"}, "authors": [{"authorId": "1748224", "name": "R. Ostrovsky"}]},
+      {"paperId": "75caeb5274630bd52cbcd8f549237c30d108e2ff", "externalIds": {"MAG":
+      "1993688167", "DBLP": "journals/siamcomp/BernsteinV97", "DOI": "10.1145/167088.167097",
+      "CorpusId": 676378}, "corpusId": 676378, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
+      "name": "Symposium on the Theory of Computing", "type": "conference", "alternate_names":
+      ["Symp Theory Comput", "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/75caeb5274630bd52cbcd8f549237c30d108e2ff",
+      "title": "Quantum complexity theory", "abstract": "In this paper we study quantum
+      computation from a complexity theoretic viewpoint. Our first result is the existence
+      of an efficient universal quantum Turing machine in Deutsch''s model of a quantum
+      Turing machine (QTM) [Proc. Roy. Soc. London Ser. A, 400 (1985), pp. 97--117].
+      This construction is substantially more complicated than the corresponding construction
+      for classical Turing machines (TMs); in fact, even simple primitives such as
+      looping, branching, and composition are not straightforward in the context of
+      quantum Turing machines. We establish how these familiar primitives can be implemented
+      and introduce some new, purely quantum mechanical primitives, such as changing
+      the computational basis and carrying out an arbitrary unitary transformation
+      of polynomially bounded dimension. \nWe also consider the precision to which
+      the transition amplitudes of a quantum Turing machine need to be specified.
+      We prove that $O(\\log T)$ bits of precision suffice to support a $T$ step computation.
+      This justifies the claim that the quantum Turing machine model should be regarded
+      as a discrete model of computation and not an analog one. \nWe give the first
+      formal evidence that quantum Turing machines violate the modern (complexity
+      theoretic) formulation of the Church--Turing thesis. We show the existence of
+      a problem, relative to an oracle, that can be solved in polynomial time on a
+      quantum Turing machine, but requires superpolynomial time on a bounded-error
+      probabilistic Turing machine, and thus not in the class $\\BPP$. The class $\\BQP$
+      of languages that are efficiently decidable (with small error-probability) on
+      a quantum Turing machine satisfies $\\BPP \\subseteq \\BQP \\subseteq \\Ptime^{\\SP}$.
+      Therefore, there is no possibility of giving a mathematical proof that quantum
+      Turing machines are more powerful than classical probabilistic Turing machines
+      (in the unrelativized setting) unless there is a major breakthrough in complexity
+      theory.", "venue": "Symposium on the Theory of Computing", "year": 1993, "referenceCount":
+      45, "citationCount": 1913, "influentialCitationCount": 238, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
+      "publicationTypes": ["Book", "JournalArticle", "Conference"], "publicationDate":
+      "1993-06-01", "journal": {"name": "Proceedings of the twenty-fifth annual ACM
+      symposium on Theory of Computing"}, "authors": [{"authorId": "48863272", "name":
+      "Ethan S. Bernstein"}, {"authorId": "46753437", "name": "U. Vazirani"}]}, {"paperId":
+      "cb346929220d4df38edc314056ee1933496c6cf5", "externalIds": {"MAG": "2100440346",
+      "DBLP": "books/sp/GLS1988", "DOI": "10.1007/978-3-642-97881-4", "CorpusId":
+      122339802}, "corpusId": 122339802, "publicationVenue": {"id": "2c9af4b0-18ba-458f-a4ba-413076dbaad9",
+      "name": "Algorithms and Combinatorics", "alternate_names": ["Algorithm Comb"],
+      "issn": "0937-5511"}, "url": "https://www.semanticscholar.org/paper/cb346929220d4df38edc314056ee1933496c6cf5",
+      "title": "Geometric Algorithms and Combinatorial Optimization", "abstract":
+      null, "venue": "Algorithms and Combinatorics", "year": 1988, "referenceCount":
+      0, "citationCount": 2101, "influentialCitationCount": 146, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://link.springer.com/content/pdf/bfm:978-3-642-78240-4/1?pdf=chapter%20toc",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["Review"], "publicationDate": null, "journal": {"volume": "2"}, "authors":
+      [{"authorId": "2588854", "name": "M. Gr\u00f6tschel"}, {"authorId": "1725557",
+      "name": "L. Lov\u00e1sz"}, {"authorId": "1689196", "name": "A. Schrijver"}]},
+      {"paperId": "134770862b5ccedbb5376cb1a9de61d3d4973c17", "externalIds": {"DBLP":
+      "journals/sigsoft/Law01a", "MAG": "2764347725", "DOI": "10.1145/505482.505499",
+      "CorpusId": 261561224}, "corpusId": 261561224, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/134770862b5ccedbb5376cb1a9de61d3d4973c17",
+      "title": "Quantum computation and quantum information", "abstract": "An easy-to-comprehend
+      text for required undergraduate courses in computer theory, this work thoroughly
+      covers the three fundamental areas of computer theory--formal languages, automata
+      theory, and Turing machines. It is an imaginative and pedagogically strong attempt
+      to remove the unnecessary mathematical complications associated with the study
+      of these subjects. The author substitutes graphic representation for symbolic
+      proofs, allowing students with poor mathematical background to easily follow
+      each step. Includes a large selection of well thought out problems at the end
+      of each chapter.", "venue": "SOEN", "year": 2001, "referenceCount": 0, "citationCount":
+      1353, "influentialCitationCount": 181, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2001-07-01", "journal":
+      {"name": "ACM SIGSOFT Softw. Eng. Notes", "pages": "91", "volume": "26"}, "authors":
+      [{"authorId": "2250425238", "name": "Jim Law"}]}, {"paperId": "b3296c877ed52b3961990507714b434058977ec9",
+      "externalIds": {"MAG": "2344803891", "DOI": "10.1126/science.1179047", "CorpusId":
+      10194433, "PubMed": "20929839"}, "corpusId": 10194433, "publicationVenue": {"id":
+      "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad", "name": "Science", "type": "journal",
+      "issn": "0193-4511", "alternate_issns": ["0036-8075"], "url": "https://www.jstor.org/journal/science",
+      "alternate_urls": ["https://www.sciencemag.org/", "http://www.sciencemag.org/",
+      "http://www.jstor.org/journals/00368075.html", "http://www.sciencemag.org/archive/"]},
+      "url": "https://www.semanticscholar.org/paper/b3296c877ed52b3961990507714b434058977ec9",
+      "title": "Reaction-Diffusion Model as a Framework for Understanding Biological
+      Pattern Formation", "abstract": "Turing Model Explained The reaction-diffusion
+      (Turing) model is a theoretical model used to explain self-regulated pattern
+      formation in biology. Although many biologists have heard of this model, a better
+      understanding of the concept would aid its application to many research projects
+      and developmental principles. Kondo and Miura (p. 1616) now review the reaction-diffusion
+      model. Despite the associated mathematics, the basic idea of the Turing model
+      is relatively easy to understand and relates to morphogen gradients. In addition,
+      user-friendly software makes it easy to understand how a whole variety of patterns
+      can be produced by this simple mechanism. The Turing, or reaction-diffusion
+      (RD), model is one of the best-known theoretical models used to explain self-regulated
+      pattern formation in the developing animal embryo. Although its real-world relevance
+      was long debated, a number of compelling examples have gradually alleviated
+      much of the skepticism surrounding the model. The RD model can generate a wide
+      variety of spatial patterns, and mathematical studies have revealed the kinds
+      of interactions required for each, giving this model the potential for application
+      as an experimental working hypothesis in a wide variety of morphological phenomena.
+      In this review, we describe the essence of this theory for experimental biologists
+      unfamiliar with the model, using examples from experimental studies in which
+      the RD model is effectively incorporated.", "venue": "Science", "year": 2010,
+      "referenceCount": 41, "citationCount": 1327, "influentialCitationCount": 32,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
+      "Engineering", "Computer Science"], "s2FieldsOfStudy": [{"category": "Medicine",
+      "source": "external"}, {"category": "Engineering", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Biology", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review", "JournalArticle"], "publicationDate":
+      "2010-09-24", "journal": {"name": "Science", "pages": "1616 - 1620", "volume":
+      "329"}, "authors": [{"authorId": "2636335", "name": "Shigeru Kondo"}, {"authorId":
+      "47938934", "name": "T. Miura"}]}, {"paperId": "5a9bb4750818b756e68e91347fd7618cf96e019b",
+      "externalIds": {"MAG": "2022710553", "DOI": "10.1126/science.1160379", "CorpusId":
+      18371056, "PubMed": "18703711"}, "corpusId": 18371056, "publicationVenue": {"id":
+      "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad", "name": "Science", "type": "journal",
+      "issn": "0193-4511", "alternate_issns": ["0036-8075"], "url": "https://www.jstor.org/journal/science",
+      "alternate_urls": ["https://www.sciencemag.org/", "http://www.sciencemag.org/",
+      "http://www.jstor.org/journals/00368075.html", "http://www.sciencemag.org/archive/"]},
+      "url": "https://www.semanticscholar.org/paper/5a9bb4750818b756e68e91347fd7618cf96e019b",
+      "title": "reCAPTCHA: Human-Based Character Recognition via Web Security Measures",
+      "abstract": "CAPTCHAs (Completely Automated Public Turing test to tell Computers
+      and Humans Apart) are widespread security measures on the World Wide Web that
+      prevent automated programs from abusing online services. They do so by asking
+      humans to perform a task that computers cannot yet perform, such as deciphering
+      distorted characters. Our research explored whether such human effort can be
+      channeled into a useful purpose: helping to digitize old printed material by
+      asking users to decipher scanned words from books that computerized optical
+      character recognition failed to recognize. We showed that this method can transcribe
+      text with a word accuracy exceeding 99%, matching the guarantee of professional
+      human transcribers. Our apparatus is deployed in more than 40,000 Web sites
+      and has transcribed over 440 million words.", "venue": "Science", "year": 2008,
+      "referenceCount": 20, "citationCount": 1198, "influentialCitationCount": 52,
+      "isOpenAccess": true, "openAccessPdf": {"url": "http://www.cs.cmu.edu/~biglou/reCAPTCHA_Science.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Medicine"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Medicine",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "2008-09-12", "journal":
+      {"name": "Science", "pages": "1465 - 1468", "volume": "321"}, "authors": [{"authorId":
+      "35552151", "name": "L. von Ahn"}, {"authorId": "2054265110", "name": "Benjamin
+      Maurer"}, {"authorId": "50258677", "name": "Colin McMillen"}, {"authorId": "2058339483",
+      "name": "David J. Abraham"}, {"authorId": "143624243", "name": "M. Blum"}]},
+      {"paperId": "d34a810719d6c132d9fb697df1b5a38e2fd0dc05", "externalIds": {"MAG":
+      "2137005141", "DBLP": "conf/focs/Simon94", "DOI": "10.1109/SFCS.1994.365701",
+      "CorpusId": 7457814}, "corpusId": 7457814, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/d34a810719d6c132d9fb697df1b5a38e2fd0dc05",
+      "title": "On the power of quantum computation", "abstract": "The quantum model
+      of computation is a probabilistic model, similar to the probabilistic Turing
+      Machine, in which the laws of chance are those obeyed by particles on a quantum
+      mechanical scale, rather than the rules familiar to us from the macroscopic
+      world. We present here a problem of distinguishing between two fairly natural
+      classes of function, which can provably be solved exponentially faster in the
+      quantum model than in the classical probabilistic one, when the function is
+      given as an oracle drawn equiprobably from the uniform distribution on either
+      class. We thus offer compelling evidence that the quantum model may have significantly
+      more complexity theoretic power than the probabilistic Turing Machine. In fact,
+      drawing on this work, Shor (1994) has recently developed remarkable new quantum
+      polynomial-time algorithms for the discrete logarithm and integer factoring
+      problems.<<ETX>>", "venue": "Proceedings 35th Annual Symposium on Foundations
+      of Computer Science", "year": 1994, "referenceCount": 22, "citationCount": 1551,
+      "influentialCitationCount": 123, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+      "Physics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1994-11-20", "journal": {"name": "Proceedings 35th Annual
+      Symposium on Foundations of Computer Science", "pages": "116-123"}, "authors":
+      [{"authorId": "1973111", "name": "Daniel R. Simon"}]}, {"paperId": "7dbf4c5424c676f7e04010a0a6678cab40e71332",
+      "externalIds": {"DBLP": "journals/jacm/DavisP60", "MAG": "2062897452", "DOI":
+      "10.1145/321033.321034", "CorpusId": 31888376}, "corpusId": 31888376, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/7dbf4c5424c676f7e04010a0a6678cab40e71332",
+      "title": "A Computing Procedure for Quantification Theory", "abstract": "The
+      hope that mathematical methods employed in the investigation of formal logic
+      would lead to purely computational methods for obtaining mathematical theorems
+      goes back to Leibniz and has been revived by Peano around the turn of the century
+      and by Hilbert''s school in the 1920''s. Hilbert, noting that all of classical
+      mathematics could be formalized within quantification theory, declared that
+      the problem of finding an algorithm for determining whether or not a given formula
+      of quantification theory is valid was the central problem of mathematical logic.
+      And indeed, at one time it seemed as if investigations of this \u201cdecision\u201d
+      problem were on the verge of success. However, it was shown by Church and by
+      Turing that such an algorithm can not exist. This result led to considerable
+      pessimism regarding the possibility of using modern digital computers in deciding
+      significant mathematical questions. However, recently there has been a revival
+      of interest in the whole question. Specifically, it has been realized that while
+      no decision procedure exists for quantification theory there are many proof
+      procedures available\u2014that is, uniform procedures which will ultimately
+      locate a proof for any formula of quantification theory which is valid but which
+      will usually involve seeking \u201cforever\u201d in the case of a formula which
+      is not valid\u2014and that some of these proof procedures could well turn out
+      to be feasible for use with modern computing machinery.\n Hao Wang [9] and P.
+      C. Gilmore [3] have each produced working programs which employ proof procedures
+      in quantification theory. Gilmore''s program employs a form of a basic theorem
+      of mathematical logic due to Herbrand, and Wang''s makes use of a formulation
+      of quantification theory related to those studied by Gentzen. However, both
+      programs encounter decisive difficulties with any but the simplest formulas
+      of quantification theory, in connection with methods of doing propositional
+      calculus. Wang''s program, because of its use of Gentzen-like methods, involves
+      exponentiation on the total number of truth-functional connectives, whereas
+      Gilmore''s program, using normal forms, involves exponentiation on the number
+      of clauses present. Both methods are superior in many cases to truth table methods
+      which involve exponentiation on the total number of variables present, and represent
+      important initial contributions, but both run into difficulty with some fairly
+      simple examples.\nIn the present paper, a uniform proof procedure for quantification
+      theory is given which is feasible for use with some rather complicated formulas
+      and which does not ordinarily lead to exponentiation. The superiority of the
+      present procedure over those previously available is indicated in part by the
+      fact that a formula on which Gilmore''s routine for the IBM 704 causes the machine
+      to computer for 21 minutes without obtaining a result was worked successfully
+      by hand computation using the present method in 30 minutes. Cf. \u00a76, below.\nIt
+      should be mentioned that, before it can be hoped to employ proof procedures
+      for quantification theory in obtaining proofs of theorems belonging to \u201cgenuine\u201d
+      mathematics, finite axiomatizations, which are \u201cshort,\u201d must be obtained
+      for various branches of mathematics. This last question will not be pursued
+      further here; cf., however, Davis and Putnam [2], where one solution to this
+      problem is given for ele", "venue": "JACM", "year": 1960, "referenceCount":
+      10, "citationCount": 2990, "influentialCitationCount": 155, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1960-07-01", "journal": {"name": "J. ACM", "pages": "201-215",
+      "volume": "7"}, "authors": [{"authorId": "113641402", "name": "Martin D. Davis"},
+      {"authorId": "1790161", "name": "H. Putnam"}]}, {"paperId": "76ba917d0b172593b20bbb1acefc64a6fb0682f5",
+      "externalIds": {"DBLP": "journals/siamcomp/BennettBBV97", "ArXiv": "quant-ph/9701001",
+      "MAG": "2601248643", "DOI": "10.1137/S0097539796300933", "CorpusId": 13403194},
+      "corpusId": 13403194, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/76ba917d0b172593b20bbb1acefc64a6fb0682f5",
+      "title": "Strengths and Weaknesses of Quantum Computing", "abstract": "Recently
+      a great deal of attention has been focused on quantum computation following
+      a sequence of results [Bernstein and Vazirani, in Proc. 25th Annual ACM Symposium
+      Theory Comput., 1993, pp. 11--20, SIAM J. Comput., 26 (1997), pp. 1277--1339],
+      [Simon, in Proc. 35th Annual IEEE Symposium Foundations Comput. Sci., 1994,
+      pp. 116--123, SIAM J. Comput., 26 (1997), pp. 1340--1349], [Shor, in Proc. 35th
+      Annual IEEE Symposium Foundations Comput. Sci., 1994, pp. 124--134] suggesting
+      that quantum computers are more powerful than classical probabilistic computers.
+      Following Shor''s result that factoring and the extraction of discrete logarithms
+      are both solvable in quantum polynomial time, it is natural to ask whether all
+      of $\\NP$ can be efficiently solved in quantum polynomial time. In this paper,
+      we address this question by proving that relative to an oracle chosen uniformly
+      at random with probability 1 the class $\\NP$ cannot be solved on a quantum
+      Turing machine (QTM) in time $o(2^{n/2})$. We also show that relative to a permutation
+      oracle chosen uniformly at random with probability 1 the class $\\NP \\cap \\coNP$
+      cannot be solved on a QTM in time $o(2^{n/3})$. The former bound is tight since
+      recent work of Grover [in {\\it Proc.\\ $28$th Annual ACM Symposium Theory Comput.},
+      1996] shows how to accept the class $\\NP$ relative to any oracle on a quantum
+      computer in time $O(2^{n/2})$.", "venue": "SIAM journal on computing (Print)",
+      "year": 1997, "referenceCount": 32, "citationCount": 1321, "influentialCitationCount":
+      76, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/quant-ph/9701001",
+      "status": "GREEN"}, "fieldsOfStudy": ["Mathematics", "Computer Science", "Physics"],
+      "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Physics", "source":
+      "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
+      "Physics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1997-01-01", "journal": {"name": "SIAM J. Comput.", "pages":
+      "1510-1523", "volume": "26"}, "authors": [{"authorId": "2623914", "name": "Charles
+      H. Bennett"}, {"authorId": "48863272", "name": "Ethan S. Bernstein"}, {"authorId":
+      "1771605", "name": "G. Brassard"}, {"authorId": "46753437", "name": "U. Vazirani"}]},
+      {"paperId": "c9f69fc1bccde4550f54a4e317daaa27b4d4c03e", "externalIds": {"MAG":
+      "1994669668", "ArXiv": "cond-mat/0603103", "DOI": "10.1038/nature05056", "CorpusId":
+      4389730, "PubMed": "16915285"}, "corpusId": 4389730, "publicationVenue": {"id":
+      "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a", "name": "Nature", "type": "journal",
+      "issn": "0028-0836", "url": "https://www.nature.com/", "alternate_urls": ["http://www.nature.com/nature/",
+      "https://www.nature.com/nature/", "http://www.nature.com/nature/archive/index.html"]},
+      "url": "https://www.semanticscholar.org/paper/c9f69fc1bccde4550f54a4e317daaa27b4d4c03e",
+      "title": "Spontaneous skyrmion ground states in magnetic metals", "abstract":
+      null, "venue": "Nature", "year": 2006, "referenceCount": 41, "citationCount":
+      1439, "influentialCitationCount": 9, "isOpenAccess": true, "openAccessPdf":
+      {"url": "https://arxiv.org/pdf/cond-mat/0603103", "status": "GREEN"}, "fieldsOfStudy":
+      ["Physics", "Medicine"], "s2FieldsOfStudy": [{"category": "Physics", "source":
+      "external"}, {"category": "Medicine", "source": "external"}, {"category": "Physics",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "2006-03-05", "journal": {"name": "Nature", "pages": "797-801", "volume": "442"},
+      "authors": [{"authorId": "91585573", "name": "U. R\u00f6\u00dfler"}, {"authorId":
+      "145261336", "name": "A. Bogdanov"}, {"authorId": "3673143", "name": "C. Pfleiderer"},
+      {"authorId": "3673143", "name": "C. Pfleiderer"}]}, {"paperId": "7eb5d2f86438d1e9c72bff87894209f1ce84717a",
+      "externalIds": {"DBLP": "journals/annals/Neumann93", "MAG": "2117489143", "DOI":
+      "10.1109/85.238389", "CorpusId": 5572149}, "corpusId": 5572149, "publicationVenue":
+      {"id": "22ec5dc2-bb5e-4fea-a7dd-61676b6e7f78", "name": "IEEE Annals of the History
+      of Computing", "type": "journal", "alternate_names": ["IEEE Ann Hist Comput"],
+      "issn": "1058-6180", "url": "http://muse.jhu.edu/journals/ahc", "alternate_urls":
+      ["http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=85", "https://ieeexplore.ieee.org/servlet/opac?punumber=85",
+      "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=85", "http://www.computer.org/annals/"]},
+      "url": "https://www.semanticscholar.org/paper/7eb5d2f86438d1e9c72bff87894209f1ce84717a",
+      "title": "First draft of a report on the EDVAC", "abstract": "The first draft
+      of a report on the EDVAC written by John von Neumann is presented. This first
+      draft contains a wealth of information, and it had a pervasive influence when
+      it was first written. Most prominently, Alan Turing cites it in his proposal
+      for the Pilot automatic computing engine (ACE) as the definitive source for
+      understanding the nature and design of a general-purpose digital computer.<<ETX>>",
+      "venue": "IEEE Annals of the History of Computing", "year": 1993, "referenceCount":
+      6, "citationCount": 1217, "influentialCitationCount": 67, "isOpenAccess": true,
+      "openAccessPdf": {"url": "http://real.mtak.hu/170042/1/Firstdraft.pdf", "status":
+      "GREEN"}, "fieldsOfStudy": ["Engineering", "Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Engineering", "source": "external"}, {"category": "Computer Science",
+      "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
+      {"category": "History", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1993-10-01", "journal": {"name": "IEEE Annals of the History
+      of Computing", "pages": "27-75", "volume": "15"}, "authors": [{"authorId": "41224665",
+      "name": "J. Neumann"}]}, {"paperId": "2518002fbb475b6ba6f3ac46e7d89c655cc19f86",
+      "externalIds": {"MAG": "1517585663", "DBLP": "books/teu/Wegener87", "DOI": "10.1007/3-540-27477-4_16",
+      "CorpusId": 9300832}, "corpusId": 9300832, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/2518002fbb475b6ba6f3ac46e7d89c655cc19f86",
+      "title": "The complexity of Boolean functions", "abstract": null, "venue": "",
+      "year": 1987, "referenceCount": 0, "citationCount": 1122, "influentialCitationCount":
+      67, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
+      "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "", "volume": ""}, "authors": [{"authorId": "1681615", "name": "I.
+      Wegener"}]}, {"paperId": "74e22072b09aa202a27e093367683ca7d10517e7", "externalIds":
+      {"MAG": "2798382106", "DOI": "10.1007/3-540-31288-9_9", "CorpusId": 196121957},
+      "corpusId": 196121957, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/74e22072b09aa202a27e093367683ca7d10517e7",
+      "title": "Mathematical logic", "abstract": null, "venue": "", "year": 1967,
+      "referenceCount": 0, "citationCount": 1779, "influentialCitationCount": 6, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "2388174", "name":
+      "J. Shoenfield"}]}, {"paperId": "98da568adc7858630e26d0563304a495f90608d0",
+      "externalIds": {"MAG": "2004618348", "DBLP": "conf/stoc/FortuneW78", "DOI":
+      "10.1145/800133.804339", "CorpusId": 11283448}, "corpusId": 11283448, "publicationVenue":
+      {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e", "name": "Symposium on the Theory
+      of Computing", "type": "conference", "alternate_names": ["Symp Theory Comput",
+      "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/98da568adc7858630e26d0563304a495f90608d0",
+      "title": "Parallelism in random access machines", "abstract": "A model of computation
+      based on random access machines operating in parallel and sharing a common memory
+      is presented. The computational power of this model is related to that of traditional
+      models. In particular, deterministic parallel RAM''s can accept in polynomial
+      time exactly the sets accepted by polynomial tape bounded Turing machines; nondeterministic
+      RAM''s can accept in polynomial time exactly the sets accepted by nondeterministic
+      exponential time bounded Turing machines. Similar results hold for other classes.
+      The effect of limiting the size of the common memory is also considered.", "venue":
+      "Symposium on the Theory of Computing", "year": 1978, "referenceCount": 11,
+      "citationCount": 1004, "influentialCitationCount": 98, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Book", "Conference"], "publicationDate": "1978-05-01", "journal": {"name":
+      "Proceedings of the tenth annual ACM symposium on Theory of computing"}, "authors":
+      [{"authorId": "1798254", "name": "S. Fortune"}, {"authorId": "40005350", "name":
+      "J. Wyllie"}]}, {"paperId": "b85ae9f4367548a7dac7eae1a2a8d5866d27813a", "externalIds":
+      {"MAG": "1969678783", "DBLP": "journals/jacm/Chaitin66", "DOI": "10.1145/321356.321363",
+      "CorpusId": 207698337}, "corpusId": 207698337, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/b85ae9f4367548a7dac7eae1a2a8d5866d27813a",
+      "title": "On the Length of Programs for Computing Finite Binary Sequences",
+      "abstract": "The use of Turing machines for calculating finite binary sequences
+      is studied from the point of view of information theory and the theory of recursive
+      functions. Various results are obtained concerning the number of instructions
+      in programs. A modified form of Turing machine is studied from the same point
+      of view. An application to the problem of defining a patternless sequence is
+      proposed in terms of the concepts here developed.", "venue": "JACM", "year":
+      1966, "referenceCount": 15, "citationCount": 1124, "influentialCitationCount":
+      58, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "1966-10-01", "journal": {"name": "J. ACM", "pages": "547-569", "volume": "13"},
+      "authors": [{"authorId": "1756533", "name": "G. Chaitin"}]}, {"paperId": "bbaac3ff0eb5b661faead2748313834c9cf771cf",
+      "externalIds": {"DBLP": "journals/jacm/Holland62", "MAG": "2002592134", "DOI":
+      "10.1145/321127.321128", "CorpusId": 955154}, "corpusId": 955154, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/bbaac3ff0eb5b661faead2748313834c9cf771cf",
+      "title": "Outline for a Logical Theory of Adaptive Systems", "abstract": "The
+      purpose of this paper is to outline a theory of automata appropriate to the
+      properties, requirements and questions of adaptation. The conditions that such
+      a theory should satisfy come from not one but several fields: It should be possible
+      to formulate, at least in an abstract version, some of the key hypotheses and
+      problems from relevant parts of biology, particularly the areas concerned with
+      molecular control and neurophysiology. The work in theoretical genetics initiated
+      by R. A. Fisher [5] and Sewall Wright [24] should find a natural place in the
+      theory. At the same time the rigorous methods of automata theory should be brought
+      to bear (particularly those parts concerned with growing automata [1, 2, 3,
+      7, 8, 12, 15, 18, 23]). Finally the theory should include among its models abstract
+      counterparts of artificial adaptive systems currently being studied, systems
+      such as Newell-Shaw-Simon''s \"General Problem Solver\" [13], Selfridge''s \"Pandemonium\"
+      [17], von Neumann''s self-reproducing automata [22] and Turing''s morphogenetic
+      systems [19, 20]. The theory outlined here (which is intended as a theory and
+      not the theory) is presented in four main parts. Section 2 discusses the study
+      of adaptation via generation procedures and generated populations. Section 3
+      defines a continuum of generation procedures realizable in a reasonably direct
+      fashion. Section 4 discusses the realization of generation procedures as populations
+      of interacting programs in an iterative circuit computer. Section 5 discusses
+      the process of adaptation in the context of the earlier sections. The paper
+      concludes with a discussion of the nature of the theorems of this theory. Before
+      entering upon the detailed discussion, one general feature of the theory should
+      be noted. The interpretations or models of the theory divide into two broad
+      categories: \"complete\" models and \"incomplete\" models. The \"complete\"
+      models comprise the artificial systems--systems with properties and specifications
+      completely delimited at the outset (cf. the rules of a game). One set of \"complete\"
+      models for the theory consists of various programmed parallel computers. The
+      \"incomplete\" models encompass natural systems. Any natural system involves
+      an unlimited number of factors and, inevitably, the theory can handle only a
+      selected few of these. Because there will always be variables which do not have
+      explicit counterparts in the theory, the derived statements must be approximate
+      relative to natural systems. For this reason it helps greatly that", "venue":
+      "JACM", "year": 1962, "referenceCount": 23, "citationCount": 1169, "influentialCitationCount":
+      31, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/321127.321128",
+      "status": "CLOSED"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Biology",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"},
+      {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1962-07-01", "journal": {"name": "J. ACM", "pages": "297-314",
+      "volume": "9"}, "authors": [{"authorId": "144404817", "name": "J. Holland"}]},
+      {"paperId": "78fc3b741828124d8a79667466516a544143bf68", "externalIds": {"MAG":
+      "1628475528", "DOI": "10.1049/sqj.1964.0069", "CorpusId": 142554420}, "corpusId":
+      142554420, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/78fc3b741828124d8a79667466516a544143bf68",
+      "title": "Computers and Thought", "abstract": "Computers and Thought showcases
+      the work of the scientists who not only defined the field of Artificial Intelligence,
+      but who are responsible for having developed it into what it is today. Originally
+      published in 1963, this collection includes twenty classic papers by such pioneers
+      as A. M. Turing and Marvin Minsky who were behind the pivotal advances in artificially
+      simulating human thought processes with computers.Among the now hard-to-find
+      articles are reports of computer programs that play chess and checkers, prove
+      theorems in logic and geometry, solve problems in calculus, balance assembly
+      lines, recognize visual temporal patterns, and communicate in natural language.
+      The reports of simulation of cognitive processes include computer models of
+      human behavior in logic problems, deciding on common stock portfolios, and carrying
+      out social interaction. Models of verbal learning behavior, predictive behavior
+      in two-choice experiments, and concept formation are also included.Articles
+      by : Paul Armer. Carol Chomsky. Geoffrey P. E. Clarkson. Edward A. Feigenbaum.
+      Julian Feldman. H. Gelernter. Bert F. Green, Jr. John T. Gullahorn. Jeanne E.
+      Gullahorn. J. R. Hansen. Carl I. Hovland. Earl B. Hunt. Kenneth Laughery. Robert
+      K. Lindsay. D. W. Loveland. Marvin Minsky. Ulric Neisser. Allen Newell. A. L.
+      Samuel. Oliver G. Selfridge. J. C. Shaw. Herbert A. Simon. James R. Slagle.
+      Fred M. Tonge. A. M. Turing. Leonard Uhr. Charles Vossler. Alice K. Wolf.",
+      "venue": "", "year": 1963, "referenceCount": 0, "citationCount": 1036, "influentialCitationCount":
+      8, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"],
+      "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      {"name": "", "volume": ""}, "authors": [{"authorId": "1792280", "name": "E.
+      Feigenbaum"}, {"authorId": "144005334", "name": "J. Feldman"}]}, {"paperId":
+      "bc022dbb37b1bbf3905a7404d19c03ccbf6b81a8", "externalIds": {"DBLP": "conf/icml/ChenRC0JLS20",
+      "MAG": "3034445277", "CorpusId": 219781060}, "corpusId": 219781060, "publicationVenue":
+      {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29", "name": "International Conference
+      on Machine Learning", "type": "conference", "alternate_names": ["ICML", "Int
+      Conf Mach Learn"], "url": "https://icml.cc/"}, "url": "https://www.semanticscholar.org/paper/bc022dbb37b1bbf3905a7404d19c03ccbf6b81a8",
+      "title": "Generative Pretraining From Pixels", "abstract": "Inspired by progress
+      in unsupervised representation learning for natural language, we examine whether
+      similar models can learn useful representations for images. We train a sequence
+      Transformer to auto-regressively predict pixels, without incorporating knowledge
+      of the 2D input structure. Despite training on low-resolution ImageNet without
+      labels, we \ufb01nd that a GPT-2 scale model learns strong image representations
+      as measured by linear probing, \ufb01ne-tuning, and low-data classi\ufb01cation.
+      On CIFAR-10, we achieve 96.3% accuracy with a linear probe, outperforming a
+      supervised Wide ResNet, and 99.0% accuracy with full \ufb01ne-tuning, matching
+      the top supervised pre-trained models. An even larger model trained on a mix-ture
+      of ImageNet and web images is competitive with self-supervised benchmarks on
+      ImageNet, achieving 72.0% top-1 accuracy on a linear probe of our features.",
+      "venue": "International Conference on Machine Learning", "year": 2020, "referenceCount":
+      81, "citationCount": 1059, "influentialCitationCount": 88, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Conference"], "publicationDate": "2020-07-12", "journal": {"pages": "1691-1703"},
+      "authors": [{"authorId": "2108828435", "name": "Mark Chen"}, {"authorId": "38909097",
+      "name": "Alec Radford"}, {"authorId": "49387725", "name": "Jeff Wu"}, {"authorId":
+      "35450887", "name": "Heewoo Jun"}, {"authorId": "6515819", "name": "Prafulla
+      Dhariwal"}, {"authorId": "150970919", "name": "D. Luan"}, {"authorId": "1701686",
+      "name": "Ilya Sutskever"}]}, {"paperId": "22b7cd42eab103c1fb75da08458733b5fbb992e9",
+      "externalIds": {"MAG": "117101047", "DOI": "10.1890/04-0922", "CorpusId": 2117723},
+      "corpusId": 2117723, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/22b7cd42eab103c1fb75da08458733b5fbb992e9",
+      "title": "EFFECTS OF BIODIVERSITY ON ECOSYSTEM FUNCTIONING: A CONSENSUS OF CURRENT
+      KNOWLEDGE", "abstract": "Humans are altering the composition of biological communities
+      through a variety of activities that increase rates of species invasions and
+      species extinctions, at all scales, from local to global. These changes in components
+      of the Earth''s biodiversity cause concern for ethical and aesthetic reasons,
+      but they also have a strong potential to alter ecosystem properties and the
+      goods and services they provide to humanity. Ecological experiments, observations,
+      and theoretical developments show that ecosystem properties depend greatly on
+      biodiversity in terms of the functional characteristics of organisms present
+      in the ecosystem and the distribution and abundance of those organisms over
+      space and time. Species effects act in concert with the effects of climate,
+      resource availability, and disturbance regimes in influencing ecosystem properties.
+      Human activities can modify all of the above factors; here we focus on modification
+      of these biotic controls. The scientific community has come to a broad consensus
+      on many aspects of the re- lationship between biodiversity and ecosystem functioning,
+      including many points relevant to management of ecosystems. Further progress
+      will require integration of knowledge about biotic and abiotic controls on ecosystem
+      properties, how ecological communities are struc- tured, and the forces driving
+      species extinctions and invasions. To strengthen links to policy and management,
+      we also need to integrate our ecological knowledge with understanding of the
+      social and economic constraints of potential management practices. Understanding
+      this complexity, while taking strong steps to minimize current losses of species,
+      is necessary for responsible management of Earth''s ecosystems and the diverse
+      biota they contain.", "venue": "", "year": 2005, "referenceCount": 433, "citationCount":
+      7116, "influentialCitationCount": 358, "isOpenAccess": true, "openAccessPdf":
+      {"url": "http://deepblue.lib.umich.edu/bitstream/2027.42/116927/1/ecm20057513.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Biology", "Environmental Science"], "s2FieldsOfStudy":
+      [{"category": "Biology", "source": "external"}, {"category": "Environmental
+      Science", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"},
+      {"category": "Environmental Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "2005-02-01", "journal": {"name": "Ecological Monographs",
+      "pages": "3-35", "volume": "75"}, "authors": [{"authorId": "7017684", "name":
+      "D. Hooper"}, {"authorId": "46601508", "name": "F. Chapin"}, {"authorId": "5481714",
+      "name": "J. Ewel"}, {"authorId": "6476364", "name": "A. Hector"}, {"authorId":
+      "4146577", "name": "P. Inchausti"}, {"authorId": "4687927", "name": "S. Lavorel"},
+      {"authorId": "36637256", "name": "J. Lawton"}, {"authorId": "46818175", "name":
+      "D. Lodge"}, {"authorId": "5794110", "name": "M. Loreau"}, {"authorId": "3559508",
+      "name": "S. Naeem"}, {"authorId": "144182682", "name": "B. Schmid"}, {"authorId":
+      "52132648", "name": "H. Set\u00e4l\u00e4"}, {"authorId": "4758207", "name":
+      "A. Symstad"}, {"authorId": "1900081", "name": "J. Vandermeer"}, {"authorId":
+      "6270884", "name": "D. Wardle"}]}, {"paperId": "70031c04b064599eea66255d2ac2acb679969858",
+      "externalIds": {"MAG": "2189533845", "DOI": "10.2307/j.ctv1mgm7ng", "CorpusId":
+      61218822}, "corpusId": 61218822, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/70031c04b064599eea66255d2ac2acb679969858",
+      "title": "The Tacit Dimension", "abstract": "''Without symbolism the life of
+      man would be like that of the prisoners in the cave of Plato''s simile\u2026confined
+      within the limits of his biological needs and practical interests; it could
+      find no access to the \"ideal world\" which is opened to him from different
+      sides by religion, art, philosophy, science.'' Ernst Cassirer 1 ABSTRACT I begin
+      by outlining some of the positions that have been taken by those who have reflected
+      upon the nature of language. In his early work Wittgenstein asserts that language
+      becomes meaningful when we tacitly adhere to the rules of logic. In his later
+      work he claims that lan- guages become meaningful when they are situated within
+      forms of life. Polanyi describes language as a toolbox for deploying our tacit
+      awareness. A meaning is generated when a point of view attends from a subsidiary
+      to a focal awareness. Languages re-present these meanings. Although all languages
+      rely upon rules, what it is to be a meaning is not reduc- ible to rules. Nor
+      is there a universal grammar. Because it renders abstract reflection possi-
+      ble, language renders minds possible. A mind is not the product of an innate
+      language of thought; it is a consequence of indwelling within a natural language.
+      Indwelling within languages enables us to access new realities. Languages however
+      do not supply us with the boundaries of the world. Not only do we know more
+      than we can say, we can also say more than we know. The ultimate context of
+      our linguistic meanings is not our social practices; it is our embodied awareness
+      of the world. A representationalist account is in accordance with the view that
+      minds are Turing machines. But the symbols processed by a Turing ma- chine derive
+      their meaning from the agents that use them to achieve their purposes. Only
+      if the processing of symbolic representations is related to the tacit context
+      within which they become meaningful, does a semantic engine becomes possible.",
+      "venue": "", "year": 2003, "referenceCount": 31, "citationCount": 7094, "influentialCitationCount":
+      440, "isOpenAccess": true, "openAccessPdf": {"url": "https://library.oapen.org/bitstream/20.500.12657/48467/1/9789461663801.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Philosophy",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "145922372",
+      "name": "C. P. Goodman"}]}, {"paperId": "b91676c5303cf8e8b3e4a963c3756b4da2dbece1",
+      "externalIds": {"MAG": "2099857446", "DOI": "10.1785/0120000006", "CorpusId":
+      17877957}, "corpusId": 17877957, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b91676c5303cf8e8b3e4a963c3756b4da2dbece1",
+      "title": "A Double-Difference Earthquake Location Algorithm: Method and Application
+      to the Northern Hayward Fault, California", "abstract": "We have developed an
+      efficient method to determine high-resolution hypocenter locations over large
+      distances. The location method incorporates ordinary absolute travel-time measurements
+      and/or cross-correlation P-and S-wave differential travel-time measurements.
+      Residuals between observed and theoretical travel-time differences (or double-differences)
+      are minimized for pairs of earthquakes at each station while linking together
+      all observed event-station pairs. A least-squares solu- tion is found by iteratively
+      adjusting the vector difference between hypocentral pairs. The double-difference
+      algorithm minimizes errors due to unmodeled velocity struc- ture without the
+      use of station corrections. Because catalog and cross-correlation data are combined
+      into one system of equations, interevent distances within multiplets are determined
+      to the accuracy of the cross-correlation data, while the relative lo- cations
+      between multiplets and uncorrelated events are simultaneously determined to
+      the accuracy of the absolute travel-time data. Statistical resampling methods
+      are used to estimate data accuracy and location errors. Uncertainties in double-difference
+      locations are improved by more than an order of magnitude compared to catalog
+      locations. The algorithm is tested, and its performance is demonstrated on two
+      clus- ters of earthquakes located on the northern Hayward fault, California.
+      There it col- lapses the diffuse catalog locations into sharp images of seismicity
+      and reveals hor- izontal lineations of hypocenters that define the narrow regions
+      on the fault where stress is released by brittle failure.", "venue": "", "year":
+      2000, "referenceCount": 41, "citationCount": 2898, "influentialCitationCount":
+      196, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Geology"],
+      "s2FieldsOfStudy": [{"category": "Geology", "source": "external"}, {"category":
+      "Geology", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      "2000-12-01", "journal": {"name": "Bulletin of the Seismological Society of
+      America", "pages": "1353-1368", "volume": "90"}, "authors": [{"authorId": "35702704",
+      "name": "F. Waldhauser"}, {"authorId": "3665776", "name": "W. Ellsworth"}]},
+      {"paperId": "12e77f2f563d1464fa299e066f4ef4a9673a7afb", "externalIds": {"MAG":
+      "2051576146", "DOI": "10.1111/1467-8721.EP10768783", "CorpusId": 144390805},
+      "corpusId": 144390805, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/12e77f2f563d1464fa299e066f4ef4a9673a7afb",
+      "title": "Statistical Power Analysis", "abstract": "pression, Journal of Clinical
+      Psychiatry, 51, 61-69 (1990). 11. L.R. Baxter, Jr., J.M. Schwartz, B.H. Guze,
+      J.C. Mazziotta, M.P. Szuba, K. Bergman, A. Alazraki, C.E. Selin, H.K. Freng,
+      P. Munford, and M.E. Phelps, Obsessive-compulsive disorder vs. Tourette''s disorder:
+      Differential function in subdivi sions of the neostriatum, paper presented at
+      the an nual meeting of the American College of Neuropsy chopharmacology, San
+      Juan, Puerto Rico (December 1991). 12. E.M. Reiman, M.E. Raichle, F.K. Butler,
+      P. Herscovitch, and E. Robins, A focal brain abnormal ity in panic disorder,
+      a severe form of anxiety, Na ture, 310, 683-685 (1984); E.M. Reiman, M.E. Ra
+      ichle, E. Robins, F.K. Butler, P. Herscovitch, P. Fox, and J. Perlmutter, The
+      application of positron emis sion tomography to the study of panic disorder,
+      American Journal of Psychiatry, 143, 469-477 (1986); T.E. Nordahl, W.E. Semple,
+      M. Gross, T.A. Mellman, M.B. Stein, P. Goyer, A.C. King, T.W. Uhde, and R.M.
+      Cohen, Cerebral glucose metabolic differences in patients with panic disorder,
+      Neuro psychopharmacology, 3, 261-272 (1990).", "venue": "", "year": 1992, "referenceCount":
+      10, "citationCount": 3717, "influentialCitationCount": 672, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
+      [{"category": "Psychology", "source": "external"}, {"category": "Psychology",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      "1992-06-01", "journal": {"name": "Current Directions in Psychological Science",
+      "pages": "101 - 98", "volume": "1"}, "authors": [{"authorId": "145670758", "name":
+      "Jacob Cohen"}]}, {"paperId": "101a0d785c1f74416c0f3182f3743522103402df", "externalIds":
+      {"MAG": "2080875376", "DOI": "10.1146/ANNUREV.BI.56.070187.003151", "CorpusId":
+      33992382, "PubMed": "3113327"}, "corpusId": 33992382, "publicationVenue": {"id":
+      "9e5ab0fc-a36d-4a05-bc89-12dd1cb12e2b", "name": "Annual Review of Biochemistry",
+      "type": "journal", "alternate_names": ["Annu Rev Biochem"], "issn": "0066-4154",
+      "url": "https://www.annualreviews.org/journal/biochem", "alternate_urls": ["http://www.annualreviews.org/journal/biochem",
+      "http://biochem.annualreviews.org/", "https://www.annualreviews.org/loi/biochem",
+      "http://intl-biomedical.annualreviews.org/", "http://arjournals.annualreviews.org/loi/biochem",
+      "http://arjournals.annualreviews.org/loi/biochem?cookieSet=1"]}, "url": "https://www.semanticscholar.org/paper/101a0d785c1f74416c0f3182f3743522103402df",
+      "title": "G proteins: transducers of receptor-generated signals.", "abstract":
+      "PERSPECTIVES AND SUMMARy ......... .. ........ . ...... 615 HISTORy .......
+      ...... . . . . . ...... . . .. .... . . . .. . 616 INDIVIDUAL G PROTEINS: FUNCTIONS
+      AND MOLECULAR ENTITIES 617 Criter ia for In volvemen t o f a G Pr otein .....
+      ......... 618 Func ti on s R egu la ted b y G Protein s ... . .... . ... . .
+      . .. .. 619 M olecu lar En tities and S truc ture . . . . . . . ... . . . .
+      . . .... . . . . . . ..... . . . . . . . .. . . . . . . .. . . . .. . . . ..
+      . . . . 622 LIGAND--G PROTEIN INTERACTIONS 63 1 LIGAND-REGULATED PROTEIN-PROTEIN
+      INTERACTIONS 634 Receptor-O Protein J nteractions. . .. .. . . . . . . . . ..
+      . . .. . . . . . . .. . ........ . ..... . ... . ...... . . . . . . . . . 634
+      G Pr otein -Effec tor In teraction s . . . . ....... . . . .. .. ... . . . .
+      . . . ... . .... . .. . . . ...... . .. ....... .... . . 638 G PROTEIN-MEMBRANE
+      INTERACTIONS 643 COVALENT MODIFICATION OF G PROTEINS 644", "venue": "Annual
+      Review of Biochemistry", "year": 1987, "referenceCount": 1, "citationCount":
+      5794, "influentialCitationCount": 186, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Biology", "Chemistry", "Medicine"], "s2FieldsOfStudy":
+      [{"category": "Biology", "source": "external"}, {"category": "Chemistry", "source":
+      "external"}, {"category": "Medicine", "source": "external"}, {"category": "Biology",
+      "source": "s2-fos-model"}], "publicationTypes": ["Review", "JournalArticle"],
+      "publicationDate": null, "journal": {"name": "Annual review of biochemistry",
+      "pages": "\n          615-49\n        ", "volume": "56"}, "authors": [{"authorId":
+      "1834401", "name": "A. Gilman"}]}, {"paperId": "22b65eebec33b89ec912054b4c4ec3d963960ab0",
+      "externalIds": {"MAG": "2018076297", "DOI": "10.1037/0033-295X.96.2.358", "CorpusId":
+      18511760}, "corpusId": 18511760, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/22b65eebec33b89ec912054b4c4ec3d963960ab0",
+      "title": "Hopelessness depression: A theory-based subtype of depression.", "abstract":
+      "Summary and Future Directions On the basis of the aforementioned studies, the
+      hopelessnesstheory appears promising. However, further research is needed.For
+      example, although powerful tests of the attributional diath-esis-stress component
+      have been conducted, no one has exam-ined the cognitive diatheses of inferring
+      negative consequencesor characteristics about the self or whether the cognitive
+      stylediathesis-stress interaction predicts clinically significant de-pression.
+      Moreover, it is crucial to determine if this interactionpredicts the development
+      of the hypothesized symptoms ofhopelessness depression. More generally, an important
+      short-coming of the prior work is that it has not focused on the symp-toms of
+      hopelessness depression in particular and, instead, sim-ply has examined the
+      symptoms of depression in general. Fu-ture investigators need to test more fine-grained
+      predictionsabout the hypothesized symptoms of hopelessness depression.The issue
+      of the stability of the cognitive diatheses has not beenresolved satisfactorily.
+      We have only begun, in a preliminaryway, to investigate the issues of specific
+      vulnerability and media-tional processes. Finally, further tests of the predictions
+      aboutcourse, cure, and prevention are needed. We eagerly await thisresearch.Difficult
+      methodological issues may arise in the search forhopelessness depression, however.
+      For example, the hopeless-ness theory is silent about the time lag between formation
+      ofhopelessness and onset of the symptoms of hopelessness depres-sion. If it
+      is very short, then a major challenge will be to developmethods with sufficient
+      temporal resolving power to determineif hopelessness indeed precedes the occurrence
+      of the hypothe-sized symptoms of hopelessness depression (see Alloy, Hartlage,et
+      al., 1988, for proposed methods for testing the hopelessnesstheory). The results
+      of work to test the hopelessness theory willdetermine if the concept of hopelessness
+      depression needs tobe revised. For example, perhaps the statement of the causalpathway
+      is correc t bu culminate n a differen se f symp-toms than those currently hypothesized
+      to compose hopeless-ness depression. In this case, the symptom\u2014but not
+      thecause\u2014component of the hopelessness theory would need to bemodified.In
+      discussing how to search for hopelessness depression, wenote the possibility
+      that future work may not corroborate theexistence of hopelessness depression
+      as a bona fide subtype withcharacteristic cause, symptoms, course, treatment,
+      and preven-tion. Instead, the etiological chain featured in the hopelessnesstheory
+      may be one of many pathways to a final common out-come of depression. In this
+      case, it would be more compellingto speak of a hopelessness cause, as opposed
+      to a hopelessnesssubtype, of depression.", "venue": "", "year": 1989, "referenceCount":
+      135, "citationCount": 3445, "influentialCitationCount": 198, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
+      [{"category": "Psychology", "source": "external"}, {"category": "Psychology",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1989-04-01",
+      "journal": {"name": "Psychological Review", "pages": "358-372", "volume": "96"},
+      "authors": [{"authorId": "2294629", "name": "L. Abramson"}, {"authorId": "5188561",
+      "name": "G. Metalsky"}, {"authorId": "4414164", "name": "L. Alloy"}]}, {"paperId":
+      "3835e277046e162b960e007808b54fea44753397", "externalIds": {"MAG": "95649271",
+      "DOI": "10.1002/SMJ.4250171107", "CorpusId": 17368130}, "corpusId": 17368130,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3835e277046e162b960e007808b54fea44753397",
+      "title": "Modularity, flexibility, and knowledge management in product and organization
+      design", "abstract": "This pczper investigcztes irzterrelationslzi~~s of product
+      design, orgcznization design, processes for leartlirzg and managing knowledge,
+      arzd competitive strategy. This paper uses the principles of nearly decotnposable
+      systems to investigate the ability of strind(irdized interfcices between components
+      in cz product design to embed coordination of product development processes.
+      Embedded coordination creates ''hierczrchical coordination'' without the need
+      to continually exercise authority-erzcrblirlg effective coordination of processes
+      without the tight coupling of orgcznizationczl structures. We develop concepts
+      of modularity in product and organization designs based orz smndcirdized component
+      and organization interjczces. Modular product architec- tures create information
+      structures that provide the ''glue'' that holds together the loosely coupled
+      parts of a modular orgatzizatiorz design. By fczcilitriting loose coupling,
+      modularity can czlso reduce the cost and dyficulty of adaptive coordination,
+      thereby incrensing the strategic flexibility of firms to respond to erzvironmentnl
+      change. Modularity in product and organizcztion designs therefore etznbles cz
+      new strcitegic approach to the management of knowledge based on cztz irztentionczl,
+      carefully mcznaged loose coupling of (I firm''s learning processes czt architec-
+      tural cznd comporzent levels of product crecztiorz processes.", "venue": "",
+      "year": 1996, "referenceCount": 77, "citationCount": 2564, "influentialCitationCount":
+      184, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
+      "Economics", "Computer Science"], "s2FieldsOfStudy": [{"category": "Medicine",
+      "source": "external"}, {"category": "Economics", "source": "external"}, {"category":
+      "Computer Science", "source": "external"}, {"category": "Business", "source":
+      "s2-fos-model"}, {"category": "Engineering", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "1996-12-01", "journal": {"name": "IEEE Engineering
+      Management Review", "pages": "50-61", "volume": "25"}, "authors": [{"authorId":
+      "39949692", "name": "R. Sanchez"}, {"authorId": "31655029", "name": "Joseph
+      T. Mahoney"}]}, {"paperId": "52012db392ae0dffbf990b62682e21cf13bf093e", "externalIds":
+      {"MAG": "3106422048", "ArXiv": "quant-ph/0002077", "DOI": "10.1002/1521-3978(200009)48:9/11<771::AID-PROP771>3.0.CO;2-E",
+      "CorpusId": 15439711}, "corpusId": 15439711, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/52012db392ae0dffbf990b62682e21cf13bf093e",
+      "title": "The Physical Implementation of Quantum Computation", "abstract": "After
+      a brief introduction to the principles and promise of quantum information processing,
+      the requirements for the physical implementation of quantum computation are
+      discussed. These five requirements, plus two relating to the communication of
+      quantum information, are extensively ex- plored and related to the many schemes
+      in atomic physics, quantum optics, nuclear and electron magnetic resonance spectroscopy,
+      superconducting electronics, and quantum-dot physics, for achiev- ing quantum
+      computing. I. INTRODUCTION \ufffd The advent of quantum information processing,
+      as an abstract concept, has given birth to a great deal of new thinking, of
+      a very concrete form, about how to create physical computing devices that operate
+      in the hitherto unexplored quantum mechanical regime. The efforts now underway
+      to produce working laboratory devices that perform this profoundly new form
+      of information pro- cessing are the subject of this book. In this chapter I
+      provide an overview of the common objectives of the investigations reported
+      in the remain- der of this special issue. The scope of the approaches, proposed
+      and underway, to the implementation of quan- tum hardware is remarkable, emerging
+      from specialties in atomic physics (1), in quantum optics (2), in nuclear (3)
+      and electron (4) magnetic resonance spectroscopy, in su- perconducting device
+      physics (5), in electron physics (6), and in mesoscopic and quantum dot research
+      (7). This amazing variety of approaches has arisen because, as we will see,
+      the principles of quantum computing are posed using the most fundamental ideas
+      of quantum mechanics, ones whose embodiment can be contemplated in virtually
+      every branch of quantum physics. The interdisciplinary spirit which has been
+      fostered as a result is one of the most pleasant and remarkable fea- tures of
+      this field. The excitement and freshness that has been produced bodes well for
+      the prospect for discovery, invention, and innovation in this endeavor.", "venue":
+      "", "year": 2000, "referenceCount": 42, "citationCount": 2081, "influentialCitationCount":
+      85, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/quant-ph/0002077",
+      "status": "GREEN"}, "fieldsOfStudy": ["Physics"], "s2FieldsOfStudy": [{"category":
+      "Physics", "source": "external"}, {"category": "Physics", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": "2000-02-25", "journal":
+      {"name": "Protein Science", "pages": "771-783", "volume": "48"}, "authors":
+      [{"authorId": "2804168", "name": "D. DiVincenzo"}, {"authorId": "102619729",
+      "name": "Ibm"}]}, {"paperId": "389e37775bc407d17e4e0a3c05b22b92c3a16b69", "externalIds":
+      {"MAG": "2026444402", "DOI": "10.1103/REVMODPHYS.71.1253", "CorpusId": 33553705},
+      "corpusId": 33553705, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/389e37775bc407d17e4e0a3c05b22b92c3a16b69",
+      "title": "Nobel Lecture: Electronic structure of matter-wave functions and density
+      functionals", "abstract": "In the intervening more than six decades enormous
+      progress has been made in finding approximate solutions of Schrodinger''s wave
+      equation for systems with several electrons, decisively aided by modern electronic
+      com- puters. The outstanding contributions of my Nobel Prize co-winner John
+      Pople are in this area. The main objec- tive of the present account is to explicate
+      DFT, which is an alternative approach to the theory of electronic struc- ture,
+      in which the electron density distribution n(r), rather than the many-electron
+      wave function, plays a central role. I felt that it would be useful to do this
+      in a comparative context; hence the wording ''''Wave Func- tions and Density
+      Functionals'''' in the title. In my view DFT makes two kinds of contribution
+      to the science of multiparticle quantum systems, including problems of electronic
+      structure of molecules and of condensed matter. The first is in the area of
+      fundamental understanding. Theoretical chemists and physicists, following the
+      path of the Schrodinger equation, have become accustomed to think in terms of
+      a truncated Hilbert space of single-", "venue": "", "year": 1999, "referenceCount":
+      6, "citationCount": 1899, "influentialCitationCount": 88, "isOpenAccess": true,
+      "openAccessPdf": {"url": "http://link.aps.org/pdf/10.1103/RevModPhys.71.1253",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Physics"], "s2FieldsOfStudy": [{"category":
+      "Physics", "source": "external"}, {"category": "Physics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1999-10-01", "journal": {"name":
+      "Reviews of Modern Physics", "pages": "1253-1266", "volume": "71"}, "authors":
+      [{"authorId": "38338926", "name": "W. Kohn"}]}, {"paperId": "c891ca3891bf4aeb95f17b3ddc79cc1120d55c1c",
+      "externalIds": {"CorpusId": 10688611}, "corpusId": 10688611, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/c891ca3891bf4aeb95f17b3ddc79cc1120d55c1c",
+      "title": "MUTATIONS OF BACTERIA FROM VIRUS SENSITIVITY TO VIRUS RESISTANCE\u2019-\u2019",
+      "abstract": "HEN a pure bacterial culture is. attacked by a bacterial virus,
+      the culW ture will clear after a few hours due to destruction of the sensitive
+      ceIls by the virus. However, after further incubation for a few hours, or sometimes
+      days, the culture will often become turbid again, due to the growth of a bacterial
+      variant which is resistant to the action of the virus. This variant can be isolated
+      and freed from the virus and will in many cases retain its resistance to the
+      action of the virus even if subcultured through many generations in the absence
+      of the virus. While the sensitive strain adsorbed the virus readily, the resistant
+      variant will generally not show any affinity to it. The resistant bacterial
+      variants appear readily in cultures grown from a single cell. They were, therefore,
+      certainly not present when the culture was started. Their resistance is generally
+      rather specific. It does not extend to viruses that are found to differ by other
+      criteria from the strain in whose presence the resistant culture developed.
+      The variant may differ from the original strain in morphological or metabolic
+      characteristics, or in serological type or in colony type. Most often, however,
+      no such correlated changes are apparent, and the variant may be distinguished
+      from the original strain only by its resistance to the inciting strain of virus.
+      The nature of these variants and the manner in which they originate have been
+      discussed by many authors, and numerous attempts have been made to correlate
+      the phenomenon with other instances of bacterial variation. The net effect of
+      the addition of virus consists of the appearance of a variant strain, characterized
+      by a new stable character-namely, resistance to the inciting virus. The situation
+      has often been expressed by saying that bacterial viruses are powerful \u201cdissociating
+      agents.\u201d While this expression summarizes adequately the net effect, it
+      must not be taken to imply anything about the mechanism by which the result
+      is brought about. A moment\u2019s reflection will show that there are greatly
+      differing mechanisms which might produce the same end result. D\u2019HERELLE
+      (1926) and many other investigators believed that the virus by direct action
+      induced the resistant variants. GRATIA (1921), BURNET (I929), and others, on
+      the other hand, believed that the resistant bacterial variants are produced
+      by mutation in the culture prior to the addition of virus. The", "venue": "",
+      "year": 2003, "referenceCount": 10, "citationCount": 1440, "influentialCitationCount":
+      141, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [{"category": "Biology", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "authors": [{"authorId": "2262527575",
+      "name": "Lurias"}, {"authorId": "1932699022", "name": "M. Delbrock"}]}, {"paperId":
+      "1a97ecaf1f067c44135fd3161a5c80a3497cb344", "externalIds": {"MAG": "1605417594",
+      "DBLP": "books/daglib/0025273", "DOI": "10.1007/978-1-4612-0003-1", "CorpusId":
+      117710456}, "corpusId": 117710456, "publicationVenue": {"id": "9e787a4f-1263-49d1-9997-00a18fa41e93",
+      "name": "Applied and Numerical Harmonic Analysis", "alternate_names": ["Appl
+      Numer Harmon Anal"], "issn": "2296-5017", "url": "https://www.springer.com/series/4968",
+      "alternate_urls": ["https://link.springer.com/bookseries/4968"]}, "url": "https://www.semanticscholar.org/paper/1a97ecaf1f067c44135fd3161a5c80a3497cb344",
+      "title": "Foundations of Time-Frequency Analysis", "abstract": null, "venue":
+      "Applied and Numerical Harmonic Analysis", "year": 2000, "referenceCount": 0,
+      "citationCount": 1430, "influentialCitationCount": 125, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2000-12-15",
+      "journal": {"pages": "I-XV, 1-359"}, "authors": [{"authorId": "2986384", "name":
+      "K. Gr\u00f6chenig"}]}, {"paperId": "9d5085f3008a60abd7e53bc7f16963c4db32e342",
+      "externalIds": {"MAG": "2049410986", "DOI": "10.1177/027836498500400201", "CorpusId":
+      121737271}, "corpusId": 121737271, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9d5085f3008a60abd7e53bc7f16963c4db32e342",
+      "title": "Manipulability of Robotic Mechanisms", "abstract": "This paper discusses
+      the manipulating ability of robotic mechanisms in positioning and orienting
+      end-effectors and proposes a measure of manipulability. Some properties of this
+      measure are obtained, the best postures of various types of manipulators are
+      given, and a four-degree-of-freedom finger is considered from the viewpoint
+      of the measure. The pos tures somewhat resemble those of human arms and fingers.",
+      "venue": "", "year": 1985, "referenceCount": 7, "citationCount": 2334, "influentialCitationCount":
+      121, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
+      "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
+      "Engineering", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1985-06-01", "journal": {"name": "The International Journal
+      of Robotics Research", "pages": "3 - 9", "volume": "4"}, "authors": [{"authorId":
+      "1796280", "name": "T. Yoshikawa"}]}, {"paperId": "a574e320d899e7e82e341eb64baef7dfe8a24642",
+      "externalIds": {"DBLP": "conf/emnlp/Ratnaparkhi96", "MAG": "2977626681", "ACL":
+      "W96-0213", "CorpusId": 5914287}, "corpusId": 5914287, "publicationVenue": {"id":
+      "41bf9ed3-85b3-4c90-b015-150e31690253", "name": "Conference on Empirical Methods
+      in Natural Language Processing", "type": "conference", "alternate_names": ["Empir
+      Method Nat Lang Process", "Empirical Methods in Natural Language Processing",
+      "Conf Empir Method Nat Lang Process", "EMNLP"], "url": "https://www.aclweb.org/portal/emnlp"},
+      "url": "https://www.semanticscholar.org/paper/a574e320d899e7e82e341eb64baef7dfe8a24642",
+      "title": "A Maximum Entropy Model for Part-Of-Speech Tagging", "abstract": "This
+      paper presents a statistical model which trains from a corpus annotated with
+      Part Of Speech tags and assigns them to previously unseen text with state of
+      the art accuracy The model can be classi ed as a Maximum Entropy model and simultaneously
+      uses many contextual features to predict the POS tag Furthermore this paper
+      demonstrates the use of specialized fea tures to model di cult tagging decisions
+      discusses the corpus consistency problems discovered during the implementation
+      of these features and proposes a training strategy that mitigates these problems",
+      "venue": "Conference on Empirical Methods in Natural Language Processing", "year":
+      1996, "referenceCount": 13, "citationCount": 1570, "influentialCitationCount":
+      119, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Linguistics",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
+      "publicationDate": null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId":
+      "1793475", "name": "A. Ratnaparkhi"}]}, {"paperId": "1a709a5309048ef6badb80deb66c6d6ed774446e",
+      "externalIds": {"MAG": "101096562", "CorpusId": 37493104}, "corpusId": 37493104,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1a709a5309048ef6badb80deb66c6d6ed774446e",
+      "title": "TEMPERATURE AND PHYTOPLANKTON GROWTH IN THE SEA", "abstract": "The
+      variation in growth rate with temperature of unicellular algae suggests that
+      an equation can be written to describe the maximum expected growth rate for
+      temperatures less than 40\u00b0C. Measured rates of phytoplankton growth in
+      the sea and in lakes are reviewed and compared with maximum expected rates.
+      The assimilation number (i.e., rate of photosynthetic carbon assimilation per
+      weight of chlorophyll a) for phytoplankton photosynthesis is related to the
+      growth rate and the carbon/chlorophyll a ratio in the phytoplankton. Since maximum
+      expected growth rate can be estimated from tempera\u00ad ture, the maximum expected
+      assimilation number can also be estimated if the carbon/ chlorophyll a ratio
+      in the phytoplankton crop is known. Many investigations of phytoplankton photosynthesis
+      in the ocean have included measures of the assimilation number, while fewer
+      data are available on growth rate. Assimilation numbers for Antarctic seas are
+      low as would be expected from the low ambient temperatures. Tropical seas and
+      temperate waters in summer often show low assimilation numbers as a result of
+      low ambient nutrient concentrations. However, coastal estuaries with rapid nutrient
+      regeneration processes show seasonal variations in the assimilation number with
+      temperature which agree well with expectation. The variation in maximum expected
+      growth rate with temperature seems a logical starting point for modeling phytoplankton
+      growth and photosynthesis in the sea.", "venue": "", "year": 1972, "referenceCount":
+      92, "citationCount": 2421, "influentialCitationCount": 212, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy":
+      [{"category": "Biology", "source": "external"}, {"category": "Environmental
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "96804368",
+      "name": "W. Richard"}]}, {"paperId": "a87ca203325c7c2a57e319e069a36afde4a7d46a",
+      "externalIds": {"MAG": "2967426412", "DOI": "10.7916/D8KD24FP", "CorpusId":
+      8959407}, "corpusId": 8959407, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a87ca203325c7c2a57e319e069a36afde4a7d46a",
+      "title": "The Meaning of Intonational Contours in the Interpretation of Discourse",
+      "abstract": "Recent investigations of the contribution that intonation makes
+      to overall utterance and discourse interpretation promise new sources of information
+      for the investigation of long-time concerns in natural-language processing.
+      In Hirschberg and Pierrehumbert 1986 we proposed that intonational fea tures
+      such as phrasing, accmt pUuttTWIt, pilch rangt", "venue": "", "year": 1990,
+      "referenceCount": 45, "citationCount": 1466, "influentialCitationCount": 102,
+      "isOpenAccess": true, "openAccessPdf": {"url": "https://academiccommons.columbia.edu/doi/10.7916/D8FN1CRD/download",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Linguistics",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1990-06-01",
+      "journal": {"name": "", "pages": "271-311", "volume": ""}, "authors": [{"authorId":
+      "1970864", "name": "J. Pierrehumbert"}, {"authorId": "144049352", "name": "Julia
+      Hirschberg"}]}, {"paperId": "1b07c0a4e9537bebcef46b30e06acda288f7cfbd", "externalIds":
+      {"MAG": "2147307405", "DOI": "10.1177/017084069701800104", "CorpusId": 145691109},
+      "corpusId": 145691109, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1b07c0a4e9537bebcef46b30e06acda288f7cfbd",
+      "title": "Strategic Choice in the Analysis of Action, Structure, Organizations
+      and Environment: Retrospect and Prospect", "abstract": "This paper examines
+      the place of the strategic choice perspective in the study of organizations
+      and considers its contemporary contribution. The main fea tures of the original
+      analysis are summarized, followed by a review of the key issues which arise
+      from it. The paper discusses the integrative potential of strategic choice theory
+      within organization studies and examines its contribu tion to an evolutionary
+      perspective on the subject.", "venue": "", "year": 1997, "referenceCount": 69,
+      "citationCount": 1177, "influentialCitationCount": 83, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category":
+      "Sociology", "source": "external"}, {"category": "Business", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle", "Review"], "publicationDate": "1997-01-01",
+      "journal": {"name": "Organization Studies", "pages": "43 - 76", "volume": "18"},
+      "authors": [{"authorId": "145515380", "name": "J. Child"}]}, {"paperId": "17d451204a460a4739c7b1627a128a125f4af120",
+      "externalIds": {"DBLP": "conf/uai/VermaP90", "MAG": "1568555062", "DOI": "10.1145/3501714.3501732",
+      "CorpusId": 27807863}, "corpusId": 27807863, "publicationVenue": {"id": "f9af8000-42f8-410d-a622-e8811e41660a",
+      "name": "Conference on Uncertainty in Artificial Intelligence", "type": "conference",
+      "alternate_names": ["Uncertainty in Artificial Intelligence", "UAI", "Conf Uncertain
+      Artif Intell", "Uncertain Artif Intell"], "url": "http://www.auai.org/"}, "url":
+      "https://www.semanticscholar.org/paper/17d451204a460a4739c7b1627a128a125f4af120",
+      "title": "Equivalence and Synthesis of Causal Models", "abstract": "Abstract
+      Scientists often use directed acyclic graphs (dags) to model the qualitative
+      struc\u00ad ture of causal theories, allowing the parameters to be estimated
+      from observational data. Two causal models are equivalent if there is no experiment
+      which could dis\u00ad tinguish one from the other. A canonical representation
+      for causal models is pre\u00ad sented which yields an efficient graphical criterion
+      for deciding equivalence, and provides a theoretical basis for extracting causal
+      structures from empirical data. This representation is then extended to the
+      more general case of an embedded causal model, that is, a dag in which only
+      a subset of the variables are observ\u00ad able. The canonical representation
+      presented here yields an efficient algorithm for determining when two embedded
+      causal models reflect the same dependency information. This algorithm leads
+      to a model theoretic definition of causation in terms of statistical dependencies.
+      Equivalence and Synthesis of Causal Models", "venue": "Conference on Uncertainty
+      in Artificial Intelligence", "year": 1990, "referenceCount": 16, "citationCount":
+      1358, "influentialCitationCount": 124, "isOpenAccess": false, "openAccessPdf":
+      null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
+      "Computer Science", "source": "external"}, {"category": "Computer Science",
+      "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Book", "Conference"],
+      "publicationDate": "1990-07-27", "journal": {"name": "Probabilistic and Causal
+      Inference"}, "authors": [{"authorId": "1988445", "name": "Thomas Verma"}, {"authorId":
+      "145430701", "name": "J. Pearl"}]}, {"paperId": "c80460c741362038b3e366313414b2edcaa015a4",
+      "externalIds": {"MAG": "2169212403", "DOI": "10.1126/SCIENCE.1074376", "CorpusId":
+      61533690}, "corpusId": 61533690, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c80460c741362038b3e366313414b2edcaa015a4",
+      "title": "Physical one-way functions", "abstract": "Modern cryptography relies
+      on algorithmic one-way functions\u2014numerical functions which are easy to
+      compute but very difficult to invert. This dissertation introduces physical
+      one-way functions and physical one-way hash functions as primitives for physical
+      analogs of cryptosystems. \nPhysical one-way functions are defined with respect
+      to a physical probe and physical system in some unknown state. A function is
+      called a physical one-way function if (a)\u00a0there exists a deterministic
+      physical interaction between the probe and the system which produces an output
+      in constant time; (b)\u00a0inverting the function using either computational
+      or physical means is difficult; (c)\u00a0simulating the physical interaction
+      is computationally demanding and (d)\u00a0the physical system is easy to make
+      but difficult to clone. \nPhysical one-way hash functions produce fixed-length
+      output regardless of the size of the input. These hash functions can be obtained
+      by sampling the output of physical one-way functions. For the system described
+      below, it is shown that there is a strong correspondence between the properties
+      of physical one-way hash functions and their algorithmic counterparts. In particular,
+      it is demonstrated that they are collision-resistant and that they exhibit the
+      avalanche effect, i.e., a small change in the physical system causes a large
+      change in the hash value. \nAn inexpensive prototype authentication system based
+      on physical one-way hash functions is designed, implemented, and analyzed. The
+      prototype uses a disordered three-dimensional microstructure as the underlying
+      physical system and coherent radiation as the probe. It is shown that the output
+      of the interaction between the physical system and the probe can be used to
+      robustly derive a unique tamper-resistant identifier at a very low cost per
+      bit. The explicit use of three-dimensional structures marks a departure from
+      prior efforts. Two protocols, including a one-time pad protocol, that illustrate
+      the utility of these hash functions are presented and potential attacks on the
+      authentication system are considered. \nFinally, the concept of fabrication
+      complexity is introduced as a way of quantifying the difficulty of materially
+      cloning physical systems with arbitrary internal states. Fabrication complexity
+      is discussed in the context of an idealized machine\u2014a Universal Turing
+      Machine augmented with a fabrication head\u2014which transforms algorithmically
+      minimal descriptions of physical systems into the systems themselves. (Copies
+      available exclusively from MIT Libraries, Rm. 14-0551, Cambridge, MA 02139-4307.
+      Ph. 617-253-5668; Fax 617-253-1690.)", "venue": "", "year": 2001, "referenceCount":
+      65, "citationCount": 1155, "influentialCitationCount": 41, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://nbviewer.jupyter.org/github/rpappu/pdf-publications/blob/master/Pappu-Science-2002.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Science", "pages": "2026-2030", "volume": "297"},
+      "authors": [{"authorId": "70476754", "name": "P. Ravikanth"}, {"authorId": "2245565",
+      "name": "S. Benton"}]}, {"paperId": "67a2952f8437defdee65bf8ae6bb8865d53cdc1c",
+      "externalIds": {"MAG": "2906875287", "DOI": "10.1090/S0273-0979-1989-15750-9",
+      "CorpusId": 7758571}, "corpusId": 7758571, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/67a2952f8437defdee65bf8ae6bb8865d53cdc1c",
+      "title": "On a theory of computation and complexity over the real numbers: $NP$-
+      completeness, recursive functions and universal machines", "abstract": "We present
+      a model for computation over the reals or an arbitrary (ordered) ring R. In
+      this general setting, we obtain universal machines, partial recursive functions,
+      as well as JVP-complete problems. While our theory reflects the classical over
+      Z (e.g., the computable functions are the recursive functions) it also reflects
+      the special mathematical character of the underlying ring R (e.g., complements
+      of Julia sets provide natural examples of R. E. undecidable sets over the reals)
+      and provides a natural setting for studying foundational issues concerning algorithms
+      in numerical analysis. Introduction. We develop here some ideas for machines
+      and computation over the real numbers R. One motivation for this comes from
+      scientific computation. In this use of the computer, a reasonable idealization
+      has the cost of multiplication independent of the size of the number. This contrasts
+      with the usual theoretical computer science picture which takes into account
+      the number of bits of the numbers. Another motivation is to bring the theory
+      of computation into the domain of analysis, geometry and topology. The mathematics
+      of these subjects can then be put to use in the systematic analysis of algorithms.
+      On the other hand, there is an extensively developed subject of the theory of
+      discrete computation, which we don''t wish to lose in our theory. Toward this
+      end we define machines, partial recursive functions, and other objects of study
+      over a ring R. Then in the case where R is the ring of integers Z, we have the
+      same objects (or perhaps equivalent objects) as the classical ones. Computable
+      functions over Z are thus ordinary computable functions. R.E. sets over Z are
+      ordinary R.E. sets. But when the ring is specialized to the real numbers, we
+      have computable functions which are reasonable for the study of algorithms of
+      numerical analysis. R.E. sets over R are no longer countable and include, for
+      example, basins of attraction of complex analytic dynamical systems. Received
+      by the editors April 21, 1988. 1980 Mathematics Subject Classification (1985
+      Revision). Primary 03D15, 68Q15; Secondary 65V05. 1 Partially supported by NSF
+      grants. Some of this work was done while Blum and Smale were visiting Shub at
+      the IBM, T. J. Watson Research Center. 2 Partially supported by the Letts-Villard
+      Chair at Mills College and the International Computer Science Institute, Berkeley.
+      \u00a9 1989 American Mathematical Society 0273-0979/89 $1.00 + $.25 per page
+      1 2 LENORE BLUM, MIKE SHUB AND STEVE SMALE There is another virtue of developing
+      a theory of machines over a ring. It forces a more algebraic approach, closer
+      to classical mathematics, than the approach from logic. Here is an abbreviated
+      description of some of the results of this paper, in this context of machines
+      over a ring R. (I) Most Julia sets are not R.E. over the reals, so their complements,
+      the basins of attraction, provide natural examples of R.E. undecidable sets
+      over R (\u00a7\u00a71 and 10). The Julia set example provides an interesting
+      link between the theory of computation and dynamical systems. A perhaps deeper
+      link is the computing endomorphism (\u00a73) which is an important conceptual
+      and technical tool used in our development. (II) An analogue of Cook''s JVP-completeness
+      theorem is proved over the real numbers. The NP-complete problem over R is the
+      4-Feasibility problem, i.e. the problem of deciding whether or not a real degree
+      4 polynomial \u0192 : R\" -> R has a zero (\u00a76). This result, in addition
+      to focusing attention on the 4-Feasibility problem over R has some interesting
+      consequences which point to the subtle differences between the theories of NP
+      over R and over Z. For example, by straightforward counting arguments, any NP-problem
+      over Z is seen to be solvable in 2 time. (See e.g. Garey-Johnson.) An analogous
+      result over the reals is far from obvious since there are a continuum of possible
+      guesses over R. It is not even clear a priori that AT-problems over R are decidable.
+      However, since the 4-Feasibility problem over R is decidable (by Tarski-Seidenberg)
+      and since the current best upper bound for decidability of the existential theory
+      of the reals is 4\u00b0^ (see Renegar, also Canny and Grigorev-Vorobjov), we
+      also get exponential upper bounds for TVP-problems over R but for much deeper
+      reasons than the case over Z. For another interesting difference between the
+      two theories, note that by Hilbert''s Tenth Problem, the 4-Feasibility problem
+      restated over Z is not even decidable over Z and so not in NP over Z. PROBLEM.
+      What is the relation between the problems P = NP over R, and P = NP over Z?
+      (III) Computable functions over R are characterized intrinsically by a class
+      we call partial recursive functions over R. For JR = Z, these are the usual
+      partial recursive functions (\u00a77). (IV) There exists a universal machine
+      over R. This machine, inspired by the Universal Turing Machine, does the computation
+      of any machine over R. The universal machine over R turns out to be independent
+      of R. Moreover, by avoiding G\u00f6del coding via prime numbers, the algebraic
+      structure of the universal machine remains intact (\u00a78). NP-COMPLETENESS,
+      RECURSIVE FUNCTIONS AND UNIVERSAL MACHINES 3 (V) Inspired by the work of Davis,
+      Robinson and Putnam, and Matijas\u00e8vic on Hubert''s tenth problem, we give
+      a \"diophantine-like\" description of R.E. sets, for a certain class of machines
+      (\u00a79). There are a large number of contributions of mathematicians and computer
+      scientists which predate and relate to this work. A very brief survey, with
+      some comparisons, follows. Of course, the work of Turing, G\u00f6del, Church
+      and others in the thirties forms the core of the existing framework for our
+      work. Although much of the classical theory of computation deals with computing
+      over the natural numbers, certain approaches have considered other underlying
+      domains. Close to the classical approach, Rabin developed a theory of computable
+      algebra and fields in which the underlying domains can be effectively coded
+      by natural numbers and are thus, necessarily countable. On the other hand, the
+      theories of computation over abstract structures, are perhaps more general than
+      ours. See e.g., Friedman (or as discussed by Shepherdson in Harrington, et al),
+      Tiuryn, and Moschovakis. These general approaches both exploit and explore the
+      logical properties of procedures. But, when applied to specific structures such
+      as the reals, they do not yield the concrete mathematical results (e.g. about
+      Julia sets or the 4-Feasibility problem) that quite naturally follow from the
+      more mathematical model developed in this paper. Recursive analysis provides
+      yet another approach. See, e.g. FriedmanKo, Pour-El-Richards, Hoover and Kreitz-Weihrauch.
+      Some tools here are recursive functionals, computable real numbers and oracle
+      Turing machines where, roughly, one imagines a real number fed to the machine
+      bit by bit. To contrast, we view a real number not as its decimal (or binary)
+      expansion, but rather a mathematical entity as is generally the practice in
+      numerical analysis. Thus, for example, we suppose Newton''s algorithm for finding
+      the zeroes of a polynomial \u0192 to be performed on an arbitrary real, not
+      just a computable real; the fundamental components of the algorithm in our model,
+      as in practice, are the rational operations Nf{x) = x f(x)/f''(x), not the bit
+      operations. The development of algebraic complexity theory, in particular the
+      work of Ostrowski, Pan, Winograd, Strassen and Sch\u00f6nhage (see von zur Gathen
+      for a recent survey) gave rise to the \"real number model\" approach to computation.
+      Decision and computation tree models as in Rabin, Steele-Yao, Ben-Or, and the
+      tame machines in Smale, are such real number models of computation but considerably
+      less powerful or general purpose than ours (e.g., they have bounded halting
+      time and none are universal; also they don''t allow for uniform algorithms as
+      do our infinite dimensional machines). More closely related are the register
+      machines of Shepherdson-Sturgis and the RAM''s or random access machines. (See
+      Aho-Hopcroft-Ullman or Machtey-Young for discrete versions.) While a definition
+      of a real RAM is given in Preparata-Shamos, the formal development of a theory
+      is not 4 LENORE BLUM, MIKE SHUB AND STEVE SMALE pursued. Indeed, in their book,
+      only a subclass of machines, equivalent to the class of decision trees, is utilized.
+      Perhaps closest to our approach is the work of Herman-hard on computability
+      over arbitrary fields. Also close in spirit is a theory of real Turing machines
+      outlined by Abramson. Nimrod Megiddo has also considered an example of an NP-complete
+      over R in our model. Some other related papers are Borodin, Valiant, Endler,
+      Lovdsz, and Eaves-Rothblum and TraubWozniakowski. Books having significant contact
+      with this paper include Davis, Eilenberg, Manin, Manna, Minsky and Rogers. Especially
+      in \u00a7\u00a75 and 6 below, the influence of complexity work of Cook and Karp
+      (see Garey-Johnson) among many others, is evident. In our \u00a78, Robinson,
+      Matijas\u00e8vic, Davis, and Putnam, and DenefhavG been influential. We would
+      like to acknowledge helpful discussions with Martin Davis and Steve Simpson.
+      Sections 1. Examples of machines over R 2. Machines over a ring R 3. The computing
+      endomorphism and the register equations 4. Time T halting sets, equations, polynomials
+      and computations 5. Complexity theory of machines over R 6. TVP-completeness
+      and the analogue to Cook''s theorem over R 7. Computable functions, normal forms
+      and partial recursive functions over R 8. Existence of a universal machine over
+      a ring 9. Characterizing R.E. sets as output sets and pseudo-Diophantine sets
+      10. Most Julia sets are undecidable 11. Some final remarks and problems References
+      1. Examples of machines over R. Even before defining our notion of a machine,
+      we give some examples. The first examples are related to the theory of complex
+      dynamical systems. We present them in some detail. EXAMPLE 1. Consider a complex
+      polynomial map g : C \u2014\u2022 C. This map g will be considered as a", "venue":
+      "", "year": 1989, "referenceCount": 58, "citationCount": 1152, "influentialCitationCount":
+      86, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.ams.org/bull/1989-21-01/S0273-0979-1989-15750-9/S0273-0979-1989-15750-9.pdf",
+      "status": "GOLD"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
+      "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": "1989-07-01", "journal":
+      {"name": "Bulletin of the American Mathematical Society", "pages": "1-46", "volume":
+      "21"}, "authors": [{"authorId": "40642563", "name": "L. Blum"}, {"authorId":
+      "2331317", "name": "M. Shub"}, {"authorId": "34911188", "name": "S. Smale"}]},
+      {"paperId": "8b934aad7112262d1260c2d9296fc68985fe5bfe", "externalIds": {"MAG":
+      "2063444278", "DOI": "10.1172/JCI119750", "CorpusId": 12628862, "PubMed": "9410890"},
+      "corpusId": 12628862, "publicationVenue": {"id": "8c9a9e1b-acf2-4274-8d73-6ea0ecd11fd1",
+      "name": "Journal of Clinical Investigation", "type": "journal", "alternate_names":
+      ["J Clin Investig"], "issn": "0021-9738", "url": "https://www.jci.org/", "alternate_urls":
+      ["http://www.jci.org/", "https://www.jci.org/archive", "http://www.jci.org/impact"]},
+      "url": "https://www.semanticscholar.org/paper/8b934aad7112262d1260c2d9296fc68985fe5bfe",
+      "title": "Nitric oxide synthases: which, where, how, and why?", "abstract":
+      "ture that clearly identifies the specific enzyme isoform. A widely accepted
+      nomenclature (3), which will be used in these Perspective articles, identifies
+      the three mammalian enzyme isoforms as nNOS, iNOS, and eNOS, reflecting the
+      tissues of origin for the original protein and cDNA isolates. As denoted by
+      its prefix, nNOS was originally purified and cloned from neuronal tissues. However,
+      nNOS is now known to be much more widely distributed, with an important level
+      of expression in skeletal muscle. iNOS, originally purified and cloned from
+      an immunoactivated macrophage cell line, has since been identified in myriad
+      mammalian tissues, and iNOS expression has been studied in cells as diverse
+      as cardiac myocytes, glial cells, and vascular smooth muscle cells (to name
+      only a few). eNOS, the last of the three mammalian NOS isoforms to be isolated,
+      was originally purified and cloned from vascular endothelium, but has since
+      been discovered in cardiac myocytes, blood platelets, brain (hippocampus), and
+      elsewhere. To add to the confusion, the human genes for the NOS isoforms are
+      officially categorized in the order of their isolation and characterization;
+      thus, the human genes encoding nNOS, iNOS, and eNOS are termed NOS1 , NOS2 ,
+      and NOS3 , respectively.", "venue": "Journal of Clinical Investigation", "year":
+      1997, "referenceCount": 52, "citationCount": 1037, "influentialCitationCount":
+      33, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.jci.org/articles/view/119750/files/pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Biology", "Medicine"], "s2FieldsOfStudy":
+      [{"category": "Biology", "source": "external"}, {"category": "Medicine", "source":
+      "external"}, {"category": "Biology", "source": "s2-fos-model"}, {"category":
+      "Medicine", "source": "s2-fos-model"}], "publicationTypes": ["Review", "JournalArticle"],
+      "publicationDate": "1997-11-01", "journal": {"name": "The Journal of clinical
+      investigation", "pages": "\n          2146-52\n        ", "volume": "100 9"},
+      "authors": [{"authorId": "2153763", "name": "T. Michel"}, {"authorId": "2110687",
+      "name": "O. F\u00e9ron"}]}, {"paperId": "ceb90588b49f4af3b06af7edd7b81540ffd2ca99",
+      "externalIds": {"DBLP": "books/lib/HopcroftU69", "MAG": "1817451992", "CorpusId":
+      29997534}, "corpusId": 29997534, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ceb90588b49f4af3b06af7edd7b81540ffd2ca99",
+      "title": "Formal languages and their relation to automata", "abstract": "From
+      the Preface (See Front Matter for full Preface) \n \nThe study of formal languages
+      constitutes an important subarea of computer science. This area sprang to life
+      around 1956 when Noam Chomsky gave a mathematical model of a grammar in connection
+      with his study of natural languages. Shortly afterwards, the concept of a grammar
+      was found to be of great importance to the programmer when the syntax of the
+      programming language ALGOL was defined by a context-free grammar. This development
+      led naturally to syntax-directed compiling and the concept of a compiler compiler.
+      Since then a considerable flurry of activity has taken place, the results of
+      which have related formal languages and automata theory to such an extent that
+      it is impossible to treat the areas separately. By now, no serious study of
+      computer science would be complete without a knowledge of the techniques and
+      results from language and automata theory. \n \nThis book presents the theory
+      of formal languages as a coherent theory and makes explicit its relationship
+      to automata. The book begins with an explanation of the notion of a finite description
+      of a language. The fundamental descriptive device--the grammar--is explained,
+      as well as its three major subclasses--regular, context-free, and context-sensitive
+      grammars. The context-free grammars are treated in detail, and such topics as
+      normal forms, derivation trees, and ambiguity are covered. Four types of automata
+      equivalent to the four types of grammars are described. These automata are the
+      finite automaton, the pushdown automaton, the linear bounded automaton, and
+      the Turing machine. The Turing machine is covered in detail, and unsolvability
+      of the halting problem shown. The book concludes with certain advanced topics
+      in language theory--closure properties, computational complexity, deterministic
+      pushdown automata, LR(k) grammars, stack automata, and decidability.", "venue":
+      "Addison-Wesley series in computer science and information processing", "year":
+      1969, "referenceCount": 0, "citationCount": 1641, "influentialCitationCount":
+      67, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"pages": "I-VII, 1-242"}, "authors":
+      [{"authorId": "1706504", "name": "J. Hopcroft"}, {"authorId": "1742391", "name":
+      "J. Ullman"}]}, {"paperId": "82f8fbc66004ac438ac742c1ad6016d07d1ae037", "externalIds":
+      {"DBLP": "journals/cacm/CardMN80", "MAG": "2206175796", "DOI": "10.1145/358886.358895",
+      "CorpusId": 5918086}, "corpusId": 5918086, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/82f8fbc66004ac438ac742c1ad6016d07d1ae037",
+      "title": "The keystroke-level model for user performance time with interactive
+      systems", "abstract": "There are ~eg:N ms:poets of aser~emt,xu{er ~rforma~ce
+      tha~ sys*em designers sh~d sys~emarka{~ ~ e r. This arlic|e prop~yses a ~im~}e
+      m~eL the Neys{T{.>ke-Levd Medea, for predkd~g o,~e aspe~''t M w2rferma:mee:
+      the time i:t takes ,a~ expel u~wr ~;:o perform a givers *az~ m~ a give= eom,p~:{er
+      sys{~a. The model is b.ae~ e~ counting keystrokes :a~d @~er |owdevel operatkms.,
+      i:~c{udir~g the user''s ~me=taI ~re~aratioas arid the* system''s re Pe e is
+      coded fa ~\u00a2~ge~ of ~e~e {~*rati~as an.d epe~a~r Nm\u00a2~ s~:~ Ce Nve Ne~c~i~s,~
+      HeurNfic n~}es are :gh''ef~ Nr p''redicti~g ~here men~al prelaara~ie~s \u00a2~ce~r.
+      When tested against{ data \u00a2m 1|) diffe:re~ systems, ~N~I''s pee~ic~ifye
+      e~f N 2t ~reem fee tMividual ~asks.. A= examNe N gia''ee m Rlus{ra{e h(~ NEe
+      m~l .eaa ~ ~aed to pr~dece parametric predie{km.g add brow set~:sifivt{y aaaiysis
+      c:a:a be ~:sexi m redeem ce~e|~.sfo~s in the face of ~mc,e~aia as:sumt~ti~o~:s,
+      Finally, the model ~s e@m~ar~ ~o ~ereral s*mp|er ver,s&ms. \"INe N, ter~fiaJ
+      fete ~k~r ~he Keystroke*Level Model i.n gys{em de:skgn is Fhe dcsigs and evaluation
+      of imeracti,~e computer systems sho~ald ~ake imo accnun~ ~he ~o~a! per~brma~<e
+      of the combit~ed ~serocompu~er system. Such an at<:ou~ woukJ reflcc~ the psychological
+      charac~eristic.~ of users and ~heir imerac~ion wish {he ~ask and the computer.
+      This rarely ncc~.:~rs in any sss~ematic and explicit way, The causes of this
+      fl~ilare may lie partly in amt~de:; ioward doe ~ibi~i~y of dealing s~ccesduily
+      with psy~. chok}gicM factors, such as the belief @m~ i~mmion~ s~,b~ ]ective
+      eaperiesce~ sad anecdote ~brm the only possible bases ff:,r deMing wif~ ~hem
+      Whatever may be ~rue ot'' ~hcae more gk:>bat iss:ues~ oae major cau:se is the
+      ab:>ence of g<xxJ analysis ~ools for a,::_~:ssiag combined user.,<om-purer performance.
+      There exists quite a bit of research retevan~ to ~he area of user-computer performance,
+      b~ mo:s~ of it is preIiminary is m~ture. Pew et aL [14t ia a review o{ \u00a23
+      g<r~e~''~fiaIIy relevant haman-system pertbrmar~ce models~ co~achade \"~ha~
+      is~egrative models of huma~~ p<r%rmance compa~iNe with the requirements ~br
+      representing cors-mand and comrol system ~rR>rmance do so~, exist a~ the present
+      @he.\" Ramsey and A~w~.x>d {/51~ after reviewing the human L~c~ors literature
+      pertb~em to computer sys-tem:s, conclude 1hat while ~here exists eno~gh material
+      ~o develop a qualitative ''human factors design guide,\" ~here is i.asufficient
+      material ~br a \"quantitative reference hand book2'' This paper presents one
+      s~scific quanti~aive analysis took a simple model for the time it takes a user
+      ~o perform a task wi~.h a given \u2026", "venue": "CACM", "year": 1980, "referenceCount":
+      28, "citationCount": 1189, "influentialCitationCount": 120, "isOpenAccess":
+      true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/358886.358895",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Review"], "publicationDate": "1980-07-01", "journal": {"name": "Commun. ACM",
+      "pages": "396-410", "volume": "23"}, "authors": [{"authorId": "1720492", "name":
+      "S. Card"}, {"authorId": "32485293", "name": "T. Moran"}, {"authorId": "48603437",
+      "name": "A. Newell"}]}, {"paperId": "a3319cc89ae585483a570d786d0406a09c3f2d46",
+      "externalIds": {"MAG": "1991129227", "DOI": "10.1177/002199837601000101", "CorpusId":
+      51321995}, "corpusId": 51321995, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a3319cc89ae585483a570d786d0406a09c3f2d46",
+      "title": "Moisture Absorption and Desorption of Composite Materials", "abstract":
+      "Expressions are presented for the moisture distribution and the mois ture content
+      as a function of time of one dimensional homogeneous and composite materials
+      exposed either on one side or on both sides to humid air or to water. The results
+      apply during both moisture absorption and desorption when the moisture content
+      and the temperature of the environ ment are constant. Test procedures are described
+      for determining experi mentally the values of the moisture content and the diffusivity
+      of com posite materials. A series of tests using unidirectional and \u03c0/4
+      Graphite T-300 Fiberite 1034 composites were performed in the temperature range
+      300\u2014425 K with the material submerged both in moist air (humidity 0 to
+      100%) and in water. The test data support the analytical results and pro vide
+      the moisture absorption and desorption characteristics of such com posites.
+      Extension of the results to materials exposed to time varying envi ronmental
+      conditions is indicated.", "venue": "", "year": 1976, "referenceCount": 5, "citationCount":
+      1184, "influentialCitationCount": 61, "isOpenAccess": true, "openAccessPdf":
+      {"url": "http://deepblue.lib.umich.edu/bitstream/2027.42/67521/2/10.1177_002199837601000101.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Materials Science"], "s2FieldsOfStudy":
+      [{"category": "Materials Science", "source": "external"}, {"category": "Materials
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1976-01-01", "journal": {"name": "Journal of Composite Materials",
+      "pages": "2 - 20", "volume": "10"}, "authors": [{"authorId": "103089376", "name":
+      "C. Shen"}, {"authorId": "49215868", "name": "G. Springer"}]}, {"paperId": "25eb9401215b388c740f5521519bc8220cdef3ff",
+      "externalIds": {"MAG": "2103610162", "DOI": "10.1177/027836498400300303", "CorpusId":
+      122945038}, "corpusId": 122945038, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/25eb9401215b388c740f5521519bc8220cdef3ff",
+      "title": "Initial Experiments on the End-Point Control of a Flexible One-Link
+      Robot", "abstract": "It has been known for some time (Gevarter 1970) that if
+      a flexible structure is controlled by locating every sensor exactly at the actuator
+      it will control, then stable operation is easy to achieve. Nearly all commercial
+      robots are controlled in this way, for this reason. So are most flexible spacecraft.
+      Conversely, when one attempts to control a flexible struc ture by applying control
+      torques at one end that are based on a sensor at the other end, the problem
+      of achieving stability is severe. Solving it is an essential step for better
+      control in space: the space-shuttle arm is a cogent example. The next generation
+      of industrial robots will also need such control capability, for they will need
+      to be much lighter in weight (to achieve quick response with modest energy),
+      and they will need to achieve greater precision by employing end-point sensing.
+      A set of experiments has been constructed to demonstrate control strategies
+      for a single-link, very flexible manipulator, where the position of one end
+      is to be sensed and precisely positioned by torquing at the other end. The objective
+      of this first set of experiments is to uncover and solve problems related to
+      the control of very flexible manipulators where sen sors are not colocated with
+      the actuator. The experimental arrangement described here is also a test bed
+      for new designs for flexible-structure controllers, designs that use insensitive,
+      reduced-order control and adaptive control methods, for example. This paper
+      describes the experimental arrangement, model identification, control design,
+      and first experimental results. Some interesting results are the following.
+      First, good stability can be achieved for such noncolocated systems, and reponse
+      can be achieved that is effectively three times faster than the first natural
+      cantilever period of the system: but a good model of the system dynamics and
+      rather sophisticated control algorithms are essential to doing so. Even then,
+      the system will always be conditionally stable. In addition to the tip sensor,
+      a colocated rate sensor and nearly colocated strain gauges have been found to
+      be very useful for achieving good closed-loop performance, that is, high gain
+      and high band width. Second, there is an ultimate physical limit to achiev able
+      response time, namely, the time required for a wave to travel the length of
+      the member. Well-designed controllers can approach this limit. Third, the use
+      of end-point sensing makes less critical the elaborate dynamic conditioning
+      of position-command signals\u2014 \"model-following \" differentia tors, feed-forward,
+      and the like\u2014such as are typically needed in present-generation robots
+      that use \"dead reckoning\" in lieu of end-point sensing. With end-point sensing,
+      feedback alone (suitably conditioned) is sufficient to whip the tip to the commanded
+      position and hold it there precisely. Even more important, a shift in, for example,
+      workpiece with respect to robot base, no longer produces an error.", "venue":
+      "", "year": 1984, "referenceCount": 7, "citationCount": 1148, "influentialCitationCount":
+      23, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
+      "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
+      "Engineering", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1984-09-01", "journal": {"name": "The International Journal
+      of Robotics Research", "pages": "62 - 75", "volume": "3"}, "authors": [{"authorId":
+      "40260947", "name": "R. Cannon"}, {"authorId": "145658985", "name": "E. Schmitz"}]},
+      {"paperId": "ede206752591c70dcf4d3b90d84814e5932260de", "externalIds": {"MAG":
+      "1993721703", "DOI": "10.1146/ANNUREV.PS.39.020188.002355", "CorpusId": 317589},
+      "corpusId": 317589, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ede206752591c70dcf4d3b90d84814e5932260de",
+      "title": "Measures of Memory", "abstract": "ionist Positions Abstractionist
+      positions view implicit memory as reflecting modification of the state of abstract
+      lexical, semantic, or procedural knowledge structures; byionist positions view
+      implicit memory as reflecting modification of the state of abstract lexical,
+      semantic, or procedural knowledge structures; by contrast, explicit memory is
+      assumed to depend on formation and retrieval of memory traces representing specific
+      experiences. Abstractionists are often neuroscientifically oriented, using brain
+      lesion data to constrain their theories. Of particular interest are findings
+      that amnesic patients are selectively im\u00ad paired on direct tests of memory
+      but show normal learning as measured by some indirect tests (reviewed below).
+      These deficits are ascribed to an impairment of the system responsible for memory
+      of specific experiences. In neuroscience, modularity of systems is the rule
+      rather than the exception: If one accepts a straightforward relationship between
+      brain systems and cogni\u00ad tive systems, the hypothesis of multiple memory
+      systems is a logical exten\u00ad sion of current knowledge (Cohen 1984; Oakley
+      1983; for discussion, see Cohen 1 985; Olton 1985; Schacter 1986) . Tu1ving''s
+      (1972) heuristic distinction between episodic and semantic forms of memory was
+      later developed into a multiple-system theory (Schacter & Tulving 1982a, b;
+      Tulving 1983, 1984a) . Episodic memory \"deals with unique, concrete, personal,
+      temporally dated events,\" while semantic mem\u00ad ory \"involves general,
+      abstract, timeless knowledge that a person shares with others\" ( 1986, p. 307).
+      In recent versions of the theory (Tulving 1984b,c; 486 RICHARDSON-KLA VEHN &
+      BJORK 1985a,b,c; 1986) episodic memory is viewed as a specialized subsystem
+      of semantic memory, with both systems embedded within a procedural memory, an
+      arrangement Tulving terms monohierarchical. This position was designed to facilitate
+      conceptualization of Tulving''s (1983) hypothesis of the phylogenetic evolution
+      of episodic from semantic memory, and to account for recent arguments that whereas
+      indirect memory measures reveal evidence of memory early in human ontogeny,
+      the capacity to perfonn direct memory tasks first emerges only at 8-9 months
+      of age (Schacter & Moscovitch 1984) . There are a number of other multiple-system
+      formulations that are some\u00ad what analogous to the episodic-semantic distinction
+      (e.g. Halgren 1984; Johnson 1983 ; Oakley 1983 ; O''Keefe & Nadel 1978; Olton
+      et al 1979; Schacter & Moscovitch 1984; Warrington & Weiskrantz 1982) . One
+      of these deserves special note: Morton''s (1969, 1970, 1979, 1981) mUltisystem
+      theory differs from Tulving''s in that conceptual and factual knowledge, as
+      well as personal or episodic memories, are dealt with by the same system (the
+      cognitive system); a separate system contains abstract representations for words
+      (logogens) that are responsible for lexical access. Other theorists regard the
+      distinction between procedural and declarative (or propositional) memories (accepted
+      by Tulving) as sufficient to explain the observed dissociations between direct
+      and indirect measures (e.g. Baddeley 1984; Cohen 1984; McKoon et al 1986; Squire
+      & Cohen 1984) . The pro\u00ad cedural/declarative distinction was originally
+      formulated by workers in artifi\u00ad cial intelligence as a distinction between
+      types of knowledge (e .g . Barr & Feigenbaum 1981; Winograd 1975) , but it has
+      been extended into a multiple\u00ad system viewpoint (Cohen 1984; Squire & Cohen
+      1984) . Procedural memory involves \"reorganization or other modification of
+      existing processing struc\u00ad tures or procedures ,\" whereas declarative
+      memory \"represents explicitly new data structures derived from the operation
+      of any process or procedure\" (Cohen 1984, pp. 96-97). Although procedural memory
+      can be revealed only when a task reengages prior processing operations, it is
+      abstract in the sense that it does not record the specific prior events that
+      caused those processing operations to be modified. The declarative system is
+      considered to be respon\u00ad sible for conscious access to facts and past experiences;
+      it is necessary for performance of direct memory tests, and is impaired in amnesia.
+      An approach analogous to the procedural/declarative distinction is proposed
+      by Mishkin (Mishkin et al 1984; Mishkin & Petri 1984) , who distinguishes between
+      a memory system and a habit system. The distinction between activation and elaboration
+      (Graf & Mandler 1984; Mandler 1980; Mandler et al 1986) is a process-oriented
+      viewpoint; it differs from other abstractionist positions in being neutral with
+      respect to the issue of memory systems. Activation of a preexisting mental representation
+      \"strength\u00ad ens the relations among its components and increases its accessibility\"
+      (Graf MEASURES OF MEMORY 487 & Mandler 1 984, p. 553); elaborative processing
+      is necessary in order to retain new relationships and relate stimuli to the
+      context in which they were presented. Activation alone is sufficient to result
+      in processing facilitation that is revealed in indirect memory tests, whereas
+      elaboration is necessary for direct tests of memory . A similar concept of trace
+      activation has been proposed by Diamond & Rozin (1 984; see also Mortensen 1980)
+      . Nonabstractionist Positions Nonabstractionists are unified by their disagreement
+      with the necessity to distinguish abstract representations from memory traces
+      that preserve in\u00ad formation from specific experiences. They are typically
+      mainstream cognitive psychologists who concern themselves primarily with the
+      behavior of normal human subjects. Kolers (e.g. 1979, 1 985; Kolers & Roediger
+      1984; Kolers & Smythe 1 984) has attacked the distinction between procedural
+      and declarative (or proposi\u00ad tional) knowledge, arguing that \"statements
+      or declarations . . . do not fail of procedural representation\" (Kolers & Roediger
+      1984, p. 437). When a subject displays knowledge, he/she is assumed to be engaging
+      in a form of skilled performance. Knowledge is regarded as being specific to
+      the processes by which that knowledge is acquired: Rather than offering a \"unitary\"
+      theory in opposition to multisystem approaches, Kolers suggests that mentation
+      con\u00ad sists of a multiplicity of processes whose properties are poorly correlated.
+      Memory is revealed to the extent that processing operations at study and test
+      overlap (the principle of transfer-appropriate processing, Bransford et al 1
+      979) . Dissociations between direct and indirect measures of retention are to
+      be expected when members of the two classes of task make different process\u00ad
+      ing requirements , and not otherwise [see also Moscovitch et al ( 1986) for
+      a similar viewpoint]. Jacoby ( 1983b) , Blaxton ( 1 985), and Roediger & Blaxton
+      ( 1 987a,b) have used the terms conceptually driven and data-driven as a taxonomy
+      of the processing demands of memory tests. Direct memory tests typically involve
+      more conceptually driven than data-driven processing because the subject uses
+      associative information to reconstruct the study episode mentally; in\u00ad
+      direct memory tests typically involve more data-driven than conceptually driven
+      processes because the subject focusses on external stimuli (e.g. a fragment
+      of a word) at test. Dissociations between data-driven and con\u00ad ceptually
+      driven memory tests would be expected as a function of the type of information
+      (semantic-associative vs perceptual) encoded in a prior episode. Jacoby ( 1982,
+      1983a,b, 1984, 1 987; Jacoby & Brooks 1984; Jacoby & Dallas 198 1 ; Jacoby &
+      Witherspoon 1982) argues that implicit and explicit memory are reflections of
+      \"different aspects of memory for whole prior processing episodes\" ( 1 983a,
+      p. 21) . The aware and unaware aspects of 488 RICHARDSON-KLA VEHN & BJORK memory
+      for episodes are assumed to result from differences in information provided
+      by test cues, and possibly accompanying differences in retrieval processes (see
+      Whittlesea 1 987 for a similar position).", "venue": "", "year": 1988, "referenceCount":
+      254, "citationCount": 1029, "influentialCitationCount": 21, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
+      [{"category": "Psychology", "source": "external"}, {"category": "Psychology",
+      "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": {"name": "Annual Review of Psychology", "pages": "475-543",
+      "volume": "39"}, "authors": [{"authorId": "1456286123", "name": "A. Richardson-Klavehn"},
+      {"authorId": "35641166", "name": "R. Bjork"}]}, {"paperId": "d055636ebdca03646818e270c08dff92ce2fb501",
+      "externalIds": {"MAG": "2288879222", "DOI": "10.2307/1534637", "CorpusId": 147071249},
+      "corpusId": 147071249, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d055636ebdca03646818e270c08dff92ce2fb501",
+      "title": "Laumann (E.O), Gagnon (J.H), Michael (R.T), Michaels (S) \u2014 The
+      Social Organization of Sexuality. Sexual Practices in the United States; Michael
+      (R.), Gagnon (J.), Laumann (E.), Kolata (G.) \u2014 Sex in America. A Definitive
+      Survey", "abstract": "PSYCHIATRIC SERVIcES . February 1996 Vol.47 No.2 205 ture,
+      doubting hen adequacy as a parent, and feeling isolated in what she at first
+      believed to be a unique situation, Dew describes an initial attempt to nun away
+      from society and to hide in order to protect her son, her family, and herself.
+      \u201cOur house had taken on the dimensions ofa single closet, and a closet
+      is no place like home.\u201d The author gives exacting attention to her efforts
+      to integrate her son\u2019s newly disclosed identity into a redefined relationship.
+      Mother and son\u2019s ultimately successful attempts to help one another come
+      to terms with Stephen s sexuality, starting from mitial faltering missteps,
+      are chronicled with dialogues that read almost like process recordings, so vivid
+      are they in their detail. Drawing on hen own initial reaction to her son s homosexuality,
+      Dew confronts the homophobia imbued in our culture and the toll it takes on
+      gay children who struggle to keep their stigmatized identity a secret to avoid",
+      "venue": "", "year": 1997, "referenceCount": 0, "citationCount": 1093, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Sociology"],
+      "s2FieldsOfStudy": [{"category": "Sociology", "source": "external"}, {"category":
+      "Psychology", "source": "s2-fos-model"}, {"category": "Sociology", "source":
+      "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": "1997-11-01",
+      "journal": {"name": "Population", "pages": "1548-1551", "volume": "52"}, "authors":
+      [{"authorId": "5236175", "name": "A. Giami"}]}, {"paperId": "977d9f26ba57022f19784d12626857de0befde12",
+      "externalIds": {"MAG": "2275311108", "DOI": "10.1093/JNCI/25.1.85", "CorpusId":
+      874027, "PubMed": "14427847"}, "corpusId": 874027, "publicationVenue": {"id":
+      "917421ed-0c48-4dc3-897b-a8caae75761d", "name": "Journal of the National Cancer
+      Institute", "type": "journal", "alternate_names": ["J National Cancer Inst"],
+      "issn": "0027-8874", "url": "http://jnci.oupjournals.org/", "alternate_urls":
+      ["http://jnci.oxfordjournals.org/"]}, "url": "https://www.semanticscholar.org/paper/977d9f26ba57022f19784d12626857de0befde12",
+      "title": "Chromosome studies on normal and leukemic human leukocytes.", "abstract":
+      "SUMMARY ChromosOJ:ne studies were Ulade on myelohlasts obtained from the peri
+      pheral blood of 4 patients (3 males, 1 feUlale) with acute or chronic granu
+      locytic leukeUlia and on leukocytes froUl 3 healthy individuals (1 Ulale, 2
+      feUlales). The cells were grown in cul ture for 2 to 4 days before exaUlination.
+      Both in normal and in leukeIllic cells, the predOJninant Dletaphase chroUlo
+      some nUIllber was 46. However, idio-gram analyses revealed a definite abnor
+      Ulality, probably involving the Y chro mosome, in the 2 cases of chronic granulocytic
+      leukemia. No chroIllo SOIlle abnormality was distinguil!hable in the 2 cases
+      of acute leukeUlia (1 Illale, 1 feUlale) investigated. The results indicate
+      that in SOUle leukeUlic hUUlan leukocytes sUlall but definite ChrOlllO sOIllal
+      changes are demonstrahle.-J. Nat. Cancer Inst. 25: 85-109, 1960.", "venue":
+      "Journal of the National Cancer Institute", "year": 1960, "referenceCount":
+      20, "citationCount": 1065, "influentialCitationCount": 30, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Biology", "Medicine"], "s2FieldsOfStudy":
+      [{"category": "Biology", "source": "external"}, {"category": "Medicine", "source":
+      "external"}, {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "1960-07-01", "journal": {"name": "Journal
+      of the National Cancer Institute", "pages": "\n          85-109\n        ",
+      "volume": "25"}, "authors": [{"authorId": "6809070", "name": "P. Nowell"}, {"authorId":
+      "35365786", "name": "D. Hungerford"}]}]}
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '177003'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 10 Dec 2023 02:00:34 GMT
+      Via:
+      - 1.1 bfa23c0b5661b8c601e9ec8121a9d6ca.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - C7tDa100doTuqyX-NZCQpmHcWSR4HkgOpzaxKvsA5OBJsYFECRfB8g==
+      X-Amz-Cf-Pop:
+      - GRU3-P4
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - PtFEAGvePHcEBWg=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '177003'
+      x-amzn-Remapped-Date:
+      - Sun, 10 Dec 2023 02:00:34 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - f46f3c76-d631-4a68-90c6-388e9fee098a
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
