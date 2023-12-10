@@ -15,7 +15,7 @@ class SemanticScholar():
 
     def __init__(
                 self,
-                timeout: int = 10,
+                timeout: int = 30,
                 api_key: str = None,
                 api_url: str = None,
                 debug: bool = False
