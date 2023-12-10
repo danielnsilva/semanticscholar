@@ -141,7 +141,7 @@ class SemanticScholar():
                 self,
                 paper_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a paper's authors
 
@@ -178,7 +178,7 @@ class SemanticScholar():
                 self,
                 paper_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a paper's citations
 
@@ -215,7 +215,7 @@ class SemanticScholar():
                 self,
                 paper_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a paper's references
 
@@ -363,7 +363,7 @@ class SemanticScholar():
                 self,
                 author_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a author's papers
 
@@ -400,7 +400,7 @@ class SemanticScholar():
                 self,
                 query: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Search for authors by name
 

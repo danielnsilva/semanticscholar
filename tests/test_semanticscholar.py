@@ -188,23 +188,25 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_paper_citations(self):
-        data = self.sch.get_paper_citations('CorpusID:49313245')
+        data = self.sch.get_paper_citations('CorpusID:14514057')
         self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item.paper.title for item in data]), 6974)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len([item.paper.title for item in data]), 1850)
         self.assertEqual(
-            data[0].paper.title, 'Improving the Robustness of '
-            'Transformer-based Large Language Models with Dynamic Attention')
+            data[0].paper.title,
+            'Mobile Money as a Stepping Stone to Financial Inclusion: How '
+            'Digital Multisided Platforms Fill Institutional Voids')
 
     @test_vcr.use_cassette
     def test_get_paper_references(self):
         data = self.sch.get_paper_references('CorpusID:1033682')
         self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 168)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len([item for item in data]), 156)
         self.assertEqual(
-            data[0].paper.title, 'Can We Scale Transformers to Predict '
-            'Parameters of Diverse ImageNet Models?')
+            data[0].paper.title,
+            'Controlled Sparsity via Constrained Optimization or: How I '
+            'Learned to Stop Tuning Penalties and Love Constraints')
 
     @test_vcr.use_cassette
     def test_timeout(self):

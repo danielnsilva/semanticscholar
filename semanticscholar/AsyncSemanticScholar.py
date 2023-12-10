@@ -164,7 +164,7 @@ class AsyncSemanticScholar:
                 self,
                 paper_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a paper's authors
 
@@ -211,7 +211,7 @@ class AsyncSemanticScholar:
                 self,
                 paper_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a paper's citations
 
@@ -257,7 +257,7 @@ class AsyncSemanticScholar:
                 self,
                 paper_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a paper's references
 
@@ -460,7 +460,7 @@ class AsyncSemanticScholar:
                 self,
                 author_id: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Get details about a author's papers
 
@@ -506,7 +506,7 @@ class AsyncSemanticScholar:
                 self,
                 query: str,
                 fields: list = None,
-                limit: int = 1000
+                limit: int = 100
             ) -> PaginatedResults:
         '''Search for authors by name
 
