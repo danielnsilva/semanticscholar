@@ -5,7 +5,7 @@ with open("README.md", "r", encoding='utf8') as fh:
 
 setup(
     name='semanticscholar',
-    version='0.6.0',
+    version='0.7.0',
     description='Unofficial Python client library for Semantic Scholar APIs.',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -29,6 +29,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
     zip_safe=False
