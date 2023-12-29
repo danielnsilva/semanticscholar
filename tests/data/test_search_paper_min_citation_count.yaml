@@ -13,9 +13,9 @@ interactions:
       user-agent:
       - python-httpx/0.25.2
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=turing&minCitationCount=1000&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=turing&minCitationCount=1000&fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
-    content: '{"total": 66, "offset": 0, "data": [{"paperId": "6b0f06617d9f5256a80ed62d9398acb92a55a6bd",
+    content: '{"total": 65, "offset": 0, "data": [{"paperId": "6b0f06617d9f5256a80ed62d9398acb92a55a6bd",
       "externalIds": {"MAG": "2148132004", "DOI": "10.1098/rspa.1985.0070", "CorpusId":
       1438116}, "corpusId": 1438116, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/6b0f06617d9f5256a80ed62d9398acb92a55a6bd",
       "title": "Quantum theory, the Church\u2013Turing principle and the universal
@@ -41,19 +41,24 @@ interactions:
       more reasonable definition of the \u2018complexity\u2019 or \u2018knowledge\u2019
       in a physical system than does classical complexity theory.", "venue": "Proceedings
       of the Royal Society of London. A. Mathematical and Physical Sciences", "year":
-      1985, "referenceCount": 19, "citationCount": 4221, "influentialCitationCount":
-      211, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.cs.berkeley.edu/~christos/classics/Deutsch_quantum_theory.pdf",
+      1985, "referenceCount": 19, "citationCount": 4236, "influentialCitationCount":
+      210, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.cs.berkeley.edu/~christos/classics/Deutsch_quantum_theory.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
       "Mathematics", "source": "external"}, {"category": "Physics", "source": "s2-fos-model"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": "1985-07-08", "journal": {"name": "Proceedings of the
       Royal Society of London. A. Mathematical and Physical Sciences", "pages": "117
-      - 97", "volume": "400"}, "authors": [{"authorId": "145346874", "name": "D. Deutsch"}]},
-      {"paperId": "c3823aacea60bc1f2cabb9283144690a3d015db5", "externalIds": {"MAG":
-      "2167839676", "DBLP": "journals/corr/GravesWD14", "ArXiv": "1410.5401", "CorpusId":
-      15299054}, "corpusId": 15299054, "publicationVenue": {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
-      "name": "arXiv.org", "alternate_names": ["ArXiv"], "issn": "2331-8422", "url":
-      "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/c3823aacea60bc1f2cabb9283144690a3d015db5",
+      - 97", "volume": "400"}, "citationStyles": {"bibtex": "@Article{Deutsch1985QuantumTT,\n
+      author = {D. Deutsch},\n booktitle = {Proceedings of the Royal Society of London.
+      A. Mathematical and Physical Sciences},\n journal = {Proceedings of the Royal
+      Society of London. A. Mathematical and Physical Sciences},\n pages = {117 -
+      97},\n title = {Quantum theory, the Church\u2013Turing principle and the universal
+      quantum computer},\n volume = {400},\n year = {1985}\n}\n"}, "authors": [{"authorId":
+      "145346874", "name": "D. Deutsch"}]}, {"paperId": "c3823aacea60bc1f2cabb9283144690a3d015db5",
+      "externalIds": {"MAG": "2167839676", "DBLP": "journals/corr/GravesWD14", "ArXiv":
+      "1410.5401", "CorpusId": 15299054}, "corpusId": 15299054, "publicationVenue":
+      {"id": "1901e811-ee72-4b20-8f7e-de08cd395a10", "name": "arXiv.org", "alternate_names":
+      ["ArXiv"], "issn": "2331-8422", "url": "https://arxiv.org"}, "url": "https://www.semanticscholar.org/paper/c3823aacea60bc1f2cabb9283144690a3d015db5",
       "title": "Neural Turing Machines", "abstract": "We extend the capabilities of
       neural networks by coupling them to external memory resources, which they can
       interact with by attentional processes. The combined system is analogous to
@@ -61,14 +66,17 @@ interactions:
       allowing it to be efficiently trained with gradient descent. Preliminary results
       demonstrate that Neural Turing Machines can infer simple algorithms such as
       copying, sorting, and associative recall from input and output examples.", "venue":
-      "arXiv.org", "year": 2014, "referenceCount": 41, "citationCount": 2046, "influentialCitationCount":
-      225, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "arXiv.org", "year": 2014, "referenceCount": 41, "citationCount": 2051, "influentialCitationCount":
+      223, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      "2014-10-20", "journal": {"name": "ArXiv", "volume": "abs/1410.5401"}, "authors":
-      [{"authorId": "1753223", "name": "Alex Graves"}, {"authorId": "89504302", "name":
-      "Greg Wayne"}, {"authorId": "1841008", "name": "Ivo Danihelka"}]}, {"paperId":
+      "2014-10-20", "journal": {"name": "ArXiv", "volume": "abs/1410.5401"}, "citationStyles":
+      {"bibtex": "@Article{Graves2014NeuralTM,\n author = {Alex Graves and Greg Wayne
+      and Ivo Danihelka},\n booktitle = {arXiv.org},\n journal = {ArXiv},\n title
+      = {Neural Turing Machines},\n volume = {abs/1410.5401},\n year = {2014}\n}\n"},
+      "authors": [{"authorId": "1753223", "name": "Alex Graves"}, {"authorId": "89504302",
+      "name": "Greg Wayne"}, {"authorId": "1841008", "name": "Ivo Danihelka"}]}, {"paperId":
       "2d5673caa9e6af3a7b82a43f19ee920992db07ad", "externalIds": {"DBLP": "journals/x/Turing50",
       "MAG": "2145482038", "DOI": "10.1093/MIND/LIX.236.433", "CorpusId": 14636783},
       "corpusId": 14636783, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/2d5673caa9e6af3a7b82a43f19ee920992db07ad",
@@ -81,16 +89,19 @@ interactions:
       it is difficult to escape the conclusion that the meaning and the answer to
       the question, \u201cCan machines think?\u201d is to be sought in a statistical
       survey such as a Gallup poll.", "venue": "The Philosophy of Artificial Intelligence",
-      "year": 1950, "referenceCount": 14, "citationCount": 9677, "influentialCitationCount":
-      526, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "year": 1950, "referenceCount": 14, "citationCount": 9752, "influentialCitationCount":
+      533, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Sociology"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Sociology", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Review"], "publicationDate": "1950-10-01", "journal": {"name": "Mind", "pages":
-      "433-460", "volume": "LIX"}, "authors": [{"authorId": "2262347", "name": "A.
-      Turing"}]}, {"paperId": "d635e2843c6fb034e9126aa73ef9c2e4e2c4714d", "externalIds":
-      {"MAG": "1985072454", "DOI": "10.1098/rstb.1952.0012", "CorpusId": 937133},
-      "corpusId": 937133, "publicationVenue": {"id": "6de51a3e-86d6-4b08-92f5-a2a4a3a1c47b",
+      "433-460", "volume": "LIX"}, "citationStyles": {"bibtex": "@Article{Turing1950ComputingMA,\n
+      author = {A. Turing},\n booktitle = {The Philosophy of Artificial Intelligence},\n
+      journal = {Mind},\n pages = {433-460},\n title = {Computing Machinery and Intelligence},\n
+      volume = {LIX},\n year = {1950}\n}\n"}, "authors": [{"authorId": "2262347",
+      "name": "A. Turing"}]}, {"paperId": "d635e2843c6fb034e9126aa73ef9c2e4e2c4714d",
+      "externalIds": {"MAG": "1980661496", "DOI": "10.1098/rstb.1952.0012", "CorpusId":
+      937133}, "corpusId": 937133, "publicationVenue": {"id": "6de51a3e-86d6-4b08-92f5-a2a4a3a1c47b",
       "name": "Philosophical transactions of the Royal Society of London. Series B,
       Biological sciences", "alternate_names": ["Philos trans R Soc Lond Ser B Biological
       sci"], "issn": "0080-4622", "alternate_issns": ["2054-0280"], "url": "http://www.jstor.org/action/showPublication?journalCode=philtranroyasoc2"},
@@ -121,14 +132,18 @@ interactions:
       found in text-books, but whose omission would make the paper difficult reading.",
       "venue": "Philosophical transactions of the Royal Society of London. Series
       B, Biological sciences", "year": 1952, "referenceCount": 7, "citationCount":
-      11395, "influentialCitationCount": 582, "isOpenAccess": false, "openAccessPdf":
+      11432, "influentialCitationCount": 589, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Mathematics", "Computer Science"], "s2FieldsOfStudy":
       [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
       "source": "external"}, {"category": "Chemistry", "source": "s2-fos-model"},
       {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes": null,
       "publicationDate": "1952-08-14", "journal": {"name": "Bulletin of Mathematical
-      Biology", "pages": "153-197", "volume": "52"}, "authors": [{"authorId": "2079681794",
-      "name": "A. Turing"}]}, {"paperId": "ab7790485f26ce65f9d83dd700c43e49058bdd2b",
+      Biology", "pages": "153-197", "volume": "52"}, "citationStyles": {"bibtex":
+      "@Article{Turing1952TheCB,\n author = {A. Turing},\n booktitle = {Philosophical
+      transactions of the Royal Society of London. Series B, Biological sciences},\n
+      journal = {Bulletin of Mathematical Biology},\n pages = {153-197},\n title =
+      {The chemical basis of morphogenesis},\n volume = {52},\n year = {1952}\n}\n"},
+      "authors": [{"authorId": "2079681794", "name": "A. Turing"}]}, {"paperId": "ab7790485f26ce65f9d83dd700c43e49058bdd2b",
       "externalIds": {"MAG": "2126160338", "DBLP": "journals/x/Turing37", "DOI": "10.1112/PLMS/S2-42.1.230",
       "CorpusId": 73712}, "corpusId": 73712, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ab7790485f26ce65f9d83dd700c43e49058bdd2b",
       "title": "On computable numbers, with an application to the Entscheidungsproblem",
@@ -139,19 +154,22 @@ interactions:
       Detailed description of the universal machine. 8. Application of the diagonal
       process. Pagina 1 di 38 On computable numbers, with an application to the Entscheidungsproblem
       A. M. ...", "venue": "Proc. London Math. Soc.", "year": 1937, "referenceCount":
-      13, "citationCount": 8200, "influentialCitationCount": 485, "isOpenAccess":
+      13, "citationCount": 8240, "influentialCitationCount": 491, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       null, "journal": {"name": "Proc. London Math. Soc.", "pages": "230-265", "volume":
-      "s2-42"}, "authors": [{"authorId": "2079681794", "name": "A. Turing"}]}, {"paperId":
-      "571b0750085ae3d939525e62af510ee2cee9d5ea", "externalIds": {"DBLP": "conf/nips/SalimansGZCRCC16",
-      "ArXiv": "1606.03498", "MAG": "2949938177", "CorpusId": 1687220}, "corpusId":
-      1687220, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
-      "name": "Neural Information Processing Systems", "type": "conference", "alternate_names":
-      ["Neural Inf Process Syst", "NeurIPS", "NIPS"], "url": "http://neurips.cc/"},
-      "url": "https://www.semanticscholar.org/paper/571b0750085ae3d939525e62af510ee2cee9d5ea",
+      "s2-42"}, "citationStyles": {"bibtex": "@Article{Turing1937OnCN,\n author =
+      {A. Turing},\n booktitle = {Proc. London Math. Soc.},\n journal = {Proc. London
+      Math. Soc.},\n pages = {230-265},\n title = {On computable numbers, with an
+      application to the Entscheidungsproblem},\n volume = {s2-42},\n year = {1937}\n}\n"},
+      "authors": [{"authorId": "2079681794", "name": "A. Turing"}]}, {"paperId": "571b0750085ae3d939525e62af510ee2cee9d5ea",
+      "externalIds": {"DBLP": "conf/nips/SalimansGZCRCC16", "ArXiv": "1606.03498",
+      "MAG": "2949938177", "CorpusId": 1687220}, "corpusId": 1687220, "publicationVenue":
+      {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd", "name": "Neural Information Processing
+      Systems", "type": "conference", "alternate_names": ["Neural Inf Process Syst",
+      "NeurIPS", "NIPS"], "url": "http://neurips.cc/"}, "url": "https://www.semanticscholar.org/paper/571b0750085ae3d939525e62af510ee2cee9d5ea",
       "title": "Improved Techniques for Training GANs", "abstract": "We present a
       variety of new architectural features and training procedures that we apply
       to the generative adversarial networks (GANs) framework. We focus on two applications
@@ -166,19 +184,23 @@ interactions:
       of 21.3%. We also present ImageNet samples with unprecedented resolution and
       show that our methods enable the model to learn recognizable features of ImageNet
       classes.", "venue": "Neural Information Processing Systems", "year": 2016, "referenceCount":
-      28, "citationCount": 7372, "influentialCitationCount": 883, "isOpenAccess":
+      28, "citationCount": 7442, "influentialCitationCount": 884, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
       "publicationDate": "2016-06-10", "journal": {"name": "ArXiv", "volume": "abs/1606.03498"},
-      "authors": [{"authorId": "2887364", "name": "Tim Salimans"}, {"authorId": "153440022",
-      "name": "I. Goodfellow"}, {"authorId": "2563432", "name": "Wojciech Zaremba"},
-      {"authorId": "34415167", "name": "Vicki Cheung"}, {"authorId": "38909097", "name":
-      "Alec Radford"}, {"authorId": "41192764", "name": "Xi Chen"}]}, {"paperId":
-      "044e13d7dd4e0655eb76f0bd00b2c1bdb44e2be3", "externalIds": {"DBLP": "journals/corr/abs-2007-14062",
-      "ArXiv": "2007.14062", "MAG": "3045733172", "CorpusId": 220831004}, "corpusId":
-      220831004, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+      "citationStyles": {"bibtex": "@Article{Salimans2016ImprovedTF,\n author = {Tim
+      Salimans and I. Goodfellow and Wojciech Zaremba and Vicki Cheung and Alec Radford
+      and Xi Chen},\n booktitle = {Neural Information Processing Systems},\n journal
+      = {ArXiv},\n title = {Improved Techniques for Training GANs},\n volume = {abs/1606.03498},\n
+      year = {2016}\n}\n"}, "authors": [{"authorId": "2887364", "name": "Tim Salimans"},
+      {"authorId": "153440022", "name": "I. Goodfellow"}, {"authorId": "2563432",
+      "name": "Wojciech Zaremba"}, {"authorId": "34415167", "name": "Vicki Cheung"},
+      {"authorId": "38909097", "name": "Alec Radford"}, {"authorId": "41192764", "name":
+      "Xi Chen"}]}, {"paperId": "044e13d7dd4e0655eb76f0bd00b2c1bdb44e2be3", "externalIds":
+      {"DBLP": "journals/corr/abs-2007-14062", "ArXiv": "2007.14062", "MAG": "3045733172",
+      "CorpusId": 220831004}, "corpusId": 220831004, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
       "name": "Neural Information Processing Systems", "type": "conference", "alternate_names":
       ["Neural Inf Process Syst", "NeurIPS", "NIPS"], "url": "http://neurips.cc/"},
       "url": "https://www.semanticscholar.org/paper/044e13d7dd4e0655eb76f0bd00b2c1bdb44e2be3",
@@ -197,16 +219,22 @@ interactions:
       a consequence of the capability to handle longer context, BigBird drastically
       improves performance on various NLP tasks such as question answering and summarization.
       We also propose novel applications to genomics data.", "venue": "Neural Information
-      Processing Systems", "year": 2020, "referenceCount": 118, "citationCount": 1278,
+      Processing Systems", "year": 2020, "referenceCount": 118, "citationCount": 1299,
       "influentialCitationCount": 201, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science", "Mathematics", "Geography"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
       "source": "external"}, {"category": "Geography", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "2020-07-28", "journal": {"name": "ArXiv", "volume": "abs/2007.14062"},
-      "authors": [{"authorId": "1771307", "name": "M. Zaheer"}, {"authorId": "1947314",
-      "name": "Guru Guruganesh"}, {"authorId": "89890133", "name": "Kumar Avinava
-      Dubey"}, {"authorId": "1643737606", "name": "J. Ainslie"}, {"authorId": "114577307",
+      "citationStyles": {"bibtex": "@Article{Zaheer2020BigBT,\n author = {M. Zaheer
+      and Guru Guruganesh and Kumar Avinava Dubey and J. Ainslie and Chris Alberti
+      and Santiago Onta\u00f1\u00f3n and Philip Pham and Anirudh Ravula and Qifan
+      Wang and Li Yang and Amr Ahmed},\n booktitle = {Neural Information Processing
+      Systems},\n journal = {ArXiv},\n title = {Big Bird: Transformers for Longer
+      Sequences},\n volume = {abs/2007.14062},\n year = {2020}\n}\n"}, "authors":
+      [{"authorId": "1771307", "name": "M. Zaheer"}, {"authorId": "1947314", "name":
+      "Guru Guruganesh"}, {"authorId": "89890133", "name": "Kumar Avinava Dubey"},
+      {"authorId": "1643737606", "name": "J. Ainslie"}, {"authorId": "114577307",
       "name": "Chris Alberti"}, {"authorId": "1722671", "name": "Santiago Onta\u00f1\u00f3n"},
       {"authorId": "38552691", "name": "Philip Pham"}, {"authorId": "101210026", "name":
       "Anirudh Ravula"}, {"authorId": "145196279", "name": "Qifan Wang"}, {"authorId":
@@ -220,56 +248,25 @@ interactions:
       "https://www.semanticscholar.org/paper/8201e6e687f2de477258e9be53ba7b73ee30d7de",
       "title": "Colorful Image Colorization", "abstract": null, "venue": "European
       Conference on Computer Vision", "year": 2016, "referenceCount": 57, "citationCount":
-      3150, "influentialCitationCount": 277, "isOpenAccess": true, "openAccessPdf":
+      3172, "influentialCitationCount": 280, "isOpenAccess": true, "openAccessPdf":
       {"url": "https://link.springer.com/content/pdf/10.1007/978-3-319-46487-9_40.pdf",
       "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Conference"], "publicationDate": "2016-03-28", "journal": {"pages": "649-666"},
-      "authors": [{"authorId": "2844849", "name": "Richard Zhang"}, {"authorId": "2094770",
-      "name": "Phillip Isola"}, {"authorId": "1763086", "name": "Alexei A. Efros"}]},
-      {"paperId": "9653d5c2c7844347343d073bbedd96e05d52f69b", "externalIds": {"DBLP":
-      "conf/nips/VinyalsFJ15", "MAG": "3037280547", "ArXiv": "1506.03134", "CorpusId":
-      5692837}, "corpusId": 5692837, "publicationVenue": {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
-      "name": "Neural Information Processing Systems", "type": "conference", "alternate_names":
-      ["Neural Inf Process Syst", "NeurIPS", "NIPS"], "url": "http://neurips.cc/"},
-      "url": "https://www.semanticscholar.org/paper/9653d5c2c7844347343d073bbedd96e05d52f69b",
-      "title": "Pointer Networks", "abstract": "We introduce a new neural architecture
-      to learn the conditional probability of an output sequence with elements that
-      are discrete tokens corresponding to positions in an input sequence. Such problems
-      cannot be trivially addressed by existent approaches such as sequence-to-sequence
-      [1] and Neural Turing Machines [2], because the number of target classes in
-      each step of the output depends on the length of the input, which is variable.
-      Problems such as sorting variable sized sequences, and various combinatorial
-      optimization problems belong to this class. Our model solves the problem of
-      variable size output dictionaries using a recently proposed mechanism of neural
-      attention. It differs from the previous attention attempts in that, instead
-      of using attention to blend hidden units of an encoder to a context vector at
-      each decoder step, it uses attention as a pointer to select a member of the
-      input sequence as the output. We call this architecture a Pointer Net (Ptr-Net).
-      We show Ptr-Nets can be used to learn approximate solutions to three challenging
-      geometric problems - finding planar convex hulls, computing Delaunay triangulations,
-      and the planar Travelling Salesman Problem - using training examples alone.
-      Ptr-Nets not only improve over sequence-to-sequence with input attention, but
-      also allow us to generalize to variable size output dictionaries. We show that
-      the learnt models generalize beyond the maximum lengths they were trained on.
-      We hope our results on these tasks will encourage a broader exploration of neural
-      learning for discrete problems.", "venue": "Neural Information Processing Systems",
-      "year": 2015, "referenceCount": 21, "citationCount": 2423, "influentialCitationCount":
-      281, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
-      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
-      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
-      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
-      "Conference"], "publicationDate": "2015-06-09", "journal": {"pages": "2692-2700"},
-      "authors": [{"authorId": "1689108", "name": "Oriol Vinyals"}, {"authorId": "39067762",
-      "name": "Meire Fortunato"}, {"authorId": "3111912", "name": "N. Jaitly"}]},
-      {"paperId": "815c84ab906e43f3e6322f2ca3fd5e1360c64285", "externalIds": {"MAG":
-      "2341708432", "DOI": "10.1126/science.aab3050", "CorpusId": 11790493, "PubMed":
-      "26659050"}, "corpusId": 11790493, "publicationVenue": {"id": "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad",
-      "name": "Science", "type": "journal", "issn": "0193-4511", "alternate_issns":
-      ["0036-8075"], "url": "https://www.jstor.org/journal/science", "alternate_urls":
-      ["https://www.sciencemag.org/", "http://www.sciencemag.org/", "http://www.jstor.org/journals/00368075.html",
-      "http://www.sciencemag.org/archive/"]}, "url": "https://www.semanticscholar.org/paper/815c84ab906e43f3e6322f2ca3fd5e1360c64285",
+      "citationStyles": {"bibtex": "@Article{Zhang2016ColorfulIC,\n author = {Richard
+      Zhang and Phillip Isola and Alexei A. Efros},\n booktitle = {European Conference
+      on Computer Vision},\n pages = {649-666},\n title = {Colorful Image Colorization},\n
+      year = {2016}\n}\n"}, "authors": [{"authorId": "2844849", "name": "Richard Zhang"},
+      {"authorId": "2094770", "name": "Phillip Isola"}, {"authorId": "1763086", "name":
+      "Alexei A. Efros"}]}, {"paperId": "815c84ab906e43f3e6322f2ca3fd5e1360c64285",
+      "externalIds": {"MAG": "2341708432", "DOI": "10.1126/science.aab3050", "CorpusId":
+      11790493, "PubMed": "26659050"}, "corpusId": 11790493, "publicationVenue": {"id":
+      "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad", "name": "Science", "type": "journal",
+      "issn": "0193-4511", "alternate_issns": ["0036-8075"], "url": "https://www.jstor.org/journal/science",
+      "alternate_urls": ["https://www.sciencemag.org/", "http://www.sciencemag.org/",
+      "http://www.jstor.org/journals/00368075.html", "http://www.sciencemag.org/archive/"]},
+      "url": "https://www.semanticscholar.org/paper/815c84ab906e43f3e6322f2ca3fd5e1360c64285",
       "title": "Human-level concept learning through probabilistic program induction",
       "abstract": "Handwritten characters drawn by a model Not only do children learn
       effortlessly, they do so quickly and with a remarkable ability to use what they
@@ -292,18 +289,60 @@ interactions:
       human-level performance while outperforming recent deep learning approaches.
       We also present several \u201cvisual Turing tests\u201d probing the model\u2019s
       creative generalization abilities, which in many cases are indistinguishable
-      from human behavior.", "venue": "Science", "year": 2015, "referenceCount": 98,
-      "citationCount": 2639, "influentialCitationCount": 290, "isOpenAccess": true,
+      from human behavior.", "venue": "Science", "year": 2015, "referenceCount": 101,
+      "citationCount": 2664, "influentialCitationCount": 298, "isOpenAccess": true,
       "openAccessPdf": {"url": "https://science.sciencemag.org/content/sci/350/6266/1332.full.pdf",
       "status": "CLOSED"}, "fieldsOfStudy": ["Computer Science", "Medicine"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Medicine",
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
       "publicationTypes": ["JournalArticle"], "publicationDate": "2015-12-11", "journal":
-      {"name": "Science", "pages": "1332 - 1338", "volume": "350"}, "authors": [{"authorId":
+      {"name": "Science", "pages": "1332 - 1338", "volume": "350"}, "citationStyles":
+      {"bibtex": "@Article{Lake2015HumanlevelCL,\n author = {B. Lake and R. Salakhutdinov
+      and J. Tenenbaum},\n booktitle = {Science},\n journal = {Science},\n pages =
+      {1332 - 1338},\n title = {Human-level concept learning through probabilistic
+      program induction},\n volume = {350},\n year = {2015}\n}\n"}, "authors": [{"authorId":
       "2373318", "name": "B. Lake"}, {"authorId": "145124475", "name": "R. Salakhutdinov"},
-      {"authorId": "1763295", "name": "J. Tenenbaum"}]}, {"paperId": "1a8d2e5bb9c646d85308fbd6ce33fce8765e2c26",
-      "externalIds": {"DBLP": "conf/stoc/Cook71", "MAG": "2036265926", "DOI": "10.1145/800157.805047",
-      "CorpusId": 7573663}, "corpusId": 7573663, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
+      {"authorId": "1763295", "name": "J. Tenenbaum"}]}, {"paperId": "9653d5c2c7844347343d073bbedd96e05d52f69b",
+      "externalIds": {"DBLP": "conf/nips/VinyalsFJ15", "MAG": "3037280547", "ArXiv":
+      "1506.03134", "CorpusId": 5692837}, "corpusId": 5692837, "publicationVenue":
+      {"id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd", "name": "Neural Information Processing
+      Systems", "type": "conference", "alternate_names": ["Neural Inf Process Syst",
+      "NeurIPS", "NIPS"], "url": "http://neurips.cc/"}, "url": "https://www.semanticscholar.org/paper/9653d5c2c7844347343d073bbedd96e05d52f69b",
+      "title": "Pointer Networks", "abstract": "We introduce a new neural architecture
+      to learn the conditional probability of an output sequence with elements that
+      are discrete tokens corresponding to positions in an input sequence. Such problems
+      cannot be trivially addressed by existent approaches such as sequence-to-sequence
+      [1] and Neural Turing Machines [2], because the number of target classes in
+      each step of the output depends on the length of the input, which is variable.
+      Problems such as sorting variable sized sequences, and various combinatorial
+      optimization problems belong to this class. Our model solves the problem of
+      variable size output dictionaries using a recently proposed mechanism of neural
+      attention. It differs from the previous attention attempts in that, instead
+      of using attention to blend hidden units of an encoder to a context vector at
+      each decoder step, it uses attention as a pointer to select a member of the
+      input sequence as the output. We call this architecture a Pointer Net (Ptr-Net).
+      We show Ptr-Nets can be used to learn approximate solutions to three challenging
+      geometric problems - finding planar convex hulls, computing Delaunay triangulations,
+      and the planar Travelling Salesman Problem - using training examples alone.
+      Ptr-Nets not only improve over sequence-to-sequence with input attention, but
+      also allow us to generalize to variable size output dictionaries. We show that
+      the learnt models generalize beyond the maximum lengths they were trained on.
+      We hope our results on these tasks will encourage a broader exploration of neural
+      learning for discrete problems.", "venue": "Neural Information Processing Systems",
+      "year": 2015, "referenceCount": 21, "citationCount": 2437, "influentialCitationCount":
+      278, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
+      "external"}, {"category": "Computer Science", "source": "external"}, {"category":
+      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+      "Conference"], "publicationDate": "2015-06-09", "journal": {"pages": "2692-2700"},
+      "citationStyles": {"bibtex": "@Article{Vinyals2015PointerN,\n author = {O. Vinyals
+      and Meire Fortunato and N. Jaitly},\n booktitle = {Neural Information Processing
+      Systems},\n pages = {2692-2700},\n title = {Pointer Networks},\n year = {2015}\n}\n"},
+      "authors": [{"authorId": "1689108", "name": "O. Vinyals"}, {"authorId": "39067762",
+      "name": "Meire Fortunato"}, {"authorId": "3111912", "name": "N. Jaitly"}]},
+      {"paperId": "1a8d2e5bb9c646d85308fbd6ce33fce8765e2c26", "externalIds": {"DBLP":
+      "conf/stoc/Cook71", "MAG": "2036265926", "DOI": "10.1145/800157.805047", "CorpusId":
+      7573663}, "corpusId": 7573663, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
       "name": "Symposium on the Theory of Computing", "type": "conference", "alternate_names":
       ["Symp Theory Comput", "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/1a8d2e5bb9c646d85308fbd6ce33fce8765e2c26",
       "title": "The complexity of theorem-proving procedures", "abstract": "It is
@@ -318,16 +357,36 @@ interactions:
       isomorphic to a subgraph of the second. Other examples are discussed. A method
       of measuring the complexity of proof procedures for the predicate calculus is
       introduced and discussed.", "venue": "Symposium on the Theory of Computing",
-      "year": 1971, "referenceCount": 9, "citationCount": 6974, "influentialCitationCount":
-      554, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/800157.805047",
+      "year": 1971, "referenceCount": 9, "citationCount": 6997, "influentialCitationCount":
+      556, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/800157.805047",
       "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
       {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle", "Book", "Conference"], "publicationDate": "1971-05-03", "journal":
       {"name": "Proceedings of the third annual ACM symposium on Theory of computing"},
-      "authors": [{"authorId": "1765456", "name": "S. Cook"}]}, {"paperId": "79cadc74d31453332cde42ebfddcaae5bb86ed1a",
-      "externalIds": {"DBLP": "journals/cacm/ClarkeES09", "MAG": "2166422915", "DOI":
+      "citationStyles": {"bibtex": "@Article{Cook1971TheCO,\n author = {S. Cook},\n
+      booktitle = {Symposium on the Theory of Computing},\n journal = {Proceedings
+      of the third annual ACM symposium on Theory of computing},\n title = {The complexity
+      of theorem-proving procedures},\n year = {1971}\n}\n"}, "authors": [{"authorId":
+      "1765456", "name": "S. Cook"}]}, {"paperId": "96b0a95b67aa1ee556db21310b36555a3a373f95",
+      "externalIds": {"MAG": "1493708795", "DBLP": "journals/ir/Kantor01", "DOI":
+      "10.1023/A:1011424425034", "CorpusId": 115386587}, "corpusId": 115386587, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/96b0a95b67aa1ee556db21310b36555a3a373f95",
+      "title": "Foundations of Statistical Natural Language Processing", "abstract":
+      null, "venue": "Information retrieval (Boston)", "year": 2001, "referenceCount":
+      4, "citationCount": 3822, "influentialCitationCount": 350, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+      Science", "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"},
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      ["JournalArticle"], "publicationDate": "2001-04-01", "journal": {"name": "Information
+      Retrieval", "pages": "80-81", "volume": "4"}, "citationStyles": {"bibtex": "@Article{Kantor2001FoundationsOS,\n
+      author = {P. Kantor},\n booktitle = {Information retrieval (Boston)},\n journal
+      = {Information Retrieval},\n pages = {80-81},\n title = {Foundations of Statistical
+      Natural Language Processing},\n volume = {4},\n year = {2001}\n}\n"}, "authors":
+      [{"authorId": "1705425", "name": "P. Kantor"}]}, {"paperId": "79cadc74d31453332cde42ebfddcaae5bb86ed1a",
+      "externalIds": {"MAG": "2166422915", "DBLP": "journals/cacm/ClarkeES09", "DOI":
       "10.1145/1592761.1592781", "CorpusId": 5857292}, "corpusId": 5857292, "publicationVenue":
       {"id": "4d9ce1c4-dc84-46b9-903e-e3751c00c7dd", "name": "Communications of the
       ACM", "type": "journal", "alternate_names": ["Commun ACM", "Communications of
@@ -360,31 +419,22 @@ interactions:
       regarding the correctness of their initial designs. Model checking promises
       to have an even greater impact on the hardware and software industries in the
       future. ---Moshe Y. Vardi, Editor-in-Chief", "venue": "Communications of the
-      ACM", "year": 2009, "referenceCount": 52, "citationCount": 4628, "influentialCitationCount":
-      131, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/1592761.1592781",
+      ACM", "year": 2009, "referenceCount": 53, "citationCount": 4368, "influentialCitationCount":
+      121, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/1592761.1592781",
       "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "2009-11-01", "journal": {"name": "Communications of the
-      ACM", "pages": "74 - 84", "volume": "52"}, "authors": [{"authorId": null, "name":
-      "Edmund M. Clarke"}, {"authorId": null, "name": "E. Allen Emerson"}, {"authorId":
-      null, "name": "Joseph Sifakis"}]}, {"paperId": "96b0a95b67aa1ee556db21310b36555a3a373f95",
-      "externalIds": {"MAG": "1493708795", "DBLP": "journals/ir/Kantor01", "DOI":
-      "10.1023/A:1011424425034", "CorpusId": 115386587}, "corpusId": 115386587, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/96b0a95b67aa1ee556db21310b36555a3a373f95",
-      "title": "Foundations of Statistical Natural Language Processing", "abstract":
-      null, "venue": "Information retrieval (Boston)", "year": 2001, "referenceCount":
-      4, "citationCount": 3645, "influentialCitationCount": 329, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Computer
-      Science", "source": "s2-fos-model"}, {"category": "Linguistics", "source": "s2-fos-model"},
-      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle"], "publicationDate": "2001-04-01", "journal": {"name": "Information
-      Retrieval", "pages": "80-81", "volume": "4"}, "authors": [{"authorId": "1705425",
-      "name": "P. Kantor"}]}, {"paperId": "5e49bd8b8394995e7c16ce25f62087d43d6a7b61",
-      "externalIds": {"DBLP": "journals/sigact/Lincoln92", "MAG": "2338576683", "DOI":
-      "10.1145/130956.130958", "CorpusId": 3035174}, "corpusId": 3035174, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/5e49bd8b8394995e7c16ce25f62087d43d6a7b61",
+      ACM", "pages": "74 - 84", "volume": "52"}, "citationStyles": {"bibtex": "@Article{Clarke2009ModelC,\n
+      author = {Edmund M. Clarke and E. A. Emerson and Joseph Sifakis},\n booktitle
+      = {Communications of the ACM},\n journal = {Communications of the ACM},\n pages
+      = {74 - 84},\n title = {Model checking},\n volume = {52},\n year = {2009}\n}\n"},
+      "authors": [{"authorId": "2270505497", "name": "Edmund M. Clarke"}, {"authorId":
+      "2249298445", "name": "E. A. Emerson"}, {"authorId": "2256520183", "name": "Joseph
+      Sifakis"}]}, {"paperId": "5e49bd8b8394995e7c16ce25f62087d43d6a7b61", "externalIds":
+      {"DBLP": "journals/sigact/Lincoln92", "MAG": "2338576683", "DOI": "10.1145/130956.130958",
+      "CorpusId": 3035174}, "corpusId": 3035174, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/5e49bd8b8394995e7c16ce25f62087d43d6a7b61",
       "title": "Linear logic", "abstract": "1 Linear Logic Linear logic was introduced
       by Girard in 1987 11]. Since then many results have supported Girard''s claims
       such as \\Linear logic is a resource conscious logic\". Increasingly, computer
@@ -408,14 +458,17 @@ interactions:
       in the classical setting, since propositions are assumed to be static, unchanging
       facts about the world. On the other hand, the rules of linear logic imply that
       linear propositions stand for dynamic properties or nite resources.", "venue":
-      "SIGA", "year": 1992, "referenceCount": 38, "citationCount": 3303, "influentialCitationCount":
-      349, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/130956.130958",
+      "SIGA", "year": 1992, "referenceCount": 38, "citationCount": 3307, "influentialCitationCount":
+      350, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/130956.130958",
       "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source": "s2-fos-model"}],
       "publicationTypes": ["JournalArticle", "Review"], "publicationDate": "1992-05-01",
-      "journal": {"name": "SIGACT News", "pages": "29-37", "volume": "23"}, "authors":
-      [{"authorId": "145895495", "name": "P. Lincoln"}]}, {"paperId": "e0535dedb8607d83cd2614317c99913378e89e26",
+      "journal": {"name": "SIGACT News", "pages": "29-37", "volume": "23"}, "citationStyles":
+      {"bibtex": "@Article{Lincoln1992LinearL,\n author = {P. Lincoln},\n booktitle
+      = {SIGA},\n journal = {SIGACT News},\n pages = {29-37},\n title = {Linear logic},\n
+      volume = {23},\n year = {1992}\n}\n"}, "authors": [{"authorId": "145895495",
+      "name": "P. Lincoln"}]}, {"paperId": "e0535dedb8607d83cd2614317c99913378e89e26",
       "externalIds": {"DBLP": "journals/neco/MaassNM02", "MAG": "2103179919", "DOI":
       "10.1162/089976602760407955", "CorpusId": 1045112, "PubMed": "12433288"}, "corpusId":
       1045112, "publicationVenue": {"id": "69b9bcdd-8229-4a00-a6e0-00f0e99a2bf3",
@@ -450,17 +503,22 @@ interactions:
       time-varying inputs. Our approach provides new perspectives for the interpretation
       of neural coding, the design of experiments and data analysis in neurophysiology,
       and the solution of problems in robotics and neurotechnology.", "venue": "Neural
-      Computation", "year": 2002, "referenceCount": 34, "citationCount": 3256, "influentialCitationCount":
-      244, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Computation", "year": 2002, "referenceCount": 33, "citationCount": 3272, "influentialCitationCount":
+      249, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Medicine"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Medicine", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "2002-11-01", "journal": {"name": "Neural Computation", "pages":
-      "2531-2560", "volume": "14"}, "authors": [{"authorId": "145247053", "name":
-      "W. Maass"}, {"authorId": "1792142", "name": "T. Natschl\u00e4ger"}, {"authorId":
-      "1754307", "name": "H. Markram"}]}, {"paperId": "4c7671550671deba9ec318d867522897f20e19ba",
-      "externalIds": {"MAG": "2105259569", "DOI": "10.1147/RD.176.0525", "CorpusId":
-      14641793}, "corpusId": 14641793, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c7671550671deba9ec318d867522897f20e19ba",
+      "2531-2560", "volume": "14"}, "citationStyles": {"bibtex": "@Article{Maass2002RealTimeCW,\n
+      author = {W. Maass and T. Natschl\u00e4ger and H. Markram},\n booktitle = {Neural
+      Computation},\n journal = {Neural Computation},\n pages = {2531-2560},\n title
+      = {Real-Time Computing Without Stable States: A New Framework for Neural Computation
+      Based on Perturbations},\n volume = {14},\n year = {2002}\n}\n"}, "authors":
+      [{"authorId": "145247053", "name": "W. Maass"}, {"authorId": "1792142", "name":
+      "T. Natschl\u00e4ger"}, {"authorId": "1754307", "name": "H. Markram"}]}, {"paperId":
+      "4c7671550671deba9ec318d867522897f20e19ba", "externalIds": {"MAG": "2105259569",
+      "DOI": "10.1147/RD.176.0525", "CorpusId": 14641793}, "corpusId": 14641793, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/4c7671550671deba9ec318d867522897f20e19ba",
       "title": "Logical reversibility of computation", "abstract": "The usual general-purpose
       computing automaton (e.g.. a Turing machine) is logically irreversible- its
       transition function lacks a single-valued inverse. Here it is shown that such
@@ -481,27 +539,32 @@ interactions:
       of the input, but no other undesired data. The foregoing results are demonstrated
       explicitly using a type of three-tape Turing machine. The biosynthesis of messenger
       RNA is discussed as a physical example of reversible computation.", "venue":
-      "", "year": 1973, "referenceCount": 5, "citationCount": 3706, "influentialCitationCount":
-      227, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      "", "year": 1973, "referenceCount": 5, "citationCount": 3715, "influentialCitationCount":
+      226, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Physics", "source": "s2-fos-model"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1973-11-01",
       "journal": {"name": "Ibm Journal of Research and Development", "pages": "525-532",
-      "volume": "17"}, "authors": [{"authorId": "2623914", "name": "Charles H. Bennett"}]},
-      {"paperId": "1c6c3e5e245869e5282e07a655e475c83e60883e", "externalIds": {"MAG":
-      "2530006810", "DOI": "10.2307/2316720", "CorpusId": 122951574}, "corpusId":
-      122951574, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1c6c3e5e245869e5282e07a655e475c83e60883e",
+      "volume": "17"}, "citationStyles": {"bibtex": "@Article{Bennett1973LogicalRO,\n
+      author = {Charles H. Bennett},\n journal = {Ibm Journal of Research and Development},\n
+      pages = {525-532},\n title = {Logical reversibility of computation},\n volume
+      = {17},\n year = {1973}\n}\n"}, "authors": [{"authorId": "2623914", "name":
+      "Charles H. Bennett"}]}, {"paperId": "1c6c3e5e245869e5282e07a655e475c83e60883e",
+      "externalIds": {"MAG": "2530006810", "DOI": "10.2307/2316720", "CorpusId": 122951574},
+      "corpusId": 122951574, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1c6c3e5e245869e5282e07a655e475c83e60883e",
       "title": "Theory of Recursive Functions and Effective Computability", "abstract":
       "Central concerns of the book are related theories of recursively enumerable
       sets, of degree of un-solvability and turing degrees in particular. A second
       group of topics has to do with generalizations of recursion theory. The third
       topics group mentioned is subrecursive computability and subrecursive hierarchies",
-      "venue": "", "year": 1969, "referenceCount": 0, "citationCount": 3293, "influentialCitationCount":
-      126, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
+      "venue": "", "year": 1969, "referenceCount": 0, "citationCount": 3295, "influentialCitationCount":
+      124, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1969-06-01",
-      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "1423404594",
+      "journal": {"name": "", "volume": ""}, "citationStyles": {"bibtex": "@Inproceedings{Rogers1969TheoryOR,\n
+      author = {Jr. Hartley Rogers},\n title = {Theory of Recursive Functions and
+      Effective Computability},\n year = {1969}\n}\n"}, "authors": [{"authorId": "1423404594",
       "name": "Jr. Hartley Rogers"}]}, {"paperId": "128cb6b891aee1b5df099acb48e2efecfcff689f",
       "externalIds": {"DBLP": "conf/aaaiss/Levesque11", "MAG": "2267020232", "CorpusId":
       15710851}, "corpusId": 15710851, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/128cb6b891aee1b5df099acb48e2efecfcff689f",
@@ -515,14 +578,17 @@ interactions:
       the interrogator or a third party will be able to decide unambiguously after
       a few minutes whether or not a subject has passed the test.", "venue": "AAAI
       Spring Symposium: Logical Formalizations of Commonsense Reasoning", "year":
-      2011, "referenceCount": 26, "citationCount": 1041, "influentialCitationCount":
-      207, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      2011, "referenceCount": 26, "citationCount": 1058, "influentialCitationCount":
+      206, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle"], "publicationDate": "2011-03-20", "journal": {"name": "",
-      "volume": ""}, "authors": [{"authorId": "143634377", "name": "H. Levesque"},
-      {"authorId": "144883814", "name": "E. Davis"}, {"authorId": "40429476", "name":
-      "L. Morgenstern"}]}, {"paperId": "3904315e2eca50d0086e4b7273f7fd707c652230",
+      "volume": ""}, "citationStyles": {"bibtex": "@Article{Levesque2011TheWS,\n author
+      = {H. Levesque and E. Davis and L. Morgenstern},\n booktitle = {AAAI Spring
+      Symposium: Logical Formalizations of Commonsense Reasoning},\n title = {The
+      Winograd Schema Challenge},\n year = {2011}\n}\n"}, "authors": [{"authorId":
+      "143634377", "name": "H. Levesque"}, {"authorId": "144883814", "name": "E. Davis"},
+      {"authorId": "40429476", "name": "L. Morgenstern"}]}, {"paperId": "3904315e2eca50d0086e4b7273f7fd707c652230",
       "externalIds": {"DBLP": "conf/icml/SantoroBBWL16", "MAG": "2472819217", "CorpusId":
       6466088}, "corpusId": 6466088, "publicationVenue": {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29",
       "name": "International Conference on Machine Learning", "type": "conference",
@@ -543,58 +609,19 @@ interactions:
       for accessing an external memory that focuses on memory content, unlike previous
       methods that additionally use memory location-based focusing mechanisms.", "venue":
       "International Conference on Machine Learning", "year": 2016, "referenceCount":
-      21, "citationCount": 1480, "influentialCitationCount": 81, "isOpenAccess": false,
+      20, "citationCount": 1486, "influentialCitationCount": 81, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Conference"], "publicationDate": "2016-06-19", "journal": {"pages": "1842-1850"},
-      "authors": [{"authorId": "35030998", "name": "Adam Santoro"}, {"authorId": "2258504",
-      "name": "Sergey Bartunov"}, {"authorId": "46378362", "name": "M. Botvinick"},
-      {"authorId": "1688276", "name": "Daan Wierstra"}, {"authorId": "2542999", "name":
-      "T. Lillicrap"}]}, {"paperId": "884bfee7c2c6a874fad2a34207eb266f97a6cc77", "externalIds":
-      {"MAG": "1990236474", "DOI": "10.1162/artl.1995.2.3.333", "CorpusId": 44710180},
-      "corpusId": 44710180, "publicationVenue": {"id": "5ed9f470-65a3-4077-8dab-163b0c5cb9e6",
-      "name": "Artificial Life", "type": "journal", "alternate_names": ["Artif Life"],
-      "issn": "1064-5462", "url": "http://cognet.mit.edu/library/journals/journal?issn=10645462",
-      "alternate_urls": ["http://www.mitpressjournals.org/loi/artl", "https://www.mitpressjournals.org/loi/artl",
-      "https://www.mitpressjournals.org/doi/10.1162/ARTL_a_00243"]}, "url": "https://www.semanticscholar.org/paper/884bfee7c2c6a874fad2a34207eb266f97a6cc77",
-      "title": "Hidden Order: How Adaptation Builds Complexity.", "abstract": "Computer
-      simulations of artificial ecologies typically model the interactions of a population
-      of independently acting, spatially situated, resource-restricted, differently
-      structured, self-reproducing agents. The interactions in such systems are typically
-      highly nonlinear, subject to random perturbation, executed in parallel, and
-      coevolutionary in the sense that the agents interact with each other as well
-      as their environment. Examples of artificial ecologies that possess the above
-      characteristics include Skipper''s \"computer zoo\" of migrating flocks of hierarchically
-      invokable fragments of assembly code [10], Shanahan''s populations of evolutionary
-      automata [9], Lindgren''s coevolving populations of strategies for playing the
-      iterated prisoner''s dilemma game [5], the Turing gas of self-organizing groups
-      of autocatalytic algorithmic fragments of Rasmussen, KnudLsen, and Feldberg
-      [6], Ray''s populations of parasitic and symbiotic self-reproducing assembly
-      code programs [8], the populations of redcode coreworld creatures of Rasmussen,
-      Knudsen, Feldberg, and Hindsholm [7], Werner and Dyer''s populations of males
-      and females that coevolve communication [11], and Ackley and Littman''s artificial
-      world for testing the Baldwin effect concerning learning and evolution [1].
-      Each of these complex adaptive systems (and many others like them) succeed in
-      illustrating one or more key features of living systems. However, each of these
-      systems live up to their name in the worst possible way\u2014they are all exceedingly
-      complex. The emergent behavior and other interesting phenomena are obscured
-      by so much modelspecific detail that it is rarely clear whether the observed
-      phenomena represent any important general principles or are merely artifacts
-      of the details. Moreover, all of these existing systems are computationally
-      expensive and deliver little in the way of important emergent phenomena in relation
-      to the amount of computational effort expended. This excessive overhead is not
-      merely a matter of inefficiency or inconvenience; it may actually preclude emergence
-      of important phenomena that can only materialize in the presence of certain
-      minimum amounts of time or matter. John Holland''s new book, Hidden Order: How
-      Adaptation Builds Complexity [3],", "venue": "Artificial Life", "year": 1995,
-      "referenceCount": 2, "citationCount": 2258, "influentialCitationCount": 255,
-      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
-      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Biology",
-      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-      "journal": {"name": "Artificial Life", "pages": "333-335", "volume": "2"}, "authors":
-      [{"authorId": "1732302", "name": "J. Koza"}]}, {"paperId": "73c82f0630015c181d7ae6a7ff1d186dc26e29af",
+      "citationStyles": {"bibtex": "@Article{Santoro2016MetaLearningWM,\n author =
+      {Adam Santoro and Sergey Bartunov and M. Botvinick and Daan Wierstra and T.
+      Lillicrap},\n booktitle = {International Conference on Machine Learning},\n
+      pages = {1842-1850},\n title = {Meta-Learning with Memory-Augmented Neural Networks},\n
+      year = {2016}\n}\n"}, "authors": [{"authorId": "35030998", "name": "Adam Santoro"},
+      {"authorId": "2258504", "name": "Sergey Bartunov"}, {"authorId": "46378362",
+      "name": "M. Botvinick"}, {"authorId": "1688276", "name": "Daan Wierstra"}, {"authorId":
+      "2542999", "name": "T. Lillicrap"}]}, {"paperId": "73c82f0630015c181d7ae6a7ff1d186dc26e29af",
       "externalIds": {"MAG": "1518039036", "DBLP": "books/daglib/0000928", "DOI":
       "10.1137/1.9781611971453", "CorpusId": 5517579}, "corpusId": 5517579, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/73c82f0630015c181d7ae6a7ff1d186dc26e29af",
@@ -647,14 +674,63 @@ interactions:
       Equation The Cholesky Factorization Sparse Cholesky Factorization. Minimum-Degree
       Orderings Other Orderings Small Pivots in the Cholesky Factorization Dense Columns
       in A The Augmented System Formulat", "venue": "Other Titles in Applied Mathematics",
-      "year": 1997, "referenceCount": 2, "citationCount": 2462, "influentialCitationCount":
-      207, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      "year": 1997, "referenceCount": 2, "citationCount": 2468, "influentialCitationCount":
+      209, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
       "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "external"}, {"category":
       "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1997-01-01",
-      "journal": {"pages": "I-XX, 1-289"}, "authors": [{"authorId": "144731788", "name":
-      "Stephen J. Wright"}]}, {"paperId": "86bb5811e8eb8c835e2b942f7e45530b87856561",
+      "journal": {"pages": "I-XX, 1-289"}, "citationStyles": {"bibtex": "@Inproceedings{Wright1997PrimalDualIM,\n
+      author = {Stephen J. Wright},\n booktitle = {Other Titles in Applied Mathematics},\n
+      pages = {I-XX, 1-289},\n title = {Primal-Dual Interior-Point Methods},\n year
+      = {1997}\n}\n"}, "authors": [{"authorId": "144731788", "name": "Stephen J. Wright"}]},
+      {"paperId": "884bfee7c2c6a874fad2a34207eb266f97a6cc77", "externalIds": {"MAG":
+      "1990236474", "DOI": "10.1162/artl.1995.2.3.333", "CorpusId": 44710180}, "corpusId":
+      44710180, "publicationVenue": {"id": "5ed9f470-65a3-4077-8dab-163b0c5cb9e6",
+      "name": "Artificial Life", "type": "journal", "alternate_names": ["Artif Life"],
+      "issn": "1064-5462", "url": "http://cognet.mit.edu/library/journals/journal?issn=10645462",
+      "alternate_urls": ["http://www.mitpressjournals.org/loi/artl", "https://www.mitpressjournals.org/loi/artl",
+      "https://www.mitpressjournals.org/doi/10.1162/ARTL_a_00243"]}, "url": "https://www.semanticscholar.org/paper/884bfee7c2c6a874fad2a34207eb266f97a6cc77",
+      "title": "Hidden Order: How Adaptation Builds Complexity.", "abstract": "Computer
+      simulations of artificial ecologies typically model the interactions of a population
+      of independently acting, spatially situated, resource-restricted, differently
+      structured, self-reproducing agents. The interactions in such systems are typically
+      highly nonlinear, subject to random perturbation, executed in parallel, and
+      coevolutionary in the sense that the agents interact with each other as well
+      as their environment. Examples of artificial ecologies that possess the above
+      characteristics include Skipper''s \"computer zoo\" of migrating flocks of hierarchically
+      invokable fragments of assembly code [10], Shanahan''s populations of evolutionary
+      automata [9], Lindgren''s coevolving populations of strategies for playing the
+      iterated prisoner''s dilemma game [5], the Turing gas of self-organizing groups
+      of autocatalytic algorithmic fragments of Rasmussen, KnudLsen, and Feldberg
+      [6], Ray''s populations of parasitic and symbiotic self-reproducing assembly
+      code programs [8], the populations of redcode coreworld creatures of Rasmussen,
+      Knudsen, Feldberg, and Hindsholm [7], Werner and Dyer''s populations of males
+      and females that coevolve communication [11], and Ackley and Littman''s artificial
+      world for testing the Baldwin effect concerning learning and evolution [1].
+      Each of these complex adaptive systems (and many others like them) succeed in
+      illustrating one or more key features of living systems. However, each of these
+      systems live up to their name in the worst possible way\u2014they are all exceedingly
+      complex. The emergent behavior and other interesting phenomena are obscured
+      by so much modelspecific detail that it is rarely clear whether the observed
+      phenomena represent any important general principles or are merely artifacts
+      of the details. Moreover, all of these existing systems are computationally
+      expensive and deliver little in the way of important emergent phenomena in relation
+      to the amount of computational effort expended. This excessive overhead is not
+      merely a matter of inefficiency or inconvenience; it may actually preclude emergence
+      of important phenomena that can only materialize in the presence of certain
+      minimum amounts of time or matter. John Holland''s new book, Hidden Order: How
+      Adaptation Builds Complexity [3],", "venue": "Artificial Life", "year": 1995,
+      "referenceCount": 2, "citationCount": 2278, "influentialCitationCount": 259,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"],
+      "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
+      {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Biology",
+      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
+      "journal": {"name": "Artificial Life", "pages": "333-335", "volume": "2"}, "citationStyles":
+      {"bibtex": "@Article{Koza1995HiddenOH,\n author = {J. Koza},\n booktitle = {Artificial
+      Life},\n journal = {Artificial Life},\n pages = {333-335},\n title = {Hidden
+      Order: How Adaptation Builds Complexity.},\n volume = {2},\n year = {1995}\n}\n"},
+      "authors": [{"authorId": "1732302", "name": "J. Koza"}]}, {"paperId": "86bb5811e8eb8c835e2b942f7e45530b87856561",
       "externalIds": {"MAG": "1988374166", "DBLP": "journals/jacm/GoldreichO96", "DOI":
       "10.1145/233551.233553", "CorpusId": 7502114}, "corpusId": 7502114, "publicationVenue":
       null, "url": "https://www.semanticscholar.org/paper/86bb5811e8eb8c835e2b942f7e45530b87856561",
@@ -676,15 +752,18 @@ interactions:
       particular, we show how to do an on-line simulation of an arbitrary RAM by a
       probabilistic oblivious RAM with a polylogaithmic slowdown in the running time.
       On the other hand, we show that a logarithmic slowdown is a lower bound.", "venue":
-      "JACM", "year": 1996, "referenceCount": 32, "citationCount": 1683, "influentialCitationCount":
-      373, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/233551.233553",
+      "JACM", "year": 1996, "referenceCount": 32, "citationCount": 1686, "influentialCitationCount":
+      375, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/233551.233553",
       "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1996-05-01", "journal": {"name": "J. ACM", "pages": "431-473",
-      "volume": "43"}, "authors": [{"authorId": "1748224", "name": "R. Ostrovsky"}]},
-      {"paperId": "75caeb5274630bd52cbcd8f549237c30d108e2ff", "externalIds": {"MAG":
-      "1993688167", "DBLP": "journals/siamcomp/BernsteinV97", "DOI": "10.1145/167088.167097",
+      "volume": "43"}, "citationStyles": {"bibtex": "@Article{Ostrovsky1996SoftwarePA,\n
+      author = {R. Ostrovsky},\n booktitle = {JACM},\n journal = {J. ACM},\n pages
+      = {431-473},\n title = {Software protection and simulation on oblivious RAMs},\n
+      volume = {43},\n year = {1996}\n}\n"}, "authors": [{"authorId": "1748224", "name":
+      "R. Ostrovsky"}]}, {"paperId": "75caeb5274630bd52cbcd8f549237c30d108e2ff", "externalIds":
+      {"MAG": "1993688167", "DBLP": "journals/siamcomp/BernsteinV97", "DOI": "10.1145/167088.167097",
       "CorpusId": 676378}, "corpusId": 676378, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
       "name": "Symposium on the Theory of Computing", "type": "conference", "alternate_names":
       ["Symp Theory Comput", "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/75caeb5274630bd52cbcd8f549237c30d108e2ff",
@@ -714,34 +793,21 @@ interactions:
       Turing machines are more powerful than classical probabilistic Turing machines
       (in the unrelativized setting) unless there is a major breakthrough in complexity
       theory.", "venue": "Symposium on the Theory of Computing", "year": 1993, "referenceCount":
-      45, "citationCount": 1913, "influentialCitationCount": 238, "isOpenAccess":
+      45, "citationCount": 1913, "influentialCitationCount": 236, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
       "publicationTypes": ["Book", "JournalArticle", "Conference"], "publicationDate":
       "1993-06-01", "journal": {"name": "Proceedings of the twenty-fifth annual ACM
-      symposium on Theory of Computing"}, "authors": [{"authorId": "48863272", "name":
-      "Ethan S. Bernstein"}, {"authorId": "46753437", "name": "U. Vazirani"}]}, {"paperId":
-      "cb346929220d4df38edc314056ee1933496c6cf5", "externalIds": {"MAG": "2100440346",
-      "DBLP": "books/sp/GLS1988", "DOI": "10.1007/978-3-642-97881-4", "CorpusId":
-      122339802}, "corpusId": 122339802, "publicationVenue": {"id": "2c9af4b0-18ba-458f-a4ba-413076dbaad9",
-      "name": "Algorithms and Combinatorics", "alternate_names": ["Algorithm Comb"],
-      "issn": "0937-5511"}, "url": "https://www.semanticscholar.org/paper/cb346929220d4df38edc314056ee1933496c6cf5",
-      "title": "Geometric Algorithms and Combinatorial Optimization", "abstract":
-      null, "venue": "Algorithms and Combinatorics", "year": 1988, "referenceCount":
-      0, "citationCount": 2101, "influentialCitationCount": 146, "isOpenAccess": true,
-      "openAccessPdf": {"url": "https://link.springer.com/content/pdf/bfm:978-3-642-78240-4/1?pdf=chapter%20toc",
-      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
-      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
-      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      ["Review"], "publicationDate": null, "journal": {"volume": "2"}, "authors":
-      [{"authorId": "2588854", "name": "M. Gr\u00f6tschel"}, {"authorId": "1725557",
-      "name": "L. Lov\u00e1sz"}, {"authorId": "1689196", "name": "A. Schrijver"}]},
-      {"paperId": "134770862b5ccedbb5376cb1a9de61d3d4973c17", "externalIds": {"DBLP":
-      "journals/sigsoft/Law01a", "MAG": "2764347725", "DOI": "10.1145/505482.505499",
-      "CorpusId": 261561224}, "corpusId": 261561224, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/134770862b5ccedbb5376cb1a9de61d3d4973c17",
+      symposium on Theory of Computing"}, "citationStyles": {"bibtex": "@Book{Bernstein1993QuantumCT,\n
+      author = {Ethan S. Bernstein and U. Vazirani},\n booktitle = {Symposium on the
+      Theory of Computing},\n journal = {Proceedings of the twenty-fifth annual ACM
+      symposium on Theory of Computing},\n title = {Quantum complexity theory},\n
+      year = {1993}\n}\n"}, "authors": [{"authorId": "48863272", "name": "Ethan S.
+      Bernstein"}, {"authorId": "46753437", "name": "U. Vazirani"}]}, {"paperId":
+      "134770862b5ccedbb5376cb1a9de61d3d4973c17", "externalIds": {"DBLP": "journals/sigsoft/Law01a",
+      "MAG": "2764347725", "DOI": "10.1145/505482.505499", "CorpusId": 261561224},
+      "corpusId": 261561224, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/134770862b5ccedbb5376cb1a9de61d3d4973c17",
       "title": "Quantum computation and quantum information", "abstract": "An easy-to-comprehend
       text for required undergraduate courses in computer theory, this work thoroughly
       covers the three fundamental areas of computer theory--formal languages, automata
@@ -751,20 +817,41 @@ interactions:
       proofs, allowing students with poor mathematical background to easily follow
       each step. Includes a large selection of well thought out problems at the end
       of each chapter.", "venue": "SOEN", "year": 2001, "referenceCount": 0, "citationCount":
-      1353, "influentialCitationCount": 181, "isOpenAccess": false, "openAccessPdf":
+      1309, "influentialCitationCount": 172, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
       "publicationTypes": ["JournalArticle"], "publicationDate": "2001-07-01", "journal":
-      {"name": "ACM SIGSOFT Softw. Eng. Notes", "pages": "91", "volume": "26"}, "authors":
-      [{"authorId": "2250425238", "name": "Jim Law"}]}, {"paperId": "b3296c877ed52b3961990507714b434058977ec9",
-      "externalIds": {"MAG": "2344803891", "DOI": "10.1126/science.1179047", "CorpusId":
-      10194433, "PubMed": "20929839"}, "corpusId": 10194433, "publicationVenue": {"id":
-      "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad", "name": "Science", "type": "journal",
-      "issn": "0193-4511", "alternate_issns": ["0036-8075"], "url": "https://www.jstor.org/journal/science",
-      "alternate_urls": ["https://www.sciencemag.org/", "http://www.sciencemag.org/",
-      "http://www.jstor.org/journals/00368075.html", "http://www.sciencemag.org/archive/"]},
-      "url": "https://www.semanticscholar.org/paper/b3296c877ed52b3961990507714b434058977ec9",
+      {"name": "ACM SIGSOFT Softw. Eng. Notes", "pages": "91", "volume": "26"}, "citationStyles":
+      {"bibtex": "@Article{Law2001QuantumCA,\n author = {Jim Law},\n booktitle = {SOEN},\n
+      journal = {ACM SIGSOFT Softw. Eng. Notes},\n pages = {91},\n title = {Quantum
+      computation and quantum information},\n volume = {26},\n year = {2001}\n}\n"},
+      "authors": [{"authorId": "2250425238", "name": "Jim Law"}]}, {"paperId": "cb346929220d4df38edc314056ee1933496c6cf5",
+      "externalIds": {"MAG": "2100440346", "DBLP": "books/sp/GLS1988", "DOI": "10.1007/978-3-642-97881-4",
+      "CorpusId": 122339802}, "corpusId": 122339802, "publicationVenue": {"id": "2c9af4b0-18ba-458f-a4ba-413076dbaad9",
+      "name": "Algorithms and Combinatorics", "alternate_names": ["Algorithm Comb"],
+      "issn": "0937-5511"}, "url": "https://www.semanticscholar.org/paper/cb346929220d4df38edc314056ee1933496c6cf5",
+      "title": "Geometric Algorithms and Combinatorial Optimization", "abstract":
+      null, "venue": "Algorithms and Combinatorics", "year": 1988, "referenceCount":
+      0, "citationCount": 2095, "influentialCitationCount": 146, "isOpenAccess": true,
+      "openAccessPdf": {"url": "https://link.springer.com/content/pdf/bfm:978-3-642-78240-4/1?pdf=chapter%20toc",
+      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy":
+      [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
+      "source": "external"}, {"category": "Mathematics", "source": "s2-fos-model"},
+      {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
+      ["Review"], "publicationDate": null, "journal": {"volume": "2"}, "citationStyles":
+      {"bibtex": "@Inproceedings{Gr\u00f6tschel1988GeometricAA,\n author = {M. Gr\u00f6tschel
+      and L. Lov\u00e1sz and A. Schrijver},\n booktitle = {Algorithms and Combinatorics},\n
+      title = {Geometric Algorithms and Combinatorial Optimization},\n volume = {2},\n
+      year = {1988}\n}\n"}, "authors": [{"authorId": "2588854", "name": "M. Gr\u00f6tschel"},
+      {"authorId": "1725557", "name": "L. Lov\u00e1sz"}, {"authorId": "1689196", "name":
+      "A. Schrijver"}]}, {"paperId": "b3296c877ed52b3961990507714b434058977ec9", "externalIds":
+      {"MAG": "2344803891", "DOI": "10.1126/science.1179047", "CorpusId": 10194433,
+      "PubMed": "20929839"}, "corpusId": 10194433, "publicationVenue": {"id": "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad",
+      "name": "Science", "type": "journal", "issn": "0193-4511", "alternate_issns":
+      ["0036-8075"], "url": "https://www.jstor.org/journal/science", "alternate_urls":
+      ["https://www.sciencemag.org/", "http://www.sciencemag.org/", "http://www.jstor.org/journals/00368075.html",
+      "http://www.sciencemag.org/archive/"]}, "url": "https://www.semanticscholar.org/paper/b3296c877ed52b3961990507714b434058977ec9",
       "title": "Reaction-Diffusion Model as a Framework for Understanding Biological
       Pattern Formation", "abstract": "Turing Model Explained The reaction-diffusion
       (Turing) model is a theoretical model used to explain self-regulated pattern
@@ -785,15 +872,19 @@ interactions:
       In this review, we describe the essence of this theory for experimental biologists
       unfamiliar with the model, using examples from experimental studies in which
       the RD model is effectively incorporated.", "venue": "Science", "year": 2010,
-      "referenceCount": 41, "citationCount": 1327, "influentialCitationCount": 32,
+      "referenceCount": 41, "citationCount": 1335, "influentialCitationCount": 31,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
       "Engineering", "Computer Science"], "s2FieldsOfStudy": [{"category": "Medicine",
       "source": "external"}, {"category": "Engineering", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Biology", "source":
       "s2-fos-model"}], "publicationTypes": ["Review", "JournalArticle"], "publicationDate":
       "2010-09-24", "journal": {"name": "Science", "pages": "1616 - 1620", "volume":
-      "329"}, "authors": [{"authorId": "2636335", "name": "Shigeru Kondo"}, {"authorId":
-      "47938934", "name": "T. Miura"}]}, {"paperId": "5a9bb4750818b756e68e91347fd7618cf96e019b",
+      "329"}, "citationStyles": {"bibtex": "@Article{Kondo2010ReactionDiffusionMA,\n
+      author = {Shigeru Kondo and T. Miura},\n booktitle = {Science},\n journal =
+      {Science},\n pages = {1616 - 1620},\n title = {Reaction-Diffusion Model as a
+      Framework for Understanding Biological Pattern Formation},\n volume = {329},\n
+      year = {2010}\n}\n"}, "authors": [{"authorId": "2636335", "name": "Shigeru Kondo"},
+      {"authorId": "47938934", "name": "T. Miura"}]}, {"paperId": "5a9bb4750818b756e68e91347fd7618cf96e019b",
       "externalIds": {"MAG": "2022710553", "DOI": "10.1126/science.1160379", "CorpusId":
       18371056, "PubMed": "18703711"}, "corpusId": 18371056, "publicationVenue": {"id":
       "f59506a8-d8bb-4101-b3d4-c4ac3ed03dad", "name": "Science", "type": "journal",
@@ -813,18 +904,22 @@ interactions:
       text with a word accuracy exceeding 99%, matching the guarantee of professional
       human transcribers. Our apparatus is deployed in more than 40,000 Web sites
       and has transcribed over 440 million words.", "venue": "Science", "year": 2008,
-      "referenceCount": 20, "citationCount": 1198, "influentialCitationCount": 52,
+      "referenceCount": 21, "citationCount": 1201, "influentialCitationCount": 52,
       "isOpenAccess": true, "openAccessPdf": {"url": "http://www.cs.cmu.edu/~biglou/reCAPTCHA_Science.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Computer Science", "Medicine"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Medicine",
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"}],
       "publicationTypes": ["JournalArticle"], "publicationDate": "2008-09-12", "journal":
-      {"name": "Science", "pages": "1465 - 1468", "volume": "321"}, "authors": [{"authorId":
-      "35552151", "name": "L. von Ahn"}, {"authorId": "2054265110", "name": "Benjamin
-      Maurer"}, {"authorId": "50258677", "name": "Colin McMillen"}, {"authorId": "2058339483",
-      "name": "David J. Abraham"}, {"authorId": "143624243", "name": "M. Blum"}]},
-      {"paperId": "d34a810719d6c132d9fb697df1b5a38e2fd0dc05", "externalIds": {"MAG":
-      "2137005141", "DBLP": "conf/focs/Simon94", "DOI": "10.1109/SFCS.1994.365701",
+      {"name": "Science", "pages": "1465 - 1468", "volume": "321"}, "citationStyles":
+      {"bibtex": "@Article{Ahn2008reCAPTCHAHC,\n author = {L. von Ahn and Benjamin
+      Maurer and Colin McMillen and David J. Abraham and M. Blum},\n booktitle = {Science},\n
+      journal = {Science},\n pages = {1465 - 1468},\n title = {reCAPTCHA: Human-Based
+      Character Recognition via Web Security Measures},\n volume = {321},\n year =
+      {2008}\n}\n"}, "authors": [{"authorId": "35552151", "name": "L. von Ahn"}, {"authorId":
+      "2054265110", "name": "Benjamin Maurer"}, {"authorId": "50258677", "name": "Colin
+      McMillen"}, {"authorId": "2058339483", "name": "David J. Abraham"}, {"authorId":
+      "143624243", "name": "M. Blum"}]}, {"paperId": "d34a810719d6c132d9fb697df1b5a38e2fd0dc05",
+      "externalIds": {"MAG": "2137005141", "DBLP": "conf/focs/Simon94", "DOI": "10.1109/SFCS.1994.365701",
       "CorpusId": 7457814}, "corpusId": 7457814, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/d34a810719d6c132d9fb697df1b5a38e2fd0dc05",
       "title": "On the power of quantum computation", "abstract": "The quantum model
@@ -840,18 +935,23 @@ interactions:
       drawing on this work, Shor (1994) has recently developed remarkable new quantum
       polynomial-time algorithms for the discrete logarithm and integer factoring
       problems.<<ETX>>", "venue": "Proceedings 35th Annual Symposium on Foundations
-      of Computer Science", "year": 1994, "referenceCount": 22, "citationCount": 1551,
-      "influentialCitationCount": 123, "isOpenAccess": false, "openAccessPdf": null,
+      of Computer Science", "year": 1994, "referenceCount": 22, "citationCount": 1554,
+      "influentialCitationCount": 121, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Computer Science", "Mathematics"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
       "Physics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1994-11-20", "journal": {"name": "Proceedings 35th Annual
-      Symposium on Foundations of Computer Science", "pages": "116-123"}, "authors":
-      [{"authorId": "1973111", "name": "Daniel R. Simon"}]}, {"paperId": "7dbf4c5424c676f7e04010a0a6678cab40e71332",
-      "externalIds": {"DBLP": "journals/jacm/DavisP60", "MAG": "2062897452", "DOI":
-      "10.1145/321033.321034", "CorpusId": 31888376}, "corpusId": 31888376, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/7dbf4c5424c676f7e04010a0a6678cab40e71332",
+      Symposium on Foundations of Computer Science", "pages": "116-123"}, "citationStyles":
+      {"bibtex": "@Article{Simon1994OnTP,\n author = {Daniel R. Simon},\n booktitle
+      = {Proceedings 35th Annual Symposium on Foundations of Computer Science},\n
+      journal = {Proceedings 35th Annual Symposium on Foundations of Computer Science},\n
+      pages = {116-123},\n title = {On the power of quantum computation},\n year =
+      {1994}\n}\n"}, "authors": [{"authorId": "1973111", "name": "Daniel R. Simon"}]},
+      {"paperId": "7dbf4c5424c676f7e04010a0a6678cab40e71332", "externalIds": {"DBLP":
+      "journals/jacm/DavisP60", "MAG": "2062897452", "DOI": "10.1145/321033.321034",
+      "CorpusId": 31888376}, "corpusId": 31888376, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/7dbf4c5424c676f7e04010a0a6678cab40e71332",
       "title": "A Computing Procedure for Quantification Theory", "abstract": "The
       hope that mathematical methods employed in the investigation of formal logic
       would lead to purely computational methods for obtaining mathematical theorems
@@ -897,16 +997,21 @@ interactions:
       for various branches of mathematics. This last question will not be pursued
       further here; cf., however, Davis and Putnam [2], where one solution to this
       problem is given for ele", "venue": "JACM", "year": 1960, "referenceCount":
-      10, "citationCount": 2990, "influentialCitationCount": 155, "isOpenAccess":
-      false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+      10, "citationCount": 2987, "influentialCitationCount": 159, "isOpenAccess":
+      true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/321033.321034",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1960-07-01", "journal": {"name": "J. ACM", "pages": "201-215",
-      "volume": "7"}, "authors": [{"authorId": "113641402", "name": "Martin D. Davis"},
-      {"authorId": "1790161", "name": "H. Putnam"}]}, {"paperId": "76ba917d0b172593b20bbb1acefc64a6fb0682f5",
-      "externalIds": {"DBLP": "journals/siamcomp/BennettBBV97", "ArXiv": "quant-ph/9701001",
-      "MAG": "2601248643", "DOI": "10.1137/S0097539796300933", "CorpusId": 13403194},
-      "corpusId": 13403194, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/76ba917d0b172593b20bbb1acefc64a6fb0682f5",
+      "volume": "7"}, "citationStyles": {"bibtex": "@Article{Davis1960ACP,\n author
+      = {Martin D. Davis and H. Putnam},\n booktitle = {JACM},\n journal = {J. ACM},\n
+      pages = {201-215},\n title = {A Computing Procedure for Quantification Theory},\n
+      volume = {7},\n year = {1960}\n}\n"}, "authors": [{"authorId": "113641402",
+      "name": "Martin D. Davis"}, {"authorId": "1790161", "name": "H. Putnam"}]},
+      {"paperId": "76ba917d0b172593b20bbb1acefc64a6fb0682f5", "externalIds": {"DBLP":
+      "journals/siamcomp/BennettBBV97", "ArXiv": "quant-ph/9701001", "MAG": "2601248643",
+      "DOI": "10.1137/S0097539796300933", "CorpusId": 13403194}, "corpusId": 13403194,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/76ba917d0b172593b20bbb1acefc64a6fb0682f5",
       "title": "Strengths and Weaknesses of Quantum Computing", "abstract": "Recently
       a great deal of attention has been focused on quantum computation following
       a sequence of results [Bernstein and Vazirani, in Proc. 25th Annual ACM Symposium
@@ -926,7 +1031,7 @@ interactions:
       recent work of Grover [in {\\it Proc.\\ $28$th Annual ACM Symposium Theory Comput.},
       1996] shows how to accept the class $\\NP$ relative to any oracle on a quantum
       computer in time $O(2^{n/2})$.", "venue": "SIAM journal on computing (Print)",
-      "year": 1997, "referenceCount": 32, "citationCount": 1321, "influentialCitationCount":
+      "year": 1997, "referenceCount": 32, "citationCount": 1327, "influentialCitationCount":
       76, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/quant-ph/9701001",
       "status": "GREEN"}, "fieldsOfStudy": ["Mathematics", "Computer Science", "Physics"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
@@ -934,24 +1039,32 @@ interactions:
       "external"}, {"category": "Computer Science", "source": "s2-fos-model"}, {"category":
       "Physics", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1997-01-01", "journal": {"name": "SIAM J. Comput.", "pages":
-      "1510-1523", "volume": "26"}, "authors": [{"authorId": "2623914", "name": "Charles
-      H. Bennett"}, {"authorId": "48863272", "name": "Ethan S. Bernstein"}, {"authorId":
-      "1771605", "name": "G. Brassard"}, {"authorId": "46753437", "name": "U. Vazirani"}]},
-      {"paperId": "c9f69fc1bccde4550f54a4e317daaa27b4d4c03e", "externalIds": {"MAG":
-      "1994669668", "ArXiv": "cond-mat/0603103", "DOI": "10.1038/nature05056", "CorpusId":
-      4389730, "PubMed": "16915285"}, "corpusId": 4389730, "publicationVenue": {"id":
-      "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a", "name": "Nature", "type": "journal",
+      "1510-1523", "volume": "26"}, "citationStyles": {"bibtex": "@Article{Bennett1997StrengthsAW,\n
+      author = {Charles H. Bennett and Ethan S. Bernstein and G. Brassard and U. Vazirani},\n
+      booktitle = {SIAM journal on computing (Print)},\n journal = {SIAM J. Comput.},\n
+      pages = {1510-1523},\n title = {Strengths and Weaknesses of Quantum Computing},\n
+      volume = {26},\n year = {1997}\n}\n"}, "authors": [{"authorId": "2623914", "name":
+      "Charles H. Bennett"}, {"authorId": "48863272", "name": "Ethan S. Bernstein"},
+      {"authorId": "1771605", "name": "G. Brassard"}, {"authorId": "46753437", "name":
+      "U. Vazirani"}]}, {"paperId": "c9f69fc1bccde4550f54a4e317daaa27b4d4c03e", "externalIds":
+      {"MAG": "1994669668", "ArXiv": "cond-mat/0603103", "DOI": "10.1038/nature05056",
+      "CorpusId": 4389730, "PubMed": "16915285"}, "corpusId": 4389730, "publicationVenue":
+      {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a", "name": "Nature", "type": "journal",
       "issn": "0028-0836", "url": "https://www.nature.com/", "alternate_urls": ["http://www.nature.com/nature/",
       "https://www.nature.com/nature/", "http://www.nature.com/nature/archive/index.html"]},
       "url": "https://www.semanticscholar.org/paper/c9f69fc1bccde4550f54a4e317daaa27b4d4c03e",
       "title": "Spontaneous skyrmion ground states in magnetic metals", "abstract":
       null, "venue": "Nature", "year": 2006, "referenceCount": 41, "citationCount":
-      1439, "influentialCitationCount": 9, "isOpenAccess": true, "openAccessPdf":
+      1443, "influentialCitationCount": 9, "isOpenAccess": true, "openAccessPdf":
       {"url": "https://arxiv.org/pdf/cond-mat/0603103", "status": "GREEN"}, "fieldsOfStudy":
       ["Physics", "Medicine"], "s2FieldsOfStudy": [{"category": "Physics", "source":
       "external"}, {"category": "Medicine", "source": "external"}, {"category": "Physics",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "2006-03-05", "journal": {"name": "Nature", "pages": "797-801", "volume": "442"},
+      "citationStyles": {"bibtex": "@Article{R\u00f6\u00dfler2006SpontaneousSG,\n
+      author = {U. R\u00f6\u00dfler and A. Bogdanov and C. Pfleiderer and C. Pfleiderer},\n
+      booktitle = {Nature},\n journal = {Nature},\n pages = {797-801},\n title = {Spontaneous
+      skyrmion ground states in magnetic metals},\n volume = {442},\n year = {2006}\n}\n"},
       "authors": [{"authorId": "91585573", "name": "U. R\u00f6\u00dfler"}, {"authorId":
       "145261336", "name": "A. Bogdanov"}, {"authorId": "3673143", "name": "C. Pfleiderer"},
       {"authorId": "3673143", "name": "C. Pfleiderer"}]}, {"paperId": "7eb5d2f86438d1e9c72bff87894209f1ce84717a",
@@ -970,41 +1083,49 @@ interactions:
       for the Pilot automatic computing engine (ACE) as the definitive source for
       understanding the nature and design of a general-purpose digital computer.<<ETX>>",
       "venue": "IEEE Annals of the History of Computing", "year": 1993, "referenceCount":
-      6, "citationCount": 1217, "influentialCitationCount": 67, "isOpenAccess": true,
+      6, "citationCount": 1222, "influentialCitationCount": 67, "isOpenAccess": true,
       "openAccessPdf": {"url": "http://real.mtak.hu/170042/1/Firstdraft.pdf", "status":
       "GREEN"}, "fieldsOfStudy": ["Engineering", "Computer Science"], "s2FieldsOfStudy":
       [{"category": "Engineering", "source": "external"}, {"category": "Computer Science",
       "source": "external"}, {"category": "Computer Science", "source": "s2-fos-model"},
       {"category": "History", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1993-10-01", "journal": {"name": "IEEE Annals of the History
-      of Computing", "pages": "27-75", "volume": "15"}, "authors": [{"authorId": "41224665",
-      "name": "J. Neumann"}]}, {"paperId": "2518002fbb475b6ba6f3ac46e7d89c655cc19f86",
-      "externalIds": {"MAG": "1517585663", "DBLP": "books/teu/Wegener87", "DOI": "10.1007/3-540-27477-4_16",
+      of Computing", "pages": "27-75", "volume": "15"}, "citationStyles": {"bibtex":
+      "@Article{Neumann1993FirstDO,\n author = {J. Neumann},\n booktitle = {IEEE Annals
+      of the History of Computing},\n journal = {IEEE Annals of the History of Computing},\n
+      pages = {27-75},\n title = {First draft of a report on the EDVAC},\n volume
+      = {15},\n year = {1993}\n}\n"}, "authors": [{"authorId": "41224665", "name":
+      "J. Neumann"}]}, {"paperId": "2518002fbb475b6ba6f3ac46e7d89c655cc19f86", "externalIds":
+      {"MAG": "1517585663", "DBLP": "books/teu/Wegener87", "DOI": "10.1007/3-540-27477-4_16",
       "CorpusId": 9300832}, "corpusId": 9300832, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/2518002fbb475b6ba6f3ac46e7d89c655cc19f86",
       "title": "The complexity of Boolean functions", "abstract": null, "venue": "",
       "year": 1987, "referenceCount": 0, "citationCount": 1122, "influentialCitationCount":
-      67, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      66, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
-      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "Mathematics", "source": "s2-fos-model"}, {"category": "Computer Science", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      {"name": "", "volume": ""}, "authors": [{"authorId": "1681615", "name": "I.
-      Wegener"}]}, {"paperId": "74e22072b09aa202a27e093367683ca7d10517e7", "externalIds":
-      {"MAG": "2798382106", "DOI": "10.1007/3-540-31288-9_9", "CorpusId": 196121957},
-      "corpusId": 196121957, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/74e22072b09aa202a27e093367683ca7d10517e7",
+      {"name": "", "volume": ""}, "citationStyles": {"bibtex": "@Inproceedings{Wegener1987TheCO,\n
+      author = {I. Wegener},\n title = {The complexity of Boolean functions},\n year
+      = {1987}\n}\n"}, "authors": [{"authorId": "1681615", "name": "I. Wegener"}]},
+      {"paperId": "74e22072b09aa202a27e093367683ca7d10517e7", "externalIds": {"MAG":
+      "2798382106", "DOI": "10.1007/3-540-31288-9_9", "CorpusId": 196121957}, "corpusId":
+      196121957, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/74e22072b09aa202a27e093367683ca7d10517e7",
       "title": "Mathematical logic", "abstract": null, "venue": "", "year": 1967,
-      "referenceCount": 0, "citationCount": 1779, "influentialCitationCount": 6, "isOpenAccess":
+      "referenceCount": 0, "citationCount": 1776, "influentialCitationCount": 6, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
-      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "2388174", "name":
-      "J. Shoenfield"}]}, {"paperId": "98da568adc7858630e26d0563304a495f90608d0",
-      "externalIds": {"MAG": "2004618348", "DBLP": "conf/stoc/FortuneW78", "DOI":
-      "10.1145/800133.804339", "CorpusId": 11283448}, "corpusId": 11283448, "publicationVenue":
-      {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e", "name": "Symposium on the Theory
-      of Computing", "type": "conference", "alternate_names": ["Symp Theory Comput",
-      "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/98da568adc7858630e26d0563304a495f90608d0",
+      "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": null, "journal": {"name": "", "volume":
+      ""}, "citationStyles": {"bibtex": "@Inproceedings{Shoenfield1967MathematicalL,\n
+      author = {J. Shoenfield},\n title = {Mathematical logic},\n year = {1967}\n}\n"},
+      "authors": [{"authorId": "2388174", "name": "J. Shoenfield"}]}, {"paperId":
+      "98da568adc7858630e26d0563304a495f90608d0", "externalIds": {"MAG": "2004618348",
+      "DBLP": "conf/stoc/FortuneW78", "DOI": "10.1145/800133.804339", "CorpusId":
+      11283448}, "corpusId": 11283448, "publicationVenue": {"id": "8113a511-e0d9-4231-a1bc-0bf5d0212a4e",
+      "name": "Symposium on the Theory of Computing", "type": "conference", "alternate_names":
+      ["Symp Theory Comput", "STOC"], "url": "http://acm-stoc.org/"}, "url": "https://www.semanticscholar.org/paper/98da568adc7858630e26d0563304a495f90608d0",
       "title": "Parallelism in random access machines", "abstract": "A model of computation
       based on random access machines operating in parallel and sharing a common memory
       is presented. The computational power of this model is related to that of traditional
@@ -1014,15 +1135,19 @@ interactions:
       exponential time bounded Turing machines. Similar results hold for other classes.
       The effect of limiting the size of the common memory is also considered.", "venue":
       "Symposium on the Theory of Computing", "year": 1978, "referenceCount": 11,
-      "citationCount": 1004, "influentialCitationCount": 98, "isOpenAccess": false,
+      "citationCount": 1004, "influentialCitationCount": 100, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Book", "Conference"], "publicationDate": "1978-05-01", "journal": {"name":
-      "Proceedings of the tenth annual ACM symposium on Theory of computing"}, "authors":
-      [{"authorId": "1798254", "name": "S. Fortune"}, {"authorId": "40005350", "name":
-      "J. Wyllie"}]}, {"paperId": "b85ae9f4367548a7dac7eae1a2a8d5866d27813a", "externalIds":
-      {"MAG": "1969678783", "DBLP": "journals/jacm/Chaitin66", "DOI": "10.1145/321356.321363",
+      "Proceedings of the tenth annual ACM symposium on Theory of computing"}, "citationStyles":
+      {"bibtex": "@Article{Fortune1978ParallelismIR,\n author = {S. Fortune and J.
+      Wyllie},\n booktitle = {Symposium on the Theory of Computing},\n journal = {Proceedings
+      of the tenth annual ACM symposium on Theory of computing},\n title = {Parallelism
+      in random access machines},\n year = {1978}\n}\n"}, "authors": [{"authorId":
+      "1798254", "name": "S. Fortune"}, {"authorId": "40005350", "name": "J. Wyllie"}]},
+      {"paperId": "b85ae9f4367548a7dac7eae1a2a8d5866d27813a", "externalIds": {"MAG":
+      "1969678783", "DBLP": "journals/jacm/Chaitin66", "DOI": "10.1145/321356.321363",
       "CorpusId": 207698337}, "corpusId": 207698337, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/b85ae9f4367548a7dac7eae1a2a8d5866d27813a",
       "title": "On the Length of Programs for Computing Finite Binary Sequences",
@@ -1032,17 +1157,20 @@ interactions:
       in programs. A modified form of Turing machine is studied from the same point
       of view. An application to the problem of defining a patternless sequence is
       proposed in terms of the concepts here developed.", "venue": "JACM", "year":
-      1966, "referenceCount": 15, "citationCount": 1124, "influentialCitationCount":
-      58, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
+      1966, "referenceCount": 15, "citationCount": 1126, "influentialCitationCount":
+      57, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics",
       "Computer Science"], "s2FieldsOfStudy": [{"category": "Mathematics", "source":
       "external"}, {"category": "Computer Science", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "1966-10-01", "journal": {"name": "J. ACM", "pages": "547-569", "volume": "13"},
-      "authors": [{"authorId": "1756533", "name": "G. Chaitin"}]}, {"paperId": "bbaac3ff0eb5b661faead2748313834c9cf771cf",
-      "externalIds": {"DBLP": "journals/jacm/Holland62", "MAG": "2002592134", "DOI":
-      "10.1145/321127.321128", "CorpusId": 955154}, "corpusId": 955154, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/bbaac3ff0eb5b661faead2748313834c9cf771cf",
+      "citationStyles": {"bibtex": "@Article{Chaitin1966OnTL,\n author = {G. Chaitin},\n
+      booktitle = {JACM},\n journal = {J. ACM},\n pages = {547-569},\n title = {On
+      the Length of Programs for Computing Finite Binary Sequences},\n volume = {13},\n
+      year = {1966}\n}\n"}, "authors": [{"authorId": "1756533", "name": "G. Chaitin"}]},
+      {"paperId": "bbaac3ff0eb5b661faead2748313834c9cf771cf", "externalIds": {"DBLP":
+      "journals/jacm/Holland62", "MAG": "2002592134", "DOI": "10.1145/321127.321128",
+      "CorpusId": 955154}, "corpusId": 955154, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/bbaac3ff0eb5b661faead2748313834c9cf771cf",
       "title": "Outline for a Logical Theory of Adaptive Systems", "abstract": "The
       purpose of this paper is to outline a theory of automata appropriate to the
       properties, requirements and questions of adaptation. The conditions that such
@@ -1076,17 +1204,20 @@ interactions:
       selected few of these. Because there will always be variables which do not have
       explicit counterparts in the theory, the derived statements must be approximate
       relative to natural systems. For this reason it helps greatly that", "venue":
-      "JACM", "year": 1962, "referenceCount": 23, "citationCount": 1169, "influentialCitationCount":
-      31, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/321127.321128",
+      "JACM", "year": 1962, "referenceCount": 23, "citationCount": 1172, "influentialCitationCount":
+      33, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/321127.321128",
       "status": "CLOSED"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Biology",
       "source": "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"},
       {"category": "Philosophy", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1962-07-01", "journal": {"name": "J. ACM", "pages": "297-314",
-      "volume": "9"}, "authors": [{"authorId": "144404817", "name": "J. Holland"}]},
-      {"paperId": "78fc3b741828124d8a79667466516a544143bf68", "externalIds": {"MAG":
-      "1628475528", "DOI": "10.1049/sqj.1964.0069", "CorpusId": 142554420}, "corpusId":
-      142554420, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/78fc3b741828124d8a79667466516a544143bf68",
+      "volume": "9"}, "citationStyles": {"bibtex": "@Article{Holland1962OutlineFA,\n
+      author = {J. Holland},\n booktitle = {JACM},\n journal = {J. ACM},\n pages =
+      {297-314},\n title = {Outline for a Logical Theory of Adaptive Systems},\n volume
+      = {9},\n year = {1962}\n}\n"}, "authors": [{"authorId": "144404817", "name":
+      "J. Holland"}]}, {"paperId": "78fc3b741828124d8a79667466516a544143bf68", "externalIds":
+      {"MAG": "1628475528", "DOI": "10.1049/sqj.1964.0069", "CorpusId": 142554420},
+      "corpusId": 142554420, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/78fc3b741828124d8a79667466516a544143bf68",
       "title": "Computers and Thought", "abstract": "Computers and Thought showcases
       the work of the scientists who not only defined the field of Artificial Intelligence,
       but who are responsible for having developed it into what it is today. Originally
@@ -1106,18 +1237,20 @@ interactions:
       K. Lindsay. D. W. Loveland. Marvin Minsky. Ulric Neisser. Allen Newell. A. L.
       Samuel. Oliver G. Selfridge. J. C. Shaw. Herbert A. Simon. James R. Slagle.
       Fred M. Tonge. A. M. Turing. Leonard Uhr. Charles Vossler. Alice K. Wolf.",
-      "venue": "", "year": 1963, "referenceCount": 0, "citationCount": 1036, "influentialCitationCount":
-      8, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"],
+      "venue": "", "year": 1963, "referenceCount": 0, "citationCount": 1037, "influentialCitationCount":
+      10, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"],
       "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}, {"category": "Philosophy", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      {"name": "", "volume": ""}, "authors": [{"authorId": "1792280", "name": "E.
-      Feigenbaum"}, {"authorId": "144005334", "name": "J. Feldman"}]}, {"paperId":
-      "bc022dbb37b1bbf3905a7404d19c03ccbf6b81a8", "externalIds": {"DBLP": "conf/icml/ChenRC0JLS20",
-      "MAG": "3034445277", "CorpusId": 219781060}, "corpusId": 219781060, "publicationVenue":
-      {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29", "name": "International Conference
-      on Machine Learning", "type": "conference", "alternate_names": ["ICML", "Int
-      Conf Mach Learn"], "url": "https://icml.cc/"}, "url": "https://www.semanticscholar.org/paper/bc022dbb37b1bbf3905a7404d19c03ccbf6b81a8",
+      {"name": "", "volume": ""}, "citationStyles": {"bibtex": "@Inproceedings{Feigenbaum1963ComputersAT,\n
+      author = {E. Feigenbaum and J. Feldman},\n title = {Computers and Thought},\n
+      year = {1963}\n}\n"}, "authors": [{"authorId": "1792280", "name": "E. Feigenbaum"},
+      {"authorId": "144005334", "name": "J. Feldman"}]}, {"paperId": "bc022dbb37b1bbf3905a7404d19c03ccbf6b81a8",
+      "externalIds": {"DBLP": "conf/icml/ChenRC0JLS20", "MAG": "3034445277", "CorpusId":
+      219781060}, "corpusId": 219781060, "publicationVenue": {"id": "fc0a208c-acb7-47dc-a0d4-af8190e21d29",
+      "name": "International Conference on Machine Learning", "type": "conference",
+      "alternate_names": ["ICML", "Int Conf Mach Learn"], "url": "https://icml.cc/"},
+      "url": "https://www.semanticscholar.org/paper/bc022dbb37b1bbf3905a7404d19c03ccbf6b81a8",
       "title": "Generative Pretraining From Pixels", "abstract": "Inspired by progress
       in unsupervised representation learning for natural language, we examine whether
       similar models can learn useful representations for images. We train a sequence
@@ -1131,16 +1264,20 @@ interactions:
       of ImageNet and web images is competitive with self-supervised benchmarks on
       ImageNet, achieving 72.0% top-1 accuracy on a linear probe of our features.",
       "venue": "International Conference on Machine Learning", "year": 2020, "referenceCount":
-      81, "citationCount": 1059, "influentialCitationCount": 88, "isOpenAccess": false,
+      81, "citationCount": 1074, "influentialCitationCount": 93, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Conference"], "publicationDate": "2020-07-12", "journal": {"pages": "1691-1703"},
-      "authors": [{"authorId": "2108828435", "name": "Mark Chen"}, {"authorId": "38909097",
-      "name": "Alec Radford"}, {"authorId": "49387725", "name": "Jeff Wu"}, {"authorId":
-      "35450887", "name": "Heewoo Jun"}, {"authorId": "6515819", "name": "Prafulla
-      Dhariwal"}, {"authorId": "150970919", "name": "D. Luan"}, {"authorId": "1701686",
-      "name": "Ilya Sutskever"}]}, {"paperId": "22b7cd42eab103c1fb75da08458733b5fbb992e9",
+      "citationStyles": {"bibtex": "@Article{Chen2020GenerativePF,\n author = {Mark
+      Chen and Alec Radford and Jeff Wu and Heewoo Jun and Prafulla Dhariwal and D.
+      Luan and I. Sutskever},\n booktitle = {International Conference on Machine Learning},\n
+      pages = {1691-1703},\n title = {Generative Pretraining From Pixels},\n year
+      = {2020}\n}\n"}, "authors": [{"authorId": "2108828435", "name": "Mark Chen"},
+      {"authorId": "38909097", "name": "Alec Radford"}, {"authorId": "49387725", "name":
+      "Jeff Wu"}, {"authorId": "35450887", "name": "Heewoo Jun"}, {"authorId": "6515819",
+      "name": "Prafulla Dhariwal"}, {"authorId": "150970919", "name": "D. Luan"},
+      {"authorId": "1701686", "name": "I. Sutskever"}]}, {"paperId": "22b7cd42eab103c1fb75da08458733b5fbb992e9",
       "externalIds": {"MAG": "117101047", "DOI": "10.1890/04-0922", "CorpusId": 2117723},
       "corpusId": 2117723, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/22b7cd42eab103c1fb75da08458733b5fbb992e9",
       "title": "EFFECTS OF BIODIVERSITY ON ECOSYSTEM FUNCTIONING: A CONSENSUS OF CURRENT
@@ -1166,60 +1303,32 @@ interactions:
       social and economic constraints of potential management practices. Understanding
       this complexity, while taking strong steps to minimize current losses of species,
       is necessary for responsible management of Earth''s ecosystems and the diverse
-      biota they contain.", "venue": "", "year": 2005, "referenceCount": 433, "citationCount":
-      7116, "influentialCitationCount": 358, "isOpenAccess": true, "openAccessPdf":
+      biota they contain.", "venue": "", "year": 2005, "referenceCount": 437, "citationCount":
+      7139, "influentialCitationCount": 364, "isOpenAccess": true, "openAccessPdf":
       {"url": "http://deepblue.lib.umich.edu/bitstream/2027.42/116927/1/ecm20057513.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Biology", "Environmental Science"], "s2FieldsOfStudy":
       [{"category": "Biology", "source": "external"}, {"category": "Environmental
-      Science", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"},
-      {"category": "Environmental Science", "source": "s2-fos-model"}], "publicationTypes":
+      Science", "source": "external"}, {"category": "Environmental Science", "source":
+      "s2-fos-model"}, {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": "2005-02-01", "journal": {"name": "Ecological Monographs",
-      "pages": "3-35", "volume": "75"}, "authors": [{"authorId": "7017684", "name":
-      "D. Hooper"}, {"authorId": "46601508", "name": "F. Chapin"}, {"authorId": "5481714",
-      "name": "J. Ewel"}, {"authorId": "6476364", "name": "A. Hector"}, {"authorId":
-      "4146577", "name": "P. Inchausti"}, {"authorId": "4687927", "name": "S. Lavorel"},
-      {"authorId": "36637256", "name": "J. Lawton"}, {"authorId": "46818175", "name":
-      "D. Lodge"}, {"authorId": "5794110", "name": "M. Loreau"}, {"authorId": "3559508",
-      "name": "S. Naeem"}, {"authorId": "144182682", "name": "B. Schmid"}, {"authorId":
-      "52132648", "name": "H. Set\u00e4l\u00e4"}, {"authorId": "4758207", "name":
-      "A. Symstad"}, {"authorId": "1900081", "name": "J. Vandermeer"}, {"authorId":
-      "6270884", "name": "D. Wardle"}]}, {"paperId": "70031c04b064599eea66255d2ac2acb679969858",
-      "externalIds": {"MAG": "2189533845", "DOI": "10.2307/j.ctv1mgm7ng", "CorpusId":
-      61218822}, "corpusId": 61218822, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/70031c04b064599eea66255d2ac2acb679969858",
-      "title": "The Tacit Dimension", "abstract": "''Without symbolism the life of
-      man would be like that of the prisoners in the cave of Plato''s simile\u2026confined
-      within the limits of his biological needs and practical interests; it could
-      find no access to the \"ideal world\" which is opened to him from different
-      sides by religion, art, philosophy, science.'' Ernst Cassirer 1 ABSTRACT I begin
-      by outlining some of the positions that have been taken by those who have reflected
-      upon the nature of language. In his early work Wittgenstein asserts that language
-      becomes meaningful when we tacitly adhere to the rules of logic. In his later
-      work he claims that lan- guages become meaningful when they are situated within
-      forms of life. Polanyi describes language as a toolbox for deploying our tacit
-      awareness. A meaning is generated when a point of view attends from a subsidiary
-      to a focal awareness. Languages re-present these meanings. Although all languages
-      rely upon rules, what it is to be a meaning is not reduc- ible to rules. Nor
-      is there a universal grammar. Because it renders abstract reflection possi-
-      ble, language renders minds possible. A mind is not the product of an innate
-      language of thought; it is a consequence of indwelling within a natural language.
-      Indwelling within languages enables us to access new realities. Languages however
-      do not supply us with the boundaries of the world. Not only do we know more
-      than we can say, we can also say more than we know. The ultimate context of
-      our linguistic meanings is not our social practices; it is our embodied awareness
-      of the world. A representationalist account is in accordance with the view that
-      minds are Turing machines. But the symbols processed by a Turing ma- chine derive
-      their meaning from the agents that use them to achieve their purposes. Only
-      if the processing of symbolic representations is related to the tacit context
-      within which they become meaningful, does a semantic engine becomes possible.",
-      "venue": "", "year": 2003, "referenceCount": 31, "citationCount": 7094, "influentialCitationCount":
-      440, "isOpenAccess": true, "openAccessPdf": {"url": "https://library.oapen.org/bitstream/20.500.12657/48467/1/9789461663801.pdf",
-      "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
-      [{"category": "Computer Science", "source": "external"}, {"category": "Philosophy",
-      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": null,
-      "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "145922372",
-      "name": "C. P. Goodman"}]}, {"paperId": "b91676c5303cf8e8b3e4a963c3756b4da2dbece1",
-      "externalIds": {"MAG": "2099857446", "DOI": "10.1785/0120000006", "CorpusId":
-      17877957}, "corpusId": 17877957, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b91676c5303cf8e8b3e4a963c3756b4da2dbece1",
+      "pages": "3-35", "volume": "75"}, "citationStyles": {"bibtex": "@Article{Hooper2005EFFECTSOB,\n
+      author = {D. Hooper and F. Chapin and J. Ewel and A. Hector and P. Inchausti
+      and S. Lavorel and J. Lawton and D. Lodge and M. Loreau and S. Naeem and B.
+      Schmid and H. Set\u00e4l\u00e4 and A. Symstad and J. Vandermeer and D. Wardle},\n
+      journal = {Ecological Monographs},\n pages = {3-35},\n title = {EFFECTS OF BIODIVERSITY
+      ON ECOSYSTEM FUNCTIONING: A CONSENSUS OF CURRENT KNOWLEDGE},\n volume = {75},\n
+      year = {2005}\n}\n"}, "authors": [{"authorId": "7017684", "name": "D. Hooper"},
+      {"authorId": "46601508", "name": "F. Chapin"}, {"authorId": "5481714", "name":
+      "J. Ewel"}, {"authorId": "6476364", "name": "A. Hector"}, {"authorId": "4146577",
+      "name": "P. Inchausti"}, {"authorId": "4687927", "name": "S. Lavorel"}, {"authorId":
+      "36637256", "name": "J. Lawton"}, {"authorId": "46818175", "name": "D. Lodge"},
+      {"authorId": "5794110", "name": "M. Loreau"}, {"authorId": "3559508", "name":
+      "S. Naeem"}, {"authorId": "144182682", "name": "B. Schmid"}, {"authorId": "52132648",
+      "name": "H. Set\u00e4l\u00e4"}, {"authorId": "4758207", "name": "A. Symstad"},
+      {"authorId": "1900081", "name": "J. Vandermeer"}, {"authorId": "6270884", "name":
+      "D. Wardle"}]}, {"paperId": "b91676c5303cf8e8b3e4a963c3756b4da2dbece1", "externalIds":
+      {"MAG": "2099857446", "DOI": "10.1785/0120000006", "CorpusId": 17877957}, "corpusId":
+      17877957, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/b91676c5303cf8e8b3e4a963c3756b4da2dbece1",
       "title": "A Double-Difference Earthquake Location Algorithm: Method and Application
       to the Northern Hayward Fault, California", "abstract": "We have developed an
       efficient method to determine high-resolution hypocenter locations over large
@@ -1242,16 +1351,21 @@ interactions:
       There it col- lapses the diffuse catalog locations into sharp images of seismicity
       and reveals hor- izontal lineations of hypocenters that define the narrow regions
       on the fault where stress is released by brittle failure.", "venue": "", "year":
-      2000, "referenceCount": 41, "citationCount": 2898, "influentialCitationCount":
+      2000, "referenceCount": 41, "citationCount": 2906, "influentialCitationCount":
       196, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Geology"],
       "s2FieldsOfStudy": [{"category": "Geology", "source": "external"}, {"category":
       "Geology", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "2000-12-01", "journal": {"name": "Bulletin of the Seismological Society of
-      America", "pages": "1353-1368", "volume": "90"}, "authors": [{"authorId": "35702704",
-      "name": "F. Waldhauser"}, {"authorId": "3665776", "name": "W. Ellsworth"}]},
-      {"paperId": "12e77f2f563d1464fa299e066f4ef4a9673a7afb", "externalIds": {"MAG":
-      "2051576146", "DOI": "10.1111/1467-8721.EP10768783", "CorpusId": 144390805},
-      "corpusId": 144390805, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/12e77f2f563d1464fa299e066f4ef4a9673a7afb",
+      America", "pages": "1353-1368", "volume": "90"}, "citationStyles": {"bibtex":
+      "@Article{Waldhauser2000ADE,\n author = {F. Waldhauser and W. Ellsworth},\n
+      journal = {Bulletin of the Seismological Society of America},\n pages = {1353-1368},\n
+      title = {A Double-Difference Earthquake Location Algorithm: Method and Application
+      to the Northern Hayward Fault, California},\n volume = {90},\n year = {2000}\n}\n"},
+      "authors": [{"authorId": "35702704", "name": "F. Waldhauser"}, {"authorId":
+      "3665776", "name": "W. Ellsworth"}]}, {"paperId": "12e77f2f563d1464fa299e066f4ef4a9673a7afb",
+      "externalIds": {"MAG": "2051576146", "DOI": "10.1111/1467-8721.EP10768783",
+      "CorpusId": 144390805}, "corpusId": 144390805, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/12e77f2f563d1464fa299e066f4ef4a9673a7afb",
       "title": "Statistical Power Analysis", "abstract": "pression, Journal of Clinical
       Psychiatry, 51, 61-69 (1990). 11. L.R. Baxter, Jr., J.M. Schwartz, B.H. Guze,
       J.C. Mazziotta, M.P. Szuba, K. Bergman, A. Alazraki, C.E. Selin, H.K. Freng,
@@ -1267,21 +1381,24 @@ interactions:
       M. Gross, T.A. Mellman, M.B. Stein, P. Goyer, A.C. King, T.W. Uhde, and R.M.
       Cohen, Cerebral glucose metabolic differences in patients with panic disorder,
       Neuro psychopharmacology, 3, 261-272 (1990).", "venue": "", "year": 1992, "referenceCount":
-      10, "citationCount": 3717, "influentialCitationCount": 672, "isOpenAccess":
+      10, "citationCount": 3725, "influentialCitationCount": 672, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
       [{"category": "Psychology", "source": "external"}, {"category": "Psychology",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "1992-06-01", "journal": {"name": "Current Directions in Psychological Science",
-      "pages": "101 - 98", "volume": "1"}, "authors": [{"authorId": "145670758", "name":
-      "Jacob Cohen"}]}, {"paperId": "101a0d785c1f74416c0f3182f3743522103402df", "externalIds":
-      {"MAG": "2080875376", "DOI": "10.1146/ANNUREV.BI.56.070187.003151", "CorpusId":
-      33992382, "PubMed": "3113327"}, "corpusId": 33992382, "publicationVenue": {"id":
-      "9e5ab0fc-a36d-4a05-bc89-12dd1cb12e2b", "name": "Annual Review of Biochemistry",
-      "type": "journal", "alternate_names": ["Annu Rev Biochem"], "issn": "0066-4154",
-      "url": "https://www.annualreviews.org/journal/biochem", "alternate_urls": ["http://www.annualreviews.org/journal/biochem",
-      "http://biochem.annualreviews.org/", "https://www.annualreviews.org/loi/biochem",
-      "http://intl-biomedical.annualreviews.org/", "http://arjournals.annualreviews.org/loi/biochem",
-      "http://arjournals.annualreviews.org/loi/biochem?cookieSet=1"]}, "url": "https://www.semanticscholar.org/paper/101a0d785c1f74416c0f3182f3743522103402df",
+      "pages": "101 - 98", "volume": "1"}, "citationStyles": {"bibtex": "@Article{Cohen1992StatisticalPA,\n
+      author = {Jacob Cohen},\n journal = {Current Directions in Psychological Science},\n
+      pages = {101 - 98},\n title = {Statistical Power Analysis},\n volume = {1},\n
+      year = {1992}\n}\n"}, "authors": [{"authorId": "145670758", "name": "Jacob Cohen"}]},
+      {"paperId": "101a0d785c1f74416c0f3182f3743522103402df", "externalIds": {"MAG":
+      "2080875376", "DOI": "10.1146/ANNUREV.BI.56.070187.003151", "CorpusId": 33992382,
+      "PubMed": "3113327"}, "corpusId": 33992382, "publicationVenue": {"id": "9e5ab0fc-a36d-4a05-bc89-12dd1cb12e2b",
+      "name": "Annual Review of Biochemistry", "type": "journal", "alternate_names":
+      ["Annu Rev Biochem"], "issn": "0066-4154", "url": "https://www.annualreviews.org/journal/biochem",
+      "alternate_urls": ["http://www.annualreviews.org/journal/biochem", "http://biochem.annualreviews.org/",
+      "https://www.annualreviews.org/loi/biochem", "http://intl-biomedical.annualreviews.org/",
+      "http://arjournals.annualreviews.org/loi/biochem", "http://arjournals.annualreviews.org/loi/biochem?cookieSet=1"]},
+      "url": "https://www.semanticscholar.org/paper/101a0d785c1f74416c0f3182f3743522103402df",
       "title": "G proteins: transducers of receptor-generated signals.", "abstract":
       "PERSPECTIVES AND SUMMARy ......... .. ........ . ...... 615 HISTORy .......
       ...... . . . . . ...... . . .. .... . . . .. . 616 INDIVIDUAL G PROTEINS: FUNCTIONS
@@ -1296,13 +1413,17 @@ interactions:
       . . . ... . .... . .. . . . ...... . .. ....... .... . . 638 G PROTEIN-MEMBRANE
       INTERACTIONS 643 COVALENT MODIFICATION OF G PROTEINS 644", "venue": "Annual
       Review of Biochemistry", "year": 1987, "referenceCount": 1, "citationCount":
-      5794, "influentialCitationCount": 186, "isOpenAccess": false, "openAccessPdf":
+      5796, "influentialCitationCount": 187, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Biology", "Chemistry", "Medicine"], "s2FieldsOfStudy":
       [{"category": "Biology", "source": "external"}, {"category": "Chemistry", "source":
       "external"}, {"category": "Medicine", "source": "external"}, {"category": "Biology",
       "source": "s2-fos-model"}], "publicationTypes": ["Review", "JournalArticle"],
       "publicationDate": null, "journal": {"name": "Annual review of biochemistry",
-      "pages": "\n          615-49\n        ", "volume": "56"}, "authors": [{"authorId":
+      "pages": "\n          615-49\n        ", "volume": "56"}, "citationStyles":
+      {"bibtex": "@Article{Gilman1987GPT,\n author = {A. Gilman},\n booktitle = {Annual
+      Review of Biochemistry},\n journal = {Annual review of biochemistry},\n pages
+      = {\n          615-49\n        },\n title = {G proteins: transducers of receptor-generated
+      signals.},\n volume = {56},\n year = {1987}\n}\n"}, "authors": [{"authorId":
       "1834401", "name": "A. Gilman"}]}, {"paperId": "22b65eebec33b89ec912054b4c4ec3d963960ab0",
       "externalIds": {"MAG": "2018076297", "DOI": "10.1037/0033-295X.96.2.358", "CorpusId":
       18511760}, "corpusId": 18511760, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/22b65eebec33b89ec912054b4c4ec3d963960ab0",
@@ -1342,16 +1463,19 @@ interactions:
       may be one of many pathways to a final common out-come of depression. In this
       case, it would be more compellingto speak of a hopelessness cause, as opposed
       to a hopelessnesssubtype, of depression.", "venue": "", "year": 1989, "referenceCount":
-      135, "citationCount": 3445, "influentialCitationCount": 198, "isOpenAccess":
+      135, "citationCount": 3449, "influentialCitationCount": 198, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
       [{"category": "Psychology", "source": "external"}, {"category": "Psychology",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1989-04-01",
       "journal": {"name": "Psychological Review", "pages": "358-372", "volume": "96"},
-      "authors": [{"authorId": "2294629", "name": "L. Abramson"}, {"authorId": "5188561",
-      "name": "G. Metalsky"}, {"authorId": "4414164", "name": "L. Alloy"}]}, {"paperId":
-      "3835e277046e162b960e007808b54fea44753397", "externalIds": {"MAG": "95649271",
-      "DOI": "10.1002/SMJ.4250171107", "CorpusId": 17368130}, "corpusId": 17368130,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3835e277046e162b960e007808b54fea44753397",
+      "citationStyles": {"bibtex": "@Article{Abramson1989HopelessnessDA,\n author
+      = {L. Abramson and G. Metalsky and L. Alloy},\n journal = {Psychological Review},\n
+      pages = {358-372},\n title = {Hopelessness depression: A theory-based subtype
+      of depression.},\n volume = {96},\n year = {1989}\n}\n"}, "authors": [{"authorId":
+      "2294629", "name": "L. Abramson"}, {"authorId": "5188561", "name": "G. Metalsky"},
+      {"authorId": "4414164", "name": "L. Alloy"}]}, {"paperId": "3835e277046e162b960e007808b54fea44753397",
+      "externalIds": {"MAG": "95649271", "DOI": "10.1002/SMJ.4250171107", "CorpusId":
+      17368130}, "corpusId": 17368130, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3835e277046e162b960e007808b54fea44753397",
       "title": "Modularity, flexibility, and knowledge management in product and organization
       design", "abstract": "This pczper investigcztes irzterrelationslzi~~s of product
       design, orgcznization design, processes for leartlirzg and managing knowledge,
@@ -1371,17 +1495,21 @@ interactions:
       new strcitegic approach to the management of knowledge based on cztz irztentionczl,
       carefully mcznaged loose coupling of (I firm''s learning processes czt architec-
       tural cznd comporzent levels of product crecztiorz processes.", "venue": "",
-      "year": 1996, "referenceCount": 77, "citationCount": 2564, "influentialCitationCount":
-      184, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
+      "year": 1996, "referenceCount": 77, "citationCount": 2566, "influentialCitationCount":
+      185, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine",
       "Economics", "Computer Science"], "s2FieldsOfStudy": [{"category": "Medicine",
       "source": "external"}, {"category": "Economics", "source": "external"}, {"category":
-      "Computer Science", "source": "external"}, {"category": "Business", "source":
-      "s2-fos-model"}, {"category": "Engineering", "source": "s2-fos-model"}], "publicationTypes":
+      "Computer Science", "source": "external"}, {"category": "Engineering", "source":
+      "s2-fos-model"}, {"category": "Business", "source": "s2-fos-model"}], "publicationTypes":
       null, "publicationDate": "1996-12-01", "journal": {"name": "IEEE Engineering
-      Management Review", "pages": "50-61", "volume": "25"}, "authors": [{"authorId":
-      "39949692", "name": "R. Sanchez"}, {"authorId": "31655029", "name": "Joseph
-      T. Mahoney"}]}, {"paperId": "52012db392ae0dffbf990b62682e21cf13bf093e", "externalIds":
-      {"MAG": "3106422048", "ArXiv": "quant-ph/0002077", "DOI": "10.1002/1521-3978(200009)48:9/11<771::AID-PROP771>3.0.CO;2-E",
+      Management Review", "pages": "50-61", "volume": "25"}, "citationStyles": {"bibtex":
+      "@Article{Sanchez1996ModularityFA,\n author = {R. Sanchez and Joseph T. Mahoney},\n
+      journal = {IEEE Engineering Management Review},\n pages = {50-61},\n title =
+      {Modularity, flexibility, and knowledge management in product and organization
+      design},\n volume = {25},\n year = {1996}\n}\n"}, "authors": [{"authorId": "39949692",
+      "name": "R. Sanchez"}, {"authorId": "31655029", "name": "Joseph T. Mahoney"}]},
+      {"paperId": "52012db392ae0dffbf990b62682e21cf13bf093e", "externalIds": {"MAG":
+      "3106422048", "ArXiv": "quant-ph/0002077", "DOI": "10.1002/1521-3978(200009)48:9/11<771::AID-PROP771>3.0.CO;2-E",
       "CorpusId": 15439711}, "corpusId": 15439711, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/52012db392ae0dffbf990b62682e21cf13bf093e",
       "title": "The Physical Implementation of Quantum Computation", "abstract": "After
@@ -1410,12 +1538,15 @@ interactions:
       fostered as a result is one of the most pleasant and remarkable fea- tures of
       this field. The excitement and freshness that has been produced bodes well for
       the prospect for discovery, invention, and innovation in this endeavor.", "venue":
-      "", "year": 2000, "referenceCount": 42, "citationCount": 2081, "influentialCitationCount":
+      "", "year": 2000, "referenceCount": 41, "citationCount": 2089, "influentialCitationCount":
       85, "isOpenAccess": true, "openAccessPdf": {"url": "https://arxiv.org/pdf/quant-ph/0002077",
       "status": "GREEN"}, "fieldsOfStudy": ["Physics"], "s2FieldsOfStudy": [{"category":
       "Physics", "source": "external"}, {"category": "Physics", "source": "s2-fos-model"}],
       "publicationTypes": ["Review"], "publicationDate": "2000-02-25", "journal":
-      {"name": "Protein Science", "pages": "771-783", "volume": "48"}, "authors":
+      {"name": "Protein Science", "pages": "771-783", "volume": "48"}, "citationStyles":
+      {"bibtex": "@Article{DiVincenzo2000ThePI,\n author = {D. DiVincenzo and Ibm},\n
+      journal = {Protein Science},\n pages = {771-783},\n title = {The Physical Implementation
+      of Quantum Computation},\n volume = {48},\n year = {2000}\n}\n"}, "authors":
       [{"authorId": "2804168", "name": "D. DiVincenzo"}, {"authorId": "102619729",
       "name": "Ibm"}]}, {"paperId": "389e37775bc407d17e4e0a3c05b22b92c3a16b69", "externalIds":
       {"MAG": "2026444402", "DOI": "10.1103/REVMODPHYS.71.1253", "CorpusId": 33553705},
@@ -1436,15 +1567,18 @@ interactions:
       fundamental understanding. Theoretical chemists and physicists, following the
       path of the Schrodinger equation, have become accustomed to think in terms of
       a truncated Hilbert space of single-", "venue": "", "year": 1999, "referenceCount":
-      6, "citationCount": 1899, "influentialCitationCount": 88, "isOpenAccess": true,
+      6, "citationCount": 1905, "influentialCitationCount": 88, "isOpenAccess": true,
       "openAccessPdf": {"url": "http://link.aps.org/pdf/10.1103/RevModPhys.71.1253",
       "status": "BRONZE"}, "fieldsOfStudy": ["Physics"], "s2FieldsOfStudy": [{"category":
       "Physics", "source": "external"}, {"category": "Physics", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": "1999-10-01", "journal": {"name":
-      "Reviews of Modern Physics", "pages": "1253-1266", "volume": "71"}, "authors":
-      [{"authorId": "38338926", "name": "W. Kohn"}]}, {"paperId": "c891ca3891bf4aeb95f17b3ddc79cc1120d55c1c",
-      "externalIds": {"CorpusId": 10688611}, "corpusId": 10688611, "publicationVenue":
-      null, "url": "https://www.semanticscholar.org/paper/c891ca3891bf4aeb95f17b3ddc79cc1120d55c1c",
+      "Reviews of Modern Physics", "pages": "1253-1266", "volume": "71"}, "citationStyles":
+      {"bibtex": "@Article{Kohn1999NobelLE,\n author = {W. Kohn},\n journal = {Reviews
+      of Modern Physics},\n pages = {1253-1266},\n title = {Nobel Lecture: Electronic
+      structure of matter-wave functions and density functionals},\n volume = {71},\n
+      year = {1999}\n}\n"}, "authors": [{"authorId": "38338926", "name": "W. Kohn"}]},
+      {"paperId": "c891ca3891bf4aeb95f17b3ddc79cc1120d55c1c", "externalIds": {"CorpusId":
+      10688611}, "corpusId": 10688611, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c891ca3891bf4aeb95f17b3ddc79cc1120d55c1c",
       "title": "MUTATIONS OF BACTERIA FROM VIRUS SENSITIVITY TO VIRUS RESISTANCE\u2019-\u2019",
       "abstract": "HEN a pure bacterial culture is. attacked by a bacterial virus,
       the culW ture will clear after a few hours due to destruction of the sensitive
@@ -1477,25 +1611,30 @@ interactions:
       induced the resistant variants. GRATIA (1921), BURNET (I929), and others, on
       the other hand, believed that the resistant bacterial variants are produced
       by mutation in the culture prior to the addition of virus. The", "venue": "",
-      "year": 2003, "referenceCount": 10, "citationCount": 1440, "influentialCitationCount":
+      "year": 2003, "referenceCount": 10, "citationCount": 1454, "influentialCitationCount":
       141, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
       [{"category": "Biology", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": null, "authors": [{"authorId": "2262527575",
-      "name": "Lurias"}, {"authorId": "1932699022", "name": "M. Delbrock"}]}, {"paperId":
-      "1a97ecaf1f067c44135fd3161a5c80a3497cb344", "externalIds": {"MAG": "1605417594",
-      "DBLP": "books/daglib/0025273", "DOI": "10.1007/978-1-4612-0003-1", "CorpusId":
-      117710456}, "corpusId": 117710456, "publicationVenue": {"id": "9e787a4f-1263-49d1-9997-00a18fa41e93",
+      "publicationDate": null, "journal": null, "citationStyles": {"bibtex": "@Inproceedings{Lurias2003MUTATIONSOB,\n
+      author = {Lurias and M. Delbrock},\n title = {MUTATIONS OF BACTERIA FROM VIRUS
+      SENSITIVITY TO VIRUS RESISTANCE\u2019-\u2019},\n year = {2003}\n}\n"}, "authors":
+      [{"authorId": "2262527575", "name": "Lurias"}, {"authorId": "1932699022", "name":
+      "M. Delbrock"}]}, {"paperId": "1a97ecaf1f067c44135fd3161a5c80a3497cb344", "externalIds":
+      {"MAG": "1605417594", "DBLP": "books/daglib/0025273", "DOI": "10.1007/978-1-4612-0003-1",
+      "CorpusId": 117710456}, "corpusId": 117710456, "publicationVenue": {"id": "9e787a4f-1263-49d1-9997-00a18fa41e93",
       "name": "Applied and Numerical Harmonic Analysis", "alternate_names": ["Appl
       Numer Harmon Anal"], "issn": "2296-5017", "url": "https://www.springer.com/series/4968",
       "alternate_urls": ["https://link.springer.com/bookseries/4968"]}, "url": "https://www.semanticscholar.org/paper/1a97ecaf1f067c44135fd3161a5c80a3497cb344",
       "title": "Foundations of Time-Frequency Analysis", "abstract": null, "venue":
       "Applied and Numerical Harmonic Analysis", "year": 2000, "referenceCount": 0,
-      "citationCount": 1430, "influentialCitationCount": 125, "isOpenAccess": false,
+      "citationCount": 1431, "influentialCitationCount": 127, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Computer Science", "Mathematics"],
       "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "2000-12-15",
-      "journal": {"pages": "I-XV, 1-359"}, "authors": [{"authorId": "2986384", "name":
+      "journal": {"pages": "I-XV, 1-359"}, "citationStyles": {"bibtex": "@Inproceedings{Gr\u00f6chenig2000FoundationsOT,\n
+      author = {K. Gr\u00f6chenig},\n booktitle = {Applied and Numerical Harmonic
+      Analysis},\n pages = {I-XV, 1-359},\n title = {Foundations of Time-Frequency
+      Analysis},\n year = {2000}\n}\n"}, "authors": [{"authorId": "2986384", "name":
       "K. Gr\u00f6chenig"}]}, {"paperId": "9d5085f3008a60abd7e53bc7f16963c4db32e342",
       "externalIds": {"MAG": "2049410986", "DOI": "10.1177/027836498500400201", "CorpusId":
       121737271}, "corpusId": 121737271, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9d5085f3008a60abd7e53bc7f16963c4db32e342",
@@ -1505,13 +1644,16 @@ interactions:
       measure are obtained, the best postures of various types of manipulators are
       given, and a four-degree-of-freedom finger is considered from the viewpoint
       of the measure. The pos tures somewhat resemble those of human arms and fingers.",
-      "venue": "", "year": 1985, "referenceCount": 7, "citationCount": 2334, "influentialCitationCount":
-      121, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
+      "venue": "", "year": 1985, "referenceCount": 7, "citationCount": 2342, "influentialCitationCount":
+      123, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
       "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
       "Engineering", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1985-06-01", "journal": {"name": "The International Journal
-      of Robotics Research", "pages": "3 - 9", "volume": "4"}, "authors": [{"authorId":
-      "1796280", "name": "T. Yoshikawa"}]}, {"paperId": "a574e320d899e7e82e341eb64baef7dfe8a24642",
+      of Robotics Research", "pages": "3 - 9", "volume": "4"}, "citationStyles": {"bibtex":
+      "@Article{Yoshikawa1985ManipulabilityOR,\n author = {T. Yoshikawa},\n journal
+      = {The International Journal of Robotics Research},\n pages = {3 - 9},\n title
+      = {Manipulability of Robotic Mechanisms},\n volume = {4},\n year = {1985}\n}\n"},
+      "authors": [{"authorId": "1796280", "name": "T. Yoshikawa"}]}, {"paperId": "a574e320d899e7e82e341eb64baef7dfe8a24642",
       "externalIds": {"DBLP": "conf/emnlp/Ratnaparkhi96", "MAG": "2977626681", "ACL":
       "W96-0213", "CorpusId": 5914287}, "corpusId": 5914287, "publicationVenue": {"id":
       "41bf9ed3-85b3-4c90-b015-150e31690253", "name": "Conference on Empirical Methods
@@ -1528,15 +1670,19 @@ interactions:
       discusses the corpus consistency problems discovered during the implementation
       of these features and proposes a training strategy that mitigates these problems",
       "venue": "Conference on Empirical Methods in Natural Language Processing", "year":
-      1996, "referenceCount": 13, "citationCount": 1570, "influentialCitationCount":
-      119, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      1996, "referenceCount": 13, "citationCount": 1574, "influentialCitationCount":
+      120, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}, {"category": "Linguistics",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Conference"],
-      "publicationDate": null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId":
-      "1793475", "name": "A. Ratnaparkhi"}]}, {"paperId": "1a709a5309048ef6badb80deb66c6d6ed774446e",
-      "externalIds": {"MAG": "101096562", "CorpusId": 37493104}, "corpusId": 37493104,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1a709a5309048ef6badb80deb66c6d6ed774446e",
+      "publicationDate": null, "journal": {"name": "", "volume": ""}, "citationStyles":
+      {"bibtex": "@Article{Ratnaparkhi1996AME,\n author = {A. Ratnaparkhi},\n booktitle
+      = {Conference on Empirical Methods in Natural Language Processing},\n title
+      = {A Maximum Entropy Model for Part-Of-Speech Tagging},\n year = {1996}\n}\n"},
+      "authors": [{"authorId": "1793475", "name": "A. Ratnaparkhi"}]}, {"paperId":
+      "1a709a5309048ef6badb80deb66c6d6ed774446e", "externalIds": {"MAG": "101096562",
+      "CorpusId": 37493104}, "corpusId": 37493104, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/1a709a5309048ef6badb80deb66c6d6ed774446e",
       "title": "TEMPERATURE AND PHYTOPLANKTON GROWTH IN THE SEA", "abstract": "The
       variation in growth rate with temperature of unicellular algae suggests that
       an equation can be written to describe the maximum expected growth rate for
@@ -1557,30 +1703,35 @@ interactions:
       temperature which agree well with expectation. The variation in maximum expected
       growth rate with temperature seems a logical starting point for modeling phytoplankton
       growth and photosynthesis in the sea.", "venue": "", "year": 1972, "referenceCount":
-      92, "citationCount": 2421, "influentialCitationCount": 212, "isOpenAccess":
+      92, "citationCount": 2427, "influentialCitationCount": 213, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy":
       [{"category": "Biology", "source": "external"}, {"category": "Environmental
       Science", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "96804368",
-      "name": "W. Richard"}]}, {"paperId": "a87ca203325c7c2a57e319e069a36afde4a7d46a",
-      "externalIds": {"MAG": "2967426412", "DOI": "10.7916/D8KD24FP", "CorpusId":
-      8959407}, "corpusId": 8959407, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a87ca203325c7c2a57e319e069a36afde4a7d46a",
+      null, "journal": {"name": "", "volume": ""}, "citationStyles": {"bibtex": "@Inproceedings{Richard1972TEMPERATUREAP,\n
+      author = {W. Richard},\n title = {TEMPERATURE AND PHYTOPLANKTON GROWTH IN THE
+      SEA},\n year = {1972}\n}\n"}, "authors": [{"authorId": "96804368", "name": "W.
+      Richard"}]}, {"paperId": "a87ca203325c7c2a57e319e069a36afde4a7d46a", "externalIds":
+      {"MAG": "2967426412", "DOI": "10.7916/D8KD24FP", "CorpusId": 8959407}, "corpusId":
+      8959407, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a87ca203325c7c2a57e319e069a36afde4a7d46a",
       "title": "The Meaning of Intonational Contours in the Interpretation of Discourse",
       "abstract": "Recent investigations of the contribution that intonation makes
       to overall utterance and discourse interpretation promise new sources of information
       for the investigation of long-time concerns in natural-language processing.
       In Hirschberg and Pierrehumbert 1986 we proposed that intonational fea tures
       such as phrasing, accmt pUuttTWIt, pilch rangt", "venue": "", "year": 1990,
-      "referenceCount": 45, "citationCount": 1466, "influentialCitationCount": 102,
+      "referenceCount": 44, "citationCount": 1471, "influentialCitationCount": 104,
       "isOpenAccess": true, "openAccessPdf": {"url": "https://academiccommons.columbia.edu/doi/10.7916/D8FN1CRD/download",
       "status": "GREEN"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Linguistics",
       "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1990-06-01",
-      "journal": {"name": "", "pages": "271-311", "volume": ""}, "authors": [{"authorId":
-      "1970864", "name": "J. Pierrehumbert"}, {"authorId": "144049352", "name": "Julia
-      Hirschberg"}]}, {"paperId": "1b07c0a4e9537bebcef46b30e06acda288f7cfbd", "externalIds":
-      {"MAG": "2147307405", "DOI": "10.1177/017084069701800104", "CorpusId": 145691109},
-      "corpusId": 145691109, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1b07c0a4e9537bebcef46b30e06acda288f7cfbd",
+      "journal": {"name": "", "pages": "271-311", "volume": ""}, "citationStyles":
+      {"bibtex": "@Inproceedings{Pierrehumbert1990TheMO,\n author = {J. Pierrehumbert
+      and Julia Hirschberg},\n pages = {271-311},\n title = {The Meaning of Intonational
+      Contours in the Interpretation of Discourse},\n year = {1990}\n}\n"}, "authors":
+      [{"authorId": "1970864", "name": "J. Pierrehumbert"}, {"authorId": "144049352",
+      "name": "Julia Hirschberg"}]}, {"paperId": "1b07c0a4e9537bebcef46b30e06acda288f7cfbd",
+      "externalIds": {"MAG": "2147307405", "DOI": "10.1177/017084069701800104", "CorpusId":
+      145691109}, "corpusId": 145691109, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1b07c0a4e9537bebcef46b30e06acda288f7cfbd",
       "title": "Strategic Choice in the Analysis of Action, Structure, Organizations
       and Environment: Retrospect and Prospect", "abstract": "This paper examines
       the place of the strategic choice perspective in the study of organizations
@@ -1589,12 +1740,16 @@ interactions:
       from it. The paper discusses the integrative potential of strategic choice theory
       within organization studies and examines its contribu tion to an evolutionary
       perspective on the subject.", "venue": "", "year": 1997, "referenceCount": 69,
-      "citationCount": 1177, "influentialCitationCount": 83, "isOpenAccess": false,
+      "citationCount": 1178, "influentialCitationCount": 84, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category":
       "Sociology", "source": "external"}, {"category": "Business", "source": "s2-fos-model"}],
       "publicationTypes": ["JournalArticle", "Review"], "publicationDate": "1997-01-01",
       "journal": {"name": "Organization Studies", "pages": "43 - 76", "volume": "18"},
-      "authors": [{"authorId": "145515380", "name": "J. Child"}]}, {"paperId": "17d451204a460a4739c7b1627a128a125f4af120",
+      "citationStyles": {"bibtex": "@Article{Child1997StrategicCI,\n author = {J.
+      Child},\n journal = {Organization Studies},\n pages = {43 - 76},\n title = {Strategic
+      Choice in the Analysis of Action, Structure, Organizations and Environment:
+      Retrospect and Prospect},\n volume = {18},\n year = {1997}\n}\n"}, "authors":
+      [{"authorId": "145515380", "name": "J. Child"}]}, {"paperId": "17d451204a460a4739c7b1627a128a125f4af120",
       "externalIds": {"DBLP": "conf/uai/VermaP90", "MAG": "1568555062", "DOI": "10.1145/3501714.3501732",
       "CorpusId": 27807863}, "corpusId": 27807863, "publicationVenue": {"id": "f9af8000-42f8-410d-a622-e8811e41660a",
       "name": "Conference on Uncertainty in Artificial Intelligence", "type": "conference",
@@ -1616,13 +1771,17 @@ interactions:
       to a model theoretic definition of causation in terms of statistical dependencies.
       Equivalence and Synthesis of Causal Models", "venue": "Conference on Uncertainty
       in Artificial Intelligence", "year": 1990, "referenceCount": 16, "citationCount":
-      1358, "influentialCitationCount": 124, "isOpenAccess": false, "openAccessPdf":
+      1362, "influentialCitationCount": 125, "isOpenAccess": false, "openAccessPdf":
       null, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy": [{"category":
       "Computer Science", "source": "external"}, {"category": "Computer Science",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle", "Book", "Conference"],
       "publicationDate": "1990-07-27", "journal": {"name": "Probabilistic and Causal
-      Inference"}, "authors": [{"authorId": "1988445", "name": "Thomas Verma"}, {"authorId":
-      "145430701", "name": "J. Pearl"}]}, {"paperId": "c80460c741362038b3e366313414b2edcaa015a4",
+      Inference"}, "citationStyles": {"bibtex": "@Article{Verma1990EquivalenceAS,\n
+      author = {Thomas Verma and J. Pearl},\n booktitle = {Conference on Uncertainty
+      in Artificial Intelligence},\n journal = {Probabilistic and Causal Inference},\n
+      title = {Equivalence and Synthesis of Causal Models},\n year = {1990}\n}\n"},
+      "authors": [{"authorId": "1988445", "name": "Thomas Verma"}, {"authorId": "145430701",
+      "name": "J. Pearl"}]}, {"paperId": "c80460c741362038b3e366313414b2edcaa015a4",
       "externalIds": {"MAG": "2169212403", "DOI": "10.1126/SCIENCE.1074376", "CorpusId":
       61533690}, "corpusId": 61533690, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c80460c741362038b3e366313414b2edcaa015a4",
       "title": "Physical one-way functions", "abstract": "Modern cryptography relies
@@ -1666,11 +1825,13 @@ interactions:
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       null, "journal": {"name": "Science", "pages": "2026-2030", "volume": "297"},
-      "authors": [{"authorId": "70476754", "name": "P. Ravikanth"}, {"authorId": "2245565",
-      "name": "S. Benton"}]}, {"paperId": "67a2952f8437defdee65bf8ae6bb8865d53cdc1c",
-      "externalIds": {"MAG": "2906875287", "DOI": "10.1090/S0273-0979-1989-15750-9",
-      "CorpusId": 7758571}, "corpusId": 7758571, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/67a2952f8437defdee65bf8ae6bb8865d53cdc1c",
+      "citationStyles": {"bibtex": "@Article{Ravikanth2001PhysicalOF,\n author = {P.
+      Ravikanth and S. Benton},\n journal = {Science},\n pages = {2026-2030},\n title
+      = {Physical one-way functions},\n volume = {297},\n year = {2001}\n}\n"}, "authors":
+      [{"authorId": "70476754", "name": "P. Ravikanth"}, {"authorId": "2245565", "name":
+      "S. Benton"}]}, {"paperId": "67a2952f8437defdee65bf8ae6bb8865d53cdc1c", "externalIds":
+      {"MAG": "2906875287", "DOI": "10.1090/S0273-0979-1989-15750-9", "CorpusId":
+      7758571}, "corpusId": 7758571, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/67a2952f8437defdee65bf8ae6bb8865d53cdc1c",
       "title": "On a theory of computation and complexity over the real numbers: $NP$-
       completeness, recursive functions and universal machines", "abstract": "We present
       a model for computation over the reals or an arbitrary (ordered) ring R. In
@@ -1800,22 +1961,26 @@ interactions:
       we give some examples. The first examples are related to the theory of complex
       dynamical systems. We present them in some detail. EXAMPLE 1. Consider a complex
       polynomial map g : C \u2014\u2022 C. This map g will be considered as a", "venue":
-      "", "year": 1989, "referenceCount": 58, "citationCount": 1152, "influentialCitationCount":
-      86, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.ams.org/bull/1989-21-01/S0273-0979-1989-15750-9/S0273-0979-1989-15750-9.pdf",
+      "", "year": 1989, "referenceCount": 58, "citationCount": 1156, "influentialCitationCount":
+      87, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.ams.org/bull/1989-21-01/S0273-0979-1989-15750-9/S0273-0979-1989-15750-9.pdf",
       "status": "GOLD"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
       "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
       "s2-fos-model"}, {"category": "Computer Science", "source": "s2-fos-model"}],
       "publicationTypes": ["Review"], "publicationDate": "1989-07-01", "journal":
       {"name": "Bulletin of the American Mathematical Society", "pages": "1-46", "volume":
-      "21"}, "authors": [{"authorId": "40642563", "name": "L. Blum"}, {"authorId":
-      "2331317", "name": "M. Shub"}, {"authorId": "34911188", "name": "S. Smale"}]},
-      {"paperId": "8b934aad7112262d1260c2d9296fc68985fe5bfe", "externalIds": {"MAG":
-      "2063444278", "DOI": "10.1172/JCI119750", "CorpusId": 12628862, "PubMed": "9410890"},
-      "corpusId": 12628862, "publicationVenue": {"id": "8c9a9e1b-acf2-4274-8d73-6ea0ecd11fd1",
-      "name": "Journal of Clinical Investigation", "type": "journal", "alternate_names":
-      ["J Clin Investig"], "issn": "0021-9738", "url": "https://www.jci.org/", "alternate_urls":
-      ["http://www.jci.org/", "https://www.jci.org/archive", "http://www.jci.org/impact"]},
-      "url": "https://www.semanticscholar.org/paper/8b934aad7112262d1260c2d9296fc68985fe5bfe",
+      "21"}, "citationStyles": {"bibtex": "@Article{Blum1989OnAT,\n author = {L. Blum
+      and M. Shub and S. Smale},\n journal = {Bulletin of the American Mathematical
+      Society},\n pages = {1-46},\n title = {On a theory of computation and complexity
+      over the real numbers: $NP$- completeness, recursive functions and universal
+      machines},\n volume = {21},\n year = {1989}\n}\n"}, "authors": [{"authorId":
+      "40642563", "name": "L. Blum"}, {"authorId": "2331317", "name": "M. Shub"},
+      {"authorId": "34911188", "name": "S. Smale"}]}, {"paperId": "8b934aad7112262d1260c2d9296fc68985fe5bfe",
+      "externalIds": {"MAG": "2063444278", "DOI": "10.1172/JCI119750", "CorpusId":
+      12628862, "PubMed": "9410890"}, "corpusId": 12628862, "publicationVenue": {"id":
+      "8c9a9e1b-acf2-4274-8d73-6ea0ecd11fd1", "name": "Journal of Clinical Investigation",
+      "type": "journal", "alternate_names": ["J Clin Investig"], "issn": "0021-9738",
+      "url": "https://www.jci.org/", "alternate_urls": ["http://www.jci.org/", "https://www.jci.org/archive",
+      "http://www.jci.org/impact"]}, "url": "https://www.semanticscholar.org/paper/8b934aad7112262d1260c2d9296fc68985fe5bfe",
       "title": "Nitric oxide synthases: which, where, how, and why?", "abstract":
       "ture that clearly identifies the specific enzyme isoform. A widely accepted
       nomenclature (3), which will be used in these Perspective articles, identifies
@@ -1834,16 +1999,20 @@ interactions:
       officially categorized in the order of their isolation and characterization;
       thus, the human genes encoding nNOS, iNOS, and eNOS are termed NOS1 , NOS2 ,
       and NOS3 , respectively.", "venue": "Journal of Clinical Investigation", "year":
-      1997, "referenceCount": 52, "citationCount": 1037, "influentialCitationCount":
-      33, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.jci.org/articles/view/119750/files/pdf",
+      1997, "referenceCount": 52, "citationCount": 1040, "influentialCitationCount":
+      32, "isOpenAccess": true, "openAccessPdf": {"url": "http://www.jci.org/articles/view/119750/files/pdf",
       "status": "BRONZE"}, "fieldsOfStudy": ["Biology", "Medicine"], "s2FieldsOfStudy":
       [{"category": "Biology", "source": "external"}, {"category": "Medicine", "source":
       "external"}, {"category": "Biology", "source": "s2-fos-model"}, {"category":
       "Medicine", "source": "s2-fos-model"}], "publicationTypes": ["Review", "JournalArticle"],
       "publicationDate": "1997-11-01", "journal": {"name": "The Journal of clinical
       investigation", "pages": "\n          2146-52\n        ", "volume": "100 9"},
-      "authors": [{"authorId": "2153763", "name": "T. Michel"}, {"authorId": "2110687",
-      "name": "O. F\u00e9ron"}]}, {"paperId": "ceb90588b49f4af3b06af7edd7b81540ffd2ca99",
+      "citationStyles": {"bibtex": "@Article{Michel1997NitricOS,\n author = {T. Michel
+      and O. F\u00e9ron},\n booktitle = {Journal of Clinical Investigation},\n journal
+      = {The Journal of clinical investigation},\n pages = {\n          2146-52\n        },\n
+      title = {Nitric oxide synthases: which, where, how, and why?},\n volume = {100
+      9},\n year = {1997}\n}\n"}, "authors": [{"authorId": "2153763", "name": "T.
+      Michel"}, {"authorId": "2110687", "name": "O. F\u00e9ron"}]}, {"paperId": "ceb90588b49f4af3b06af7edd7b81540ffd2ca99",
       "externalIds": {"DBLP": "books/lib/HopcroftU69", "MAG": "1817451992", "CorpusId":
       29997534}, "corpusId": 29997534, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ceb90588b49f4af3b06af7edd7b81540ffd2ca99",
       "title": "Formal languages and their relation to automata", "abstract": "From
@@ -1872,16 +2041,19 @@ interactions:
       in language theory--closure properties, computational complexity, deterministic
       pushdown automata, LR(k) grammars, stack automata, and decidability.", "venue":
       "Addison-Wesley series in computer science and information processing", "year":
-      1969, "referenceCount": 0, "citationCount": 1641, "influentialCitationCount":
-      67, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      1969, "referenceCount": 0, "citationCount": 1639, "influentialCitationCount":
+      68, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
       {"category": "Computer Science", "source": "s2-fos-model"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"pages": "I-VII, 1-242"}, "authors":
-      [{"authorId": "1706504", "name": "J. Hopcroft"}, {"authorId": "1742391", "name":
-      "J. Ullman"}]}, {"paperId": "82f8fbc66004ac438ac742c1ad6016d07d1ae037", "externalIds":
-      {"DBLP": "journals/cacm/CardMN80", "MAG": "2206175796", "DOI": "10.1145/358886.358895",
-      "CorpusId": 5918086}, "corpusId": 5918086, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/82f8fbc66004ac438ac742c1ad6016d07d1ae037",
+      null, "publicationDate": null, "journal": {"pages": "I-VII, 1-242"}, "citationStyles":
+      {"bibtex": "@Inproceedings{Hopcroft1969FormalLA,\n author = {J. Hopcroft and
+      J. Ullman},\n booktitle = {Addison-Wesley series in computer science and information
+      processing},\n pages = {I-VII, 1-242},\n title = {Formal languages and their
+      relation to automata},\n year = {1969}\n}\n"}, "authors": [{"authorId": "1706504",
+      "name": "J. Hopcroft"}, {"authorId": "1742391", "name": "J. Ullman"}]}, {"paperId":
+      "82f8fbc66004ac438ac742c1ad6016d07d1ae037", "externalIds": {"DBLP": "journals/cacm/CardMN80",
+      "MAG": "2206175796", "DOI": "10.1145/358886.358895", "CorpusId": 5918086}, "corpusId":
+      5918086, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/82f8fbc66004ac438ac742c1ad6016d07d1ae037",
       "title": "The keystroke-level model for user performance time with interactive
       systems", "abstract": "There are ~eg:N ms:poets of aser~emt,xu{er ~rforma~ce
       tha~ sys*em designers sh~d sys~emarka{~ ~ e r. This arlic|e prop~yses a ~im~}e
@@ -1917,17 +2089,21 @@ interactions:
       material ~br a \"quantitative reference hand book2'' This paper presents one
       s~scific quanti~aive analysis took a simple model for the time it takes a user
       ~o perform a task wi~.h a given \u2026", "venue": "CACM", "year": 1980, "referenceCount":
-      28, "citationCount": 1189, "influentialCitationCount": 120, "isOpenAccess":
+      29, "citationCount": 1188, "influentialCitationCount": 120, "isOpenAccess":
       true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/358886.358895",
       "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
       [{"category": "Computer Science", "source": "external"}, {"category": "Computer
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
       "Review"], "publicationDate": "1980-07-01", "journal": {"name": "Commun. ACM",
-      "pages": "396-410", "volume": "23"}, "authors": [{"authorId": "1720492", "name":
-      "S. Card"}, {"authorId": "32485293", "name": "T. Moran"}, {"authorId": "48603437",
-      "name": "A. Newell"}]}, {"paperId": "a3319cc89ae585483a570d786d0406a09c3f2d46",
-      "externalIds": {"MAG": "1991129227", "DOI": "10.1177/002199837601000101", "CorpusId":
-      51321995}, "corpusId": 51321995, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a3319cc89ae585483a570d786d0406a09c3f2d46",
+      "pages": "396-410", "volume": "23"}, "citationStyles": {"bibtex": "@Article{Card1980TheKM,\n
+      author = {S. Card and T. Moran and A. Newell},\n booktitle = {CACM},\n journal
+      = {Commun. ACM},\n pages = {396-410},\n title = {The keystroke-level model for
+      user performance time with interactive systems},\n volume = {23},\n year = {1980}\n}\n"},
+      "authors": [{"authorId": "1720492", "name": "S. Card"}, {"authorId": "32485293",
+      "name": "T. Moran"}, {"authorId": "48603437", "name": "A. Newell"}]}, {"paperId":
+      "a3319cc89ae585483a570d786d0406a09c3f2d46", "externalIds": {"MAG": "1991129227",
+      "DOI": "10.1177/002199837601000101", "CorpusId": 51321995}, "corpusId": 51321995,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a3319cc89ae585483a570d786d0406a09c3f2d46",
       "title": "Moisture Absorption and Desorption of Composite Materials", "abstract":
       "Expressions are presented for the moisture distribution and the mois ture content
       as a function of time of one dimensional homogeneous and composite materials
@@ -1942,16 +2118,20 @@ interactions:
       the moisture absorption and desorption characteristics of such com posites.
       Extension of the results to materials exposed to time varying envi ronmental
       conditions is indicated.", "venue": "", "year": 1976, "referenceCount": 5, "citationCount":
-      1184, "influentialCitationCount": 61, "isOpenAccess": true, "openAccessPdf":
+      1188, "influentialCitationCount": 61, "isOpenAccess": true, "openAccessPdf":
       {"url": "http://deepblue.lib.umich.edu/bitstream/2027.42/67521/2/10.1177_002199837601000101.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Materials Science"], "s2FieldsOfStudy":
       [{"category": "Materials Science", "source": "external"}, {"category": "Materials
       Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1976-01-01", "journal": {"name": "Journal of Composite Materials",
-      "pages": "2 - 20", "volume": "10"}, "authors": [{"authorId": "103089376", "name":
-      "C. Shen"}, {"authorId": "49215868", "name": "G. Springer"}]}, {"paperId": "25eb9401215b388c740f5521519bc8220cdef3ff",
-      "externalIds": {"MAG": "2103610162", "DOI": "10.1177/027836498400300303", "CorpusId":
-      122945038}, "corpusId": 122945038, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/25eb9401215b388c740f5521519bc8220cdef3ff",
+      "pages": "2 - 20", "volume": "10"}, "citationStyles": {"bibtex": "@Article{Shen1976MoistureAA,\n
+      author = {C. Shen and G. Springer},\n journal = {Journal of Composite Materials},\n
+      pages = {2 - 20},\n title = {Moisture Absorption and Desorption of Composite
+      Materials},\n volume = {10},\n year = {1976}\n}\n"}, "authors": [{"authorId":
+      "103089376", "name": "C. Shen"}, {"authorId": "49215868", "name": "G. Springer"}]},
+      {"paperId": "25eb9401215b388c740f5521519bc8220cdef3ff", "externalIds": {"MAG":
+      "2103610162", "DOI": "10.1177/027836498400300303", "CorpusId": 122945038}, "corpusId":
+      122945038, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/25eb9401215b388c740f5521519bc8220cdef3ff",
       "title": "Initial Experiments on the End-Point Control of a Flexible One-Link
       Robot", "abstract": "It has been known for some time (Gevarter 1970) that if
       a flexible structure is controlled by locating every sensor exactly at the actuator
@@ -1996,11 +2176,15 @@ interactions:
       "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
       "Engineering", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
       "publicationDate": "1984-09-01", "journal": {"name": "The International Journal
-      of Robotics Research", "pages": "62 - 75", "volume": "3"}, "authors": [{"authorId":
-      "40260947", "name": "R. Cannon"}, {"authorId": "145658985", "name": "E. Schmitz"}]},
-      {"paperId": "ede206752591c70dcf4d3b90d84814e5932260de", "externalIds": {"MAG":
-      "1993721703", "DOI": "10.1146/ANNUREV.PS.39.020188.002355", "CorpusId": 317589},
-      "corpusId": 317589, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ede206752591c70dcf4d3b90d84814e5932260de",
+      of Robotics Research", "pages": "62 - 75", "volume": "3"}, "citationStyles":
+      {"bibtex": "@Article{Cannon1984InitialEO,\n author = {R. Cannon and E. Schmitz},\n
+      journal = {The International Journal of Robotics Research},\n pages = {62 -
+      75},\n title = {Initial Experiments on the End-Point Control of a Flexible One-Link
+      Robot},\n volume = {3},\n year = {1984}\n}\n"}, "authors": [{"authorId": "40260947",
+      "name": "R. Cannon"}, {"authorId": "145658985", "name": "E. Schmitz"}]}, {"paperId":
+      "ede206752591c70dcf4d3b90d84814e5932260de", "externalIds": {"MAG": "1993721703",
+      "DOI": "10.1146/ANNUREV.PS.39.020188.002355", "CorpusId": 317589}, "corpusId":
+      317589, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ede206752591c70dcf4d3b90d84814e5932260de",
       "title": "Measures of Memory", "abstract": "ionist Positions Abstractionist
       positions view implicit memory as reflecting modification of the state of abstract
       lexical, semantic, or procedural knowledge structures; byionist positions view
@@ -2103,15 +2287,19 @@ interactions:
       for episodes are assumed to result from differences in information provided
       by test cues, and possibly accompanying differences in retrieval processes (see
       Whittlesea 1 987 for a similar position).", "venue": "", "year": 1988, "referenceCount":
-      254, "citationCount": 1029, "influentialCitationCount": 21, "isOpenAccess":
+      262, "citationCount": 1030, "influentialCitationCount": 22, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
       [{"category": "Psychology", "source": "external"}, {"category": "Psychology",
       "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
       null, "journal": {"name": "Annual Review of Psychology", "pages": "475-543",
-      "volume": "39"}, "authors": [{"authorId": "1456286123", "name": "A. Richardson-Klavehn"},
-      {"authorId": "35641166", "name": "R. Bjork"}]}, {"paperId": "d055636ebdca03646818e270c08dff92ce2fb501",
-      "externalIds": {"MAG": "2288879222", "DOI": "10.2307/1534637", "CorpusId": 147071249},
-      "corpusId": 147071249, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d055636ebdca03646818e270c08dff92ce2fb501",
+      "volume": "39"}, "citationStyles": {"bibtex": "@Article{Richardson-Klavehn1988MeasuresOM,\n
+      author = {A. Richardson-Klavehn and R. Bjork},\n journal = {Annual Review of
+      Psychology},\n pages = {475-543},\n title = {Measures of Memory},\n volume =
+      {39},\n year = {1988}\n}\n"}, "authors": [{"authorId": "1456286123", "name":
+      "A. Richardson-Klavehn"}, {"authorId": "35641166", "name": "R. Bjork"}]}, {"paperId":
+      "d055636ebdca03646818e270c08dff92ce2fb501", "externalIds": {"MAG": "2288879222",
+      "DOI": "10.2307/1534637", "CorpusId": 147071249}, "corpusId": 147071249, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/d055636ebdca03646818e270c08dff92ce2fb501",
       "title": "Laumann (E.O), Gagnon (J.H), Michael (R.T), Michaels (S) \u2014 The
       Social Organization of Sexuality. Sexual Practices in the United States; Michael
       (R.), Gagnon (J.), Laumann (E.), Kolata (G.) \u2014 Sex in America. A Definitive
@@ -2128,13 +2316,18 @@ interactions:
       are they in their detail. Drawing on hen own initial reaction to her son s homosexuality,
       Dew confronts the homophobia imbued in our culture and the toll it takes on
       gay children who struggle to keep their stigmatized identity a secret to avoid",
-      "venue": "", "year": 1997, "referenceCount": 0, "citationCount": 1093, "influentialCitationCount":
+      "venue": "", "year": 1997, "referenceCount": 0, "citationCount": 1092, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Sociology"],
       "s2FieldsOfStudy": [{"category": "Sociology", "source": "external"}, {"category":
       "Psychology", "source": "s2-fos-model"}, {"category": "Sociology", "source":
       "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate": "1997-11-01",
-      "journal": {"name": "Population", "pages": "1548-1551", "volume": "52"}, "authors":
-      [{"authorId": "5236175", "name": "A. Giami"}]}, {"paperId": "977d9f26ba57022f19784d12626857de0befde12",
+      "journal": {"name": "Population", "pages": "1548-1551", "volume": "52"}, "citationStyles":
+      {"bibtex": "@Article{Giami1997LaumannG,\n author = {A. Giami},\n journal = {Population},\n
+      pages = {1548-1551},\n title = {Laumann (E.O), Gagnon (J.H), Michael (R.T),
+      Michaels (S) \u2014 The Social Organization of Sexuality. Sexual Practices in
+      the United States; Michael (R.), Gagnon (J.), Laumann (E.), Kolata (G.) \u2014
+      Sex in America. A Definitive Survey},\n volume = {52},\n year = {1997}\n}\n"},
+      "authors": [{"authorId": "5236175", "name": "A. Giami"}]}, {"paperId": "977d9f26ba57022f19784d12626857de0befde12",
       "externalIds": {"MAG": "2275311108", "DOI": "10.1093/JNCI/25.1.85", "CorpusId":
       874027, "PubMed": "14427847"}, "corpusId": 874027, "publicationVenue": {"id":
       "917421ed-0c48-4dc3-897b-a8caae75761d", "name": "Journal of the National Cancer
@@ -2154,14 +2347,19 @@ interactions:
       that in SOUle leukeUlic hUUlan leukocytes sUlall but definite ChrOlllO sOIllal
       changes are demonstrahle.-J. Nat. Cancer Inst. 25: 85-109, 1960.", "venue":
       "Journal of the National Cancer Institute", "year": 1960, "referenceCount":
-      20, "citationCount": 1065, "influentialCitationCount": 30, "isOpenAccess": false,
+      20, "citationCount": 1066, "influentialCitationCount": 31, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Biology", "Medicine"], "s2FieldsOfStudy":
       [{"category": "Biology", "source": "external"}, {"category": "Medicine", "source":
       "external"}, {"category": "Biology", "source": "s2-fos-model"}], "publicationTypes":
       ["JournalArticle"], "publicationDate": "1960-07-01", "journal": {"name": "Journal
       of the National Cancer Institute", "pages": "\n          85-109\n        ",
-      "volume": "25"}, "authors": [{"authorId": "6809070", "name": "P. Nowell"}, {"authorId":
-      "35365786", "name": "D. Hungerford"}]}]}
+      "volume": "25"}, "citationStyles": {"bibtex": "@Article{Nowell1960ChromosomeSO,\n
+      author = {P. Nowell and D. Hungerford},\n booktitle = {Journal of the National
+      Cancer Institute},\n journal = {Journal of the National Cancer Institute},\n
+      pages = {\n          85-109\n        },\n title = {Chromosome studies on normal
+      and leukemic human leukocytes.},\n volume = {25},\n year = {1960}\n}\n"}, "authors":
+      [{"authorId": "6809070", "name": "P. Nowell"}, {"authorId": "35365786", "name":
+      "D. Hungerford"}]}]}
 
       '
     headers:
@@ -2170,31 +2368,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '177003'
+      - '193557'
       Content-Type:
       - application/json
       Date:
-      - Sun, 10 Dec 2023 02:00:34 GMT
+      - Wed, 27 Dec 2023 21:47:56 GMT
       Via:
-      - 1.1 bfa23c0b5661b8c601e9ec8121a9d6ca.cloudfront.net (CloudFront)
+      - 1.1 10da99b874e9eb5d1ce7c204fcad8192.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - C7tDa100doTuqyX-NZCQpmHcWSR4HkgOpzaxKvsA5OBJsYFECRfB8g==
+      - lQBO3jG3HzKyafcnmjeLF5bMVxUCqW0I3T2OZLJoJD5GXhYj4QwHYw==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - PtFEAGvePHcEBWg=
+      - Qn09-EYIvHcEE-w=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '177003'
+      - '193557'
       x-amzn-Remapped-Date:
-      - Sun, 10 Dec 2023 02:00:34 GMT
+      - Wed, 27 Dec 2023 21:47:56 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - f46f3c76-d631-4a68-90c6-388e9fee098a
+      - 480216db-7fac-4400-bf44-5959d82544fa
     http_version: HTTP/1.1
     status_code: 200
 version: 1

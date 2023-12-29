@@ -11,11 +11,11 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.25.1
+      - python-httpx/0.25.2
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=turing&year=1936-1937&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=turing&year=1936-1937&fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
-    content: '{"total": 51, "offset": 0, "data": [{"paperId": "ab7790485f26ce65f9d83dd700c43e49058bdd2b",
+    content: '{"total": 46, "offset": 0, "data": [{"paperId": "ab7790485f26ce65f9d83dd700c43e49058bdd2b",
       "externalIds": {"MAG": "2126160338", "DBLP": "journals/x/Turing37", "DOI": "10.1112/PLMS/S2-42.1.230",
       "CorpusId": 73712}, "corpusId": 73712, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/ab7790485f26ce65f9d83dd700c43e49058bdd2b",
       "title": "On computable numbers, with an application to the Entscheidungsproblem",
@@ -26,26 +26,34 @@ interactions:
       Detailed description of the universal machine. 8. Application of the diagonal
       process. Pagina 1 di 38 On computable numbers, with an application to the Entscheidungsproblem
       A. M. ...", "venue": "Proc. London Math. Soc.", "year": 1937, "referenceCount":
-      14, "citationCount": 8066, "influentialCitationCount": 467, "isOpenAccess":
+      13, "citationCount": 8240, "influentialCitationCount": 491, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Mathematics", "Computer Science"],
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       null, "journal": {"name": "Proc. London Math. Soc.", "pages": "230-265", "volume":
-      "s2-42"}, "authors": [{"authorId": "2079681794", "name": "A. Turing"}]}, {"paperId":
-      "e660d10c4ea944da68ae3bc1453ff4660a404174", "externalIds": {"MAG": "1522321599",
-      "CorpusId": 117790504}, "corpusId": 117790504, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/e660d10c4ea944da68ae3bc1453ff4660a404174",
+      "s2-42"}, "citationStyles": {"bibtex": "@Article{Turing1937OnCN,\n author =
+      {A. Turing},\n booktitle = {Proc. London Math. Soc.},\n journal = {Proc. London
+      Math. Soc.},\n pages = {230-265},\n title = {On computable numbers, with an
+      application to the Entscheidungsproblem},\n volume = {s2-42},\n year = {1937}\n}\n"},
+      "authors": [{"authorId": "2079681794", "name": "A. Turing"}]}, {"paperId": "e660d10c4ea944da68ae3bc1453ff4660a404174",
+      "externalIds": {"MAG": "1522321599", "CorpusId": 117790504}, "corpusId": 117790504,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/e660d10c4ea944da68ae3bc1453ff4660a404174",
       "title": "Review: A. M. Turing, On Computable Numbers, with an Application to
       the Entscheidungsproblem", "abstract": null, "venue": "", "year": 1937, "referenceCount":
-      0, "citationCount": 335, "influentialCitationCount": 15, "isOpenAccess": false,
+      0, "citationCount": 324, "influentialCitationCount": 15, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-      [{"category": "Mathematics", "source": "external"}, {"category": "Computer Science",
-      "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-      "1937-03-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "42-43",
-      "volume": "2"}, "authors": [{"authorId": "144144981", "name": "A. Church"}]},
-      {"paperId": "0f34fcab599aabf0ab46d91c21703a9a86b5f048", "externalIds": {"CorpusId":
-      261749144}, "corpusId": 261749144, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0f34fcab599aabf0ab46d91c21703a9a86b5f048",
+      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      "source": "s2-fos-model"}, {"category": "Philosophy", "source": "s2-fos-model"}],
+      "publicationTypes": ["Review"], "publicationDate": "1937-03-01", "journal":
+      {"name": "Journal of Symbolic Logic", "pages": "42-43", "volume": "2"}, "citationStyles":
+      {"bibtex": "@Article{Church1937ReviewAM,\n author = {A. Church},\n journal =
+      {Journal of Symbolic Logic},\n pages = {42-43},\n title = {Review: A. M. Turing,
+      On Computable Numbers, with an Application to the Entscheidungsproblem},\n volume
+      = {2},\n year = {1937}\n}\n"}, "authors": [{"authorId": "144144981", "name":
+      "A. Church"}]}, {"paperId": "0f34fcab599aabf0ab46d91c21703a9a86b5f048", "externalIds":
+      {"CorpusId": 261749144}, "corpusId": 261749144, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/0f34fcab599aabf0ab46d91c21703a9a86b5f048",
       "title": "On computable numbers with an application to the Entscheidungsproblem
       ( Paper read 12 November 1936 ) Universal Turing Machine", "abstract": "Cryptographers
       agree that homogeneous archetypes are an interesting new topic in the field
@@ -54,18 +62,22 @@ interactions:
       principles of networking. DIOTA, our new heuristic for virtual machines, is
       the solution to all of these challenges. Such a claim might seem perverse but
       has ample historical precedence.", "venue": "", "year": 1936, "referenceCount":
-      47, "citationCount": 95, "influentialCitationCount": 0, "isOpenAccess": false,
+      47, "citationCount": 96, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-      "Computer Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": null, "authors": [{"authorId": "2087393471", "name": "Universal
-      Turing"}, {"authorId": "2087368940", "name": "Machine R I P"}]}, {"paperId":
-      "d9b72578292a563fc5c482206ce6d8955b6bcc1c", "externalIds": {"MAG": "2317985617",
-      "DOI": "10.1017/S002248120003958X", "CorpusId": 124265230}, "corpusId": 124265230,
-      "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6", "name": "Journal
-      of Symbolic Logic (JSL)", "type": "journal", "alternate_names": ["J Symb Log",
-      "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812", "url":
-      "https://www.cambridge.org/core/journals/journal-of-symbolic-logic", "alternate_urls":
-      ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
+      "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
+      null, "citationStyles": {"bibtex": "@Inproceedings{Turing1936OnCN,\n author
+      = {Universal Turing and Machine R I P},\n title = {On computable numbers with
+      an application to the Entscheidungsproblem ( Paper read 12 November 1936 ) Universal
+      Turing Machine},\n year = {1936}\n}\n"}, "authors": [{"authorId": "2087393471",
+      "name": "Universal Turing"}, {"authorId": "2087368940", "name": "Machine R I
+      P"}]}, {"paperId": "d9b72578292a563fc5c482206ce6d8955b6bcc1c", "externalIds":
+      {"MAG": "2317985617", "DOI": "10.1017/S002248120003958X", "CorpusId": 124265230},
+      "corpusId": 124265230, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
+      "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
+      ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
+      "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
+      "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
       "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/d9b72578292a563fc5c482206ce6d8955b6bcc1c",
       "title": "A. M. Turing. On computable numbers, with an application to the Entscheidungs
       problcm. Proceedings of the London Mathematical Society , 2 s. vol. 42 (1936\u20131937),
@@ -98,15 +110,20 @@ interactions:
       Logic (JSL)", "year": 1937, "referenceCount": 0, "citationCount": 56, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science"], "s2FieldsOfStudy": [{"category": "Computer Science", "source": "external"},
-      {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": "1937-03-01", "journal": {"name": "Journal of Symbolic Logic",
-      "pages": "42 - 43", "volume": "2"}, "authors": [{"authorId": "144144981", "name":
-      "A. Church"}]}, {"paperId": "ee8c779e7823814a5f1746d883ca77b26671b617", "externalIds":
-      {"DBLP": "journals/jsyml/Turing37", "MAG": "1485161910", "DOI": "10.2307/2268280",
-      "CorpusId": 2317046}, "corpusId": 2317046, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
-      "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
-      ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
-      "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
+      {"category": "Mathematics", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "1937-03-01", "journal": {"name": "Journal of Symbolic
+      Logic", "pages": "42 - 43", "volume": "2"}, "citationStyles": {"bibtex": "@Article{Church1937AMT,\n
+      author = {A. Church},\n booktitle = {Journal of Symbolic Logic (JSL)},\n journal
+      = {Journal of Symbolic Logic},\n pages = {42 - 43},\n title = {A. M. Turing.
+      On computable numbers, with an application to the Entscheidungs problcm. Proceedings
+      of the London Mathematical Society , 2 s. vol. 42 (1936\u20131937), pp. 230\u2013265.},\n
+      volume = {2},\n year = {1937}\n}\n"}, "authors": [{"authorId": "144144981",
+      "name": "A. Church"}]}, {"paperId": "ee8c779e7823814a5f1746d883ca77b26671b617",
+      "externalIds": {"DBLP": "journals/jsyml/Turing37", "MAG": "1485161910", "DOI":
+      "10.2307/2268280", "CorpusId": 2317046}, "corpusId": 2317046, "publicationVenue":
+      {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6", "name": "Journal of Symbolic
+      Logic (JSL)", "type": "journal", "alternate_names": ["J Symb Log", "Journal
+      of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812", "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
       "alternate_urls": ["http://www.aslonline.org/journals-journal.html", "http://journals.cambridge.org/action/displayJournal?jid=JSL",
       "https://www.jstor.org/journal/jsymboliclogic"]}, "url": "https://www.semanticscholar.org/paper/ee8c779e7823814a5f1746d883ca77b26671b617",
       "title": "Computability and \u03bb-definability", "abstract": "Several definitions
@@ -130,41 +147,18 @@ interactions:
       and p. 254. The proof that computability implies recursiveness requires no more
       knowledge of computable functions than the ideas underlying the definition:
       the technical details are recalled in \u00a75.", "venue": "Journal of Symbolic
-      Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 381, "influentialCitationCount":
-      32, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
+      Logic (JSL)", "year": 1937, "referenceCount": 6, "citationCount": 386, "influentialCitationCount":
+      31, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Computer
       Science", "Mathematics"], "s2FieldsOfStudy": [{"category": "Computer Science",
       "source": "external"}, {"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "s2-fos-model"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "1937-12-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "153
-      - 163", "volume": "2"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-      {"paperId": "0f881a288cda3e142aa702bec81a8120e753c118", "externalIds": {"DOI":
-      "10.1136/bjo.2004.bjdec04ftl", "CorpusId": 27901856, "PubMed": "5335454"}, "corpusId":
-      27901856, "publicationVenue": {"id": "f5279917-ce2b-489d-8c2f-8a8f80a35559",
-      "name": "British Journal of Ophthalmology", "type": "journal", "alternate_names":
-      ["Br J Ophthalmol"], "issn": "1791-1737", "alternate_issns": ["0007-1161"],
-      "url": "https://bjo.bmj.com/", "alternate_urls": ["http://bjo.bmj.com/", "http://bjo.bmjjournals.com/"]},
-      "url": "https://www.semanticscholar.org/paper/0f881a288cda3e142aa702bec81a8120e753c118",
-      "title": "From the Library", "abstract": "Remembrance of things past \u201cMarcel
-      and Robert were impatient to leave the train when it stopped briefly at the
-      small station. The Parisians usually walked to the Amiots\u2019 house from the
-      station, carrying the blankets that kept them warm on the train, along with
-      their parcels and suitcases down the rue du Chemin de fer, lined on both sides
-      with linden trees. Turing left at the rue de l\u2019Oiseau flesch\u00e9, they
-      passed in front of the ancient hostelry of the same name. Marcel always noticed
-      the optician\u2019s sign consisting of a large pair of spectacles, one lens
-      blue, the other orange, unaware that one day he would transport these glasses
-      hanging high above the optician\u2019s shop into the fictional Combray, where
-      they became a symbol of his book and his conception of the novel.\u201d (Carter
-      WC. Marcel Proust. New Haven: Yale University Press, 2000:26.)", "venue": "British
-      Journal of Ophthalmology", "year": 1936, "referenceCount": 0, "citationCount":
-      31, "influentialCitationCount": 3, "isOpenAccess": true, "openAccessPdf": {"url":
-      "https://bjo.bmj.com/content/bjophthalmol/88/12/1608.full.pdf", "status": "BRONZE"},
-      "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
-      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle"], "publicationDate": "1936-05-01", "journal": {"name": "British
-      Journal of Ophthalmology", "pages": "1608 - 1608", "volume": "88"}, "authors":
-      [{"authorId": "144111966", "name": "E. Spencer"}]}, {"paperId": "b300783b3f3bd283ab1cf86b7a51f63469db380f",
+      - 163", "volume": "2"}, "citationStyles": {"bibtex": "@Article{Turing1937ComputabilityA\u039b,\n
+      author = {A. Turing},\n booktitle = {Journal of Symbolic Logic (JSL)},\n journal
+      = {Journal of Symbolic Logic},\n pages = {153 - 163},\n title = {Computability
+      and \u03bb-definability},\n volume = {2},\n year = {1937}\n}\n"}, "authors":
+      [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "b300783b3f3bd283ab1cf86b7a51f63469db380f",
       "externalIds": {"MAG": "2798583139", "DOI": "10.2307/2268281", "CorpusId": 11473119},
       "corpusId": 11473119, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
       "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
@@ -195,22 +189,27 @@ interactions:
       "s2FieldsOfStudy": [{"category": "Physics", "source": "external"}, {"category":
       "Mathematics", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "1937-12-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "164
-      - 164", "volume": "2"}, "authors": [{"authorId": "2262347", "name": "A. Turing"}]},
-      {"paperId": "467e4dcb1bb4ecd2574f26ccb7b004e034707475", "externalIds": {"DOI":
-      "10.1038/137466b0", "CorpusId": 4084850}, "corpusId": 4084850, "publicationVenue":
-      {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a", "name": "Nature", "type": "journal",
-      "issn": "0028-0836", "url": "https://www.nature.com/", "alternate_urls": ["http://www.nature.com/nature/",
-      "https://www.nature.com/nature/", "http://www.nature.com/nature/archive/index.html"]},
-      "url": "https://www.semanticscholar.org/paper/467e4dcb1bb4ecd2574f26ccb7b004e034707475",
+      - 164", "volume": "2"}, "citationStyles": {"bibtex": "@Article{Turing1937The\u00deI,\n
+      author = {A. Turing},\n booktitle = {Journal of Symbolic Logic (JSL)},\n journal
+      = {Journal of Symbolic Logic},\n pages = {164 - 164},\n title = {The \u00fe-function
+      in \u03bb-K-conversion},\n volume = {2},\n year = {1937}\n}\n"}, "authors":
+      [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "467e4dcb1bb4ecd2574f26ccb7b004e034707475",
+      "externalIds": {"DOI": "10.1038/137466b0", "CorpusId": 4084850}, "corpusId":
+      4084850, "publicationVenue": {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a",
+      "name": "Nature", "type": "journal", "issn": "0028-0836", "url": "https://www.nature.com/",
+      "alternate_urls": ["http://www.nature.com/nature/", "https://www.nature.com/nature/",
+      "http://www.nature.com/nature/archive/index.html"]}, "url": "https://www.semanticscholar.org/paper/467e4dcb1bb4ecd2574f26ccb7b004e034707475",
       "title": "Educational Topics and Events", "abstract": null, "venue": "Nature",
       "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.nature.com/articles/137466b0.pdf",
       "status": "BRONZE"}, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
       "Education", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "Nature", "pages": "466-467", "volume": "137"}, "authors":
-      []}, {"paperId": "27cdf19743eafc5432a130c538f4f4b2ef4ccab4", "externalIds":
-      {"MAG": "2111935378", "DOI": "10.1017/S0022481200039591", "CorpusId": 62198379},
-      "corpusId": 62198379, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
+      null, "journal": {"name": "Nature", "pages": "466-467", "volume": "137"}, "citationStyles":
+      {"bibtex": "@Article{None,\n booktitle = {Nature},\n journal = {Nature},\n pages
+      = {466-467},\n title = {Educational Topics and Events},\n volume = {137},\n
+      year = {1936}\n}\n"}, "authors": []}, {"paperId": "27cdf19743eafc5432a130c538f4f4b2ef4ccab4",
+      "externalIds": {"MAG": "2111935378", "DOI": "10.1017/S0022481200039591", "CorpusId":
+      62198379}, "corpusId": 62198379, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
       "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
       ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
       "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
@@ -251,10 +250,14 @@ interactions:
       [{"category": "Computer Science", "source": "external"}, {"category": "Mathematics",
       "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
       "1937-03-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "43
-      - 43", "volume": "2"}, "authors": [{"authorId": "144144981", "name": "A. Church"}]},
-      {"paperId": "eba9ff4b70c6aa0dad251d16b512472e79aebb4c", "externalIds": {"MAG":
-      "2323420393", "DOI": "10.1017/S0022481200039608", "CorpusId": 123894334}, "corpusId":
-      123894334, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
+      - 43", "volume": "2"}, "citationStyles": {"bibtex": "@Article{Church1937PostEL,\n
+      author = {A. Church},\n booktitle = {Journal of Symbolic Logic (JSL)},\n journal
+      = {Journal of Symbolic Logic},\n pages = {43 - 43},\n title = {Post Emil L..
+      Finite combinatory processes\u2014formulation 1. The journal of symbolic logic,
+      vol. 1 (1936), pp. 103\u2013105.},\n volume = {2},\n year = {1937}\n}\n"}, "authors":
+      [{"authorId": "144144981", "name": "A. Church"}]}, {"paperId": "eba9ff4b70c6aa0dad251d16b512472e79aebb4c",
+      "externalIds": {"MAG": "2323420393", "DOI": "10.1017/S0022481200039608", "CorpusId":
+      123894334}, "corpusId": 123894334, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
       "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
       ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
       "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
@@ -292,13 +295,17 @@ interactions:
       "venue": "Journal of Symbolic Logic (JSL)", "year": 1937, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy":
-      [{"category": "Mathematics", "source": "external"}, {"category": "Mathematics",
+      [{"category": "Mathematics", "source": "external"}, {"category": "Philosophy",
       "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
       "1937-03-01", "journal": {"name": "Journal of Symbolic Logic", "pages": "43
-      - 44", "volume": "2"}, "authors": [{"authorId": "144144981", "name": "A. Church"}]},
-      {"paperId": "891151133781d3e78f19b882015746bafd9bc935", "externalIds": {"MAG":
-      "2799201656", "DBLP": "journals/jsyml/Turing37a", "CorpusId": 33223540}, "corpusId":
-      33223540, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
+      - 44", "volume": "2"}, "citationStyles": {"bibtex": "@Article{Church1937HBS,\n
+      author = {A. Church},\n booktitle = {Journal of Symbolic Logic (JSL)},\n journal
+      = {Journal of Symbolic Logic},\n pages = {43 - 44},\n title = {H. B. Smith.
+      The algebra of propositions. Philosophy of science , vol. 3 (1936), pp. 551\u2013578.},\n
+      volume = {2},\n year = {1937}\n}\n"}, "authors": [{"authorId": "144144981",
+      "name": "A. Church"}]}, {"paperId": "891151133781d3e78f19b882015746bafd9bc935",
+      "externalIds": {"MAG": "2799201656", "DBLP": "journals/jsyml/Turing37a", "CorpusId":
+      33223540}, "corpusId": 33223540, "publicationVenue": {"id": "63b08ff1-8bea-4d94-af61-35bf9dbaeef6",
       "name": "Journal of Symbolic Logic (JSL)", "type": "journal", "alternate_names":
       ["J Symb Log", "Journal of Symbolic Logic", "J Symb Log (JSL"], "issn": "0022-4812",
       "url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic",
@@ -321,21 +328,27 @@ interactions:
       "s2FieldsOfStudy": [{"category": "Mathematics", "source": "external"}, {"category":
       "Computer Science", "source": "external"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      null, "journal": {"name": "J. Symb. Log.", "pages": "164", "volume": "2"}, "authors":
-      [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "6f9999c25c08d26f2034dc2c417d887bb610d265",
+      null, "journal": {"name": "J. Symb. Log.", "pages": "164", "volume": "2"}, "citationStyles":
+      {"bibtex": "@Article{Turing1937ThePI,\n author = {A. Turing},\n booktitle =
+      {Journal of Symbolic Logic (JSL)},\n journal = {J. Symb. Log.},\n pages = {164},\n
+      title = {The p-Function in \u03bb-K-Conversion},\n volume = {2},\n year = {1937}\n}\n"},
+      "authors": [{"authorId": "2262347", "name": "A. Turing"}]}, {"paperId": "6f9999c25c08d26f2034dc2c417d887bb610d265",
       "externalIds": {"MAG": "2051307148", "DOI": "10.1038/139077A0", "CorpusId":
       4111181}, "corpusId": 4111181, "publicationVenue": {"id": "6c24a0a0-b07d-4d7b-a19b-fd09a3ed453a",
       "name": "Nature", "type": "journal", "issn": "0028-0836", "url": "https://www.nature.com/",
       "alternate_urls": ["http://www.nature.com/nature/", "https://www.nature.com/nature/",
       "http://www.nature.com/nature/archive/index.html"]}, "url": "https://www.semanticscholar.org/paper/6f9999c25c08d26f2034dc2c417d887bb610d265",
       "title": "The Bowl of Integers and the Hexlet", "abstract": null, "venue": "Nature",
-      "year": 1937, "referenceCount": 0, "citationCount": 44, "influentialCitationCount":
+      "year": 1937, "referenceCount": 0, "citationCount": 45, "influentialCitationCount":
       4, "isOpenAccess": true, "openAccessPdf": {"url": "https://www.nature.com/articles/139077a0.pdf",
       "status": "BRONZE"}, "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category":
       "Mathematics", "source": "external"}, {"category": "Mathematics", "source":
       "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1937-01-09",
-      "journal": {"name": "Nature", "pages": "77-79", "volume": "139"}, "authors":
-      [{"authorId": "48311975", "name": "F. Soddy"}]}, {"paperId": "7660494f35aecd19fbeff4cb7193f1a5569d3fb2",
+      "journal": {"name": "Nature", "pages": "77-79", "volume": "139"}, "citationStyles":
+      {"bibtex": "@Article{Soddy1937TheBO,\n author = {F. Soddy},\n booktitle = {Nature},\n
+      journal = {Nature},\n pages = {77-79},\n title = {The Bowl of Integers and the
+      Hexlet},\n volume = {139},\n year = {1937}\n}\n"}, "authors": [{"authorId":
+      "48311975", "name": "F. Soddy"}]}, {"paperId": "7660494f35aecd19fbeff4cb7193f1a5569d3fb2",
       "externalIds": {"MAG": "2013757505", "DOI": "10.1177/000271623618800104", "CorpusId":
       143934704}, "corpusId": 143934704, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7660494f35aecd19fbeff4cb7193f1a5569d3fb2",
       "title": "Class Differences in Fertility", "abstract": "ture. True, in every
@@ -351,15 +364,18 @@ interactions:
       from the rural and laboring classes which, in a real sense, may be thought of
       as the nation\u2019s population reservoirs. Differential fertility on this scale
       appears to be modern.", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
-      28, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      29, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category": "Sociology",
-      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
-      ["JournalArticle"], "publicationDate": "1936-11-01", "journal": {"name": "The
-      Annals of the American Academy of Political and Social Science", "pages": "26
-      - 36", "volume": "188"}, "authors": [{"authorId": "52444043", "name": "F. Notestein"}]},
-      {"paperId": "3a63d853d7fd9f5a08ab965905b12f6985a3ebf3", "externalIds": {"DOI":
-      "10.1177/000271623719200123", "CorpusId": 220852923}, "corpusId": 220852923,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3a63d853d7fd9f5a08ab965905b12f6985a3ebf3",
+      "source": "external"}, {"category": "Sociology", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1936-11-01", "journal":
+      {"name": "The Annals of the American Academy of Political and Social Science",
+      "pages": "26 - 36", "volume": "188"}, "citationStyles": {"bibtex": "@Article{Notestein1936ClassDI,\n
+      author = {F. Notestein},\n journal = {The Annals of the American Academy of
+      Political and Social Science},\n pages = {26 - 36},\n title = {Class Differences
+      in Fertility},\n volume = {188},\n year = {1936}\n}\n"}, "authors": [{"authorId":
+      "52444043", "name": "F. Notestein"}]}, {"paperId": "3a63d853d7fd9f5a08ab965905b12f6985a3ebf3",
+      "externalIds": {"DOI": "10.1177/000271623719200123", "CorpusId": 220852923},
+      "corpusId": 220852923, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/3a63d853d7fd9f5a08ab965905b12f6985a3ebf3",
       "title": "BEMIS, SAMUEL FLAGG. A Diplomatic History of the United States. Pp.
       xii, 881. New York: Henry Holt & Co., 1936. $4.00", "abstract": "ture on American
       foreign policy. In breadth of scholarship and in accuracy of statement it stands
@@ -373,25 +389,140 @@ interactions:
       that the author has done much in-", "venue": "", "year": 1937, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category":
-      "History", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1937-07-01", "journal": {"name": "The Annals of the American Academy of Political
-      and Social Science", "pages": "211 - 212", "volume": "192"}, "authors": []},
-      {"paperId": "bce73cb84d74dcfe5706a1b572e47cfb295ac535", "externalIds": {"MAG":
-      "2312462060", "DOI": "10.1007/BF01774963", "CorpusId": 31866294}, "corpusId":
-      31866294, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
-      "name": "Klinische Wochenschrift", "alternate_names": ["Klin Wochenschr"], "issn":
-      "0023-2173", "alternate_issns": ["1432-1440"], "url": "https://link.springer.com/journal/109"},
-      "url": "https://www.semanticscholar.org/paper/bce73cb84d74dcfe5706a1b572e47cfb295ac535",
-      "title": "\u00dcber K\u00f6rpereigene Wirkstoffe bei Nervenerregung", "abstract":
-      null, "venue": "Klinische Wochenschrift", "year": 1937, "referenceCount": 19,
-      "citationCount": 3, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
-      null, "fieldsOfStudy": ["Chemistry"], "s2FieldsOfStudy": [{"category": "Chemistry",
-      "source": "external"}], "publicationTypes": null, "publicationDate": "1937-08-01",
-      "journal": {"name": "Klinische Wochenschrift", "pages": "1137-1143", "volume":
-      "16"}, "authors": [{"authorId": "93604567", "name": "H. Staub"}]}, {"paperId":
-      "07854ad206f0361edc5df3d775756630deae1380", "externalIds": {"MAG": "2573975570",
-      "DOI": "10.1051/PARASITE/1936141061", "CorpusId": 89808212}, "corpusId": 89808212,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/07854ad206f0361edc5df3d775756630deae1380",
+      "History", "source": "s2-fos-model"}, {"category": "Political Science", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1937-07-01",
+      "journal": {"name": "The Annals of the American Academy of Political and Social
+      Science", "pages": "211 - 212", "volume": "192"}, "citationStyles": {"bibtex":
+      "@Article{None,\n journal = {The Annals of the American Academy of Political
+      and Social Science},\n pages = {211 - 212},\n title = {BEMIS, SAMUEL FLAGG.
+      A Diplomatic History of the United States. Pp. xii, 881. New York: Henry Holt
+      & Co., 1936. $4.00},\n volume = {192},\n year = {1937}\n}\n"}, "authors": []},
+      {"paperId": "026cd66127a3be9d57d12cafc7ef08269583bc4c", "externalIds": {"CorpusId":
+      6077362, "PubMed": "19970294"}, "corpusId": 6077362, "publicationVenue": {"id":
+      "4dc96079-a390-468e-85c9-da11a3304053", "name": "American Journal of Pathology",
+      "type": "journal", "alternate_names": ["Am J Pathol"], "issn": "0002-9440",
+      "url": "http://www.clinicalkey.com.au/dura/browse/journalIssue/00029440", "alternate_urls":
+      ["http://www.sciencedirect.com/science/journal/00029440", "http://ajp.amjpathol.org/",
+      "https://ajp.amjpathol.org/", "http://www.amjpathol.org/", "http://www.clinicalkey.com/dura/browse/journalIssue/00029440"]},
+      "url": "https://www.semanticscholar.org/paper/026cd66127a3be9d57d12cafc7ef08269583bc4c",
+      "title": "Meningococcus Myocarditis.", "abstract": "beats per minute and the
+      arterial blood pressure iOO 70. The white blood count was 26,0OO. There were
+      8o per cent neutrophilic pol-morphonuclear leukocytes, 8 per cent lymphocytes,
+      and 12 per cent immature leukocytes. A spinal punc- ture was performed and I;
+      cc. of a thick purulent liquid were removed. The cerebrospinal fluid contained
+      I8,jOO cells per cmm. Smears revealed Gram- negative intracellular biscuit shaped
+      diplococci which morphologically showed the characteristics of meningococci.
+      The content of glucose of three successive specimens of cerebrospinal fluid
+      was o, IO and i8 mg. per ioo cc. respectively. The patient became markedly cyanotic
+      and died 3o hours after admission. The clinical diagnosis was meningococcus
+      meningitis. The possibility of the presence of a meningococcus endocarditis
+      was also considered.", "venue": "American Journal of Pathology", "year": 1936,
+      "referenceCount": 24, "citationCount": 6, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy":
+      [{"category": "Medicine", "source": "external"}, {"category": "Medicine", "source":
+      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
+      null, "journal": {"name": "The American journal of pathology", "pages": "\n          677-688.1\n        ",
+      "volume": "12 5"}, "citationStyles": {"bibtex": "@Article{Saphir1936MeningococcusM,\n
+      author = {O. Saphir},\n booktitle = {American Journal of Pathology},\n journal
+      = {The American journal of pathology},\n pages = {\n          677-688.1\n        },\n
+      title = {Meningococcus Myocarditis.},\n volume = {12 5},\n year = {1936}\n}\n"},
+      "authors": [{"authorId": "15024119", "name": "O. Saphir"}]}, {"paperId": "4602c5460fe959e1360a590c7945db34e2cd673e",
+      "externalIds": {"MAG": "2323226389", "DOI": "10.1080/00275514.1936.12017147",
+      "CorpusId": 87536643}, "corpusId": 87536643, "publicationVenue": null, "url":
+      "https://www.semanticscholar.org/paper/4602c5460fe959e1360a590c7945db34e2cd673e",
+      "title": "The use of Ultra-Violet Irradiated Culture Media for Securing Bacteria-Free
+      Cultures of Saprolegnia", "abstract": "In almost all mycological work it is
+      essential to secure and to maintain pure cultures of the fungi being investigated.
+      Yet in many cases, cultures of the fungi, free from bacteria, are extremely
+      difficult to obtain. This preliminary step in an investigation is often tedious
+      and disproportionately time-consuming and hence the major objective of one''s
+      research is often long delayed. The Saprolegniaceae, as a group, are especially
+      troublesome to isolate. This difficulty arises because of the following conditions:
+      these fungi occur in nature accompanied by large numbers of bacteria; usually
+      the fungi themselves are slower in growing than the bacteria; the fungi, when
+      grown on agar, are surrounded by a liquid film, by means of which the bacteria
+      readily accompany the hyphae; the fungi do not grow satisfactorily in the presence
+      of the commonly used bacterial inhibitors; the fungi have temperature and water
+      requirements similar to those of bacteria. Each of these conditions adds to
+      the difficulty of isolation by the common method of repeated transfer, since
+      the hyphae invariably are ac? companied by adhering bacteria. The methods which
+      have been employed in obtaining pure cul? tures of the Saprolegniaceae were
+      ably reviewed by Kauffman (4). These methods as well as those more recently
+      developed not only for the Saprolegniaceae but also for other fungi, may be
+      roughly classified as either mechanical or chemical.", "venue": "", "year":
+      1936, "referenceCount": 6, "citationCount": 7, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Biology"],
+      "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}, {"category":
+      "Biology", "source": "s2-fos-model"}, {"category": "Environmental Science",
+      "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      "1936-07-01", "journal": {"name": "Mycologia", "pages": "324-329", "volume":
+      "28"}, "citationStyles": {"bibtex": "@Article{Blank1936TheUO,\n author = {I.
+      H. Blank and W. Tiffney},\n journal = {Mycologia},\n pages = {324-329},\n title
+      = {The use of Ultra-Violet Irradiated Culture Media for Securing Bacteria-Free
+      Cultures of Saprolegnia},\n volume = {28},\n year = {1936}\n}\n"}, "authors":
+      [{"authorId": "37759254", "name": "I. H. Blank"}, {"authorId": "21627126", "name":
+      "W. Tiffney"}]}, {"paperId": "b9a0a9c70f169ce584e2c5eea22bb085f217144b", "externalIds":
+      {"MAG": "2031257947", "DOI": "10.1007/BF02879185", "CorpusId": 39457778}, "corpusId":
+      39457778, "publicationVenue": {"id": "8a91832d-4d26-45b5-afdf-bdbcde6cf6ca",
+      "name": "American Potato Journal", "alternate_names": ["Am Potato J"], "issn":
+      "0003-0589", "alternate_issns": ["1874-9380"], "url": "https://link.springer.com/journal/12230",
+      "alternate_urls": ["http://www.umaine.edu/paa/pubs.htm"]}, "url": "https://www.semanticscholar.org/paper/b9a0a9c70f169ce584e2c5eea22bb085f217144b",
+      "title": "The significance of pre-emergence soil moisture to yield of potatoes
+      on dry land in the western high plains area", "abstract": null, "venue": "American
+      Potato Journal", "year": 1937, "referenceCount": 0, "citationCount": 3, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Environmental
+      Science"], "s2FieldsOfStudy": [{"category": "Environmental Science", "source":
+      "external"}, {"category": "Agricultural and Food Sciences", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1937-06-01", "journal": {"name":
+      "American Potato Journal", "pages": "189-195", "volume": "14"}, "citationStyles":
+      {"bibtex": "@Article{Werner1937TheSO,\n author = {H. Werner},\n booktitle =
+      {American Potato Journal},\n journal = {American Potato Journal},\n pages =
+      {189-195},\n title = {The significance of pre-emergence soil moisture to yield
+      of potatoes on dry land in the western high plains area},\n volume = {14},\n
+      year = {1937}\n}\n"}, "authors": [{"authorId": "14492879", "name": "H. Werner"}]},
+      {"paperId": "d02bfb56892373694b7dc057e9e949637654389b", "externalIds": {"MAG":
+      "2765661196", "DOI": "10.1051/PARASITE/1937156500", "CorpusId": 90197592}, "corpusId":
+      90197592, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d02bfb56892373694b7dc057e9e949637654389b",
+      "title": "Recherches exp\u00e9rimentales sur le cycle \u00e9volutif de Synthetocaulus
+      capillaris", "abstract": "La question du Synthetocaulas capillaris, en Bulgarie,
+      est, du point de vue \u00e9conomique et scientifique, de grande importance,
+      \u00e9tant donn\u00e9 que ce parasite est tr\u00e8s r\u00e9pandu et que l \u2019\u00e9levage
+      des moutons est tr\u00e8s d\u00e9velopp\u00e9. Pour nos exp\u00e9riences, nous
+      avons utilis\u00e9 des larves extraites des bronches et bronchioles o\u00f9
+      elles abondent. Les larves obtenues de cette mani\u00e8re, mises dans un milieu
+      humide et examin\u00e9es dans ces conditions, ne subissent pas de mues. Pourtant,
+      on constate une l\u00e9g\u00e8re augmentation de volume et une diff\u00e9renciation
+      de la struc\u00ad ture interne ; dans ce milieu, les larves conservent leur
+      vitalit\u00e9 pendant des mois. Absolument priv\u00e9es d\u2019humidit\u00e9,
+      elles restent quand m\u00eame en vie assez longtemps : de 15 \u00e0 20 jours.
+      Les exp\u00e9\u00ad riences de Hobmaier prouvent que, pour que l \u2019embryon
+      se trans\u00ad forme en larve apte \u00e0 envahir les h\u00f4tes d\u00e9finitifs,
+      la pr\u00e9sence d\u2019un h\u00f4te interm\u00e9diaire est n\u00e9cessaire.
+      Un tel h\u00f4te interm\u00e9diaire est celui que Hobmaier signale, il appartient
+      \u00e0 une famille de mollusques ter\u00ad restres. Dans notre d\u00e9sir de
+      v\u00e9rifier le cycle \u00e9volutif de ce parasite et de d\u00e9couvrir quels
+      h\u00f4tes interm\u00e9diaires il a chez nous, nous avons entrepris des exp\u00e9riences
+      pour lesquelles nous nous sommes servis de mollusques, limaces et escargots,
+      dont nous avons examin\u00e9 20.000 de dix esp\u00e8ces. Nous avons trouv\u00e9
+      que les mollusques de l \u2019esp\u00e8ce Helicella obvia Ziegler sont l \u2019h\u00f4te
+      interm\u00e9diaire le plus important. Toutes les autres esp\u00e8ces sont des
+      h\u00f4tes interm\u00e9diaires acciden\u00ad tels (1). Nous avons entrepris
+      encore des exp\u00e9riences sur des mollus\u00ad que de diff\u00e9rentes esp\u00e8ces
+      provenant d\u2019endroits fr\u00e9quent\u00e9s par des moutons ou de p\u00e2turages,
+      pour voir quels sont les h\u00f4tes interm\u00e9\u00ad diaires en Bulgarie.
+      Nous avons examin\u00e9 encore 30.000 de ces h\u00f4tes", "venue": "", "year":
+      1937, "referenceCount": 0, "citationCount": 7, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Biology"],
+      "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"name": "Annales de parasitologie
+      humaine et compare\u0301e", "pages": "500-503", "volume": "15"}, "citationStyles":
+      {"bibtex": "@Article{Pavlov1937RecherchesES,\n author = {P. Pavlov},\n journal
+      = {Annales de parasitologie humaine et compare\u0301e},\n pages = {500-503},\n
+      title = {Recherches exp\u00e9rimentales sur le cycle \u00e9volutif de Synthetocaulus
+      capillaris},\n volume = {15},\n year = {1937}\n}\n"}, "authors": [{"authorId":
+      "144471138", "name": "P. Pavlov"}]}, {"paperId": "07854ad206f0361edc5df3d775756630deae1380",
+      "externalIds": {"MAG": "2573975570", "DOI": "10.1051/PARASITE/1936141061", "CorpusId":
+      89808212}, "corpusId": 89808212, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/07854ad206f0361edc5df3d775756630deae1380",
       "title": "Contribution au remaniement de la classification des n\u00e9matodes
       de l\u2019ordre des Filariata Skrjabin 1915", "abstract": "Yorke et Maplestone
       (1926) ont essay\u00e9 de grouper tous les gen\u00ad res de Filariid\u00e6 en
@@ -428,113 +559,61 @@ interactions:
       "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category": "Biology", "source":
       "external"}], "publicationTypes": null, "publicationDate": null, "journal":
       {"name": "Annales de parasitologie humaine et compare\u0301e", "pages": "61-75",
-      "volume": "14"}, "authors": [{"authorId": "88801903", "name": "K. Skrjabin"},
-      {"authorId": "17044156", "name": "N. Schikhobalova"}]}, {"paperId": "d02bfb56892373694b7dc057e9e949637654389b",
-      "externalIds": {"MAG": "2765661196", "DOI": "10.1051/PARASITE/1937156500", "CorpusId":
-      90197592}, "corpusId": 90197592, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/d02bfb56892373694b7dc057e9e949637654389b",
-      "title": "Recherches exp\u00e9rimentales sur le cycle \u00e9volutif de Synthetocaulus
-      capillaris", "abstract": "La question du Synthetocaulas capillaris, en Bulgarie,
-      est, du point de vue \u00e9conomique et scientifique, de grande importance,
-      \u00e9tant donn\u00e9 que ce parasite est tr\u00e8s r\u00e9pandu et que l \u2019\u00e9levage
-      des moutons est tr\u00e8s d\u00e9velopp\u00e9. Pour nos exp\u00e9riences, nous
-      avons utilis\u00e9 des larves extraites des bronches et bronchioles o\u00f9
-      elles abondent. Les larves obtenues de cette mani\u00e8re, mises dans un milieu
-      humide et examin\u00e9es dans ces conditions, ne subissent pas de mues. Pourtant,
-      on constate une l\u00e9g\u00e8re augmentation de volume et une diff\u00e9renciation
-      de la struc\u00ad ture interne ; dans ce milieu, les larves conservent leur
-      vitalit\u00e9 pendant des mois. Absolument priv\u00e9es d\u2019humidit\u00e9,
-      elles restent quand m\u00eame en vie assez longtemps : de 15 \u00e0 20 jours.
-      Les exp\u00e9\u00ad riences de Hobmaier prouvent que, pour que l \u2019embryon
-      se trans\u00ad forme en larve apte \u00e0 envahir les h\u00f4tes d\u00e9finitifs,
-      la pr\u00e9sence d\u2019un h\u00f4te interm\u00e9diaire est n\u00e9cessaire.
-      Un tel h\u00f4te interm\u00e9diaire est celui que Hobmaier signale, il appartient
-      \u00e0 une famille de mollusques ter\u00ad restres. Dans notre d\u00e9sir de
-      v\u00e9rifier le cycle \u00e9volutif de ce parasite et de d\u00e9couvrir quels
-      h\u00f4tes interm\u00e9diaires il a chez nous, nous avons entrepris des exp\u00e9riences
-      pour lesquelles nous nous sommes servis de mollusques, limaces et escargots,
-      dont nous avons examin\u00e9 20.000 de dix esp\u00e8ces. Nous avons trouv\u00e9
-      que les mollusques de l \u2019esp\u00e8ce Helicella obvia Ziegler sont l \u2019h\u00f4te
-      interm\u00e9diaire le plus important. Toutes les autres esp\u00e8ces sont des
-      h\u00f4tes interm\u00e9diaires acciden\u00ad tels (1). Nous avons entrepris
-      encore des exp\u00e9riences sur des mollus\u00ad que de diff\u00e9rentes esp\u00e8ces
-      provenant d\u2019endroits fr\u00e9quent\u00e9s par des moutons ou de p\u00e2turages,
-      pour voir quels sont les h\u00f4tes interm\u00e9\u00ad diaires en Bulgarie.
-      Nous avons examin\u00e9 encore 30.000 de ces h\u00f4tes", "venue": "", "year":
-      1937, "referenceCount": 0, "citationCount": 7, "influentialCitationCount": 0,
-      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Biology"],
-      "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}], "publicationTypes":
-      null, "publicationDate": null, "journal": {"name": "Annales de parasitologie
-      humaine et compare\u0301e", "pages": "500-503", "volume": "15"}, "authors":
-      [{"authorId": "144471138", "name": "P. Pavlov"}]}, {"paperId": "b9a0a9c70f169ce584e2c5eea22bb085f217144b",
-      "externalIds": {"MAG": "2031257947", "DOI": "10.1007/BF02879185", "CorpusId":
-      39457778}, "corpusId": 39457778, "publicationVenue": {"id": "8a91832d-4d26-45b5-afdf-bdbcde6cf6ca",
-      "name": "American Potato Journal", "alternate_names": ["Am Potato J"], "issn":
-      "0003-0589", "alternate_issns": ["1874-9380"], "url": "https://link.springer.com/journal/12230",
-      "alternate_urls": ["http://www.umaine.edu/paa/pubs.htm"]}, "url": "https://www.semanticscholar.org/paper/b9a0a9c70f169ce584e2c5eea22bb085f217144b",
-      "title": "The significance of pre-emergence soil moisture to yield of potatoes
-      on dry land in the western high plains area", "abstract": null, "venue": "American
-      Potato Journal", "year": 1937, "referenceCount": 0, "citationCount": 3, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Environmental
-      Science"], "s2FieldsOfStudy": [{"category": "Environmental Science", "source":
-      "external"}, {"category": "Agricultural and Food Sciences", "source": "s2-fos-model"}],
-      "publicationTypes": null, "publicationDate": "1937-06-01", "journal": {"name":
-      "American Potato Journal", "pages": "189-195", "volume": "14"}, "authors": [{"authorId":
-      "14492879", "name": "H. Werner"}]}, {"paperId": "4602c5460fe959e1360a590c7945db34e2cd673e",
-      "externalIds": {"MAG": "2323226389", "DOI": "10.1080/00275514.1936.12017147",
-      "CorpusId": 87536643}, "corpusId": 87536643, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/4602c5460fe959e1360a590c7945db34e2cd673e",
-      "title": "The use of Ultra-Violet Irradiated Culture Media for Securing Bacteria-Free
-      Cultures of Saprolegnia", "abstract": "In almost all mycological work it is
-      essential to secure and to maintain pure cultures of the fungi being investigated.
-      Yet in many cases, cultures of the fungi, free from bacteria, are extremely
-      difficult to obtain. This preliminary step in an investigation is often tedious
-      and disproportionately time-consuming and hence the major objective of one''s
-      research is often long delayed. The Saprolegniaceae, as a group, are especially
-      troublesome to isolate. This difficulty arises because of the following conditions:
-      these fungi occur in nature accompanied by large numbers of bacteria; usually
-      the fungi themselves are slower in growing than the bacteria; the fungi, when
-      grown on agar, are surrounded by a liquid film, by means of which the bacteria
-      readily accompany the hyphae; the fungi do not grow satisfactorily in the presence
-      of the commonly used bacterial inhibitors; the fungi have temperature and water
-      requirements similar to those of bacteria. Each of these conditions adds to
-      the difficulty of isolation by the common method of repeated transfer, since
-      the hyphae invariably are ac? companied by adhering bacteria. The methods which
-      have been employed in obtaining pure cul? tures of the Saprolegniaceae were
-      ably reviewed by Kauffman (4). These methods as well as those more recently
-      developed not only for the Saprolegniaceae but also for other fungi, may be
-      roughly classified as either mechanical or chemical.", "venue": "", "year":
-      1936, "referenceCount": 6, "citationCount": 7, "influentialCitationCount": 0,
-      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Biology"],
-      "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}, {"category":
-      "Biology", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-      "1936-07-01", "journal": {"name": "Mycologia", "pages": "324-329", "volume":
-      "28"}, "authors": [{"authorId": "37759254", "name": "I. H. Blank"}, {"authorId":
-      "21627126", "name": "W. Tiffney"}]}, {"paperId": "026cd66127a3be9d57d12cafc7ef08269583bc4c",
-      "externalIds": {"CorpusId": 6077362, "PubMed": "19970294"}, "corpusId": 6077362,
-      "publicationVenue": {"id": "4dc96079-a390-468e-85c9-da11a3304053", "name": "American
-      Journal of Pathology", "type": "journal", "alternate_names": ["Am J Pathol"],
-      "issn": "0002-9440", "url": "http://www.clinicalkey.com.au/dura/browse/journalIssue/00029440",
-      "alternate_urls": ["http://www.sciencedirect.com/science/journal/00029440",
-      "http://ajp.amjpathol.org/", "https://ajp.amjpathol.org/", "http://www.amjpathol.org/",
-      "http://www.clinicalkey.com/dura/browse/journalIssue/00029440"]}, "url": "https://www.semanticscholar.org/paper/026cd66127a3be9d57d12cafc7ef08269583bc4c",
-      "title": "Meningococcus Myocarditis.", "abstract": "beats per minute and the
-      arterial blood pressure iOO 70. The white blood count was 26,0OO. There were
-      8o per cent neutrophilic pol-morphonuclear leukocytes, 8 per cent lymphocytes,
-      and 12 per cent immature leukocytes. A spinal punc- ture was performed and I;
-      cc. of a thick purulent liquid were removed. The cerebrospinal fluid contained
-      I8,jOO cells per cmm. Smears revealed Gram- negative intracellular biscuit shaped
-      diplococci which morphologically showed the characteristics of meningococci.
-      The content of glucose of three successive specimens of cerebrospinal fluid
-      was o, IO and i8 mg. per ioo cc. respectively. The patient became markedly cyanotic
-      and died 3o hours after admission. The clinical diagnosis was meningococcus
-      meningitis. The possibility of the presence of a meningococcus endocarditis
-      was also considered.", "venue": "American Journal of Pathology", "year": 1936,
-      "referenceCount": 24, "citationCount": 6, "influentialCitationCount": 0, "isOpenAccess":
-      false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy":
-      [{"category": "Medicine", "source": "external"}, {"category": "Medicine", "source":
-      "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
-      null, "journal": {"name": "The American journal of pathology", "pages": "\n          677-688.1\n        ",
-      "volume": "12 5"}, "authors": [{"authorId": "15024119", "name": "O. Saphir"}]},
+      "volume": "14"}, "citationStyles": {"bibtex": "@Article{Skrjabin1936ContributionAR,\n
+      author = {K. Skrjabin and N. Schikhobalova},\n journal = {Annales de parasitologie
+      humaine et compare\u0301e},\n pages = {61-75},\n title = {Contribution au remaniement
+      de la classification des n\u00e9matodes de l\u2019ordre des Filariata Skrjabin
+      1915},\n volume = {14},\n year = {1936}\n}\n"}, "authors": [{"authorId": "88801903",
+      "name": "K. Skrjabin"}, {"authorId": "17044156", "name": "N. Schikhobalova"}]},
+      {"paperId": "fc479f4a80473b40e2df39ec0c9bac294cc765bc", "externalIds": {"MAG":
+      "2327500253", "DOI": "10.1524/zkri.1937.97.1.123", "CorpusId": 102245872}, "corpusId":
+      102245872, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/fc479f4a80473b40e2df39ec0c9bac294cc765bc",
+      "title": "The Unit Cell and Space Group of Monoclinic Sulphur", "abstract":
+      "Crysta l s of monoclinic or b e t a .sulphur were grown f rom a melt a n d
+      oscil lation photographs were t aken a b o u t the needle ax i s , or c-axis
+      , us ing MoKa Tadiation. Dur ing the exposure the crys ta l was surrounded by
+      a furnace which was mainta ined a t a t empera ture of about 103\u00b0 C. F
+      r o m these photographs the length of the c-axis w a s determined a s 11.02
+      A a n d the /3-angle a s 83\u00b016'' . F r o m a A Y e i s s e n b e r g photograph
+      of the equator ia l plane t a k e n a b o u t the c-axis , the lengths of the
+      other two a x e s were determined as a = 10.90 A and b ^ 10.96 A. These va lues
+      g ive an ax ia l rat io of 0 .9945 : 1 : 1.006 as compared to the rat io 0 .99575
+      : 1 : 0 .99983 determined from goniometr ic m e a s u r e m e n t s by M u t
+      h m a n n 1 ) . H e found for the b e t a angle the va lue 8 4 \u00b0 14''.
+      M i t s c h e r l i c h 2 ) a lso measured crys ta l s of monoclinic sulphur
+      on a goniometer and obta ined va lues in agreement with M u t h m a n n '' s
+      .", "venue": "", "year": 1937, "referenceCount": 0, "citationCount": 3, "influentialCitationCount":
+      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Chemistry"],
+      "s2FieldsOfStudy": [{"category": "Chemistry", "source": "external"}, {"category":
+      "Materials Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Zeitschrift f\u00fcr Kristallographie - Crystalline
+      Materials", "pages": "123 - 124", "volume": "97"}, "citationStyles": {"bibtex":
+      "@Article{Burwell1937TheUC,\n author = {J. T. Burwell},\n journal = {Zeitschrift
+      f\u00fcr Kristallographie - Crystalline Materials},\n pages = {123 - 124},\n
+      title = {The Unit Cell and Space Group of Monoclinic Sulphur},\n volume = {97},\n
+      year = {1937}\n}\n"}, "authors": [{"authorId": "16971709", "name": "J. T. Burwell"}]},
+      {"paperId": "437b6bc0d58c8a9616847a770b4b96d4e90e954e", "externalIds": {"MAG":
+      "2330953354", "DOI": "10.1007/BF01583589", "CorpusId": 43294122}, "corpusId":
+      43294122, "publicationVenue": {"id": "68d41154-a37b-42b4-a569-8bf2ed7777f0",
+      "name": "Archiv f\u00fcr Klinische und Experimentelle Ohren- Nasen- und Kehlkopfheilkunde",
+      "type": "journal", "alternate_names": ["Archiv f\u00fcr Ohren- Nasen- und Kehlkopfheilkunde",
+      "Arch Ohrenheilkd", "Archiv f\u00fcr Ohrenheilkunde", "Arch Ohren Nasen Kehlkopfheilkd",
+      "Arch Klin Exp Ohren Nasen Kehlkopfheilkd", "Archiv fu\u0308r Ohren-, Nasen-
+      und Kehlkopfheilkunde"], "issn": "0003-9195", "alternate_issns": ["0365-5245",
+      "0302-9530", "1434-4726"]}, "url": "https://www.semanticscholar.org/paper/437b6bc0d58c8a9616847a770b4b96d4e90e954e",
+      "title": "Septische Spondylitis bei Fremdk\u00f6rperperforation. Bericht \u00fcber
+      einen Fall", "abstract": null, "venue": "Archiv f\u00fcr Klinische und Experimentelle
+      Ohren- Nasen- und Kehlkopfheilkunde", "year": 1936, "referenceCount": 1, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
+      "source": "external"}], "publicationTypes": null, "publicationDate": "1936-03-01",
+      "journal": {"name": "Archiv f\u00fcr Ohren-, Nasen- und Kehlkopfheilkunde",
+      "pages": "14-19", "volume": "141"}, "citationStyles": {"bibtex": "@Article{Betsholtz1936SeptischeSB,\n
+      author = {Ture Betsholtz},\n booktitle = {Archiv f\u00fcr Klinische und Experimentelle
+      Ohren- Nasen- und Kehlkopfheilkunde},\n journal = {Archiv f\u00fcr Ohren-, Nasen-
+      und Kehlkopfheilkunde},\n pages = {14-19},\n title = {Septische Spondylitis
+      bei Fremdk\u00f6rperperforation. Bericht \u00fcber einen Fall},\n volume = {141},\n
+      year = {1936}\n}\n"}, "authors": [{"authorId": "1421311755", "name": "Ture Betsholtz"}]},
       {"paperId": "f8a64706ae031024a51da3afd36e9114f35942ac", "externalIds": {"MAG":
       "2078682668", "DOI": "10.1175/1520-0493(1937)65<104:AIZOTO>2.0.CO;2", "CorpusId":
       16535801}, "corpusId": 16535801, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/f8a64706ae031024a51da3afd36e9114f35942ac",
@@ -571,63 +650,54 @@ interactions:
       [{"category": "Environmental Science", "source": "external"}, {"category": "Environmental
       Science", "source": "s2-fos-model"}, {"category": "Physics", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": "1937-03-01", "journal": {"name":
-      "Monthly Weather Review", "pages": "104-108", "volume": "65"}, "authors": [{"authorId":
-      "144011517", "name": "J. A. Riley"}]}, {"paperId": "8765492064fefcc74d7d8b65f15faf83e56c221c",
-      "externalIds": {"MAG": "611061520", "CorpusId": 153216734}, "corpusId": 153216734,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/8765492064fefcc74d7d8b65f15faf83e56c221c",
-      "title": "First chapters in religious philosophy", "abstract": null, "venue":
-      "", "year": 1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
-      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}, {"category":
-      "Philosophy", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "117212268",
-      "name": "V. Ferm"}]}, {"paperId": "7cb3e6479fc354b181a63d56748cff085ef2e99b",
+      "Monthly Weather Review", "pages": "104-108", "volume": "65"}, "citationStyles":
+      {"bibtex": "@Article{Riley1937AircraftIZ,\n author = {J. A. Riley},\n journal
+      = {Monthly Weather Review},\n pages = {104-108},\n title = {Aircraft Icing Zones
+      on the Oakland-Cheyenne Airway},\n volume = {65},\n year = {1937}\n}\n"}, "authors":
+      [{"authorId": "144011517", "name": "J. A. Riley"}]}, {"paperId": "7cb3e6479fc354b181a63d56748cff085ef2e99b",
       "externalIds": {"MAG": "1992436244", "DOI": "10.1007/bf03036390", "CorpusId":
       92668948}, "corpusId": 92668948, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7cb3e6479fc354b181a63d56748cff085ef2e99b",
       "title": "Condition of sparingly soluble substances in gels", "abstract": null,
       "venue": "", "year": 1936, "referenceCount": 4, "citationCount": 1, "influentialCitationCount":
       0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Chemistry"],
       "s2FieldsOfStudy": [{"category": "Chemistry", "source": "external"}, {"category":
-      "Biology", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1936-10-01", "journal": {"name": "Proceedings of the Indian Academy of Sciences
-      - Section A", "pages": "468-479", "volume": "4"}, "authors": [{"authorId": "107631284",
-      "name": "R. Khanolkar"}, {"authorId": "144208375", "name": "P. Barve"}, {"authorId":
-      "91060105", "name": "B. N. Desai"}]}, {"paperId": "1a3cb84da1b00043584e42b9bd348c1ac18928fe",
-      "externalIds": {"MAG": "1596689803", "CorpusId": 204463799}, "corpusId": 204463799,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1a3cb84da1b00043584e42b9bd348c1ac18928fe",
-      "title": "Doktor Henri-Martin", "abstract": null, "venue": "", "year": 1936,
-      "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
-      false, "openAccessPdf": null, "fieldsOfStudy": ["History"], "s2FieldsOfStudy":
-      [{"category": "History", "source": "external"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "Fornv\u00e4nnen", "pages": "359-560", "volume": "31"},
-      "authors": [{"authorId": "2091589851", "name": "Ture J. Arne"}]}, {"paperId":
-      "437b6bc0d58c8a9616847a770b4b96d4e90e954e", "externalIds": {"MAG": "2330953354",
-      "DOI": "10.1007/BF01583589", "CorpusId": 43294122}, "corpusId": 43294122, "publicationVenue":
-      {"id": "68d41154-a37b-42b4-a569-8bf2ed7777f0", "name": "Archiv f\u00fcr Klinische
-      und Experimentelle Ohren- Nasen- und Kehlkopfheilkunde", "type": "journal",
-      "alternate_names": ["Archiv f\u00fcr Ohren- Nasen- und Kehlkopfheilkunde", "Arch
-      Ohrenheilkd", "Archiv f\u00fcr Ohrenheilkunde", "Arch Ohren Nasen Kehlkopfheilkd",
-      "Arch Klin Exp Ohren Nasen Kehlkopfheilkd", "Archiv fu\u0308r Ohren-, Nasen-
-      und Kehlkopfheilkunde"], "issn": "0003-9195", "alternate_issns": ["0365-5245",
-      "0302-9530", "1434-4726"]}, "url": "https://www.semanticscholar.org/paper/437b6bc0d58c8a9616847a770b4b96d4e90e954e",
-      "title": "Septische Spondylitis bei Fremdk\u00f6rperperforation. Bericht \u00fcber
-      einen Fall", "abstract": null, "venue": "Archiv f\u00fcr Klinische und Experimentelle
-      Ohren- Nasen- und Kehlkopfheilkunde", "year": 1936, "referenceCount": 1, "citationCount":
-      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
-      "source": "external"}], "publicationTypes": null, "publicationDate": "1936-03-01",
-      "journal": {"name": "Archiv f\u00fcr Ohren-, Nasen- und Kehlkopfheilkunde",
-      "pages": "14-19", "volume": "141"}, "authors": [{"authorId": "1421311755", "name":
-      "Ture Betsholtz"}]}, {"paperId": "434c30fd369dc666010d614bc1f3d9b10003b0d2",
-      "externalIds": {"MAG": "1967116923", "DOI": "10.1086/208418", "CorpusId": 171024848},
-      "corpusId": 171024848, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/434c30fd369dc666010d614bc1f3d9b10003b0d2",
-      "title": "Book Review:Towards the Christian Revolution. B. B. Y. Scott, Gregory
-      Vlastos; The Christian View of Man. J. Gresham Machen", "abstract": null, "venue":
-      "", "year": 1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Philosophy"],
-      "s2FieldsOfStudy": [{"category": "Philosophy", "source": "external"}], "publicationTypes":
-      ["Review"], "publicationDate": "1937-07-01", "journal": null, "authors": [{"authorId":
-      "117212268", "name": "V. Ferm"}]}, {"paperId": "f509d5a249aa52f66a2e7e935e942828c8bd322d",
+      "Materials Science", "source": "s2-fos-model"}, {"category": "Chemistry", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1936-10-01",
+      "journal": {"name": "Proceedings of the Indian Academy of Sciences - Section
+      A", "pages": "468-479", "volume": "4"}, "citationStyles": {"bibtex": "@Article{Khanolkar1936ConditionOS,\n
+      author = {R. Khanolkar and P. Barve and B. N. Desai},\n journal = {Proceedings
+      of the Indian Academy of Sciences - Section A},\n pages = {468-479},\n title
+      = {Condition of sparingly soluble substances in gels},\n volume = {4},\n year
+      = {1936}\n}\n"}, "authors": [{"authorId": "107631284", "name": "R. Khanolkar"},
+      {"authorId": "144208375", "name": "P. Barve"}, {"authorId": "91060105", "name":
+      "B. N. Desai"}]}, {"paperId": "98492cf578087c787aa663c3a50a4cf87deb8799", "externalIds":
+      {"MAG": "2517169480", "DOI": "10.1177/107769903701400306", "CorpusId": 168276443},
+      "corpusId": 168276443, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/98492cf578087c787aa663c3a50a4cf87deb8799",
+      "title": "Advertising Copy Requirements of Representative Newspapers", "abstract":
+      "A charge of those who like to throw stones at news\u203a papers is that most
+      advertising is designed to take advantage of the public and that the newspapers
+      are a knowing party to the conspiracy. These critics assert further that if
+      the newspapers have any conscience in the matter it is either dulled by their
+      zeal for profits or by pressure from advertisers. No one would insist that all
+      ad\u203a vertising is beyond reproach or above suspicion, nor would anyone who
+      knows anything about them contend that newspapers are perfect. Being human institutions,
+      they are heir to human frailties and their very na\u203a ture holds them up
+      for all the world to see. But the truth is that the con\u203a science of the
+      newspaper is more highly developed than the public generally realizes or than
+      the critics are willing to concede. It is also true that the better newspapers
+      are in\u203a creasingly aware of their responsi\u203a bility to the public and
+      to honest advertisers. These facts are emphasized by the results of an inquiry
+      recently com-", "venue": "", "year": 1937, "referenceCount": 0, "citationCount":
+      1, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Business"], "s2FieldsOfStudy": [{"category": "Business",
+      "source": "external"}, {"category": "Business", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1937-09-01", "journal":
+      {"name": "Journalism & Mass Communication Quarterly", "pages": "259 - 266",
+      "volume": "14"}, "citationStyles": {"bibtex": "@Article{Pollard1937AdvertisingCR,\n
+      author = {J. Pollard},\n journal = {Journalism & Mass Communication Quarterly},\n
+      pages = {259 - 266},\n title = {Advertising Copy Requirements of Representative
+      Newspapers},\n volume = {14},\n year = {1937}\n}\n"}, "authors": [{"authorId":
+      "46918034", "name": "J. Pollard"}]}, {"paperId": "f509d5a249aa52f66a2e7e935e942828c8bd322d",
       "externalIds": {"MAG": "2017205667", "DOI": "10.1007/BF01782154", "CorpusId":
       46119893}, "corpusId": 46119893, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
       "name": "Klinische Wochenschrift", "alternate_names": ["Klin Wochenschr"], "issn":
@@ -639,16 +709,12 @@ interactions:
       null, "fieldsOfStudy": ["Chemistry"], "s2FieldsOfStudy": [{"category": "Chemistry",
       "source": "external"}], "publicationTypes": null, "publicationDate": "1936-08-01",
       "journal": {"name": "Klinische Wochenschrift", "pages": "1137-1138", "volume":
-      "15"}, "authors": [{"authorId": "15261808", "name": "F. Lauersen"}, {"authorId":
-      "50311049", "name": "F. Sauerbruch"}]}, {"paperId": "4c538678651d71f723d68e34d6ab173a46df0db5",
-      "externalIds": {"MAG": "1519957221", "CorpusId": 162155612}, "corpusId": 162155612,
-      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c538678651d71f723d68e34d6ab173a46df0db5",
-      "title": "Antropologkongressen i Bukarest", "abstract": null, "venue": "", "year":
-      1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
-      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
-      [], "publicationTypes": null, "publicationDate": null, "journal": {"name": "Fornv\u00e4nnen",
-      "pages": "343-349", "volume": "32"}, "authors": [{"authorId": "2091589851",
-      "name": "Ture J. Arne"}]}, {"paperId": "9ff60dd0273024b1017db84cb1e858892f089912",
+      "15"}, "citationStyles": {"bibtex": "@Article{Lauersen1936\u00dcberDE,\n author
+      = {F. Lauersen and F. Sauerbruch},\n booktitle = {Klinische Wochenschrift},\n
+      journal = {Klinische Wochenschrift},\n pages = {1137-1138},\n title = {\u00dcber
+      Die Einwirkung von Vitamin C auf Gallenfarbstoff},\n volume = {15},\n year =
+      {1936}\n}\n"}, "authors": [{"authorId": "15261808", "name": "F. Lauersen"},
+      {"authorId": "50311049", "name": "F. Sauerbruch"}]}, {"paperId": "9ff60dd0273024b1017db84cb1e858892f089912",
       "externalIds": {"MAG": "2090676860", "DOI": "10.1007/BF02966279", "CorpusId":
       72890927}, "corpusId": 72890927, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/9ff60dd0273024b1017db84cb1e858892f089912",
       "title": "Abstracts from Current Literature on Surgery", "abstract": null, "venue":
@@ -657,20 +723,21 @@ interactions:
       "s2FieldsOfStudy": [{"category": "Medicine", "source": "external"}, {"category":
       "Medicine", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "1937-03-01", "journal": {"name": "Irish Journal of Medical Science (1926-1967)",
-      "pages": "822-825", "volume": "15"}, "authors": [{"authorId": "35461679", "name":
-      "F. J. Henry"}]}, {"paperId": "3c51bee906d73b37be02fda3b468a44bfea43ec7", "externalIds":
-      {"MAG": "2063322835", "DOI": "10.1007/BF01778415", "CorpusId": 34298584}, "corpusId":
-      34298584, "publicationVenue": {"id": "20621975-d380-4bec-b46a-e5ed4be2b2e9",
-      "name": "Klinische Wochenschrift", "alternate_names": ["Klin Wochenschr"], "issn":
-      "0023-2173", "alternate_issns": ["1432-1440"], "url": "https://link.springer.com/journal/109"},
-      "url": "https://www.semanticscholar.org/paper/3c51bee906d73b37be02fda3b468a44bfea43ec7",
-      "title": "Von Einigen Gegengaben der Klinik als dank an die Physiologie", "abstract":
-      null, "venue": "Klinische Wochenschrift", "year": 1936, "referenceCount": 0,
-      "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf":
-      null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category": "Biology",
-      "source": "external"}], "publicationTypes": null, "publicationDate": "1936-04-01",
-      "journal": {"name": "Klinische Wochenschrift", "pages": "545-548", "volume":
-      "15"}, "authors": [{"authorId": "17707537", "name": "G. Bergmann"}]}, {"paperId":
+      "pages": "822-825", "volume": "15"}, "citationStyles": {"bibtex": "@Article{Henry1937AbstractsFC,\n
+      author = {F. J. Henry},\n journal = {Irish Journal of Medical Science (1926-1967)},\n
+      pages = {822-825},\n title = {Abstracts from Current Literature on Surgery},\n
+      volume = {15},\n year = {1937}\n}\n"}, "authors": [{"authorId": "35461679",
+      "name": "F. J. Henry"}]}, {"paperId": "4c538678651d71f723d68e34d6ab173a46df0db5",
+      "externalIds": {"MAG": "1519957221", "CorpusId": 162155612}, "corpusId": 162155612,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/4c538678651d71f723d68e34d6ab173a46df0db5",
+      "title": "Antropologkongressen i Bukarest", "abstract": null, "venue": "", "year":
+      1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
+      "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": null, "s2FieldsOfStudy":
+      [], "publicationTypes": null, "publicationDate": null, "journal": {"name": "Fornv\u00e4nnen",
+      "pages": "343-349", "volume": "32"}, "citationStyles": {"bibtex": "@Article{Arne1937AntropologkongressenIB,\n
+      author = {Ture J. Arne},\n journal = {Fornv\u00e4nnen},\n pages = {343-349},\n
+      title = {Antropologkongressen i Bukarest},\n volume = {32},\n year = {1937}\n}\n"},
+      "authors": [{"authorId": "2091589851", "name": "Ture J. Arne"}]}, {"paperId":
       "12d3018c7a62c4b4f0d40433260e12f4908cf015", "externalIds": {"MAG": "2020456956",
       "DOI": "10.2136/sssaj1937.03615995000100000081x", "CorpusId": 128749867}, "corpusId":
       128749867, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/12d3018c7a62c4b4f0d40433260e12f4908cf015",
@@ -723,11 +790,14 @@ interactions:
       have been reduced materially, and the", "venue": "", "year": 1937, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Environmental Science"], "s2FieldsOfStudy":
-      [{"category": "Environmental Science", "source": "external"}, {"category": "Agricultural
-      And Food Sciences", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
-      "publicationDate": null, "journal": {"name": "Soil Science Society of America
-      Journal", "pages": "463-468", "volume": "1"}, "authors": [{"authorId": "104595624",
-      "name": "G. L. Fuller"}]}, {"paperId": "d40a884b9d26fccebdbc01de18048724d0ff2213",
+      [{"category": "Environmental Science", "source": "external"}, {"category": "Environmental
+      Science", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": {"name": "Soil Science Society of America Journal", "pages":
+      "463-468", "volume": "1"}, "citationStyles": {"bibtex": "@Article{Fuller1937ASF,\n
+      author = {G. L. Fuller},\n journal = {Soil Science Society of America Journal},\n
+      pages = {463-468},\n title = {A System for Correlation of Land Forms and Covers
+      with Soil Classification},\n volume = {1},\n year = {1937}\n}\n"}, "authors":
+      [{"authorId": "104595624", "name": "G. L. Fuller"}]}, {"paperId": "d40a884b9d26fccebdbc01de18048724d0ff2213",
       "externalIds": {"MAG": "2014994292", "DOI": "10.1080/00220973.1936.11010012",
       "CorpusId": 121503619}, "corpusId": 121503619, "publicationVenue": null, "url":
       "https://www.semanticscholar.org/paper/d40a884b9d26fccebdbc01de18048724d0ff2213",
@@ -761,11 +831,14 @@ interactions:
       "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
       false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"], "s2FieldsOfStudy":
       [{"category": "Psychology", "source": "external"}, {"category": "Education",
-      "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1936-01-02",
-      "journal": null, "authors": [{"authorId": "17110494", "name": "D. E. Scates"}]},
-      {"paperId": "a1d9468cf675217adc86c97087a3aadeaa26b43d", "externalIds": {"MAG":
-      "2086761377", "DOI": "10.1620/TJEM.31.186", "CorpusId": 72422074}, "corpusId":
-      72422074, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a1d9468cf675217adc86c97087a3aadeaa26b43d",
+      "source": "s2-fos-model"}, {"category": "Economics", "source": "s2-fos-model"}],
+      "publicationTypes": null, "publicationDate": "1936-01-02", "journal": null,
+      "citationStyles": {"bibtex": "@Inproceedings{Scates1936TheGN,\n author = {D.
+      E. Scates},\n title = {The General Nature and Applicability of Index Numbers
+      for Education},\n year = {1936}\n}\n"}, "authors": [{"authorId": "17110494",
+      "name": "D. E. Scates"}]}, {"paperId": "a1d9468cf675217adc86c97087a3aadeaa26b43d",
+      "externalIds": {"MAG": "2086761377", "DOI": "10.1620/TJEM.31.186", "CorpusId":
+      72422074}, "corpusId": 72422074, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/a1d9468cf675217adc86c97087a3aadeaa26b43d",
       "title": "On the Reflex Heat=Tachypnoea", "abstract": "The present investigations
       were made on dogs in order to ascer-tain whether or not the heat-tachypnoea
       of the reflex nature is still causable after removing the centers for the body
@@ -795,9 +868,12 @@ interactions:
       even the anterior colliculi are excluded.", "venue": "", "year": 1937, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": true,
       "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
-      "Medicine", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}],
+      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": "1937-05-31", "journal": {"name":
       "Tohoku Journal of Experimental Medicine", "pages": "186-196", "volume": "31"},
+      "citationStyles": {"bibtex": "@Article{Mutow1937OnTR,\n author = {Takeo Mutow},\n
+      journal = {Tohoku Journal of Experimental Medicine},\n pages = {186-196},\n
+      title = {On the Reflex Heat=Tachypnoea},\n volume = {31},\n year = {1937}\n}\n"},
       "authors": [{"authorId": "80543148", "name": "Takeo Mutow"}]}, {"paperId": "d59760079b8867f16cb479ecd77ba2ebfb562986",
       "externalIds": {"MAG": "2946115342", "DOI": "10.1007/BF02249851", "CorpusId":
       35395368}, "corpusId": 35395368, "publicationVenue": {"id": "bef0f449-837b-4ba1-aa9b-f097a270318d",
@@ -810,10 +886,81 @@ interactions:
       false, "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy":
       [{"category": "Medicine", "source": "external"}], "publicationTypes": null,
       "publicationDate": "1937-03-01", "journal": {"name": "Zeitschrift f\u00fcr Kinderheilkunde",
-      "pages": "681", "volume": "58"}, "authors": [{"authorId": "17012719", "name":
-      "W. Herbrand"}]}, {"paperId": "4be26821bc9980fa4d6340e5976a9b739625b0c3", "externalIds":
-      {"MAG": "2606046230", "DOI": "10.1017/S0002930000765262", "CorpusId": 151353280},
-      "corpusId": 151353280, "publicationVenue": {"id": "a44f7eaa-97ea-4382-abae-2bb8d889cdb2",
+      "pages": "681", "volume": "58"}, "citationStyles": {"bibtex": "@Article{Herbrand1937StellungnahmeZD,\n
+      author = {W. Herbrand},\n booktitle = {Zeitschrift f\u00fcr Kinderheilkunde},\n
+      journal = {Zeitschrift f\u00fcr Kinderheilkunde},\n pages = {681},\n title =
+      {Stellungnahme zu der Ver\u00f6ffentlichung von Philipp Bamberger, Hamburg \u00fcber
+      \u201eDie Therapie und Pathogenese der malignen Diphtherie\u201d},\n volume
+      = {58},\n year = {1937}\n}\n"}, "authors": [{"authorId": "17012719", "name":
+      "W. Herbrand"}]}, {"paperId": "71b4a350d0d08ab025bbe830c52d986e1d9b28e3", "externalIds":
+      {"PubMedCentral": "5170483", "CorpusId": 11289105, "PubMed": "29013033"}, "corpusId":
+      11289105, "publicationVenue": {"id": "7bc8c601-4efa-400f-972e-164343190429",
+      "name": "The Indian medical gazette", "type": "journal", "alternate_names":
+      ["Indian med gaz", "Indian medical gazette"], "issn": "0019-5863"}, "url": "https://www.semanticscholar.org/paper/71b4a350d0d08ab025bbe830c52d986e1d9b28e3",
+      "title": "Service Notes", "abstract": "The School was inspected on the opening
+      day by SurgeonGeneral P. Hehir. C.B., C.M.G., c I.E. (D.D.M.S., Northern Command),
+      and Colonel Heard, i.m.s., and an opening address was given by Surgeon-General
+      Hehir to the officers attending the course. The Scheme of Training to be carried
+      out in the School as laid down in Army Instructions (India) No. 414?dated 30th
+      April, 1918, is appended hereto. Practical Instruction is given by the C. O.
+      of the Station Hospital, Lieutenant-Colonel Argles, R.A.M.C.; by the S.M.O.,
+      I.M.S., Lieutenant-Colonel Moore. I.M.S., and lectures are delivered by specialists
+      in Sanitation, Surgery, etc. Also lectures and practical demonstrations are
+      being given by the D. A. D. M. S. (Sanitary) and the D. A. D. M. S. (Mobilization).
+      And lec tures on Military Organisation, Field Sketching, Map Reading, etc.,
+      by the General Staff or officers detailed by them. Curriculum. The curriculum
+      is roughly as follow:? Parade daily from 6-30?7-30 A.M., for Squad Drill and
+      Stretcher Drill, and on two days a week for Physical Training. Lectures and
+      practical work from 9 till 3 or 4-30 P.M. A course of equitation (voluntary)
+      was also arranged for, and this was attended by officers in the eveninirs, from
+      6-30 ? 1 7-30.", "venue": "The Indian medical gazette", "year": 1936, "referenceCount":
+      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
+      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
+      "publicationTypes": ["JournalArticle"], "publicationDate": "1936-04-01", "journal":
+      {"name": "The Indian Medical Gazette", "pages": "243 - 244", "volume": "71"},
+      "citationStyles": {"bibtex": "@Article{3Jotes1936ServiceN,\n author = {JSeroiqe
+      3Jotes},\n booktitle = {The Indian medical gazette},\n journal = {The Indian
+      Medical Gazette},\n pages = {243 - 244},\n title = {Service Notes},\n volume
+      = {71},\n year = {1936}\n}\n"}, "authors": [{"authorId": "1620478634", "name":
+      "JSeroiqe 3Jotes"}]}, {"paperId": "7a1c4413ed53445fea3807026ad87c475803a22d",
+      "externalIds": {"MAG": "2009665015", "DOI": "10.1177/000271623618600163", "CorpusId":
+      144182343}, "corpusId": 144182343, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7a1c4413ed53445fea3807026ad87c475803a22d",
+      "title": "TRENTIN, SILVIO. La Crise du Droit et de l''\u00c9tat. Pp. 498. Paris:
+      Librairie Felix Alcan, 1935. 30 francs", "abstract": "ture,&dquo; which constitutes
+      the second part of the book, aside from such inadequacies, gives a very good
+      idea of its importance from Roman times to our own. The third part of the book,
+      entitled &dquo;The Nature of Law,&dquo; is a brief review of some modern theories
+      and approaches. If, in light of its purely introductory character, anything
+      should be said, it is perhaps to the point that the author, in discussing the
+      rational process of lawmaking, has not clearly indicated the extent to which
+      the development of law in modern times has been a rationalization of things
+      accomplished in the social and economic fields. Specifically, the claim so often
+      made that the laws of England and America have safeguarded personal and property
+      rights is farfetched. A critical analysis would indicate that personal liberty
+      and property rights were rather outgrowths of the struggle for the free market.
+      In fact, in the light of the modern wage slavery, the emphasis in English and
+      American theory on rights in the abstract is to all intents and purposes an
+      absurdity, which the author fails to see. It is difficult to understand why
+      a clearer critique of this position has been omitted. To the layman reading
+      the book, the defects in evaluation, emphasis, and interpretation are unimportant
+      when set alongside of its rational message and clarity of expression. To the
+      college student, the book is a valuable general treatment of the field if in
+      the hands of a competent and penetrating instructor. FREDERICK W. KILLIAN University
+      of Newark", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
+      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
+      "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category": "Sociology",
+      "source": "external"}, {"category": "Law", "source": "s2-fos-model"}], "publicationTypes":
+      ["Review"], "publicationDate": "1936-07-01", "journal": {"name": "The Annals
+      of the American Academy of Political and Social Science", "pages": "222 - 223",
+      "volume": "186"}, "citationStyles": {"bibtex": "@Article{Kunz1936TRENTINSL,\n
+      author = {J. Kunz},\n journal = {The Annals of the American Academy of Political
+      and Social Science},\n pages = {222 - 223},\n title = {TRENTIN, SILVIO. La Crise
+      du Droit et de l''\u00c9tat. Pp. 498. Paris: Librairie Felix Alcan, 1935. 30
+      francs},\n volume = {186},\n year = {1936}\n}\n"}, "authors": [{"authorId":
+      "2052107347", "name": "J. Kunz"}]}, {"paperId": "4be26821bc9980fa4d6340e5976a9b739625b0c3",
+      "externalIds": {"MAG": "2606046230", "DOI": "10.1017/S0002930000765262", "CorpusId":
+      151353280}, "corpusId": 151353280, "publicationVenue": {"id": "a44f7eaa-97ea-4382-abae-2bb8d889cdb2",
       "name": "American Journal of International Law", "type": "journal", "alternate_names":
       ["Am J Int Law"], "issn": "0002-9300", "url": "https://www.asil.org/resources/american-journal-international-law",
       "alternate_urls": ["http://www.jstor.org/journals/00029300.html", "https://www.cambridge.org/core/journals/american-journal-of-international-law",
@@ -842,69 +989,15 @@ interactions:
       "s2FieldsOfStudy": [{"category": "Sociology", "source": "external"}, {"category":
       "Political Science", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
       "1937-04-01", "journal": {"name": "American Journal of International Law", "pages":
-      "372 - 372", "volume": "31"}, "authors": [{"authorId": "113374529", "name":
-      "E. Dumbauld"}]}, {"paperId": "7a1c4413ed53445fea3807026ad87c475803a22d", "externalIds":
-      {"MAG": "2009665015", "DOI": "10.1177/000271623618600163", "CorpusId": 144182343},
-      "corpusId": 144182343, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/7a1c4413ed53445fea3807026ad87c475803a22d",
-      "title": "TRENTIN, SILVIO. La Crise du Droit et de l''\u00c9tat. Pp. 498. Paris:
-      Librairie Felix Alcan, 1935. 30 francs", "abstract": "ture,&dquo; which constitutes
-      the second part of the book, aside from such inadequacies, gives a very good
-      idea of its importance from Roman times to our own. The third part of the book,
-      entitled &dquo;The Nature of Law,&dquo; is a brief review of some modern theories
-      and approaches. If, in light of its purely introductory character, anything
-      should be said, it is perhaps to the point that the author, in discussing the
-      rational process of lawmaking, has not clearly indicated the extent to which
-      the development of law in modern times has been a rationalization of things
-      accomplished in the social and economic fields. Specifically, the claim so often
-      made that the laws of England and America have safeguarded personal and property
-      rights is farfetched. A critical analysis would indicate that personal liberty
-      and property rights were rather outgrowths of the struggle for the free market.
-      In fact, in the light of the modern wage slavery, the emphasis in English and
-      American theory on rights in the abstract is to all intents and purposes an
-      absurdity, which the author fails to see. It is difficult to understand why
-      a clearer critique of this position has been omitted. To the layman reading
-      the book, the defects in evaluation, emphasis, and interpretation are unimportant
-      when set alongside of its rational message and clarity of expression. To the
-      college student, the book is a valuable general treatment of the field if in
-      the hands of a competent and penetrating instructor. FREDERICK W. KILLIAN University
-      of Newark", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
-      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category": "Sociology",
-      "source": "external"}, {"category": "History", "source": "s2-fos-model"}], "publicationTypes":
-      ["Review"], "publicationDate": "1936-07-01", "journal": {"name": "The Annals
-      of the American Academy of Political and Social Science", "pages": "222 - 223",
-      "volume": "186"}, "authors": [{"authorId": "2052107347", "name": "J. Kunz"}]},
-      {"paperId": "71b4a350d0d08ab025bbe830c52d986e1d9b28e3", "externalIds": {"PubMedCentral":
-      "5170483", "CorpusId": 11289105, "PubMed": "29013033"}, "corpusId": 11289105,
-      "publicationVenue": {"id": "7bc8c601-4efa-400f-972e-164343190429", "name": "The
-      Indian medical gazette", "type": "journal", "alternate_names": ["Indian med
-      gaz", "Indian medical gazette"], "issn": "0019-5863"}, "url": "https://www.semanticscholar.org/paper/71b4a350d0d08ab025bbe830c52d986e1d9b28e3",
-      "title": "Service Notes", "abstract": "The School was inspected on the opening
-      day by SurgeonGeneral P. Hehir. C.B., C.M.G., c I.E. (D.D.M.S., Northern Command),
-      and Colonel Heard, i.m.s., and an opening address was given by Surgeon-General
-      Hehir to the officers attending the course. The Scheme of Training to be carried
-      out in the School as laid down in Army Instructions (India) No. 414?dated 30th
-      April, 1918, is appended hereto. Practical Instruction is given by the C. O.
-      of the Station Hospital, Lieutenant-Colonel Argles, R.A.M.C.; by the S.M.O.,
-      I.M.S., Lieutenant-Colonel Moore. I.M.S., and lectures are delivered by specialists
-      in Sanitation, Surgery, etc. Also lectures and practical demonstrations are
-      being given by the D. A. D. M. S. (Sanitary) and the D. A. D. M. S. (Mobilization).
-      And lec tures on Military Organisation, Field Sketching, Map Reading, etc.,
-      by the General Staff or officers detailed by them. Curriculum. The curriculum
-      is roughly as follow:? Parade daily from 6-30?7-30 A.M., for Squad Drill and
-      Stretcher Drill, and on two days a week for Physical Training. Lectures and
-      practical work from 9 till 3 or 4-30 P.M. A course of equitation (voluntary)
-      was also arranged for, and this was attended by officers in the eveninirs, from
-      6-30 ? 1 7-30.", "venue": "The Indian medical gazette", "year": 1936, "referenceCount":
-      0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
-      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
-      "publicationTypes": ["JournalArticle"], "publicationDate": "1936-04-01", "journal":
-      {"name": "The Indian Medical Gazette", "pages": "243 - 244", "volume": "71"},
-      "authors": [{"authorId": "1620478634", "name": "JSeroiqe 3Jotes"}]}, {"paperId":
-      "1707cc4d6ccc0acbf22c0a2e12a7b1b6f336dcae", "externalIds": {"MAG": "1992252992",
-      "DOI": "10.1080/00220973.1937.11010064", "CorpusId": 143913672}, "corpusId":
-      143913672, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1707cc4d6ccc0acbf22c0a2e12a7b1b6f336dcae",
+      "372 - 372", "volume": "31"}, "citationStyles": {"bibtex": "@Article{Dumbauld1937LExcutionDS,\n
+      author = {E. Dumbauld},\n booktitle = {American Journal of International Law},\n
+      journal = {American Journal of International Law},\n pages = {372 - 372},\n
+      title = {L\u2019Ex\u22e9cution des Sentences Internationales. By Edvard Hambro.
+      (Paris: Recueil Sirey, 1936. pp. iv, 148. Index. 25 Fr.)},\n volume = {31},\n
+      year = {1937}\n}\n"}, "authors": [{"authorId": "113374529", "name": "E. Dumbauld"}]},
+      {"paperId": "1707cc4d6ccc0acbf22c0a2e12a7b1b6f336dcae", "externalIds": {"MAG":
+      "1992252992", "DOI": "10.1080/00220973.1937.11010064", "CorpusId": 143913672},
+      "corpusId": 143913672, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1707cc4d6ccc0acbf22c0a2e12a7b1b6f336dcae",
       "title": "The Place of the Fable in the Character Training of Children", "abstract":
       "The writer''s interest in children''s litera ture, particularly in its relation
       to character education, led to an attempt to consider the value of the fable
@@ -926,23 +1019,14 @@ interactions:
       1937, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Psychology"],
       "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
-      "Education", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      "1937-06-01", "journal": null, "authors": [{"authorId": "144324331", "name":
-      "S. Goldsmith"}]}, {"paperId": "72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a", "externalIds":
-      {"MAG": "2317663764", "DOI": "10.1007/BF03030893", "CorpusId": 123994632}, "corpusId":
-      123994632, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a",
-      "title": "M\u00e9thode de Mesure des Angles par \u00ab R\u00e9P\u00e9titions
-      Fractionn\u00e9ES \u00bb A L\u2019aide D\u2019un Instrument R\u00e9IT\u00e9rateur",
-      "abstract": null, "venue": "", "year": 1937, "referenceCount": 1, "citationCount":
-      0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
-      "source": "external"}], "publicationTypes": null, "publicationDate": "1937-10-01",
-      "journal": {"name": "Bulletin g\u00e9od\u00e9sique", "pages": "290-295", "volume":
-      "56"}, "authors": [{"authorId": "102504010", "name": "Gh. Schmerber"}, {"authorId":
-      "92907040", "name": "P. Tardi"}, {"authorId": "102657201", "name": "P. Caillol"}]},
-      {"paperId": "646c897b72155eead0994f56eff40174f7694880", "externalIds": {"MAG":
-      "1972421482", "DOI": "10.1177/000271623719100150", "CorpusId": 143010933}, "corpusId":
-      143010933, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/646c897b72155eead0994f56eff40174f7694880",
+      "Education", "source": "s2-fos-model"}, {"category": "Psychology", "source":
+      "s2-fos-model"}], "publicationTypes": null, "publicationDate": "1937-06-01",
+      "journal": null, "citationStyles": {"bibtex": "@Inproceedings{Goldsmith1937ThePO,\n
+      author = {S. Goldsmith},\n title = {The Place of the Fable in the Character
+      Training of Children},\n year = {1937}\n}\n"}, "authors": [{"authorId": "144324331",
+      "name": "S. Goldsmith"}]}, {"paperId": "646c897b72155eead0994f56eff40174f7694880",
+      "externalIds": {"MAG": "1972421482", "DOI": "10.1177/000271623719100150", "CorpusId":
+      143010933}, "corpusId": 143010933, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/646c897b72155eead0994f56eff40174f7694880",
       "title": "MARTIN, ROBERT F. Income in Agricul ture, 1929-1935. Pp. xviii, 168.
       New York: National Industrial Conference Board, 1936. $2.50", "abstract": "a
       few prices from the Baltimore and New York markets in order to make some series
@@ -964,34 +1048,32 @@ interactions:
       futility, but it is, on the contrary,", "venue": "", "year": 1937, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category":
-      "Sociology", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
-      "publicationTypes": ["Review"], "publicationDate": "1937-05-01", "journal":
-      {"name": "The Annals of the American Academy of Political and Social Science",
-      "pages": "242 - 243", "volume": "191"}, "authors": [{"authorId": "103398735",
-      "name": "J. Cassels"}]}, {"paperId": "98492cf578087c787aa663c3a50a4cf87deb8799",
-      "externalIds": {"MAG": "2517169480", "DOI": "10.1177/107769903701400306", "CorpusId":
-      168276443}, "corpusId": 168276443, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/98492cf578087c787aa663c3a50a4cf87deb8799",
-      "title": "Advertising Copy Requirements of Representative Newspapers", "abstract":
-      "A charge of those who like to throw stones at news\u203a papers is that most
-      advertising is designed to take advantage of the public and that the newspapers
-      are a knowing party to the conspiracy. These critics assert further that if
-      the newspapers have any conscience in the matter it is either dulled by their
-      zeal for profits or by pressure from advertisers. No one would insist that all
-      ad\u203a vertising is beyond reproach or above suspicion, nor would anyone who
-      knows anything about them contend that newspapers are perfect. Being human institutions,
-      they are heir to human frailties and their very na\u203a ture holds them up
-      for all the world to see. But the truth is that the con\u203a science of the
-      newspaper is more highly developed than the public generally realizes or than
-      the critics are willing to concede. It is also true that the better newspapers
-      are in\u203a creasingly aware of their responsi\u203a bility to the public and
-      to honest advertisers. These facts are emphasized by the results of an inquiry
-      recently com-", "venue": "", "year": 1937, "referenceCount": 0, "citationCount":
+      "Sociology", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"},
+      {"category": "Agricultural and Food Sciences", "source": "s2-fos-model"}], "publicationTypes":
+      ["Review"], "publicationDate": "1937-05-01", "journal": {"name": "The Annals
+      of the American Academy of Political and Social Science", "pages": "242 - 243",
+      "volume": "191"}, "citationStyles": {"bibtex": "@Article{Cassels1937MARTINRF,\n
+      author = {J. Cassels},\n journal = {The Annals of the American Academy of Political
+      and Social Science},\n pages = {242 - 243},\n title = {MARTIN, ROBERT F. Income
+      in Agricul ture, 1929-1935. Pp. xviii, 168. New York: National Industrial Conference
+      Board, 1936. $2.50},\n volume = {191},\n year = {1937}\n}\n"}, "authors": [{"authorId":
+      "103398735", "name": "J. Cassels"}]}, {"paperId": "72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a",
+      "externalIds": {"MAG": "2317663764", "DOI": "10.1007/BF03030893", "CorpusId":
+      123994632}, "corpusId": 123994632, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/72b3ffe1cc57f1409b916945605e3d8ff6fb9e5a",
+      "title": "M\u00e9thode de Mesure des Angles par \u00ab R\u00e9P\u00e9titions
+      Fractionn\u00e9ES \u00bb A L\u2019aide D\u2019un Instrument R\u00e9IT\u00e9rateur",
+      "abstract": null, "venue": "", "year": 1937, "referenceCount": 1, "citationCount":
       0, "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
-      "fieldsOfStudy": ["Business"], "s2FieldsOfStudy": [{"category": "Business",
-      "source": "external"}, {"category": "Education", "source": "s2-fos-model"}],
-      "publicationTypes": ["JournalArticle"], "publicationDate": "1937-09-01", "journal":
-      {"name": "Journalism & Mass Communication Quarterly", "pages": "259 - 266",
-      "volume": "14"}, "authors": [{"authorId": "46918034", "name": "J. Pollard"}]},
+      "fieldsOfStudy": ["Mathematics"], "s2FieldsOfStudy": [{"category": "Mathematics",
+      "source": "external"}], "publicationTypes": null, "publicationDate": "1937-10-01",
+      "journal": {"name": "Bulletin g\u00e9od\u00e9sique", "pages": "290-295", "volume":
+      "56"}, "citationStyles": {"bibtex": "@Article{Schmerber1937M\u00e9thodeDM,\n
+      author = {Gh. Schmerber and P. Tardi and P. Caillol},\n journal = {Bulletin
+      g\u00e9od\u00e9sique},\n pages = {290-295},\n title = {M\u00e9thode de Mesure
+      des Angles par \u00ab R\u00e9P\u00e9titions Fractionn\u00e9ES \u00bb A L\u2019aide
+      D\u2019un Instrument R\u00e9IT\u00e9rateur},\n volume = {56},\n year = {1937}\n}\n"},
+      "authors": [{"authorId": "102504010", "name": "Gh. Schmerber"}, {"authorId":
+      "92907040", "name": "P. Tardi"}, {"authorId": "102657201", "name": "P. Caillol"}]},
       {"paperId": "78396ca7b3295df0b1e06d5fd5b64a64b0519e0b", "externalIds": {"MAG":
       "2041295081", "DOI": "10.1177/000271623618500168", "CorpusId": 144861698}, "corpusId":
       144861698, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/78396ca7b3295df0b1e06d5fd5b64a64b0519e0b",
@@ -1011,31 +1093,18 @@ interactions:
       Dr. Lindeman is concerned with a general and", "venue": "", "year": 1936, "referenceCount":
       0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess": false,
       "openAccessPdf": null, "fieldsOfStudy": ["Sociology"], "s2FieldsOfStudy": [{"category":
-      "Sociology", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
-      "publicationTypes": null, "publicationDate": "1936-05-01", "journal": {"name":
-      "The Annals of the American Academy of Political and Social Science", "pages":
-      "249 - 250", "volume": "185"}, "authors": [{"authorId": "80927167", "name":
-      "M. M. Willey"}]}, {"paperId": "d1c80beb006bbea5962038d526c12da666456be1", "externalIds":
-      {"MAG": "2050244275", "DOI": "10.1007/BF01925019", "CorpusId": 32830130}, "corpusId":
-      32830130, "publicationVenue": {"id": "5bf9b9ec-5dad-4e2a-8fc9-42fb3942b7b6",
-      "name": "Naunyn-Schmiedebergs Archiv f\u00fcr Experimentelle Pathologie und
-      Pharmakologie", "alternate_names": ["Naunyn-schmiedebergs Arch Pharmakol Exp
-      Pathol", "Naunyn-schmiedebergs Arch Exp Pathol Pharmakol", "Naunyn-Schmiedebergs
-      Archiv f\u00fcr Pharmakologie und Experimentelle Pathologie"], "issn": "0365-2009",
-      "alternate_issns": ["1432-1912", "0365-5423"]}, "url": "https://www.semanticscholar.org/paper/d1c80beb006bbea5962038d526c12da666456be1",
-      "title": "Erste Versuche zur Einwirkung der Salicylate auf den Kohlehydrat-
-      und Fettstoffwechsel", "abstract": null, "venue": "Naunyn-Schmiedebergs Archiv
-      f\u00fcr Experimentelle Pathologie und Pharmakologie", "year": 1937, "referenceCount":
-      7, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
-      "openAccessPdf": null, "fieldsOfStudy": ["Chemistry"], "s2FieldsOfStudy": [{"category":
-      "Chemistry", "source": "external"}], "publicationTypes": null, "publicationDate":
-      "1937-03-01", "journal": {"name": "Naunyn-Schmiedebergs Archiv f\u00fcr experimentelle
-      Pathologie und Pharmakologie", "pages": "255-264", "volume": "188"}, "authors":
-      [{"authorId": "40029796", "name": "O. Eichler"}, {"authorId": "21084615", "name":
-      "Fritz Bengeforth"}]}, {"paperId": "786d864c301a128cde9c45806c995dda34e1ee8d",
-      "externalIds": {"MAG": "2054701221", "DOI": "10.1111/J.1151-2916.1936.TB19836.X",
-      "CorpusId": 137668605}, "corpusId": 137668605, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/786d864c301a128cde9c45806c995dda34e1ee8d",
+      "Sociology", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"},
+      {"category": "Political Science", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": "1936-05-01", "journal": {"name": "The Annals of the
+      American Academy of Political and Social Science", "pages": "249 - 250", "volume":
+      "185"}, "citationStyles": {"bibtex": "@Article{Willey1936LINDEMANEC,\n author
+      = {M. M. Willey},\n journal = {The Annals of the American Academy of Political
+      and Social Science},\n pages = {249 - 250},\n title = {LINDEMAN, EDUARD C. Wealth
+      and Cul ture. Pp. ix, 35. New York: Harcourt, Brace & Co., 1936. $3.00},\n volume
+      = {185},\n year = {1936}\n}\n"}, "authors": [{"authorId": "80927167", "name":
+      "M. M. Willey"}]}, {"paperId": "786d864c301a128cde9c45806c995dda34e1ee8d", "externalIds":
+      {"MAG": "2054701221", "DOI": "10.1111/J.1151-2916.1936.TB19836.X", "CorpusId":
+      137668605}, "corpusId": 137668605, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/786d864c301a128cde9c45806c995dda34e1ee8d",
       "title": "A COMPARISON OF THE THERMAL EXPANSION OF USED SILICA BRICK FROM AN
       INSULATED AND AN UNINSULATED OPEN\u2010HEARTH FURNACE ROOF*", "abstract": "Measurements
       of the linear thermal expansion of different zones in the used silica roof brick
@@ -1069,12 +1138,40 @@ interactions:
       "influentialCitationCount": 0, "isOpenAccess": false, "openAccessPdf": null,
       "fieldsOfStudy": ["Materials Science"], "s2FieldsOfStudy": [{"category": "Materials
       Science", "source": "external"}, {"category": "Materials Science", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      {"name": "Journal of the American Ceramic Society", "pages": "276-287", "volume":
-      "19"}, "authors": [{"authorId": "102653954", "name": "R. Pierce"}, {"authorId":
-      "81276019", "name": "J. B. Austin"}]}, {"paperId": "febcc1caafc0ecb541b155158f29411f07c8fd0d",
-      "externalIds": {"MAG": "110099919", "DOI": "10.1007/BF02982676", "CorpusId":
-      36186479}, "corpusId": 36186479, "publicationVenue": {"id": "ee29410d-3d58-4bcc-8304-b559af9d780a",
+      "s2-fos-model"}, {"category": "Engineering", "source": "s2-fos-model"}], "publicationTypes":
+      null, "publicationDate": null, "journal": {"name": "Journal of the American
+      Ceramic Society", "pages": "276-287", "volume": "19"}, "citationStyles": {"bibtex":
+      "@Article{Pierce1936ACO,\n author = {R. Pierce and J. B. Austin},\n journal
+      = {Journal of the American Ceramic Society},\n pages = {276-287},\n title =
+      {A COMPARISON OF THE THERMAL EXPANSION OF USED SILICA BRICK FROM AN INSULATED
+      AND AN UNINSULATED OPEN\u2010HEARTH FURNACE ROOF*},\n volume = {19},\n year
+      = {1936}\n}\n"}, "authors": [{"authorId": "102653954", "name": "R. Pierce"},
+      {"authorId": "81276019", "name": "J. B. Austin"}]}, {"paperId": "d1c80beb006bbea5962038d526c12da666456be1",
+      "externalIds": {"MAG": "2050244275", "DOI": "10.1007/BF01925019", "CorpusId":
+      32830130}, "corpusId": 32830130, "publicationVenue": {"id": "5bf9b9ec-5dad-4e2a-8fc9-42fb3942b7b6",
+      "name": "Naunyn-Schmiedebergs Archiv f\u00fcr Experimentelle Pathologie und
+      Pharmakologie", "alternate_names": ["Naunyn-schmiedebergs Arch Pharmakol Exp
+      Pathol", "Naunyn-schmiedebergs Arch Exp Pathol Pharmakol", "Naunyn-Schmiedebergs
+      Archiv f\u00fcr Pharmakologie und Experimentelle Pathologie"], "issn": "0365-2009",
+      "alternate_issns": ["1432-1912", "0365-5423"]}, "url": "https://www.semanticscholar.org/paper/d1c80beb006bbea5962038d526c12da666456be1",
+      "title": "Erste Versuche zur Einwirkung der Salicylate auf den Kohlehydrat-
+      und Fettstoffwechsel", "abstract": null, "venue": "Naunyn-Schmiedebergs Archiv
+      f\u00fcr Experimentelle Pathologie und Pharmakologie", "year": 1937, "referenceCount":
+      7, "citationCount": 1, "influentialCitationCount": 0, "isOpenAccess": false,
+      "openAccessPdf": null, "fieldsOfStudy": ["Chemistry"], "s2FieldsOfStudy": [{"category":
+      "Chemistry", "source": "external"}], "publicationTypes": null, "publicationDate":
+      "1937-03-01", "journal": {"name": "Naunyn-Schmiedebergs Archiv f\u00fcr experimentelle
+      Pathologie und Pharmakologie", "pages": "255-264", "volume": "188"}, "citationStyles":
+      {"bibtex": "@Article{Eichler1937ErsteVZ,\n author = {O. Eichler and Fritz Bengeforth},\n
+      booktitle = {Naunyn-Schmiedebergs Archiv f\u00fcr Experimentelle Pathologie
+      und Pharmakologie},\n journal = {Naunyn-Schmiedebergs Archiv f\u00fcr experimentelle
+      Pathologie und Pharmakologie},\n pages = {255-264},\n title = {Erste Versuche
+      zur Einwirkung der Salicylate auf den Kohlehydrat- und Fettstoffwechsel},\n
+      volume = {188},\n year = {1937}\n}\n"}, "authors": [{"authorId": "40029796",
+      "name": "O. Eichler"}, {"authorId": "21084615", "name": "Fritz Bengeforth"}]},
+      {"paperId": "febcc1caafc0ecb541b155158f29411f07c8fd0d", "externalIds": {"MAG":
+      "110099919", "DOI": "10.1007/BF02982676", "CorpusId": 36186479}, "corpusId":
+      36186479, "publicationVenue": {"id": "ee29410d-3d58-4bcc-8304-b559af9d780a",
       "name": "Journal Genetika", "type": "journal", "alternate_names": ["J Genet",
       "Journal of Genetics"], "issn": "0016-6758", "alternate_issns": ["0022-1333"],
       "url": "http://www.springer.com/life+sci/journal/12041?detailsPage=description",
@@ -1085,7 +1182,11 @@ interactions:
       "openAccessPdf": null, "fieldsOfStudy": ["Biology"], "s2FieldsOfStudy": [{"category":
       "Biology", "source": "external"}, {"category": "Biology", "source": "s2-fos-model"}],
       "publicationTypes": null, "publicationDate": "1936-04-01", "journal": {"name":
-      "Journal of Genetics", "pages": "179-181", "volume": "32"}, "authors": [{"authorId":
+      "Journal of Genetics", "pages": "179-181", "volume": "32"}, "citationStyles":
+      {"bibtex": "@Article{Norris1936InbreedingIK,\n author = {M. J. Norris and O.
+      Richards},\n booktitle = {Journal Genetika},\n journal = {Journal of Genetics},\n
+      pages = {179-181},\n title = {Inbreeding inEphestia k\u00fchniella Z. (Lepidoptera,
+      phycitidae)},\n volume = {32},\n year = {1936}\n}\n"}, "authors": [{"authorId":
       "49657937", "name": "M. J. Norris"}, {"authorId": "1864237", "name": "O. Richards"}]},
       {"paperId": "382f9e29a9163562c72e2450bdbb60f30bc57189", "externalIds": {"MAG":
       "1977309720", "DOI": "10.1177/028418513601700403", "CorpusId": 71680648}, "corpusId":
@@ -1117,12 +1218,15 @@ interactions:
       growth in the epiphyseal lines. Furthermore the earliest symp\u00ad toms, according
       to SVEN JOHANSSON''S investigations, most often occur in", "venue": "", "year":
       1936, "referenceCount": 5, "citationCount": 1, "influentialCitationCount": 0,
-      "isOpenAccess": true, "openAccessPdf": {"url": "https://www.tandfonline.com/doi/pdf/10.3109/00016923609134081?needAccess=true",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
-      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
-      "publicationTypes": ["JournalArticle"], "publicationDate": "1936-07-01", "journal":
-      {"name": "Acta Radiologica", "pages": "359 - 370", "volume": "os-17"}, "authors":
-      [{"authorId": "84079156", "name": "Maurits Lindblad"}]}, {"paperId": "a3501b1d37d85151a49ca98eb6e7b2cc729dac2f",
+      "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Medicine"],
+      "s2FieldsOfStudy": [{"category": "Medicine", "source": "external"}, {"category":
+      "Medicine", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"],
+      "publicationDate": "1936-07-01", "journal": {"name": "Acta Radiologica", "pages":
+      "359 - 370", "volume": "os-17"}, "citationStyles": {"bibtex": "@Article{Lindblad1936LocalGD,\n
+      author = {Maurits Lindblad},\n journal = {Acta Radiologica},\n pages = {359
+      - 370},\n title = {Local Growth Disturbances in Tuberculous Disease of the Knee-Joint
+      in Children},\n volume = {os-17},\n year = {1936}\n}\n"}, "authors": [{"authorId":
+      "84079156", "name": "Maurits Lindblad"}]}, {"paperId": "a3501b1d37d85151a49ca98eb6e7b2cc729dac2f",
       "externalIds": {"MAG": "2523021635", "PubMedCentral": "5169242", "DOI": "10.1136/jramc-68-06-03",
       "CorpusId": 31620838, "PubMed": "29012604"}, "corpusId": 31620838, "publicationVenue":
       {"id": "7bc8c601-4efa-400f-972e-164343190429", "name": "The Indian medical gazette",
@@ -1145,10 +1249,13 @@ interactions:
       "Environmental Science", "source": "s2-fos-model"}, {"category": "Medicine",
       "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle"], "publicationDate":
       "1936-12-01", "journal": {"name": "The Indian Medical Gazette", "pages": "712
-      - 714", "volume": "71"}, "authors": [{"authorId": "3843547", "name": "H. Stott"}]},
-      {"paperId": "40304bc755ae58115aad0d0a5ebc0db82737a06a", "externalIds": {"MAG":
-      "2313150929", "DOI": "10.2331/SUISAN.5.109", "CorpusId": 87968458}, "corpusId":
-      87968458, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/40304bc755ae58115aad0d0a5ebc0db82737a06a",
+      - 714", "volume": "71"}, "citationStyles": {"bibtex": "@Article{Stott1936HeatEA,\n
+      author = {H. Stott},\n booktitle = {The Indian medical gazette},\n journal =
+      {The Indian Medical Gazette},\n pages = {712 - 714},\n title = {Heat Exhaustion
+      and Dehydration in the Arabian Desert},\n volume = {71},\n year = {1936}\n}\n"},
+      "authors": [{"authorId": "3843547", "name": "H. Stott"}]}, {"paperId": "40304bc755ae58115aad0d0a5ebc0db82737a06a",
+      "externalIds": {"MAG": "2313150929", "DOI": "10.2331/SUISAN.5.109", "CorpusId":
+      87968458}, "corpusId": 87968458, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/40304bc755ae58115aad0d0a5ebc0db82737a06a",
       "title": "On the Digestive Ferments of Anguilla japonica (T. & S.) I", "abstract":
       "On the Digestive Ferments of Anguilla japonica (T . & S.) I. Proteolytic Ferment
       and its Digestive Action on the law and Heated Fish Muscle. Toyoo TAKAHASHI
@@ -1160,13 +1267,16 @@ interactions:
       "", "year": 1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount":
       0, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Biology"],
       "s2FieldsOfStudy": [{"category": "Biology", "source": "external"}, {"category":
-      "Environmental Science", "source": "s2-fos-model"}], "publicationTypes": null,
-      "publicationDate": null, "journal": {"name": "Nippon Suisan Gakkaishi", "pages":
-      "109-112", "volume": "5"}, "authors": [{"authorId": "2117191826", "name": "Toyoo
-      Takahashi"}, {"authorId": "90950895", "name": "Yutaka Hirosawa"}]}, {"paperId":
-      "4ba57d5f8cdf2ff01b76a42b7329df310ed0045b", "externalIds": {"MAG": "2194048101",
-      "CorpusId": 111144897}, "corpusId": 111144897, "publicationVenue": null, "url":
-      "https://www.semanticscholar.org/paper/4ba57d5f8cdf2ff01b76a42b7329df310ed0045b",
+      "Biology", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Nippon Suisan Gakkaishi", "pages": "109-112", "volume":
+      "5"}, "citationStyles": {"bibtex": "@Article{Takahashi1936OnTD,\n author = {Toyoo
+      Takahashi and Yutaka Hirosawa},\n journal = {Nippon Suisan Gakkaishi},\n pages
+      = {109-112},\n title = {On the Digestive Ferments of Anguilla japonica (T. &
+      S.) I},\n volume = {5},\n year = {1936}\n}\n"}, "authors": [{"authorId": "2117191826",
+      "name": "Toyoo Takahashi"}, {"authorId": "90950895", "name": "Yutaka Hirosawa"}]},
+      {"paperId": "4ba57d5f8cdf2ff01b76a42b7329df310ed0045b", "externalIds": {"MAG":
+      "2194048101", "CorpusId": 111144897}, "corpusId": 111144897, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/4ba57d5f8cdf2ff01b76a42b7329df310ed0045b",
       "title": "Stage Construction As It Applies to Indiana Roads", "abstract": "These
       bridges were framed and erected by a county bridge crew working under the supervision
       of the county surveyor, who also served as a highway supervisor. The bridge
@@ -1189,8 +1299,10 @@ interactions:
       1936, "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0,
       "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Engineering"],
       "s2FieldsOfStudy": [{"category": "Engineering", "source": "external"}, {"category":
-      "History", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
-      null, "journal": {"name": "", "volume": ""}, "authors": [{"authorId": "98437890",
+      "Engineering", "source": "s2-fos-model"}], "publicationTypes": ["Review"], "publicationDate":
+      null, "journal": {"name": "", "volume": ""}, "citationStyles": {"bibtex": "@Inproceedings{Lockridge1936StageCA,\n
+      author = {Earl B Lockridge},\n title = {Stage Construction As It Applies to
+      Indiana Roads},\n year = {1936}\n}\n"}, "authors": [{"authorId": "98437890",
       "name": "Earl B Lockridge"}]}, {"paperId": "8876e1e84b394c45f28169d44d0ae20e771e7ba0",
       "externalIds": {"MAG": "1968575889", "DOI": "10.1177/028418513601700506", "CorpusId":
       70682836}, "corpusId": 70682836, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/8876e1e84b394c45f28169d44d0ae20e771e7ba0",
@@ -1219,36 +1331,26 @@ interactions:
       in his tempera\u00ad ture were rather considerable: morning, 36.3\u00b0\u201436.5\u00b0;
       evening, 37.3\u00b0\u2014 37.6\u00b0. Wassermann, negative. Pirquet, positive.
       Blood sedimentation", "venue": "", "year": 1936, "referenceCount": 0, "citationCount":
-      2, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": {"url":
-      "https://www.tandfonline.com/doi/pdf/10.3109/00016923609133386?needAccess=true",
-      "status": "BRONZE"}, "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category":
-      "Medicine", "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
+      2, "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": null,
+      "fieldsOfStudy": ["Medicine"], "s2FieldsOfStudy": [{"category": "Medicine",
+      "source": "external"}, {"category": "Medicine", "source": "s2-fos-model"}],
       "publicationTypes": ["JournalArticle"], "publicationDate": "1936-09-01", "journal":
-      {"name": "Acta Radiologica", "pages": "498 - 505", "volume": "os-17"}, "authors":
-      [{"authorId": "79817220", "name": "P. Natvig"}]}, {"paperId": "fc479f4a80473b40e2df39ec0c9bac294cc765bc",
-      "externalIds": {"MAG": "2327500253", "DOI": "10.1524/zkri.1937.97.1.123", "CorpusId":
-      102245872}, "corpusId": 102245872, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/fc479f4a80473b40e2df39ec0c9bac294cc765bc",
-      "title": "The Unit Cell and Space Group of Monoclinic Sulphur", "abstract":
-      "Crysta l s of monoclinic or b e t a .sulphur were grown f rom a melt a n d
-      oscil lation photographs were t aken a b o u t the needle ax i s , or c-axis
-      , us ing MoKa Tadiation. Dur ing the exposure the crys ta l was surrounded by
-      a furnace which was mainta ined a t a t empera ture of about 103\u00b0 C. F
-      r o m these photographs the length of the c-axis w a s determined a s 11.02
-      A a n d the /3-angle a s 83\u00b016'' . F r o m a A Y e i s s e n b e r g photograph
-      of the equator ia l plane t a k e n a b o u t the c-axis , the lengths of the
-      other two a x e s were determined as a = 10.90 A and b ^ 10.96 A. These va lues
-      g ive an ax ia l rat io of 0 .9945 : 1 : 1.006 as compared to the rat io 0 .99575
-      : 1 : 0 .99983 determined from goniometr ic m e a s u r e m e n t s by M u t
-      h m a n n 1 ) . H e found for the b e t a angle the va lue 8 4 \u00b0 14''.
-      M i t s c h e r l i c h 2 ) a lso measured crys ta l s of monoclinic sulphur
-      on a goniometer and obta ined va lues in agreement with M u t h m a n n '' s
-      .", "venue": "", "year": 1937, "referenceCount": 0, "citationCount": 2, "influentialCitationCount":
-      0, "isOpenAccess": false, "openAccessPdf": null, "fieldsOfStudy": ["Chemistry"],
-      "s2FieldsOfStudy": [{"category": "Chemistry", "source": "external"}, {"category":
-      "Chemistry", "source": "s2-fos-model"}], "publicationTypes": null, "publicationDate":
-      null, "journal": {"name": "Zeitschrift f\u00fcr Kristallographie - Crystalline
-      Materials", "pages": "123 - 124", "volume": "97"}, "authors": [{"authorId":
-      "16971709", "name": "J. T. Burwell"}]}]}
+      {"name": "Acta Radiologica", "pages": "498 - 505", "volume": "os-17"}, "citationStyles":
+      {"bibtex": "@Article{Natvig1936ACO,\n author = {P. Natvig},\n journal = {Acta
+      Radiologica},\n pages = {498 - 505},\n title = {A Case of Melorheostosis},\n
+      volume = {os-17},\n year = {1936}\n}\n"}, "authors": [{"authorId": "79817220",
+      "name": "P. Natvig"}]}, {"paperId": "1a3cb84da1b00043584e42b9bd348c1ac18928fe",
+      "externalIds": {"MAG": "1596689803", "CorpusId": 204463799}, "corpusId": 204463799,
+      "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/1a3cb84da1b00043584e42b9bd348c1ac18928fe",
+      "title": "Doktor Henri-Martin", "abstract": null, "venue": "", "year": 1936,
+      "referenceCount": 0, "citationCount": 0, "influentialCitationCount": 0, "isOpenAccess":
+      false, "openAccessPdf": null, "fieldsOfStudy": ["History"], "s2FieldsOfStudy":
+      [{"category": "History", "source": "external"}], "publicationTypes": null, "publicationDate":
+      null, "journal": {"name": "Fornv\u00e4nnen", "pages": "359-560", "volume": "31"},
+      "citationStyles": {"bibtex": "@Article{Arne1936DoktorH,\n author = {Ture J.
+      Arne},\n journal = {Fornv\u00e4nnen},\n pages = {359-560},\n title = {Doktor
+      Henri-Martin},\n volume = {31},\n year = {1936}\n}\n"}, "authors": [{"authorId":
+      "2091589851", "name": "Ture J. Arne"}]}]}
 
       '
     headers:
@@ -1257,31 +1359,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '102833'
+      - '111282'
       Content-Type:
       - application/json
       Date:
-      - Tue, 21 Nov 2023 04:26:08 GMT
+      - Wed, 27 Dec 2023 21:57:02 GMT
       Via:
-      - 1.1 670127d831d6fe067a1d0e61c13cef54.cloudfront.net (CloudFront)
+      - 1.1 6fe8e2d5db6a80353eb675f61c249810.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - KfoNMvujpi1GV3fjTtYQl0ImknK0ZoA5J-3Eid-wwsx4T4IrPAnZTQ==
+      - TaC_HndLvmnKpfPW4Q2fJn42bioWOMTxm17kOfrwxc1PSnY69XJYoA==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - OuynDFo3PHcEDbA=
+      - Qn2TOHuivHcEMZQ=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '102833'
+      - '111282'
       x-amzn-Remapped-Date:
-      - Tue, 21 Nov 2023 04:26:08 GMT
+      - Wed, 27 Dec 2023 21:57:02 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - eab6274d-9576-4b45-ba87-58bb0eb07a02
+      - 21bfc00b-7889-4d78-9c9b-43371ffdec9e
     http_version: HTTP/1.1
     status_code: 200
 version: 1

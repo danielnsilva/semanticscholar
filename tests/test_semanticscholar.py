@@ -87,6 +87,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.abstract, data['abstract'])
         self.assertEqual(str(item.authors), str(data['authors']))
         self.assertEqual(item.citationCount, data['citationCount'])
+        self.assertEqual(item.citationStyles, data['citationStyles'])
         self.assertEqual(str(item.citations), str(data['citations']))
         self.assertEqual(item.corpusId, data['corpusId'])
         self.assertEqual(item.embedding, data['embedding'])
@@ -193,11 +194,11 @@ class SemanticScholarTest(unittest.TestCase):
         data = self.sch.get_paper_citations('CorpusID:14514057')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item.paper.title for item in data]), 1850)
+        self.assertEqual(len([item.paper.title for item in data]), 1849)
         self.assertEqual(
             data[0].paper.title,
-            'Mobile Money as a Stepping Stone to Financial Inclusion: How '
-            'Digital Multisided Platforms Fill Institutional Voids')
+            'Conceptualising the empowerment of caregivers raising children '
+            'with developmental disabilities in Ethiopia: a qualitative study')
 
     @test_vcr.use_cassette
     def test_get_paper_references(self):
@@ -236,7 +237,7 @@ class SemanticScholarTest(unittest.TestCase):
         data = self.sch.get_author_papers(1723755, limit=100)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 886)
+        self.assertEqual(len([item for item in data]), 879)
         self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38β/MAPK11 to '
                          'promote virus replication')
 

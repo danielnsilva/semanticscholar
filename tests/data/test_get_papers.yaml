@@ -15,9 +15,9 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.25.1
+      - python-httpx/0.25.2
     method: POST
-    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
   response:
     content: '[{"paperId": "c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce", "externalIds":
       {"MAG": "2096684396", "DOI": "10.2139/ssrn.288970", "CorpusId": 470667}, "corpusId":
@@ -41,15 +41,19 @@ interactions:
       based on randomization inference testing methods, which works well irrespective
       of sample size. This technique uses the empirical distribution of estimated
       effects for placebo laws to form the test distribution.", "venue": "", "year":
-      2001, "referenceCount": 30, "citationCount": 10155, "influentialCitationCount":
-      553, "isOpenAccess": true, "openAccessPdf": null, "fieldsOfStudy": ["Psychology",
-      "Economics", "Mathematics"], "s2FieldsOfStudy": [{"category": "Psychology",
-      "source": "external"}, {"category": "Economics", "source": "external"}, {"category":
-      "Mathematics", "source": "external"}, {"category": "Economics", "source": "s2-fos-model"}],
-      "publicationTypes": ["Review"], "publicationDate": "2001-10-01", "journal":
-      {"name": "Experimental & Empirical Studies eJournal"}, "authors": [{"authorId":
-      "81141608", "name": "Marianne Bertrand"}, {"authorId": "2259683", "name": "E.
-      Duflo"}, {"authorId": "2062143", "name": "S. Mullainathan"}]}, {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3",
+      2001, "referenceCount": 30, "citationCount": 10201, "influentialCitationCount":
+      562, "isOpenAccess": true, "openAccessPdf": {"url": "http://papers.nber.org/papers/w8841.pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Psychology", "Economics", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
+      "Economics", "source": "external"}, {"category": "Mathematics", "source": "external"},
+      {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": "2001-10-01", "journal": {"name": "Experimental & Empirical
+      Studies eJournal"}, "citationStyles": {"bibtex": "@Article{Bertrand2001HowMS,\n
+      author = {Marianne Bertrand and E. Duflo and S. Mullainathan},\n journal = {Experimental
+      & Empirical Studies eJournal},\n title = {How Much Should We Trust Differences-in-Differences
+      Estimates?},\n year = {2001}\n}\n"}, "authors": [{"authorId": "81141608", "name":
+      "Marianne Bertrand"}, {"authorId": "2259683", "name": "E. Duflo"}, {"authorId":
+      "2062143", "name": "S. Mullainathan"}]}, {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3",
       "externalIds": {"MAG": "2148197077", "DOI": "10.2139/ssrn.2250500", "CorpusId":
       3142471}, "corpusId": 3142471, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/cb1ebd913c3724c599f6b276b14b5c6253da68f3",
       "title": "The Miracle of Microfinance? Evidence from a Randomized Evaluation",
@@ -59,18 +63,22 @@ interactions:
       the impact of introducing microcredit in a new market. Half of 104 slums in
       Hyderabad, India were randomly selected for opening of an MFI branch while the
       remainder were not. We show that the intervention increased total MFI borrow.",
-      "venue": "", "year": 2013, "referenceCount": 67, "citationCount": 2064, "influentialCitationCount":
-      240, "isOpenAccess": true, "openAccessPdf": {"url": "https://dspace.mit.edu/bitstream/1721.1/95941/1/Banerjee_The%20miracle.pdf",
+      "venue": "", "year": 2013, "referenceCount": 67, "citationCount": 2069, "influentialCitationCount":
+      239, "isOpenAccess": true, "openAccessPdf": {"url": "https://dspace.mit.edu/bitstream/1721.1/95941/1/Banerjee_The%20miracle.pdf",
       "status": "GREEN"}, "fieldsOfStudy": ["Business", "Economics", "Geography"],
       "s2FieldsOfStudy": [{"category": "Business", "source": "external"}, {"category":
       "Economics", "source": "external"}, {"category": "Geography", "source": "external"},
       {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
       "publicationDate": "2013-04-10", "journal": {"name": "ERN: Credit Risk (Topic)"},
-      "authors": [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId": "2237651454",
-      "name": "A. Banerjee"}, {"authorId": "4249203", "name": "R. Glennerster"}, {"authorId":
-      "31549526", "name": "Cynthia Kinnan"}]}, {"paperId": "0f40b1f08821e22e859c6050916cec3667778613",
-      "externalIds": {"DOI": "10.1257/rct.1355", "CorpusId": 255313304}, "corpusId":
-      255313304, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/0f40b1f08821e22e859c6050916cec3667778613",
+      "citationStyles": {"bibtex": "@Article{Duflo2013TheMO,\n author = {E. Duflo
+      and A. Banerjee and R. Glennerster and Cynthia Kinnan},\n journal = {ERN: Credit
+      Risk (Topic)},\n title = {The Miracle of Microfinance? Evidence from a Randomized
+      Evaluation},\n year = {2013}\n}\n"}, "authors": [{"authorId": "2259683", "name":
+      "E. Duflo"}, {"authorId": "2237651454", "name": "A. Banerjee"}, {"authorId":
+      "4249203", "name": "R. Glennerster"}, {"authorId": "31549526", "name": "Cynthia
+      Kinnan"}]}, {"paperId": "0f40b1f08821e22e859c6050916cec3667778613", "externalIds":
+      {"DOI": "10.1257/rct.1355", "CorpusId": 255313304}, "corpusId": 255313304, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/0f40b1f08821e22e859c6050916cec3667778613",
       "title": "Improving Third-Party Audits and Regulatory Compliance in India",
       "abstract": "Researchers: Esther Duflo Michael Greenstone Nick Ryan Rohini Pande
       Sector(s): Environment, Energy, and Climate Change, Political Economy and Governance,
@@ -85,11 +93,14 @@ interactions:
       Energy and Environmental Policy Research (CEEPR), National Science Foundation
       (NSF)", "venue": "", "year": 2023, "referenceCount": 2, "citationCount": 0,
       "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": null,
-      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Economics", "source":
-      "s2-fos-model"}], "publicationTypes": null, "publicationDate": null, "journal":
-      null, "authors": [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId":
-      "4711469", "name": "M. Greenstone"}, {"authorId": "2071339188", "name": "Nick
-      Ryan"}]}]
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Environmental Science",
+      "source": "s2-fos-model"}, {"category": "Business", "source": "s2-fos-model"},
+      {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "citationStyles": {"bibtex": "@Inproceedings{Duflo2023ImprovingTA,\n
+      author = {E. Duflo and M. Greenstone and Nick Ryan},\n title = {Improving Third-Party
+      Audits and Regulatory Compliance in India},\n year = {2023}\n}\n"}, "authors":
+      [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId": "4711469", "name":
+      "M. Greenstone"}, {"authorId": "2071339188", "name": "Nick Ryan"}]}]
 
       '
     headers:
@@ -98,31 +109,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '5870'
+      - '6832'
       Content-Type:
       - application/json
       Date:
-      - Fri, 01 Dec 2023 02:28:54 GMT
+      - Wed, 27 Dec 2023 21:46:14 GMT
       Via:
-      - 1.1 97d891785cd24c4beaf3832c02f5cf04.cloudfront.net (CloudFront)
+      - 1.1 6314ddd518f7b913ee48824c6307422e.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - PTB955cMTStQuoUP65EnM8cXa11fPyLikH-kIhw-Nmtzo1Nj2pcBaw==
+      - UtPwg2h2vYBpunzgFNXM-4Syrtt_oRXzfRBd0AJ6Fp2OspBsdNJkTA==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - PPe0FEQTvHcEA-w=
+      - Qn0uCFzQvHcEEvw=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '5870'
+      - '6832'
       x-amzn-Remapped-Date:
-      - Fri, 01 Dec 2023 02:28:54 GMT
+      - Wed, 27 Dec 2023 21:46:14 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - e6cca348-e947-4b90-880a-055684e99378
+      - a00d1f21-47eb-49f0-8d88-4a99db1d53a4
     http_version: HTTP/1.1
     status_code: 200
 version: 1

@@ -11,9 +11,9 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.25.1
+      - python-httpx/0.25.2
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=n0%20r3sult%20s3arch%20t3rm&fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=n0%20r3sult%20s3arch%20t3rm&fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
     content: '{"total": 0, "offset": 0}
 
@@ -28,27 +28,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 16 Nov 2023 21:22:16 GMT
+      - Wed, 27 Dec 2023 21:46:33 GMT
       Via:
-      - 1.1 2199b1b2895d8f15e09ac5a5c5b50dbc.cloudfront.net (CloudFront)
+      - 1.1 5bfc01a743251c97602fd0fa441f1900.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - C8DZAiXBBgkx-_M4WKH9pQc6cLPmzOWk5AmHgpf-pNm2Us0Zd8-72A==
+      - ejELPt2X8U3c6FWh0sodqKbzNBh1_DD8lBhfarGvXg8YyLJL5DgN9A==
       X-Amz-Cf-Pop:
-      - GIG51-P4
+      - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - OgoxTEGuvHcEj1Q=
+      - Qn0xAHDbPHcEI4w=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '26'
       x-amzn-Remapped-Date:
-      - Thu, 16 Nov 2023 21:22:16 GMT
+      - Wed, 27 Dec 2023 21:46:33 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - b0482536-09c8-4237-a935-9e84fd128e9b
+      - 252abba2-96dc-4a4e-8541-e7eedd121472
     http_version: HTTP/1.1
     status_code: 200
 version: 1

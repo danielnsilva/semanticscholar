@@ -15,9 +15,9 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.25.1
+      - python-httpx/0.25.2
     method: POST
-    uri: https://api.semanticscholar.org/recommendations/v1/papers/?fields=abstract,authors,citationCount,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
+    uri: https://api.semanticscholar.org/recommendations/v1/papers/?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
   response:
     content: '{"error":"No positive paper examples given"}
 
@@ -32,27 +32,27 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 01 Dec 2023 02:36:59 GMT
+      - Wed, 27 Dec 2023 21:47:44 GMT
       Via:
-      - 1.1 6f2f291762a32a9876c9d69d778cb280.cloudfront.net (CloudFront)
+      - 1.1 7119806636bd0f14f27aecbecb3f0b02.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - BP1v-gDc_eJ8GSbbv6JAv-4KNw3X7l0wrfMLcSCDOYe8PeizdPbieg==
+      - HpdvbCtKdtmsF_FVvGYj7kmyV3ROhuErCa7sJB171cGXUKAq2xyEyA==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - PPf_xGVgPHcERSQ=
+      - Qn08DF5lPHcEXaA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '45'
       x-amzn-Remapped-Date:
-      - Fri, 01 Dec 2023 02:36:59 GMT
+      - Wed, 27 Dec 2023 21:47:44 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 280a5500-1941-4502-a72f-825eb698d491
+      - f61a1401-2790-461b-9bf6-159c97c8d423
     http_version: HTTP/1.1
     status_code: 400
 version: 1
