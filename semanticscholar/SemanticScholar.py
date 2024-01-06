@@ -112,7 +112,7 @@ class SemanticScholar():
         :calls: `POST /paper/batch <https://api.semanticscholar.org/api-docs/\
             graph#tag/Paper-Data/operation/post_graph_get_papers>`_
 
-        :param str paper_ids: list of IDs (must be <= 1000) - S2PaperId,\
+        :param str paper_ids: list of IDs (must be <= 500) - S2PaperId,\
             CorpusId, DOI, ArXivId, MAG, ACL, PMID, PMCID, or URL from:
 
             - semanticscholar.org

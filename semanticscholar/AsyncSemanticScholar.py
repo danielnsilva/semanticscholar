@@ -128,7 +128,7 @@ class AsyncSemanticScholar:
         :calls: `POST /paper/batch <https://api.semanticscholar.org/api-docs/\
             graph#tag/Paper-Data/operation/post_graph_get_papers>`_
 
-        :param str paper_ids: list of IDs (must be <= 1000) - S2PaperId,\
+        :param str paper_ids: list of IDs (must be <= 500) - S2PaperId,\
             CorpusId, DOI, ArXivId, MAG, ACL, PMID, PMCID, or URL from:
 
             - semanticscholar.org
@@ -142,6 +142,10 @@ class AsyncSemanticScholar:
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
         :raises: BadQueryParametersException: if no paper was found.
         '''
+
+        if len(paper_ids) > 500 or len(paper_ids) == 0:
+            raise ValueError(
+                'The paper_ids parameter must be a list of 1 to 500 IDs.')
 
         if not fields:
             fields = Paper.SEARCH_FIELDS

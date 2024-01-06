@@ -181,6 +181,14 @@ class SemanticScholarTest(unittest.TestCase):
                 self.assertIn(
                     'E. Duflo', [author.name for author in item.authors])
 
+    def test_get_papers_list_size_exceeded(self):
+        list_of_paper_ids = [str(i) for i in range(501)]
+        self.assertRaises(ValueError, self.sch.get_papers, list_of_paper_ids)
+
+    def test_get_papers_list_empty(self):
+        list_of_paper_ids = []
+        self.assertRaises(ValueError, self.sch.get_papers, list_of_paper_ids)
+
     @test_vcr.use_cassette
     def test_get_paper_authors(self):
         data = self.sch.get_paper_authors('10.2139/ssrn.2250500')
@@ -498,6 +506,16 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             with self.subTest(subtest=item.paperId):
                 self.assertIn(
                     'E. Duflo', [author.name for author in item.authors])
+
+    async def test_get_papers_list_size_exceeded_async(self):
+        list_of_paper_ids = [str(i) for i in range(501)]
+        with self.assertRaises(ValueError):
+            await self.sch.get_papers(list_of_paper_ids)
+
+    async def test_get_papers_list_empty_async(self):
+        list_of_paper_ids = []
+        with self.assertRaises(ValueError):
+            await self.sch.get_papers(list_of_paper_ids)
     
     @test_vcr.use_cassette
     async def test_get_paper_authors_async(self):
