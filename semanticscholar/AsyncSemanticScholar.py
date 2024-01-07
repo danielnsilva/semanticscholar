@@ -1,5 +1,6 @@
 import re
-from typing import List, Literal
+from typing import List, Literal, Tuple, Union
+import warnings
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
@@ -121,8 +122,9 @@ class AsyncSemanticScholar:
     async def get_papers(
                 self,
                 paper_ids: List[str],
-                fields: list = None
-            ) -> List[Paper]:
+                fields: list = None,
+                return_not_found: bool = False
+            ) -> Union[List[Paper], Tuple[List[Paper], List[str]]]:
         '''Get details for multiple papers at once
 
         :calls: `POST /paper/batch <https://api.semanticscholar.org/api-docs/\
@@ -138,8 +140,13 @@ class AsyncSemanticScholar:
             - biorxiv.org
 
         :param list fields: (optional) list of the fields to be returned.
-        :returns: papers data
-        :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
+        :param bool return_not_found: (optional) flag to include not found IDs\
+            in the return, except for IDs in URL:<url> format.
+        :returns: papers data, and optionally list of IDs not found.
+        :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`\
+            or :class:`Tuple`[:class:`List` of\
+            :class:`semanticscholar.Paper.Paper`,\
+            :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no paper was found.
         '''
 
@@ -160,9 +167,36 @@ class AsyncSemanticScholar:
 
         data = await self._requester.get_data_async(
             url, parameters, self.auth_header, payload)
-        papers = [Paper(item) for item in data]
+        papers = [Paper(item) for item in data if item is not None]
+        
+        prefix_mapping = {
+            'ARXIV': 'ArXiv',
+            'MAG': 'MAG',
+            'ACL': 'ACL',
+            'PMID': 'PubMed',
+            'PMCID': 'PubMedCentral',
+            'CorpusId': 'CorpusId'
+        }
+        prefix_mapping = {v.lower(): k for k, v in prefix_mapping.items()}
 
-        return papers
+        found_ids = set()
+        for paper in papers:
+            found_ids.add(paper.paperId)
+            if paper.externalIds:
+                for prefix, value in paper.externalIds.items():
+                    if prefix.lower() in prefix_mapping:
+                        found_ids.add(
+                            f'{prefix_mapping[prefix.lower()]}:{value}')
+                    else:
+                        found_ids.add(f'{value}')        
+        found_ids = {id.lower() for id in found_ids}  
+              
+        not_found_ids = [id for id in paper_ids if id.lower() not in found_ids]
+
+        if not_found_ids:
+            warnings.warn(f"IDs not found: {not_found_ids}")
+
+        return papers if not return_not_found else (papers, not_found_ids)
 
     async def get_paper_authors(
                 self,

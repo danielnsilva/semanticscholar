@@ -1,4 +1,4 @@
-from typing import List, Literal
+from typing import List, Literal, Tuple, Union
 import asyncio
 import nest_asyncio
 
@@ -105,8 +105,9 @@ class SemanticScholar():
     def get_papers(
                 self,
                 paper_ids: List[str],
-                fields: list = None
-            ) -> List[Paper]:
+                fields: list = None,
+                return_not_found: bool = False
+            ) -> Union[List[Paper], Tuple[List[Paper], List[str]]]:
         '''Get details for multiple papers at once
 
         :calls: `POST /paper/batch <https://api.semanticscholar.org/api-docs/\
@@ -122,8 +123,13 @@ class SemanticScholar():
             - biorxiv.org
 
         :param list fields: (optional) list of the fields to be returned.
-        :returns: papers data
-        :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
+        :param bool return_not_found: (optional) flag to include not found IDs\
+            in the return, except for IDs in URL:<url> format.
+        :returns: papers data, and optionally list of IDs not found.
+        :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`\
+            or :class:`Tuple`[:class:`List` of\
+            :class:`semanticscholar.Paper.Paper`,\
+            :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no paper was found.
         '''
 
@@ -131,7 +137,8 @@ class SemanticScholar():
         papers = loop.run_until_complete(
             self._AsyncSemanticScholar.get_papers(
                 paper_ids=paper_ids,
-                fields=fields
+                fields=fields,
+                return_not_found=return_not_found
                 )
         )
 

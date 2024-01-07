@@ -190,6 +190,30 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertRaises(ValueError, self.sch.get_papers, list_of_paper_ids)
 
     @test_vcr.use_cassette
+    def test_get_papers_not_found_warning(self):
+        list_of_paper_ids = [
+            'CorpusId:211530585',
+            'CorpusId:470667',
+            '10.2139/ssrn.2250500',
+            '0f40b1f08821e22e859c6050916cec3667778613']
+        with self.assertWarns(UserWarning):
+            self.sch.get_papers(list_of_paper_ids)
+
+    @test_vcr.use_cassette
+    def test_get_papers_return_not_found(self):
+        list_of_paper_ids = [
+            'CorpusId:211530585',
+            'CorpusId:470667',
+            '10.2139/ssrn.2250500',
+            '0f40b1f08821e22e859c6050916cec3667778613']
+        data = self.sch.get_papers(list_of_paper_ids, return_not_found=True)
+        papers = data[0]
+        self.assertEqual(len(papers), 3)
+        not_found = data[1]
+        self.assertEqual(len(not_found), 1)
+        self.assertEqual(not_found[0], 'CorpusId:211530585')
+
+    @test_vcr.use_cassette
     def test_get_paper_authors(self):
         data = self.sch.get_paper_authors('10.2139/ssrn.2250500')
         self.assertEqual(data.offset, 0)
@@ -516,6 +540,31 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         list_of_paper_ids = []
         with self.assertRaises(ValueError):
             await self.sch.get_papers(list_of_paper_ids)
+
+    @test_vcr.use_cassette
+    async def test_get_papers_not_found_warning_async(self):
+        list_of_paper_ids = [
+            'CorpusId:211530585',
+            'CorpusId:470667',
+            '10.2139/ssrn.2250500',
+            '0f40b1f08821e22e859c6050916cec3667778613']
+        with self.assertWarns(UserWarning):
+            await self.sch.get_papers(list_of_paper_ids)
+
+    @test_vcr.use_cassette
+    async def test_get_papers_return_not_found_async(self):
+        list_of_paper_ids = [
+            'CorpusId:211530585',
+            'CorpusId:470667',
+            '10.2139/ssrn.2250500',
+            '0f40b1f08821e22e859c6050916cec3667778613']
+        data = await self.sch.get_papers(
+            list_of_paper_ids, return_not_found=True)
+        papers = data[0]
+        self.assertEqual(len(papers), 3)
+        not_found = data[1]
+        self.assertEqual(len(not_found), 1)
+        self.assertEqual(not_found[0], 'CorpusId:211530585')
     
     @test_vcr.use_cassette
     async def test_get_paper_authors_async(self):

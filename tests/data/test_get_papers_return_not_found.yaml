@@ -1,0 +1,140 @@
+interactions:
+- request:
+    body: '{"ids": ["CorpusId:211530585", "CorpusId:470667", "10.2139/ssrn.2250500",
+      "0f40b1f08821e22e859c6050916cec3667778613"]}'
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '118'
+      content-type:
+      - application/json
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.26.0
+    method: POST
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
+  response:
+    content: '[null, {"paperId": "c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce", "externalIds":
+      {"MAG": "2096684396", "DOI": "10.2139/ssrn.288970", "CorpusId": 470667}, "corpusId":
+      470667, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/c31c87c591a25c64fbaa82e8ac6a81831b6ac7ce",
+      "title": "How Much Should We Trust Differences-in-Differences Estimates?", "abstract":
+      "Most Difference-in-Difference (DD) papers rely on many years of data and focus
+      on serially correlated outcomes. Yet almost all these papers ignore the bias
+      in the estimated standard errors that serial correlation introduce4s. This is
+      especially troubling because the independent variable of interest in DD estimation
+      (e.g., the passage of law) is itself very serially correlated, which will exacerbate
+      the bias in standard errors. To illustrate the severity of this issue, we randomly
+      generate placebo laws in state-level data on female wages from the Current Population
+      Survey. For each law, we use OLS to compute the DD estimate of its ''effect''
+      as well as the standard error for this estimate. The standard errors are severely
+      biased: with about 20 years of data, DD estimation finds an ''effect'' significant
+      at the 5% level of up to 45% of the placebo laws. Two very simple techniques
+      can solve this problem for large sample sizes. The first technique consists
+      in collapsing the data and ignoring the time-series variation altogether; the
+      second technique is to estimate standard errors while allowing for an arbitrary
+      covariance structure between time periods. We also suggest a third technique,
+      based on randomization inference testing methods, which works well irrespective
+      of sample size. This technique uses the empirical distribution of estimated
+      effects for placebo laws to form the test distribution.", "venue": "", "year":
+      2001, "referenceCount": 30, "citationCount": 10207, "influentialCitationCount":
+      564, "isOpenAccess": true, "openAccessPdf": {"url": "http://papers.nber.org/papers/w8841.pdf",
+      "status": "BRONZE"}, "fieldsOfStudy": ["Psychology", "Economics", "Mathematics"],
+      "s2FieldsOfStudy": [{"category": "Psychology", "source": "external"}, {"category":
+      "Economics", "source": "external"}, {"category": "Mathematics", "source": "external"},
+      {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": ["Review"],
+      "publicationDate": "2001-10-01", "journal": {"name": "Experimental & Empirical
+      Studies eJournal"}, "citationStyles": {"bibtex": "@Article{Bertrand2001HowMS,\n
+      author = {Marianne Bertrand and E. Duflo and S. Mullainathan},\n journal = {Experimental
+      & Empirical Studies eJournal},\n title = {How Much Should We Trust Differences-in-Differences
+      Estimates?},\n year = {2001}\n}\n"}, "authors": [{"authorId": "81141608", "name":
+      "Marianne Bertrand"}, {"authorId": "2259683", "name": "E. Duflo"}, {"authorId":
+      "2062143", "name": "S. Mullainathan"}]}, {"paperId": "cb1ebd913c3724c599f6b276b14b5c6253da68f3",
+      "externalIds": {"MAG": "2148197077", "DOI": "10.2139/ssrn.2250500", "CorpusId":
+      3142471}, "corpusId": 3142471, "publicationVenue": null, "url": "https://www.semanticscholar.org/paper/cb1ebd913c3724c599f6b276b14b5c6253da68f3",
+      "title": "The Miracle of Microfinance? Evidence from a Randomized Evaluation",
+      "abstract": "Microcredit has spread extremely rapidly since its beginnings in
+      the late 1970s, but whether and how much is helps the poor is the subject of
+      intense debate. This paper reports on the \u2026rst randomized evaluation of
+      the impact of introducing microcredit in a new market. Half of 104 slums in
+      Hyderabad, India were randomly selected for opening of an MFI branch while the
+      remainder were not. We show that the intervention increased total MFI borrow.",
+      "venue": "", "year": 2013, "referenceCount": 67, "citationCount": 2069, "influentialCitationCount":
+      240, "isOpenAccess": true, "openAccessPdf": {"url": "https://dspace.mit.edu/bitstream/1721.1/95941/1/Banerjee_The%20miracle.pdf",
+      "status": "GREEN"}, "fieldsOfStudy": ["Business", "Economics", "Geography"],
+      "s2FieldsOfStudy": [{"category": "Business", "source": "external"}, {"category":
+      "Economics", "source": "external"}, {"category": "Geography", "source": "external"},
+      {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": "2013-04-10", "journal": {"name": "ERN: Credit Risk (Topic)"},
+      "citationStyles": {"bibtex": "@Article{Duflo2013TheMO,\n author = {E. Duflo
+      and A. Banerjee and R. Glennerster and Cynthia Kinnan},\n journal = {ERN: Credit
+      Risk (Topic)},\n title = {The Miracle of Microfinance? Evidence from a Randomized
+      Evaluation},\n year = {2013}\n}\n"}, "authors": [{"authorId": "2259683", "name":
+      "E. Duflo"}, {"authorId": "2237651454", "name": "A. Banerjee"}, {"authorId":
+      "4249203", "name": "R. Glennerster"}, {"authorId": "31549526", "name": "Cynthia
+      Kinnan"}]}, {"paperId": "0f40b1f08821e22e859c6050916cec3667778613", "externalIds":
+      {"DOI": "10.1257/rct.1355", "CorpusId": 255313304}, "corpusId": 255313304, "publicationVenue":
+      null, "url": "https://www.semanticscholar.org/paper/0f40b1f08821e22e859c6050916cec3667778613",
+      "title": "Improving Third-Party Audits and Regulatory Compliance in India",
+      "abstract": "Researchers: Esther Duflo Michael Greenstone Nick Ryan Rohini Pande
+      Sector(s): Environment, Energy, and Climate Change, Political Economy and Governance,
+      Firms J-PAL office: J-PAL South Asia Location: Ahmedabad and Surat, Gujarat,
+      India Sample: 473 industrial plants Target group: Small and medium enterprises
+      Outcome of interest: Pollution Climate change mitigation Intervention type:
+      Audits Monetary incentives AEA RCT registration number: AEARCTR-0001355 Data:
+      Download from the AEA Partner organization(s): Evidence for Policy Design (EPoD),
+      Government of India, State of Gujarat Pollution Control Board (GPCB), Harvard
+      University Sustainability Science Program (SSP), International Growth Center
+      (IGC), International Initiative for Impact Evaluation (3ie), MIT Center for
+      Energy and Environmental Policy Research (CEEPR), National Science Foundation
+      (NSF)", "venue": "", "year": 2023, "referenceCount": 2, "citationCount": 0,
+      "influentialCitationCount": 0, "isOpenAccess": true, "openAccessPdf": null,
+      "fieldsOfStudy": null, "s2FieldsOfStudy": [{"category": "Environmental Science",
+      "source": "s2-fos-model"}, {"category": "Business", "source": "s2-fos-model"},
+      {"category": "Economics", "source": "s2-fos-model"}], "publicationTypes": null,
+      "publicationDate": null, "journal": null, "citationStyles": {"bibtex": "@Inproceedings{Duflo2023ImprovingTA,\n
+      author = {E. Duflo and M. Greenstone and Nick Ryan},\n title = {Improving Third-Party
+      Audits and Regulatory Compliance in India},\n year = {2023}\n}\n"}, "authors":
+      [{"authorId": "2259683", "name": "E. Duflo"}, {"authorId": "4711469", "name":
+      "M. Greenstone"}, {"authorId": "2071339188", "name": "Nick Ryan"}]}]
+
+      '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6838'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 07 Jan 2024 13:09:36 GMT
+      Via:
+      - 1.1 feb2cae68b8552b88ccb4488144416be.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - PJUldg_yEv-xLjeAUOJy8uaIobd6TdIvZJ57nnZ20oNv5qfZ9H1o7Q==
+      X-Amz-Cf-Pop:
+      - GRU3-P4
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - RK5WjE0ovHcEOEw=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '6838'
+      x-amzn-Remapped-Date:
+      - Sun, 07 Jan 2024 13:09:36 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 6dfcbf2c-a06b-4112-8c08-02843d61e9c6
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
