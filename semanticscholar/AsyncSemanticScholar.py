@@ -169,6 +169,15 @@ class AsyncSemanticScholar:
             url, parameters, self.auth_header, payload)
         papers = [Paper(item) for item in data if item is not None]
         
+        not_found_ids = self._get_not_found_ids(paper_ids, papers)
+
+        if not_found_ids:
+            warnings.warn(f"IDs not found: {not_found_ids}")
+
+        return papers if not return_not_found else (papers, not_found_ids)
+
+    def _get_not_found_ids(self, paper_ids, papers):
+        
         prefix_mapping = {
             'ARXIV': 'ArXiv',
             'MAG': 'MAG',
@@ -193,10 +202,7 @@ class AsyncSemanticScholar:
               
         not_found_ids = [id for id in paper_ids if id.lower() not in found_ids]
 
-        if not_found_ids:
-            warnings.warn(f"IDs not found: {not_found_ids}")
-
-        return papers if not return_not_found else (papers, not_found_ids)
+        return not_found_ids
 
     async def get_paper_authors(
                 self,
