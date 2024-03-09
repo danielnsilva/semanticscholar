@@ -58,17 +58,8 @@ class ApiRequester:
         curl_cmd += f' -d \'{json.dumps(payload)}\'' if payload else ''
         curl_cmd += f' {url}'
         return curl_cmd
-    
-    def _get_caller_function_name(self) -> str:
-        stack = inspect.stack()
-        caller = stack[5]
-        frame = caller[0]
-        info = inspect.getframeinfo(frame)
-        return info.function
 
     def _print_debug(self, url, headers, payload, method) -> None:
-        print('-' * 80)
-        print(f'Caller function: {self._get_caller_function_name()}')
         print('-' * 80)
         print(f'Method: {method}\n')
         print(f'URL:\n{url}\n')
