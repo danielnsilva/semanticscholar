@@ -11,3 +11,6 @@ class BadQueryParametersException(SemanticScholarException):
 
 class ObjectNotFoundException(SemanticScholarException):
     '''Paper or Author ID not found.'''
+
+class NoMorePagesException(SemanticScholarException):
+    '''No more pages to fetch.'''

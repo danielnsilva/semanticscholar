@@ -142,7 +142,7 @@ Output:
 
 > **Warning**
 >
-> From the [official documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper_search): "Because of the subtleties of finding partial phrase matches in different parts of the document, be cautious about interpreting the total field as a count of documents containing any particular word in the query."
+> From the [official documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_relevance_search): "Because of the subtleties of finding partial phrase matches in different parts of the document, be cautious about interpreting the total field as a count of documents containing any particular word in the query."
 
 To search for authors by name:
 
@@ -320,7 +320,7 @@ Output:
 
 #### ```fields_of_study: list```
 
-Restrict results to a given list of fields of study. Check [official documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper_search) for a list of available fields.
+Restrict results to a given list of fields of study. Check [official documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_relevance_search) for a list of available fields.
 
 ```python
 from semanticscholar import SemanticScholar

@@ -354,12 +354,21 @@ class AsyncSemanticScholar:
                 fields: list = None,
                 publication_date_or_year: str = None,
                 min_citation_count: int = None,
-                limit: int = 100
+                limit: int = 100,
+                bulk: bool = False,
+                sort: str = None
             ) -> PaginatedResults:
-        '''Search for papers by keyword
+        '''Search for papers by keyword. Performs a search query based on the \
+            S2 search relevance algorithm, or a bulk retrieval of basic paper \
+            data without search relevance (if bulk=True). Paper relevance \
+            search is the default behavior and returns up to 1,000 results. \
+            Bulk retrieval instead returns up to 10,000,000 results (1,000 \
+            in each page).
 
         :calls: `GET /paper/search <https://api.semanticscholar.org/api-docs/\
-            graph#tag/Paper-Data/operation/get_graph_get_paper_search>`_
+            graph#tag/Paper-Data/operation/get_graph_paper_relevance_search>`_
+        :calls: `GET /paper/search <https://api.semanticscholar.org/api-docs/\
+            graph#tag/Paper-Data/operation/get_graph_paper_bulk_search>`_
 
         :param str query: plain-text search query string.
         :param str year: (optional) restrict results to the given range of \
@@ -380,6 +389,13 @@ class AsyncSemanticScholar:
                with at least the given number of citations.
         :param int limit: (optional) maximum number of results to return \
                (must be <= 100).
+        :param bool bulk: (optional) bulk retrieval of basic paper data \
+               without search relevance (ignores the limit parameter if True \
+               and returns up to 1,000 results in each page).
+        :param str sort: (optional) sorts results (only if bulk=True) using \
+               <field>:<order> format, where "field" is either paperId, \
+               publicationDate, or citationCount, and "order" is asc \
+               (ascending) or desc (descending).
         :returns: query results.
         :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
@@ -393,6 +409,14 @@ class AsyncSemanticScholar:
 
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f'{base_url}/paper/search'
+        
+        if bulk:
+            url += '/bulk'
+            if sort:
+                query += f'&sort={sort}'
+        elif sort:
+            warnings.warn(
+                'The sort parameter is only used when bulk=True.')
 
         query += f'&year={year}' if year else ''
 
@@ -423,6 +447,8 @@ class AsyncSemanticScholar:
 
         if min_citation_count:
             query += f'&minCitationCount={min_citation_count}'
+        
+        max_results = 10000000 if bulk else 1000
 
         results = await PaginatedResults.create(
                 self._requester,
@@ -432,7 +458,7 @@ class AsyncSemanticScholar:
                 fields,
                 limit,
                 self.auth_header,
-                max_results=1000
+                max_results=max_results
             )
 
         return results

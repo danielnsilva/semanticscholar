@@ -3,6 +3,7 @@ import asyncio
 import nest_asyncio
 
 from semanticscholar.ApiRequester import ApiRequester
+from semanticscholar.SemanticScholarException import NoMorePagesException
 
 
 class PaginatedResults:
@@ -40,6 +41,7 @@ class PaginatedResults:
         self._next = 0
         self._parameters = ''
         self._items = []
+        self._continuation_token = None
         nest_asyncio.apply()
     
     @classmethod
@@ -104,9 +106,11 @@ class PaginatedResults:
         return self._items[key]
 
     def _has_next_page(self) -> bool:
-        has_more_results = (self._offset + self._limit) == self._next
-        under_limit = (self._offset + self._limit) < (self._max_results - 1)
-        return has_more_results and under_limit
+        has_token = self._continuation_token is not None
+        next_page_offset = self._offset + self._limit
+        has_more_results = next_page_offset == self._next or has_token
+        is_under_limit = next_page_offset < (self._max_results - 1)
+        return has_more_results and is_under_limit
 
     async def _request_data(self) -> Union[dict, List[dict]]:
         return await self._requester.get_data_async(
@@ -124,9 +128,10 @@ class PaginatedResults:
 
     def _get_next_page(self) -> list:
 
-        self._build_params()
+        if not self._has_next_page():
+            raise NoMorePagesException('No more pages to fetch.')
 
-        result_items = []
+        self._build_params()
 
         loop = asyncio.get_event_loop()
         results = loop.run_until_complete(self._request_data())
@@ -136,6 +141,9 @@ class PaginatedResults:
     def _build_params(self) -> None:
 
         self._parameters = f'query={self._query}' if self._query else ''
+
+        if self._continuation_token:
+            self._parameters += f'&token={self._continuation_token}'
 
         fields = ','.join(self._fields)
         self._parameters += f'&fields={fields}'
@@ -156,8 +164,9 @@ class PaginatedResults:
 
             self._data = results['data']
             self._total = results['total'] if 'total' in results else 0
-            self._offset = results['offset']
+            self._offset = results['offset'] if 'offset' in results else 0
             self._next = results['next'] if 'next' in results else 0
+            self._continuation_token = results['token'] if 'token' in results else None
 
             for item in results['data']:
                 result_items.append(self._data_type(item))

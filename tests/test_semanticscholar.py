@@ -16,7 +16,7 @@ from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, ObjectNotFoundException)
+    BadQueryParametersException, ObjectNotFoundException, NoMorePagesException)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -310,7 +310,7 @@ class SemanticScholarTest(unittest.TestCase):
     def test_search_paper_traversing_results(self):
         data = self.sch.search_paper('sublinear near optimal edit distance')
         all_results = [item.title for item in data]
-        self.assertRaises(BadQueryParametersException, data.next_page)
+        self.assertRaises(NoMorePagesException, data.next_page)
         self.assertEqual(len(all_results), len(data.items))
 
     @test_vcr.use_cassette
@@ -387,6 +387,55 @@ class SemanticScholarTest(unittest.TestCase):
     def test_search_paper_min_citation_count(self):
         data = self.sch.search_paper('turing', min_citation_count=1000)
         self.assertTrue(all([item.citationCount >= 1000 for item in data]))
+
+    @test_vcr.use_cassette
+    def test_search_paper_bulk_retrieval(self):
+        data = self.sch.search_paper('kubernetes', bulk=True)
+        self.assertEqual(data.total, 2463)
+        self.assertEqual(len(data.items), 1000)
+        self.assertEqual(
+            data[0].title,
+            'Kubernetes Cluster for Automating Software '
+            'Production Environment')
+
+    @test_vcr.use_cassette
+    def test_search_paper_bulk_retrieval_next_page(self):
+        data = self.sch.search_paper('kubernetes', bulk=True)
+        data.next_page()
+        self.assertEqual(len(data), 2000)
+
+    @test_vcr.use_cassette
+    def test_search_paper_bulk_retrieval_traversing_results(self):
+        data = self.sch.search_paper('kubernetes', bulk=True)
+        all_results = [item.title for item in data]
+        self.assertRaises(NoMorePagesException, data.next_page)
+        self.assertEqual(len(all_results), len(data.items))
+
+    @test_vcr.use_cassette
+    def test_search_paper_bulk_retrieval_sorted_results_default_order(self):
+        data = self.sch.search_paper(
+            'kubernetes', bulk=True, sort='citationCount')
+        all_data = [item.citationCount for item in data]
+        self.assertTrue(sorted(all_data) == all_data)
+
+    @test_vcr.use_cassette
+    def test_search_paper_bulk_retrieval_sorted_results_asc(self):
+        data = self.sch.search_paper(
+            'kubernetes', bulk=True, sort='citationCount:asc')
+        all_data = [item.citationCount for item in data]
+        self.assertTrue(sorted(all_data) == all_data)
+
+    @test_vcr.use_cassette
+    def test_search_paper_bulk_retrieval_sorted_results_desc(self):
+        data = self.sch.search_paper(
+            'kubernetes', bulk=True, sort='citationCount:desc')
+        all_data = [item.citationCount for item in data]
+        self.assertTrue(sorted(all_data, reverse=True) == all_data)
+
+    @test_vcr.use_cassette
+    def test_search_paper_with_relevance_and_sort(self):
+        with self.assertWarns(UserWarning):
+            self.sch.search_paper('kubernetes', sort='citationCount')
 
     @test_vcr.use_cassette
     def test_search_author(self):
@@ -637,7 +686,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     async def test_search_paper_traversing_results_async(self):
         data = await self.sch.search_paper('sublinear near optimal edit distance')
         all_results = [item.title for item in data]
-        with self.assertRaises(BadQueryParametersException):
+        with self.assertRaises(NoMorePagesException):
             await data.next_page()
         self.assertEqual(len(all_results), len(data.items))
 
@@ -712,6 +761,55 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     async def test_search_paper_min_citation_count_async(self):
         data = await self.sch.search_paper('turing', min_citation_count=1000)
         self.assertTrue(all([item.citationCount >= 1000 for item in data]))
+
+    @test_vcr.use_cassette
+    async def test_search_paper_bulk_retrieval_async(self):
+        data = await self.sch.search_paper('kubernetes', bulk=True)
+        self.assertEqual(data.total, 2464)
+        self.assertEqual(len(data.items), 1000)
+        self.assertEqual(
+            data[0].title,
+            'Kubernetes Cluster for Automating Software '
+            'Production Environment')
+
+    @test_vcr.use_cassette
+    async def test_search_paper_bulk_retrieval_next_page_async(self):
+        data = await self.sch.search_paper('kubernetes', bulk=True)
+        data.next_page()
+        self.assertEqual(len(data), 2000)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_bulk_retrieval_traversing_results_async(self):
+        data = await self.sch.search_paper('kubernetes', bulk=True)
+        all_results = [item.title for item in data]
+        self.assertRaises(NoMorePagesException, data.next_page)
+        self.assertEqual(len(all_results), len(data.items))
+
+    @test_vcr.use_cassette
+    async def test_search_paper_bulk_retrieval_sorted_results_default_order_async(self):
+        data = await self.sch.search_paper(
+            'kubernetes', bulk=True, sort='citationCount')
+        all_data = [item.citationCount for item in data]
+        self.assertTrue(sorted(all_data) == all_data)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_bulk_retrieval_sorted_results_asc_async(self):
+        data = await self.sch.search_paper(
+            'kubernetes', bulk=True, sort='citationCount:asc')
+        all_data = [item.citationCount for item in data]
+        self.assertTrue(sorted(all_data) == all_data)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_bulk_retrieval_sorted_results_desc_async(self):
+        data = await self.sch.search_paper(
+            'kubernetes', bulk=True, sort='citationCount:desc')
+        all_data = [item.citationCount for item in data]
+        self.assertTrue(sorted(all_data, reverse=True) == all_data)
+
+    @test_vcr.use_cassette
+    async def test_search_paper_with_relevance_and_sort_async(self):
+        with self.assertWarns(UserWarning):
+            await self.sch.search_paper('kubernetes', sort='citationCount')
 
     @test_vcr.use_cassette
     async def test_search_author_async(self):

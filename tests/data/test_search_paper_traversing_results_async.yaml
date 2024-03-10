@@ -11,7 +11,7 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.25.2
+      - python-httpx/0.26.0
     method: GET
     uri: https://api.semanticscholar.org/graph/v1/paper/search?query=sublinear%20near%20optimal%20edit%20distance&fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
   response:
@@ -4008,56 +4008,4 @@ interactions:
       - 317ecc14-0f6b-42fe-9735-d53f1fddb798
     http_version: HTTP/1.1
     status_code: 200
-- request:
-    body: ''
-    headers:
-      accept:
-      - '*/*'
-      accept-encoding:
-      - gzip, deflate
-      connection:
-      - keep-alive
-      host:
-      - api.semanticscholar.org
-      user-agent:
-      - python-httpx/0.25.2
-    method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/search?query=sublinear%20near%20optimal%20edit%20distance&fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=100&limit=100
-  response:
-    content: '{"error":"Requested data for this limit and/or offset is not available"}
-
-      '
-    headers:
-      Access-Control-Allow-Origin:
-      - '*'
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '73'
-      Content-Type:
-      - application/json
-      Date:
-      - Wed, 27 Dec 2023 21:56:55 GMT
-      Via:
-      - 1.1 670127d831d6fe067a1d0e61c13cef54.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - QU4zgj9jhZpzimTvOTRs4DQTxEGx6rlkh2voXLRGmWnGhwSaRUHOqg==
-      X-Amz-Cf-Pop:
-      - GRU3-P4
-      X-Cache:
-      - Error from cloudfront
-      x-amz-apigw-id:
-      - Qn2SREOpPHcEnlQ=
-      x-amzn-Remapped-Connection:
-      - keep-alive
-      x-amzn-Remapped-Content-Length:
-      - '73'
-      x-amzn-Remapped-Date:
-      - Wed, 27 Dec 2023 21:56:55 GMT
-      x-amzn-Remapped-Server:
-      - gunicorn
-      x-amzn-RequestId:
-      - 4be46c12-dadd-468a-aa07-2e726bb55028
-    http_version: HTTP/1.1
-    status_code: 400
 version: 1
