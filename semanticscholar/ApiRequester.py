@@ -14,14 +14,16 @@ from semanticscholar.SemanticScholarException import \
 
 class ApiRequester:
 
-    def __init__(self, timeout, debug) -> None:
+    def __init__(self, timeout, debug, retry: bool = True) -> None:
         '''
         :param float timeout: an exception is raised \
             if the server has not issued a response for timeout seconds.
         :param bool debug: enable debug mode.
+        :param bool retry: enable retry mode.
         '''
         self.timeout = timeout
         self.debug = debug
+        self.retry = retry
 
     @property
     def timeout(self) -> int:
@@ -36,21 +38,21 @@ class ApiRequester:
         :param int timeout:
         '''
         self._timeout = timeout
-    
+
     @property
     def debug(self) -> bool:
         '''
         :type: :class:`bool`
         '''
         return self._debug
-    
+
     @debug.setter
     def debug(self, debug: bool) -> None:
         '''
         :param bool debug:
         '''
         self._debug = debug
-    
+
     def _curl_cmd(self, url: str, method: str, headers: dict, payload: dict = None) -> str:
         curl_cmd = f'curl -X {method}'
         for key, value in headers.items():
@@ -68,11 +70,6 @@ class ApiRequester:
         print(f'cURL command:\n{self._curl_cmd(url, method, headers, payload)}')
         print('-' * 80)
 
-    @retry(
-        wait=wait_fixed(30),
-        retry=retry_if_exception_type(ConnectionRefusedError),
-        stop=stop_after_attempt(10)
-    )
     async def get_data_async(
                 self,
                 url: str,
@@ -80,6 +77,22 @@ class ApiRequester:
                 headers: dict,
                 payload: dict = None
             ) -> Union[dict, List[dict]]:
+        if self.retry:
+            return await self._get_data_async(url, parameters, headers, payload)
+        return await self._get_data_async.retry_with(stop=stop_after_attempt(1))(self, url=url, parameters=parameters, headers=headers, payload=payload)
+
+    @retry(
+        wait=wait_fixed(30),
+        retry=retry_if_exception_type(ConnectionRefusedError),
+        stop=stop_after_attempt(10)
+    )
+    async def _get_data_async(
+            self,
+            url: str,
+            parameters: str,
+            headers: dict,
+            payload: dict = None
+    ) -> Union[dict, List[dict]]:
         '''Get data from Semantic Scholar API
 
         :param str url: absolute URL to API endpoint.
@@ -120,7 +133,7 @@ class ApiRequester:
             raise Exception(data['message'])
 
         return data
-    
+
     def get_data(
                 self,
                 url: str,
@@ -143,4 +156,3 @@ class ApiRequester:
                 payload=payload
             )
         )
-    

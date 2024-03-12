@@ -18,7 +18,8 @@ class SemanticScholar():
                 timeout: int = 30,
                 api_key: str = None,
                 api_url: str = None,
-                debug: bool = False
+                debug: bool = False,
+                retry: bool = True,
             ) -> None:
         '''
         :param float timeout: (optional) an exception is raised\
@@ -26,6 +27,7 @@ class SemanticScholar():
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
         :param bool debug: (optional) enable debug mode.
+        :param bool retry: enable retry mode.
         '''
         nest_asyncio.apply()
         self._timeout = timeout
@@ -34,7 +36,8 @@ class SemanticScholar():
             timeout=timeout,
             api_key=api_key,
             api_url=api_url,
-            debug=debug
+            debug=debug,
+            retry=retry
         )
 
     @property
