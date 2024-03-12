@@ -28,7 +28,8 @@ class AsyncSemanticScholar:
                 timeout: int = 30,
                 api_key: str = None,
                 api_url: str = None,
-                debug: bool = False
+                debug: bool = False,
+                retry: bool = True,
             ) -> None:
         '''
         :param float timeout: (optional) an exception is raised\
@@ -36,6 +37,7 @@ class AsyncSemanticScholar:
         :param str api_key: (optional) private API key.
         :param str api_url: (optional) custom API url.
         :param bool debug: (optional) enable debug mode.
+        :param bool retry: enable retry mode.
         '''
 
         if api_url:
@@ -48,7 +50,8 @@ class AsyncSemanticScholar:
 
         self._timeout = timeout
         self._debug = debug
-        self._requester = ApiRequester(self._timeout, self._debug)
+        self._retry = retry
+        self._requester = ApiRequester(self._timeout, self._debug, self._retry)
 
     @property
     def timeout(self) -> int:
@@ -64,14 +67,14 @@ class AsyncSemanticScholar:
         '''
         self._timeout = timeout
         self._requester.timeout = timeout
-    
+
     @property
     def debug(self) -> bool:
         '''
         :type: :class:`bool`
         '''
         return self._debug
-    
+
     @debug.setter
     def debug(self, debug: bool) -> None:
         '''
@@ -168,7 +171,7 @@ class AsyncSemanticScholar:
         data = await self._requester.get_data_async(
             url, parameters, self.auth_header, payload)
         papers = [Paper(item) for item in data if item is not None]
-        
+
         not_found_ids = self._get_not_found_ids(paper_ids, papers)
 
         if not_found_ids:
@@ -177,7 +180,7 @@ class AsyncSemanticScholar:
         return papers if not return_not_found else (papers, not_found_ids)
 
     def _get_not_found_ids(self, paper_ids, papers):
-        
+
         prefix_mapping = {
             'ARXIV': 'ArXiv',
             'MAG': 'MAG',
@@ -197,9 +200,8 @@ class AsyncSemanticScholar:
                         found_ids.add(
                             f'{prefix_mapping[prefix.lower()]}:{value}')
                     else:
-                        found_ids.add(f'{value}')        
-        found_ids = {id.lower() for id in found_ids}  
-              
+                        found_ids.add(f'{value}')
+        found_ids = {id.lower() for id in found_ids}
         not_found_ids = [id for id in paper_ids if id.lower() not in found_ids]
 
         return not_found_ids
@@ -433,7 +435,6 @@ class AsyncSemanticScholar:
         if fields_of_study:
             fields_of_study = ','.join(fields_of_study)
             query += f'&fieldsOfStudy={fields_of_study}'
-        
         if publication_date_or_year:
             single_date_regex = r'\d{4}(-\d{2}(-\d{2})?)?'
             full_regex = r'^({0})?(:({0})?)?$'.format(single_date_regex)
