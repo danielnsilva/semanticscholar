@@ -5,7 +5,7 @@ with open("README.md", "r", encoding='utf8') as fh:
 
 setup(
     name='semanticscholar',
-    version='0.7.0',
+    version='0.8.0',
     description='Unofficial Python client library for Semantic Scholar APIs.',
     long_description=long_description,
     long_description_content_type="text/markdown",
