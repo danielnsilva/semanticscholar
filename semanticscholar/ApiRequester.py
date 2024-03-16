@@ -53,7 +53,13 @@ class ApiRequester:
         '''
         self._debug = debug
 
-    def _curl_cmd(self, url: str, method: str, headers: dict, payload: dict = None) -> str:
+    def _curl_cmd(
+                self,
+                url: str,
+                method: str,
+                headers: dict,
+                payload: dict = None
+            ) -> str:
         curl_cmd = f'curl -X {method}'
         for key, value in headers.items():
             curl_cmd += f' -H \'{key}: {value}\''
@@ -71,15 +77,27 @@ class ApiRequester:
         print('-' * 80)
 
     async def get_data_async(
-                self,
-                url: str,
-                parameters: str,
-                headers: dict,
-                payload: dict = None
-            ) -> Union[dict, List[dict]]:
+        self,
+        url: str,
+        parameters: str,
+        headers: dict,
+        payload: dict = None
+    ) -> Union[dict, List[dict]]:
+        '''Get data from Semantic Scholar API
+
+        :param str url: absolute URL to API endpoint.
+        :param str parameters: the parameters to add in the URL.
+        :param str headers: request headers.
+        :param dict payload: data for POST requests.
+        :returns: data or empty :class:`dict` if not found.
+        :rtype: :class:`dict` or :class:`List` of :class:`dict`
+        '''
         if self.retry:
-            return await self._get_data_async(url, parameters, headers, payload)
-        return await self._get_data_async.retry_with(stop=stop_after_attempt(1))(self, url=url, parameters=parameters, headers=headers, payload=payload)
+            return await self._get_data_async(
+                url, parameters, headers, payload)
+        return await self._get_data_async.retry_with(
+                stop=stop_after_attempt(1)
+            )(self, url, parameters, headers, payload)
 
     @retry(
         wait=wait_fixed(30),
@@ -93,15 +111,6 @@ class ApiRequester:
             headers: dict,
             payload: dict = None
     ) -> Union[dict, List[dict]]:
-        '''Get data from Semantic Scholar API
-
-        :param str url: absolute URL to API endpoint.
-        :param str parameters: the parameters to add in the URL.
-        :param str headers: request headers.
-        :param dict payload: data for POST requests.
-        :returns: data or empty :class:`dict` if not found.
-        :rtype: :class:`dict` or :class:`List` of :class:`dict`
-        '''
 
         url = f'{url}?{parameters.lstrip("&")}'
         method = 'POST' if payload else 'GET'
@@ -111,7 +120,8 @@ class ApiRequester:
 
         async with httpx.AsyncClient() as client:
             r = await client.request(
-                method, url, timeout=self._timeout, headers=headers, json=payload)
+                method, url, timeout=self._timeout, headers=headers,
+                json=payload)
 
         data = {}
         if r.status_code == 200:
