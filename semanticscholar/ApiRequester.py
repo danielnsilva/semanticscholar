@@ -5,7 +5,7 @@ import asyncio
 import warnings
 import inspect
 import json
-from tenacity import (retry, retry_if_exception_type, stop_after_attempt,
+from tenacity import (retry as rerun, retry_if_exception_type, stop_after_attempt,
                       wait_fixed)
 
 from semanticscholar.SemanticScholarException import \
@@ -113,7 +113,7 @@ class ApiRequester:
                 stop=stop_after_attempt(1)
             )(self, url, parameters, headers, payload)
 
-    @retry(
+    @rerun(
         wait=wait_fixed(30),
         retry=retry_if_exception_type(ConnectionRefusedError),
         stop=stop_after_attempt(10)
