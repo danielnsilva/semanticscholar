@@ -53,6 +53,20 @@ class ApiRequester:
         '''
         self._debug = debug
 
+    @property
+    def retry(self) -> bool:
+        '''
+        :type: :class:`bool`
+        '''
+        return self._retry
+    
+    @retry.setter
+    def retry(self, retry: bool) -> None:
+        '''
+        :param bool retry:
+        '''
+        self._retry = retry
+
     def _curl_cmd(
                 self,
                 url: str,

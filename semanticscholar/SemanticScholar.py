@@ -32,6 +32,7 @@ class SemanticScholar():
         nest_asyncio.apply()
         self._timeout = timeout
         self._debug = debug
+        self._retry = retry
         self._AsyncSemanticScholar = AsyncSemanticScholar(
             timeout=timeout,
             api_key=api_key,
@@ -69,6 +70,21 @@ class SemanticScholar():
         '''
         self._debug = debug
         self._AsyncSemanticScholar.debug = debug
+
+    @property
+    def retry(self) -> bool:
+        '''
+        :type: :class:`bool`
+        '''
+        return self._retry
+    
+    @retry.setter
+    def retry(self, retry: bool) -> None:
+        '''
+        :param bool retry:
+        '''
+        self._retry = retry
+        self._AsyncSemanticScholar.retry = retry
 
     def get_paper(
                 self,
