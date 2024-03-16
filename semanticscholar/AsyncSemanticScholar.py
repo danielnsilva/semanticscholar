@@ -202,6 +202,7 @@ class AsyncSemanticScholar:
                     else:
                         found_ids.add(f'{value}')
         found_ids = {id.lower() for id in found_ids}
+
         not_found_ids = [id for id in paper_ids if id.lower() not in found_ids]
 
         return not_found_ids
@@ -435,6 +436,7 @@ class AsyncSemanticScholar:
         if fields_of_study:
             fields_of_study = ','.join(fields_of_study)
             query += f'&fieldsOfStudy={fields_of_study}'
+
         if publication_date_or_year:
             single_date_regex = r'\d{4}(-\d{2}(-\d{2})?)?'
             full_regex = r'^({0})?(:({0})?)?$'.format(single_date_regex)
