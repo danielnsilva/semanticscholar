@@ -3,10 +3,9 @@ from typing import List, Union
 import httpx
 import asyncio
 import warnings
-import inspect
 import json
-from tenacity import (retry as rerun, retry_if_exception_type, stop_after_attempt,
-                      wait_fixed)
+from tenacity import (retry as rerun, retry_if_exception_type,
+                      stop_after_attempt, wait_fixed)
 
 from semanticscholar.SemanticScholarException import \
     BadQueryParametersException, ObjectNotFoundException
