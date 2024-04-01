@@ -38,8 +38,7 @@ extensions = [
     'sphinx_copybutton'
 ]
 
-templates_path = ['_templates', '../build/html']
-html_additional_pages = {'index': 'overview.html'}
+templates_path = ['_templates']
 exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
