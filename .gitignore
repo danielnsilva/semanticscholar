@@ -6,6 +6,6 @@ __pycache__/
 .vscode/
 MANIFEST.in
 .coverage
-docs/
+docs/build/
 .devcontainer/
 .idea
