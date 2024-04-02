@@ -8,7 +8,7 @@
 
 Unofficial Python client library for [Semantic Scholar APIs](https://api.semanticscholar.org/), currently supporting the Academic Graph API and Recommendations API.
 
-![Usage example](search_paper.gif)
+![Usage example](https://github.com/danielnsilva/semanticscholar/blob/master/search_paper.gif)
 
 ## Table of Contents
 
