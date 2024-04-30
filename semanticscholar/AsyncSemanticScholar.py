@@ -514,16 +514,20 @@ class AsyncSemanticScholar:
     async def get_authors(
                 self,
                 author_ids: List[str],
-                fields: list = None
-            ) -> List[Author]:
+                fields: list = None,
+                return_not_found: bool = False
+            ) -> Union[List[Author], Tuple[List[Author], List[str]]]:
         '''Get details for multiple authors at once
 
         :calls: `POST /author/batch <https://api.semanticscholar.org/api-docs/\
             graph#tag/Author-Data/operation/get_graph_get_author>`_
 
         :param str author_ids: list of S2AuthorId (must be <= 1000).
-        :returns: author data
-        :rtype: :class:`List` of :class:`semanticscholar.Author.Author`
+        :returns: author data, and optionally list of IDs not found.
+        :rtype: :class:`List` of :class:`semanticscholar.Author.Author`\
+            or :class:`Tuple`[:class:`List` of\
+            :class:`semanticscholar.Author.Author`,\
+            :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no author was found.
         '''
 
@@ -544,9 +548,15 @@ class AsyncSemanticScholar:
 
         data = await self._requester.get_data_async(
             url, parameters, self.auth_header, payload)
-        authors = [Author(item) for item in data]
+        authors = [Author(item) for item in data if item is not None]
 
-        return authors
+        found_ids = [author.authorId for author in authors]
+        not_found_ids = list(set(author_ids) - set(found_ids))
+
+        if not_found_ids:
+            warnings.warn(f"IDs not found: {not_found_ids}")
+
+        return authors if not return_not_found else (authors, not_found_ids)
 
     async def get_author_papers(
                 self,

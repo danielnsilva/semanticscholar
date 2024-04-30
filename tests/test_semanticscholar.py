@@ -273,6 +273,22 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertRaises(ValueError, self.sch.get_authors, list_of_author_ids)
 
     @test_vcr.use_cassette
+    def test_get_authors_not_found_warning(self):
+        list_of_author_ids = ['0', '3234559', '1726629', '1711844']
+        with self.assertWarns(UserWarning):
+            self.sch.get_authors(list_of_author_ids)
+
+    @test_vcr.use_cassette
+    def test_get_authors_return_not_found(self):
+        list_of_author_ids = ['0', '3234559', '1726629', '1711844']
+        data = self.sch.get_authors(list_of_author_ids, return_not_found=True)
+        authors = data[0]
+        self.assertEqual(len(authors), 3)
+        not_found = data[1]
+        self.assertEqual(len(not_found), 1)
+        self.assertEqual(not_found[0], '0')
+
+    @test_vcr.use_cassette
     def test_get_author_papers(self):
         data = self.sch.get_author_papers(1723755, limit=100)
         self.assertEqual(data.offset, 0)
@@ -669,6 +685,22 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         list_of_author_ids = []
         with self.assertRaises(ValueError):
             await self.sch.get_authors(list_of_author_ids)
+
+    @test_vcr.use_cassette
+    async def test_get_authors_not_found_warning_async(self):
+        list_of_author_ids = ['0', '3234559', '1726629', '1711844']
+        with self.assertWarns(UserWarning):
+            await self.sch.get_authors(list_of_author_ids)
+
+    @test_vcr.use_cassette
+    async def test_get_authors_return_not_found_async(self):
+        list_of_author_ids = ['0', '3234559', '1726629', '1711844']
+        data = await self.sch.get_authors(list_of_author_ids, return_not_found=True)
+        authors = data[0]
+        self.assertEqual(len(authors), 3)
+        not_found = data[1]
+        self.assertEqual(len(not_found), 1)
+        self.assertEqual(not_found[0], '0')
 
     @test_vcr.use_cassette
     async def test_not_found_async(self):

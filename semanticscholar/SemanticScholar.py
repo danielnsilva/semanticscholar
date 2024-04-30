@@ -380,16 +380,20 @@ class SemanticScholar():
     def get_authors(
                 self,
                 author_ids: List[str],
-                fields: list = None
-            ) -> List[Author]:
+                fields: list = None,
+                return_not_found: bool = False
+            ) -> Union[List[Author], Tuple[List[Author], List[str]]]:
         '''Get details for multiple authors at once
 
         :calls: `POST /author/batch <https://api.semanticscholar.org/api-docs/\
             graph#tag/Author-Data/operation/get_graph_get_author>`_
 
         :param str author_ids: list of S2AuthorId (must be <= 1000).
-        :returns: author data
-        :rtype: :class:`List` of :class:`semanticscholar.Author.Author`
+        :returns: author data, and optionally list of IDs not found.
+        :rtype: :class:`List` of :class:`semanticscholar.Author.Author`\
+            or :class:`Tuple`[:class:`List` of\
+            :class:`semanticscholar.Author.Author`,\
+            :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no author was found.
         '''
 
@@ -397,7 +401,8 @@ class SemanticScholar():
         authors = loop.run_until_complete(
             self._AsyncSemanticScholar.get_authors(
                 author_ids=author_ids,
-                fields=fields
+                fields=fields,
+                return_not_found=return_not_found
                 )
         )
 
