@@ -264,6 +264,14 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
 
+    def test_get_authors_list_size_exceeded(self):
+        list_of_author_ids = [str(i) for i in range(1001)]
+        self.assertRaises(ValueError, self.sch.get_authors, list_of_author_ids)
+
+    def test_get_authors_list_empty(self):
+        list_of_author_ids = []
+        self.assertRaises(ValueError, self.sch.get_authors, list_of_author_ids)
+
     @test_vcr.use_cassette
     def test_get_author_papers(self):
         data = self.sch.get_author_papers(1723755, limit=100)
@@ -651,6 +659,16 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
+
+    async def test_get_authors_list_size_exceeded_async(self):
+        list_of_author_ids = [str(i) for i in range(1001)]
+        with self.assertRaises(ValueError):
+            await self.sch.get_authors(list_of_author_ids)
+
+    async def test_get_authors_list_empty_async(self):
+        list_of_author_ids = []
+        with self.assertRaises(ValueError):
+            await self.sch.get_authors(list_of_author_ids)
 
     @test_vcr.use_cassette
     async def test_not_found_async(self):

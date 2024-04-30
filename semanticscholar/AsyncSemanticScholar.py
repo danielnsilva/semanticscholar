@@ -527,6 +527,10 @@ class AsyncSemanticScholar:
         :raises: BadQueryParametersException: if no author was found.
         '''
 
+        if len(author_ids) > 1000 or len(author_ids) == 0:
+            raise ValueError(
+                'The author_ids parameter must be a list of 1 to 1000 IDs.')
+
         if not fields:
             fields = Author.SEARCH_FIELDS
 
