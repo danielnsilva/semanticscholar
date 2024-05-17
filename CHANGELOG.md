@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2024-05-17
+
+### Bug Fixes
+
+- Fixed [#87](https://github.com/danielnsilva/semanticscholar/issues/87): `get_authors()` fails when one of the IDs was not found. ([ae03dbb](https://github.com/danielnsilva/semanticscholar/commit/ae03dbb))
+
 ## [0.8.0] - 2024-03-15
 
 ### New Features
@@ -164,7 +170,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.3] - 2019-08-02
 
-[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.0...HEAD
+[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.1...HEAD
+[0.8.1]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.5.0...v0.6.0
