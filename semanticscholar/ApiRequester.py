@@ -74,8 +74,9 @@ class ApiRequester:
                 payload: dict = None
             ) -> str:
         curl_cmd = f'curl -X {method}'
-        for key, value in headers.items():
-            curl_cmd += f' -H \'{key}: {value}\''
+        if headers:
+            for key, value in headers.items():
+                curl_cmd += f' -H \'{key}: {value}\''
         curl_cmd += f' -d \'{json.dumps(payload)}\'' if payload else ''
         curl_cmd += f' {url}'
         return curl_cmd
