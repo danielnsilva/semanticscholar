@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.2] - 2024-05-31
+
+### Bug Fixes
+
+- Removed deprecated `authors.aliases` from `Paper`. ([ed92c37](https://github.com/danielnsilva/semanticscholar/commit/ed92c37))
+- Fixed error generating cURL command. ([bc5c916](https://github.com/danielnsilva/semanticscholar/commit/bc5c916))
+
 ## [0.8.1] - 2024-05-17
 
 ### Bug Fixes
@@ -170,7 +177,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.3] - 2019-08-02
 
-[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.1...HEAD
+[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.2...HEAD
+[0.8.2]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.6.0...v0.7.0
