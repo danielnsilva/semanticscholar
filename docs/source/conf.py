@@ -43,7 +43,6 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# html_theme = 'alabaster'
 html_theme = 'furo'
 html_static_path = ['_static']
 html_title = 'semanticscholar'
@@ -54,7 +53,7 @@ autoclass_content = 'both'
 # -- Options for autodoc -----------------------------------------------------
 autodoc_member_order = 'groupwise'
 
-# --- API Endpoints ---
+# -- API Endpoints -----------------------------------------------------------
 
 api_endpoints = dict()
 className = 'SemanticScholar'
@@ -93,7 +92,7 @@ api_file.seek(0)
 api_file.write(api_file_contents)
 api_file.close()
 
-# --- SemanticScholar objects ---
+# -- SemanticScholar objects -------------------------------------------------
 
 def find_subclasses(module, base_class):
     '''Return all subclasses of a base class within a module.'''
@@ -150,7 +149,7 @@ for cls in sorted(final_subclasses_set, key=lambda x: x.__name__):
         s2object_file.write('\t:members:\n')
         s2object_file.write('\t:inherited-members:\n')
 
-# --- Changelog ---
+# -- Changelog ---------------------------------------------------------------
 
 with open('../../CHANGELOG.md', 'r', encoding='utf-8') as changelog_file:
     changelog = changelog_file.read()
