@@ -1,0 +1,63 @@
+name: Bug report
+description: Report any unexpected behavior, errors, or malfunctions you have observed.
+labels: [bug]
+
+body:
+
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to report a bug. To assist in effectively addressing the issue you have encountered, please provide the following information. Before creating a new issue, we kindly request checking the issue tracker for any existing reports related to the bug.
+
+- type: textarea
+  id: bug-description
+  attributes:
+    label: Bug description
+    description: A clear and concise description of what the bug is.
+    placeholder: I was trying to do X, but Y happened instead.
+  validations:
+    required: true
+
+- type: textarea
+  id: code-example
+  attributes:
+    label: Reproducible code example
+    description: A code example that reproduces the bug.
+    placeholder: |
+      from semanticscholar import SemanticScholar
+      sch = SemanticScholar()
+      << your code here >>
+    render: Python
+  validations:
+    required: true
+
+- type: textarea
+  id: error-message
+  attributes:
+    label: Error message
+    description: The error message you received. Please include the full traceback.
+    placeholder: |
+      Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+      AttributeError: 'Author' object has no attribute 'names'
+    render: Shell
+  validations:
+    required: true
+
+- type: input
+  id: package-version
+  attributes:
+    label: Package version
+    description: The version of the package you are using.
+    placeholder: 0.1.0
+  validations:
+    required: true
+
+- type: input
+  id: python-version
+  attributes:
+    label: Python version
+    description: The version of Python you are using.
+    placeholder: 3.11.0
+  validations:
+    required: true

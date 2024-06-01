@@ -1,0 +1,19 @@
+name: Question
+description: Ask a question about the package.
+labels: [question]
+
+body:
+
+- type: markdown
+  attributes:
+    value: |
+      Before creating a new issue, we kindly request checking the issue tracker for any existing related questions.
+
+- type: textarea
+  id: question
+  attributes:
+    label: Question
+    description: A clear and concise question about the package.
+    placeholder: How do I do X?
+  validations:
+    required: true
