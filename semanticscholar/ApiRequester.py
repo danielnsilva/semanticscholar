@@ -1,27 +1,31 @@
+import asyncio
+import json
+import logging
+import warnings
 from typing import List, Union
 
 import httpx
-import asyncio
-import warnings
-import json
-from tenacity import (retry as rerun, retry_if_exception_type,
-                      stop_after_attempt, wait_fixed)
+from tenacity import retry as rerun
+from tenacity import retry_if_exception_type, stop_after_attempt, wait_fixed
+
+from semanticscholar.SemanticScholarException import (
+    BadQueryParametersException, ObjectNotFoundException)
 
 from semanticscholar.SemanticScholarException import \
     BadQueryParametersException, ObjectNotFoundException
 
+logger = logging.getLogger('semanticscholar')
+
 
 class ApiRequester:
 
-    def __init__(self, timeout, debug, retry: bool = True) -> None:
+    def __init__(self, timeout, retry: bool = True) -> None:
         '''
         :param float timeout: an exception is raised \
             if the server has not issued a response for timeout seconds.
-        :param bool debug: enable debug mode.
         :param bool retry: enable retry mode.
         '''
         self.timeout = timeout
-        self.debug = debug
         self.retry = retry
 
     @property
@@ -37,20 +41,6 @@ class ApiRequester:
         :param int timeout:
         '''
         self._timeout = timeout
-
-    @property
-    def debug(self) -> bool:
-        '''
-        :type: :class:`bool`
-        '''
-        return self._debug
-
-    @debug.setter
-    def debug(self, debug: bool) -> None:
-        '''
-        :param bool debug:
-        '''
-        self._debug = debug
 
     @property
     def retry(self) -> bool:
@@ -80,15 +70,6 @@ class ApiRequester:
         curl_cmd += f' -d \'{json.dumps(payload)}\'' if payload else ''
         curl_cmd += f' {url}'
         return curl_cmd
-
-    def _print_debug(self, url, headers, payload, method) -> None:
-        print('-' * 80)
-        print(f'Method: {method}\n')
-        print(f'URL:\n{url}\n')
-        print(f'Headers:\n{headers}\n')
-        print(f'Payload:\n{payload}\n')
-        print(f'cURL command:\n{self._curl_cmd(url, method, headers, payload)}')
-        print('-' * 80)
 
     async def get_data_async(
         self,
@@ -129,8 +110,10 @@ class ApiRequester:
         url = f'{url}?{parameters.lstrip("&")}'
         method = 'POST' if payload else 'GET'
 
-        if self.debug:
-            self._print_debug(url, headers, payload, method)
+        logger.debug(f'HTTP Request: {method} {url}')
+        logger.debug(f'Headers: {headers}')
+        logger.debug(f'Payload: {payload}')
+        logger.debug(f'cURL command: {self._curl_cmd(url, method, headers, payload)}')
 
         async with httpx.AsyncClient() as client:
             r = await client.request(

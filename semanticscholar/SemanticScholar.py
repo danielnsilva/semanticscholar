@@ -31,7 +31,6 @@ class SemanticScholar():
         '''
         nest_asyncio.apply()
         self._timeout = timeout
-        self._debug = debug
         self._retry = retry
         self._AsyncSemanticScholar = AsyncSemanticScholar(
             timeout=timeout,
@@ -40,6 +39,7 @@ class SemanticScholar():
             debug=debug,
             retry=retry
         )
+        self.debug = debug
 
     @property
     def timeout(self) -> int:

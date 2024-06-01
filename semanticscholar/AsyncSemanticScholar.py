@@ -1,6 +1,7 @@
+import logging
 import re
-from typing import List, Literal, Tuple, Union
 import warnings
+from typing import List, Literal, Tuple, Union
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
@@ -9,6 +10,8 @@ from semanticscholar.Citation import Citation
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
+
+logger = logging.getLogger('semanticscholar')
 
 
 class AsyncSemanticScholar:
@@ -40,6 +43,12 @@ class AsyncSemanticScholar:
         :param bool retry: enable retry mode.
         '''
 
+        if debug:
+            warnings.warn(
+                'The debug parameter is deprecated and will be removed in a \
+                future release. Use Python\'s standard logging in DEBUG level \
+                instead.')
+
         if api_url:
             self.api_url = api_url
         else:
@@ -49,9 +58,9 @@ class AsyncSemanticScholar:
             self.auth_header = {'x-api-key': api_key}
 
         self._timeout = timeout
-        self._debug = debug
         self._retry = retry
-        self._requester = ApiRequester(self._timeout, self._debug, self._retry)
+        self._requester = ApiRequester(self._timeout, self._retry)
+        self.debug = debug
 
     @property
     def timeout(self) -> int:
@@ -81,7 +90,10 @@ class AsyncSemanticScholar:
         :param bool debug:
         '''
         self._debug = debug
-        self._requester.debug = debug
+        if self._debug:
+            logging.basicConfig(level=logging.DEBUG)
+        else:
+            logging.basicConfig(level=logging.WARNING)
 
     @property
     def retry(self) -> bool:
@@ -190,7 +202,7 @@ class AsyncSemanticScholar:
         not_found_ids = self._get_not_found_ids(paper_ids, papers)
 
         if not_found_ids:
-            warnings.warn(f"IDs not found: {not_found_ids}")
+            logger.warning(f"IDs not found: {not_found_ids}")
 
         return papers if not return_not_found else (papers, not_found_ids)
 
@@ -554,7 +566,7 @@ class AsyncSemanticScholar:
         not_found_ids = list(set(author_ids) - set(found_ids))
 
         if not_found_ids:
-            warnings.warn(f"IDs not found: {not_found_ids}")
+            logger.warning(f"IDs not found: {not_found_ids}")
 
         return authors if not return_not_found else (authors, not_found_ids)
 

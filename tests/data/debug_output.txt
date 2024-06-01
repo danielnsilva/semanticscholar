@@ -1,15 +1,4 @@
---------------------------------------------------------------------------------
-Method: POST
-
-URL:
-https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
-
-Headers:
-{'x-api-key': 'F@k3K3y'}
-
-Payload:
-{'ids': ['CorpusId:470667', '10.2139/ssrn.2250500', '0f40b1f08821e22e859c6050916cec3667778613']}
-
-cURL command:
-curl -X POST -H 'x-api-key: F@k3K3y' -d '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}' https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
---------------------------------------------------------------------------------
+DEBUG:semanticscholar:HTTP Request: POST https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
+DEBUG:semanticscholar:Headers: {'x-api-key': 'F@k3K3y'}
+DEBUG:semanticscholar:Payload: {'ids': ['CorpusId:470667', '10.2139/ssrn.2250500', '0f40b1f08821e22e859c6050916cec3667778613']}
+DEBUG:semanticscholar:cURL command: curl -X POST -H 'x-api-key: F@k3K3y' -d '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}' https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year

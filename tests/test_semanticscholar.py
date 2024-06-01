@@ -1,14 +1,16 @@
+import asyncio
 import io
 import json
+import logging
 import sys
 import unittest
-import asyncio
 from datetime import datetime
-from httpx import TimeoutException
-import vcr
 
-from semanticscholar.Author import Author
+import vcr
+from httpx import TimeoutException
+
 from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
+from semanticscholar.Author import Author
 from semanticscholar.Citation import Citation
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
@@ -16,14 +18,14 @@ from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, ObjectNotFoundException, NoMorePagesException)
+    BadQueryParametersException, NoMorePagesException, ObjectNotFoundException)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
     cassette_library_dir='tests/data',
     path_transformer=vcr.VCR.ensure_suffix('.yaml'),
     record_mode=['new_episodes'],
-    match_on=['uri', 'method', 'body'],
+    match_on=['uri', 'method', 'raw_body'],
     drop_unused_requests=True
 )
 
@@ -196,8 +198,9 @@ class SemanticScholarTest(unittest.TestCase):
             'CorpusId:470667',
             '10.2139/ssrn.2250500',
             '0f40b1f08821e22e859c6050916cec3667778613']
-        with self.assertWarns(UserWarning):
+        with self.assertLogs(level='WARNING') as log:
             self.sch.get_papers(list_of_paper_ids)
+            self.assertIn('IDs not found: [\'CorpusId:211530585\']', log.output[0])
 
     @test_vcr.use_cassette
     def test_get_papers_return_not_found(self):
@@ -275,8 +278,9 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_get_authors_not_found_warning(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
-        with self.assertWarns(UserWarning):
+        with self.assertLogs(level='WARNING') as log:
             self.sch.get_authors(list_of_author_ids)
+            self.assertIn('IDs not found: [\'0\']', log.output[0])
 
     @test_vcr.use_cassette
     def test_get_authors_return_not_found(self):
@@ -563,21 +567,18 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_debug(self):
+        logging.basicConfig(level=logging.DEBUG)
         with open('tests/data/debug_output.txt', 'r') as file:
             expected_output = file.read()
-        captured_stdout = io.StringIO()
-        sys.stdout = captured_stdout
-        self.sch = SemanticScholar(debug=True, api_key='F@k3K3y')
-        self.assertEqual(self.sch.debug, True)
+        self.sch = SemanticScholar(api_key='F@k3K3y')
         list_of_paper_ids = [
             'CorpusId:470667',
             '10.2139/ssrn.2250500',
             '0f40b1f08821e22e859c6050916cec3667778613']
-        with self.assertRaises(PermissionError):
+        with self.assertLogs(level='DEBUG') as log, \
+                self.assertRaises(PermissionError):
             self.sch.get_papers(list_of_paper_ids)
-        sys.stdout = sys.__stdout__
-        self.assertEqual(captured_stdout.getvalue().strip(),
-                         expected_output.strip())
+            self.assertIn(expected_output, log.output)
 
 class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
@@ -621,8 +622,9 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             'CorpusId:470667',
             '10.2139/ssrn.2250500',
             '0f40b1f08821e22e859c6050916cec3667778613']
-        with self.assertWarns(UserWarning):
+        with self.assertLogs(level='WARNING') as log:
             await self.sch.get_papers(list_of_paper_ids)
+            self.assertIn('IDs not found: [\'CorpusId:211530585\']', log.output[0])
 
     @test_vcr.use_cassette
     async def test_get_papers_return_not_found_async(self):
@@ -689,8 +691,9 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_get_authors_not_found_warning_async(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
-        with self.assertWarns(UserWarning):
+        with self.assertLogs(level='WARNING') as log:
             await self.sch.get_authors(list_of_author_ids)
+            self.assertIn('IDs not found: [\'0\']', log.output[0])
 
     @test_vcr.use_cassette
     async def test_get_authors_return_not_found_async(self):
