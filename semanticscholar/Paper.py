@@ -16,7 +16,6 @@ class Paper(SemanticScholarObject):
         'abstract',
         'authors',
         'authors.affiliations',
-        'authors.aliases',
         'authors.authorId',
         'authors.citationCount',
         'authors.externalIds',
