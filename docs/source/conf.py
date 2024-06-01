@@ -134,9 +134,6 @@ for cls in all_subclasses:
 with open('s2objects.rst', 'w', encoding='utf-8') as s2objects_file:
     s2objects_file.write('SemanticScholar Objects\n')
     s2objects_file.write('-----------------------\n\n')
-    s2objects_file.write('.. autoclass:: ' +
-        'semanticscholar.SemanticScholarObject.SemanticScholarObject\n')
-    s2objects_file.write('\t:members:\n\n')
     s2objects_file.write('.. toctree::\n')
     s2objects_file.write('\t:maxdepth: 1\n\n')
     for cls in sorted(final_subclasses_set, key=lambda x: x.__name__):
