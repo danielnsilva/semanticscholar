@@ -7,15 +7,14 @@ import datetime
 import importlib
 import os
 import pkgutil
+import re
 import sys
 
 import pypandoc
 
-# sys.path.insert(0, os.path.abspath('..'))
 sys.path.append(os.path.join(os.getcwd(), '../..'))
 
 from semanticscholar.SemanticScholarObject import SemanticScholarObject
-import re
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
