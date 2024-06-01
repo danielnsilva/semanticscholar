@@ -44,6 +44,8 @@ class SemanticScholar():
     @property
     def timeout(self) -> int:
         '''
+        Timeout for server response in seconds.
+
         :type: :class:`int`
         '''
         return self._timeout
@@ -59,7 +61,12 @@ class SemanticScholar():
     @property
     def debug(self) -> bool:
         '''
+        Enable/disable debug mode.
+
         :type: :class:`bool`
+
+        .. deprecated:: unreleased
+            Use Python\'s standard logging in DEBUG level instead.
         '''
         return self._debug
     
@@ -74,6 +81,8 @@ class SemanticScholar():
     @property
     def retry(self) -> bool:
         '''
+        Enable/disable retry mode.
+
         :type: :class:`bool`
         '''
         return self._retry
@@ -130,7 +139,7 @@ class SemanticScholar():
             ) -> Union[List[Paper], Tuple[List[Paper], List[str]]]:
         '''Get details for multiple papers at once
 
-        calls: `POST /graph/v1/paper/batch \
+        :calls: `POST /graph/v1/paper/batch \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/post_graph_get_papers>`_
 
@@ -148,7 +157,7 @@ class SemanticScholar():
             in the return, except for IDs in URL:<url> format.
         :returns: papers data, and optionally list of IDs not found.
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`\
-            or :class:`Tuple`[:class:`List` of\
+            or :class:`Tuple` [:class:`List` of\
             :class:`semanticscholar.Paper.Paper`,\
             :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no paper was found.
@@ -173,7 +182,7 @@ class SemanticScholar():
             ) -> PaginatedResults:
         '''Get details about a paper's authors
 
-        ::calls: `POST /graph/v1/paper/{paper_id}/authors \
+        :calls: `POST /graph/v1/paper/{paper_id}/authors \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/get_graph_get_paper_authors>`_
 
@@ -301,7 +310,7 @@ class SemanticScholar():
         :calls: `GET /graph/v1/paper/search \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/get_graph_paper_relevance_search>`_
-        :calls: `GET /graph/v1/paper/search \
+        :calls: `GET /graph/v1/paper/search/bulk \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/get_graph_paper_bulk_search>`_
 
@@ -397,7 +406,7 @@ class SemanticScholar():
         :param str author_ids: list of S2AuthorId (must be <= 1000).
         :returns: author data, and optionally list of IDs not found.
         :rtype: :class:`List` of :class:`semanticscholar.Author.Author`\
-            or :class:`Tuple`[:class:`List` of\
+            or :class:`Tuple` [:class:`List` of\
             :class:`semanticscholar.Author.Author`,\
             :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no author was found.

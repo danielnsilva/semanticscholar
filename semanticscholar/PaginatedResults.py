@@ -8,7 +8,7 @@ from semanticscholar.SemanticScholarException import NoMorePagesException
 
 class PaginatedResults:
     '''
-    Base class that abstracts paginated results from API search.
+    This class abstracts paginated results from API search.
     You can just iterate over results regardless of the number of pages.
     '''
 

@@ -65,6 +65,8 @@ class AsyncSemanticScholar:
     @property
     def timeout(self) -> int:
         '''
+        Timeout for server response in seconds.
+
         :type: :class:`int`
         '''
         return self._timeout
@@ -80,7 +82,12 @@ class AsyncSemanticScholar:
     @property
     def debug(self) -> bool:
         '''
+        Enable/disable debug mode.
+
         :type: :class:`bool`
+
+        .. deprecated:: unreleased
+            Use Python\'s standard logging in DEBUG level instead.
         '''
         return self._debug
 
@@ -98,6 +105,8 @@ class AsyncSemanticScholar:
     @property
     def retry(self) -> bool:
         '''
+        Enable/disable retry mode.
+
         :type: :class:`bool`
         '''
         return self._retry
@@ -117,8 +126,9 @@ class AsyncSemanticScholar:
             ) -> Paper:
         '''Paper lookup
 
-        :calls: `GET /paper/{paper_id} <https://api.semanticscholar.org/\
-            api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper>`_
+        :calls: `GET /graph/v1/paper/{paper_id} \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
+            /operation/get_graph_get_paper>`_
 
         :param str paper_id: S2PaperId, CorpusId, DOI, ArXivId, MAG, ACL, \
                PMID, PMCID, or URL from:
@@ -157,8 +167,9 @@ class AsyncSemanticScholar:
             ) -> Union[List[Paper], Tuple[List[Paper], List[str]]]:
         '''Get details for multiple papers at once
 
-        :calls: `POST /paper/batch <https://api.semanticscholar.org/api-docs/\
-            graph#tag/Paper-Data/operation/post_graph_get_papers>`_
+        :calls: `POST /graph/v1/paper/batch \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
+            /operation/post_graph_get_papers>`_
 
         :param str paper_ids: list of IDs (must be <= 500) - S2PaperId,\
             CorpusId, DOI, ArXivId, MAG, ACL, PMID, PMCID, or URL from:
@@ -174,7 +185,7 @@ class AsyncSemanticScholar:
             in the return, except for IDs in URL:<url> format.
         :returns: papers data, and optionally list of IDs not found.
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`\
-            or :class:`Tuple`[:class:`List` of\
+            or :class:`Tuple` [:class:`List` of\
             :class:`semanticscholar.Paper.Paper`,\
             :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no paper was found.
@@ -242,7 +253,7 @@ class AsyncSemanticScholar:
             ) -> PaginatedResults:
         '''Get details about a paper's authors
 
-        :calls: `POST /paper/{paper_id}/authors \
+        :calls: `POST /graph/v1/paper/{paper_id}/authors \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/get_graph_get_paper_authors>`_
 
@@ -289,7 +300,7 @@ class AsyncSemanticScholar:
             ) -> PaginatedResults:
         '''Get details about a paper's citations
 
-        :calls: `POST /paper/{paper_id}/citations \
+        :calls: `POST /graph/v1/paper/{paper_id}/citations \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/get_graph_get_paper_citations>`_
 
@@ -335,7 +346,7 @@ class AsyncSemanticScholar:
             ) -> PaginatedResults:
         '''Get details about a paper's references
 
-        :calls: `POST /paper/{paper_id}/references \
+        :calls: `POST /graph/v1/paper/{paper_id}/references \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/get_graph_get_paper_references>`_
 
@@ -395,10 +406,12 @@ class AsyncSemanticScholar:
             Bulk retrieval instead returns up to 10,000,000 results (1,000 \
             in each page).
 
-        :calls: `GET /paper/search <https://api.semanticscholar.org/api-docs/\
-            graph#tag/Paper-Data/operation/get_graph_paper_relevance_search>`_
-        :calls: `GET /paper/search <https://api.semanticscholar.org/api-docs/\
-            graph#tag/Paper-Data/operation/get_graph_paper_bulk_search>`_
+        :calls: `GET /graph/v1/paper/search \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
+            /operation/get_graph_paper_relevance_search>`_
+        :calls: `GET /graph/v1/paper/search/bulk \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
+            /operation/get_graph_paper_bulk_search>`_
 
         :param str query: plain-text search query string.
         :param str year: (optional) restrict results to the given range of \
@@ -500,8 +513,9 @@ class AsyncSemanticScholar:
             ) -> Author:
         '''Author lookup
 
-        :calls: `GET /author/{author_id} <https://api.semanticscholar.org/\
-            api-docs/graph#tag/Author-Data/operation/get_graph_get_author>`_
+        :calls: `GET /graph/v1/author/{author_id} \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Author-Data\
+            /operation/get_graph_get_author>`_
 
         :param str author_id: S2AuthorId.
         :returns: author data
@@ -531,13 +545,14 @@ class AsyncSemanticScholar:
             ) -> Union[List[Author], Tuple[List[Author], List[str]]]:
         '''Get details for multiple authors at once
 
-        :calls: `POST /author/batch <https://api.semanticscholar.org/api-docs/\
-            graph#tag/Author-Data/operation/get_graph_get_author>`_
+        :calls: `POST /graph/v1/author/batch \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Author-Data\
+            /operation/get_graph_get_author>`_
 
         :param str author_ids: list of S2AuthorId (must be <= 1000).
         :returns: author data, and optionally list of IDs not found.
         :rtype: :class:`List` of :class:`semanticscholar.Author.Author`\
-            or :class:`Tuple`[:class:`List` of\
+            or :class:`Tuple` [:class:`List` of\
             :class:`semanticscholar.Author.Author`,\
             :class:`List` of :class:`str`]
         :raises: BadQueryParametersException: if no author was found.
@@ -578,7 +593,7 @@ class AsyncSemanticScholar:
             ) -> PaginatedResults:
         '''Get details about a author's papers
 
-        :calls: `POST /paper/{author_id}/papers \
+        :calls: `POST /graph/v1/paper/{author_id}/papers \
             <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\
             /operation/get_graph_get_author_papers>`_
 
@@ -624,8 +639,9 @@ class AsyncSemanticScholar:
             ) -> PaginatedResults:
         '''Search for authors by name
 
-        :calls: `GET /author/search <https://api.semanticscholar.org/api-docs/\
-            graph#tag/Author-Data/operation/get_graph_get_author_search>`_
+        :calls: `GET /graph/v1/author/search \
+            <https://api.semanticscholar.org/api-docs/graph#tag/Author-Data\
+            /operation/get_graph_get_author_search>`_
 
         :param str query: plain-text search query string.
         :param list fields: (optional) list of the fields to be returned.
