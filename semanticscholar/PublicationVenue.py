@@ -62,7 +62,7 @@ class PublicationVenue(SemanticScholarObject):
     @property
     def url(self) -> str:
         '''
-        :type: :class:`str
+        :type: :class:`str`
         '''
         return self._url
 

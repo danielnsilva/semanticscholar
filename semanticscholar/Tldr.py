@@ -1,5 +1,3 @@
-from typing import Any
-
 from semanticscholar.SemanticScholarObject import SemanticScholarObject
 
 
@@ -18,7 +16,7 @@ class Tldr(SemanticScholarObject):
     @property
     def model(self) -> str:
         '''
-        :type :class:`str`
+        :type: :class:`str`
         '''
         return self._model
 

@@ -10,8 +10,6 @@ class PaginatedResults:
     '''
     Base class that abstracts paginated results from API search.
     You can just iterate over results regardless of the number of pages.
-    PaginatedResults and AsyncPaginatedResults inherit from this class, 
-    with minor adjustments.
     '''
 
     def __init__(
@@ -62,6 +60,12 @@ class PaginatedResults:
     @property
     def total(self) -> int:
         '''
+        Represents the total number of results in the query across all pages.
+        From the official docs: "Because of the subtleties of finding partial
+        phrase matches in different parts of the document, be cautious about
+        interpreting the total field as a count of documents containing any
+        particular word in the query."
+
         :type: :class:`int`
         '''
         return self._total
@@ -69,6 +73,8 @@ class PaginatedResults:
     @property
     def offset(self) -> int:
         '''
+        The position of the first item in the current page.
+
         :type: :class:`int`
         '''
         return self._offset
@@ -76,6 +82,8 @@ class PaginatedResults:
     @property
     def next(self) -> int:
         '''
+        The position of the first item in the next page.
+
         :type: :class:`int`
         '''
         return self._next
@@ -83,14 +91,20 @@ class PaginatedResults:
     @property
     def items(self) -> list:
         '''
+        Accumulated items across all fetched pages of results up to the
+        current page.
+
         :type: :class:`list`
         '''
         return self._items
 
     @property
-    def raw_data(self) -> list:
+    def raw_data(self) -> List[dict]:
         '''
-        :type: :class:`list`
+        The data from the current page of results in its original JSON
+        structure, represented as a `list` of `dict`.
+
+        :type: :class:`List` of :class:`dict`
         '''
         return self._data
 
@@ -177,7 +191,8 @@ class PaginatedResults:
 
     def next_page(self) -> None:
         '''
-        Get next results
+        Fetches the next page of results from the API and updates the current
+        items list.
         '''
         self._get_next_page()
 
