@@ -2,7 +2,7 @@ Main classes
 ============
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     mainclasses/semanticscholar
     mainclasses/asyncsemanticscholar
