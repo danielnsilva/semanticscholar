@@ -52,6 +52,9 @@ html_title = 'semanticscholar'
 # Both the class’ and the __init__ method’s docstring are concatenated and inserted.
 autoclass_content = 'both'
 
+# -- Options for autodoc -----------------------------------------------------
+autodoc_member_order = 'groupwise'
+
 # --- API Endpoints ---
 
 api_endpoints = dict()
