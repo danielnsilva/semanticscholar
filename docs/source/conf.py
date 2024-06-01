@@ -151,6 +151,7 @@ for cls in sorted(final_subclasses_set, key=lambda x: x.__name__):
         s2object_file.write(f'{"-" * len(cls.__name__)}\n\n')
         s2object_file.write(f'.. autoclass:: {fullClassName}\n')
         s2object_file.write('\t:members:\n')
+        s2object_file.write('\t:inherited-members:\n')
 
 # --- Changelog ---
 
