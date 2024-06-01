@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Enhancements
+
+- Replaced debug parameter with Python's standard logging in DEBUG level. ([d5bfa38](https://github.com/danielnsilva/semanticscholar/commit/d5bfa38))
+
 ## [0.8.2] - 2024-05-31
 
 ### Bug Fixes
