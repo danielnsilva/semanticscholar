@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Enhancements
 
 - Replaced debug parameter with Python's standard logging in DEBUG level. ([d5bfa38](https://github.com/danielnsilva/semanticscholar/commit/d5bfa38))
+- Added specific exceptions for requests responses: `InternalServerErrorException` (HTTP Status 500), `GatewayTimeoutException` (HTTP Status 504), and `ServerErrorException` (base class for HTTP Status 5xx). ([76645ef](https://github.com/danielnsilva/semanticscholar/commit/76645ef))
+
+### Deprecations
+
+- Deprecated `debug` parameter. ([d5bfa38](https://github.com/danielnsilva/semanticscholar/commit/d5bfa38))
 
 ## [0.8.2] - 2024-05-31
 
