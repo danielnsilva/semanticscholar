@@ -11,9 +11,6 @@ from tenacity import retry_if_exception_type, stop_after_attempt, wait_fixed
 from semanticscholar.SemanticScholarException import (
     BadQueryParametersException, ObjectNotFoundException)
 
-from semanticscholar.SemanticScholarException import \
-    BadQueryParametersException, ObjectNotFoundException
-
 logger = logging.getLogger('semanticscholar')
 
 
