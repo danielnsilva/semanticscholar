@@ -9,7 +9,8 @@ from tenacity import retry as rerun
 from tenacity import retry_if_exception_type, stop_after_attempt, wait_fixed
 
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, ObjectNotFoundException)
+    BadQueryParametersException, GatewayTimeoutException,
+    InternalServerErrorException, ObjectNotFoundException)
 
 logger = logging.getLogger('semanticscholar')
 
@@ -132,9 +133,12 @@ class ApiRequester:
             raise ObjectNotFoundException(data['error'])
         elif r.status_code == 429:
             raise ConnectionRefusedError('HTTP status 429 Too Many Requests.')
-        elif r.status_code in [500, 504]:
+        elif r.status_code == 500:
             data = r.json()
-            raise Exception(data['message'])
+            raise InternalServerErrorException(data['message'])
+        elif r.status_code == 504:
+            data = r.json()
+            raise GatewayTimeoutException(data['message'])
 
         return data
 

@@ -5,7 +5,9 @@ import logging
 import sys
 import unittest
 from datetime import datetime
+from unittest import mock
 
+import httpx
 import vcr
 from httpx import TimeoutException
 
@@ -18,7 +20,9 @@ from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, NoMorePagesException, ObjectNotFoundException)
+    BadQueryParametersException, GatewayTimeoutException,
+    InternalServerErrorException, NoMorePagesException,
+    ObjectNotFoundException, ServerErrorException)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -580,6 +584,33 @@ class SemanticScholarTest(unittest.TestCase):
             self.sch.get_papers(list_of_paper_ids)
             self.assertIn(expected_output, log.output)
 
+    @mock.patch('httpx.AsyncClient.request')
+    def test_exception_internal_server_error(self, mock_request):
+        mock_response = httpx.Response(
+            status_code=500, json={'message': 'message'})
+        mock_request.return_value = mock_response
+        with self.assertRaises(InternalServerErrorException):
+            self.sch.get_paper('10.1093/mind/lix.236.433')
+
+    @mock.patch('httpx.AsyncClient.request')
+    def test_exception_gateway_timeout(self, mock_request):
+        mock_response = httpx.Response(
+            status_code=504, json={'message': 'message'})
+        mock_request.return_value = mock_response
+        with self.assertRaises(GatewayTimeoutException):
+            self.sch.get_paper('10.1093/mind/lix.236.433')
+
+    @mock.patch('httpx.AsyncClient.request')
+    def test_exception_server_error(self, mock_request):
+        error_status = [500, 504]
+        for status_code in error_status:
+            mock_response = httpx.Response(
+                status_code=status_code, json={'message': 'message'})
+            mock_request.return_value = mock_response
+            with self.assertRaises(ServerErrorException):
+                self.sch.get_paper('10.1093/mind/lix.236.433')
+
+
 class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     def setUp(self) -> None:
@@ -937,6 +968,32 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
                 with self.assertRaises(ValueError) as context:
                     await method(query, limit=0)
                     self.assertEqual(str(context.exception), error_message)
+
+    @mock.patch('httpx.AsyncClient.request')
+    async def test_exception_internal_server_error_async(self, mock_request):
+        mock_response = httpx.Response(
+            status_code=500, json={'message': 'message'})
+        mock_request.return_value = mock_response
+        with self.assertRaises(InternalServerErrorException):
+            await self.sch.get_paper('10.1093/mind/lix.236.433')
+
+    @mock.patch('httpx.AsyncClient.request')
+    async def test_exception_gateway_timeout_async(self, mock_request):
+        mock_response = httpx.Response(
+            status_code=504, json={'message': 'message'})
+        mock_request.return_value = mock_response
+        with self.assertRaises(GatewayTimeoutException):
+            await self.sch.get_paper('10.1093/mind/lix.236.433')
+
+    @mock.patch('httpx.AsyncClient.request')
+    async def test_exception_server_error_async(self, mock_request):
+        error_status = [500, 504]
+        for status_code in error_status:
+            mock_response = httpx.Response(
+                status_code=status_code, json={'message': 'message'})
+            mock_request.return_value = mock_response
+            with self.assertRaises(ServerErrorException):
+                await self.sch.get_paper('10.1093/mind/lix.236.433')
 
 
 if __name__ == '__main__':
