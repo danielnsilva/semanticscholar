@@ -86,7 +86,7 @@ class AsyncSemanticScholar:
 
         :type: :class:`bool`
 
-        .. deprecated:: unreleased
+        .. deprecated:: 0.8.4
             Use Python\'s standard logging in DEBUG level instead.
         '''
         return self._debug
