@@ -65,7 +65,7 @@ class SemanticScholar():
 
         :type: :class:`bool`
 
-        .. deprecated:: unreleased
+        .. deprecated:: 0.8.3
             Use Python\'s standard logging in DEBUG level instead.
         '''
         return self._debug
