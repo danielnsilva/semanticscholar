@@ -542,28 +542,6 @@ class SemanticScholarTest(unittest.TestCase):
                     method(query, limit=0)
                     self.assertEqual(str(context.exception), error_message)
 
-    # These last two tests have some async and some sync parts, so 
-    # the async parts are run manually using asyncio.run_until_complete()
-    @test_vcr.use_cassette
-    async def test_get_author_papers_async(self):
-        loop = asyncio.get_event_loop()
-        data = loop.run_until_complete(self.sch.get_author_papers(1723755, limit=100))
-        self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 940)
-        self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
-
-    @test_vcr.use_cassette
-    async def test_get_paper_citations_async(self):
-        loop = asyncio.get_event_loop()
-        data = loop.run_until_complete(self.sch.get_paper_citations('CorpusID:49313245'))
-        self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 1000)
-        self.assertEqual(len([item.paper.title for item in data]), 6220)
-        self.assertEqual(
-            data[0].paper.title, 'Self-Attention Mechanism for Dynamic Multi-Step Rop '
-                'Prediction Under Continuous Learning Structure')
-
     @test_vcr.use_cassette
     def test_empty_paginated_results(self):
         data = self.sch.search_paper('n0 r3sult s3arch t3rm')
@@ -735,6 +713,29 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         not_found = data[1]
         self.assertEqual(len(not_found), 1)
         self.assertEqual(not_found[0], '0')
+
+    @test_vcr.use_cassette
+    async def test_get_author_papers_async(self):
+        data = await self.sch.get_author_papers(
+            1723755, limit=100, fields=['title'])
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len([item for item in data]), 875)
+        self.assertEqual(
+            data[0].title,
+            'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
+
+    @test_vcr.use_cassette
+    async def test_get_paper_citations_async(self):
+        data = await self.sch.get_paper_citations(
+            '10.2139/ssrn.2250500', fields=['title'])
+        self.assertEqual(data.offset, 0)
+        self.assertEqual(data.next, 100)
+        self.assertEqual(len([item.paper.title for item in data]), 2135)
+        self.assertEqual(
+            data[0].paper.title,
+            'Financial inclusion and roof quality: '
+            'Satellite evidence from Chilean slums')
 
     @test_vcr.use_cassette
     async def test_not_found_async(self):
