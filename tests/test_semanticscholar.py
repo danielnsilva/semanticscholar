@@ -230,14 +230,15 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_paper_citations(self):
-        data = self.sch.get_paper_citations('CorpusID:14514057')
+        data = self.sch.get_paper_citations(
+            'CorpusID:14514057', fields=['title'])
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item.paper.title for item in data]), 1849)
+        self.assertEqual(len([item.paper.title for item in data]), 1881)
         self.assertEqual(
             data[0].paper.title,
-            'Conceptualising the empowerment of caregivers raising children '
-            'with developmental disabilities in Ethiopia: a qualitative study')
+            'We\u2019ve got you covered! The effect of public health '
+            'insurance on rural entrepreneurship in China')
 
     @test_vcr.use_cassette
     def test_get_paper_references(self):
@@ -283,13 +284,14 @@ class SemanticScholarTest(unittest.TestCase):
     def test_get_authors_not_found_warning(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
         with self.assertLogs(level='WARNING') as log:
-            self.sch.get_authors(list_of_author_ids)
+            self.sch.get_authors(list_of_author_ids, fields=['name'])
             self.assertIn('IDs not found: [\'0\']', log.output[0])
 
     @test_vcr.use_cassette
     def test_get_authors_return_not_found(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
-        data = self.sch.get_authors(list_of_author_ids, return_not_found=True)
+        data = self.sch.get_authors(
+            list_of_author_ids, return_not_found=True, fields=['name'])
         authors = data[0]
         self.assertEqual(len(authors), 3)
         not_found = data[1]
@@ -298,10 +300,10 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_author_papers(self):
-        data = self.sch.get_author_papers(1723755, limit=100)
+        data = self.sch.get_author_papers(1723755, limit=100, fields=['title'])
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 879)
+        self.assertEqual(len([item for item in data]), 875)
         self.assertEqual(data[0].title, 'SARS-CoV-2 hijacks p38β/MAPK11 to '
                          'promote virus replication')
 
@@ -384,20 +386,22 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_search_paper_publication_date_or_year(self):
         date_ranges = [
-            "2020-01-01",
-            "2020-01",
-            "2020",
-            "2020-01-01:2021-01-01",
-            "2020-01-01:",
-            ":2020-01-01",
-            "2020:2021",
-            "2020:",
-            ":2021",
+            "2024-01-01",
+            "2024-01",
+            "2024",
+            "2024-01-01:2024-12-31",
+            "2024-01-01:",
+            ":2024-12-31",
+            "2023:2024",
+            "2023:",
+            ":2024",
         ]
         for date_range in date_ranges:
             with self.subTest(date_range=date_range):
                 data = self.sch.search_paper(
-                    'turing', publication_date_or_year=date_range)
+                    'turing',
+                    publication_date_or_year=date_range,
+                    fields=['title'])
                 self.assertTrue(len(data) > 0)
 
     def test_search_paper_publication_date_or_year_invalid(self):
@@ -422,8 +426,8 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_paper_bulk_retrieval(self):
-        data = self.sch.search_paper('kubernetes', bulk=True)
-        self.assertEqual(data.total, 2463)
+        data = self.sch.search_paper('kubernetes', bulk=True, fields=['title'])
+        self.assertEqual(data.total, 2674)
         self.assertEqual(len(data.items), 1000)
         self.assertEqual(
             data[0].title,
@@ -432,13 +436,13 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_paper_bulk_retrieval_next_page(self):
-        data = self.sch.search_paper('kubernetes', bulk=True)
+        data = self.sch.search_paper('kubernetes', bulk=True, fields=['title'])
         data.next_page()
         self.assertEqual(len(data), 2000)
 
     @test_vcr.use_cassette
     def test_search_paper_bulk_retrieval_traversing_results(self):
-        data = self.sch.search_paper('kubernetes', bulk=True)
+        data = self.sch.search_paper('kubernetes', bulk=True, fields=['title'])
         all_results = [item.title for item in data]
         self.assertRaises(NoMorePagesException, data.next_page)
         self.assertEqual(len(all_results), len(data.items))
@@ -446,21 +450,30 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_search_paper_bulk_retrieval_sorted_results_default_order(self):
         data = self.sch.search_paper(
-            'kubernetes', bulk=True, sort='citationCount')
+            'kubernetes',
+            bulk=True,
+            sort='citationCount',
+            fields=['citationCount'])
         all_data = [item.citationCount for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
     @test_vcr.use_cassette
     def test_search_paper_bulk_retrieval_sorted_results_asc(self):
         data = self.sch.search_paper(
-            'kubernetes', bulk=True, sort='citationCount:asc')
+            'kubernetes',
+            bulk=True,
+            sort='citationCount:asc',
+            fields=['citationCount'])
         all_data = [item.citationCount for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
     @test_vcr.use_cassette
     def test_search_paper_bulk_retrieval_sorted_results_desc(self):
         data = self.sch.search_paper(
-            'kubernetes', bulk=True, sort='citationCount:desc')
+            'kubernetes',
+            bulk=True,
+            sort='citationCount:desc',
+            fields=['citationCount'])
         all_data = [item.citationCount for item in data]
         self.assertTrue(sorted(all_data, reverse=True) == all_data)
 
@@ -701,13 +714,14 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     async def test_get_authors_not_found_warning_async(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
         with self.assertLogs(level='WARNING') as log:
-            await self.sch.get_authors(list_of_author_ids)
+            await self.sch.get_authors(list_of_author_ids, fields=['name'])
             self.assertIn('IDs not found: [\'0\']', log.output[0])
 
     @test_vcr.use_cassette
     async def test_get_authors_return_not_found_async(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
-        data = await self.sch.get_authors(list_of_author_ids, return_not_found=True)
+        data = await self.sch.get_authors(
+            list_of_author_ids, return_not_found=True, fields=['name'])
         authors = data[0]
         self.assertEqual(len(authors), 3)
         not_found = data[1]
@@ -814,20 +828,22 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_search_paper_publication_date_or_year_async(self):
         date_ranges = [
-            "2020-01-01",
-            "2020-01",
-            "2020",
-            "2020-01-01:2021-01-01",
-            "2020-01-01:",
-            ":2020-01-01",
-            "2020:2021",
-            "2020:",
-            ":2021",
+            "2024-01-01",
+            "2024-01",
+            "2024",
+            "2024-01-01:2024-12-31",
+            "2024-01-01:",
+            ":2024-12-31",
+            "2023:2024",
+            "2023:",
+            ":2024",
         ]
         for date_range in date_ranges:
             with self.subTest(date_range=date_range):
                 data = await self.sch.search_paper(
-                    'turing', publication_date_or_year=date_range)
+                    'turing',
+                    publication_date_or_year=date_range,
+                    fields=['title'])
                 self.assertTrue(len(data) > 0)
 
     async def test_search_paper_publication_date_or_year_invalid_async(self):
@@ -849,8 +865,9 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_async(self):
-        data = await self.sch.search_paper('kubernetes', bulk=True)
-        self.assertEqual(data.total, 2464)
+        data = await self.sch.search_paper(
+            'kubernetes', bulk=True, fields=['title'])
+        self.assertEqual(data.total, 2674)
         self.assertEqual(len(data.items), 1000)
         self.assertEqual(
             data[0].title,
@@ -859,13 +876,15 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_next_page_async(self):
-        data = await self.sch.search_paper('kubernetes', bulk=True)
+        data = await self.sch.search_paper(
+            'kubernetes', bulk=True, fields=['title'])
         data.next_page()
         self.assertEqual(len(data), 2000)
 
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_traversing_results_async(self):
-        data = await self.sch.search_paper('kubernetes', bulk=True)
+        data = await self.sch.search_paper(
+            'kubernetes', bulk=True, fields=['title'])
         all_results = [item.title for item in data]
         self.assertRaises(NoMorePagesException, data.next_page)
         self.assertEqual(len(all_results), len(data.items))
@@ -873,21 +892,30 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_sorted_results_default_order_async(self):
         data = await self.sch.search_paper(
-            'kubernetes', bulk=True, sort='citationCount')
+            'kubernetes',
+            bulk=True,
+            sort='citationCount',
+            fields=['citationCount'])
         all_data = [item.citationCount for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_sorted_results_asc_async(self):
         data = await self.sch.search_paper(
-            'kubernetes', bulk=True, sort='citationCount:asc')
+            'kubernetes',
+            bulk=True,
+            sort='citationCount:asc',
+            fields=['citationCount'])
         all_data = [item.citationCount for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_sorted_results_desc_async(self):
         data = await self.sch.search_paper(
-            'kubernetes', bulk=True, sort='citationCount:desc')
+            'kubernetes',
+            bulk=True,
+            sort='citationCount:desc',
+            fields=['citationCount'])
         all_data = [item.citationCount for item in data]
         self.assertTrue(sorted(all_data, reverse=True) == all_data)
 
