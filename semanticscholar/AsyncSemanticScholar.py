@@ -397,8 +397,9 @@ class AsyncSemanticScholar:
                 min_citation_count: int = None,
                 limit: int = 100,
                 bulk: bool = False,
-                sort: str = None
-            ) -> PaginatedResults:
+                sort: str = None,
+                match_title: bool = False
+            ) -> Union[PaginatedResults, Paper]:
         '''Search for papers by keyword. Performs a search query based on the \
             S2 search relevance algorithm, or a bulk retrieval of basic paper \
             data without search relevance (if bulk=True). Paper relevance \
@@ -439,8 +440,11 @@ class AsyncSemanticScholar:
                <field>:<order> format, where "field" is either paperId, \
                publicationDate, or citationCount, and "order" is asc \
                (ascending) or desc (descending).
+        :param bool match_title: (optional) retrieve a single paper whose \
+               title best matches the given query.
         :returns: query results.
-        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
+        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults` or \
+            :class:`semanticscholar.Paper.Paper`
         '''
 
         if limit < 1 or limit > 100:
@@ -460,6 +464,12 @@ class AsyncSemanticScholar:
         elif sort:
             warnings.warn(
                 'The sort parameter is only used when bulk=True.')
+
+        if match_title:
+            url += '/match'
+            if bulk:
+                raise ValueError(
+                    'The match_title parameter is not allowed when bulk=True.')
 
         query += f'&year={year}' if year else ''
 
@@ -504,7 +514,7 @@ class AsyncSemanticScholar:
                 max_results=max_results
             )
 
-        return results
+        return results if not match_title else results[0]
 
     async def get_author(
                 self,

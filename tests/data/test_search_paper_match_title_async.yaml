@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.27.0
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/paper/search/match?query=mining%20association%20rules%20between&fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&offset=0&limit=100
+  response:
+    body:
+      string: '{"data": [{"paperId": "6fe8c5bf8dddaadf10c765133d38dfef5714347f", "externalIds":
+        {"MAG": "2998574808", "DBLP": "conf/sigmod/AgrawalIS93", "DOI": "10.1145/170035.170072",
+        "CorpusId": 490415}, "corpusId": 490415, "publicationVenue": null, "url":
+        "https://www.semanticscholar.org/paper/6fe8c5bf8dddaadf10c765133d38dfef5714347f",
+        "title": "Mining association rules between sets of items in large databases",
+        "abstract": "We are given a large database of customer transactions. Each
+        transaction consists of items purchased by a customer in a visit. We present
+        an efficient algorithm that generates all significant association rules between
+        items in the database. The algorithm incorporates buffer management and novel
+        estimation and pruning techniques. We also present results of applying this
+        algorithm to sales data obtained from a large retailing company, which shows
+        the effectiveness of the algorithm.", "venue": "SIGMOD Conference", "year":
+        1993, "referenceCount": 16, "citationCount": 16127, "influentialCitationCount":
+        1442, "isOpenAccess": true, "openAccessPdf": {"url": "https://dl.acm.org/doi/pdf/10.1145/170036.170072",
+        "status": "BRONZE"}, "fieldsOfStudy": ["Computer Science"], "s2FieldsOfStudy":
+        [{"category": "Computer Science", "source": "external"}, {"category": "Computer
+        Science", "source": "s2-fos-model"}], "publicationTypes": ["JournalArticle",
+        "Book", "Conference"], "publicationDate": "1993-06-01", "journal": {"name":
+        "Proceedings of the 1993 ACM SIGMOD international conference on Management
+        of data"}, "citationStyles": {"bibtex": "@Article{Agrawal1993MiningAR,\n author
+        = {R. Agrawal and T. Imielinski and A. Swami},\n booktitle = {SIGMOD Conference},\n
+        journal = {Proceedings of the 1993 ACM SIGMOD international conference on
+        Management of data},\n title = {Mining association rules between sets of items
+        in large databases},\n year = {1993}\n}\n"}, "authors": [{"authorId": "144947410",
+        "name": "R. Agrawal"}, {"authorId": "1733797", "name": "T. Imielinski"}, {"authorId":
+        "31536502", "name": "A. Swami"}], "matchScore": 109.003174}]}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2062'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 13 Jul 2024 21:44:41 GMT
+      Via:
+      - 1.1 7d073aa92ff4e68c0fc44a7c7e34e5fc.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - u3Dut6TOSHqtN7VWPe4HavgtRmSAs_6Axx2DRSsgVHVpajDaa1dceQ==
+      X-Amz-Cf-Pop:
+      - FOR50-P2
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - a3tDjFQ0vHcEVyg=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '2062'
+      x-amzn-Remapped-Date:
+      - Sat, 13 Jul 2024 21:44:41 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 1b89b328-6c1f-48a7-963e-ee429d277195
+    status:
+      code: 200
+      message: OK
+version: 1

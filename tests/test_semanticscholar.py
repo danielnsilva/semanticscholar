@@ -481,6 +481,18 @@ class SemanticScholarTest(unittest.TestCase):
     def test_search_paper_with_relevance_and_sort(self):
         with self.assertWarns(UserWarning):
             self.sch.search_paper('kubernetes', sort='citationCount')
+    
+    @test_vcr.use_cassette
+    def test_search_paper_match_title(self):
+        query = 'mining association rules between'
+        expected_title = ('Mining association rules between sets of items in '
+                          'large databases')
+        paper = self.sch.search_paper(query, match_title=True)
+        self.assertEqual(paper.title, expected_title)
+
+    def test_search_paper_match_title_and_bulk_retrieval(self):
+        with self.assertRaises(ValueError):
+            self.sch.search_paper('test', match_title=True, bulk=True)
 
     @test_vcr.use_cassette
     def test_search_author(self):
@@ -923,6 +935,18 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     async def test_search_paper_with_relevance_and_sort_async(self):
         with self.assertWarns(UserWarning):
             await self.sch.search_paper('kubernetes', sort='citationCount')
+
+    @test_vcr.use_cassette
+    async def test_search_paper_match_title_async(self):
+        query = 'mining association rules between'
+        expected_title = ('Mining association rules between sets of items in '
+                          'large databases')
+        paper = await self.sch.search_paper(query, match_title=True)
+        self.assertEqual(paper.title, expected_title)
+
+    async def test_search_paper_match_title_and_bulk_retrieval_async(self):
+        with self.assertRaises(ValueError):
+            await self.sch.search_paper('test', match_title=True, bulk=True)
 
     @test_vcr.use_cassette
     async def test_search_author_async(self):

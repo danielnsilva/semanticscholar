@@ -298,8 +298,9 @@ class SemanticScholar():
                 min_citation_count: int = None,
                 limit: int = 100,
                 bulk: bool = False,
-                sort: str = None
-            ) -> PaginatedResults:
+                sort: str = None,
+                match_title: bool = False
+            ) -> Union[PaginatedResults, Paper]:
         '''Search for papers by keyword. Performs a search query based on the \
             S2 search relevance algorithm, or a bulk retrieval of basic paper \
             data without search relevance (if bulk=True). Paper relevance \
@@ -340,8 +341,11 @@ class SemanticScholar():
                <field>:<order> format, where "field" is either paperId, \
                publicationDate, or citationCount, and "order" is asc \
                (ascending) or desc (descending).
+        :param bool match_title: (optional) retrieve a single paper whose \
+               title best matches the given query.
         :returns: query results.
-        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
+        :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults` or \
+            :class:`semanticscholar.Paper.Paper`
         '''
 
         loop = asyncio.get_event_loop()
@@ -358,7 +362,8 @@ class SemanticScholar():
                 min_citation_count=min_citation_count,
                 limit=limit,
                 bulk=bulk,
-                sort=sort
+                sort=sort,
+                match_title=match_title
                 )
         )
 
