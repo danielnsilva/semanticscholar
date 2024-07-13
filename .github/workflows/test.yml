@@ -3,8 +3,14 @@ name: Test
 on:
   push:
     branches: [ "master" ]
+    paths-ignore:
+      - '.github/**'
+      - 'docs/**'
   pull_request:
     branches: [ "master" ]
+    paths-ignore:
+      - '.github/**'
+      - 'docs/**'
 
 jobs:
 
