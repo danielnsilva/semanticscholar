@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### New Features
+
+- Added support for paper title search. ([3a3f797](https://github.com/danielnsilva/semanticscholar/commit/3a3f797))
+
 ## [0.8.4] - 2024-07-08
 
 ### Enhancements
