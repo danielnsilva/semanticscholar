@@ -1,6 +1,5 @@
 from typing import Any, Union, List
 import asyncio
-import nest_asyncio
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.SemanticScholarException import NoMorePagesException
@@ -40,7 +39,6 @@ class PaginatedResults:
         self._parameters = ''
         self._items = []
         self._continuation_token = None
-        nest_asyncio.apply()
     
     @classmethod
     async def create(
