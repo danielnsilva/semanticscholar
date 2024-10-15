@@ -111,6 +111,13 @@ class PaginatedResults:
         while self._has_next_page():
             yield from self._get_next_page()
 
+    async def __aiter__(self) -> Any:
+        for item in self._items:
+            yield item
+        while self._has_next_page():
+            for item in await self._async_get_next_page():
+                yield item
+
     def __len__(self) -> int:
         return len(self._items)
 
@@ -132,6 +139,10 @@ class PaginatedResults:
         )
 
     async def _async_get_next_page(self) -> Union[dict, List[dict]]:
+
+        if not self._has_next_page():
+            raise NoMorePagesException('No more pages to fetch.')
+        
         self._build_params()
 
         results = await self._request_data()
