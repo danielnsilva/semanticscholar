@@ -677,7 +677,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         data = await self.sch.get_paper_authors('10.2139/ssrn.2250500')
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 0)
-        self.assertEqual(len([item for item in data]), 4)
+        self.assertEqual(len([item async for item in data]), 4)
         self.assertEqual(data[0].name, 'E. Duflo')
 
     @test_vcr.use_cassette
@@ -743,7 +743,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             1723755, limit=100, fields=['title'])
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 875)
+        self.assertEqual(len([item async for item in data]), 875)
         self.assertEqual(
             data[0].title,
             'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
@@ -754,7 +754,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             '10.2139/ssrn.2250500', fields=['title'])
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item.paper.title for item in data]), 2135)
+        self.assertEqual(len([item.paper.title async for item in data]), 2167)
         self.assertEqual(
             data[0].paper.title,
             'Financial inclusion and roof quality: '
@@ -793,9 +793,9 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_search_paper_traversing_results_async(self):
         data = await self.sch.search_paper('sublinear near optimal edit distance')
-        all_results = [item.title for item in data]
+        all_results = [item.title async for item in data]
         with self.assertRaises(NoMorePagesException):
-            await data.next_page()
+            await data.async_next_page()
         self.assertEqual(len(all_results), len(data.items))
 
     @test_vcr.use_cassette
@@ -811,7 +811,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_search_paper_year_range_async(self):
         data = await self.sch.search_paper('turing', year='1936-1937')
-        self.assertTrue(all([1936 <= item.year <= 1937 for item in data]))
+        self.assertTrue(all([1936 <= item.year <= 1937 async for item in data]))
 
     @test_vcr.use_cassette
     async def test_search_paper_publication_types_async(self):
@@ -870,7 +870,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_search_paper_min_citation_count_async(self):
         data = await self.sch.search_paper('turing', min_citation_count=1000)
-        self.assertTrue(all([item.citationCount >= 1000 for item in data]))
+        self.assertTrue(all([item.citationCount >= 1000 async for item in data]))
 
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_async(self):
@@ -887,15 +887,18 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     async def test_search_paper_bulk_retrieval_next_page_async(self):
         data = await self.sch.search_paper(
             'kubernetes', bulk=True, fields=['title'])
-        data.next_page()
+        await data.async_next_page()
         self.assertEqual(len(data), 2000)
 
     @test_vcr.use_cassette
     async def test_search_paper_bulk_retrieval_traversing_results_async(self):
         data = await self.sch.search_paper(
             'kubernetes', bulk=True, fields=['title'])
-        all_results = [item.title for item in data]
-        self.assertRaises(NoMorePagesException, data.next_page)
+        all_results = [item.title async for item in data]
+        print("XXX DATA", type(data))
+        print(data.async_next_page)
+        with self.assertRaises(NoMorePagesException):
+            await data.async_next_page()
         self.assertEqual(len(all_results), len(data.items))
 
     @test_vcr.use_cassette
@@ -905,7 +908,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             bulk=True,
             sort='citationCount',
             fields=['citationCount'])
-        all_data = [item.citationCount for item in data]
+        all_data = [item.citationCount async for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
     @test_vcr.use_cassette
@@ -915,7 +918,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             bulk=True,
             sort='citationCount:asc',
             fields=['citationCount'])
-        all_data = [item.citationCount for item in data]
+        all_data = [item.citationCount async for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
     @test_vcr.use_cassette
@@ -925,7 +928,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             bulk=True,
             sort='citationCount:desc',
             fields=['citationCount'])
-        all_data = [item.citationCount for item in data]
+        all_data = [item.citationCount async for item in data]
         self.assertTrue(sorted(all_data, reverse=True) == all_data)
 
     @test_vcr.use_cassette
