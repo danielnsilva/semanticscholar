@@ -7,9 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2024-07-08
+
 ### New Features
 
 - Added support for paper title search. ([3a3f797](https://github.com/danielnsilva/semanticscholar/commit/3a3f797))
+
+### Enhancements
+
+- Added asynchronous iterator for `PaginatedResults` by [@rgeronimi](https://github.com/rgeronimi) in [#95](https://github.com/danielnsilva/semanticscholar/pull/95)
+
+### Bug Fixes
+
+- Removed unnecessary `nest_asyncio.apply()` call when using the library in asynchronous mode by [@rgeronimi](https://github.com/rgeronimi) in [#95](https://github.com/danielnsilva/semanticscholar/pull/95)
 
 ## [0.8.4] - 2024-07-08
 
@@ -196,7 +206,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.3] - 2019-08-02
 
-[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.4...HEAD
+[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.4...v0.9.0
 [0.8.4]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.2...v0.8.4
 [0.8.2]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.0...v0.8.1
