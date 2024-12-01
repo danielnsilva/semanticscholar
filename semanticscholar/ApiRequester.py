@@ -106,7 +106,7 @@ class ApiRequester:
             payload: dict = None
     ) -> Union[dict, List[dict]]:
 
-        url = f'{url}?{parameters.lstrip("&")}'
+        parameters=parameters.lstrip("&")
         method = 'POST' if payload else 'GET'
 
         logger.debug(f'HTTP Request: {method} {url}')
@@ -116,7 +116,7 @@ class ApiRequester:
 
         async with httpx.AsyncClient() as client:
             r = await client.request(
-                method, url, timeout=self._timeout, headers=headers,
+                method, url, params=parameters,timeout=self._timeout, headers=headers,
                 json=payload)
 
         data = {}
