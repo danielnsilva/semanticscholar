@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Bug Fixes
+
+- Removed backslashes in docstrings to fix formatting issues. ([3ef890b](https://github.com/danielnsilva/semanticscholar/commit/3ef890b))
+
 ## [0.9.0] - 2024-11-30
 
 ### New Features
