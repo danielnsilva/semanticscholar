@@ -19,8 +19,8 @@ class ApiRequester:
 
     def __init__(self, timeout, retry: bool = True) -> None:
         '''
-        :param float timeout: an exception is raised \
-            if the server has not issued a response for timeout seconds.
+        :param float timeout: an exception is raised 
+               if the server has not issued a response for timeout seconds.
         :param bool retry: enable retry mode.
         '''
         self.timeout = timeout
@@ -76,7 +76,8 @@ class ApiRequester:
         headers: dict,
         payload: dict = None
     ) -> Union[dict, List[dict]]:
-        '''Get data from Semantic Scholar API
+        '''
+        Get data from Semantic Scholar API
 
         :param str url: absolute URL to API endpoint.
         :param str parameters: the parameters to add in the URL.
