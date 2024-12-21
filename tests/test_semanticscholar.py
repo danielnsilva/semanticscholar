@@ -1006,7 +1006,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_get_recommended_papers_pool_from_async(self):
         data = await self.sch.get_recommended_papers(
-            '10.1145/3544585.3544600', pool_from="all-cs", fields=['title'])
+            '10.2139/ssrn.2250500', pool_from="all-cs", fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
