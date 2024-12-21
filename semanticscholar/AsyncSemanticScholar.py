@@ -10,6 +10,7 @@ from semanticscholar.Citation import Citation
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
+from semanticscholar.Autocomplete import Autocomplete
 
 logger = logging.getLogger('semanticscholar')
 
@@ -796,3 +797,26 @@ class AsyncSemanticScholar:
         papers = [Paper(item) for item in data['recommendedPapers']]
 
         return papers
+    
+    async def get_autocomplete(self, query: str) -> list[Autocomplete]:
+        """Get autocomplete suggestions for a query.
+
+        :calls: `GET /graph/v1/paper/autocomplete?query={query} \
+            <https://api.semanticscholar.org/api-docs/graph#tag/\
+            Paper-Data/operation/get_graph_get_paper_autocomplete>`_
+
+        :param str query: query to get autocomplete suggestions for.
+        :returns: list of autocomplete suggestions.
+        :rtype: :class:`List` of :class:`semanticscholar.Autocomplete.Autocomplete`
+        """
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f"{base_url}/paper/autocomplete"
+
+        parameters = f"query={query}"
+
+        data = await self._requester.get_data_async(url, parameters, self.auth_header)
+
+        if not data or "matches" not in data:
+            return []
+
+        return [Autocomplete(suggestion) for suggestion in data["matches"]]
