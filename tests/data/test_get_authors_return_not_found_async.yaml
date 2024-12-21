@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"ids": ["0", "3234559", "1726629", "1711844"]}'
+    body: '{"ids":["0","3234559","1726629","1711844"]}'
     headers:
       accept:
       - '*/*'
@@ -9,20 +9,21 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '47'
+      - '43'
       content-type:
       - application/json
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.27.0
+      - python-httpx/0.28.1
     method: POST
     uri: https://api.semanticscholar.org/graph/v1/author/batch?fields=name
   response:
-    content: '[null, {"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId":
-      "1726629", "name": "D. Parnas"}, {"authorId": "1711844", "name": "I. Sommerville"}]
+    body:
+      string: '[null, {"authorId": "3234559", "name": "E. Dijkstra"}, {"authorId":
+        "1726629", "name": "D. Parnas"}, {"authorId": "1711844", "name": "I. Sommerville"}]
 
-      '
+        '
     headers:
       Access-Control-Allow-Origin:
       - '*'
@@ -33,27 +34,28 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 08 Jul 2024 02:21:25 GMT
+      - Sun, 08 Dec 2024 12:27:45 GMT
       Via:
-      - 1.1 b420eb3479c3ad1ee13482a96a5468ee.cloudfront.net (CloudFront)
+      - 1.1 bb66aae6366645b029324b4fa2639188.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - JVo_XASNvB0RV0Zu9kByBBjX2fO2iUwlz89-3l1XRXj1P33K8HXCuQ==
+      - XkpeJw9ThowgqrPtmabxhjpiEhn023l2_7iadiweNlBq6PgzkjyLcw==
       X-Amz-Cf-Pop:
-      - GRU1-P4
+      - GRU3-P4
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - akj9uFW6vHcEW0A=
+      - CeOOQGwWPHcETkg=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '152'
       x-amzn-Remapped-Date:
-      - Mon, 08 Jul 2024 02:21:25 GMT
+      - Sun, 08 Dec 2024 12:27:45 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 3233615f-cba8-49e3-9be4-9331e7739c0b
-    http_version: HTTP/1.1
-    status_code: 200
+      - 568bd8fd-2243-4cbe-9b3e-9df4039c8aec
+    status:
+      code: 200
+      message: OK
 version: 1

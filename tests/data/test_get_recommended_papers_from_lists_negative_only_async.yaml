@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"positivePaperIds": [], "negativePaperIds": ["10.1145/3544585.3544600"]}'
+    body: '{"positivePaperIds":[],"negativePaperIds":["10.1145/3544585.3544600"]}'
     headers:
       accept:
       - '*/*'
@@ -9,19 +9,20 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '73'
+      - '70'
       content-type:
       - application/json
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.25.2
+      - python-httpx/0.28.1
     method: POST
-    uri: https://api.semanticscholar.org/recommendations/v1/papers/?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year&limit=100
+    uri: https://api.semanticscholar.org/recommendations/v1/papers/?fields=title&limit=100
   response:
-    content: '{"error":"No positive paper examples given"}
+    body:
+      string: '{"error":"No positive paper examples given"}
 
-      '
+        '
     headers:
       Access-Control-Allow-Origin:
       - '*'
@@ -32,27 +33,28 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 27 Dec 2023 21:55:49 GMT
+      - Sun, 08 Dec 2024 12:35:49 GMT
       Via:
-      - 1.1 b0c4c3183ea0dd9a0f495a148c420656.cloudfront.net (CloudFront)
+      - 1.1 db587cc2c62be193134f9aae98be311a.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - zAhJ_hCGndE3CcQ9lNChfOtZuIvr3zZtZkGQ10HYUcWefUracd0z8A==
+      - OPbm3bW8QF-4-YSSUuBbJyJn-KqJdfoxBLy7rRIZ9eS_oJ0J3ZN6uQ==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - Qn2H8EjCPHcELlw=
+      - CePZ9H7IvHcEcPA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
       - '45'
       x-amzn-Remapped-Date:
-      - Wed, 27 Dec 2023 21:55:49 GMT
+      - Sun, 08 Dec 2024 12:35:49 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 872d76c7-8d01-4af1-bc9b-e9aa0ce67c04
-    http_version: HTTP/1.1
-    status_code: 400
+      - 293e86d8-fc0e-4e98-8c44-50933327582b
+    status:
+      code: 400
+      message: Bad Request
 version: 1

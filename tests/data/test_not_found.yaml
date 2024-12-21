@@ -11,46 +11,48 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.27.0
+      - python-httpx/0.28.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/author/0?fields=affiliations,authorId,citationCount,externalIds,hIndex,homepage,name,paperCount,papers,papers.abstract,papers.authors,papers.citationCount,papers.corpusId,papers.externalIds,papers.fieldsOfStudy,papers.influentialCitationCount,papers.isOpenAccess,papers.journal,papers.openAccessPdf,papers.paperId,papers.publicationDate,papers.publicationTypes,papers.publicationVenue,papers.referenceCount,papers.s2FieldsOfStudy,papers.title,papers.url,papers.venue,papers.year,url
+    uri: https://api.semanticscholar.org/graph/v1/paper/0?fields=t%2Ci%2Ct%2Cl%2Ce
   response:
-    content: '{"error":"Author with id 0 not found"}
+    body:
+      string: '{"error":"Paper with id 0 not found"}
 
-      '
+        '
     headers:
       Access-Control-Allow-Origin:
       - '*'
       Connection:
       - keep-alive
       Content-Length:
-      - '39'
+      - '38'
       Content-Type:
       - application/json
       Date:
-      - Fri, 01 Dec 2023 18:35:42 GMT
+      - Sun, 08 Dec 2024 02:09:08 GMT
       Via:
-      - 1.1 1f71c63658c4f74faed3133e50a0708a.cloudfront.net (CloudFront)
+      - 1.1 670127d831d6fe067a1d0e61c13cef54.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - lOJXNv9KPq65C9YOW0uZJzUhnlSVE1rObeM0rTIrlWXhCLrap4arMw==
+      - uhjg8vCJyXqTCErBwN-5KkzNdrLSW6KGOHkMnhdbQYPNgJIDPayU9A==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - PRsbwEfIPHcEmkg=
+      - CczmzGAGPHcEu5w=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '39'
+      - '38'
       x-amzn-Remapped-Date:
-      - Fri, 01 Dec 2023 18:35:42 GMT
+      - Sun, 08 Dec 2024 02:09:08 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - a4cdbf91-6766-4703-96aa-13f5c75055a6
-    http_version: HTTP/1.1
-    status_code: 404
+      - 35ed5331-d200-4059-9c52-2cad62764771
+    status:
+      code: 404
+      message: Not Found
 - request:
     body: ''
     headers:
@@ -63,44 +65,46 @@ interactions:
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.27.0
+      - python-httpx/0.28.1
     method: GET
-    uri: https://api.semanticscholar.org/graph/v1/paper/0?fields=abstract,authors,authors.affiliations,authors.authorId,authors.citationCount,authors.externalIds,authors.hIndex,authors.homepage,authors.name,authors.paperCount,authors.url,citationCount,citationStyles,citations,citations.abstract,citations.authors,citations.citationCount,citations.citationStyles,citations.corpusId,citations.externalIds,citations.fieldsOfStudy,citations.influentialCitationCount,citations.isOpenAccess,citations.journal,citations.openAccessPdf,citations.paperId,citations.publicationDate,citations.publicationTypes,citations.publicationVenue,citations.referenceCount,citations.s2FieldsOfStudy,citations.title,citations.url,citations.venue,citations.year,corpusId,embedding,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,references,references.abstract,references.authors,references.citationCount,references.citationStyles,references.corpusId,references.externalIds,references.fieldsOfStudy,references.influentialCitationCount,references.isOpenAccess,references.journal,references.openAccessPdf,references.paperId,references.publicationDate,references.publicationTypes,references.publicationVenue,references.referenceCount,references.s2FieldsOfStudy,references.title,references.url,references.venue,references.year,s2FieldsOfStudy,title,tldr,url,venue,year
+    uri: https://api.semanticscholar.org/graph/v1/author/0?fields=n%2Ca%2Cm%2Ce
   response:
-    content: '{"error":"Paper with id 0 not found"}
+    body:
+      string: '{"error":"Author with id 0 not found"}
 
-      '
+        '
     headers:
       Access-Control-Allow-Origin:
       - '*'
       Connection:
       - keep-alive
       Content-Length:
-      - '38'
+      - '39'
       Content-Type:
       - application/json
       Date:
-      - Sat, 01 Jun 2024 03:03:38 GMT
+      - Sun, 08 Dec 2024 02:09:09 GMT
       Via:
-      - 1.1 5a73a0e06fc43fe7df7c5153b9995c2c.cloudfront.net (CloudFront)
+      - 1.1 4a4417691ec8f1082768838f633d178c.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - zeioU_N1I4yMZ2L6A1JQ1V8_OcYIIsd9UB8j6EdYqeRCkenB0iVjSA==
+      - BGxvLkuTtczFvVNaiLX4Y_hLlDueJye69l0Q3zYfILH4pdfqitVlGw==
       X-Amz-Cf-Pop:
-      - GRU1-P4
+      - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - YqtdwF8bvHcEDZw=
+      - Cczm8HGQvHcEoXA=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '38'
+      - '39'
       x-amzn-Remapped-Date:
-      - Sat, 01 Jun 2024 03:03:38 GMT
+      - Sun, 08 Dec 2024 02:09:09 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 2fb0584e-5f7b-47ed-a5ef-f565198a8a8d
-    http_version: HTTP/1.1
-    status_code: 404
+      - e1d0bdf8-873f-4da7-a3fe-3fc42a9df341
+    status:
+      code: 404
+      message: Not Found
 version: 1

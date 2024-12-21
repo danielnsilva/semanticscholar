@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}'
+    body: '{"ids":["CorpusId:470667","10.2139/ssrn.2250500","0f40b1f08821e22e859c6050916cec3667778613"]}'
     headers:
       accept:
       - '*/*'
@@ -9,19 +9,20 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '96'
+      - '93'
       content-type:
       - application/json
       host:
       - api.semanticscholar.org
       user-agent:
-      - python-httpx/0.26.0
+      - python-httpx/0.28.1
       x-api-key:
       - F@k3K3y
     method: POST
-    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract,authors,citationCount,citationStyles,corpusId,externalIds,fieldsOfStudy,influentialCitationCount,isOpenAccess,journal,openAccessPdf,paperId,publicationDate,publicationTypes,publicationVenue,referenceCount,s2FieldsOfStudy,title,url,venue,year
+    uri: https://api.semanticscholar.org/graph/v1/paper/batch?fields=abstract%2Cauthors%2CcitationCount%2CcitationStyles%2CcorpusId%2CexternalIds%2CfieldsOfStudy%2CinfluentialCitationCount%2CisOpenAccess%2Cjournal%2CopenAccessPdf%2CpaperId%2CpublicationDate%2CpublicationTypes%2CpublicationVenue%2CreferenceCount%2Cs2FieldsOfStudy%2Ctitle%2Curl%2Cvenue%2Cyear
   response:
-    content: '{"message":"Forbidden"}'
+    body:
+      string: '{"message":"Forbidden"}'
     headers:
       Connection:
       - keep-alive
@@ -30,21 +31,22 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 09 Mar 2024 21:23:52 GMT
+      - Sun, 08 Dec 2024 02:33:11 GMT
       Via:
-      - 1.1 b57cb95c712a6029fa533d1474f7a2d6.cloudfront.net (CloudFront)
+      - 1.1 27b139952f5aaecbbe18ddd16fc6ff84.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - uHH-ocFS2qfcKNUh7Hv044oFOoCoZIPv6XDyLi4b7NdPWWHh1KQzsQ==
+      - flvVljAqmD4mPH9IH4iLxK3kBEQOAQW451G3Sii3X-vRIRABMj4bVg==
       X-Amz-Cf-Pop:
       - GRU3-P4
       X-Cache:
       - Error from cloudfront
       x-amz-apigw-id:
-      - UYX4VGOJPHcEZqg=
+      - Cc3IMHWTPHcEDDQ=
       x-amzn-ErrorType:
       - ForbiddenException
       x-amzn-RequestId:
-      - 4eece2e2-7663-40d8-92df-6c1e6312e7d7
-    http_version: HTTP/1.1
-    status_code: 403
+      - dcb0ea14-d4ee-4620-88c3-2853ff5e7778
+    status:
+      code: 403
+      message: Forbidden
 version: 1

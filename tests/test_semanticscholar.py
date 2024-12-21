@@ -166,7 +166,7 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_paper(self):
-        data = self.sch.get_paper('10.1093/mind/lix.236.433')
+        data = self.sch.get_paper('10.1093/mind/lix.236.433', fields=['title'])
         self.assertEqual(data.title,
                          'Computing Machinery and Intelligence')
         self.assertEqual(data.raw_data['title'],
@@ -178,7 +178,7 @@ class SemanticScholarTest(unittest.TestCase):
             'CorpusId:470667',
             '10.2139/ssrn.2250500',
             '0f40b1f08821e22e859c6050916cec3667778613']
-        data = self.sch.get_papers(list_of_paper_ids)
+        data = self.sch.get_papers(list_of_paper_ids, fields=['authors'])
         for item in data:
             with self.subTest(subtest=item.paperId):
                 self.assertIn(
@@ -239,14 +239,15 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_paper_references(self):
-        data = self.sch.get_paper_references('CorpusID:1033682')
+        data = self.sch.get_paper_references(
+            '10.2139/ssrn.2250500', fields=['title'], limit=50)
         self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 100)
-        self.assertEqual(len([item for item in data]), 156)
+        self.assertEqual(data.next, 50)
+        self.assertEqual(len([item for item in data]), 67)
         self.assertEqual(
             data[0].paper.title,
-            'Controlled Sparsity via Constrained Optimization or: How I '
-            'Learned to Stop Tuning Penalties and Love Constraints')
+            'Group lending or individual lending? Evidence from a randomised '
+            'field experiment in Mongolia')
 
     @test_vcr.use_cassette
     def test_timeout(self):
@@ -258,13 +259,13 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_get_author(self):
-        data = self.sch.get_author(2262347)
+        data = self.sch.get_author(2262347, fields=['name'])
         self.assertEqual(data.name, 'A. Turing')
 
     @test_vcr.use_cassette
     def test_get_authors(self):
         list_of_author_ids = ['3234559', '1726629', '1711844']
-        data = self.sch.get_authors(list_of_author_ids)
+        data = self.sch.get_authors(list_of_author_ids, fields=['name'])
         list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
@@ -306,10 +307,13 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_not_found(self):
-        methods = [self.sch.get_paper, self.sch.get_author]
-        for method in methods:
+        methods = [
+            [self.sch.get_paper, 'title'],
+            [self.sch.get_author, 'name']
+        ]
+        for method, field in methods:
             with self.subTest(subtest=method.__name__):
-                self.assertRaises(ObjectNotFoundException, method, 0)
+                self.assertRaises(ObjectNotFoundException, method, 0, field)
 
     @test_vcr.use_cassette
     def test_bad_query_parameters(self):
@@ -320,7 +324,7 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_paper(self):
-        data = self.sch.search_paper('turing')
+        data = self.sch.search_paper('turing', fields=['title'])
         self.assertGreater(data.total, 0)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
@@ -333,51 +337,62 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_paper_next_page(self):
-        data = self.sch.search_paper('turing')
+        data = self.sch.search_paper('turing', fields=['title'])
         data.next_page()
         self.assertGreater(len(data), 100)
 
     @test_vcr.use_cassette
     def test_search_paper_traversing_results(self):
-        data = self.sch.search_paper('sublinear near optimal edit distance')
+        data = self.sch.search_paper(
+            'sublinear near optimal edit distance', fields=['title'])
         all_results = [item.title for item in data]
         self.assertRaises(NoMorePagesException, data.next_page)
         self.assertEqual(len(all_results), len(data.items))
 
     @test_vcr.use_cassette
     def test_search_paper_fields_of_study(self):
-        data = self.sch.search_paper('turing', fields_of_study=['Mathematics'])
+        data = self.sch.search_paper(
+            'turing',
+            fields_of_study=['Mathematics'],
+            fields=['s2FieldsOfStudy'])
         self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
 
     @test_vcr.use_cassette
     def test_search_paper_year(self):
-        data = self.sch.search_paper('turing', year=1936)
+        data = self.sch.search_paper('turing', year=1936, fields=['year'])
         self.assertEqual(data[0].year, 1936)
 
     @test_vcr.use_cassette
     def test_search_paper_year_range(self):
-        data = self.sch.search_paper('turing', year='1936-1937')
+        data = self.sch.search_paper(
+            'turing', year='1936-1937', fields=['year'])
         self.assertTrue(all([1936 <= item.year <= 1937 for item in data]))
 
     @test_vcr.use_cassette
     def test_search_paper_publication_types(self):
         data = self.sch.search_paper(
-            'turing', publication_types=['JournalArticle'])
+            'turing',
+            publication_types=['JournalArticle'],
+            fields=['publicationTypes'])
         self.assertTrue('JournalArticle' in data[0].publicationTypes)
         data = self.sch.search_paper(
-            'turing', publication_types=['Book', 'Conference'])
+            'turing',
+            publication_types=['Book', 'Conference'],
+            fields=['publicationTypes'])
         self.assertTrue(
             'Book' in data[0].publicationTypes or
             'Conference' in data[0].publicationTypes)
 
     @test_vcr.use_cassette
     def test_search_paper_venue(self):
-        data = self.sch.search_paper('turing', venue=['ArXiv'])
+        data = self.sch.search_paper(
+            'turing', venue=['ArXiv'], fields=['venue'])
         self.assertEqual(data[0].venue, 'arXiv.org')
 
     @test_vcr.use_cassette
     def test_search_paper_open_access_pdf(self):
-        data = self.sch.search_paper('turing', open_access_pdf=True)
+        data = self.sch.search_paper(
+            'turing', open_access_pdf=True, fields=['openAccessPdf'])
         self.assertTrue(data[0].openAccessPdf)
 
     @test_vcr.use_cassette
@@ -418,7 +433,8 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_paper_min_citation_count(self):
-        data = self.sch.search_paper('turing', min_citation_count=1000)
+        data = self.sch.search_paper(
+            'turing', min_citation_count=1000, fields=['citationCount'])
         self.assertTrue(all([item.citationCount >= 1000 for item in data]))
 
     @test_vcr.use_cassette
@@ -477,14 +493,16 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_search_paper_with_relevance_and_sort(self):
         with self.assertWarns(UserWarning):
-            self.sch.search_paper('kubernetes', sort='citationCount')
+            self.sch.search_paper(
+                'kubernetes', sort='citationCount', fields=['title'])
     
     @test_vcr.use_cassette
     def test_search_paper_match_title(self):
         query = 'mining association rules between'
         expected_title = ('Mining association rules between sets of items in '
                           'large databases')
-        paper = self.sch.search_paper(query, match_title=True)
+        paper = self.sch.search_paper(
+            query, match_title=True, fields=['title'])
         self.assertEqual(paper.title, expected_title)
 
     def test_search_paper_match_title_and_bulk_retrieval(self):
@@ -493,37 +511,42 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_search_author(self):
-        data = self.sch.search_author('turing')
+        data = self.sch.search_author('turing', fields=['name'])
         self.assertGreater(data.total, 0)
         self.assertEqual(data.next, 0)
 
     @test_vcr.use_cassette
     def test_get_recommended_papers(self):
-        data = self.sch.get_recommended_papers('10.2139/ssrn.2250500')
+        data = self.sch.get_recommended_papers(
+            '10.2139/ssrn.2250500', fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
     def test_get_recommended_papers_pool_from(self):
         data = self.sch.get_recommended_papers(
-            '10.1145/3544585.3544600', pool_from="all-cs")
+            '10.2139/ssrn.2250500', pool_from="all-cs", fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
     def test_get_recommended_papers_pool_from_invalid(self):
         self.assertRaises(ValueError,
                           self.sch.get_recommended_papers,
-                          '10.1145/3544585.3544600', pool_from="invalid")
+                          '10.1145/3544585.3544600',
+                          pool_from="invalid")
 
     @test_vcr.use_cassette
     def test_get_recommended_papers_from_lists(self):
         data = self.sch.get_recommended_papers_from_lists(
-            ['10.1145/3544585.3544600'], ['10.1145/301250.301271'])
+            ['10.1145/3544585.3544600'],
+            ['10.1145/301250.301271'],
+            fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
     def test_get_recommended_papers_from_lists_positive_only(self):
         data = self.sch.get_recommended_papers_from_lists(
-            ['10.1145/3544585.3544600', '10.1145/301250.301271'])
+            ['10.1145/3544585.3544600', '10.1145/301250.301271'],
+            fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
@@ -531,7 +554,8 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertRaises(BadQueryParametersException,
                           self.sch.get_recommended_papers_from_lists,
                           [],
-                          ['10.1145/3544585.3544600'])
+                          ['10.1145/3544585.3544600'],
+                          fields=['title'])
 
     @test_vcr.use_cassette
     def test_limit_value_exceeded(self):
@@ -566,7 +590,7 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_empty_paginated_results(self):
-        data = self.sch.search_paper('n0 r3sult s3arch t3rm')
+        data = self.sch.search_paper('n0 r3sult s3arch t3rm', fields=['title'])
         self.assertEqual(data.total, 0)
 
     @test_vcr.use_cassette
@@ -618,7 +642,8 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_get_paper_async(self):
-        data = await self.sch.get_paper('10.1093/mind/lix.236.433')
+        data = await self.sch.get_paper(
+            '10.1093/mind/lix.236.433', fields=['title'])
         self.assertEqual(data.title,
                          'Computing Machinery and Intelligence')
         self.assertEqual(data.raw_data['title'],
@@ -630,7 +655,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             'CorpusId:470667',
             '10.2139/ssrn.2250500',
             '0f40b1f08821e22e859c6050916cec3667778613']
-        data = await self.sch.get_papers(list_of_paper_ids)
+        data = await self.sch.get_papers(list_of_paper_ids, fields=['authors'])
         for item in data:
             with self.subTest(subtest=item.paperId):
                 self.assertIn(
@@ -682,12 +707,15 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_get_paper_references_async(self):
-        data = await self.sch.get_paper_references('CorpusID:49313245')
+        data = await self.sch.get_paper_references(
+            '10.2139/ssrn.2250500', fields=['title'], limit=50)
         self.assertEqual(data.offset, 0)
-        self.assertEqual(data.next, 0)
-        self.assertEqual(len(data), 73)
+        self.assertEqual(data.next, 50)
+        self.assertEqual(len(data), 50)
         self.assertEqual(
-            data[0].paper.title, 'Constituency Parsing with a Self-Attentive Encoder')
+            data[0].paper.title,
+            'Group lending or individual lending? Evidence from a randomised '
+            'field experiment in Mongolia')
     
     @test_vcr.use_cassette
     async def test_timeout_async(self):
@@ -698,13 +726,13 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     
     @test_vcr.use_cassette
     async def test_get_author_async(self):
-        data = await self.sch.get_author(2262347)
+        data = await self.sch.get_author(2262347, fields=['name'])
         self.assertEqual(data.name, 'A. Turing')
 
     @test_vcr.use_cassette
     async def test_get_authors_async(self):
         list_of_author_ids = ['3234559', '1726629', '1711844']
-        data = await self.sch.get_authors(list_of_author_ids)
+        data = await self.sch.get_authors(list_of_author_ids, fields=['name'])
         list_of_author_names = ['E. Dijkstra', 'D. Parnas', 'I. Sommerville']
         self.assertCountEqual(
             [item.name for item in data], list_of_author_names)
@@ -763,9 +791,9 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_not_found_async(self):
         with self.assertRaises(ObjectNotFoundException):
-            await self.sch.get_paper(0)
+            await self.sch.get_paper(0, fields=['title'])
         with self.assertRaises(ObjectNotFoundException):
-            await self.sch.get_author(0)
+            await self.sch.get_author(0, fields=['name'])
 
     @test_vcr.use_cassette
     async def test_bad_query_parameters_async(self):
@@ -774,7 +802,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_search_paper_async(self):
-        data = await self.sch.search_paper('turing')
+        data = await self.sch.search_paper('turing', fields=['title'])
         self.assertGreater(data.total, 0)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
@@ -786,13 +814,14 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_search_paper_next_page_async(self):
-        data = await self.sch.search_paper('turing')
+        data = await self.sch.search_paper('turing', fields=['title'])
         await data.async_next_page()
         self.assertGreater(len(data), 100)
 
     @test_vcr.use_cassette
     async def test_search_paper_traversing_results_async(self):
-        data = await self.sch.search_paper('sublinear near optimal edit distance')
+        data = await self.sch.search_paper(
+            'sublinear near optimal edit distance', fields=['title'])
         all_results = [item.title async for item in data]
         with self.assertRaises(NoMorePagesException):
             await data.async_next_page()
@@ -800,38 +829,49 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_search_paper_fields_of_study_async(self):
-        data = await self.sch.search_paper('turing', fields_of_study=['Mathematics'])
+        data = await self.sch.search_paper(
+            'turing',
+            fields_of_study=['Mathematics'],
+            fields=['s2FieldsOfStudy'])
         self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
 
     @test_vcr.use_cassette
     async def test_search_paper_year_async(self):
-        data = await self.sch.search_paper('turing', year=1936)
+        data = await self.sch.search_paper(
+            'turing', year=1936, fields=['year'])
         self.assertEqual(data[0].year, 1936)
 
     @test_vcr.use_cassette
     async def test_search_paper_year_range_async(self):
-        data = await self.sch.search_paper('turing', year='1936-1937')
+        data = await self.sch.search_paper(
+            'turing', year='1936-1937', fields=['year'])
         self.assertTrue(all([1936 <= item.year <= 1937 async for item in data]))
 
     @test_vcr.use_cassette
     async def test_search_paper_publication_types_async(self):
         data = await self.sch.search_paper(
-            'turing', publication_types=['JournalArticle'])
+            'turing',
+            publication_types=['JournalArticle'],
+            fields=['publicationTypes'])
         self.assertTrue('JournalArticle' in data[0].publicationTypes)
         data = await self.sch.search_paper(
-            'turing', publication_types=['Book', 'Conference'])
+            'turing',
+            publication_types=['Book', 'Conference'],
+            fields=['publicationTypes'])
         self.assertTrue(
             'Book' in data[0].publicationTypes or
             'Conference' in data[0].publicationTypes)
 
     @test_vcr.use_cassette
     async def test_search_paper_venue_async(self):
-        data = await self.sch.search_paper('turing', venue=['ArXiv'])
+        data = await self.sch.search_paper(
+            'turing', venue=['ArXiv'], fields=['venue'])
         self.assertEqual(data[0].venue, 'arXiv.org')
 
     @test_vcr.use_cassette
     async def test_search_paper_open_access_pdf_async(self):
-        data = await self.sch.search_paper('turing', open_access_pdf=True)
+        data = await self.sch.search_paper(
+            'turing', open_access_pdf=True, fields=['openAccessPdf'])
         self.assertTrue(data[0].openAccessPdf)
 
     @test_vcr.use_cassette
@@ -869,7 +909,8 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_search_paper_min_citation_count_async(self):
-        data = await self.sch.search_paper('turing', min_citation_count=1000)
+        data = await self.sch.search_paper(
+            'turing', min_citation_count=1000, fields=['citationCount'])
         self.assertTrue(all([item.citationCount >= 1000 async for item in data]))
 
     @test_vcr.use_cassette
@@ -934,14 +975,16 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_search_paper_with_relevance_and_sort_async(self):
         with self.assertWarns(UserWarning):
-            await self.sch.search_paper('kubernetes', sort='citationCount')
+            await self.sch.search_paper(
+                'kubernetes', sort='citationCount', fields=['title'])
 
     @test_vcr.use_cassette
     async def test_search_paper_match_title_async(self):
         query = 'mining association rules between'
         expected_title = ('Mining association rules between sets of items in '
                           'large databases')
-        paper = await self.sch.search_paper(query, match_title=True)
+        paper = await self.sch.search_paper(
+            query, match_title=True, fields=['title'])
         self.assertEqual(paper.title, expected_title)
 
     async def test_search_paper_match_title_and_bulk_retrieval_async(self):
@@ -950,19 +993,20 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
     @test_vcr.use_cassette
     async def test_search_author_async(self):
-        data = await self.sch.search_author('turing')
+        data = await self.sch.search_author('turing', fields=['name'])
         self.assertGreater(data.total, 0)
         self.assertEqual(data.next, 0)
 
     @test_vcr.use_cassette
     async def test_get_recommended_papers_async(self):
-        data = await self.sch.get_recommended_papers('10.2139/ssrn.2250500')
+        data = await self.sch.get_recommended_papers(
+            '10.2139/ssrn.2250500', fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
     async def test_get_recommended_papers_pool_from_async(self):
         data = await self.sch.get_recommended_papers(
-            '10.1145/3544585.3544600', pool_from="all-cs")
+            '10.1145/3544585.3544600', pool_from="all-cs", fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
@@ -974,13 +1018,16 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     @test_vcr.use_cassette
     async def test_get_recommended_papers_from_lists_async(self):
         data = await self.sch.get_recommended_papers_from_lists(
-            ['10.1145/3544585.3544600'], ['10.1145/301250.301271'])
+            ['10.1145/3544585.3544600'],
+            ['10.1145/301250.301271'],
+            fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
     async def test_get_recommended_papers_from_lists_positive_only_async(self):
         data = await self.sch.get_recommended_papers_from_lists(
-            ['10.1145/3544585.3544600', '10.1145/301250.301271'])
+            ['10.1145/3544585.3544600', '10.1145/301250.301271'],
+            fields=['title'])
         self.assertEqual(len(data), 100)
 
     @test_vcr.use_cassette
@@ -988,8 +1035,8 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(BadQueryParametersException):
             await self.sch.get_recommended_papers_from_lists(
                 [],
-                ['10.1145/3544585.3544600']
-            )
+                ['10.1145/3544585.3544600'],
+                fields=['title'])
 
     @test_vcr.use_cassette
     async def test_limit_value_exceeded_async(self):
