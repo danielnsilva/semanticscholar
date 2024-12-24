@@ -589,7 +589,8 @@ class SemanticScholar():
         return papers
     
     def get_autocomplete(self, query: str) -> List[Autocomplete]:
-        """Get autocomplete suggestions for a query.
+        """
+        Get autocomplete suggestions for a paper query.
 
         :calls: `GET /graph/v1/paper/autocomplete?query={query} \
             <https://api.semanticscholar.org/api-docs/graph#tag/\
@@ -597,7 +598,8 @@ class SemanticScholar():
 
         :param str query: query to get autocomplete suggestions for.
         :returns: list of autocomplete suggestions.
-        :rtype: :class:`List` of :class:`semanticscholar.Autocomplete.Autocomplete`
+        :rtype: :class:`List` of 
+                :class:`semanticscholar.Autocomplete.Autocomplete`
         """
         
         loop = asyncio.get_event_loop()

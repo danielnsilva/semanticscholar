@@ -799,7 +799,8 @@ class AsyncSemanticScholar:
         return papers
     
     async def get_autocomplete(self, query: str) -> List[Autocomplete]:
-        """Get autocomplete suggestions for a query.
+        """
+        Get autocomplete suggestions for a paper query.
 
         :calls: `GET /graph/v1/paper/autocomplete?query={query} \
             <https://api.semanticscholar.org/api-docs/graph#tag/\
@@ -807,14 +808,17 @@ class AsyncSemanticScholar:
 
         :param str query: query to get autocomplete suggestions for.
         :returns: list of autocomplete suggestions.
-        :rtype: :class:`List` of :class:`semanticscholar.Autocomplete.Autocomplete`
+        :rtype: :class:`List` of 
+                :class:`semanticscholar.Autocomplete.Autocomplete`
         """
+        
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f"{base_url}/paper/autocomplete"
 
         parameters = f"query={query}"
 
-        data = await self._requester.get_data_async(url, parameters, self.auth_header)
+        data = await self._requester.get_data_async(
+            url, parameters, self.auth_header)
 
         if not data or "matches" not in data:
             return []
