@@ -106,11 +106,13 @@ for line in api_file:
 api_file_contents = 'API Endpoints\n'
 api_file_contents += '-------------\n'
 for endpoint, methods in sorted(api_endpoints.items()):
-    prefix = '/'.join(endpoint.split('/')[:3])
+    endpoint_path_depth = 3
+    if endpoint.startswith('/graph'):
+        endpoint_path_depth = 4
+    prefix = '/'.join(endpoint.split('/')[:endpoint_path_depth])
     if prefix not in api_file_contents:
         api_file_contents += f'\n{prefix}\n'
         api_file_contents += f'{"^" * len(prefix)}\n\n'
-    endpoint = endpoint[len(prefix):]
     api_file_contents += f'* {endpoint}\n'
     for http_method, method in sorted(methods.items()):
         api_file_contents += f'\t* {http_method}: {method}\n'
