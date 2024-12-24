@@ -9,7 +9,6 @@
    usage
    reference 
    api
-   contributing
    changes
 
 .. toctree::

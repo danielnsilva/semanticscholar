@@ -50,12 +50,12 @@ Contributing
 
 As a volunteer-maintained open-source project, contributions of all forms are welcome! For more information, see the :doc:`contributing`.
 
-Please make sure to understand our `Code of Conduct <https://github.com/danielnsilva/semanticscholar/blob/master/.github/CODE_OF_CONDUCT.md>`_ before you contribute. TL;DR: Be nice and respectful!
+Please make sure to understand our :doc:`code_of_conduct` before you contribute. TL;DR: Be nice and respectful!
 
 License
 ^^^^^^^
 
-This project is licensed under the MIT License - see the `LICENSE <https://github.com/danielnsilva/semanticscholar/blob/master/LICENSE>`_ file for details.
+This project is licensed under the MIT License - see the :doc:`license` file for details.
 
 Semantic Scholar API official docs and additional resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

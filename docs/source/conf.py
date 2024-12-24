@@ -9,12 +9,40 @@ import os
 import pkgutil
 import re
 import sys
-
+import glob
 import pypandoc
 
 sys.path.append(os.path.join(os.getcwd(), '../..'))
 
 from semanticscholar.SemanticScholarObject import SemanticScholarObject
+from sphinx.application import Sphinx
+
+# List of generated .rst files to be removed after build
+generated_rst_files = [
+    'api.rst',
+    's2objects.rst',
+    's2objects/*.rst',
+    'changes.rst',
+    'contributing.rst',
+    'code_of_conduct.rst',
+    'license.rst'
+]
+
+def clean_generated_rst(app: Sphinx, exception: Exception):
+    if exception is None:
+        base_dir = os.path.abspath(os.path.dirname(__file__))
+        for pattern in generated_rst_files:
+            full_pattern = os.path.join(base_dir, pattern)
+            matched_files = glob.glob(full_pattern)            
+            for file_path in matched_files:
+                try:
+                    os.remove(file_path)
+                    print(f"Removed generated file: {file_path}")
+                except OSError as e:
+                    print(f"Error removing {file_path}: {e}")
+
+def setup(app: Sphinx):
+    app.connect('build-finished', clean_generated_rst)  
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -149,11 +177,30 @@ for cls in sorted(final_subclasses_set, key=lambda x: x.__name__):
         s2object_file.write('\t:members:\n')
         s2object_file.write('\t:inherited-members:\n')
 
-# -- Changelog ---------------------------------------------------------------
+# -- Convert Markdown to reStructuredText ------------------------------------
 
-with open('../../CHANGELOG.md', 'r', encoding='utf-8') as changelog_file:
-    changelog = changelog_file.read()
-    changes_rst = pypandoc.convert_text(changelog, 'rst', format='md')
-    changes_rst = ':tocdepth: 2\n\n' + changes_rst
-    with open('changes.rst', 'w', encoding='utf-8') as changes_file:
-        changes_file.write(changes_rst)
+def convert_md_to_rst(md_file_path, rst_file_path):
+    if not os.path.exists(md_file_path):
+        return
+    with open(md_file_path, 'r', encoding='utf-8') as md_file:
+        md_content = md_file.read()
+        rst_content = pypandoc.convert_text(md_content, 'rst', format='md')
+        rst_content = ':tocdepth: 2\n\n' + rst_content
+        with open(rst_file_path, 'w', encoding='utf-8') as rst_file:
+            rst_file.write(rst_content)
+
+convert_md_to_rst('../../CHANGELOG.md', 'changes.rst')
+convert_md_to_rst('../../.github/CONTRIBUTING.md', 'contributing.rst')
+convert_md_to_rst('../../.github/CODE_OF_CONDUCT.md', 'code_of_conduct.rst')
+
+# -- License -----------------------------------------------------------------
+
+with open('../../LICENSE', 'r', encoding='utf-8') as license_file:
+    license = license_file.read()
+    license_name = license.split('\n')[0]
+    license_text = '\n'.join(license.split('\n')[1:])
+    with open('license.rst', 'w', encoding='utf-8') as license_file:
+        license_file.write(':tocdepth: 2\n\n')
+        license_file.write(f'{license_name}\n')
+        license_file.write(f'{"=" * len(license_name)}\n\n')
+        license_file.write(license_text)
