@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### New Features
+
+- Added support for suggest paper query completions by [@david-rohrschneider](https://github.com/david-rohrschneider) in [#100](https://github.com/danielnsilva/semanticscholar/pull/100)
+
 ### Bug Fixes
 
 - Removed backslashes in docstrings to fix formatting issues. ([3ef890b](https://github.com/danielnsilva/semanticscholar/commit/3ef890b))
