@@ -36,7 +36,7 @@ Output:
 
 .. code-block:: bash
 
-   'Computing Machinery and Intelligence'
+   Computing Machinery and Intelligence
 
 What next?
 ~~~~~~~~~~
