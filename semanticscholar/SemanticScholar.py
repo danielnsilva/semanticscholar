@@ -588,7 +588,7 @@ class SemanticScholar():
 
         return papers
     
-    def get_autocomplete(self, query: str) -> list[Autocomplete]:
+    def get_autocomplete(self, query: str) -> List[Autocomplete]:
         """Get autocomplete suggestions for a query.
 
         :calls: `GET /graph/v1/paper/autocomplete?query={query} \

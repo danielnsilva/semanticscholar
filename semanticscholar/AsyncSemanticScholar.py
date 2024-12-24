@@ -798,7 +798,7 @@ class AsyncSemanticScholar:
 
         return papers
     
-    async def get_autocomplete(self, query: str) -> list[Autocomplete]:
+    async def get_autocomplete(self, query: str) -> List[Autocomplete]:
         """Get autocomplete suggestions for a query.
 
         :calls: `GET /graph/v1/paper/autocomplete?query={query} \
