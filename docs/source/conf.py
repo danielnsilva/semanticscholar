@@ -29,6 +29,9 @@ generated_rst_files = [
 ]
 
 def clean_generated_rst(app: Sphinx, exception: Exception):
+    '''
+    Remove generated .rst files after the build is finished.
+    '''
     if exception is None:
         base_dir = os.path.abspath(os.path.dirname(__file__))
         for pattern in generated_rst_files:
@@ -42,6 +45,9 @@ def clean_generated_rst(app: Sphinx, exception: Exception):
                     print(f"Error removing {file_path}: {e}")
 
 def setup(app: Sphinx):
+    '''
+    Connect the clean_generated_rst function to the build-finished event.
+    '''
     app.connect('build-finished', clean_generated_rst)  
 
 # -- Project information -----------------------------------------------------
@@ -125,7 +131,9 @@ api_file.close()
 # -- SemanticScholar objects -------------------------------------------------
 
 def find_subclasses(module, base_class):
-    '''Return all subclasses of a base class within a module.'''
+    '''
+    Return all subclasses of a base class within a module.
+    '''
     subclasses = []
     for _, obj in vars(module).items():
         if (isinstance(obj, type) and
@@ -182,6 +190,9 @@ for cls in sorted(final_subclasses_set, key=lambda x: x.__name__):
 # -- Convert Markdown to reStructuredText ------------------------------------
 
 def convert_md_to_rst(md_file_path, rst_file_path):
+    '''
+    Convert a Markdown file to reStructuredText.
+    '''
     if not os.path.exists(md_file_path):
         return
     with open(md_file_path, 'r', encoding='utf-8') as md_file:
