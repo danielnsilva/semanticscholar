@@ -35,7 +35,7 @@ Usage
 
 Output:
 
-.. code-block:: bash
+.. code-block:: text
 
    Computing Machinery and Intelligence
 
