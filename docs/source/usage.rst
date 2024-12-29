@@ -129,7 +129,7 @@ To search for authors by name:
     results = sch.search_author('Alan M. Turing')
 
 Query parameters for search papers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``year: str``
 """""""""""""
