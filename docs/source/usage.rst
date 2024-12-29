@@ -203,3 +203,50 @@ This parameter represents the maximum number of results to return on each call t
 
 Troubleshooting
 ===============
+
+If you encounter issues while using the ``semanticscholar`` library, enabling debug-level logging can provide valuable insights into the underlying HTTP requests and responses. This can help you identify the root cause of the problem and resolve it more efficiently.
+
+Enabling debug logging
+----------------------
+
+You can enable debug-level logging globally or just for the ``semanticscholar`` library.
+
+1. **Enable debug logging globally**:
+    
+.. code-block:: python
+
+    import logging
+    logging.getLogger().setLevel(logging.DEBUG)
+    
+This will enable debug-level logging for all loggers, including the ``semanticscholar`` library, its dependencies, and any other libraries you are using. While these messages may not be directly related, they can still provide valuable context for identifying related issues or understanding broader behavior.
+
+
+2. **Enable debug logging for the semanticscholar library only**:
+
+.. code-block:: python
+
+    import logging
+    logging.getLogger('semanticscholar').setLevel(logging.DEBUG)
+    
+This restricts debug-level logging to the ``semanticscholar`` library.
+The output will include detailed information about HTTP requests, headers, payloads, and the equivalent ``curl`` command. For example:
+
+.. code-block::
+
+    DEBUG:semanticscholar:HTTP Request: POST https://api.semanticscholar.org/graph/v1/paper/batch?fields=title,year
+    DEBUG:semanticscholar:Headers: {'x-api-key': 'F@k3K3y'}
+    DEBUG:semanticscholar:Payload: {'ids': ['CorpusId:470667', '10.2139/ssrn.2250500', '0f40b1f08821e22e859c6050916cec3667778613']}
+    DEBUG:semanticscholar:cURL command: curl -X POST -H 'x-api-key: F@k3K3y' -d '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}' https://api.semanticscholar.org/graph/v1/paper/batch?fields=title,year
+
+Debugging with the ``curl`` command
+-----------------------------------
+
+The ``semanticscholar`` library provides a ``curl`` command in its debug output. You can use this command to interact directly with the Semantic Scholar API and compare the results with those obtained through the library.
+
+For example::
+
+   curl -X POST -H 'x-api-key: F@k3K3y' -d '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}' https://api.semanticscholar.org/graph/v1/paper/batch?fields=title,year
+
+You can also use any HTTP client of your choice (e.g., Postman) to replicate the request and validate the behavior.
+
+By using debug logging and the provided ``curl`` command, you can isolate issues, verify API responses, and resolve problems effectively.
