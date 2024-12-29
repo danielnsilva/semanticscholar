@@ -1,10 +1,11 @@
 :tocdepth: 1
 
+============
 Installation
-------------
+============
 
 Latest realease
-^^^^^^^^^^^^^^^
+===============
 
 You can install the latest release using pip:
 
@@ -13,7 +14,7 @@ You can install the latest release using pip:
     pip install semanticscholar
 
 Development version
-^^^^^^^^^^^^^^^^^^^
+===================
 
 You can install the latest development version from GitHub:
 
@@ -30,13 +31,13 @@ Alternatively, you can use VCS support:
     pip install git+https://github.com/danielnsilva/semanticscholar@master
 
 Previous versions
-^^^^^^^^^^^^^^^^^
+=================
 
 For previous versions of the library, please refer to the `releases page in GitHub <https://github.com/danielnsilva/semanticscholar/releases>`_ or the `Python Package Index <https://pypi.org/project/semanticscholar/>`_.
 
 
 Requirements
-^^^^^^^^^^^^
+============
 
 * Python 3.8+ (https://www.python.org/)
 * tenacity (https://tenacity.readthedocs.io/en/latest/)
