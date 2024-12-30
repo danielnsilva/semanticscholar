@@ -43,6 +43,23 @@ To fetch the next page of results, use the `next_page()` method. This method app
 Asynchronous requests
 ---------------------
 
+The library supports both synchronous and asynchronous versions for its methods, allowing you to choose the approach that best suits your workflow.
+
+You can use the asynchronous version with the :doc:`mainclasses/asyncsemanticscholar` class:
+
+.. code-block:: python
+
+    import asyncio
+    from semanticscholar import AsyncSemanticScholar
+
+    def fetch_paper():
+        async def get_paper():
+            sch = AsyncSemanticScholar()
+            return await sch.get_paper('10.1093/mind/lix.236.433')
+        return asyncio.run(get_paper())
+
+    paper = fetch_paper()
+
 Authenticated requests
 ----------------------
 
