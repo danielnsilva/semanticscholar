@@ -246,7 +246,8 @@ This will enable debug-level logging for all loggers, including the ``semanticsc
     logging.getLogger('semanticscholar').setLevel(logging.DEBUG)
     
 This restricts debug-level logging to the ``semanticscholar`` library.
-The output will include detailed information about HTTP requests, headers, payloads, and the equivalent ``curl`` command. For example:
+
+In both cases, the output will include detailed information about HTTP requests, headers, payloads, and the equivalent ``curl`` command. For example:
 
 .. code-block::
 
@@ -254,6 +255,10 @@ The output will include detailed information about HTTP requests, headers, paylo
     DEBUG:semanticscholar:Headers: {'x-api-key': 'F@k3K3y'}
     DEBUG:semanticscholar:Payload: {'ids': ['CorpusId:470667', '10.2139/ssrn.2250500', '0f40b1f08821e22e859c6050916cec3667778613']}
     DEBUG:semanticscholar:cURL command: curl -X POST -H 'x-api-key: F@k3K3y' -d '{"ids": ["CorpusId:470667", "10.2139/ssrn.2250500", "0f40b1f08821e22e859c6050916cec3667778613"]}' https://api.semanticscholar.org/graph/v1/paper/batch?fields=title,year
+
+.. warning::
+
+    Be cautious when enabling debug logging and sharing the output, as it may contain sensitive information like API keys.
 
 Debugging with the ``curl`` command
 -----------------------------------
