@@ -70,6 +70,20 @@ If you have an API key, you can pass it as an argument to the main class. This w
     from semanticscholar import SemanticScholar
     sch = SemanticScholar(api_key='your_api_key_here')
 
+Retry mode
+----------
+
+The library includes a built-in retry mechanism to handle rate-limiting responses from the Semantic Scholar API.
+
+By default, the retry mechanism is enabled (``retry=True``). When enabled, the library will automatically retry requests up to 10 times if it encounters an HTTP 429 status (`Too Many Requests`). Each retry attempt waits 30 seconds before trying again.
+
+This feature is especially useful for handling temporary rate limits imposed by the Semantic Scholar API, ensuring your requests are eventually processed without manual intervention. If you prefer to manage retries yourself, you can disable this feature as shown below:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar(retry=False)
+
 Paper and Author
 ================
 
