@@ -44,39 +44,6 @@ To explore all available fields in the response, use the ``keys()`` method:
 
     Refer to the :doc:`s2objects` section for details on all available response types and their attributes.
 
-Paginated results
------------------
-
-Methods that return lists of items, such as papers or authors, will paginate through results, returning the list of papers or authors up to the bound limit (default value is 100). To retrieve additional pages, you can fetch them one by one or iterate through all results.
-
-For example, iterating over all results for a paper search:
-
-.. code-block:: python
-
-    from semanticscholar import SemanticScholar
-    sch = SemanticScholar()
-    results = sch.search_paper('Computing Machinery and Intelligence')
-    all_results = [item for item in results]
-
-Pagination is handled automatically when iterating, retrieving all available items. However, if only the first batch of results is needed, you can access them directly using the `items` property of the result object, avoiding extra API calls:
-
-.. code-block:: python
-
-    from semanticscholar import SemanticScholar
-    sch = SemanticScholar()
-    results = sch.search_paper('Computing Machinery and Intelligence')
-    first_page = results.items
-
-To fetch the next page of results, use the `next_page()` method. This method appends the next batch of items to the current list, as shown in the example below:
-
-.. code-block:: python
-
-    from semanticscholar import SemanticScholar
-    sch = SemanticScholar()
-    results = sch.search_paper('Computing Machinery and Intelligence')
-    results.next_page()
-    first_two_pages = results.items
-
 Asynchronous requests
 ---------------------
 
@@ -238,6 +205,36 @@ Restrict results to a given list of fields of study. Check `official documentati
     from semanticscholar import SemanticScholar
     sch = SemanticScholar()
     results = sch.search_paper('software engineering', fields_of_study=['Computer Science','Education'])
+
+
+Paginated results
+-----------------
+
+Methods that return lists of items, such as papers or authors, will paginate through results, returning the list of papers or authors up to the bound limit (default value is 100). To retrieve additional pages, you can fetch them one by one or iterate through all results.
+
+For example, iterating over all results for a paper search:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    results = sch.search_paper('Computing Machinery and Intelligence')
+    all_results = [item for item in results]
+
+Pagination is handled automatically when iterating, retrieving all available items. However, if only the first batch of results is needed, you can access them directly using the `items` property of the result object, avoiding extra API calls:
+
+.. code-block:: python
+
+    results = sch.search_paper('Computing Machinery and Intelligence')
+    first_page = results.items
+
+To fetch the next page of results, use the `next_page()` method. This method appends the next batch of items to the current list, as shown in the example below:
+
+.. code-block:: python
+
+    results = sch.search_paper('Computing Machinery and Intelligence')
+    results.next_page()
+    first_two_pages = results.items
 
 Recommended papers
 ==================
