@@ -7,6 +7,43 @@ Usage
 Basics
 ======
 
+Basic usage involves initializing the main class, calling one of its methods to retrieve data, and accessing the response attributes. For example, to get a paper by its ID:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    paper = sch.get_paper('10.1093/mind/lix.236.433')
+    print(paper.title)
+
+Typed responses
+---------------
+
+The library offers typed responses. This simplifies data extraction and enhances code readability. For example, to access the title of a paper:
+
+.. code-block:: python
+
+    paper = sch.get_paper('10.1093/mind/lix.236.433')
+    print(paper.title)
+
+You can also access the API response in its original JSON format as a dictionary. To retrieve the raw JSON data, use the ``raw_data`` attribute of the response object:
+
+.. code-block:: python
+
+    paper = sch.get_paper('10.1093/mind/lix.236.433')
+    print(paper.raw_data)
+
+To explore all available fields in the response, use the ``keys()`` method:
+
+.. code-block:: python
+
+    paper = sch.get_paper('10.1093/mind/lix.236.433')
+    print(paper.keys())
+
+.. seealso::
+
+    Refer to the :doc:`s2objects` section for details on all available response types and their attributes.
+
 Paginated results
 -----------------
 
