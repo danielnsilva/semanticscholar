@@ -2,7 +2,16 @@
 semanticscholar
 ===============
 
-Unofficial Python client library for `Semantic Scholar APIs <https://api.semanticscholar.org/>`_, currently supporting the Academic Graph API and Recommendations API.
+Unofficial Python client library for `Semantic Scholar APIs <https://api.semanticscholar.org/>`_.
+
+Main features
+=============
+
+- Simplified access to the Semantic Scholar APIs
+- Support for the Academic Graph and Recommendations APIs
+- Typed responses
+- Rate limiting management (with retries)
+- Support for asynchronous requests
 
 Quickstart
 ==========

@@ -120,6 +120,21 @@ To access paper data:
     sch = SemanticScholar()
     paper = sch.get_paper('10.1093/mind/lix.236.433')
 
+For details on supported ID types, refer to the `official API documentation <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper>`_.
+
+Autocomplete suggestions
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use the autocomplete feature to get suggestions for paper queries. For example:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    suggestions = sch.get_autocomplete('softw')
+
+The response contains a list of suggestions based on the provided partial query. Each suggestion is represented by an :doc:`s2objects/Autocomplete` object, which provides minimal information about the papers. Note that these are not full :doc:`s2objects/Paper` objects with all attributes.
+
 Author
 ------
 
@@ -181,6 +196,50 @@ To search for authors by name:
     sch = SemanticScholar()
     results = sch.search_author('Alan M. Turing')
 
+Paper Bulk retrieval
+^^^^^^^^^^^^^^^^^^^^
+
+The bulk retrieval method allows fetching up to 1,000 basic paper records per request and up 10,000,000 papers in total. This useful To retrieve a large number of papers, once ``search_paper()`` by default are limited to 1,000 results in total.
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    response = sch.search_paper(query='deep learning', bulk=True)
+
+The query supports advanced syntax for refined searches. For details about query syntax and additional parameters, refer to the `official API documentation <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_bulk_search>`_.
+
+.. code-block:: python
+
+    # Search for papers containing 'deep' or 'learning'
+    response = sch.search_paper(query='deep | learning', bulk=True)
+
+Additionally, the ``sort`` parameter allows ordering results when using ``bulk=True``. Use the format ``<field>:<order>``, where:
+- **field**: Can be ``paperId``, ``publicationDate``, or ``citationCount``.
+- **order**: Can be ``asc`` (ascending) or ``desc`` (descending).
+
+By default, results are sorted by ``paperId:asc``.
+
+.. code-block:: python
+
+    # Retrieve highly-cited papers first
+    response = sch.search_paper(query='deep learning', bulk=True, sort='citationCount:desc')
+
+Search papers by title
+^^^^^^^^^^^^^^^^^^^^^^
+
+Retrieve a single paper whose title best matches the given query.
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    paper = sch.search_paper(query='deep learning', match_title=True)
+
+.. note::
+
+    The ``match_title`` parameter is not compatible with the ``bulk`` parameter.
+
 Query parameters for search papers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -191,9 +250,34 @@ Restrict results to a specific publication year or a given range, following the 
 
 .. code-block:: python
 
-    from semanticscholar import SemanticScholar
-    sch = SemanticScholar()
-    results = sch.search_paper('software engineering', year=2000)
+    results = sch.search_paper('turing test', year=2000)
+
+``publication_type: list``
+""""""""""""""""""""""""""
+
+Restrict results to a given list of publication types. Check `official documentation <https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_relevance_search>`_ for a list of available publication types.
+
+.. code-block:: python
+
+    results = sch.search_paper('turing test', publication_type=['Journal','Conference'])
+
+``open_access_pdf: bool``
+"""""""""""""""""""""""""
+
+Restrict results to papers with open access PDFs. By default, this parameter is set to ``False``.
+
+.. code-block:: python
+
+    results = sch.search_paper('turing test', open_access_pdf=True)
+
+``venue: list``
+"""""""""""""""
+
+Restrict results to a given list of venues.
+
+.. code-block:: python
+
+    results = sch.search_paper('turing test', venue=['ESEM','ICSE','ICSME'])
 
 ``fields_of_study: list``
 """""""""""""""""""""""""
@@ -202,10 +286,25 @@ Restrict results to a given list of fields of study. Check `official documentati
 
 .. code-block:: python
 
-    from semanticscholar import SemanticScholar
-    sch = SemanticScholar()
-    results = sch.search_paper('software engineering', fields_of_study=['Computer Science','Education'])
+    results = sch.search_paper('turing test', fields_of_study=['Computer Science','Education'])
 
+``publication_date_or_year: str``
+"""""""""""""""""""""""""""""""""
+
+Restrict results to the given range of publication date in the format <start_date>:<end_date>, where dates are in the format YYYY-MM-DD, YYYY-MM, or YYYY.
+
+.. code-block:: python
+
+    results = sch.search_paper('turing test', publication_date_or_year='2020-01-01:2021-12-31')
+
+``min_citation_count: int``
+"""""""""""""""""""""""""""
+
+Restrict results to papers with at least the given number of citations.
+
+.. code-block:: python
+
+    results = sch.search_paper('turing test', min_citation_count=100)
 
 Paginated results
 -----------------
