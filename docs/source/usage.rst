@@ -84,6 +84,24 @@ This feature is especially useful for handling temporary rate limits imposed by 
     from semanticscholar import SemanticScholar
     sch = SemanticScholar(retry=False)
 
+Response timeout
+----------------
+
+You can set the wait time for a response. By default, requests to the API will wait for 30 seconds until a ``TimeoutException`` is raised. To change the default value, specify it during the creation of a ``SemanticScholar`` instance:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar(timeout=5)
+
+Alternatively, you can set the ``timeout`` property value:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    sch.timeout = 5
+
 Paper and Author
 ================
 
