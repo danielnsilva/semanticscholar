@@ -55,6 +55,15 @@ What next?
 - :doc:`reference` - Get the details of the classes and methods available in the library.
 - :doc:`api` - Check the supported SemanticScholar API endpoints and which methods implement them.
 
+Semantic Scholar API official docs and additional resources
+===========================================================
+
+If you have concerns or feedback specific to this library, feel free to `open an issue <https://github.com/danielnsilva/semanticscholar/issues>`_. However, the official documentation provides additional resources for broader API-related issues.
+
+- For details on Semantic Scholar APIs capabilities and limits, `go to the official documentation <https://api.semanticscholar.org/api-docs/graph>`_.
+- The `Frequently Asked Questions <https://www.semanticscholar.org/faq>`_ page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
+- This `official GitHub repository <https://github.com/allenai/s2-folks>`_ allows users to report issues and suggest improvements.
+
 Contributing
 ============
 
@@ -66,12 +75,3 @@ License
 =======
 
 This project is licensed under the MIT License - see the :doc:`license` file for details.
-
-Semantic Scholar API official docs and additional resources
-===========================================================
-
-If you have concerns or feedback specific to this library, feel free to `open an issue <https://github.com/danielnsilva/semanticscholar/issues>`_. However, the official documentation provides additional resources for broader API-related issues.
-
-- For details on Semantic Scholar APIs capabilities and limits, `go to the official documentation <https://api.semanticscholar.org/api-docs/graph>`_.
-- The `Frequently Asked Questions <https://www.semanticscholar.org/faq>`_ page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
-- This `official GitHub repository <https://github.com/allenai/s2-folks>`_ allows users to report issues and suggest improvements.
