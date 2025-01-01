@@ -10,7 +10,7 @@ Main features
 - Simplified access to the Semantic Scholar APIs
 - Support for the Academic Graph and Recommendations APIs
 - Typed responses
-- Rate limiting management (with retries)
+- Streamlined navigation of paginated responses
 - Support for asynchronous requests
 
 Quickstart
