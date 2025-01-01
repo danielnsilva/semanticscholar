@@ -77,7 +77,7 @@ If you have an API key, you can pass it as an argument to the main class. This w
 Retry mode
 ----------
 
-The library includes a built-in retry mechanism to handle rate-limiting responses from the Semantic Scholar API.
+The library provides an automatic retry mechanism to handle rate-limiting responses from the Semantic Scholar API.
 
 By default, the retry mechanism is enabled (``retry=True``). When enabled, the library will automatically retry requests up to 10 times if it encounters an HTTP 429 status (`Too Many Requests`). Each retry attempt waits 30 seconds before trying again.
 
@@ -309,7 +309,7 @@ Restrict results to papers with at least the given number of citations.
 Paginated results
 -----------------
 
-Methods that return lists of items, such as papers or authors, will paginate through results, returning the list of papers or authors up to the bound limit (default value is 100). To retrieve additional pages, you can fetch them one by one or iterate through all results.
+Methods that return large amounts of data in chunks, such as searching for papers or authors, support pagination. These methods retrieve results up to a defined limit per page (default is 100). To access additional pages, you can fetch them individually or iterate through the entire set of results.
 
 For example, iterating over all results for a paper search:
 
