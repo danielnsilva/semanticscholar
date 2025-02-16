@@ -23,11 +23,11 @@ All code contributions must be made through Pull Requests.
 
 When contributing, please:
 
-- Follow the PEP8 style guide: Ensure your code is clean and readable by following the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/).
-- Include tests: Write the necessary tests to verify your code works. Ensure all tests pass before submitting a PR.
-- Avoid breaking changes: If necessary, mention them clearly in the PR description.
-- Update documentation: Update or add documentation for new or changed features.
-- Use clear commit messages: Although not mandatory, we encourage following the [Conventional Commits](https://www.conventionalcommits.org/) specification to maintain a clean and organized commit history.
+- **Follow the PEP8 style guide**: Ensure your code is clean and readable by following the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/).
+- **Include tests**: Write the necessary tests to verify your code works. Ensure all tests pass before submitting a PR.
+- **Avoid breaking changes**: If necessary, mention them clearly in the PR description.
+- **Update documentation**: Update or add documentation for new or changed features.
+- **Use clear commit messages**: Although not mandatory, we encourage following the [Conventional Commits](https://www.conventionalcommits.org/) specification to maintain a clean and organized commit history.
 
 ### Running and writing tests
 
