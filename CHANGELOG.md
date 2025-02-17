@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   [@david-rohrschneider](https://github.com/david-rohrschneider) in
   [#100](https://github.com/danielnsilva/semanticscholar/pull/100)
 
+### Enhancements
+
+- Expanded and improved project documentation, now structured in Read the Docs for easier access and maintenance.
+
 ### Bug Fixes
 
 - Removed backslashes in docstrings to fix formatting issues.
