@@ -34,7 +34,7 @@ https://semanticscholar.readthedocs.io/en/stable/install.html) page for more det
 from semanticscholar import SemanticScholar
 
 # You'll need an instance of the client to request data from the API
-sch = SemanticScholar()https://semanticscholar.readthedocs.io/en/stable/install.html
+sch = SemanticScholar()
 
 # Get a paper by its ID
 paper = sch.get_paper('10.1093/mind/lix.236.433')
