@@ -1,7 +1,12 @@
 from setuptools import setup
+import re
 
 with open("README.md", "r", encoding='utf8') as fh:
     long_description = fh.read()
+
+# Remove badges from README.md
+long_description = re.sub(r'!\[.*?\]\(https://img.shields.io/.*?\)\n?', '', long_description)
+long_description = re.sub(r'\[\]\(https?://[^\)]+\)\n?', '', long_description)
 
 setup(
     name='semanticscholar',
