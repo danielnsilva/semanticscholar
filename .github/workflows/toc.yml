@@ -1,9 +1,9 @@
 name: TOC Generator
 
 on:
-  push:
-    paths:
-      - 'README.md'
+  # push:
+  #   paths:
+  #     - 'README.md'
   workflow_dispatch:
       
 jobs:

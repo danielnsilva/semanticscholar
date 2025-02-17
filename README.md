@@ -1,17 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [semanticscholar](#semanticscholar)
-  - [Main features](#main-features)
-  - [Quickstart](#quickstart)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [What next?](#what-next)
-  - [Semantic Scholar API official docs](#semantic-scholar-api-official-docs)
-  - [Contributing](#contributing)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # semanticscholar
 
 [![Latest version](https://img.shields.io/pypi/v/semanticscholar?style=for-the-badge)](https://pypi.org/project/semanticscholar)
