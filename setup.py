@@ -10,7 +10,7 @@ long_description = re.sub(r'\[\]\(https?://[^\)]+\)\n?', '', long_description)
 
 setup(
     name='semanticscholar',
-    version='0.9.0',
+    version='0.10.0',
     description='Unofficial Python client library for Semantic Scholar APIs.',
     long_description=long_description,
     long_description_content_type="text/markdown",

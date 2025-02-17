@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.0] - 2025-02-16
+
 ### New Features
 
 - Added support for suggest paper query completions by
@@ -15,12 +17,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Enhancements
 
-- Expanded and improved project documentation, now structured in Read the Docs for easier access and maintenance.
+- Expanded and improved project documentation, now structured in Read the Docs
+  for easier access and maintenance.
 
 ### Bug Fixes
 
 - Removed backslashes in docstrings to fix formatting issues.
   ([3ef890b](https://github.com/danielnsilva/semanticscholar/commit/3ef890b))
+- Fixed issue with quotes in the query string by [@k1000dai](
+  https://github.com/k1000dai) in [#99](
+  https://github.com/danielnsilva/semanticscholar/pull/99)
 
 ## [0.9.0] - 2024-11-30
 
@@ -297,7 +303,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.3] - 2019-08-02
 
-[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.9.0...HEAD
+[unreleased]: https://github.com/danielnsilva/semanticscholar/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.4...v0.9.0
 [0.8.4]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.2...v0.8.4
 [0.8.2]: https://github.com/danielnsilva/semanticscholar/compare/v0.8.1...v0.8.2
