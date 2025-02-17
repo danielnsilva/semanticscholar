@@ -34,7 +34,7 @@ https://semanticscholar.readthedocs.io/en/stable/install.html) page for more det
 from semanticscholar import SemanticScholar
 
 # You'll need an instance of the client to request data from the API
-sch = SemanticScholar()
+sch = SemanticScholar()https://semanticscholar.readthedocs.io/en/stable/install.html
 
 # Get a paper by its ID
 paper = sch.get_paper('10.1093/mind/lix.236.433')
@@ -51,9 +51,9 @@ Computing Machinery and Intelligence
 
 ### What next?
 
-- **Usage** - See additional examples to learn how to use the library to fetch data from Semantic Scholar APIs.
-- **Reference** - Get the details of the classes and methods available in the library.
-- **API Endpoints** - Check the supported SemanticScholar API endpoints and which methods implement them.
+- [Usage](https://semanticscholar.readthedocs.io/en/stable/usage.html) - See additional examples to learn how to use the library to fetch data from Semantic Scholar APIs.
+- [Reference](https://semanticscholar.readthedocs.io/en/stable/reference.html) - Get the details of the classes and methods available in the library.
+- [API Endpoints](https://semanticscholar.readthedocs.io/en/stable/api.html) - Check the supported SemanticScholar API endpoints and which methods implement them.
 
 ## Semantic Scholar API official docs
 
