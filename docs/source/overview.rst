@@ -62,7 +62,6 @@ If you have concerns or feedback specific to this library, feel free to `open an
 
 - For details on Semantic Scholar APIs capabilities and limits, `go to the official documentation <https://api.semanticscholar.org/api-docs/graph>`_.
 - The `Frequently Asked Questions <https://www.semanticscholar.org/faq>`_ page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
-- This `official GitHub repository <https://github.com/allenai/s2-folks>`_ allows users to report issues and suggest improvements.
 
 Contributing
 ============
