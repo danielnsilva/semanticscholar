@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Bug Fixes
+
+- Fixed [#111](https://github.com/danielnsilva/semanticscholar/issues/111):
+  error with null references for get_papers.
+  ([12f4a12](https://github.com/danielnsilva/semanticscholar/commit/12f4a12))
+
 ## [0.10.0] - 2025-02-16
 
 ### New Features
