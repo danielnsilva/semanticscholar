@@ -119,6 +119,18 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item['title'], data['title'])
         self.assertEqual(item.keys(), data.keys())
         file.close()
+    
+    def test_paper_with_null_values_for_lists(self) -> None:
+        fields = ['authors', 'citations', 'references']
+        for field in fields:
+            with self.subTest(field=field):
+                file = open('tests/data/PaperWithNullValues.json', encoding='utf-8')
+                data = json.loads(file.read())
+                data = { k: v for k, v in data.items() if k == field }
+                item = Paper(data)
+                self.assertIsInstance(getattr(item, field), list)
+                self.assertEqual(len(getattr(item, field)), 0)
+                file.close()
 
     def test_pubication_venue(self):
         file = open('tests/data/Paper.json', encoding='utf-8')

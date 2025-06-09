@@ -325,8 +325,9 @@ class Paper(SemanticScholarObject):
             self._abstract = data['abstract']
         if 'authors' in data:
             items = []
-            for item in data['authors']:
-                items.append(semanticscholar.Author.Author(item))
+            if data['authors'] is not None:
+                for item in data['authors']:
+                    items.append(semanticscholar.Author.Author(item))
             self._authors = items
         if 'citationCount' in data:
             self._citationCount = data['citationCount']
@@ -334,8 +335,9 @@ class Paper(SemanticScholarObject):
             self._citationStyles = data['citationStyles']
         if 'citations' in data:
             items = []
-            for item in data['citations']:
-                items.append(Paper(item))
+            if data['citations'] is not None:
+                for item in data['citations']:
+                    items.append(Paper(item))
             self._citations = items
         if 'corpusId' in data:
             self._corpusId = data['corpusId']
@@ -370,8 +372,9 @@ class Paper(SemanticScholarObject):
             self._referenceCount = data['referenceCount']
         if 'references' in data:
             items = []
-            for item in data['references']:
-                items.append(Paper(item))
+            if data['references'] is not None:
+                for item in data['references']:
+                    items.append(Paper(item))
             self._references = items
         if 's2FieldsOfStudy' in data:
             self._s2FieldsOfStudy = data['s2FieldsOfStudy']
