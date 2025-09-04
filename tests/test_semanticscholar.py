@@ -11,10 +11,12 @@ from httpx import TimeoutException
 from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
 from semanticscholar.Author import Author
 from semanticscholar.Citation import Citation
+from semanticscholar.Dataset import Dataset
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
 from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
+from semanticscholar.Release import Release
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
     BadQueryParametersException, GatewayTimeoutException,
@@ -83,6 +85,44 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
+    def test_dataset(self) -> None:
+        """Test Dataset class initialization and properties."""
+        data = {
+            'name': 'papers',
+            'description': 'Academic papers dataset',
+            'url': 'https://s3-us-west-2.amazonaws.com/ai2-s2-s3-pdfs/2023-12-01/papers/papers-00000-of-00001.jsonl.gz',
+            'bytes': 1024000,
+            'md5sum': 'abc123def456',
+            'sha256': 'def456ghi789'
+        }
+        dataset = Dataset(data)
+        
+        self.assertEqual(dataset.name, data['name'])
+        self.assertEqual(dataset.description, data['description'])
+        self.assertEqual(dataset.url, data['url'])
+        self.assertEqual(dataset.bytes, data['bytes'])
+        self.assertEqual(dataset.md5sum, data['md5sum'])
+        self.assertEqual(dataset.sha256, data['sha256'])
+
+    def test_release(self) -> None:
+        """Test Release class initialization and properties."""
+        data = {
+            'release': '2023-12-01',
+            'description': 'December 2023 release',
+            'releaseDate': '2023-12-01T00:00:00Z',
+            'datasets': [
+                {'name': 'papers', 'description': 'Papers dataset'},
+                {'name': 'authors', 'description': 'Authors dataset'}
+            ]
+        }
+        release = Release(data)
+        
+        self.assertEqual(release.release, data['release'])
+        self.assertEqual(release.description, data['description'])
+        self.assertEqual(release.release_date, data['releaseDate'])
+        self.assertEqual(release.datasets, data['datasets'])
+
+
     def test_paper(self) -> None:
         file = open('tests/data/Paper.json', encoding='utf-8')
         data = json.loads(file.read())
@@ -119,6 +159,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item['title'], data['title'])
         self.assertEqual(item.keys(), data.keys())
         file.close()
+
     
     def test_paper_with_null_values_for_lists(self) -> None:
         fields = ['authors', 'citations', 'references']
@@ -1106,6 +1147,46 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             mock_request.return_value = mock_response
             with self.assertRaises(ServerErrorException):
                 await self.sch.get_paper('10.1093/mind/lix.236.433')
+
+
+    # @test_vcr.use_cassette()
+    # async def test_get_available_releases(self) -> None:
+    #     """Test listing dataset releases."""
+    #     releases =  await self.sch.get_available_releases()
+    #     self.assertIsInstance(releases, list)
+    #     if releases:  # Only test if releases are available
+    #         self.assertIsInstance(releases[0], str)
+
+    # @test_vcr.use_cassette()
+    # async def test_get_release(self) -> None:
+    #     """Test listing datasets in a release."""
+    #     # First get available releases
+    #     releases = await self.sch.get_available_releases()
+    #     if releases:
+    #         release_id = releases[0]
+    #         datasets = self.sch.list_datasets(release_id)
+    #         self.assertIsInstance(datasets, list)
+    #         if datasets:  # Only test if datasets are available
+    #             self.assertIsInstance(datasets[0], Dataset)
+    #             self.assertIsInstance(datasets[0].name, str)
+    #             self.assertIsInstance(datasets[0].description, str)
+    #             self.assertIsInstance(datasets[0].README, str)
+    #             self.assertIsInstance(datasets[0].files, list)
+    #             self.assertIsInstance(datasets[0].files[0], str)
+
+    # @test_vcr.use_cassette()
+    # async def test_get_dataset_download_links(self) -> None:
+    #     """Test getting dataset download links."""
+    #     # First get available releases and datasets
+    #     releases = await self.sch.list_releases()
+    #     if releases:
+    #         release_id = releases[0].release
+    #         datasets = self.sch.list_datasets(release_id)
+    #         if datasets:
+    #             dataset_name = datasets[0].name
+    #             dataset = self.sch.get_dataset_download_links(release_id, dataset_name)
+    #             self.assertIsInstance(dataset, Dataset)
+    #             self.assertIsNotNone(dataset.url)
 
 
 if __name__ == '__main__':

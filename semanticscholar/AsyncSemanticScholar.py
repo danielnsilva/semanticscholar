@@ -7,9 +7,11 @@ from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
 from semanticscholar.BaseReference import BaseReference
 from semanticscholar.Citation import Citation
+from semanticscholar.Dataset import Dataset
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
+from semanticscholar.Release import Release
 from semanticscholar.Autocomplete import Autocomplete
 
 logger = logging.getLogger('semanticscholar')
@@ -24,6 +26,7 @@ class AsyncSemanticScholar:
 
     BASE_PATH_GRAPH = '/graph/v1'
     BASE_PATH_RECOMMENDATIONS = '/recommendations/v1'
+    BASE_PATH_DATASETS = '/datasets/v1'
 
     auth_header = {}
 
@@ -824,3 +827,73 @@ class AsyncSemanticScholar:
             return []
 
         return [Autocomplete(suggestion) for suggestion in data["matches"]]
+
+    async def get_available_releases(self) -> List[Release]:
+        """
+        List all available dataset releases.
+
+        :calls: `GET /datasets/v1/release/ \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_releases>`_
+
+        :returns: list of available releases.
+        :rtype: :class:`List` of :class:`semanticscholar.Release.Release`
+        """
+        
+        base_url = self.api_url + self.BASE_PATH_DATASETS
+        url = f"{base_url}/release/"
+
+        release_ids = await self._requester.get_data_async(
+            url, "", self.auth_header)
+
+        sorted_release_ids = sorted(release_ids, reverse=True)
+        return sorted_release_ids
+
+
+    async def get_release(self, release_id: str) -> Release:
+        """
+        Get a specific release.
+
+        :calls: `GET /datasets/v1/release/{release_id} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_release>`_
+
+        :param str release_id: Release identifier (e.g., '2023-12-01').
+        :returns: list of datasets in the release.
+        :rtype: :class:`List` of :class:`semanticscholar.Dataset.Dataset`
+        """
+        
+        base_url = self.api_url + self.BASE_PATH_DATASETS
+        url = f"{base_url}/release/{release_id}"
+
+        data = await self._requester.get_data_async(
+            url, "", self.auth_header)
+
+        return Release(data)
+
+    async def get_dataset_download_links(
+            self, 
+            release_id: str, 
+            dataset_name: str
+        ) -> Dataset:
+        """
+        Get download links for a specific dataset in a release.
+
+        :calls: `GET /datasets/v1/release/{release_id}/dataset/{dataset_name} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_datasets_download_links>`_
+
+        :param str release_id: Release identifier (e.g., '2023-12-01').
+        :param str dataset_name: Name of the dataset.
+        :returns: dataset with download links.
+        :rtype: :class:`semanticscholar.Dataset.Dataset`
+        :raises: ObjectNotFoundException: if Dataset not found.
+        """
+        
+        base_url = self.api_url + self.BASE_PATH_DATASETS
+        url = f"{base_url}/release/{release_id}/dataset/{dataset_name}"
+
+        data = await self._requester.get_data_async(
+            url, "", self.auth_header)
+
+        return Dataset(data)

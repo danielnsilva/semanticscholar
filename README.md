@@ -11,7 +11,7 @@ Unofficial Python client library for [Semantic Scholar APIs](https://api.semanti
 ## Main features
 
 - Simplified access to the Semantic Scholar APIs
-- Support for the Academic Graph and Recommendations APIs
+- Support for the Academic Graph, Recommendations, and Datasets APIs
 - Typed responses
 - Streamlined navigation of paginated responses
 - Support for asynchronous requests
@@ -47,6 +47,26 @@ Output:
 
 ```console
 Computing Machinery and Intelligence
+```
+
+### Datasets API Usage
+
+The library now supports the Semantic Scholar Datasets API, allowing you to access large-scale academic datasets:
+
+```python
+# List all available dataset releases
+releases = sch.list_releases()
+print(f"Available releases: {[r.release for r in releases]}")
+
+# List datasets in a specific release
+datasets = sch.list_datasets('2023-12-01')
+for dataset in datasets:
+    print(f"Dataset: {dataset.name} ({dataset.bytes} bytes)")
+
+# Get download links for a specific dataset
+dataset = sch.get_dataset_download_links('2023-12-01', 'papers')
+print(f"Download URL: {dataset.url}")
+print(f"SHA256: {dataset.sha256}")
 ```
 
 ### What next?
