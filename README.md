@@ -49,26 +49,6 @@ Output:
 Computing Machinery and Intelligence
 ```
 
-### Datasets API Usage
-
-The library now supports the Semantic Scholar Datasets API, allowing you to access large-scale academic datasets:
-
-```python
-# List all available dataset releases
-releases = sch.list_releases()
-print(f"Available releases: {[r.release for r in releases]}")
-
-# List datasets in a specific release
-datasets = sch.list_datasets('2023-12-01')
-for dataset in datasets:
-    print(f"Dataset: {dataset.name} ({dataset.bytes} bytes)")
-
-# Get download links for a specific dataset
-dataset = sch.get_dataset_download_links('2023-12-01', 'papers')
-print(f"Download URL: {dataset.url}")
-print(f"SHA256: {dataset.sha256}")
-```
-
 ### What next?
 
 - [Usage](https://semanticscholar.readthedocs.io/en/latest/usage.html) - See additional examples to learn how to use the library to fetch data from Semantic Scholar APIs.
