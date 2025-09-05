@@ -6,6 +6,7 @@ from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
 from semanticscholar.Author import Author
 from semanticscholar.Dataset import Dataset
+from semanticscholar.DatasetDiff import DatasetDiffs
 from semanticscholar.Paper import Paper
 from semanticscholar.Release import Release
 from semanticscholar.Autocomplete import Autocomplete
@@ -677,3 +678,34 @@ class SemanticScholar():
         )
 
         return dataset
+
+    def get_dataset_diffs(
+            self, 
+            dataset_name: str,
+            start_release_id: str,
+            end_release_id: str
+        ) -> DatasetDiffs:
+        """
+        Gets incremental diffs for a dataset between two releases.
+
+        :calls: `GET /datasets/v1/diffs/{start_release_id}/to/{end_release_id}/{dataset_name} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Incremental-Updates\
+            /operation/get_diff>`_
+
+        :param str dataset_name: Name of the dataset.
+        :param str start_release_id: ID of the release currently held by the client.
+        :param str end_release_id: ID of the release the client wishes to update to, or 'latest' for the most recent release.
+        :returns: information containing dataset, start_release, end_release, and list of diffs.
+        :rtype: :class:`semanticscholar.DatasetDiff.DatasetDiffs`
+        """
+        
+        loop = asyncio.get_event_loop()
+        result = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_dataset_diffs(
+                dataset_name=dataset_name,
+                start_release_id=start_release_id,
+                end_release_id=end_release_id
+            )
+        )
+
+        return result
