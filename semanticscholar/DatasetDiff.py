@@ -1,7 +1,7 @@
 from semanticscholar.SemanticScholarObject import SemanticScholarObject
 
 
-class DatasetDiff(SemanticScholarObject):
+class IncrementalUpdate(SemanticScholarObject):
     '''
     This class represents a single diff between two sequential releases of a dataset.
     '''
@@ -15,7 +15,7 @@ class DatasetDiff(SemanticScholarObject):
 
     def __init__(self, data) -> None:
         '''
-        Initialize DatasetDiff object.
+        Initialize IncrementalUpdate object.
 
         :param dict data: Dataset diff data from the API.
         '''
@@ -74,7 +74,7 @@ class DatasetDiff(SemanticScholarObject):
             self._delete_files = data['delete_files']
 
 
-class DatasetDiffs(SemanticScholarObject):
+class DatasetDiff(SemanticScholarObject):
     '''
     This class represents the complete diff information for a dataset between two releases,
     including the dataset name, release information, and list of individual diffs.
@@ -89,7 +89,7 @@ class DatasetDiffs(SemanticScholarObject):
 
     def __init__(self, data) -> None:
         '''
-        Initialize DatasetDiffs object.
+        Initialize DatasetDiff object.
 
         :param dict data: Dataset diffs data from the API.
         '''
@@ -132,7 +132,7 @@ class DatasetDiffs(SemanticScholarObject):
         '''
         List of diffs that need to be applied to bring the dataset at 'start_release' up to date with 'end_release'.
 
-        :type: :class:`list` of :class:`semanticscholar.DatasetDiff.DatasetDiff`
+        :type: :class:`list` of :class:`semanticscholar.DatasetDiff.IncrementalUpdate`
         '''
         return self._diffs
 
@@ -145,4 +145,4 @@ class DatasetDiffs(SemanticScholarObject):
         if 'end_release' in data:
             self._end_release = data['end_release']
         if 'diffs' in data:
-            self._diffs = [DatasetDiff(diff) for diff in data['diffs']]
+            self._diffs = [IncrementalUpdate(diff) for diff in data['diffs']]

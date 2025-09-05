@@ -8,7 +8,7 @@ from semanticscholar.Author import Author
 from semanticscholar.BaseReference import BaseReference
 from semanticscholar.Citation import Citation
 from semanticscholar.Dataset import Dataset
-from semanticscholar.DatasetDiff import DatasetDiffs
+from semanticscholar.DatasetDiff import DatasetDiff
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
@@ -902,7 +902,7 @@ class AsyncSemanticScholar:
             dataset_name: str,
             start_release_id: str,
             end_release_id: str
-        ) -> DatasetDiffs:
+        ) -> DatasetDiff:
         """
         Get incremental diffs for a dataset between two releases.
 
@@ -913,8 +913,8 @@ class AsyncSemanticScholar:
         :param str dataset_name: Name of the dataset.
         :param str start_release_id: ID of the release currently held by the client.
         :param str end_release_id: ID of the release the client wishes to update to, or 'latest' for the most recent release.
-        :returns: DatasetDiffs object containing dataset, start_release, end_release, and list of diffs.
-        :rtype: :class:`semanticscholar.DatasetDiff.DatasetDiffs`
+        :returns: DatasetDiff object containing dataset, start_release, end_release, and list of diffs.
+        :rtype: :class:`semanticscholar.DatasetDiff.DatasetDiff`
         """
         
         base_url = self.api_url + self.BASE_PATH_DATASETS
@@ -923,4 +923,4 @@ class AsyncSemanticScholar:
         data = await self._requester.get_data_async(
             url, "", self.auth_header)
 
-        return DatasetDiffs(data)
+        return DatasetDiff(data)

@@ -12,6 +12,7 @@ from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
 from semanticscholar.Author import Author
 from semanticscholar.Citation import Citation
 from semanticscholar.Dataset import Dataset
+from semanticscholar.DatasetDiff import DatasetDiff
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
 from semanticscholar.PublicationVenue import PublicationVenue
@@ -85,43 +86,56 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
+    def test_release(self) -> None:
+        file = open('tests/data/Release.json', encoding='utf-8')
+        data = json.loads(file.read())
+        release = Release(data)
+        
+        self.assertEqual(release.release_id, data['release_id'])
+        self.assertEqual(release.readme, data['README'])
+        self.assertEqual(len(release.datasets), len(data['datasets']))
+
+        for i, dataset in enumerate(release.datasets):
+            self.assertEqual(dataset.name, data['datasets'][i]['name'])
+            self.assertEqual(dataset.description, data['datasets'][i]['description'])
+            self.assertEqual(dataset.readme, data['datasets'][i]['README'])
+        file.close()
+
+
     def test_dataset(self) -> None:
         """Test Dataset class initialization and properties."""
-        data = {
-            'name': 'papers',
-            'description': 'Academic papers dataset',
-            'url': 'https://s3-us-west-2.amazonaws.com/ai2-s2-s3-pdfs/2023-12-01/papers/papers-00000-of-00001.jsonl.gz',
-            'bytes': 1024000,
-            'md5sum': 'abc123def456',
-            'sha256': 'def456ghi789'
-        }
+        file = open('tests/data/Dataset.json', encoding='utf-8')
+        data = json.loads(file.read())
         dataset = Dataset(data)
         
         self.assertEqual(dataset.name, data['name'])
         self.assertEqual(dataset.description, data['description'])
-        self.assertEqual(dataset.url, data['url'])
-        self.assertEqual(dataset.bytes, data['bytes'])
-        self.assertEqual(dataset.md5sum, data['md5sum'])
-        self.assertEqual(dataset.sha256, data['sha256'])
+        self.assertEqual(dataset.readme, data['README'])
+        self.assertEqual(len(dataset.files), len(data['files']))
+        for i, file_url in enumerate(dataset.files):
+            self.assertEqual(file_url, data['files'][i])
 
-    def test_release(self) -> None:
-        """Test Release class initialization and properties."""
-        data = {
-            'release': '2023-12-01',
-            'description': 'December 2023 release',
-            'releaseDate': '2023-12-01T00:00:00Z',
-            'datasets': [
-                {'name': 'papers', 'description': 'Papers dataset'},
-                {'name': 'authors', 'description': 'Authors dataset'}
-            ]
-        }
-        release = Release(data)
-        
-        self.assertEqual(release.release, data['release'])
-        self.assertEqual(release.description, data['description'])
-        self.assertEqual(release.release_date, data['releaseDate'])
-        self.assertEqual(release.datasets, data['datasets'])
+        file.close()
 
+    def test_dataset_diff(self) -> None:
+        file = open('tests/data/DatasetDiff.json', encoding='utf-8')
+        data = json.loads(file.read())
+        dataset_diff = DatasetDiff(data)
+        self.assertEqual(dataset_diff.dataset, data['dataset'])
+        self.assertEqual(dataset_diff.start_release, data['start_release'])
+        self.assertEqual(dataset_diff.end_release, data['end_release'])
+        self.assertEqual(len(dataset_diff.diffs), len(data['diffs']))
+    
+        for i, diff in enumerate(dataset_diff.diffs):
+            self.assertEqual(diff.from_release, data['diffs'][i]['from_release'])
+            self.assertEqual(diff.to_release, data['diffs'][i]['to_release'])
+            self.assertEqual(len(diff.update_files), len(data['diffs'][i]['update_files']))
+            self.assertEqual(len(diff.delete_files), len(data['diffs'][i]['delete_files']))
+            for j, update_file in enumerate(diff.update_files):
+                self.assertEqual(update_file, data['diffs'][i]['update_files'][j])
+            for j, delete_file in enumerate(diff.delete_files):
+                self.assertEqual(delete_file, data['diffs'][i]['delete_files'][j])
+        file.close()
 
     def test_paper(self) -> None:
         file = open('tests/data/Paper.json', encoding='utf-8')

@@ -1,0 +1,32 @@
+{
+  "dataset": "papers",
+  "end_release": "2025-09-05",
+  "start_release": "2024-10-08",
+  "diffs": [
+    {
+      "from_release": "2024-10-08",
+      "to_release": "2024-10-15",
+      "update_files": [
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2025-09-05/papers/papers-00000-of-00001.jsonl.gz",
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2025-09-05/papers/papers-00001-of-00001.jsonl.gz"
+      ],
+      "delete_files": [
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2024-10-08/papers/papers-00000-of-00001.jsonl.gz",
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2024-10-08/papers/papers-00001-of-00001.jsonl.gz"
+      ]
+    },
+
+    {
+      "from_release": "2024-10-15",
+      "to_release": "2024-10-22",
+      "update_files": [
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2025-09-12/papers/papers-00000-of-00001.jsonl.gz",
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2025-09-12/papers/papers-00001-of-00001.jsonl.gz"
+      ],
+      "delete_files": [
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2024-11-08/papers/papers-00000-of-00001.jsonl.gz",
+        "https://s3-us-west-2.amazonaws.com/ai2-s2ag/2024-11-08/papers/papers-00001-of-00001.jsonl.gz"
+      ]
+    }
+  ]
+}
