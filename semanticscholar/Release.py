@@ -3,7 +3,7 @@ from semanticscholar.Dataset import Dataset
 
 class Release(SemanticScholarObject):
     '''
-    Release class for Semantic Scholar Datasets API.
+    This class represents a release version of the Semantic Scholar Datasets.
     '''
 
     FIELDS = [

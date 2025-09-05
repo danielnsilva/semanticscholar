@@ -3,7 +3,7 @@ from semanticscholar.SemanticScholarObject import SemanticScholarObject
 
 class Dataset(SemanticScholarObject):
     '''
-    Dataset class for Semantic Scholar Datasets API.
+    This class represents a particular dataset in a release version of the Semantic Scholar Datasets.
     '''
 
     FIELDS = [
@@ -58,7 +58,7 @@ class Dataset(SemanticScholarObject):
         '''
         List of file urls in the dataset.
 
-        :type: :class:`list` of :class:`semanticscholar.File.File`
+        :type: :class:`list` of :class:`str`
         '''
         return self._files
 

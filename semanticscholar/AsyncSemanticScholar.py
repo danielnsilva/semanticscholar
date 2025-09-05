@@ -830,14 +830,14 @@ class AsyncSemanticScholar:
 
     async def get_available_releases(self) -> List[Release]:
         """
-        List all available dataset releases.
+        Gets all available dataset releases.
 
         :calls: `GET /datasets/v1/release/ \
             <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
             /operation/get_releases>`_
 
-        :returns: list of available releases.
-        :rtype: :class:`List` of :class:`semanticscholar.Release.Release`
+        :returns: list of available release ids.
+        :rtype: :class:`List` of :class:`str`
         """
         
         base_url = self.api_url + self.BASE_PATH_DATASETS
@@ -846,8 +846,7 @@ class AsyncSemanticScholar:
         release_ids = await self._requester.get_data_async(
             url, "", self.auth_header)
 
-        sorted_release_ids = sorted(release_ids, reverse=True)
-        return sorted_release_ids
+        return release_ids
 
 
     async def get_release(self, release_id: str) -> Release:
@@ -859,8 +858,8 @@ class AsyncSemanticScholar:
             /operation/get_release>`_
 
         :param str release_id: Release identifier (e.g., '2023-12-01').
-        :returns: list of datasets in the release.
-        :rtype: :class:`List` of :class:`semanticscholar.Dataset.Dataset`
+        :returns: release information including datasets.
+        :rtype: :class:`semanticscholar.Release.Release`
         """
         
         base_url = self.api_url + self.BASE_PATH_DATASETS
@@ -881,13 +880,12 @@ class AsyncSemanticScholar:
 
         :calls: `GET /datasets/v1/release/{release_id}/dataset/{dataset_name} \
             <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
-            /operation/get_datasets_download_links>`_
+            /operation/get_dataset>`_
 
         :param str release_id: Release identifier (e.g., '2023-12-01').
         :param str dataset_name: Name of the dataset.
-        :returns: dataset with download links.
+        :returns: dataset information including download links.
         :rtype: :class:`semanticscholar.Dataset.Dataset`
-        :raises: ObjectNotFoundException: if Dataset not found.
         """
         
         base_url = self.api_url + self.BASE_PATH_DATASETS
