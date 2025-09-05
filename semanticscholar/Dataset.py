@@ -9,7 +9,7 @@ class Dataset(SemanticScholarObject):
     FIELDS = [
         'name',
         'description',
-        'README',
+        'readme',
         'files'
     ]
 
@@ -22,7 +22,7 @@ class Dataset(SemanticScholarObject):
         super().__init__()
         self._name = None
         self._description = None
-        self._README = None
+        self._readme = None
         self._files = None
         self._init_attributes(data)
 
@@ -45,13 +45,13 @@ class Dataset(SemanticScholarObject):
         return self._description
     
     @property
-    def README(self) -> str:
+    def readme(self) -> str:
         '''
         Dataset README.
 
         :type: :class:`str`
         '''
-        return self._README
+        return self._readme
 
     @property
     def files(self) -> list:
@@ -69,6 +69,6 @@ class Dataset(SemanticScholarObject):
         if 'description' in data:
             self._description = data['description']
         if 'README' in data:
-            self._README = data['README']
+            self._readme = data['README']
         if 'files' in data:
             self._files = data['files']

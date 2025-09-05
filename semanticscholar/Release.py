@@ -8,7 +8,7 @@ class Release(SemanticScholarObject):
 
     FIELDS = [
         'release_id',
-        'README',
+        'readme',
         'datasets'
     ]
 
@@ -20,7 +20,7 @@ class Release(SemanticScholarObject):
         '''
         super().__init__()
         self._release_id = None
-        self._README = None
+        self._readme = None
         self._datasets = None
         self._init_attributes(data)
 
@@ -34,13 +34,13 @@ class Release(SemanticScholarObject):
         return self._release_id
 
     @property
-    def README(self) -> str:
+    def readme(self) -> str:
         '''
         Release README.
 
         :type: :class:`str`
         '''
-        return self._README
+        return self._readme
 
     @property
     def datasets(self) -> list:
@@ -56,6 +56,6 @@ class Release(SemanticScholarObject):
         if 'release_id' in data:
             self._release_id = data['release_id']
         if 'README' in data:
-            self._README = data['README']
+            self._readme = data['README']
         if 'datasets' in data:
             self._datasets = [Dataset(dataset) for dataset in data['datasets']]
