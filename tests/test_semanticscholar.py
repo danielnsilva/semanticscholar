@@ -1163,45 +1163,69 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
                 await self.sch.get_paper('10.1093/mind/lix.236.433')
 
 
-    # @test_vcr.use_cassette()
-    # async def test_get_available_releases(self) -> None:
-    #     """Test listing dataset releases."""
-    #     releases =  await self.sch.get_available_releases()
-    #     self.assertIsInstance(releases, list)
-    #     if releases:  # Only test if releases are available
-    #         self.assertIsInstance(releases[0], str)
+    @test_vcr.use_cassette()
+    async def test_get_available_releases(self):
+        releases =  await self.sch.get_available_releases()
+        self.assertIsInstance(releases, list)
+        self.assertIsInstance(releases[0], str)
+        self.assertIn('2025-08-19', releases)
 
-    # @test_vcr.use_cassette()
-    # async def test_get_release(self) -> None:
-    #     """Test listing datasets in a release."""
-    #     # First get available releases
-    #     releases = await self.sch.get_available_releases()
-    #     if releases:
-    #         release_id = releases[0]
-    #         datasets = self.sch.list_datasets(release_id)
-    #         self.assertIsInstance(datasets, list)
-    #         if datasets:  # Only test if datasets are available
-    #             self.assertIsInstance(datasets[0], Dataset)
-    #             self.assertIsInstance(datasets[0].name, str)
-    #             self.assertIsInstance(datasets[0].description, str)
-    #             self.assertIsInstance(datasets[0].README, str)
-    #             self.assertIsInstance(datasets[0].files, list)
-    #             self.assertIsInstance(datasets[0].files[0], str)
+    @test_vcr.use_cassette()
+    async def test_get_release(self):
+        release_id = '2025-08-19'
+        release = await self.sch.get_release(release_id)
 
-    # @test_vcr.use_cassette()
-    # async def test_get_dataset_download_links(self) -> None:
-    #     """Test getting dataset download links."""
-    #     # First get available releases and datasets
-    #     releases = await self.sch.list_releases()
-    #     if releases:
-    #         release_id = releases[0].release
-    #         datasets = self.sch.list_datasets(release_id)
-    #         if datasets:
-    #             dataset_name = datasets[0].name
-    #             dataset = self.sch.get_dataset_download_links(release_id, dataset_name)
-    #             self.assertIsInstance(dataset, Dataset)
-    #             self.assertIsNotNone(dataset.url)
+        self.assertIsInstance(release, Release)
+        self.assertEqual(release.release_id, release_id)
+        self.assertTrue(release.readme.startswith("Semantic Scholar Academic Graph Datasets"))
+        self.assertEqual(len(release.datasets), 11)
 
+        first_dataset = release.datasets[0]
+        self.assertEqual(first_dataset.name, 'abstracts')
+        self.assertTrue(first_dataset.description.startswith("Paper abstract text, where available"))
+        self.assertTrue(first_dataset.readme.startswith("Semantic Scholar Academic Graph Datasets"))
+        self.assertEqual(first_dataset.files, None)  # not returned as part of this call
+
+    @test_vcr.use_cassette()
+    async def test_get_dataset_download_links(self):
+        """
+        Note: This API call requires authentication with a valid API key.
+        The cassette was generated with a valid API key and then scrubbed of sensitive information.
+        """
+        release_id = '2025-08-19'
+        dataset_name = 'papers'
+        dataset = await self.sch.get_dataset_download_links(release_id, dataset_name)
+
+        self.assertIsInstance(dataset, Dataset)
+        self.assertEqual(dataset.name, dataset_name)
+        self.assertTrue(dataset.description.startswith("The core attributes of a paper (title, authors, date, etc.)"))
+        self.assertEqual(len(dataset.files), 30)
+        self.assertTrue(dataset.files[0].startswith('https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_0'))
+
+    @test_vcr.use_cassette()
+    async def test_get_dataset_diffs(self):
+        """
+        Note: This API call requires authentication with a valid API key.
+        The cassette was generated with a valid API key and then scrubbed of sensitive information.
+        """
+        dataset_name = 'papers'
+        start_release_id = '2024-10-08'
+        end_release_id = '2025-08-19'
+        diffs = await self.sch.get_dataset_diffs(dataset_name, start_release_id, end_release_id)
+
+        self.assertIsInstance(diffs, DatasetDiff)
+        self.assertEqual(diffs.dataset, dataset_name)
+        self.assertEqual(diffs.start_release, start_release_id)
+        self.assertEqual(diffs.end_release, end_release_id)
+        self.assertEqual(len(diffs.diffs), 1)
+
+        diff = diffs.diffs[0]
+        self.assertEqual(diff.from_release, '2024-10-08')
+        self.assertEqual(diff.to_release, '2024-10-15')
+        self.assertEqual(len(diff.update_files), 20)
+        self.assertEqual(len(diff.delete_files), 4)
+        self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
+        self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
 
 if __name__ == '__main__':
     unittest.main()

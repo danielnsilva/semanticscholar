@@ -12,37 +12,67 @@ interactions:
       - api.semanticscholar.org
       user-agent:
       - python-httpx/0.28.1
+      x-api-key:
+      - [REDACTED]
     method: GET
-    uri: https://api.semanticscholar.org/datasets/v1/release/
+    uri: https://api.semanticscholar.org/datasets/v1/release/2025-08-19/dataset/papers
   response:
     body:
-      string: '["2022-05-10", "2022-05-17", "2022-05-24", "2022-05-31", "2022-06-07",
-        "2022-06-14", "2022-06-21", "2022-06-28", "2022-07-05", "2022-07-19", "2022-07-28",
-        "2022-08-02", "2022-08-09", "2022-08-16", "2022-08-23", "2022-08-30", "2022-09-06",
-        "2022-09-13", "2022-09-28", "2022-10-05", "2022-10-28", "2022-11-02", "2022-11-11",
-        "2022-11-15", "2022-11-22", "2022-12-02", "2022-12-06", "2022-12-13", "2022-12-20",
-        "2022-12-27", "2023-01-03", "2023-01-10", "2023-01-17", "2023-01-24", "2023-01-31",
-        "2023-02-07", "2023-02-14", "2023-02-21", "2023-02-28", "2023-03-07", "2023-03-14",
-        "2023-03-21", "2023-03-28", "2023-04-06", "2023-04-11", "2023-04-18", "2023-05-09",
-        "2023-05-16", "2023-05-23", "2023-05-30", "2023-06-06", "2023-06-13", "2023-06-20",
-        "2023-07-04", "2023-07-11", "2023-07-25", "2023-08-01", "2023-08-08", "2023-08-15",
-        "2023-08-29", "2023-09-05", "2023-09-12", "2023-09-19", "2023-09-26", "2023-10-10",
-        "2023-10-19", "2023-10-24", "2023-10-31", "2023-11-07", "2023-11-14", "2023-11-21",
-        "2023-11-28", "2023-12-05", "2023-12-12", "2023-12-27", "2024-01-02", "2024-01-24",
-        "2024-01-30", "2024-02-06", "2024-02-20", "2024-02-27", "2024-03-05", "2024-03-12",
-        "2024-03-19", "2024-03-26", "2024-04-02", "2024-04-09", "2024-04-16", "2024-04-23",
-        "2024-04-30", "2024-05-07", "2024-05-14", "2024-05-21", "2024-05-28", "2024-06-04",
-        "2024-06-11", "2024-06-18", "2024-06-25", "2024-07-02", "2024-07-09", "2024-07-16",
-        "2024-07-23", "2024-07-30", "2024-08-06", "2024-08-13", "2024-08-20", "2024-08-27",
-        "2024-09-03", "2024-09-17", "2024-09-24", "2024-10-01", "2024-10-08", "2024-10-15",
-        "2024-10-22", "2024-10-29", "2024-11-05", "2024-11-12", "2024-11-19", "2024-11-26",
-        "2024-12-03", "2024-12-10", "2024-12-17", "2024-12-24", "2024-12-31", "2025-01-07",
-        "2025-01-14", "2025-01-21", "2025-01-28", "2025-02-04", "2025-02-11", "2025-02-18",
-        "2025-02-25", "2025-03-04", "2025-03-11", "2025-03-18", "2025-03-25", "2025-04-01",
-        "2025-04-08", "2025-04-15", "2025-04-22", "2025-05-06", "2025-05-13", "2025-05-20",
-        "2025-05-27", "2025-06-03", "2025-06-10", "2025-06-17", "2025-07-03", "2025-07-08",
-        "2025-07-15", "2025-07-22", "2025-07-29", "2025-08-05", "2025-08-12", "2025-08-19"]
-
+      string: '{"name": "papers", "description": "The core attributes of a paper (title,
+        authors, date, etc.).\n200M records in 30 1.5GB files.", "README": "Semantic
+        Scholar Academic Graph Datasets\n\nThe \"papers\" dataset provides core metadata
+        about papers.\n\nSCHEMA\nSee https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\n\nThis
+        dataset does not contain information about a paper''s references or citations.\nInstead,
+        join with citingPaperId/citedPaperId from the \"citations\" dataset.\n\nLICENSE\nThis
+        collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}\n\n\n",
+        "files": ["https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_0",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_1",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_2",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_3",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_4",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_5",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_6",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_7",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_8",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_9",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_10",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_11",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_12",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_13",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_14",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_15",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_16",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_17",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_18",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_19",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_20",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_21",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_22",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_23",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_24",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_25",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_26",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_27",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_28",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_29"]}
         '
     headers:
       Access-Control-Allow-Origin:
@@ -50,31 +80,31 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '2171'
+      - '83333'
       Content-Type:
       - application/json
       Date:
-      - Thu, 04 Sep 2025 18:41:23 GMT
+      - Fri, 05 Sep 2025 19:30:37 GMT
       Via:
-      - 1.1 2c4fc82caa5b1b021be20cb6c1788d7a.cloudfront.net (CloudFront)
+      - 1.1 e7fecea004044e82fbf98e65b34d83fe.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - w6yrVOlaBwUkABxQMhhnUY2kTvGMYZtte5ZCfBi4MmrL0NhCcXMm6Q==
+      - qlHB9T1K2kgWAV4dQPLTeAnjvXJcTnrCFLllKAM2CCksdF-kfbiKzg==
       X-Amz-Cf-Pop:
       - ORD58-P3
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - QY-FKGnuPHcEUvg=
+      - QcYOnFavPHcEImg=
       x-amzn-Remapped-Connection:
       - keep-alive
       x-amzn-Remapped-Content-Length:
-      - '2171'
+      - '83333'
       x-amzn-Remapped-Date:
-      - Thu, 04 Sep 2025 18:41:23 GMT
+      - Fri, 05 Sep 2025 19:30:37 GMT
       x-amzn-Remapped-Server:
       - gunicorn
       x-amzn-RequestId:
-      - 44c7cb2e-3d17-42e3-857a-98180d7fabef
+      - 3d0683a6-4f32-4503-9b7f-0f2e0a5a3a87
     status:
       code: 200
       message: OK

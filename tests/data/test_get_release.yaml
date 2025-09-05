@@ -1,0 +1,342 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.semanticscholar.org/datasets/v1/release/2025-08-19
+  response:
+    body:
+      string: '{"release_id": "2025-08-19", "README": "Semantic Scholar Academic Graph
+        Datasets\n\nThese datasets provide a variety of information about research
+        papers taken from a snapshot in time of the Semantic Scholar corpus.\n\nThis
+        site is provided by The Allen Institute for Artificial Intelligence (\u201cAI2\u201d)
+        as a service to the\nresearch community. The site is covered by AI2 Terms
+        of Use and Privacy Policy. AI2 does not claim\nownership of any materials
+        on this site unless specifically identified. AI2 does not exercise editorial\ncontrol
+        over the contents of this site. AI2 respects the intellectual property rights
+        of others. If\nyou believe your copyright or trademark is being infringed
+        by something on this site, please follow\nthe \"DMCA Notice\" process set
+        out in the Terms of Use (https://allenai.org/terms).\n\nSAMPLE DATA ACCESS\nSample
+        data files can be downloaded with the following UNIX command:\n\nfor f in
+        $(curl https://s3-us-west-2.amazonaws.com/ai2-s2ag/samples/MANIFEST.txt)\n  do
+        curl --create-dirs \"https://s3-us-west-2.amazonaws.com/ai2-s2ag/$f\" -o $f\ndone\n\nSee
+        the \"s2ag.py\" file for Python code that downloads and parses the data.\n\nFULL
+        DATA ACCESS\nDownloading the full data requires an API key, which can be obtained
+        at https://www.semanticscholar.org/product/api#Partner-Form\nFor access to
+        the full datasets, see https://api.semanticscholar.org/api-docs/datasets.\n\nLICENSE
+        and ATTRIBUTION\n\nSee the README files for each dataset for information about
+        licensing and attribution.", "datasets": [{"name": "abstracts", "description":
+        "Paper abstract text, where available.\n100M records in 30 1.8GB files.",
+        "README": "Semantic Scholar Academic Graph Datasets\n\nThe \"abstracts\" dataset
+        provides abstract text for selected papers.\n\nSCHEMA\n - openAccessInfo\n   -
+        externalIds: IDs of this paper in different catalogs\n   - license/url/status:
+        open-access information provided by Unpaywall, linked by DOI or PubMed Central
+        ID\n\nLICENSE\nThis collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}"},
+        {"name": "authors", "description": "The core attributes of an author (name,
+        affiliation, paper count, etc.). Authors have an \"authorId\" field, which
+        can be joined to the \"authorId\" field of the members of a paper''s \"authors\"
+        field.\n75M records in 30 100MB files.", "README": "Semantic Scholar Academic
+        Graph Datasets\n\nThe \"authors\" dataset provides summary information about
+        authors.\n\nSCHEMA\nSee https://api.semanticscholar.org/api-docs/graph#tag/Author-Data\n\nThis
+        dataset does not contain information about an author''s papers.\nInstead,
+        join with authors.authorId from the \"papers\" dataset.\n\nLICENSE\nThis collection
+        is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}"},
+        {"name": "citations", "description": "Instances where the bibliography of
+        one paper (the \"citingPaper\") mentions another paper (the \"citedPaper\"),
+        where both papers are identified by the \"paperId\" field. Citations have
+        attributes of their own, (influential classification, intent classification,
+        and citation context).\n2.4B records in 30 8.5GB files.", "README": "Semantic
+        Scholar Academic Graph Datasets\n\nThe \"citations\" dataset provides details
+        about one paper''s citation of another paper.\n\nSCHEMA\n - isinfluential:
+        true/false if the citation is considered influential. https://www.semanticscholar.org/faq#influential-citations\n
+        - contexts: Text surrounding the citation in the source paper''s body.\n -
+        intents: Classification of the intent behind the citations. https://www.semanticscholar.org/faq#citation-intent\n\nLICENSE\nThis
+        collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}\n\n@inproceedings{cohan-etal-2019-structural,\n    title
+        = \"Structural Scaffolds for Citation Intent Classification in Scientific
+        Publications\",\n    author = \"Cohan, Arman  and\n      Ammar, Waleed  and\n      van
+        Zuylen, Madeleine  and\n      Cady, Field\",\n    booktitle = \"NAACL\",\n    year
+        = \"2019\",\n    url = \"https://aclanthology.org/N19-1361\",\n    doi = \"10.18653/v1/N19-1361\"\n}"},
+        {"name": "embeddings-specter_v1", "description": "A dense vector embedding
+        representing the contents of the paper.\n120M records in 30 28GB files.",
+        "README": "Semantic Scholar Academic Graph Datasets\n\nThe \"embeddings-specter_v1\"
+        dataset provides embeddings representing a paper''s contents in vector form.\n\nThe
+        model is based on the SPECTER model available at https://github.com/allenai/specter.
+        However, the embeddings\nincluded in this dataset are not compatible with
+        the embeddings produced by the pretrained model from that repo.\n\nLICENSE\nThis
+        software is released under the Apache 2.0 license. (https://www.apache.org/licenses/LICENSE-2.0)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@inproceedings{specter2020cohan,\n  title={{SPECTER:
+        Document-level Representation Learning using Citation-informed Transformers}},\n  author={Arman
+        Cohan and Sergey Feldman and Iz Beltagy and Doug Downey and Daniel S. Weld},\n  booktitle={ACL},\n  year={2020}\n}\n\n"},
+        {"name": "embeddings-specter_v2", "description": "A dense vector embedding
+        representing the contents of the paper, generated with SPECTER2\n120M records
+        in 30 28GB files.\n", "README": "Semantic Scholar Academic Graph Datasets\n\nThe
+        \"embeddings-specter_v2\" dataset provides embeddings representing a paper''s
+        contents in vector form.\n\nThe model is based on the SPECTER 2.0 model available
+        at:\nhttps://github.com/allenai/SPECTER2_0\n\nThese embeddings are compatible
+        with embeddings produced by the pretrained\nmodel, available from https://huggingface.co/allenai/specter2\n\nLICENSE\nThis
+        software is released under the Apache 2.0 license. (https://www.apache.org/licenses/LICENSE-2.0)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@article{Singh2022SciRepEvalAM,\n  title={SciRepEval:
+        A Multi-Format Benchmark for Scientific Document Representations},\n  author={Amanpreet
+        Singh and Mike D''Arcy and Arman Cohan and Doug Downey and Sergey Feldman},\n  journal={ArXiv},\n  year={2022},\n  volume={abs/2211.13308},\n  url={https://api.semanticscholar.org/CorpusID:254018137}\n}\n"},
+        {"name": "paper-ids", "description": "Mapping from sha-based ID to paper corpus
+        ID.\n450M records in 30 500MB files", "README": "Semantic Scholar Academic
+        Graph Datasets\n\nThe \"paper-ids\" dataset provides mapping between different
+        IDs representing a paper\n\nThe primary key of a paper in the S2AG datasets
+        is the corpusId field. However, the public API and web site also accept a
+        sha-based ID, which is also used in some research datasets. This dataset provides
+        a mapping between the different IDs.\n\nSCHEMA\ncorpusId - The paper''s primary
+        key\nsha - A sha-based ID that can be used to access the paper via our API
+        or web site\nprimary - There should be only one primary sha for each corpusId.
+        Accessing papers using a non-primary sha will redirect to the primary sha.\n\nLICENSE\nThis
+        collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}\n\n\n"},
+        {"name": "papers", "description": "The core attributes of a paper (title,
+        authors, date, etc.).\n200M records in 30 1.5GB files.", "README": "Semantic
+        Scholar Academic Graph Datasets\n\nThe \"papers\" dataset provides core metadata
+        about papers.\n\nSCHEMA\nSee https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\n\nThis
+        dataset does not contain information about a paper''s references or citations.\nInstead,
+        join with citingPaperId/citedPaperId from the \"citations\" dataset.\n\nLICENSE\nThis
+        collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}\n\n\n"},
+        {"name": "publication-venues", "description": "Details about the venues in
+        which papers are published.", "README": "Semantic Scholar Academic Graph Datasets\n\nThe
+        \"publication-venues\" dataset contains meta-data for a research paper''s
+        publication\njournal or venue. The data sources of the venue data comes from
+        The Fatcat Archive, documented\nhere: https://archive.org/details/fatcat_snapshots_and_exports?sort=-publicdate,
+        and the now deprecated Microsoft\nAcademic Graph (MAG).\n\nSCHEMA\n - id:
+        The id of the venue data. The value also corresponds to the \"venueId\" field
+        in the papers dataset.\n - issn: The issn of the publication venue\n - alternate_issns:
+        The alternative issns for the publication venue\n - name: The name of the
+        venue\n - alternate_names: The alternative names for the publication venue\n
+        - url:  The publication venue''s url\n - alternate_urls: The alternative urls
+        of the publication venue\n - type: The type (journal / conference) of the
+        publication venue\n\nLICENSE\nThis collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}\n"},
+        {"name": "s2orc", "description": "Full-body paper text parsed from open-access
+        PDFs. Identifies structural elements such as paragraphs, sections, and bibliography
+        entries.\n10M records in 30 4GB files.", "README": "Semantic Scholar Academic
+        Graph Datasets\n\nThe \"s2orc\" dataset contains parsed full-body text from
+        selected papers.\n\nA subset of this data was previously released (in a different
+        format) as S2ORC https://github.com/allenai/s2orc\n\nThe body text is parsed
+        from PDF documents using Grobid, documented at https://grobid.readthedocs.io.\nIts
+        output is converted from XML into a single string with a set of annotation
+        spans.\n\nSCHEMA\n - externalIds: IDs of this paper in different catalogs\n
+        - content:\n   - source:\n\t   - pdfUrls: URLs to the PDF\n\t   - oaInfo:
+        license/url/status information from Unpaywall\n   - text: Full body text as
+        a single string\n   - annotations: Annotated spans of the full body text\n\n\nLICENSE\nThis
+        collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\n@inproceedings{lo-wang-2020-s2orc,\n    title = \"{S}2{ORC}: The
+        Semantic Scholar Open Research Corpus\",\n    author = \"Lo, Kyle  and Wang,
+        Lucy Lu  and Neumann, Mark  and Kinney, Rodney  and Weld, Daniel\",\n    booktitle
+        = \"Proceedings of the 58th Annual Meeting of the Association for Computational
+        Linguistics\",\n    month = jul,\n    year = \"2020\",\n    address = \"Online\",\n    publisher
+        = \"Association for Computational Linguistics\",\n    url = \"https://www.aclweb.org/anthology/2020.acl-main.447\",\n    doi
+        = \"10.18653/v1/2020.acl-main.447\",\n    pages = \"4969--4983\"\n}\n"}, {"name":
+        "s2orc_v2", "description": "Full-body paper text parsed from open-access PDFs.
+        Identifies structural elements such as sentences and paragraphs, and bibliographic
+        references.\n16M records in 30 6GB files.", "README": "Semantic Scholar Academic
+        Graph Datasets\n\nThe \"s2orc_v2\" dataset contains parsed full-body text
+        from selected papers.\nIt is a replacement for the \"s2orc\" dataset.\n\nThe
+        body text is parsed from PDF documents using Grobid, documented at https://grobid.readthedocs.io.\nIts
+        output is converted from XML into a \"body\" string and a \"bibliography\"
+        string, with a set of annotation spans for each.\n\nSee https://github.com/allenai/s2orc
+        for more details\n\nSCHEMA\n - openaccessinfo:\n   - externalIds: IDs of this
+        paper in different catalogs\n   - license: License information from Unpaywall,
+        linked by DOI or PubMed Central ID\n   - url: URL to the paper, if available\n   -
+        status: Open-access status of the paper, if available\n   - disclaimer: Human
+        readable description of the copyright status of the paper\n - title\n - authors\n
+        - body:\n   - text: Full body text as a single string\n   - annotations: Annotated
+        spans of the full body text\n - bibliography:\n   - text: Full body text as
+        a single string\n   - annotations: Annotated spans of the full body text\n\n\nLICENSE\nThis
+        collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}"},
+        {"name": "tldrs", "description": "A short natural-language summary of the
+        contents of a paper.\n58M records in 30 200MB files.", "README": "Semantic
+        Scholar Academic Graph Datasets\n\nThe \"tldrs\" dataset provides short natural-language
+        summaries of a paper''s content.\n\nThe model is based on the SciTLDR model
+        available at https://github.com/allenai/scitldr.\n\nLICENSE\nThis collection
+        is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@article{cachola2020tldr,\n  title={{TLDR}: Extreme
+        Summarization of Scientific Documents},\n  author={Isabel Cachola and Kyle
+        Lo and Arman Cohan and Daniel S. Weld},\n  journal={arXiv:2004.15011},\n  year={2020},\n}\n\n\n"}]}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '23474'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 05 Sep 2025 19:20:20 GMT
+      Via:
+      - 1.1 30bbfcdf78cc7b2a6b83bda24860f64a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - JhC3iV-c9EL4-VY_4E4FZLWvVRc2htPlJTY8PUZD-RwmhpNqVY4NKw==
+      X-Amz-Cf-Pop:
+      - ORD58-P3
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QcWuMELHvHcEduw=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '23474'
+      x-amzn-Remapped-Date:
+      - Fri, 05 Sep 2025 19:20:20 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - a030016a-3e69-4a39-a4af-51bfb296816b
+    status:
+      code: 200
+      message: OK
+version: 1
