@@ -39,7 +39,7 @@ For previous versions of the library, please refer to the `releases page in GitH
 Requirements
 ============
 
-* Python 3.8+ (https://www.python.org/)
+* Python 3.9+ (https://www.python.org/)
 * tenacity (https://tenacity.readthedocs.io/en/latest/)
 * httpx (https://www.python-httpx.org/)
 * nest_asyncio (https://github.com/erdewit/nest_asyncio/)
