@@ -686,16 +686,20 @@ class SemanticScholar():
             end_release_id: str
         ) -> DatasetDiff:
         """
-        Gets incremental diffs for a dataset between two releases.
+        Get incremental diffs for a dataset between two releases.
 
-        :calls: `GET /datasets/v1/diffs/{start_release_id}/to/{end_release_id}/{dataset_name} \
-            <https://api.semanticscholar.org/api-docs/datasets#tag/Incremental-Updates\
-            /operation/get_diff>`_
+        :calls: `GET /datasets/v1/diffs/{start_release_id}/to/\
+            {end_release_id}/{dataset_name} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/\
+            Incremental-Updates/operation/get_diff>`_
 
         :param str dataset_name: Name of the dataset.
-        :param str start_release_id: ID of the release currently held by the client.
-        :param str end_release_id: ID of the release the client wishes to update to, or 'latest' for the most recent release.
-        :returns: information containing dataset, start_release, end_release, and list of diffs.
+        :param str start_release_id: ID of the release currently held by the
+               client.
+        :param str end_release_id: ID of the release the client wishes to
+               update to, or 'latest' for the most recent release.
+        :returns: information containing dataset, start_release, end_release,
+                  and list of diffs.
         :rtype: :class:`semanticscholar.DatasetDiff.DatasetDiff`
         """
         
