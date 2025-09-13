@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### New Features
+
+- Added support for Datasets API by
+  [@OFSkean](https://github.com/OFSkean) in
+  [#112](https://github.com/danielnsilva/semanticscholar/pull/112)
+
 ### Bug Fixes
 
 - Fixed [#111](https://github.com/danielnsilva/semanticscholar/issues/111):
