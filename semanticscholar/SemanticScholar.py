@@ -617,8 +617,8 @@ class SemanticScholar():
         Gets all available dataset releases.
 
         :calls: `GET /datasets/v1/release/ \
-            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
-            /operation/get_releases>`_
+            <https://api.semanticscholar.org/api-docs/datasets#tag/\
+            Release-Data/operation/get_releases>`_
 
         :returns: list of available release ids.
         :rtype: :class:`List` of :class:`str`
@@ -636,8 +636,8 @@ class SemanticScholar():
         Get a specific release.
 
         :calls: `GET /datasets/v1/release/{release_id} \
-            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
-            /operation/get_release>`_
+            <https://api.semanticscholar.org/api-docs/datasets#tag/\
+            Release-Data/operation/get_release>`_
 
         :param str release_id: Release identifier (e.g., '2023-12-01').
         :returns: release information including datasets.
@@ -660,8 +660,8 @@ class SemanticScholar():
         Get download links for a specific dataset in a release.
 
         :calls: `GET /datasets/v1/release/{release_id}/dataset/{dataset_name} \
-            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
-            /operation/get_dataset>`_
+            <https://api.semanticscholar.org/api-docs/datasets#tag/\
+            Release-Data/operation/get_dataset>`_
 
         :param str release_id: Release identifier (e.g., '2023-12-01').
         :param str dataset_name: Name of the dataset.
