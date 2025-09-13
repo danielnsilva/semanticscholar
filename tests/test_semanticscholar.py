@@ -11,10 +11,13 @@ from httpx import TimeoutException
 from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
 from semanticscholar.Author import Author
 from semanticscholar.Citation import Citation
+from semanticscholar.Dataset import Dataset
+from semanticscholar.DatasetDiff import DatasetDiff
 from semanticscholar.Journal import Journal
 from semanticscholar.Paper import Paper
 from semanticscholar.PublicationVenue import PublicationVenue
 from semanticscholar.Reference import Reference
+from semanticscholar.Release import Release
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
     BadQueryParametersException, GatewayTimeoutException,
@@ -83,6 +86,57 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item.keys(), data.keys())
         file.close()
 
+    def test_release(self) -> None:
+        file = open('tests/data/Release.json', encoding='utf-8')
+        data = json.loads(file.read())
+        release = Release(data)
+        
+        self.assertEqual(release.release_id, data['release_id'])
+        self.assertEqual(release.readme, data['README'])
+        self.assertEqual(len(release.datasets), len(data['datasets']))
+
+        for i, dataset in enumerate(release.datasets):
+            self.assertEqual(dataset.name, data['datasets'][i]['name'])
+            self.assertEqual(dataset.description, data['datasets'][i]['description'])
+            self.assertEqual(dataset.readme, data['datasets'][i]['README'])
+        file.close()
+
+
+    def test_dataset(self) -> None:
+        """Test Dataset class initialization and properties."""
+        file = open('tests/data/Dataset.json', encoding='utf-8')
+        data = json.loads(file.read())
+        dataset = Dataset(data)
+        
+        self.assertEqual(dataset.name, data['name'])
+        self.assertEqual(dataset.description, data['description'])
+        self.assertEqual(dataset.readme, data['README'])
+        self.assertEqual(len(dataset.files), len(data['files']))
+        for i, file_url in enumerate(dataset.files):
+            self.assertEqual(file_url, data['files'][i])
+
+        file.close()
+
+    def test_dataset_diff(self) -> None:
+        file = open('tests/data/DatasetDiff.json', encoding='utf-8')
+        data = json.loads(file.read())
+        dataset_diff = DatasetDiff(data)
+        self.assertEqual(dataset_diff.dataset, data['dataset'])
+        self.assertEqual(dataset_diff.start_release, data['start_release'])
+        self.assertEqual(dataset_diff.end_release, data['end_release'])
+        self.assertEqual(len(dataset_diff.diffs), len(data['diffs']))
+    
+        for i, diff in enumerate(dataset_diff.diffs):
+            self.assertEqual(diff.from_release, data['diffs'][i]['from_release'])
+            self.assertEqual(diff.to_release, data['diffs'][i]['to_release'])
+            self.assertEqual(len(diff.update_files), len(data['diffs'][i]['update_files']))
+            self.assertEqual(len(diff.delete_files), len(data['diffs'][i]['delete_files']))
+            for j, update_file in enumerate(diff.update_files):
+                self.assertEqual(update_file, data['diffs'][i]['update_files'][j])
+            for j, delete_file in enumerate(diff.delete_files):
+                self.assertEqual(delete_file, data['diffs'][i]['delete_files'][j])
+        file.close()
+
     def test_paper(self) -> None:
         file = open('tests/data/Paper.json', encoding='utf-8')
         data = json.loads(file.read())
@@ -119,6 +173,7 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(item['title'], data['title'])
         self.assertEqual(item.keys(), data.keys())
         file.close()
+
     
     def test_paper_with_null_values_for_lists(self) -> None:
         fields = ['authors', 'citations', 'references']
@@ -646,6 +701,70 @@ class SemanticScholarTest(unittest.TestCase):
             with self.assertRaises(ServerErrorException):
                 self.sch.get_paper('10.1093/mind/lix.236.433')
 
+    @test_vcr.use_cassette()
+    def test_get_available_releases(self):
+        releases =  self.sch.get_available_releases()
+        self.assertIsInstance(releases, list)
+        self.assertIsInstance(releases[0], str)
+        self.assertIn('2025-08-19', releases)
+
+    @test_vcr.use_cassette()
+    def test_get_release(self):
+        release_id = '2025-08-19'
+        release = self.sch.get_release(release_id)
+
+        self.assertIsInstance(release, Release)
+        self.assertEqual(release.release_id, release_id)
+        self.assertTrue(release.readme.startswith("Semantic Scholar Academic Graph Datasets"))
+        self.assertEqual(len(release.datasets), 11)
+
+        first_dataset = release.datasets[0]
+        self.assertEqual(first_dataset.name, 'abstracts')
+        self.assertTrue(first_dataset.description.startswith("Paper abstract text, where available"))
+        self.assertTrue(first_dataset.readme.startswith("Semantic Scholar Academic Graph Datasets"))
+        self.assertEqual(first_dataset.files, None)  # not returned as part of this call
+
+    @test_vcr.use_cassette()
+    def test_get_dataset_download_links(self):
+        """
+        Note: This API call requires authentication with a valid API key.
+        The cassette was generated with a valid API key and then scrubbed of sensitive information.
+        """
+        release_id = '2025-08-19'
+        dataset_name = 'papers'
+        dataset = self.sch.get_dataset_download_links(release_id, dataset_name)
+
+        self.assertIsInstance(dataset, Dataset)
+        self.assertEqual(dataset.name, dataset_name)
+        self.assertTrue(dataset.description.startswith("The core attributes of a paper (title, authors, date, etc.)"))
+        self.assertEqual(len(dataset.files), 30)
+        self.assertTrue(dataset.files[0].startswith('https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_0'))
+
+    @test_vcr.use_cassette()
+    def test_get_dataset_diffs(self):
+        """
+        Note: This API call requires authentication with a valid API key.
+        The cassette was generated with a valid API key and then scrubbed of sensitive information.
+        """
+        dataset_name = 'papers'
+        start_release_id = '2024-10-08'
+        end_release_id = '2025-08-19'
+        diffs = self.sch.get_dataset_diffs(dataset_name, start_release_id, end_release_id)
+
+        self.assertIsInstance(diffs, DatasetDiff)
+        self.assertEqual(diffs.dataset, dataset_name)
+        self.assertEqual(diffs.start_release, start_release_id)
+        self.assertEqual(diffs.end_release, end_release_id)
+        self.assertEqual(len(diffs.diffs), 1)
+
+        diff = diffs.diffs[0]
+        self.assertEqual(diff.from_release, '2024-10-08')
+        self.assertEqual(diff.to_release, '2024-10-15')
+        self.assertEqual(len(diff.update_files), 20)
+        self.assertEqual(len(diff.delete_files), 4)
+        self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
+        self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
+
 
 class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
@@ -1107,6 +1226,70 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             with self.assertRaises(ServerErrorException):
                 await self.sch.get_paper('10.1093/mind/lix.236.433')
 
+
+    @test_vcr.use_cassette()
+    async def test_get_available_releases(self):
+        releases =  await self.sch.get_available_releases()
+        self.assertIsInstance(releases, list)
+        self.assertIsInstance(releases[0], str)
+        self.assertIn('2025-08-19', releases)
+
+    @test_vcr.use_cassette()
+    async def test_get_release(self):
+        release_id = '2025-08-19'
+        release = await self.sch.get_release(release_id)
+
+        self.assertIsInstance(release, Release)
+        self.assertEqual(release.release_id, release_id)
+        self.assertTrue(release.readme.startswith("Semantic Scholar Academic Graph Datasets"))
+        self.assertEqual(len(release.datasets), 11)
+
+        first_dataset = release.datasets[0]
+        self.assertEqual(first_dataset.name, 'abstracts')
+        self.assertTrue(first_dataset.description.startswith("Paper abstract text, where available"))
+        self.assertTrue(first_dataset.readme.startswith("Semantic Scholar Academic Graph Datasets"))
+        self.assertEqual(first_dataset.files, None)  # not returned as part of this call
+
+    @test_vcr.use_cassette()
+    async def test_get_dataset_download_links(self):
+        """
+        Note: This API call requires authentication with a valid API key.
+        The cassette was generated with a valid API key and then scrubbed of sensitive information.
+        """
+        release_id = '2025-08-19'
+        dataset_name = 'papers'
+        dataset = await self.sch.get_dataset_download_links(release_id, dataset_name)
+
+        self.assertIsInstance(dataset, Dataset)
+        self.assertEqual(dataset.name, dataset_name)
+        self.assertTrue(dataset.description.startswith("The core attributes of a paper (title, authors, date, etc.)"))
+        self.assertEqual(len(dataset.files), 30)
+        self.assertTrue(dataset.files[0].startswith('https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_0'))
+
+    @test_vcr.use_cassette()
+    async def test_get_dataset_diffs(self):
+        """
+        Note: This API call requires authentication with a valid API key.
+        The cassette was generated with a valid API key and then scrubbed of sensitive information.
+        """
+        dataset_name = 'papers'
+        start_release_id = '2024-10-08'
+        end_release_id = '2025-08-19'
+        diffs = await self.sch.get_dataset_diffs(dataset_name, start_release_id, end_release_id)
+
+        self.assertIsInstance(diffs, DatasetDiff)
+        self.assertEqual(diffs.dataset, dataset_name)
+        self.assertEqual(diffs.start_release, start_release_id)
+        self.assertEqual(diffs.end_release, end_release_id)
+        self.assertEqual(len(diffs.diffs), 1)
+
+        diff = diffs.diffs[0]
+        self.assertEqual(diff.from_release, '2024-10-08')
+        self.assertEqual(diff.to_release, '2024-10-15')
+        self.assertEqual(len(diff.update_files), 20)
+        self.assertEqual(len(diff.delete_files), 4)
+        self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
+        self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
 
 if __name__ == '__main__':
     unittest.main()

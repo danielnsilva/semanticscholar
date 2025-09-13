@@ -11,7 +11,7 @@ Unofficial Python client library for [Semantic Scholar APIs](https://api.semanti
 ## Main features
 
 - Simplified access to the Semantic Scholar APIs
-- Support for the Academic Graph and Recommendations APIs
+- Support for the Academic Graph, Recommendations, and Datasets APIs
 - Typed responses
 - Streamlined navigation of paginated responses
 - Support for asynchronous requests

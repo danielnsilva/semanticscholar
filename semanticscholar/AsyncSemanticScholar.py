@@ -7,9 +7,12 @@ from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.Author import Author
 from semanticscholar.BaseReference import BaseReference
 from semanticscholar.Citation import Citation
+from semanticscholar.Dataset import Dataset
+from semanticscholar.DatasetDiff import DatasetDiff
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
+from semanticscholar.Release import Release
 from semanticscholar.Autocomplete import Autocomplete
 
 logger = logging.getLogger('semanticscholar')
@@ -24,6 +27,7 @@ class AsyncSemanticScholar:
 
     BASE_PATH_GRAPH = '/graph/v1'
     BASE_PATH_RECOMMENDATIONS = '/recommendations/v1'
+    BASE_PATH_DATASETS = '/datasets/v1'
 
     auth_header = {}
 
@@ -824,3 +828,99 @@ class AsyncSemanticScholar:
             return []
 
         return [Autocomplete(suggestion) for suggestion in data["matches"]]
+
+    async def get_available_releases(self) -> List[Release]:
+        """
+        Gets all available dataset releases.
+
+        :calls: `GET /datasets/v1/release/ \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_releases>`_
+
+        :returns: list of available release ids.
+        :rtype: :class:`List` of :class:`str`
+        """
+        
+        base_url = self.api_url + self.BASE_PATH_DATASETS
+        url = f"{base_url}/release/"
+
+        release_ids = await self._requester.get_data_async(
+            url, "", self.auth_header)
+
+        return release_ids
+
+
+    async def get_release(self, release_id: str) -> Release:
+        """
+        Get a specific release.
+
+        :calls: `GET /datasets/v1/release/{release_id} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_release>`_
+
+        :param str release_id: Release identifier (e.g., '2023-12-01').
+        :returns: release information including datasets.
+        :rtype: :class:`semanticscholar.Release.Release`
+        """
+        
+        base_url = self.api_url + self.BASE_PATH_DATASETS
+        url = f"{base_url}/release/{release_id}"
+
+        data = await self._requester.get_data_async(
+            url, "", self.auth_header)
+
+        return Release(data)
+
+    async def get_dataset_download_links(
+            self, 
+            release_id: str, 
+            dataset_name: str
+        ) -> Dataset:
+        """
+        Get download links for a specific dataset in a release.
+
+        :calls: `GET /datasets/v1/release/{release_id}/dataset/{dataset_name} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_dataset>`_
+
+        :param str release_id: Release identifier (e.g., '2023-12-01').
+        :param str dataset_name: Name of the dataset.
+        :returns: dataset information including download links.
+        :rtype: :class:`semanticscholar.Dataset.Dataset`
+        """
+        
+        base_url = self.api_url + self.BASE_PATH_DATASETS
+        url = f"{base_url}/release/{release_id}/dataset/{dataset_name}"
+
+        data = await self._requester.get_data_async(
+            url, "", self.auth_header)
+
+        return Dataset(data)
+
+    async def get_dataset_diffs(
+            self, 
+            dataset_name: str,
+            start_release_id: str,
+            end_release_id: str
+        ) -> DatasetDiff:
+        """
+        Get incremental diffs for a dataset between two releases.
+
+        :calls: `GET /datasets/v1/diffs/{start_release_id}/to/{end_release_id}/{dataset_name} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_diffs>`_
+
+        :param str dataset_name: Name of the dataset.
+        :param str start_release_id: ID of the release currently held by the client.
+        :param str end_release_id: ID of the release the client wishes to update to, or 'latest' for the most recent release.
+        :returns: DatasetDiff object containing dataset, start_release, end_release, and list of diffs.
+        :rtype: :class:`semanticscholar.DatasetDiff.DatasetDiff`
+        """
+        
+        base_url = self.api_url + self.BASE_PATH_DATASETS
+        url = f"{base_url}/diffs/{start_release_id}/to/{end_release_id}/{dataset_name}"
+
+        data = await self._requester.get_data_async(
+            url, "", self.auth_header)
+
+        return DatasetDiff(data)

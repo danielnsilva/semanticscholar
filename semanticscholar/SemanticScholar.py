@@ -5,7 +5,10 @@ import nest_asyncio
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
 from semanticscholar.Author import Author
+from semanticscholar.Dataset import Dataset
+from semanticscholar.DatasetDiff import DatasetDiff
 from semanticscholar.Paper import Paper
+from semanticscholar.Release import Release
 from semanticscholar.Autocomplete import Autocomplete
 
 
@@ -54,7 +57,7 @@ class SemanticScholar():
     @timeout.setter
     def timeout(self, timeout: int) -> None:
         '''
-        :param int timeout:
+        :param int timeout:i
         '''
         self._timeout = timeout
         self._AsyncSemanticScholar.timeout = timeout
@@ -608,3 +611,101 @@ class SemanticScholar():
         )
 
         return results
+
+    def get_available_releases(self) -> List[str]:
+        """
+        Gets all available dataset releases.
+
+        :calls: `GET /datasets/v1/release/ \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_releases>`_
+
+        :returns: list of available release ids.
+        :rtype: :class:`List` of :class:`str`
+        """
+        
+        loop = asyncio.get_event_loop()
+        releases = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_available_releases()
+        )
+
+        return releases
+
+    def get_release(self, release_id: str) -> Release:
+        """
+        Get a specific release.
+
+        :calls: `GET /datasets/v1/release/{release_id} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_release>`_
+
+        :param str release_id: Release identifier (e.g., '2023-12-01').
+        :returns: release information including datasets.
+        :rtype: :class:`semanticscholar.Release.Release`
+        """
+        
+        loop = asyncio.get_event_loop()
+        release = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_release(release_id=release_id)
+        )
+
+        return release
+
+    def get_dataset_download_links(
+            self, 
+            release_id: str, 
+            dataset_name: str
+        ) -> Dataset:
+        """
+        Get download links for a specific dataset in a release.
+
+        :calls: `GET /datasets/v1/release/{release_id}/dataset/{dataset_name} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets\
+            /operation/get_dataset>`_
+
+        :param str release_id: Release identifier (e.g., '2023-12-01').
+        :param str dataset_name: Name of the dataset.
+        :returns: dataset information including download links.
+        :rtype: :class:`semanticscholar.Dataset.Dataset`
+        """
+        
+        loop = asyncio.get_event_loop()
+        dataset = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_dataset_download_links(
+                release_id=release_id, 
+                dataset_name=dataset_name
+            )
+        )
+
+        return dataset
+
+    def get_dataset_diffs(
+            self, 
+            dataset_name: str,
+            start_release_id: str,
+            end_release_id: str
+        ) -> DatasetDiff:
+        """
+        Gets incremental diffs for a dataset between two releases.
+
+        :calls: `GET /datasets/v1/diffs/{start_release_id}/to/{end_release_id}/{dataset_name} \
+            <https://api.semanticscholar.org/api-docs/datasets#tag/Incremental-Updates\
+            /operation/get_diff>`_
+
+        :param str dataset_name: Name of the dataset.
+        :param str start_release_id: ID of the release currently held by the client.
+        :param str end_release_id: ID of the release the client wishes to update to, or 'latest' for the most recent release.
+        :returns: information containing dataset, start_release, end_release, and list of diffs.
+        :rtype: :class:`semanticscholar.DatasetDiff.DatasetDiff`
+        """
+        
+        loop = asyncio.get_event_loop()
+        result = loop.run_until_complete(
+            self._AsyncSemanticScholar.get_dataset_diffs(
+                dataset_name=dataset_name,
+                start_release_id=start_release_id,
+                end_release_id=end_release_id
+            )
+        )
+
+        return result

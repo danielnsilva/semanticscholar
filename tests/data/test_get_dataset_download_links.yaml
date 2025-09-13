@@ -1,0 +1,111 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - [REDACTED]
+    method: GET
+    uri: https://api.semanticscholar.org/datasets/v1/release/2025-08-19/dataset/papers
+  response:
+    body:
+      string: '{"name": "papers", "description": "The core attributes of a paper (title,
+        authors, date, etc.).\n200M records in 30 1.5GB files.", "README": "Semantic
+        Scholar Academic Graph Datasets\n\nThe \"papers\" dataset provides core metadata
+        about papers.\n\nSCHEMA\nSee https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data\n\nThis
+        dataset does not contain information about a paper''s references or citations.\nInstead,
+        join with citingPaperId/citedPaperId from the \"citations\" dataset.\n\nLICENSE\nThis
+        collection is licensed under ODC-BY. (https://opendatacommons.org/licenses/by/1.0/)\n\nBy
+        downloading this data you acknowledge that you have read and agreed to all
+        the terms in this license.\n\nATTRIBUTION\nWhen using this data in a product
+        or service, or including data in a redistribution, please cite the following
+        paper:\n\nBibTex format:\n@misc{https://doi.org/10.48550/arxiv.2301.10140,\n  title
+        = {The Semantic Scholar Open Data Platform},\n  author = {Kinney, Rodney and
+        Anastasiades, Chloe and Authur, Russell and Beltagy, Iz and Bragg, Jonathan
+        and Buraczynski, Alexandra and Cachola, Isabel and Candra, Stefan and Chandrasekhar,
+        Yoganand and Cohan, Arman and Crawford, Miles and Downey, Doug and Dunkelberger,
+        Jason and Etzioni, Oren and Evans, Rob and Feldman, Sergey and Gorney, Joseph
+        and Graham, David and Hu, Fangzhou and Huff, Regan and King, Daniel and Kohlmeier,
+        Sebastian and Kuehl, Bailey and Langan, Michael and Lin, Daniel and Liu, Haokun
+        and Lo, Kyle and Lochner, Jaron and MacMillan, Kelsey and Murray, Tyler and
+        Newell, Chris and Rao, Smita and Rohatgi, Shaurya and Sayre, Paul and Shen,
+        Zejiang and Singh, Amanpreet and Soldaini, Luca and Subramanian, Shivashankar
+        and Tanaka, Amber and Wade, Alex D. and Wagner, Linda and Wang, Lucy Lu and
+        Wilhelm, Chris and Wu, Caroline and Yang, Jiangjiang and Zamarron, Angele
+        and Van Zuylen, Madeleine and Weld, Daniel S.},\n  publisher = {arXiv},\n  year
+        = {2023},\n  doi = {10.48550/ARXIV.2301.10140},\n  url = {https://arxiv.org/abs/2301.10140},\n}\n\n\n",
+        "files": ["https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_0",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_1",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_2",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_3",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_4",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_5",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_6",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_7",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_8",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_9",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_10",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_11",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_12",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_13",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_14",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_15",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_16",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_17",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_18",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_19",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_20",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_21",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_22",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_23",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_24",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_25",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_26",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_27",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_28",
+        "https://ai2-s2ag.s3.amazonaws.com/staging/2025-08-19/papers/20250822_29"]}
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '83333'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 05 Sep 2025 19:30:37 GMT
+      Via:
+      - 1.1 e7fecea004044e82fbf98e65b34d83fe.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - qlHB9T1K2kgWAV4dQPLTeAnjvXJcTnrCFLllKAM2CCksdF-kfbiKzg==
+      X-Amz-Cf-Pop:
+      - ORD58-P3
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QcYOnFavPHcEImg=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '83333'
+      x-amzn-Remapped-Date:
+      - Fri, 05 Sep 2025 19:30:37 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 3d0683a6-4f32-4503-9b7f-0f2e0a5a3a87
+    status:
+      code: 200
+      message: OK
+version: 1

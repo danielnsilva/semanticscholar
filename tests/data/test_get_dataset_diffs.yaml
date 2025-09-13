@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.28.1
+      x-api-key:
+      - [REDACTED]
+    method: GET
+    uri: https://api.semanticscholar.org/datasets/v1/diffs/2024-10-08/to/2025-08-19/papers
+  response:
+    body:
+      string: '{"dataset": "papers", "start_release": "2024-10-08", "end_release":
+        "2025-08-19", "diffs": [{"from_release": "2024-10-08", "to_release": "2024-10-15",
+        "update_files": ["https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_2.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_3.gz", 
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_4.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_5.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_6.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_7.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_8.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_9.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_10.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_11.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_12.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_13.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_14.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_15.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_16.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_17.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_18.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_19.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_20.gz"],
+        "delete_files": ["https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_2.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_3.gz",
+        "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_4.gz"]}]
+}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1970904'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 05 Sep 2025 19:43:09 GMT
+      Via:
+      - 1.1 ccc92a9725583547f1698efe8f6b77b2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - X7jmdOpiGdcOifXLd7fzR6INj8JxW9kkSaCG53V4GYodZEhFOSHO5A==
+      X-Amz-Cf-Pop:
+      - ORD58-P3
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QcaDgHPVvHcEEsQ=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '1970904'
+      x-amzn-Remapped-Date:
+      - Fri, 05 Sep 2025 19:43:09 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - a7f4002f-b5bf-456a-96d1-d5e94e41f8e4
+    status:
+      code: 200
+      message: OK
+version: 1

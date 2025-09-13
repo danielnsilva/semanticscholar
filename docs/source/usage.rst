@@ -64,6 +64,8 @@ You can use the asynchronous version with the :doc:`mainclasses/asyncsemanticsch
 
     paper = fetch_paper()
 
+.. _authenticated-requests:
+
 Authenticated requests
 ----------------------
 
@@ -357,6 +359,91 @@ To get recommended papers based on a list of positive and negative paper example
     results = sch.get_recommended_papers_from_lists(positive_paper_ids, negative_paper_ids)
 
 You can also omit the list of negative paper IDs; in which case, the API will return recommended papers based on the list of positive paper IDs only.
+
+Datasets API
+============
+
+The Datasets API includes several key concepts:
+
+- **Releases**: Datasets are organized into releases, which are snapshots of the data at specific points in time (e.g., '2023-12-01').
+- **Datasets**: Each release contains multiple datasets, such as 'papers', 'authors', 'publications', etc.
+- **Incremental Updates**: For efficient updates, the API provides diffs between releases showing only the changes.
+
+Available releases
+------------------
+
+The response contains a list of release identifiers (strings) that you can use to access specific releases. To get a list of all available dataset releases:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    releases = sch.get_available_releases()
+    print(releases)
+
+    # Example output:
+    # ['2025-08-19', '2025-09-05, ...']
+
+Get a specific release
+----------------------
+
+To get detailed information about a specific release, including all available datasets:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    release = sch.get_release('2025-08-19')
+    
+    print(f"Release ID: {release.release_id}")
+    print(f"Number of datasets: {len(release.datasets)}")
+    
+    # List all available datasets in this release
+    for dataset in release.datasets:
+        print(f"- {dataset.name}: {dataset.description}")
+
+Per `the official documentation <https://api.semanticscholar.org/api-docs/datasets#tag/Datasets/operation/get_release>`_, you can also use 'latest' as the release identifier to get the most recent release.
+
+Get dataset download links
+--------------------------
+
+This endpoint requires :ref:`authentication <authenticated-requests>` with a valid API key. To get download links for a specific dataset in a release:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    dataset = sch.get_dataset_download_links('2025-08-19', 'papers')
+    
+    print(f"Dataset: {dataset.name}")
+    print(f"Description: {dataset.description}")
+    print(f"Number of files: {len(dataset.files)}")
+    
+    # Print first few download URLs
+    for i, file_url in enumerate(dataset.files[:3]):
+        print(f"File {i+1}: {file_url}")
+
+Get dataset diffs
+-----------------
+
+This endpoint requires :ref:`authentication <authenticated-requests>` with a valid API key. To get file urls for incremental updates between two releases for a specific dataset:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    diffs = sch.get_dataset_diffs('papers', '2023-12-01', '2024-01-01')
+    
+    print(f"Number of incremental updates: {len(diffs.diffs)}")
+    
+    # Examine the first diff
+    first_diff = diffs.diffs[0]
+    print(f"First update: {first_diff.from_release} -> {first_diff.to_release}")
+    print(f"Update files: {len(first_diff.update_files)}")
+    print(f"Delete files: {len(first_diff.delete_files)}")
+
+Actually using the diffs to update your local dataset is not supported by this library. Please see the official
+`documentation <https://api.semanticscholar.org/api-docs/datasets#tag/Incremental-Updates/operation/get_diff>`_ for an example using Spark.
 
 Common query parameters
 =======================
