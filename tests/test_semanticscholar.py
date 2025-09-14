@@ -662,18 +662,20 @@ class SemanticScholarTest(unittest.TestCase):
 
     @test_vcr.use_cassette
     def test_debug(self):
-        logging.basicConfig(level=logging.DEBUG)
+        self.maxDiff = None
         with open('tests/data/debug_output.txt', 'r') as file:
-            expected_output = file.read()
+            expected_output = file.read().strip()
         self.sch = SemanticScholar(api_key='F@k3K3y')
         list_of_paper_ids = [
             'CorpusId:470667',
             '10.2139/ssrn.2250500',
             '0f40b1f08821e22e859c6050916cec3667778613']
-        with self.assertLogs(level='DEBUG') as log, \
+        with self.assertLogs('semanticscholar', level='DEBUG') as log, \
                 self.assertRaises(PermissionError):
             self.sch.get_papers(list_of_paper_ids)
-            self.assertIn(expected_output, log.output)
+        self.assertGreater(len(log.output), 0, "Nenhum log foi capturado")
+        actual_output = '\n'.join(log.output)
+        self.assertEqual(actual_output, expected_output)
 
     @mock.patch('httpx.AsyncClient.request')
     def test_exception_internal_server_error(self, mock_request):
