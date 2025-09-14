@@ -57,6 +57,7 @@ class ApiRequester:
     def _curl_cmd(
                 self,
                 url: str,
+                parameters: str,
                 method: str,
                 headers: dict,
                 payload: dict = None
@@ -67,6 +68,7 @@ class ApiRequester:
                 curl_cmd += f' -H \'{key}: {value}\''
         curl_cmd += f' -d \'{json.dumps(payload)}\'' if payload else ''
         curl_cmd += f' {url}'
+        curl_cmd += f'?{parameters}' if parameters else ''
         return curl_cmd
 
     async def get_data_async(
@@ -109,10 +111,11 @@ class ApiRequester:
         parameters=parameters.lstrip("&")
         method = 'POST' if payload else 'GET'
 
-        logger.debug(f'HTTP Request: {method} {url}')
+        full_url = f'{url}?{parameters}' if parameters else url
+        logger.debug(f'HTTP Request: {method} {full_url}')
         logger.debug(f'Headers: {headers}')
         logger.debug(f'Payload: {payload}')
-        logger.debug(f'cURL command: {self._curl_cmd(url, method, headers, payload)}')
+        logger.debug(f'cURL command: {self._curl_cmd(url, parameters, method, headers, payload)}')
 
         async with httpx.AsyncClient() as client:
             r = await client.request(
