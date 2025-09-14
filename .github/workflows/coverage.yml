@@ -1,5 +1,8 @@
 name: Coverage
 
+permissions:
+  contents: read
+
 on:
   workflow_call:
     secrets:

@@ -5,6 +5,9 @@ on:
 
 name: PyPI Release
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: PyPI Release
