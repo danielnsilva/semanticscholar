@@ -284,6 +284,18 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(len(not_found), 1)
         self.assertEqual(not_found[0], 'CorpusId:211530585')
 
+    def test_get_papers_doi_prefix_not_false_positive(self):
+        paper = Paper({
+            'paperId': 'abc123',
+            'externalIds': {
+                'DOI': '10.1145/792550.792552',
+                'CorpusId': 12345
+            }
+        })
+        not_found = self.sch._AsyncSemanticScholar._get_not_found_ids(
+            ['DOI:10.1145/792550.792552'], [paper])
+        self.assertEqual(not_found, [])
+
     @test_vcr.use_cassette
     def test_get_paper_authors(self):
         data = self.sch.get_paper_authors('10.2139/ssrn.2250500')
@@ -829,7 +841,19 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         not_found = data[1]
         self.assertEqual(len(not_found), 1)
         self.assertEqual(not_found[0], 'CorpusId:211530585')
-    
+
+    def test_get_papers_doi_prefix_not_false_positive_async(self):
+        paper = Paper({
+            'paperId': 'abc123',
+            'externalIds': {
+                'DOI': '10.1145/792550.792552',
+                'CorpusId': 12345
+            }
+        })
+        not_found = self.sch._get_not_found_ids(
+            ['DOI:10.1145/792550.792552'], [paper])
+        self.assertEqual(not_found, [])
+
     @test_vcr.use_cassette
     async def test_get_paper_authors_async(self):
         data = await self.sch.get_paper_authors('10.2139/ssrn.2250500')
