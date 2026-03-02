@@ -1,5 +1,6 @@
 from typing import Any, Union, List
 import asyncio
+import concurrent.futures
 
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.SemanticScholarException import NoMorePagesException
@@ -156,8 +157,13 @@ class PaginatedResults:
 
         self._build_params()
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(self._request_data())
+        try:
+            asyncio.get_running_loop()
+            with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+                future = pool.submit(asyncio.run, self._request_data())
+                results = future.result()
+        except RuntimeError:
+            results = asyncio.run(self._request_data())
 
         return self._update_params(results)
 
