@@ -20,9 +20,13 @@ from semanticscholar.Reference import Reference
 from semanticscholar.Release import Release
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException, GatewayTimeoutException,
-    InternalServerErrorException, NoMorePagesException,
-    ObjectNotFoundException, ServerErrorException)
+    BadQueryParametersException,
+    GatewayTimeoutException,
+    InternalServerErrorException,
+    NoMorePagesException,
+    ObjectNotFoundException,
+    ServerErrorException,
+)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -663,7 +667,7 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_debug(self):
         self.maxDiff = None
-        with open('tests/data/debug_output.txt', 'r') as file:
+        with open('tests/data/debug_output.txt') as file:
             expected_output = file.read().strip()
         self.sch = SemanticScholar(api_key='F@k3K3y')
         list_of_paper_ids = [
@@ -1292,6 +1296,25 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(diff.delete_files), 4)
         self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
         self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
+
+class SyncFromAsyncContextTest(unittest.IsolatedAsyncioTestCase):
+    '''Test the sync API when called from within a running event loop,
+    exercising the ThreadPoolExecutor fallback in _run_async().'''
+
+    def setUp(self) -> None:
+        self.sch = SemanticScholar()
+
+    @test_vcr.use_cassette('tests/data/SemanticScholarTest.test_get_paper.yaml')
+    async def test_get_paper_sync_from_running_loop(self):
+        data = self.sch.get_paper('10.1093/mind/lix.236.433', fields=['title'])
+        self.assertEqual(data.title,
+                         'Computing Machinery and Intelligence')
+
+    @test_vcr.use_cassette('tests/data/SemanticScholarTest.test_search_paper.yaml')
+    async def test_search_paper_sync_from_running_loop(self):
+        results = self.sch.search_paper('turing')
+        self.assertGreater(results.total, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
