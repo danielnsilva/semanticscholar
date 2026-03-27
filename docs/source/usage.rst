@@ -81,7 +81,7 @@ Retry mode
 
 The library provides an automatic retry mechanism to handle rate-limiting responses from the Semantic Scholar API.
 
-By default, the retry mechanism is enabled (``retry=True``). When enabled, the library will automatically retry requests up to 10 times if it encounters an HTTP 429 status (`Too Many Requests`). Each retry attempt waits 30 seconds before trying again.
+By default, the retry mechanism is enabled (``retry=True``). When enabled, the library will automatically retry requests up to 10 times if it encounters an HTTP 429 status (`Too Many Requests`). Retries use exponential back-off, starting at 5 seconds and doubling up to a maximum of 60 seconds between attempts.
 
 This feature is especially useful for handling temporary rate limits imposed by the Semantic Scholar API, ensuring your requests are eventually processed without manual intervention. If you prefer to manage retries yourself, you can disable this feature as shown below:
 
