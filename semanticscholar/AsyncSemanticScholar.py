@@ -228,6 +228,7 @@ class AsyncSemanticScholar:
 
         prefix_mapping = {
             'ARXIV': 'ArXiv',
+            'DOI': 'DOI',
             'MAG': 'MAG',
             'ACL': 'ACL',
             'PMID': 'PubMed',
@@ -241,11 +242,10 @@ class AsyncSemanticScholar:
             found_ids.add(paper.paperId)
             if paper.externalIds:
                 for prefix, value in paper.externalIds.items():
+                    found_ids.add(f'{value}')
                     if prefix.lower() in prefix_mapping:
                         found_ids.add(
                             f'{prefix_mapping[prefix.lower()]}:{value}')
-                    else:
-                        found_ids.add(f'{value}')
         found_ids = {id.lower() for id in found_ids}
 
         not_found_ids = [id for id in paper_ids if id.lower() not in found_ids]
