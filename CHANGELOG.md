@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Enhancements
+
+- Replaced `nest_asyncio` with thread-based async helper for Python 3.14
+  compatibility by [@lior-airis](https://github.com/lior-airis) in
+  [#116](https://github.com/danielnsilva/semanticscholar/pull/116)
+- Switched retry strategy from fixed 30s wait to exponential back-off by
+  [@dbosk](https://github.com/dbosk) in
+  [#108](https://github.com/danielnsilva/semanticscholar/pull/108)
+
+### Bug Fixes
+
+- Fixed false "IDs not found" warning for DOI-prefixed lookups by
+  [@lior-airis](https://github.com/lior-airis) in
+  [#117](https://github.com/danielnsilva/semanticscholar/pull/117)
+
 ## [0.11.0] - 2025-09-13
 
 ### New Features
