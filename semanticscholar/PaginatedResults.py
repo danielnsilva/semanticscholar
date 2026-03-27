@@ -1,6 +1,6 @@
 from typing import Any, Union, List
-import asyncio
 
+from semanticscholar._utils import _run_async
 from semanticscholar.ApiRequester import ApiRequester
 from semanticscholar.SemanticScholarException import NoMorePagesException
 
@@ -156,8 +156,7 @@ class PaginatedResults:
 
         self._build_params()
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(self._request_data())
+        results = _run_async(self._request_data())
 
         return self._update_params(results)
 

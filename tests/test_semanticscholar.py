@@ -1293,5 +1293,24 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
         self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
 
+class SyncFromAsyncContextTest(unittest.IsolatedAsyncioTestCase):
+    '''Test the sync API when called from within a running event loop,
+    exercising the ThreadPoolExecutor fallback in _run_async().'''
+
+    def setUp(self) -> None:
+        self.sch = SemanticScholar()
+
+    @test_vcr.use_cassette
+    async def test_get_paper_sync_from_running_loop(self):
+        data = self.sch.get_paper('10.1093/mind/lix.236.433', fields=['title'])
+        self.assertEqual(data.title,
+                         'Computing Machinery and Intelligence')
+
+    @test_vcr.use_cassette
+    async def test_search_paper_sync_from_running_loop(self):
+        results = self.sch.search_paper('turing', fields=['title'])
+        self.assertGreater(results.total, 0)
+
+
 if __name__ == '__main__':
     unittest.main()

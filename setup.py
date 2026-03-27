@@ -20,7 +20,7 @@ setup(
     license='MIT',
     packages=['semanticscholar'],
     python_requires='>=3.10',
-    install_requires=['tenacity', 'httpx', 'nest_asyncio'],
+    install_requires=['tenacity', 'httpx'],
     test_suite='tests',
     tests_require=['vcrpy>=8.0'],
     classifiers=[

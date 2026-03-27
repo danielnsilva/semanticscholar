@@ -1,0 +1,57 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - api.semanticscholar.org
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/paper/10.1093/mind/lix.236.433?fields=title
+  response:
+    body:
+      string: '{"paperId": "2d5673caa9e6af3a7b82a43f19ee920992db07ad", "title": "Computing
+        Machinery and Intelligence"}
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '105'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Mar 2026 15:15:27 GMT
+      Via:
+      - 1.1 501922bad11b3bb4482566494d75556c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - nKeHKS9iPvVE6sgXtl5N-EGYogmqd6BXcLq_34GJm9SIgx346njkrQ==
+      X-Amz-Cf-Pop:
+      - GRU3-P10
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - a43KgEqrvHcEbIw=
+      x-amzn-Remapped-Connection:
+      - keep-alive
+      x-amzn-Remapped-Content-Length:
+      - '105'
+      x-amzn-Remapped-Date:
+      - Fri, 27 Mar 2026 15:15:27 GMT
+      x-amzn-Remapped-Server:
+      - gunicorn
+      x-amzn-RequestId:
+      - 579580b5-ea28-4115-9ce9-bddc14edbdf6
+    status:
+      code: 200
+      message: OK
+version: 1

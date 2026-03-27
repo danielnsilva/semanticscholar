@@ -1,7 +1,6 @@
 from typing import List, Literal, Tuple, Union
-import asyncio
-import nest_asyncio
 
+from semanticscholar._utils import _run_async
 from semanticscholar.PaginatedResults import PaginatedResults
 from semanticscholar.AsyncSemanticScholar import AsyncSemanticScholar
 from semanticscholar.Author import Author
@@ -33,7 +32,6 @@ class SemanticScholar():
         :param bool debug: (optional) enable debug mode.
         :param bool retry: enable retry mode.
         '''
-        nest_asyncio.apply()
         self._timeout = timeout
         self._retry = retry
         self._AsyncSemanticScholar = AsyncSemanticScholar(
@@ -126,8 +124,7 @@ class SemanticScholar():
         :raises: ObjectNotFoundException: if Paper ID not found.
         '''
 
-        loop = asyncio.get_event_loop()
-        paper = loop.run_until_complete(
+        paper = _run_async(
             self._AsyncSemanticScholar.get_paper(
                 paper_id=paper_id, 
                 fields=fields
@@ -169,8 +166,7 @@ class SemanticScholar():
         :raises: BadQueryParametersException: if no paper was found.
         '''
 
-        loop = asyncio.get_event_loop()
-        papers = loop.run_until_complete(
+        papers = _run_async(
             self._AsyncSemanticScholar.get_papers(
                 paper_ids=paper_ids,
                 fields=fields,
@@ -207,8 +203,7 @@ class SemanticScholar():
                (must be <= 1000).
         '''
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(
+        results = _run_async(
             self._AsyncSemanticScholar.get_paper_authors(
                 paper_id=paper_id,
                 fields=fields,
@@ -245,8 +240,7 @@ class SemanticScholar():
                (must be <= 1000).
         '''
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(
+        results = _run_async(
             self._AsyncSemanticScholar.get_paper_citations(
                 paper_id=paper_id,
                 fields=fields,
@@ -283,8 +277,7 @@ class SemanticScholar():
                (must be <= 1000).
         '''
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(
+        results = _run_async(
             self._AsyncSemanticScholar.get_paper_references(
                 paper_id=paper_id,
                 fields=fields,
@@ -358,8 +351,7 @@ class SemanticScholar():
             :class:`semanticscholar.Paper.Paper`
         '''
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(
+        results = _run_async(
             self._AsyncSemanticScholar.search_paper(
                 query=query,
                 year=year,
@@ -397,8 +389,7 @@ class SemanticScholar():
         :raises: ObjectNotFoundException: if Author ID not found.
         '''
 
-        loop = asyncio.get_event_loop()
-        author = loop.run_until_complete(
+        author = _run_async(
             self._AsyncSemanticScholar.get_author(
                 author_id=author_id,
                 fields=fields
@@ -429,8 +420,7 @@ class SemanticScholar():
         :raises: BadQueryParametersException: if no author was found.
         '''
 
-        loop = asyncio.get_event_loop()
-        authors = loop.run_until_complete(
+        authors = _run_async(
             self._AsyncSemanticScholar.get_authors(
                 author_ids=author_ids,
                 fields=fields,
@@ -467,8 +457,7 @@ class SemanticScholar():
                (must be <= 1000).
         '''
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(
+        results = _run_async(
             self._AsyncSemanticScholar.get_author_papers(
                 author_id=author_id,
                 fields=fields,
@@ -499,8 +488,7 @@ class SemanticScholar():
         :rtype: :class:`semanticscholar.PaginatedResults.PaginatedResults`
         '''
 
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(
+        results = _run_async(
             self._AsyncSemanticScholar.search_author(
                 query=query,
                 fields=fields,
@@ -542,8 +530,7 @@ class SemanticScholar():
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
         '''
 
-        loop = asyncio.get_event_loop()
-        papers = loop.run_until_complete(
+        papers = _run_async(
             self._AsyncSemanticScholar.get_recommended_papers(
                 paper_id=paper_id,
                 fields=fields,
@@ -579,8 +566,7 @@ class SemanticScholar():
         :rtype: :class:`List` of :class:`semanticscholar.Paper.Paper`
         '''
 
-        loop = asyncio.get_event_loop()
-        papers = loop.run_until_complete(
+        papers = _run_async(
             self._AsyncSemanticScholar.get_recommended_papers_from_lists(
                 positive_paper_ids=positive_paper_ids,
                 negative_paper_ids=negative_paper_ids,
@@ -605,8 +591,7 @@ class SemanticScholar():
                 :class:`semanticscholar.Autocomplete.Autocomplete`
         """
         
-        loop = asyncio.get_event_loop()
-        results = loop.run_until_complete(
+        results = _run_async(
             self._AsyncSemanticScholar.get_autocomplete(query=query)
         )
 
@@ -624,8 +609,7 @@ class SemanticScholar():
         :rtype: :class:`List` of :class:`str`
         """
         
-        loop = asyncio.get_event_loop()
-        releases = loop.run_until_complete(
+        releases = _run_async(
             self._AsyncSemanticScholar.get_available_releases()
         )
 
@@ -644,8 +628,7 @@ class SemanticScholar():
         :rtype: :class:`semanticscholar.Release.Release`
         """
         
-        loop = asyncio.get_event_loop()
-        release = loop.run_until_complete(
+        release = _run_async(
             self._AsyncSemanticScholar.get_release(release_id=release_id)
         )
 
@@ -669,8 +652,7 @@ class SemanticScholar():
         :rtype: :class:`semanticscholar.Dataset.Dataset`
         """
         
-        loop = asyncio.get_event_loop()
-        dataset = loop.run_until_complete(
+        dataset = _run_async(
             self._AsyncSemanticScholar.get_dataset_download_links(
                 release_id=release_id, 
                 dataset_name=dataset_name
@@ -703,8 +685,7 @@ class SemanticScholar():
         :rtype: :class:`semanticscholar.DatasetDiff.DatasetDiff`
         """
         
-        loop = asyncio.get_event_loop()
-        result = loop.run_until_complete(
+        result = _run_async(
             self._AsyncSemanticScholar.get_dataset_diffs(
                 dataset_name=dataset_name,
                 start_release_id=start_release_id,
