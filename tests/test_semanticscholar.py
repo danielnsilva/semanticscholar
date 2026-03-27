@@ -20,13 +20,9 @@ from semanticscholar.Reference import Reference
 from semanticscholar.Release import Release
 from semanticscholar.SemanticScholar import SemanticScholar
 from semanticscholar.SemanticScholarException import (
-    BadQueryParametersException,
-    GatewayTimeoutException,
-    InternalServerErrorException,
-    NoMorePagesException,
-    ObjectNotFoundException,
-    ServerErrorException,
-)
+    BadQueryParametersException, GatewayTimeoutException,
+    InternalServerErrorException, NoMorePagesException,
+    ObjectNotFoundException, ServerErrorException)
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -667,7 +663,7 @@ class SemanticScholarTest(unittest.TestCase):
     @test_vcr.use_cassette
     def test_debug(self):
         self.maxDiff = None
-        with open('tests/data/debug_output.txt') as file:
+        with open('tests/data/debug_output.txt', 'r') as file:
             expected_output = file.read().strip()
         self.sch = SemanticScholar(api_key='F@k3K3y')
         list_of_paper_ids = [
