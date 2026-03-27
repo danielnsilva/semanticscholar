@@ -1300,15 +1300,15 @@ class SyncFromAsyncContextTest(unittest.IsolatedAsyncioTestCase):
     def setUp(self) -> None:
         self.sch = SemanticScholar()
 
-    @test_vcr.use_cassette('tests/data/SemanticScholarTest.test_get_paper.yaml')
+    @test_vcr.use_cassette
     async def test_get_paper_sync_from_running_loop(self):
         data = self.sch.get_paper('10.1093/mind/lix.236.433', fields=['title'])
         self.assertEqual(data.title,
                          'Computing Machinery and Intelligence')
 
-    @test_vcr.use_cassette('tests/data/SemanticScholarTest.test_search_paper.yaml')
+    @test_vcr.use_cassette
     async def test_search_paper_sync_from_running_loop(self):
-        results = self.sch.search_paper('turing')
+        results = self.sch.search_paper('turing', fields=['title'])
         self.assertGreater(results.total, 0)
 
 
