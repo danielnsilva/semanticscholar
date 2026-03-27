@@ -137,6 +137,25 @@ Use the autocomplete feature to get suggestions for paper queries. For example:
 
 The response contains a list of suggestions based on the provided partial query. Each suggestion is represented by an :doc:`s2objects/Autocomplete` object, which provides minimal information about the papers. Note that these are not full :doc:`s2objects/Paper` objects with all attributes.
 
+Snippet search
+^^^^^^^^^^^^^^
+
+Search for text snippets matching a query. Snippets are excerpts of approximately 500 words drawn from a paper's title, abstract, and body text:
+
+.. code-block:: python
+
+    from semanticscholar import SemanticScholar
+    sch = SemanticScholar()
+    results = sch.search_snippet('turing test', limit=5)
+    for item in results:
+        print(item.paper.title)
+        print(item.snippet.snippet_kind)
+        print(item.text)
+
+Each result is a :doc:`s2objects/Snippet` object containing a relevance ``score``, a ``paper`` with basic metadata (corpus ID, title, authors), and a ``snippet`` with the matched text, its kind (title, abstract, or body), section, offset, and annotations.
+
+You can also filter results by paper IDs, authors, year, venue, fields of study, citation count, and publication date. See the method documentation for all available parameters.
+
 Author
 ------
 

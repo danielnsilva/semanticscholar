@@ -1,0 +1,39 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.semanticscholar.org
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://api.semanticscholar.org/graph/v1/snippet/search?query=turing+test&limit=2
+  response:
+    body:
+      string: '{"data": [{"snippet": {"text": "The Turing test, originally called
+        the imitation game by Alan Turing in 1950, is a test of a machine''s ability
+        to exhibit intelligent behaviour equivalent to, or indistinguishable from,
+        that of a human.", "snippetKind": "abstract", "section": null, "snippetOffset":
+        {"start": 0, "end": 198}, "annotations": {"sentences": [{"start": 0, "end":
+        198}], "refMentions": []}}, "score": 0.89, "paper": {"corpusId": "19170988",
+        "title": "Computing Machinery and Intelligence", "authors": ["Alan Turing"],
+        "openAccessInfo": {"license": "CCBY", "status": "HYBRID", "disclaimer": "Notice"}}},
+        {"snippet": {"text": "We describe a new approach to evaluating machine intelligence
+        based on the Turing test.", "snippetKind": "body", "section": "Introduction",
+        "snippetOffset": {"start": 1024, "end": 1113}, "annotations": {"sentences":
+        [{"start": 0, "end": 89}], "refMentions": []}}, "score": 0.75, "paper": {"corpusId":
+        "12345678", "title": "Evaluating Machine Intelligence", "authors": ["John
+        Smith", "Jane Doe"], "openAccessInfo": null}}], "retrievalVersion": "v1.0.0"}'
+    headers:
+      Content-Type:
+      - application/json
+    status:
+      code: 200
+      message: OK
+version: 1
