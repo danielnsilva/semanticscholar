@@ -33,6 +33,12 @@ test_vcr = vcr.VCR(
     drop_unused_requests=True
 )
 
+
+def use_shared_cassette(func):
+    '''Reuse sync cassette for async tests by stripping the _async suffix.'''
+    name = func.__name__.replace('_async', '')
+    return test_vcr.use_cassette(f'tests/data/{name}.yaml')(func)
+
 class SemanticScholarTest(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -785,7 +791,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
     def setUp(self) -> None:
         self.sch = AsyncSemanticScholar()
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_paper_async(self):
         data = await self.sch.get_paper(
             '10.1093/mind/lix.236.433', fields=['title'])
@@ -794,7 +800,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data.raw_data['title'],
                          'Computing Machinery and Intelligence')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_papers_async(self):
         list_of_paper_ids = [
             'CorpusId:470667',
@@ -816,7 +822,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(ValueError):
             await self.sch.get_papers(list_of_paper_ids)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_papers_not_found_warning_async(self):
         list_of_paper_ids = [
             'CorpusId:211530585',
@@ -827,7 +833,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             await self.sch.get_papers(list_of_paper_ids)
             self.assertIn('IDs not found: [\'CorpusId:211530585\']', log.output[0])
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_papers_return_not_found_async(self):
         list_of_paper_ids = [
             'CorpusId:211530585',
@@ -854,7 +860,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             ['DOI:10.1145/792550.792552'], [paper])
         self.assertEqual(not_found, [])
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_paper_authors_async(self):
         data = await self.sch.get_paper_authors('10.2139/ssrn.2250500')
         self.assertEqual(data.offset, 0)
@@ -862,31 +868,31 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len([item async for item in data]), 4)
         self.assertEqual(data[0].name, 'E. Duflo')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_paper_references_async(self):
         data = await self.sch.get_paper_references(
             '10.2139/ssrn.2250500', fields=['title'], limit=50)
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 50)
-        self.assertEqual(len(data), 50)
+        self.assertEqual(len([item async for item in data]), 67)
         self.assertEqual(
             data[0].paper.title,
             'Group lending or individual lending? Evidence from a randomised '
             'field experiment in Mongolia')
     
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_timeout_async(self):
         self.sch.timeout = 0.01
         self.assertEqual(self.sch.timeout, 0.01)
         with self.assertRaises(TimeoutException):
             await self.sch.get_paper('10.1093/mind/lix.236.433')
     
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_author_async(self):
         data = await self.sch.get_author(2262347, fields=['name'])
         self.assertEqual(data.name, 'A. Turing')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_authors_async(self):
         list_of_author_ids = ['3234559', '1726629', '1711844']
         data = await self.sch.get_authors(list_of_author_ids, fields=['name'])
@@ -904,14 +910,14 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(ValueError):
             await self.sch.get_authors(list_of_author_ids)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_authors_not_found_warning_async(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
         with self.assertLogs(level='WARNING') as log:
             await self.sch.get_authors(list_of_author_ids, fields=['name'])
             self.assertIn('IDs not found: [\'0\']', log.output[0])
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_authors_return_not_found_async(self):
         list_of_author_ids = ['0', '3234559', '1726629', '1711844']
         data = await self.sch.get_authors(
@@ -922,7 +928,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(not_found), 1)
         self.assertEqual(not_found[0], '0')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_author_papers_async(self):
         data = await self.sch.get_author_papers(
             1723755, limit=100, fields=['title'])
@@ -933,31 +939,35 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             data[0].title,
             'SARS-CoV-2 hijacks p38\u03b2/MAPK11 to promote virus replication')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_paper_citations_async(self):
         data = await self.sch.get_paper_citations(
-            '10.2139/ssrn.2250500', fields=['title'])
+            'CorpusID:14514057', fields=['title'])
         self.assertEqual(data.offset, 0)
         self.assertEqual(data.next, 100)
-        self.assertEqual(len([item.paper.title async for item in data]), 2167)
+        self.assertEqual(len([item.paper.title async for item in data]), 1881)
         self.assertEqual(
             data[0].paper.title,
-            'Financial inclusion and roof quality: '
-            'Satellite evidence from Chilean slums')
+            'We\u2019ve got you covered! The effect of public health '
+            'insurance on rural entrepreneurship in China')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_not_found_async(self):
-        with self.assertRaises(ObjectNotFoundException):
-            await self.sch.get_paper(0, fields=['title'])
-        with self.assertRaises(ObjectNotFoundException):
-            await self.sch.get_author(0, fields=['name'])
+        methods = [
+            [self.sch.get_paper, 'title'],
+            [self.sch.get_author, 'name']
+        ]
+        for method, field in methods:
+            with self.subTest(subtest=method.__name__):
+                with self.assertRaises(ObjectNotFoundException):
+                    await method(0, field)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_bad_query_parameters_async(self):
         with self.assertRaises(BadQueryParametersException):
             await self.sch.get_paper('10.1093/mind/lix.236.433', fields=['unknown'])
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_async(self):
         data = await self.sch.search_paper('turing', fields=['title'])
         self.assertGreater(data.total, 0)
@@ -969,13 +979,13 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             'Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, '
             'A Large-Scale Generative Language Model')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_next_page_async(self):
         data = await self.sch.search_paper('turing', fields=['title'])
         await data.async_next_page()
         self.assertGreater(len(data), 100)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_traversing_results_async(self):
         data = await self.sch.search_paper(
             'sublinear near optimal edit distance', fields=['title'])
@@ -984,7 +994,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             await data.async_next_page()
         self.assertEqual(len(all_results), len(data.items))
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_fields_of_study_async(self):
         data = await self.sch.search_paper(
             'turing',
@@ -992,19 +1002,19 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             fields=['s2FieldsOfStudy'])
         self.assertEqual(data[0].s2FieldsOfStudy[0]['category'], 'Mathematics')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_year_async(self):
         data = await self.sch.search_paper(
             'turing', year=1936, fields=['year'])
         self.assertEqual(data[0].year, 1936)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_year_range_async(self):
         data = await self.sch.search_paper(
             'turing', year='1936-1937', fields=['year'])
         self.assertTrue(all([1936 <= item.year <= 1937 async for item in data]))
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_publication_types_async(self):
         data = await self.sch.search_paper(
             'turing',
@@ -1019,19 +1029,19 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             'Book' in data[0].publicationTypes or
             'Conference' in data[0].publicationTypes)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_venue_async(self):
         data = await self.sch.search_paper(
             'turing', venue=['ArXiv'], fields=['venue'])
         self.assertEqual(data[0].venue, 'arXiv.org')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_open_access_pdf_async(self):
         data = await self.sch.search_paper(
             'turing', open_access_pdf=True, fields=['openAccessPdf'])
         self.assertTrue(data[0].openAccessPdf)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_publication_date_or_year_async(self):
         date_ranges = [
             "2024-01-01",
@@ -1064,13 +1074,13 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
                     await self.sch.search_paper(
                         'turing', publication_date_or_year=date_range)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_min_citation_count_async(self):
         data = await self.sch.search_paper(
             'turing', min_citation_count=1000, fields=['citationCount'])
         self.assertTrue(all([item.citationCount >= 1000 async for item in data]))
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_bulk_retrieval_async(self):
         data = await self.sch.search_paper(
             'kubernetes', bulk=True, fields=['title'])
@@ -1081,14 +1091,14 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             'Kubernetes Cluster for Automating Software '
             'Production Environment')
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_bulk_retrieval_next_page_async(self):
         data = await self.sch.search_paper(
             'kubernetes', bulk=True, fields=['title'])
         await data.async_next_page()
         self.assertEqual(len(data), 2000)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_bulk_retrieval_traversing_results_async(self):
         data = await self.sch.search_paper(
             'kubernetes', bulk=True, fields=['title'])
@@ -1099,7 +1109,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             await data.async_next_page()
         self.assertEqual(len(all_results), len(data.items))
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_bulk_retrieval_sorted_results_default_order_async(self):
         data = await self.sch.search_paper(
             'kubernetes',
@@ -1109,7 +1119,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         all_data = [item.citationCount async for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_bulk_retrieval_sorted_results_asc_async(self):
         data = await self.sch.search_paper(
             'kubernetes',
@@ -1119,7 +1129,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         all_data = [item.citationCount async for item in data]
         self.assertTrue(sorted(all_data) == all_data)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_bulk_retrieval_sorted_results_desc_async(self):
         data = await self.sch.search_paper(
             'kubernetes',
@@ -1129,13 +1139,13 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         all_data = [item.citationCount async for item in data]
         self.assertTrue(sorted(all_data, reverse=True) == all_data)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_with_relevance_and_sort_async(self):
         with self.assertWarns(UserWarning):
             await self.sch.search_paper(
                 'kubernetes', sort='citationCount', fields=['title'])
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_paper_match_title_async(self):
         query = 'mining association rules between'
         expected_title = ('Mining association rules between sets of items in '
@@ -1148,31 +1158,31 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(ValueError):
             await self.sch.search_paper('test', match_title=True, bulk=True)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_author_async(self):
         data = await self.sch.search_author('turing', fields=['name'])
         self.assertGreater(data.total, 0)
         self.assertEqual(data.next, 0)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_recommended_papers_async(self):
         data = await self.sch.get_recommended_papers(
             '10.2139/ssrn.2250500', fields=['title'])
         self.assertEqual(len(data), 100)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_recommended_papers_pool_from_async(self):
         data = await self.sch.get_recommended_papers(
             '10.2139/ssrn.2250500', pool_from="all-cs", fields=['title'])
         self.assertEqual(len(data), 100)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_recommended_papers_pool_from_invalid_async(self):
         with self.assertRaises(ValueError):
             await self.sch.get_recommended_papers(
                 '10.1145/3544585.3544600', pool_from="invalid")
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_recommended_papers_from_lists_async(self):
         data = await self.sch.get_recommended_papers_from_lists(
             ['10.1145/3544585.3544600'],
@@ -1180,14 +1190,14 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
             fields=['title'])
         self.assertEqual(len(data), 100)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_recommended_papers_from_lists_positive_only_async(self):
         data = await self.sch.get_recommended_papers_from_lists(
             ['10.1145/3544585.3544600', '10.1145/301250.301271'],
             fields=['title'])
         self.assertEqual(len(data), 100)
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_get_recommended_papers_from_lists_negative_only_async(self):
         with self.assertRaises(BadQueryParametersException):
             await self.sch.get_recommended_papers_from_lists(
@@ -1195,7 +1205,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
                 ['10.1145/3544585.3544600'],
                 fields=['title'])
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_limit_value_exceeded_async(self):
         test_cases = [
             (self.sch.get_paper_authors, '10.1093/mind/lix.236.433', 1001,
