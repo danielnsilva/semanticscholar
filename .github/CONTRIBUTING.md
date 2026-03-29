@@ -45,6 +45,24 @@ features.
 the [Conventional Commits](https://www.conventionalcommits.org/) specification
 to maintain a clean and organized commit history.
 
+### Architecture overview
+
+Before contributing, it's important to understand the project's architecture:
+
+- **Async-first**: All API logic lives in `AsyncSemanticScholar`. The sync
+`SemanticScholar` class delegates every method to its async counterpart via
+`_run_async()`.
+- **Data models**: All response objects inherit from `SemanticScholarObject` and
+follow the same pattern: a `FIELDS` class constant, attributes initialized to
+`None` in `__init__`, and a `_init_attributes(data)` method that populates them
+from a dict.
+- **HTTP layer**: `ApiRequester` is the single point for HTTP requests, retries,
+and error mapping. API methods should not make HTTP calls directly.
+
+When adding new features, follow these patterns to keep the codebase
+consistent. If your contribution requires changes to the architecture, please
+discuss it in the PR description so it can be reviewed properly.
+
 ### Running and writing tests
 
 First, install the dependencies:
@@ -72,6 +90,14 @@ Then, run the tests:
     ```console
     python -m unittest tests.test_semanticscholar.TestClassName.testMethod
     ```
+
+### Async tests
+
+Async tests use `IsolatedAsyncioTestCase` and follow the same naming convention
+as sync tests, but with an `_async` suffix (e.g., `test_get_paper_async`). They
+reuse the same VCR cassettes as their sync counterparts via the
+`use_shared_cassette` decorator, which strips the `_async` suffix to find the
+matching cassette file.
 
 ### Recording API Calls
 
@@ -116,7 +142,7 @@ To get started, install the necessary dependencies:
 pip install -r docs-requirements.txt
 ```
 
-After add new content, you could build the documentation locally:
+After adding new content, you could build the documentation locally:
 
 ```console
 cd docs && make html
