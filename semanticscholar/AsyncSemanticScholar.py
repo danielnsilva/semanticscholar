@@ -14,6 +14,7 @@ from semanticscholar.Paper import Paper
 from semanticscholar.Reference import Reference
 from semanticscholar.Release import Release
 from semanticscholar.Autocomplete import Autocomplete
+from semanticscholar.Snippet import Snippet
 
 logger = logging.getLogger('semanticscholar')
 
@@ -828,6 +829,97 @@ class AsyncSemanticScholar:
             return []
 
         return [Autocomplete(suggestion) for suggestion in data["matches"]]
+
+    async def search_snippet(
+                self,
+                query: str,
+                paper_ids: List[str] = None,
+                authors: List[str] = None,
+                min_citation_count: int = None,
+                year: str = None,
+                venue: list = None,
+                fields_of_study: list = None,
+                fields: list = None,
+                publication_date_or_year: str = None,
+                limit: int = 10
+            ) -> List[Snippet]:
+        '''
+        Search for text snippets matching a query. Text snippets are
+        excerpts of approximately 500 words, drawn from a paper's title,
+        abstract, and body text.
+
+        :calls: `GET /graph/v1/snippet/search \
+            <https://api.semanticscholar.org/api-docs/graph#tag/\
+            Snippet-Text/operation/get_snippet_search>`_
+
+        :param str query: plain-text search query string.
+        :param list paper_ids: (optional) restrict results to snippets
+               from specific papers (up to ~100 IDs).
+        :param list authors: (optional) restrict results to papers with
+               authors matching the given names.
+        :param int min_citation_count: (optional) restrict results to
+               papers with at least the given number of citations.
+        :param str year: (optional) restrict results to the given range
+               of publication year.
+        :param list venue: (optional) restrict results to the given
+               venue list.
+        :param list fields_of_study: (optional) restrict results to
+               given field-of-study list.
+        :param list fields: (optional) list of the snippet fields to be
+               returned.
+        :param str publication_date_or_year: (optional) restrict results
+               to the given range of publication date in the format
+               <start_date>:<end_date>.
+        :param int limit: (optional) maximum number of results to return
+               (must be <= 1000, default 10).
+        :returns: list of snippet search results.
+        :rtype: :class:`List` of
+                :class:`semanticscholar.Snippet.Snippet`
+        '''
+
+        if limit < 1 or limit > 1000:
+            raise ValueError(
+                'The limit parameter must be between 1 and 1000 inclusive.')
+
+        base_url = self.api_url + self.BASE_PATH_GRAPH
+        url = f'{base_url}/snippet/search'
+
+        parameters = f'query={query}'
+
+        if paper_ids:
+            parameters += f'&paperIds={",".join(paper_ids)}'
+
+        if authors:
+            parameters += f'&authors={",".join(authors)}'
+
+        if min_citation_count:
+            parameters += f'&minCitationCount={min_citation_count}'
+
+        if year:
+            parameters += f'&year={year}'
+
+        if venue:
+            parameters += f'&venue={",".join(venue)}'
+
+        if fields_of_study:
+            parameters += f'&fieldsOfStudy={",".join(fields_of_study)}'
+
+        if fields:
+            parameters += f'&fields={",".join(fields)}'
+
+        if publication_date_or_year:
+            parameters += \
+                f'&publicationDateOrYear={publication_date_or_year}'
+
+        parameters += f'&limit={limit}'
+
+        data = await self._requester.get_data_async(
+            url, parameters, self.auth_header)
+
+        if not data or 'data' not in data:
+            return []
+
+        return [Snippet(item) for item in data['data']]
 
     async def get_available_releases(self) -> List[Release]:
         """

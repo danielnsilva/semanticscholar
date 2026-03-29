@@ -9,6 +9,7 @@ from semanticscholar.DatasetDiff import DatasetDiff
 from semanticscholar.Paper import Paper
 from semanticscholar.Release import Release
 from semanticscholar.Autocomplete import Autocomplete
+from semanticscholar.Snippet import Snippet
 
 
 class SemanticScholar():
@@ -593,6 +594,70 @@ class SemanticScholar():
         
         results = _run_async(
             self._AsyncSemanticScholar.get_autocomplete(query=query)
+        )
+
+        return results
+
+    def search_snippet(
+                self,
+                query: str,
+                paper_ids: List[str] = None,
+                authors: List[str] = None,
+                min_citation_count: int = None,
+                year: str = None,
+                venue: list = None,
+                fields_of_study: list = None,
+                fields: list = None,
+                publication_date_or_year: str = None,
+                limit: int = 10
+            ) -> List[Snippet]:
+        '''
+        Search for text snippets matching a query. Text snippets are
+        excerpts of approximately 500 words, drawn from a paper's title,
+        abstract, and body text.
+
+        :calls: `GET /graph/v1/snippet/search \
+            <https://api.semanticscholar.org/api-docs/graph#tag/\
+            Snippet-Text/operation/get_snippet_search>`_
+
+        :param str query: plain-text search query string.
+        :param list paper_ids: (optional) restrict results to snippets
+               from specific papers (up to ~100 IDs).
+        :param list authors: (optional) restrict results to papers with
+               authors matching the given names.
+        :param int min_citation_count: (optional) restrict results to
+               papers with at least the given number of citations.
+        :param str year: (optional) restrict results to the given range
+               of publication year.
+        :param list venue: (optional) restrict results to the given
+               venue list.
+        :param list fields_of_study: (optional) restrict results to
+               given field-of-study list.
+        :param list fields: (optional) list of the snippet fields to be
+               returned.
+        :param str publication_date_or_year: (optional) restrict results
+               to the given range of publication date in the format
+               <start_date>:<end_date>.
+        :param int limit: (optional) maximum number of results to return
+               (must be <= 1000, default 10).
+        :returns: list of snippet search results.
+        :rtype: :class:`List` of
+                :class:`semanticscholar.Snippet.Snippet`
+        '''
+
+        results = _run_async(
+            self._AsyncSemanticScholar.search_snippet(
+                query=query,
+                paper_ids=paper_ids,
+                authors=authors,
+                min_citation_count=min_citation_count,
+                year=year,
+                venue=venue,
+                fields_of_study=fields_of_study,
+                fields=fields,
+                publication_date_or_year=publication_date_or_year,
+                limit=limit
+                )
         )
 
         return results

@@ -23,6 +23,7 @@ from semanticscholar.SemanticScholarException import (
     BadQueryParametersException, GatewayTimeoutException,
     InternalServerErrorException, NoMorePagesException,
     ObjectNotFoundException, ServerErrorException)
+from semanticscholar.Snippet import Snippet
 from semanticscholar.Tldr import Tldr
 
 test_vcr = vcr.VCR(
@@ -785,6 +786,48 @@ class SemanticScholarTest(unittest.TestCase):
         self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
         self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
 
+    @test_vcr.use_cassette
+    def test_search_snippet(self):
+        results = self.sch.search_snippet('turing test', limit=2)
+        self.assertEqual(len(results), 2)
+        self.assertIsInstance(results[0], Snippet)
+        self.assertAlmostEqual(results[0].score, 0.89)
+        self.assertEqual(results[0].paper.title,
+                         'Computing Machinery and Intelligence')
+        self.assertEqual(results[0].paper.corpus_id, '19170988')
+        self.assertEqual(results[0].paper.authors, ['Alan Turing'])
+        self.assertEqual(results[0].snippet.snippet_kind, 'abstract')
+        self.assertIn('Turing test', results[0].text)
+        self.assertEqual(results[1].snippet.section, 'Introduction')
+
+    def test_snippet_model(self):
+        data = {
+            'score': 0.5,
+            'paper': {
+                'corpusId': '123',
+                'title': 'Test Paper',
+                'authors': ['Author A'],
+                'openAccessInfo': {'license': 'CCBY'}
+            },
+            'snippet': {
+                'text': 'Some text',
+                'snippetKind': 'body',
+                'section': 'Methods',
+                'snippetOffset': {'start': 0, 'end': 9},
+                'annotations': {'sentences': [], 'refMentions': []}
+            }
+        }
+        item = Snippet(data)
+        self.assertEqual(item.score, 0.5)
+        self.assertEqual(item.text, 'Some text')
+        self.assertEqual(item.paper.corpus_id, '123')
+        self.assertEqual(item.paper.title, 'Test Paper')
+        self.assertEqual(item.paper.authors, ['Author A'])
+        self.assertEqual(item.paper.open_access_info, {'license': 'CCBY'})
+        self.assertEqual(item.snippet.snippet_kind, 'body')
+        self.assertEqual(item.snippet.section, 'Methods')
+        self.assertEqual(item.snippet.snippet_offset, {'start': 0, 'end': 9})
+
 
 class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
 
@@ -1326,6 +1369,16 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(diff.delete_files), 4)
         self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
         self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
+
+    @test_vcr.use_cassette
+    async def test_search_snippet_async(self):
+        results = await self.sch.search_snippet('turing test', limit=2)
+        self.assertEqual(len(results), 2)
+        self.assertIsInstance(results[0], Snippet)
+        self.assertAlmostEqual(results[0].score, 0.89)
+        self.assertEqual(results[0].paper.title,
+                         'Computing Machinery and Intelligence')
+        self.assertIn('Turing test', results[0].text)
 
 class SyncFromAsyncContextTest(unittest.IsolatedAsyncioTestCase):
     '''Test the sync API when called from within a running event loop,
