@@ -877,6 +877,10 @@ class AsyncSemanticScholar:
                 :class:`semanticscholar.Snippet.Snippet`
         '''
 
+        if limit < 1 or limit > 1000:
+            raise ValueError(
+                'The limit parameter must be between 1 and 1000 inclusive.')
+
         base_url = self.api_url + self.BASE_PATH_GRAPH
         url = f'{base_url}/snippet/search'
 
