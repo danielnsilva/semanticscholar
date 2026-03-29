@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### New Features
+
+- Added support for Snippet Search API.
+  ([7cbdcd5](https://github.com/danielnsilva/semanticscholar/commit/7cbdcd5))
+
 ### Enhancements
 
 - Replaced `nest_asyncio` with thread-based async helper for Python 3.14
