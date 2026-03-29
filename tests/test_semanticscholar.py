@@ -1370,7 +1370,7 @@ class AsyncSemanticScholarTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(diff.update_files[0], "https://ai2-s2ag.s3.amazonaws.com/updates/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
         self.assertEqual(diff.delete_files[0], "https://ai2-s2ag.s3.amazonaws.com/deletes/2024-10-08-to-2024-10-15/papers/20241018_1.gz")
 
-    @test_vcr.use_cassette
+    @use_shared_cassette
     async def test_search_snippet_async(self):
         results = await self.sch.search_snippet('turing test', limit=2)
         self.assertEqual(len(results), 2)
