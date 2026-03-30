@@ -60,7 +60,7 @@ class SemanticScholar():
         '''
         self._timeout = timeout
         self._AsyncSemanticScholar.timeout = timeout
-    
+
     @property
     def debug(self) -> bool:
         '''
@@ -127,7 +127,7 @@ class SemanticScholar():
 
         paper = _run_async(
             self._AsyncSemanticScholar.get_paper(
-                paper_id=paper_id, 
+                paper_id=paper_id,
                 fields=fields
                 )
         )
@@ -700,7 +700,7 @@ class SemanticScholar():
         return release
 
     def get_dataset_download_links(
-            self, 
+            self,
             release_id: str, 
             dataset_name: str
         ) -> Dataset:
@@ -719,7 +719,7 @@ class SemanticScholar():
         
         dataset = _run_async(
             self._AsyncSemanticScholar.get_dataset_download_links(
-                release_id=release_id, 
+                release_id=release_id,
                 dataset_name=dataset_name
             )
         )

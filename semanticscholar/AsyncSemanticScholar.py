@@ -116,7 +116,7 @@ class AsyncSemanticScholar:
         :type: :class:`bool`
         '''
         return self._retry
-    
+
     @retry.setter
     def retry(self, retry: bool) -> None:
         '''
@@ -964,8 +964,8 @@ class AsyncSemanticScholar:
         return Release(data)
 
     async def get_dataset_download_links(
-            self, 
-            release_id: str, 
+            self,
+            release_id: str,
             dataset_name: str
         ) -> Dataset:
         """

@@ -43,7 +43,7 @@ class Dataset(SemanticScholarObject):
         :type: :class:`str`
         '''
         return self._description
-    
+
     @property
     def readme(self) -> str:
         '''

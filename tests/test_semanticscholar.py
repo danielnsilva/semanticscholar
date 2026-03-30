@@ -97,7 +97,7 @@ class SemanticScholarTest(unittest.TestCase):
         file = open('tests/data/Release.json', encoding='utf-8')
         data = json.loads(file.read())
         release = Release(data)
-        
+
         self.assertEqual(release.release_id, data['release_id'])
         self.assertEqual(release.readme, data['README'])
         self.assertEqual(len(release.datasets), len(data['datasets']))

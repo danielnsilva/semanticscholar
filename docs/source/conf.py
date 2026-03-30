@@ -36,7 +36,7 @@ def clean_generated_rst(app: Sphinx, exception: Exception):
         base_dir = os.path.abspath(os.path.dirname(__file__))
         for pattern in generated_rst_files:
             full_pattern = os.path.join(base_dir, pattern)
-            matched_files = glob.glob(full_pattern)            
+            matched_files = glob.glob(full_pattern)
             for file_path in matched_files:
                 try:
                     os.remove(file_path)
@@ -48,7 +48,7 @@ def setup(app: Sphinx):
     '''
     Connect the clean_generated_rst function to the build-finished event.
     '''
-    app.connect('build-finished', clean_generated_rst)  
+    app.connect('build-finished', clean_generated_rst)
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information

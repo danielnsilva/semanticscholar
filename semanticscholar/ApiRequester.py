@@ -47,7 +47,7 @@ class ApiRequester:
         :type: :class:`bool`
         '''
         return self._retry
-    
+
     @retry.setter
     def retry(self, retry: bool) -> None:
         '''

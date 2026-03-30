@@ -39,11 +39,11 @@ class PaginatedResults:
         self._parameters = ''
         self._items = []
         self._continuation_token = None
-    
+
     @classmethod
     async def create(
                 cls,
-                *args, 
+                *args,
                 **kwargs
             ):
 
