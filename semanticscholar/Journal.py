@@ -1,5 +1,3 @@
-from typing import Any
-
 from semanticscholar.SemanticScholarObject import SemanticScholarObject
 
 
