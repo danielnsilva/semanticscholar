@@ -25,7 +25,8 @@ pip install semanticscholar
 ```
 
 See the [install](
-https://semanticscholar.readthedocs.io/en/latest/install.html) page for more detailed installation instructions.
+https://semanticscholar.readthedocs.io/en/latest/install.html) page for more
+detailed installation instructions.
 
 ### Usage
 
@@ -51,19 +52,34 @@ Computing Machinery and Intelligence
 
 ### What next?
 
-- [Usage](https://semanticscholar.readthedocs.io/en/latest/usage.html) - See additional examples to learn how to use the library to fetch data from Semantic Scholar APIs.
-- [Reference](https://semanticscholar.readthedocs.io/en/latest/reference.html) - Get the details of the classes and methods available in the library.
-- [API Endpoints](https://semanticscholar.readthedocs.io/en/latest/api.html) - Check the supported SemanticScholar API endpoints and which methods implement them.
+- [Usage](https://semanticscholar.readthedocs.io/en/latest/usage.html) - See
+  additional examples to learn how to use the library to fetch data from Semantic
+  Scholar APIs.
+- [Reference](https://semanticscholar.readthedocs.io/en/latest/reference.html) -
+  Get the details of the classes and methods available in the library.
+- [API Endpoints](https://semanticscholar.readthedocs.io/en/latest/api.html) -
+  Check the supported SemanticScholar API endpoints and which methods implement
+  them.
 
 ## Semantic Scholar API official docs
 
-If you have concerns or feedback specific to this library, feel free to [open an issue](https://github.com/danielnsilva/semanticscholar/issues). However, the official documentation provides additional resources for broader API-related issues.
+If you have concerns or feedback specific to this library, feel free to
+[open an issue](https://github.com/danielnsilva/semanticscholar/issues).
+However, the official documentation provides additional resources for broader
+API-related issues.
 
-- For details on Semantic Scholar APIs capabilities and limits, [go to the official documentation](https://api.semanticscholar.org/api-docs/graph).
-- The [Frequently Asked Questions](https://www.semanticscholar.org/faq) page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
+- For details on Semantic Scholar APIs capabilities and limits,
+  [go to the official documentation](https://api.semanticscholar.org/api-docs/graph).
+- The [Frequently Asked Questions](https://www.semanticscholar.org/faq) page
+  also provides helpful content if you need a better understanding of data
+  fetched from Semantic Scholar services.
 
 ## Contributing
 
-As a volunteer-maintained open-source project, contributions of all forms are welcome! For more information, see the [Contributing Guidelines](https://github.com/danielnsilva/semanticscholar/blob/master/.github/CONTRIBUTING.md).
+As a volunteer-maintained open-source project, contributions of all forms are
+welcome! For more information, see the
+[Contributing Guidelines](https://github.com/danielnsilva/semanticscholar/blob/master/.github/CONTRIBUTING.md).
 
-Please make sure to understand our [Contributor Covenant Code of Conduct](https://github.com/danielnsilva/semanticscholar/blob/master/.github/CODE_OF_CONDUCT.md) before you contribute. TL;DR: Be nice and respectful!
+Please make sure to understand our
+[Contributor Covenant Code of Conduct](https://github.com/danielnsilva/semanticscholar/blob/master/.github/CODE_OF_CONDUCT.md)
+before you contribute. TL;DR: Be nice and respectful!
