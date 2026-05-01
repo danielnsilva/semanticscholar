@@ -1,2 +1,2 @@
 coverage
-vcrpy>=8.0
+vcrpy>=8.1.1
